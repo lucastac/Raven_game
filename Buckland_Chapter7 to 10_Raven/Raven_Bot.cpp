@@ -81,6 +81,7 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
                                         script->GetDouble("Bot_AimPersistance"));
 
   m_pSensoryMem = new Raven_SensoryMemory(this, script->GetDouble("Bot_MemorySpan"));
+  my_type = 0;
 }
 
 //-------------------------------- dtor ---------------------------------------
@@ -239,6 +240,7 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
                               msg.Sender,
                               Msg_YouGotMeYouSOB,
                               NO_ADDITIONAL_INFO);
+	  m_iScore--;
     }
 
     return true;

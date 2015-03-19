@@ -253,7 +253,7 @@ void Raven_Game::AddBots(unsigned int NumBotsToAdd)
 
     //Raven_Bot* rb = new Raven_Bot(this, Vector2D());
 	Raven_Bot* rb = new Raven_Bot(this,Vector2D());
-	Raven_Bot* rbp = new Raven_Bot_Plus(this,Vector2D());
+	Raven_Bot_Plus* rbp = new Raven_Bot_Plus(this,Vector2D());
 
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();

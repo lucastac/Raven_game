@@ -74,6 +74,9 @@ public:
   Regulator*                         m_pTriggerTestRegulator;
   Regulator*                         m_pVisionUpdateRegulator;
 
+  //gambiarra
+	int                                my_type;
+
   //the bot's health. Every time the bot is shot this value is decreased. If
   //it reaches zero then the bot dies (and respawns)
   int                                m_iHealth;

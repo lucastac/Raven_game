@@ -1,10 +1,10 @@
-﻿Build started 17/03/2015 11:20:36.
-     1>Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Bluckland_SourceCode - new version\VS2010\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" on node 2 (build target(s)).
+﻿Build started 19/03/2015 08:11:48.
+     1>Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating ".\Debug\Raven.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /FAs /Fa".\Debug/" /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt goals\Goal_Think.cpp /Zm200  
-         Goal_Think.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /FAs /Fa".\Debug/" /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt goals\Goal_Think_Plus.cpp /Zm200  
+         Goal_Think_Plus.cpp
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -82,14 +82,14 @@
          All outputs are up-to-date.
        LinkEmbedManifest:
          All outputs are up-to-date.
-         Raven.vcxproj -> C:\Users\Lucas\Desktop\jogos - game ai by example\Bluckland_SourceCode - new version\VS2010\Raven_Game\Buckland_Chapter7 to 10_Raven\.\Debug\Raven.exe
+         Raven.vcxproj -> C:\Users\Lucas\Desktop\jogos - game ai by example\Raven_Game\Buckland_Chapter7 to 10_Raven\.\Debug\Raven.exe
        BscMake:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug/Raven.bsc" .\Debug\Goal_Think_Plus.sbr .\Debug\main.sbr .\Debug\Raven_Bot.sbr .\Debug\Raven_Bot_Plus.sbr .\Debug\Raven_Game.sbr .\Debug\Raven_Map.sbr .\Debug\Raven_Weapon.sbr .\Debug\Weapon_Blaster.sbr .\Debug\Weapon_RailGun.sbr .\Debug\Weapon_RocketLauncher.sbr .\Debug\Weapon_ShotGun.sbr .\Debug\Projectile_Bolt.sbr .\Debug\Projectile_Pellet.sbr .\Debug\Projectile_Rocket.sbr .\Debug\Projectile_Slug.sbr .\Debug\Raven_Projectile.sbr .\Debug\BaseGameEntity.sbr .\Debug\Raven_Scriptor.sbr .\Debug\EntityManager.sbr .\Debug\GraveMarkers.sbr .\Debug\Raven_Door.sbr .\Debug\Raven_UserOptions.sbr .\Debug\Raven_Goal_Types.sbr .\Debug\Goal_AdjustRange.sbr .\Debug\Goal_AttackTarget.sbr .\Debug\Goal_Explore.sbr .\Debug\Goal_FollowPath.sbr .\Debug\Goal_GetItem.sbr .\Debug\Goal_HuntTarget.sbr .\Debug\Goal_MoveToPosition.sbr .\Debug\Goal_NegotiateDoor.sbr .\Debug\Goal_Think.sbr .\Debug\AttackTargetGoal_Evaluator.sbr .\Debug\ExploreGoal_Evaluator.sbr .\Debug\GetHealthGoal_Evaluator.sbr .\Debug\GetWeaponGoal_Evaluator.sbr .\Debug\Raven_Feature.sbr .\Debug\Goal_DodgeSideToSide.sbr .\Debug\Goal_SayPhrase.sbr .\Debug\Goal_SeekToPosition.sbr .\Debug\Goal_TraverseEdge.sbr .\Debug\Goal_Wander.sbr .\Debug\FuzzyModule.sbr .\Debug\FuzzyOperators.sbr .\Debug\FuzzyVariable.sbr .\Debug\FuzzySet_LeftShoulder.sbr .\Debug\FuzzySet_RightShoulder.sbr .\Debug\FuzzySet_Singleton.sbr .\Debug\FuzzySet_Triangle.sbr .\Debug\Raven_PathPlanner.sbr .\Debug\Raven_SteeringBehaviors.sbr .\Debug\MessageDispatcher.sbr .\Debug\Raven_SensoryMemory.sbr .\Debug\Trigger_HealthGiver.sbr .\Debug\Trigger_SoundNotify.sbr .\Debug\Trigger_WeaponGiver.sbr .\Debug\Raven_WeaponSystem.sbr .\Debug\Raven_TargetingSystem.sbr .\Debug\Cgdi.sbr .\Debug\CrudeTimer.sbr .\Debug\DebugConsole.sbr .\Debug\FrameCounter.sbr .\Debug\PrecisionTimer.sbr .\Debug\Vector2d.sbr .\Debug\WindowUtils.sbr
+         All outputs are up-to-date.
        FinalizeBuildStatus:
          Deleting file ".\Debug\Raven.unsuccessfulbuild".
          Touching ".\Debug\Raven.lastbuildstate".
-     1>Done Building Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Bluckland_SourceCode - new version\VS2010\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.49
+Time Elapsed 00:00:03.99

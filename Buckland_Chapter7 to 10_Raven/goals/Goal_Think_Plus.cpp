@@ -1,10 +1,49 @@
 #include "Goal_Think_Plus.h"
+#include <list>
+#include "misc/Cgdi.h"
+#include "../Raven_ObjectEnumerations.h"
+#include "misc/utils.h"
+#include "../lua/Raven_Scriptor.h"
+
+#include "Goal_MoveToPosition.h"
+#include "Goal_Explore.h"
+#include "Goal_GetItem.h"
+#include "Goal_Wander.h"
+#include "Raven_Goal_Types.h"
+#include "Goal_AttackTarget.h"
+
+
+#include "GetWeaponGoal_Evaluator.h"
+#include "GetHealthGoal_Evaluator.h"
+#include "ExploreGoal_Evaluator.h"
+#include "AttackTargetGoal_Evaluator.h"
 
 
 Goal_Think_Plus::Goal_Think_Plus(Raven_Bot* pBot):
 Goal_Think(pBot)
 {
 	m_iType = goal_think_plus;
+
+
+	m_Evaluators.clear();
+
+  double HealthBias = 1.0;
+  double ShotgunBias = 0.8;
+  double RocketLauncherBias = 0.8;
+  double RailgunBias = 0.8;
+  double ExploreBias = 0.5;
+  double AttackBias = 1.5;
+
+  //create the evaluator objects
+  m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
+  m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
+  m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
+                                                     type_shotgun));
+  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
+                                                     type_rail_gun));
+  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
+                                                     type_rocket_launcher));
 }
 
 
@@ -35,6 +74,8 @@ void Goal_Think_Plus::Activate()
 int Goal_Think_Plus::Process()
 {
   ActivateIfInactive();
+ 
+ 
   
   int SubgoalStatus = ProcessSubgoals();
 
@@ -45,8 +86,8 @@ int Goal_Think_Plus::Process()
       m_iStatus = inactive;
 	 // m_SubGoals.clear();
     }
-  //}
-
+//  }
+	
   return m_iStatus;
 }
 
@@ -73,7 +114,35 @@ void Goal_Think_Plus::Arbitrate()
     }
   }
 
-  assert(MostDesirable && "<Goal_Think::Arbitrate>: no evaluator selected");
-
+  //assert(MostDesirable && "<Goal_Think_Plus::Arbitrate>: no evaluator selected");
+  //m_SubGoals.push_back(new Goal_Explore(m_pOwner));
   MostDesirable->SetGoal(m_pOwner);
+ // AddGoal_AttackTarget();
+}
+
+void Goal_Think_Plus::AddGoal_Explore()
+{
+  if (notPresent(goal_explore))
+  {
+    RemoveAllSubgoals();
+    AddSubgoal( new Goal_Explore(m_pOwner));
+  }
+}
+
+void Goal_Think_Plus::AddGoal_GetItem(unsigned int ItemType)
+{
+  if (notPresent(ItemTypeToGoalType(ItemType)))
+  {
+    RemoveAllSubgoals();
+    AddSubgoal( new Goal_GetItem(m_pOwner, ItemType));
+  }
+}
+
+void Goal_Think_Plus::AddGoal_AttackTarget()
+{
+  if (notPresent(goal_attack_target))
+  {
+    RemoveAllSubgoals();
+    AddSubgoal( new Goal_AttackTarget(m_pOwner));
+  }
 }

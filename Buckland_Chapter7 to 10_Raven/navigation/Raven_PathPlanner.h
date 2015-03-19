@@ -22,7 +22,7 @@ class Raven_Bot;
                                                
 class Raven_PathPlanner
 {
-private:
+protected:
 
   //for legibility
   enum {no_closest_node_found = -1};
@@ -34,7 +34,7 @@ public:
   typedef Raven_Map::NavGraph::NodeType           NodeType;
   typedef std::list<PathEdge>                     Path;
   
-private:
+protected:
 
   //A pointer to the owner of this class
   Raven_Bot*                          m_pOwner;
