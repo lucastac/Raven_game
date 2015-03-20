@@ -1,11 +1,25 @@
-﻿Build started 19/03/2015 23:28:38.
+﻿Build started 20/03/2015 11:02:48.
      1>Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating ".\Debug\Raven.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /FAs /Fa".\Debug/" /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt navigation\Raven_PathPlanner.cpp /Zm200  
-         Raven_PathPlanner.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /FAs /Fa".\Debug/" /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt Raven_Bot.cpp Raven_Game.cpp Raven_Map.cpp goals\ExploreGoal_Evaluator.cpp goals\Goal_Explore.cpp goals\Goal_FollowPath.cpp goals\Goal_GetItem.cpp goals\Goal_MoveToPosition.cpp goals\Goal_NegotiateDoor.cpp goals\Goal_SeekToPosition.cpp goals\Goal_TraverseEdge.cpp goals\Raven_Feature.cpp navigation\Raven_PathPlanner.cpp /Zm200  
+         Raven_Bot.cpp
      1>c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\Raven_Bot_Plus.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Raven_PathPlanner.cpp
+         Raven_Feature.cpp
+         Goal_TraverseEdge.cpp
+         Goal_SeekToPosition.cpp
+         Goal_NegotiateDoor.cpp
+         Goal_MoveToPosition.cpp
+         Goal_GetItem.cpp
+         Goal_FollowPath.cpp
+         Goal_Explore.cpp
+         ExploreGoal_Evaluator.cpp
+         Raven_Map.cpp
+         Raven_Game.cpp
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -93,4 +107,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.82
+Time Elapsed 00:00:04.98

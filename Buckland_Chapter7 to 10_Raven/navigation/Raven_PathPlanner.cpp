@@ -112,6 +112,53 @@ double Raven_PathPlanner::GetCostToClosestItem(unsigned int GiverType)const
   return ClosestSoFar;
 }
 
+//------------------------ GetPosToClosestItem ---------------------------
+//
+//  returns the position on graph to the closest instance of the giver type. This method
+//  makes use of the pre-calculated lookup table. Returns -1 if no active
+//  trigger found
+//-----------------------------------------------------------------------------
+int Raven_PathPlanner::GetPosToClosestItem(unsigned int GiverType)const
+{
+  //find the closest visible node to the bots position
+  int nd = GetClosestNodeToPosition(m_pOwner->Pos());
+
+  //if no closest node found return failure
+  if (nd == invalid_node_index) return -1;
+
+  double ClosestSoFar = MaxDouble;
+  int closestItem = -1;
+
+  //iterate through all the triggers to find the closest *active* trigger of 
+  //type GiverType
+  const Raven_Map::TriggerSystem::TriggerList& triggers = m_pOwner->GetWorld()->GetMap()->GetTriggers();
+
+  Raven_Map::TriggerSystem::TriggerList::const_iterator it;
+  for (it = triggers.begin(); it != triggers.end(); ++it)
+  {
+    if ( ((*it)->EntityType() == GiverType) && (*it)->isActive())
+    {
+      double cost = 
+      m_pOwner->GetWorld()->GetMap()->CalculateCostToTravelBetweenNodes(nd,
+                                                      (*it)->GraphNodeIndex());
+
+      if (cost < ClosestSoFar)
+      {
+        ClosestSoFar = cost;
+		closestItem = (*it)->GraphNodeIndex();
+      }
+    }
+  }
+
+  //return a negative value if no active trigger of the type found
+  if (isEqual(ClosestSoFar, MaxDouble))
+  {
+    return -1;
+  }
+
+  return closestItem;
+}
+
 
 //----------------------------- GetPath ------------------------------------
 //
@@ -437,24 +484,30 @@ bool Raven_PathPlanner::RequestPathToItem(unsigned int ItemType)
   typedef Graph_SearchDijkstras_TS<Raven_Map::NavGraph, t_con> DijSearch;
   
 
-  if(m_pOwner->my_type ==1 && m_pOwner->Health() < 50)
+  if(m_pOwner->my_type ==1 && m_pOwner->Health() < 90)
   {
+	  int closestNodeToItem = GetPosToClosestItem(ItemType);
+
+	  //retorna falso caso não tenha item do tipo
+	  if(closestNodeToItem == no_closest_node_found) return false; 
+
 		  std::list<Vector2D> pos;
 		  std::list<Raven_Bot*> m_bots = m_pOwner->GetWorld()->GetAllBots();
 
 		  std::list<Raven_Bot*>::const_iterator curBot = m_bots.begin();
 		  for(curBot ; curBot != m_bots.end();++curBot)
 		  {
-			  pos.push_back((*curBot)->Pos());
+			  if((*curBot)->ID() != m_pOwner->ID())
+				pos.push_back((*curBot)->Pos());
 		  }
 
 
 		  //create an instance of a the distributed A* search class
-		  typedef Graph_SearchAStar_TS<Raven_Map::NavGraph, Heuristic_Euclid> AStar;
+		  typedef Graph_SearchAStar_TS<Raven_Map::NavGraph, Heuristic_Bot> AStar;
 
 		  m_pCurrentSearch = new AStar(m_NavGraph,
                                ClosestNodeToBot,
-                               ItemType,
+                               closestNodeToItem,
 							   pos);
   }else
   {
