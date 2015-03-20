@@ -107,6 +107,9 @@ private:
   std::vector<const Edge*>       m_ShortestPathTree;
   std::vector<const Edge*>       m_SearchFrontier;
 
+  //posição dos bots
+  std::list<Vector2D>	 botPos;
+
   int                            m_iSource;
   int                            m_iTarget;
 
@@ -128,7 +131,29 @@ public:
                                               m_FCosts(G.NumNodes(), 0.0),
                                               m_iSource(source),
                                               m_iTarget(target)
+  {
+	  //botPos = new std::list<Vector2D>();
+     //create the PQ   
+     m_pPQ =new IndexedPriorityQLow<double>(m_FCosts, m_Graph.NumNodes());
+
+    //put the source node on the queue
+    m_pPQ->insert(m_iSource);
+  }
+
+  Graph_SearchAStar_TS(const graph_type& G,
+                      int                source,
+                      int                target,
+					  std::list<Vector2D> bots):Graph_SearchTimeSliced<Edge>(AStar),
+  
+                                              m_Graph(G),
+                                              m_ShortestPathTree(G.NumNodes()),                              
+                                              m_SearchFrontier(G.NumNodes()),
+                                              m_GCosts(G.NumNodes(), 0.0),
+                                              m_FCosts(G.NumNodes(), 0.0),
+                                              m_iSource(source),
+                                              m_iTarget(target)
   { 
+	  botPos = bots;
      //create the PQ   
      m_pPQ =new IndexedPriorityQLow<double>(m_FCosts, m_Graph.NumNodes());
 
@@ -187,7 +212,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
        pE=ConstEdgeItr.next())
   {
     //calculate the heuristic cost from this node to the target (H)                       
-    double HCost = heuristic::Calculate(m_Graph, m_iTarget, pE->To()); 
+	  double HCost = heuristic::Calculate(m_Graph, m_iTarget, pE->To(),botPos); 
 
     //calculate the 'real' cost to this node from the source (G)
     double GCost = m_GCosts[NextClosestNode] + pE->Cost();

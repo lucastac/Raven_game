@@ -436,9 +436,32 @@ bool Raven_PathPlanner::RequestPathToItem(unsigned int ItemType)
   typedef FindActiveTrigger<Trigger<Raven_Bot> > t_con; 
   typedef Graph_SearchDijkstras_TS<Raven_Map::NavGraph, t_con> DijSearch;
   
-  m_pCurrentSearch = new DijSearch(m_NavGraph,
+
+  if(m_pOwner->my_type ==1 && m_pOwner->Health() < 50)
+  {
+		  std::list<Vector2D> pos;
+		  std::list<Raven_Bot*> m_bots = m_pOwner->GetWorld()->GetAllBots();
+
+		  std::list<Raven_Bot*>::const_iterator curBot = m_bots.begin();
+		  for(curBot ; curBot != m_bots.end();++curBot)
+		  {
+			  pos.push_back((*curBot)->Pos());
+		  }
+
+
+		  //create an instance of a the distributed A* search class
+		  typedef Graph_SearchAStar_TS<Raven_Map::NavGraph, Heuristic_Euclid> AStar;
+
+		  m_pCurrentSearch = new AStar(m_NavGraph,
+                               ClosestNodeToBot,
+                               ItemType,
+							   pos);
+  }else
+  {
+	m_pCurrentSearch = new DijSearch(m_NavGraph,
                                    ClosestNodeToBot,
                                    ItemType);  
+  }
 
   //register the search with the path manager
   m_pOwner->GetWorld()->GetPathManager()->Register(this);

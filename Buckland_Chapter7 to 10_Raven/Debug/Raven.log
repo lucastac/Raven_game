@@ -1,10 +1,11 @@
-﻿Build started 19/03/2015 08:11:48.
+﻿Build started 19/03/2015 23:28:38.
      1>Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating ".\Debug\Raven.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /FAs /Fa".\Debug/" /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt goals\Goal_Think_Plus.cpp /Zm200  
-         Goal_Think_Plus.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /FAs /Fa".\Debug/" /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt navigation\Raven_PathPlanner.cpp /Zm200  
+         Raven_PathPlanner.cpp
+     1>c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\Raven_Bot_Plus.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -92,4 +93,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.99
+Time Elapsed 00:00:04.82
