@@ -484,7 +484,7 @@ bool Raven_PathPlanner::RequestPathToItem(unsigned int ItemType)
   typedef Graph_SearchDijkstras_TS<Raven_Map::NavGraph, t_con> DijSearch;
   
 
-  if(m_pOwner->my_type ==1 && m_pOwner->Health() < 90)
+  if(m_pOwner->my_type ==1 && m_pOwner->Health() < 50)
   {
 	  int closestNodeToItem = GetPosToClosestItem(ItemType);
 
