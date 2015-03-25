@@ -49,6 +49,35 @@ public:
 };
 
 //-----------------------------------------------------------------------------
+//utiliza os bot na heuristica
+//-----------------------------------------------------------------------------
+class Heuristic_Bot 
+{
+public:
+
+  Heuristic_Bot(){}
+
+  
+  template <class graph_type>
+  static double Calculate(const graph_type& G, int nd1, int nd2, std::list<Vector2D> botPos)
+  {
+	  double dist = 1000000*botPos.size()*botPos.size() ;
+	  double botsValue = 0;
+
+	  std::list<Vector2D>::const_iterator curBot = botPos.begin();
+	  for(curBot ; curBot != botPos.end();++curBot)
+	  {
+		  botsValue += Vec2DDistance(G.GetNode(nd2).Pos(),(*curBot));
+	  }
+
+	  //debug_con << dist/botsValue << endl;
+	  return dist/(botsValue * botsValue);
+
+  }
+};
+
+
+//-----------------------------------------------------------------------------
 //you can use this class to turn the A* algorithm into Dijkstra's search.
 //this is because Dijkstra's is equivalent to an A* search using a heuristic
 //value that is always equal to zero.
