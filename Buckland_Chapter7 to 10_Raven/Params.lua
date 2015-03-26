@@ -4,14 +4,14 @@
 
 --the number of bots the game instantiates
 
-NumBots   = 2
+NumBots   = 5
 
 --this is the maximum number of search cycles allocated to *all* current path
 -- planning searches per update
 MaxSearchCyclesPerUpdateStep = 1000
 
 --the name of the default map
-StartMap = "maps/Raven_DM1.map"
+StartMap = "maps/flag_map.map"
 
 --cell space partitioning defaults
 NumCellsX = 10
@@ -113,6 +113,7 @@ DefaultGiverTriggerRange = 10
 --how many seconds before a giver-trigger reactivates itself
 Health_RespawnDelay  = 10
 Weapon_RespawnDelay  = 15
+Flag_RespawmDelay = 1000
 
 
 

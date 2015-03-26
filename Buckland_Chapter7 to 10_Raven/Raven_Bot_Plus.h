@@ -1,5 +1,5 @@
 #include "Raven_Bot.h"
-#include "goals\Goal_Think_Plus.h";
+//#include "goals\Goal_Think_Plus.h";
 
 class Raven_Bot_Plus : public Raven_Bot
 {

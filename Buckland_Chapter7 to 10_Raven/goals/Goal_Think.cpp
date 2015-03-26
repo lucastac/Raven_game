@@ -18,7 +18,7 @@
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
 
-#include "Goal_Think_Plus.h"
+//#include "Goal_Think_Plus.h"
 
 
 Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_think)
@@ -26,7 +26,7 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
   
   //these biases could be loaded in from a script on a per bot basis
   //but for now we'll just give them some random values
-  const double LowRangeOfBias = 0.5;
+ /* const double LowRangeOfBias = 0.5;
   const double HighRangeOfBias = 1.5;
 
   double HealthBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
@@ -35,6 +35,24 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
   double RailgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
   double ExploreBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
   double AttackBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+
+  //create the evaluator objects
+  m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
+  m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
+  m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
+                                                     type_shotgun));
+  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
+                                                     type_rail_gun));
+  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
+                                                     type_rocket_launcher));*/
+
+  double HealthBias = 1.0;
+  double ShotgunBias = 0.8;
+  double RocketLauncherBias = 0.8;
+  double RailgunBias = 0.8;
+  double ExploreBias = 0.5;
+  double AttackBias = 1.5;
 
   //create the evaluator objects
   m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
@@ -55,7 +73,7 @@ Goal_Think::~Goal_Think()
   GoalEvaluators::iterator curDes = m_Evaluators.begin();
   for (curDes; curDes != m_Evaluators.end(); ++curDes)
   {
- //   delete *curDes;
+    delete *curDes;
   }
 }
 
@@ -77,18 +95,18 @@ void Goal_Think::Activate()
 //-----------------------------------------------------------------------------
 int Goal_Think::Process()
 {
-  if(m_pOwner->my_type ==1) return active ;
+  //if(m_pOwner->my_type ==1) return active ;
   ActivateIfInactive();
   
   int SubgoalStatus = ProcessSubgoals();
 
-  if (SubgoalStatus == completed || SubgoalStatus == failed)
-  {
+  //if (SubgoalStatus == completed || SubgoalStatus == failed)
+ // {
     if (!m_pOwner->isPossessed())
     {
       m_iStatus = inactive;
     }
-  }
+  //}
 
   return m_iStatus;
 }
@@ -100,7 +118,7 @@ int Goal_Think::Process()
 //-----------------------------------------------------------------------------
 void Goal_Think::Arbitrate()
 {
-	if(m_pOwner->my_type ==1) return ;
+	//if(m_pOwner->my_type ==1) return ;
   double best = 0;
   Goal_Evaluator* MostDesirable = 0;
 
@@ -119,8 +137,8 @@ void Goal_Think::Arbitrate()
 
   //assert(MostDesirable && "<Goal_Think::Arbitrate>: no evaluator selected");
 
-  //MostDesirable->SetGoal(m_pOwner);
-  AddGoal_GetItem(8);
+  MostDesirable->SetGoal(m_pOwner);
+  //AddGoal_GetItem(8);
 }
 
 
@@ -147,12 +165,12 @@ void Goal_Think::AddGoal_MoveToPosition(Vector2D pos)
 void Goal_Think::AddGoal_Explore()
 {
 
-	if(m_pOwner->my_type == 1)
+	/*if(m_pOwner->my_type == 1)
 	{
 		Goal_Think* cast = this;
 		((Goal_Think_Plus *)cast)->AddGoal_Explore();
 		return;
-	}
+	}*/
   if (notPresent(goal_explore))
   {
     RemoveAllSubgoals();
@@ -162,12 +180,12 @@ void Goal_Think::AddGoal_Explore()
 
 void Goal_Think::AddGoal_GetItem(unsigned int ItemType)
 {
-	if(m_pOwner->my_type == 1)
+	/*if(m_pOwner->my_type == 1)
 	{
 		Goal_Think* cast = this;
 		((Goal_Think_Plus *)cast)->AddGoal_GetItem(ItemType);
 		return;
-	}
+	}*/
 
   if (notPresent(ItemTypeToGoalType(ItemType)))
   {
@@ -178,12 +196,12 @@ void Goal_Think::AddGoal_GetItem(unsigned int ItemType)
 
 void Goal_Think::AddGoal_AttackTarget()
 {
-	if(m_pOwner->my_type == 1)
+	/*if(m_pOwner->my_type == 1)
 	{
 		Goal_Think* cast = this;
 		((Goal_Think_Plus *)cast)->AddGoal_AttackTarget();
 		return;
-	}
+	}*/
 
   if (notPresent(goal_attack_target))
   {

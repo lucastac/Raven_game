@@ -271,8 +271,11 @@
     <ClCompile Include="Raven_Bot_Plus.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="goals\Goal_Think_Plus.cpp">
-      <Filter>AI\goals\composite</Filter>
+    <ClCompile Include="triggers\Trigger_Flag1.cpp">
+      <Filter>AI\Triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="triggers\Trigger_Flag2.cpp">
+      <Filter>AI\Triggers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -615,8 +618,11 @@
     <ClInclude Include="Raven_Bot_Plus.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="goals\Goal_Think_Plus.h">
-      <Filter>AI\goals\composite</Filter>
+    <ClInclude Include="triggers\Trigger_Flag1.h">
+      <Filter>AI\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="triggers\Trigger_Flag2.h">
+      <Filter>AI\Triggers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -630,6 +636,9 @@
       <Filter>Resource Files\maps</Filter>
     </None>
     <None Include="maps\Raven_DM1_Doors.map">
+      <Filter>Resource Files\maps</Filter>
+    </None>
+    <None Include="maps\flag_map.map">
       <Filter>Resource Files\maps</Filter>
     </None>
   </ItemGroup>

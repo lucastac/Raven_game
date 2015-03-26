@@ -484,7 +484,7 @@ bool Raven_PathPlanner::RequestPathToItem(unsigned int ItemType)
   typedef Graph_SearchDijkstras_TS<Raven_Map::NavGraph, t_con> DijSearch;
   
 
-  if(m_pOwner->my_type ==1 && m_pOwner->Health() < 50)
+  if(m_pOwner->Health() < 50)
   {
 	  int closestNodeToItem = GetPosToClosestItem(ItemType);
 
@@ -497,7 +497,7 @@ bool Raven_PathPlanner::RequestPathToItem(unsigned int ItemType)
 		  std::list<Raven_Bot*>::const_iterator curBot = m_bots.begin();
 		  for(curBot ; curBot != m_bots.end();++curBot)
 		  {
-			  if((*curBot)->ID() != m_pOwner->ID())
+			  if((*curBot)->my_type != m_pOwner->my_type)
 				pos.push_back((*curBot)->Pos());
 		  }
 

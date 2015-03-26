@@ -18,7 +18,9 @@ enum
   type_blaster,
   type_obstacle,
   type_sliding_door,
-  type_door_trigger
+  type_door_trigger,
+  type_flag1,
+  type_flag2
 };
 
 
@@ -80,6 +82,12 @@ inline std::string GetNameOfType(int w)
   case type_door_trigger:
     
     s =  "door_trigger"; break;
+
+  case type_flag1:
+	s = "flag1"; break;
+
+  case type_flag2:
+	s = "flag2"; break;
 
   default:
 

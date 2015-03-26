@@ -8,9 +8,9 @@
 Raven_Bot_Plus::Raven_Bot_Plus(Raven_Game* world, Vector2D pos):
 Raven_Bot(world,pos)
 {
-	delete m_pBrain;
+	/*delete m_pBrain;
 	m_pBrain = NULL;
-	m_pBrain = new Goal_Think_Plus(this);
+	m_pBrain = new Goal_Think_Plus(this);*/
 	my_type = 1;
 	
 }

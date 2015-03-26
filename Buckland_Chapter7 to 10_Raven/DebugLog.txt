@@ -1,6 +1,6 @@
-NavGraph for maps/Raven_DM1.map loaded okay
-Average edge length is 23.7036
-Neighborhood range set to 24.7036
+NavGraph for maps/flag_map.map loaded okay
+Average edge length is 23.6403
+Neighborhood range set to 24.6403
 Partitioning navgraph nodes...
 Loading map...
 Creating a Wall
@@ -61,34 +61,156 @@ Creating a Wall
 Creating a Wall
 Creating a Wall
 Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
 Creating a Spawn Point
 Creating a Spawn Point
-Creating a Spawn Point
-Creating a Health
-Creating a Health
-Creating a Health
-Creating a rocket_launcher
-Creating a Railgun
-Creating a shotgun
-Creating a shotgun
-Creating a rocket_launcher
-maps/Raven_DM1.map loaded okay
-BOT 404 IS STUCK!!
-BOT 402 IS STUCK!!
-BOT 401 IS STUCK!!
-BOT 402 IS STUCK!!
-BOT 402 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 402 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 402 IS STUCK!!
-BOT 404 IS STUCK!!
-BOT 404 IS STUCK!!
-deleting raven bot (id = 401)
-deleting raven bot (id = 402)
-deleting raven bot (id = 403)
-deleting raven bot (id = 404)
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a Wall
+Creating a flag1
+Creating a flag2
+maps/flag_map.map loaded okay
+BOT 5808 IS STUCK!!
+BOT 5803 IS STUCK!!
+deleting raven bot (id = 5799)
+deleting raven bot (id = 5800)
+deleting raven bot (id = 5801)
+deleting raven bot (id = 5802)
+deleting raven bot (id = 5803)
+deleting raven bot (id = 5804)
+deleting raven bot (id = 5805)
+deleting raven bot (id = 5806)
+deleting raven bot (id = 5807)
+deleting raven bot (id = 5808)

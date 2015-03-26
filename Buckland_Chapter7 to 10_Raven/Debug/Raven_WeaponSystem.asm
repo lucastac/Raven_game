@@ -209,7 +209,7 @@ _colors	DD	0ffH
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG138952 DB	' ', 00H
+$SG137798 DB	' ', 00H
 CONST	ENDS
 ;	COMDAT ?end@?$_Iosb@H@std@@2W4_Seekdir@12@B
 CONST	SEGMENT
@@ -1087,10 +1087,10 @@ __ehfuncinfo$??1Raven_WeaponSystem@@QAE@XZ DD 019930522H
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv85 = -36						; size = 4
-$T152906 = -32						; size = 4
-$T152905 = -28						; size = 4
-$T152904 = -24						; size = 4
-_w$138359 = -20						; size = 4
+$T150735 = -32						; size = 4
+$T150734 = -28						; size = 4
+$T150733 = -24						; size = 4
+_w$137205 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1Raven_WeaponSystem@@QAE@XZ PROC			; Raven_WeaponSystem::~Raven_WeaponSystem
@@ -1123,40 +1123,40 @@ __$EHRec$ = -12						; size = 12
 
 ; 32   :   for (unsigned int w=0; w<m_WeaponMap.size(); ++w)
 
-	mov	DWORD PTR _w$138359[ebp], 0
+	mov	DWORD PTR _w$137205[ebp], 0
 	jmp	SHORT $LN3@Raven_Weap
 $LN2@Raven_Weap:
-	mov	eax, DWORD PTR _w$138359[ebp]
+	mov	eax, DWORD PTR _w$137205[ebp]
 	add	eax, 1
-	mov	DWORD PTR _w$138359[ebp], eax
+	mov	DWORD PTR _w$137205[ebp], eax
 $LN3@Raven_Weap:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
 	call	?size@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QBEIXZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::size
-	cmp	DWORD PTR _w$138359[ebp], eax
+	cmp	DWORD PTR _w$137205[ebp], eax
 	jae	SHORT $LN4@Raven_Weap
 
 ; 33   :   {
 ; 34   :     delete m_WeaponMap[w];
 
-	mov	ecx, DWORD PTR _w$138359[ebp]
-	mov	DWORD PTR $T152906[ebp], ecx
-	lea	edx, DWORD PTR $T152906[ebp]
+	mov	ecx, DWORD PTR _w$137205[ebp]
+	mov	DWORD PTR $T150735[ebp], ecx
+	lea	edx, DWORD PTR $T150735[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
 	call	??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@ABH@Z ; std::map<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> > >::operator[]
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR $T152905[ebp], eax
-	mov	ecx, DWORD PTR $T152905[ebp]
-	mov	DWORD PTR $T152904[ebp], ecx
-	cmp	DWORD PTR $T152904[ebp], 0
+	mov	DWORD PTR $T150734[ebp], eax
+	mov	ecx, DWORD PTR $T150734[ebp]
+	mov	DWORD PTR $T150733[ebp], ecx
+	cmp	DWORD PTR $T150733[ebp], 0
 	je	SHORT $LN6@Raven_Weap
 	mov	esi, esp
 	push	1
-	mov	edx, DWORD PTR $T152904[ebp]
+	mov	edx, DWORD PTR $T150733[ebp]
 	mov	eax, DWORD PTR [edx]
-	mov	ecx, DWORD PTR $T152904[ebp]
+	mov	ecx, DWORD PTR $T150733[ebp]
 	mov	edx, DWORD PTR [eax+4]
 	call	edx
 	cmp	esi, esp
@@ -1243,17 +1243,17 @@ tv189 = -112						; size = 4
 tv191 = -108						; size = 4
 tv187 = -104						; size = 4
 tv65 = -100						; size = 4
-$T152929 = -96						; size = 4
-$T152928 = -92						; size = 4
-$T152927 = -88						; size = 4
-$T152926 = -84						; size = 4
-$T152923 = -80						; size = 4
-$T152922 = -76						; size = 4
-$T152919 = -72						; size = 4
-$T152918 = -68						; size = 4
-$T152917 = -64						; size = 12
-$T152916 = -49						; size = 1
-$T152915 = -48						; size = 12
+$T150758 = -96						; size = 4
+$T150757 = -92						; size = 4
+$T150756 = -88						; size = 4
+$T150755 = -84						; size = 4
+$T150752 = -80						; size = 4
+$T150751 = -76						; size = 4
+$T150748 = -72						; size = 4
+$T150747 = -68						; size = 4
+$T150746 = -64						; size = 12
+$T150745 = -49						; size = 1
+$T150744 = -48						; size = 12
 _curW$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -1293,7 +1293,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 46   :   for (curW = m_WeaponMap.begin(); curW != m_WeaponMap.end(); ++curW)
 
-	lea	eax, DWORD PTR $T152915[ebp]
+	lea	eax, DWORD PTR $T150744[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1307,14 +1307,14 @@ __$EHRec$ = -12						; size = 12
 	lea	ecx, DWORD PTR _curW$[ebp]
 	call	??4?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152915[ebp]
+	lea	ecx, DWORD PTR $T150744[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN3@Initialize
 $LN2@Initialize:
 	lea	ecx, DWORD PTR _curW$[ebp]
 	call	??E?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator++
 $LN3@Initialize:
-	lea	eax, DWORD PTR $T152917[ebp]
+	lea	eax, DWORD PTR $T150746[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1327,11 +1327,11 @@ $LN3@Initialize:
 	push	edx
 	lea	ecx, DWORD PTR _curW$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator!=
-	mov	BYTE PTR $T152916[ebp], al
+	mov	BYTE PTR $T150745[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152917[ebp]
+	lea	ecx, DWORD PTR $T150746[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T152916[ebp]
+	movzx	eax, BYTE PTR $T150745[ebp]
 	test	eax, eax
 	je	SHORT $LN1@Initialize
 
@@ -1341,16 +1341,16 @@ $LN3@Initialize:
 	lea	ecx, DWORD PTR _curW$[ebp]
 	call	??C?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBEPAU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator->
 	mov	ecx, DWORD PTR [eax+4]
-	mov	DWORD PTR $T152919[ebp], ecx
-	mov	edx, DWORD PTR $T152919[ebp]
-	mov	DWORD PTR $T152918[ebp], edx
-	cmp	DWORD PTR $T152918[ebp], 0
+	mov	DWORD PTR $T150748[ebp], ecx
+	mov	edx, DWORD PTR $T150748[ebp]
+	mov	DWORD PTR $T150747[ebp], edx
+	cmp	DWORD PTR $T150747[ebp], 0
 	je	SHORT $LN6@Initialize
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T152918[ebp]
+	mov	eax, DWORD PTR $T150747[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T152918[ebp]
+	mov	ecx, DWORD PTR $T150747[ebp]
 	mov	eax, DWORD PTR [edx+4]
 	call	eax
 	cmp	esi, esp
@@ -1380,14 +1380,14 @@ $LN1@Initialize:
 	push	144					; 00000090H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T152923[ebp], eax
+	mov	DWORD PTR $T150752[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	cmp	DWORD PTR $T152923[ebp], 0
+	cmp	DWORD PTR $T150752[ebp], 0
 	je	SHORT $LN8@Initialize
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx]
 	push	edx
-	mov	ecx, DWORD PTR $T152923[ebp]
+	mov	ecx, DWORD PTR $T150752[ebp]
 	call	??0Blaster@@QAE@PAVRaven_Bot@@@Z	; Blaster::Blaster
 	mov	DWORD PTR tv167[ebp], eax
 	jmp	SHORT $LN9@Initialize
@@ -1395,17 +1395,17 @@ $LN8@Initialize:
 	mov	DWORD PTR tv167[ebp], 0
 $LN9@Initialize:
 	mov	eax, DWORD PTR tv167[ebp]
-	mov	DWORD PTR $T152922[ebp], eax
+	mov	DWORD PTR $T150751[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR $T152922[ebp]
+	mov	edx, DWORD PTR $T150751[ebp]
 	mov	DWORD PTR [ecx+24], edx
 
 ; 55   : 
 ; 56   :   m_WeaponMap[type_blaster]         = m_pCurrentWeapon;
 
-	mov	DWORD PTR $T152926[ebp], 9
-	lea	eax, DWORD PTR $T152926[ebp]
+	mov	DWORD PTR $T150755[ebp], 9
+	lea	eax, DWORD PTR $T150755[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1416,8 +1416,8 @@ $LN9@Initialize:
 
 ; 57   :   m_WeaponMap[type_shotgun]         = 0;
 
-	mov	DWORD PTR $T152927[ebp], 8
-	lea	eax, DWORD PTR $T152927[ebp]
+	mov	DWORD PTR $T150756[ebp], 8
+	lea	eax, DWORD PTR $T150756[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1426,8 +1426,8 @@ $LN9@Initialize:
 
 ; 58   :   m_WeaponMap[type_rail_gun]        = 0;
 
-	mov	DWORD PTR $T152928[ebp], 6
-	lea	ecx, DWORD PTR $T152928[ebp]
+	mov	DWORD PTR $T150757[ebp], 6
+	lea	ecx, DWORD PTR $T150757[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1436,8 +1436,8 @@ $LN9@Initialize:
 
 ; 59   :   m_WeaponMap[type_rocket_launcher] = 0;
 
-	mov	DWORD PTR $T152929[ebp], 7
-	lea	edx, DWORD PTR $T152929[ebp]
+	mov	DWORD PTR $T150758[ebp], 7
+	lea	edx, DWORD PTR $T150758[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1487,13 +1487,13 @@ __unwindfunclet$?Initialize@Raven_WeaponSystem@@QAEXXZ$0:
 	lea	ecx, DWORD PTR _curW$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Initialize@Raven_WeaponSystem@@QAEXXZ$1:
-	lea	ecx, DWORD PTR $T152915[ebp]
+	lea	ecx, DWORD PTR $T150744[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Initialize@Raven_WeaponSystem@@QAEXXZ$2:
-	lea	ecx, DWORD PTR $T152917[ebp]
+	lea	ecx, DWORD PTR $T150746[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Initialize@Raven_WeaponSystem@@QAEXXZ$3:
-	mov	eax, DWORD PTR $T152923[ebp]
+	mov	eax, DWORD PTR $T150752[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -2174,16 +2174,16 @@ tv214 = -140						; size = 4
 tv215 = -136						; size = 4
 tv212 = -132						; size = 4
 tv92 = -128						; size = 4
-$T152996 = -124						; size = 4
-$T152995 = -120						; size = 12
-$T152994 = -105						; size = 1
-$T152993 = -104						; size = 12
-$T152992 = -92						; size = 16
-$T152991 = -76						; size = 16
-_score$138757 = -60					; size = 8
-_curWeap$138733 = -48					; size = 12
-_BestSoFar$138732 = -32					; size = 8
-_DistToTarget$138729 = -24				; size = 8
+$T150825 = -124						; size = 4
+$T150824 = -120						; size = 12
+$T150823 = -105						; size = 1
+$T150822 = -104						; size = 12
+$T150821 = -92						; size = 16
+$T150820 = -76						; size = 16
+_score$137603 = -60					; size = 8
+_curWeap$137579 = -48					; size = 12
+_BestSoFar$137578 = -32					; size = 8
+_DistToTarget$137575 = -24				; size = 8
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?SelectWeapon@Raven_WeaponSystem@@QAEXXZ PROC		; Raven_WeaponSystem::SelectWeapon
@@ -2230,7 +2230,7 @@ __$EHRec$ = -12						; size = 12
 ; 71   :     //calculate the distance to the target
 ; 72   :     double DistToTarget = Vec2DDistance(m_pOwner->Pos(), m_pOwner->GetTargetSys()->GetTarget()->Pos());
 
-	lea	edx, DWORD PTR $T152991[ebp]
+	lea	edx, DWORD PTR $T150820[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -2240,7 +2240,7 @@ __$EHRec$ = -12						; size = 12
 	mov	ecx, eax
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	push	eax
-	lea	ecx, DWORD PTR $T152992[ebp]
+	lea	ecx, DWORD PTR $T150821[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -2248,7 +2248,7 @@ __$EHRec$ = -12						; size = 12
 	push	eax
 	call	?Vec2DDistance@@YANABUVector2D@@0@Z	; Vec2DDistance
 	add	esp, 8
-	fstp	QWORD PTR _DistToTarget$138729[ebp]
+	fstp	QWORD PTR _DistToTarget$137575[ebp]
 
 ; 73   : 
 ; 74   :     //for each weapon in the inventory calculate its desirability given the 
@@ -2256,18 +2256,18 @@ __$EHRec$ = -12						; size = 12
 ; 76   :     double BestSoFar = MinDouble;
 
 	fld	QWORD PTR _MinDouble
-	fstp	QWORD PTR _BestSoFar$138732[ebp]
+	fstp	QWORD PTR _BestSoFar$137578[ebp]
 
 ; 77   : 
 ; 78   :     WeaponMap::const_iterator curWeap;
 
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
 ; 79   :     for (curWeap=m_WeaponMap.begin(); curWeap != m_WeaponMap.end(); ++curWeap)
 
-	lea	eax, DWORD PTR $T152993[ebp]
+	lea	eax, DWORD PTR $T150822[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -2278,17 +2278,17 @@ __$EHRec$ = -12						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	edx, DWORD PTR tv212[ebp]
 	push	edx
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??4?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152993[ebp]
+	lea	ecx, DWORD PTR $T150822[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN6@SelectWeap
 $LN5@SelectWeap:
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator++
 $LN6@SelectWeap:
-	lea	eax, DWORD PTR $T152995[ebp]
+	lea	eax, DWORD PTR $T150824[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -2299,13 +2299,13 @@ $LN6@SelectWeap:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	mov	edx, DWORD PTR tv214[ebp]
 	push	edx
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator!=
-	mov	BYTE PTR $T152994[ebp], al
+	mov	BYTE PTR $T150823[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152995[ebp]
+	lea	ecx, DWORD PTR $T150824[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T152994[ebp]
+	movzx	eax, BYTE PTR $T150823[ebp]
 	test	eax, eax
 	je	SHORT $LN4@SelectWeap
 
@@ -2314,7 +2314,7 @@ $LN6@SelectWeap:
 ; 82   :       //distance to target and ammo remaining)
 ; 83   :       if (curWeap->second)
 
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::operator->
 	cmp	DWORD PTR [eax+4], 0
 	je	SHORT $LN2@SelectWeap
@@ -2322,13 +2322,13 @@ $LN6@SelectWeap:
 ; 84   :       {
 ; 85   :         double score = curWeap->second->GetDesirability(DistToTarget);
 
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::operator->
 	mov	ecx, DWORD PTR [eax+4]
 	mov	DWORD PTR tv187[ebp], ecx
 	mov	esi, esp
 	sub	esp, 8
-	fld	QWORD PTR _DistToTarget$138729[ebp]
+	fld	QWORD PTR _DistToTarget$137575[ebp]
 	fstp	QWORD PTR [esp]
 	mov	edx, DWORD PTR tv187[ebp]
 	mov	eax, DWORD PTR [edx]
@@ -2337,14 +2337,14 @@ $LN6@SelectWeap:
 	call	edx
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	fstp	QWORD PTR _score$138757[ebp]
+	fstp	QWORD PTR _score$137603[ebp]
 
 ; 86   : 
 ; 87   :         //if it is the most desirable so far select it
 ; 88   :         if (score > BestSoFar)
 
-	fld	QWORD PTR _BestSoFar$138732[ebp]
-	fcomp	QWORD PTR _score$138757[ebp]
+	fld	QWORD PTR _BestSoFar$137578[ebp]
+	fcomp	QWORD PTR _score$137603[ebp]
 	fnstsw	ax
 	test	ah, 5
 	jp	SHORT $LN2@SelectWeap
@@ -2352,14 +2352,14 @@ $LN6@SelectWeap:
 ; 89   :         {
 ; 90   :           BestSoFar = score;
 
-	fld	QWORD PTR _score$138757[ebp]
-	fstp	QWORD PTR _BestSoFar$138732[ebp]
+	fld	QWORD PTR _score$137603[ebp]
+	fstp	QWORD PTR _BestSoFar$137578[ebp]
 
 ; 91   : 
 ; 92   :           //place the weapon in the bot's hand.
 ; 93   :           m_pCurrentWeapon = curWeap->second;
 
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::operator->
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [eax+4]
@@ -2376,7 +2376,7 @@ $LN4@SelectWeap:
 ; 97   :   }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 
 ; 98   : 
@@ -2388,8 +2388,8 @@ $LN7@SelectWeap:
 ; 100  :   {
 ; 101  :     m_pCurrentWeapon = m_WeaponMap[type_blaster];
 
-	mov	DWORD PTR $T152996[ebp], 9
-	lea	eax, DWORD PTR $T152996[ebp]
+	mov	DWORD PTR $T150825[ebp], 9
+	lea	eax, DWORD PTR $T150825[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -2440,13 +2440,13 @@ $LN13@SelectWeap:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?SelectWeapon@Raven_WeaponSystem@@QAEXXZ$0:
-	lea	ecx, DWORD PTR _curWeap$138733[ebp]
+	lea	ecx, DWORD PTR _curWeap$137579[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SelectWeapon@Raven_WeaponSystem@@QAEXXZ$1:
-	lea	ecx, DWORD PTR $T152993[ebp]
+	lea	ecx, DWORD PTR $T150822[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SelectWeapon@Raven_WeaponSystem@@QAEXXZ$2:
-	lea	ecx, DWORD PTR $T152995[ebp]
+	lea	ecx, DWORD PTR $T150824[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?SelectWeapon@Raven_WeaponSystem@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -2651,15 +2651,15 @@ tv132 = -76						; size = 4
 tv88 = -72						; size = 4
 tv76 = -68						; size = 4
 tv64 = -64						; size = 4
-$T153034 = -60						; size = 4
-$T153031 = -56						; size = 4
-$T153030 = -52						; size = 4
-$T153027 = -48						; size = 4
-$T153026 = -44						; size = 4
-$T153023 = -40						; size = 4
-$T153022 = -36						; size = 4
-$T153019 = -32						; size = 4
-$T153018 = -28						; size = 4
+$T150863 = -60						; size = 4
+$T150860 = -56						; size = 4
+$T150859 = -52						; size = 4
+$T150856 = -48						; size = 4
+$T150855 = -44						; size = 4
+$T150852 = -40						; size = 4
+$T150851 = -36						; size = 4
+$T150848 = -32						; size = 4
+$T150847 = -28						; size = 4
 _present$ = -24						; size = 4
 _w$ = -20						; size = 4
 _this$ = -16						; size = 4
@@ -2719,14 +2719,14 @@ $LN5@AddWeapon:
 	push	144					; 00000090H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T153019[ebp], eax
+	mov	DWORD PTR $T150848[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T153019[ebp], 0
+	cmp	DWORD PTR $T150848[ebp], 0
 	je	SHORT $LN10@AddWeapon
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx]
 	push	edx
-	mov	ecx, DWORD PTR $T153019[ebp]
+	mov	ecx, DWORD PTR $T150848[ebp]
 	call	??0RailGun@@QAE@PAVRaven_Bot@@@Z	; RailGun::RailGun
 	mov	DWORD PTR tv76[ebp], eax
 	jmp	SHORT $LN11@AddWeapon
@@ -2734,9 +2734,9 @@ $LN10@AddWeapon:
 	mov	DWORD PTR tv76[ebp], 0
 $LN11@AddWeapon:
 	mov	eax, DWORD PTR tv76[ebp]
-	mov	DWORD PTR $T153018[ebp], eax
+	mov	DWORD PTR $T150847[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	ecx, DWORD PTR $T153018[ebp]
+	mov	ecx, DWORD PTR $T150847[ebp]
 	mov	DWORD PTR _w$[ebp], ecx
 	jmp	$LN6@AddWeapon
 $LN4@AddWeapon:
@@ -2749,14 +2749,14 @@ $LN4@AddWeapon:
 	push	160					; 000000a0H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T153023[ebp], eax
+	mov	DWORD PTR $T150852[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	cmp	DWORD PTR $T153023[ebp], 0
+	cmp	DWORD PTR $T150852[ebp], 0
 	je	SHORT $LN12@AddWeapon
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx]
 	push	eax
-	mov	ecx, DWORD PTR $T153023[ebp]
+	mov	ecx, DWORD PTR $T150852[ebp]
 	call	??0ShotGun@@QAE@PAVRaven_Bot@@@Z	; ShotGun::ShotGun
 	mov	DWORD PTR tv88[ebp], eax
 	jmp	SHORT $LN13@AddWeapon
@@ -2764,9 +2764,9 @@ $LN12@AddWeapon:
 	mov	DWORD PTR tv88[ebp], 0
 $LN13@AddWeapon:
 	mov	ecx, DWORD PTR tv88[ebp]
-	mov	DWORD PTR $T153022[ebp], ecx
+	mov	DWORD PTR $T150851[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	edx, DWORD PTR $T153022[ebp]
+	mov	edx, DWORD PTR $T150851[ebp]
 	mov	DWORD PTR _w$[ebp], edx
 	jmp	SHORT $LN6@AddWeapon
 $LN3@AddWeapon:
@@ -2779,14 +2779,14 @@ $LN3@AddWeapon:
 	push	144					; 00000090H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T153027[ebp], eax
+	mov	DWORD PTR $T150856[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	cmp	DWORD PTR $T153027[ebp], 0
+	cmp	DWORD PTR $T150856[ebp], 0
 	je	SHORT $LN14@AddWeapon
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
 	push	ecx
-	mov	ecx, DWORD PTR $T153027[ebp]
+	mov	ecx, DWORD PTR $T150856[ebp]
 	call	??0RocketLauncher@@QAE@PAVRaven_Bot@@@Z	; RocketLauncher::RocketLauncher
 	mov	DWORD PTR tv132[ebp], eax
 	jmp	SHORT $LN15@AddWeapon
@@ -2794,9 +2794,9 @@ $LN14@AddWeapon:
 	mov	DWORD PTR tv132[ebp], 0
 $LN15@AddWeapon:
 	mov	edx, DWORD PTR tv132[ebp]
-	mov	DWORD PTR $T153026[ebp], edx
+	mov	DWORD PTR $T150855[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	eax, DWORD PTR $T153026[ebp]
+	mov	eax, DWORD PTR $T150855[ebp]
 	mov	DWORD PTR _w$[ebp], eax
 $LN6@AddWeapon:
 
@@ -2832,16 +2832,16 @@ $LN6@AddWeapon:
 ; 141  :     delete w;
 
 	mov	edx, DWORD PTR _w$[ebp]
-	mov	DWORD PTR $T153031[ebp], edx
-	mov	eax, DWORD PTR $T153031[ebp]
-	mov	DWORD PTR $T153030[ebp], eax
-	cmp	DWORD PTR $T153030[ebp], 0
+	mov	DWORD PTR $T150860[ebp], edx
+	mov	eax, DWORD PTR $T150860[ebp]
+	mov	DWORD PTR $T150859[ebp], eax
+	cmp	DWORD PTR $T150859[ebp], 0
 	je	SHORT $LN16@AddWeapon
 	mov	esi, esp
 	push	1
-	mov	ecx, DWORD PTR $T153030[ebp]
+	mov	ecx, DWORD PTR $T150859[ebp]
 	mov	edx, DWORD PTR [ecx]
-	mov	ecx, DWORD PTR $T153030[ebp]
+	mov	ecx, DWORD PTR $T150859[ebp]
 	mov	eax, DWORD PTR [edx+4]
 	call	eax
 	cmp	esi, esp
@@ -2864,8 +2864,8 @@ $LN2@AddWeapon:
 ; 147  :     m_WeaponMap[weapon_type] = w;
 
 	mov	ecx, DWORD PTR _weapon_type$[ebp]
-	mov	DWORD PTR $T153034[ebp], ecx
-	lea	edx, DWORD PTR $T153034[ebp]
+	mov	DWORD PTR $T150863[ebp], ecx
+	lea	edx, DWORD PTR $T150863[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -2891,19 +2891,19 @@ $LN8@AddWeapon:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?AddWeapon@Raven_WeaponSystem@@QAEXI@Z$0:
-	mov	eax, DWORD PTR $T153019[ebp]
+	mov	eax, DWORD PTR $T150848[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$?AddWeapon@Raven_WeaponSystem@@QAEXI@Z$1:
-	mov	eax, DWORD PTR $T153023[ebp]
+	mov	eax, DWORD PTR $T150852[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$?AddWeapon@Raven_WeaponSystem@@QAEXI@Z$2:
-	mov	eax, DWORD PTR $T153027[ebp]
+	mov	eax, DWORD PTR $T150856[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -2944,7 +2944,7 @@ PUBLIC	??$Clamp@IHI@@YAXAAIABHABI@Z			; Clamp<unsigned int,int,unsigned int>
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?IncrementRounds@Raven_Weapon@@QAEXH@Z
 _TEXT	SEGMENT
-$T153045 = -8						; size = 4
+$T150874 = -8						; size = 4
 _this$ = -4						; size = 4
 _num$ = 8						; size = 4
 ?IncrementRounds@Raven_Weapon@@QAEXH@Z PROC		; Raven_Weapon::IncrementRounds, COMDAT
@@ -2969,11 +2969,11 @@ _num$ = 8						; size = 4
 
 ; 168  :   Clamp(m_iNumRoundsLeft, 0, m_iMaxRoundsCarried);
 
-	mov	DWORD PTR $T153045[ebp], 0
+	mov	DWORD PTR $T150874[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 60					; 0000003cH
 	push	eax
-	lea	ecx, DWORD PTR $T153045[ebp]
+	lea	ecx, DWORD PTR $T150874[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	add	edx, 56					; 00000038H
@@ -3089,11 +3089,11 @@ EXTRN	?isTargetShootable@Raven_TargetingSystem@@QBE_NXZ:PROC ; Raven_TargetingSy
 _TEXT	SEGMENT
 tv171 = -100						; size = 4
 tv151 = -96						; size = 4
-$T153053 = -92						; size = 16
-$T153052 = -76						; size = 16
-$T153051 = -60						; size = 16
-$T153050 = -44						; size = 16
-_AimingPos$138806 = -24					; size = 16
+$T150882 = -92						; size = 16
+$T150881 = -76						; size = 16
+$T150880 = -60						; size = 16
+$T150879 = -44						; size = 16
+_AimingPos$137652 = -24					; size = 16
 _this$ = -4						; size = 4
 ?TakeAimAndShoot@Raven_WeaponSystem@@QBEXXZ PROC	; Raven_WeaponSystem::TakeAimAndShoot
 ; _this$ = ecx
@@ -3145,7 +3145,7 @@ $LN7@TakeAimAnd:
 ; 186  :     //the position the weapon will be aimed at
 ; 187  :     Vector2D AimingPos = m_pOwner->GetTargetBot()->Pos();
 
-	lea	ecx, DWORD PTR _AimingPos$138806[ebp]
+	lea	ecx, DWORD PTR _AimingPos$137652[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -3177,18 +3177,18 @@ $LN5@TakeAimAnd:
 ; 194  :     {
 ; 195  :       AimingPos = PredictFuturePositionOfTarget();
 
-	lea	eax, DWORD PTR $T153050[ebp]
+	lea	eax, DWORD PTR $T150879[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?PredictFuturePositionOfTarget@Raven_WeaponSystem@@ABE?AUVector2D@@XZ ; Raven_WeaponSystem::PredictFuturePositionOfTarget
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR _AimingPos$138806[ebp], ecx
+	mov	DWORD PTR _AimingPos$137652[ebp], ecx
 	mov	edx, DWORD PTR [eax+4]
-	mov	DWORD PTR _AimingPos$138806[ebp+4], edx
+	mov	DWORD PTR _AimingPos$137652[ebp+4], edx
 	mov	ecx, DWORD PTR [eax+8]
-	mov	DWORD PTR _AimingPos$138806[ebp+8], ecx
+	mov	DWORD PTR _AimingPos$137652[ebp+8], ecx
 	mov	edx, DWORD PTR [eax+12]
-	mov	DWORD PTR _AimingPos$138806[ebp+12], edx
+	mov	DWORD PTR _AimingPos$137652[ebp+12], edx
 
 ; 196  : 
 ; 197  :       //if the weapon is aimed correctly, there is line of sight between the
@@ -3201,13 +3201,13 @@ $LN5@TakeAimAnd:
 
 	sub	esp, 16					; 00000010H
 	mov	eax, esp
-	mov	ecx, DWORD PTR _AimingPos$138806[ebp]
+	mov	ecx, DWORD PTR _AimingPos$137652[ebp]
 	mov	DWORD PTR [eax], ecx
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+4]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+4]
 	mov	DWORD PTR [eax+4], edx
-	mov	ecx, DWORD PTR _AimingPos$138806[ebp+8]
+	mov	ecx, DWORD PTR _AimingPos$137652[ebp+8]
 	mov	DWORD PTR [eax+8], ecx
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+12]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+12]
 	mov	DWORD PTR [eax+12], edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -3227,13 +3227,13 @@ $LN5@TakeAimAnd:
 	jne	SHORT $LN4@TakeAimAnd
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
-	mov	edx, DWORD PTR _AimingPos$138806[ebp]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR _AimingPos$138806[ebp+4]
+	mov	eax, DWORD PTR _AimingPos$137652[ebp+4]
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+8]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+8]
 	mov	DWORD PTR [ecx+8], edx
-	mov	eax, DWORD PTR _AimingPos$138806[ebp+12]
+	mov	eax, DWORD PTR _AimingPos$137652[ebp+12]
 	mov	DWORD PTR [ecx+12], eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -3245,7 +3245,7 @@ $LN5@TakeAimAnd:
 ; 204  :       {
 ; 205  :         AddNoiseToAim(AimingPos);
 
-	lea	eax, DWORD PTR _AimingPos$138806[ebp]
+	lea	eax, DWORD PTR _AimingPos$137652[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?AddNoiseToAim@Raven_WeaponSystem@@ABEXAAUVector2D@@@Z ; Raven_WeaponSystem::AddNoiseToAim
@@ -3259,13 +3259,13 @@ $LN5@TakeAimAnd:
 	mov	esi, esp
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
-	mov	edx, DWORD PTR _AimingPos$138806[ebp]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR _AimingPos$138806[ebp+4]
+	mov	eax, DWORD PTR _AimingPos$137652[ebp+4]
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+8]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+8]
 	mov	DWORD PTR [ecx+8], edx
-	mov	eax, DWORD PTR _AimingPos$138806[ebp+12]
+	mov	eax, DWORD PTR _AimingPos$137652[ebp+12]
 	mov	DWORD PTR [ecx+12], eax
 	mov	ecx, DWORD PTR tv151[ebp]
 	mov	edx, DWORD PTR [ecx]
@@ -3294,13 +3294,13 @@ $LN6@TakeAimAnd:
 
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
-	mov	edx, DWORD PTR _AimingPos$138806[ebp]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR _AimingPos$138806[ebp+4]
+	mov	eax, DWORD PTR _AimingPos$137652[ebp+4]
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+8]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+8]
 	mov	DWORD PTR [ecx+8], edx
-	mov	eax, DWORD PTR _AimingPos$138806[ebp+12]
+	mov	eax, DWORD PTR _AimingPos$137652[ebp+12]
 	mov	DWORD PTR [ecx+12], eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -3322,7 +3322,7 @@ $LN6@TakeAimAnd:
 ; 219  :       {
 ; 220  :         AddNoiseToAim(AimingPos);
 
-	lea	edx, DWORD PTR _AimingPos$138806[ebp]
+	lea	edx, DWORD PTR _AimingPos$137652[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?AddNoiseToAim@Raven_WeaponSystem@@ABEXAAUVector2D@@@Z ; Raven_WeaponSystem::AddNoiseToAim
@@ -3336,13 +3336,13 @@ $LN6@TakeAimAnd:
 	mov	esi, esp
 	sub	esp, 16					; 00000010H
 	mov	eax, esp
-	mov	ecx, DWORD PTR _AimingPos$138806[ebp]
+	mov	ecx, DWORD PTR _AimingPos$137652[ebp]
 	mov	DWORD PTR [eax], ecx
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+4]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+4]
 	mov	DWORD PTR [eax+4], edx
-	mov	ecx, DWORD PTR _AimingPos$138806[ebp+8]
+	mov	ecx, DWORD PTR _AimingPos$137652[ebp+8]
 	mov	DWORD PTR [eax+8], ecx
-	mov	edx, DWORD PTR _AimingPos$138806[ebp+12]
+	mov	edx, DWORD PTR _AimingPos$137652[ebp+12]
 	mov	DWORD PTR [eax+12], edx
 	mov	eax, DWORD PTR tv171[ebp]
 	mov	edx, DWORD PTR [eax]
@@ -3368,19 +3368,19 @@ $LN8@TakeAimAnd:
 ; 231  :   {
 ; 232  :     m_pOwner->RotateFacingTowardPosition(m_pOwner->Pos()+ m_pOwner->Heading());
 
-	lea	ecx, DWORD PTR $T153051[ebp]
+	lea	ecx, DWORD PTR $T150880[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
 	call	?Heading@MovingEntity@@QBE?AUVector2D@@XZ ; MovingEntity::Heading
 	push	eax
-	lea	eax, DWORD PTR $T153052[ebp]
+	lea	eax, DWORD PTR $T150881[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	push	eax
-	lea	edx, DWORD PTR $T153053[ebp]
+	lea	edx, DWORD PTR $T150882[ebp]
 	push	edx
 	call	??H@YA?AUVector2D@@ABU0@0@Z		; operator+
 	add	esp, -4					; fffffffcH
@@ -3630,9 +3630,9 @@ PUBLIC	??G@YA?AUVector2D@@ABU0@0@Z			; operator-
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_weaponsystem.cpp
 _TEXT	SEGMENT
-$T153073 = -76						; size = 16
-$T153072 = -60						; size = 16
-$T153071 = -44						; size = 16
+$T150902 = -76						; size = 16
+$T150901 = -60						; size = 16
+$T150900 = -44						; size = 16
 _toPos$ = -24						; size = 16
 _this$ = -4						; size = 4
 _AimingPos$ = 8						; size = 4
@@ -3655,7 +3655,7 @@ _AimingPos$ = 8						; size = 4
 
 ; 243  :   Vector2D toPos = AimingPos - m_pOwner->Pos();
 
-	lea	eax, DWORD PTR $T153071[ebp]
+	lea	eax, DWORD PTR $T150900[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -3691,7 +3691,7 @@ _AimingPos$ = 8						; size = 4
 ; 246  : 
 ; 247  :   AimingPos = toPos + m_pOwner->Pos();
 
-	lea	ecx, DWORD PTR $T153072[ebp]
+	lea	ecx, DWORD PTR $T150901[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -3699,7 +3699,7 @@ _AimingPos$ = 8						; size = 4
 	push	eax
 	lea	eax, DWORD PTR _toPos$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T153073[ebp]
+	lea	ecx, DWORD PTR $T150902[ebp]
 	push	ecx
 	call	??H@YA?AUVector2D@@ABU0@0@Z		; operator+
 	add	esp, 12					; 0000000cH
@@ -4587,11 +4587,11 @@ PUBLIC	?GetMaxProjectileSpeed@Raven_Weapon@@QBENXZ	; Raven_Weapon::GetMaxProject
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_weaponsystem.cpp
 _TEXT	SEGMENT
 tv191 = -132						; size = 8
-$T153120 = -124						; size = 16
-$T153119 = -108						; size = 16
-$T153118 = -92						; size = 16
-$T153117 = -76						; size = 16
-$T153116 = -60						; size = 16
+$T150949 = -124						; size = 16
+$T150948 = -108						; size = 16
+$T150947 = -92						; size = 16
+$T150946 = -76						; size = 16
+$T150945 = -60						; size = 16
 _LookAheadTime$ = -44					; size = 8
 _ToEnemy$ = -32						; size = 16
 _MaxSpeed$ = -12					; size = 8
@@ -4626,13 +4626,13 @@ ___$ReturnUdt$ = 8					; size = 4
 ; 260  :   //if the target is ahead and facing the agent shoot at its current pos
 ; 261  :   Vector2D ToEnemy = m_pOwner->GetTargetBot()->Pos() - m_pOwner->Pos();
 
-	lea	eax, DWORD PTR $T153116[ebp]
+	lea	eax, DWORD PTR $T150945[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	push	eax
-	lea	edx, DWORD PTR $T153117[ebp]
+	lea	edx, DWORD PTR $T150946[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -4672,7 +4672,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	sub	esp, 8
 	fld	QWORD PTR _LookAheadTime$[ebp]
 	fstp	QWORD PTR [esp]
-	lea	eax, DWORD PTR $T153118[ebp]
+	lea	eax, DWORD PTR $T150947[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -4680,12 +4680,12 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	ecx, eax
 	call	?Velocity@MovingEntity@@QBE?AUVector2D@@XZ ; MovingEntity::Velocity
 	push	eax
-	lea	edx, DWORD PTR $T153119[ebp]
+	lea	edx, DWORD PTR $T150948[ebp]
 	push	edx
 	call	??D@YA?AUVector2D@@ABU0@N@Z		; operator*
 	add	esp, 16					; 00000010H
 	push	eax
-	lea	eax, DWORD PTR $T153120[ebp]
+	lea	eax, DWORD PTR $T150949[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -4990,8 +4990,8 @@ PUBLIC	?GetAmmoRemainingForWeapon@Raven_WeaponSystem@@QAEHI@Z ; Raven_WeaponSyst
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_weaponsystem.cpp
 _TEXT	SEGMENT
-$T153141 = -12						; size = 4
-$T153140 = -8						; size = 4
+$T150970 = -12						; size = 4
+$T150969 = -8						; size = 4
 _this$ = -4						; size = 4
 _weapon_type$ = 8					; size = 4
 ?GetAmmoRemainingForWeapon@Raven_WeaponSystem@@QAEHI@Z PROC ; Raven_WeaponSystem::GetAmmoRemainingForWeapon
@@ -5010,8 +5010,8 @@ _weapon_type$ = 8					; size = 4
 ; 282  :   if (m_WeaponMap[weapon_type])
 
 	mov	eax, DWORD PTR _weapon_type$[ebp]
-	mov	DWORD PTR $T153140[ebp], eax
-	lea	ecx, DWORD PTR $T153140[ebp]
+	mov	DWORD PTR $T150969[ebp], eax
+	lea	ecx, DWORD PTR $T150969[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -5023,8 +5023,8 @@ _weapon_type$ = 8					; size = 4
 ; 284  :     return m_WeaponMap[weapon_type]->NumRoundsRemaining();
 
 	mov	edx, DWORD PTR _weapon_type$[ebp]
-	mov	DWORD PTR $T153141[ebp], edx
-	lea	eax, DWORD PTR $T153141[ebp]
+	mov	DWORD PTR $T150970[ebp], edx
+	lea	eax, DWORD PTR $T150970[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -5208,17 +5208,17 @@ tv248 = -296						; size = 4
 tv260 = -292						; size = 4
 tv246 = -288						; size = 4
 tv71 = -284						; size = 4
-$T153151 = -280						; size = 12
-$T153150 = -265						; size = 1
-$T153149 = -264						; size = 12
-$T153148 = -252						; size = 12
-$T153147 = -237						; size = 1
-$T153146 = -236						; size = 12
-$T138951 = -224						; size = 32
-$T138886 = -192						; size = 32
-$T138885 = -160						; size = 32
-_type$138878 = -124					; size = 32
-_score$138877 = -84					; size = 8
+$T150980 = -280						; size = 12
+$T150979 = -265						; size = 1
+$T150978 = -264						; size = 12
+$T150977 = -252						; size = 12
+$T150976 = -237						; size = 1
+$T150975 = -236						; size = 12
+$T137797 = -224						; size = 32
+$T137732 = -192						; size = 32
+$T137731 = -160						; size = 32
+_type$137724 = -124					; size = 32
+_score$137723 = -84					; size = 8
 _offset$ = -72						; size = 4
 _curWeap$ = -64						; size = 12
 _num$ = -48						; size = 4
@@ -5275,7 +5275,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 313  :   for (curWeap=m_WeaponMap.begin(); curWeap != m_WeaponMap.end(); ++curWeap)
 
-	lea	edx, DWORD PTR $T153146[ebp]
+	lea	edx, DWORD PTR $T150975[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -5289,14 +5289,14 @@ __$EHRec$ = -12						; size = 12
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	call	??4?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153146[ebp]
+	lea	ecx, DWORD PTR $T150975[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN8@RenderDesi
 $LN7@RenderDesi:
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	call	??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator++
 $LN8@RenderDesi:
-	lea	edx, DWORD PTR $T153148[ebp]
+	lea	edx, DWORD PTR $T150977[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -5309,11 +5309,11 @@ $LN8@RenderDesi:
 	push	ecx
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator!=
-	mov	BYTE PTR $T153147[ebp], al
+	mov	BYTE PTR $T150976[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153148[ebp]
+	lea	ecx, DWORD PTR $T150977[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T153147[ebp]
+	movzx	edx, BYTE PTR $T150976[ebp]
 	test	edx, edx
 	je	SHORT $LN6@RenderDesi
 
@@ -5344,7 +5344,7 @@ $LN6@RenderDesi:
 ; 319  : 
 ; 320  :     for (curWeap=m_WeaponMap.begin(); curWeap != m_WeaponMap.end(); ++curWeap)
 
-	lea	edx, DWORD PTR $T153149[ebp]
+	lea	edx, DWORD PTR $T150978[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -5358,14 +5358,14 @@ $LN6@RenderDesi:
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	call	??4?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153149[ebp]
+	lea	ecx, DWORD PTR $T150978[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN4@RenderDesi
 $LN3@RenderDesi:
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	call	??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator++
 $LN4@RenderDesi:
-	lea	edx, DWORD PTR $T153151[ebp]
+	lea	edx, DWORD PTR $T150980[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -5378,11 +5378,11 @@ $LN4@RenderDesi:
 	push	ecx
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator!=
-	mov	BYTE PTR $T153150[ebp], al
+	mov	BYTE PTR $T150979[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153151[ebp]
+	lea	ecx, DWORD PTR $T150980[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T153150[ebp]
+	movzx	edx, BYTE PTR $T150979[ebp]
 	test	edx, edx
 	je	$LN2@RenderDesi
 
@@ -5401,7 +5401,7 @@ $LN4@RenderDesi:
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::operator->
 	mov	ecx, DWORD PTR [eax+4]
 	call	?GetLastDesirabilityScore@Raven_Weapon@@QBENXZ ; Raven_Weapon::GetLastDesirabilityScore
-	fstp	QWORD PTR _score$138877[ebp]
+	fstp	QWORD PTR _score$137723[ebp]
 
 ; 325  :         std::string type = GetNameOfType(curWeap->second->GetType());
 
@@ -5410,7 +5410,7 @@ $LN4@RenderDesi:
 	mov	ecx, DWORD PTR [eax+4]
 	call	?GetType@Raven_Weapon@@QBEIXZ		; Raven_Weapon::GetType
 	push	eax
-	lea	eax, DWORD PTR _type$138878[ebp]
+	lea	eax, DWORD PTR _type$137724[ebp]
 	push	eax
 	call	?GetNameOfType@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z ; GetNameOfType
 	add	esp, 8
@@ -5419,13 +5419,13 @@ $LN4@RenderDesi:
 ; 326  : 
 ; 327  :         gdi->TextAtPos(p.x+10.0, p.y-offset, ttos(score) + " " + type);
 
-	lea	ecx, DWORD PTR _type$138878[ebp]
+	lea	ecx, DWORD PTR _type$137724[ebp]
 	push	ecx
-	push	OFFSET $SG138952
+	push	OFFSET $SG137798
 	push	2
-	lea	edx, DWORD PTR _score$138877[ebp]
+	lea	edx, DWORD PTR _score$137723[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T138885[ebp]
+	lea	eax, DWORD PTR $T137731[ebp]
 	push	eax
 	call	??$ttos@N@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABNH@Z ; ttos<double>
 	add	esp, 12					; 0000000cH
@@ -5435,7 +5435,7 @@ $LN4@RenderDesi:
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
 	mov	edx, DWORD PTR tv255[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T138886[ebp]
+	lea	eax, DWORD PTR $T137732[ebp]
 	push	eax
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@$$QAV10@PBD@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
 	add	esp, 12					; 0000000cH
@@ -5445,7 +5445,7 @@ $LN4@RenderDesi:
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
 	mov	edx, DWORD PTR tv257[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T138951[ebp]
+	lea	eax, DWORD PTR $T137797[ebp]
 	push	eax
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@$$QAV10@ABV10@@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
 	add	esp, 12					; 0000000cH
@@ -5467,13 +5467,13 @@ $LN4@RenderDesi:
 	mov	ecx, eax
 	call	?TextAtPos@Cgdi@@QAEXNNABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; Cgdi::TextAtPos
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
-	lea	ecx, DWORD PTR $T138951[ebp]
+	lea	ecx, DWORD PTR $T137797[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
-	lea	ecx, DWORD PTR $T138886[ebp]
+	lea	ecx, DWORD PTR $T137732[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	lea	ecx, DWORD PTR $T138885[ebp]
+	lea	ecx, DWORD PTR $T137731[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 328  : 
@@ -5486,7 +5486,7 @@ $LN4@RenderDesi:
 ; 330  :       }
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR _type$138878[ebp]
+	lea	ecx, DWORD PTR _type$137724[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN1@RenderDesi:
 
@@ -5568,28 +5568,28 @@ __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$0:
 	lea	ecx, DWORD PTR _curWeap$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$1:
-	lea	ecx, DWORD PTR $T153146[ebp]
+	lea	ecx, DWORD PTR $T150975[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$2:
-	lea	ecx, DWORD PTR $T153148[ebp]
+	lea	ecx, DWORD PTR $T150977[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$3:
-	lea	ecx, DWORD PTR $T153149[ebp]
+	lea	ecx, DWORD PTR $T150978[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$4:
-	lea	ecx, DWORD PTR $T153151[ebp]
+	lea	ecx, DWORD PTR $T150980[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$5:
-	lea	ecx, DWORD PTR _type$138878[ebp]
+	lea	ecx, DWORD PTR _type$137724[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$6:
-	lea	ecx, DWORD PTR $T138885[ebp]
+	lea	ecx, DWORD PTR $T137731[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$7:
-	lea	ecx, DWORD PTR $T138886[ebp]
+	lea	ecx, DWORD PTR $T137732[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ$8:
-	lea	ecx, DWORD PTR $T138951[ebp]
+	lea	ecx, DWORD PTR $T137797[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$?RenderDesirabilities@Raven_WeaponSystem@@QBEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -5628,6 +5628,8 @@ _this$ = -4						; size = 4
 _TEXT	ENDS
 PUBLIC	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 PUBLIC	??_C@_0BE@DMMNKACB@UNKNOWN?5OBJECT?5TYPE?$AA@	; `string'
+PUBLIC	??_C@_05OPCADBOF@flag2?$AA@			; `string'
+PUBLIC	??_C@_05MEANGCCG@flag1?$AA@			; `string'
 PUBLIC	??_C@_0N@FKJMDFJC@door_trigger?$AA@		; `string'
 PUBLIC	??_C@_0N@POGFGIIH@sliding_door?$AA@		; `string'
 PUBLIC	??_C@_03EHEMCPIE@bot?$AA@			; `string'
@@ -5648,6 +5650,14 @@ PUBLIC	__$ArrayPad$
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_objectenumerations.h
 CONST	SEGMENT
 ??_C@_0BE@DMMNKACB@UNKNOWN?5OBJECT?5TYPE?$AA@ DB 'UNKNOWN OBJECT TYPE', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_05OPCADBOF@flag2?$AA@
+CONST	SEGMENT
+??_C@_05OPCADBOF@flag2?$AA@ DB 'flag2', 00H		; `string'
+CONST	ENDS
+;	COMDAT ??_C@_05MEANGCCG@flag1?$AA@
+CONST	SEGMENT
+??_C@_05MEANGCCG@flag1?$AA@ DB 'flag1', 00H		; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_0N@FKJMDFJC@door_trigger?$AA@
 CONST	SEGMENT
@@ -5719,7 +5729,7 @@ xdata$x	ENDS
 ;	COMDAT ?GetNameOfType@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z
 _TEXT	SEGMENT
 tv67 = -64						; size = 4
-$T153179 = -60						; size = 4
+$T151008 = -60						; size = 4
 _s$ = -52						; size = 32
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -5727,7 +5737,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _w$ = 12						; size = 4
 ?GetNameOfType@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z PROC ; GetNameOfType, COMDAT
 
-; 27   : {
+; 29   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -5747,201 +5757,221 @@ _w$ = 12						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T153179[ebp], 0
+	mov	DWORD PTR $T151008[ebp], 0
 
-; 28   :   std::string s;
+; 30   :   std::string s;
 
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
-; 29   :   
-; 30   :   switch (w)
+; 31   :   
+; 32   :   switch (w)
 
 	mov	eax, DWORD PTR _w$[ebp]
 	mov	DWORD PTR tv67[ebp], eax
-	cmp	DWORD PTR tv67[ebp], 12			; 0000000cH
+	cmp	DWORD PTR tv67[ebp], 14			; 0000000eH
 	ja	$LN1@GetNameOfT
 	mov	ecx, DWORD PTR tv67[ebp]
-	jmp	DWORD PTR $LN26@GetNameOfT[ecx*4]
-$LN14@GetNameOfT:
+	jmp	DWORD PTR $LN28@GetNameOfT[ecx*4]
+$LN16@GetNameOfT:
 
-; 31   :   {
-; 32   :   case type_wall:
-; 33   :     
-; 34   :     s = "Wall"; break; 
+; 33   :   {
+; 34   :   case type_wall:
+; 35   :     
+; 36   :     s = "Wall"; break; 
 
 	push	OFFSET ??_C@_04LIPBJNLA@Wall?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	$LN15@GetNameOfT
-$LN13@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN15@GetNameOfT:
 
-; 35   :     
-; 36   :   case type_waypoint:
 ; 37   :     
-; 38   :     s = "Waypoint"; break;
+; 38   :   case type_waypoint:
+; 39   :     
+; 40   :     s = "Waypoint"; break;
 
 	push	OFFSET ??_C@_08DFAAPNDP@Waypoint?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	$LN15@GetNameOfT
-$LN12@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN14@GetNameOfT:
 
-; 39   : 
-; 40   :   case type_obstacle:
-; 41   :     
-; 42   :     s = "Obstacle"; break;
+; 41   : 
+; 42   :   case type_obstacle:
+; 43   :     
+; 44   :     s = "Obstacle"; break;
 
 	push	OFFSET ??_C@_08BDKGKOJG@Obstacle?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	$LN15@GetNameOfT
-$LN11@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN13@GetNameOfT:
 
-; 43   : 
-; 44   :   case type_health:
-; 45   :     
-; 46   :     s = "Health"; break;
+; 45   : 
+; 46   :   case type_health:
+; 47   :     
+; 48   :     s = "Health"; break;
 
 	push	OFFSET ??_C@_06GGDALCBD@Health?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	$LN15@GetNameOfT
-$LN10@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN12@GetNameOfT:
 
-; 47   : 
-; 48   :   case type_spawn_point:
-; 49   :     
-; 50   :     s = "Spawn Point"; break;
+; 49   : 
+; 50   :   case type_spawn_point:
+; 51   :     
+; 52   :     s = "Spawn Point"; break;
 
 	push	OFFSET ??_C@_0M@MJAOKDOC@Spawn?5Point?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	$LN15@GetNameOfT
-$LN9@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN11@GetNameOfT:
 
-; 51   : 
-; 52   :   case type_rail_gun:
-; 53   :     
-; 54   :     s = "Railgun"; break;
+; 53   : 
+; 54   :   case type_rail_gun:
+; 55   :     
+; 56   :     s = "Railgun"; break;
 
 	push	OFFSET ??_C@_07NMJDHEIK@Railgun?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN8@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN10@GetNameOfT:
 
-; 55   : 
-; 56   :   case type_blaster:
-; 57   :     
-; 58   :     s = "Blaster"; break;
+; 57   : 
+; 58   :   case type_blaster:
+; 59   :     
+; 60   :     s = "Blaster"; break;
 
 	push	OFFSET ??_C@_07HHOBKAAD@Blaster?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN7@GetNameOfT:
+	jmp	$LN17@GetNameOfT
+$LN9@GetNameOfT:
 
-; 59   : 
-; 60   :   case type_rocket_launcher:
-; 61   :     
-; 62   :     s =  "rocket_launcher"; break;
+; 61   : 
+; 62   :   case type_rocket_launcher:
+; 63   :     
+; 64   :     s =  "rocket_launcher"; break;
 
 	push	OFFSET ??_C@_0BA@KLAKAPPA@rocket_launcher?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN6@GetNameOfT:
+	jmp	SHORT $LN17@GetNameOfT
+$LN8@GetNameOfT:
 
-; 63   : 
-; 64   :   case type_shotgun:
-; 65   :     
-; 66   :     s =  "shotgun"; break;
+; 65   : 
+; 66   :   case type_shotgun:
+; 67   :     
+; 68   :     s =  "shotgun"; break;
 
 	push	OFFSET ??_C@_07PKBOGMMP@shotgun?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN5@GetNameOfT:
+	jmp	SHORT $LN17@GetNameOfT
+$LN7@GetNameOfT:
 
-; 67   : 
-; 68   :   case type_unused:
-; 69   :     
-; 70   :     s =  "knife"; break;
+; 69   : 
+; 70   :   case type_unused:
+; 71   :     
+; 72   :     s =  "knife"; break;
 
 	push	OFFSET ??_C@_05BIPCPIBA@knife?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN4@GetNameOfT:
+	jmp	SHORT $LN17@GetNameOfT
+$LN6@GetNameOfT:
 
-; 71   : 
-; 72   :   case type_bot:
-; 73   :     
-; 74   :     s =  "bot"; break;
+; 73   : 
+; 74   :   case type_bot:
+; 75   :     
+; 76   :     s =  "bot"; break;
 
 	push	OFFSET ??_C@_03EHEMCPIE@bot?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN3@GetNameOfT:
+	jmp	SHORT $LN17@GetNameOfT
+$LN5@GetNameOfT:
 
-; 75   : 
-; 76   :   case type_sliding_door:
-; 77   :     
-; 78   :     s =  "sliding_door"; break;
+; 77   : 
+; 78   :   case type_sliding_door:
+; 79   :     
+; 80   :     s =  "sliding_door"; break;
 
 	push	OFFSET ??_C@_0N@POGFGIIH@sliding_door?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
-$LN2@GetNameOfT:
+	jmp	SHORT $LN17@GetNameOfT
+$LN4@GetNameOfT:
 
-; 79   :     
-; 80   :   case type_door_trigger:
 ; 81   :     
-; 82   :     s =  "door_trigger"; break;
+; 82   :   case type_door_trigger:
+; 83   :     
+; 84   :     s =  "door_trigger"; break;
 
 	push	OFFSET ??_C@_0N@FKJMDFJC@door_trigger?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-	jmp	SHORT $LN15@GetNameOfT
+	jmp	SHORT $LN17@GetNameOfT
+$LN3@GetNameOfT:
+
+; 85   : 
+; 86   :   case type_flag1:
+; 87   : 	s = "flag1"; break;
+
+	push	OFFSET ??_C@_05MEANGCCG@flag1?$AA@
+	lea	ecx, DWORD PTR _s$[ebp]
+	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
+	jmp	SHORT $LN17@GetNameOfT
+$LN2@GetNameOfT:
+
+; 88   : 
+; 89   :   case type_flag2:
+; 90   : 	s = "flag2"; break;
+
+	push	OFFSET ??_C@_05OPCADBOF@flag2?$AA@
+	lea	ecx, DWORD PTR _s$[ebp]
+	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
+	jmp	SHORT $LN17@GetNameOfT
 $LN1@GetNameOfT:
 
-; 83   : 
-; 84   :   default:
-; 85   : 
-; 86   :     s = "UNKNOWN OBJECT TYPE"; break;
+; 91   : 
+; 92   :   default:
+; 93   : 
+; 94   :     s = "UNKNOWN OBJECT TYPE"; break;
 
 	push	OFFSET ??_C@_0BE@DMMNKACB@UNKNOWN?5OBJECT?5TYPE?$AA@
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
-$LN15@GetNameOfT:
+$LN17@GetNameOfT:
 
-; 87   : 
-; 88   :   }
-; 89   : 
-; 90   :   return s;
+; 95   : 
+; 96   :   }
+; 97   : 
+; 98   :   return s;
 
 	lea	edx, DWORD PTR _s$[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T153179[ebp]
+	mov	eax, DWORD PTR $T151008[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T153179[ebp], eax
+	mov	DWORD PTR $T151008[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
-; 91   : }
+; 99   : }
 
 	push	edx
 	mov	ecx, ebp
 	push	eax
-	lea	edx, DWORD PTR $LN25@GetNameOfT
+	lea	edx, DWORD PTR $LN27@GetNameOfT
 	call	@_RTC_CheckStackVars@8
 	pop	eax
 	pop	edx
@@ -5958,29 +5988,31 @@ $LN15@GetNameOfT:
 	mov	esp, ebp
 	pop	ebp
 	ret	0
-$LN25@GetNameOfT:
+$LN27@GetNameOfT:
 	DD	1
-	DD	$LN24@GetNameOfT
-$LN24@GetNameOfT:
+	DD	$LN26@GetNameOfT
+$LN26@GetNameOfT:
 	DD	-52					; ffffffccH
 	DD	32					; 00000020H
-	DD	$LN22@GetNameOfT
-$LN22@GetNameOfT:
+	DD	$LN24@GetNameOfT
+$LN24@GetNameOfT:
 	DB	115					; 00000073H
 	DB	0
 	npad	2
-$LN26@GetNameOfT:
-	DD	$LN14@GetNameOfT
-	DD	$LN4@GetNameOfT
-	DD	$LN5@GetNameOfT
-	DD	$LN13@GetNameOfT
-	DD	$LN11@GetNameOfT
-	DD	$LN10@GetNameOfT
-	DD	$LN9@GetNameOfT
-	DD	$LN7@GetNameOfT
+$LN28@GetNameOfT:
+	DD	$LN16@GetNameOfT
 	DD	$LN6@GetNameOfT
-	DD	$LN8@GetNameOfT
+	DD	$LN7@GetNameOfT
+	DD	$LN15@GetNameOfT
+	DD	$LN13@GetNameOfT
 	DD	$LN12@GetNameOfT
+	DD	$LN11@GetNameOfT
+	DD	$LN9@GetNameOfT
+	DD	$LN8@GetNameOfT
+	DD	$LN10@GetNameOfT
+	DD	$LN14@GetNameOfT
+	DD	$LN5@GetNameOfT
+	DD	$LN4@GetNameOfT
 	DD	$LN3@GetNameOfT
 	DD	$LN2@GetNameOfT
 _TEXT	ENDS
@@ -5990,13 +6022,13 @@ __unwindfunclet$?GetNameOfType@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$al
 	lea	ecx, DWORD PTR _s$[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?GetNameOfType@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z$1:
-	mov	eax, DWORD PTR $T153179[ebp]
+	mov	eax, DWORD PTR $T151008[ebp]
 	and	eax, 1
-	je	$LN21@GetNameOfT
-	and	DWORD PTR $T153179[ebp], -2		; fffffffeH
+	je	$LN23@GetNameOfT
+	and	DWORD PTR $T151008[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
-$LN21@GetNameOfT:
+$LN23@GetNameOfT:
 	ret	0
 __ehhandler$?GetNameOfType@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -6088,7 +6120,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T153196 = -20						; size = 4
+$T151025 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >, COMDAT
@@ -6113,7 +6145,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T153196[ebp], esp
+	mov	DWORD PTR $T151025[ebp], esp
 	call	??0?$allocator@D@std@@QAE@XZ		; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z ; std::_String_val<char,std::allocator<char> >::_String_val<char,std::allocator<char> >
@@ -6174,7 +6206,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z
 _TEXT	SEGMENT
-$T153206 = -20						; size = 4
+$T151035 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -6203,7 +6235,7 @@ __Right$ = 8						; size = 4
 	push	eax
 	call	??$forward@V?$allocator@D@std@@@std@@YA$$QAV?$allocator@D@0@AAV10@@Z ; std::forward<std::allocator<char> >
 	mov	ecx, esp
-	mov	DWORD PTR $T153206[ebp], esp
+	mov	DWORD PTR $T151035[ebp], esp
 	push	eax
 	call	??0?$allocator@D@std@@QAE@ABV01@@Z	; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -6429,8 +6461,8 @@ PUBLIC	??0?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAE@XZ ; std::al
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\map
 ;	COMDAT ??0?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T153232 = -6						; size = 1
-$T153231 = -5						; size = 1
+$T151061 = -6						; size = 1
+$T151060 = -5						; size = 1
 _this$ = -4						; size = 4
 ??0?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAE@XZ PROC ; std::map<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> > >::map<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> > >, COMDAT
 ; _this$ = ecx
@@ -6443,10 +6475,10 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	lea	ecx, DWORD PTR $T153231[ebp]
+	lea	ecx, DWORD PTR $T151060[ebp]
 	call	??0?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAE@XZ ; std::allocator<std::pair<int const ,Raven_Weapon *> >::allocator<std::pair<int const ,Raven_Weapon *> >
 	push	eax
-	lea	eax, DWORD PTR $T153232[ebp]
+	lea	eax, DWORD PTR $T151061[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE@ABU?$less@H@1@ABV?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@1@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >
@@ -6497,15 +6529,15 @@ tv203 = -108						; size = 4
 tv146 = -104						; size = 4
 tv198 = -100						; size = 4
 tv69 = -96						; size = 4
-$T153247 = -92						; size = 4
-$T153245 = -88						; size = 4
-$T153244 = -84						; size = 12
-$T153243 = -72						; size = 4
-$T153242 = -68						; size = 4
-$T153241 = -64						; size = 4
-$T153240 = -60						; size = 8
-$T153237 = -52						; size = 12
-$T153236 = -37						; size = 1
+$T151076 = -92						; size = 4
+$T151074 = -88						; size = 4
+$T151073 = -84						; size = 12
+$T151072 = -72						; size = 4
+$T151071 = -68						; size = 4
+$T151070 = -64						; size = 4
+$T151069 = -60						; size = 8
+$T151066 = -52						; size = 12
+$T151065 = -37						; size = 1
 __Where$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -6535,7 +6567,7 @@ __Keyval$ = 8						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153247[ebp], 0
+	mov	DWORD PTR $T151076[ebp], 0
 
 ; 166  : 		iterator _Where = this->lower_bound(_Keyval);
 
@@ -6550,7 +6582,7 @@ __Keyval$ = 8						; size = 4
 ; 167  : 		if (_Where == this->end()
 ; 168  : 			|| this->comp(_Keyval, this->_Key(_Where._Mynode())))
 
-	lea	edx, DWORD PTR $T153237[ebp]
+	lea	edx, DWORD PTR $T151066[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -6558,9 +6590,9 @@ __Keyval$ = 8						; size = 4
 	mov	eax, DWORD PTR tv69[ebp]
 	mov	DWORD PTR tv198[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T153247[ebp]
+	mov	ecx, DWORD PTR $T151076[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153247[ebp], ecx
+	mov	DWORD PTR $T151076[ebp], ecx
 	mov	edx, DWORD PTR tv198[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -6588,16 +6620,16 @@ $LN4@operator@5:
 	mov	DWORD PTR tv146[ebp], 1
 $LN5@operator@5:
 	mov	al, BYTE PTR tv146[ebp]
-	mov	BYTE PTR $T153236[ebp], al
+	mov	BYTE PTR $T151065[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR $T153247[ebp]
+	mov	ecx, DWORD PTR $T151076[ebp]
 	and	ecx, 1
 	je	SHORT $LN9@operator@5
-	and	DWORD PTR $T153247[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T153237[ebp]
+	and	DWORD PTR $T151076[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151066[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@operator@5:
-	movzx	edx, BYTE PTR $T153236[ebp]
+	movzx	edx, BYTE PTR $T151065[ebp]
 	test	edx, edx
 	je	SHORT $LN1@operator@5
 
@@ -6606,28 +6638,28 @@ $LN9@operator@5:
 ; 171  : 					_STD move(_Keyval),
 ; 172  : 					mapped_type()));
 
-	mov	DWORD PTR $T153241[ebp], 0
+	mov	DWORD PTR $T151070[ebp], 0
 	mov	eax, DWORD PTR __Keyval$[ebp]
 	push	eax
 	call	??$move@AAH@std@@YA$$QAHAAH@Z		; std::move<int &>
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR $T153242[ebp], ecx
-	lea	edx, DWORD PTR $T153241[ebp]
+	mov	DWORD PTR $T151071[ebp], ecx
+	lea	edx, DWORD PTR $T151070[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T153242[ebp]
+	lea	eax, DWORD PTR $T151071[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T153240[ebp]
+	lea	ecx, DWORD PTR $T151069[ebp]
 	call	??0?$pair@HPAVRaven_Weapon@@@std@@QAE@$$QAH$$QAPAVRaven_Weapon@@@Z ; std::pair<int,Raven_Weapon *>::pair<int,Raven_Weapon *>
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153243[ebp], esp
+	mov	DWORD PTR $T151072[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv203[ebp], eax
-	lea	eax, DWORD PTR $T153244[ebp]
+	lea	eax, DWORD PTR $T151073[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@U?$pair@HPAVRaven_Weapon@@@std@@@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QAU?$pair@HPAVRaven_Weapon@@@1@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::insert<std::pair<int,Raven_Weapon *> >
@@ -6640,7 +6672,7 @@ $LN9@operator@5:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??4?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153244[ebp]
+	lea	ecx, DWORD PTR $T151073[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN1@operator@5:
 
@@ -6649,11 +6681,11 @@ $LN1@operator@5:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??D?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBEAAU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator*
 	add	eax, 4
-	mov	DWORD PTR $T153245[ebp], eax
+	mov	DWORD PTR $T151074[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T153245[ebp]
+	mov	eax, DWORD PTR $T151074[ebp]
 
 ; 174  : 		}
 
@@ -6697,16 +6729,16 @@ __unwindfunclet$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@$$QAH@Z$1:
-	mov	eax, DWORD PTR $T153247[ebp]
+	mov	eax, DWORD PTR $T151076[ebp]
 	and	eax, 1
 	je	$LN8@operator@5
-	and	DWORD PTR $T153247[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T153237[ebp]
+	and	DWORD PTR $T151076[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151066[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@operator@5:
 	ret	0
 __unwindfunclet$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@$$QAH@Z$3:
-	lea	ecx, DWORD PTR $T153244[ebp]
+	lea	ecx, DWORD PTR $T151073[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@$$QAH@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -6745,14 +6777,14 @@ tv201 = -104						; size = 4
 tv146 = -100						; size = 4
 tv196 = -96						; size = 4
 tv69 = -92						; size = 4
-$T153274 = -88						; size = 4
-$T153272 = -84						; size = 4
-$T153271 = -80						; size = 12
-$T153270 = -68						; size = 4
-$T153269 = -64						; size = 4
-$T153268 = -60						; size = 8
-$T153265 = -52						; size = 12
-$T153264 = -37						; size = 1
+$T151103 = -88						; size = 4
+$T151101 = -84						; size = 4
+$T151100 = -80						; size = 12
+$T151099 = -68						; size = 4
+$T151098 = -64						; size = 4
+$T151097 = -60						; size = 8
+$T151094 = -52						; size = 12
+$T151093 = -37						; size = 1
 __Where$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -6782,7 +6814,7 @@ __Keyval$ = 8						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153274[ebp], 0
+	mov	DWORD PTR $T151103[ebp], 0
 
 ; 211  : 		iterator _Where = this->lower_bound(_Keyval);
 
@@ -6797,7 +6829,7 @@ __Keyval$ = 8						; size = 4
 ; 212  : 		if (_Where == this->end()
 ; 213  : 			|| this->comp(_Keyval, this->_Key(_Where._Mynode())))
 
-	lea	edx, DWORD PTR $T153265[ebp]
+	lea	edx, DWORD PTR $T151094[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -6805,9 +6837,9 @@ __Keyval$ = 8						; size = 4
 	mov	eax, DWORD PTR tv69[ebp]
 	mov	DWORD PTR tv196[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T153274[ebp]
+	mov	ecx, DWORD PTR $T151103[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153274[ebp], ecx
+	mov	DWORD PTR $T151103[ebp], ecx
 	mov	edx, DWORD PTR tv196[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -6835,38 +6867,38 @@ $LN4@operator@6:
 	mov	DWORD PTR tv146[ebp], 1
 $LN5@operator@6:
 	mov	al, BYTE PTR tv146[ebp]
-	mov	BYTE PTR $T153264[ebp], al
+	mov	BYTE PTR $T151093[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR $T153274[ebp]
+	mov	ecx, DWORD PTR $T151103[ebp]
 	and	ecx, 1
 	je	SHORT $LN9@operator@6
-	and	DWORD PTR $T153274[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T153265[ebp]
+	and	DWORD PTR $T151103[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151094[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@operator@6:
-	movzx	edx, BYTE PTR $T153264[ebp]
+	movzx	edx, BYTE PTR $T151093[ebp]
 	test	edx, edx
 	je	SHORT $LN1@operator@6
 
 ; 214  : 			_Where = this->insert(_Where,
 ; 215  : 				value_type(_Keyval, mapped_type()));
 
-	mov	DWORD PTR $T153269[ebp], 0
-	lea	eax, DWORD PTR $T153269[ebp]
+	mov	DWORD PTR $T151098[ebp], 0
+	lea	eax, DWORD PTR $T151098[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Keyval$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR $T153268[ebp]
+	lea	ecx, DWORD PTR $T151097[ebp]
 	call	??0?$pair@$$CBHPAVRaven_Weapon@@@std@@QAE@ABH$$QAPAVRaven_Weapon@@@Z ; std::pair<int const ,Raven_Weapon *>::pair<int const ,Raven_Weapon *>
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153270[ebp], esp
+	mov	DWORD PTR $T151099[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv201[ebp], eax
-	lea	eax, DWORD PTR $T153271[ebp]
+	lea	eax, DWORD PTR $T151100[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QAU?$pair@$$CBHPAVRaven_Weapon@@@1@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::insert<std::pair<int const ,Raven_Weapon *> >
@@ -6879,7 +6911,7 @@ $LN9@operator@6:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??4?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153271[ebp]
+	lea	ecx, DWORD PTR $T151100[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN1@operator@6:
 
@@ -6888,11 +6920,11 @@ $LN1@operator@6:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??D?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBEAAU?$pair@$$CBHPAVRaven_Weapon@@@1@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator*
 	add	eax, 4
-	mov	DWORD PTR $T153272[ebp], eax
+	mov	DWORD PTR $T151101[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T153272[ebp]
+	mov	eax, DWORD PTR $T151101[ebp]
 
 ; 217  : 		}
 
@@ -6935,16 +6967,16 @@ __unwindfunclet$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@ABH@Z$1:
-	mov	eax, DWORD PTR $T153274[ebp]
+	mov	eax, DWORD PTR $T151103[ebp]
 	and	eax, 1
 	je	$LN8@operator@6
-	and	DWORD PTR $T153274[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T153265[ebp]
+	and	DWORD PTR $T151103[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151094[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@operator@6:
 	ret	0
 __unwindfunclet$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@ABH@Z$3:
-	lea	ecx, DWORD PTR $T153271[ebp]
+	lea	ecx, DWORD PTR $T151100[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??A?$map@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@@std@@QAEAAPAVRaven_Weapon@@ABH@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -7037,7 +7069,7 @@ PUBLIC	?_Lmost@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$alloc
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T153301 = -8						; size = 4
+$T151130 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin, COMDAT
@@ -7051,7 +7083,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153301[ebp], 0
+	mov	DWORD PTR $T151130[ebp], 0
 
 ; 807  : 		return (iterator(_Lmost(), this));
 
@@ -7063,9 +7095,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	edx, DWORD PTR $T153301[ebp]
+	mov	edx, DWORD PTR $T151130[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T153301[ebp], edx
+	mov	DWORD PTR $T151130[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 808  : 		}
@@ -7082,7 +7114,7 @@ PUBLIC	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T153306 = -8						; size = 4
+$T151135 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin, COMDAT
@@ -7096,7 +7128,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153306[ebp], 0
+	mov	DWORD PTR $T151135[ebp], 0
 
 ; 812  : 		return (const_iterator(_Lmost(), this));
 
@@ -7108,9 +7140,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	edx, DWORD PTR $T153306[ebp]
+	mov	edx, DWORD PTR $T151135[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T153306[ebp], edx
+	mov	DWORD PTR $T151135[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 813  : 		}
@@ -7126,7 +7158,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T153311 = -8						; size = 4
+$T151140 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end, COMDAT
@@ -7140,7 +7172,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153311[ebp], 0
+	mov	DWORD PTR $T151140[ebp], 0
 
 ; 817  : 		return (iterator(this->_Myhead, this));
 
@@ -7151,9 +7183,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	eax, DWORD PTR $T153311[ebp]
+	mov	eax, DWORD PTR $T151140[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T153311[ebp], eax
+	mov	DWORD PTR $T151140[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 818  : 		}
@@ -7169,7 +7201,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T153316 = -8						; size = 4
+$T151145 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end, COMDAT
@@ -7183,7 +7215,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153316[ebp], 0
+	mov	DWORD PTR $T151145[ebp], 0
 
 ; 822  : 		return (const_iterator(this->_Myhead, this));
 
@@ -7194,9 +7226,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	eax, DWORD PTR $T153316[ebp]
+	mov	eax, DWORD PTR $T151145[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T153316[ebp], eax
+	mov	DWORD PTR $T151145[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 823  : 		}
@@ -7870,8 +7902,8 @@ PUBLIC	?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@st
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xstring
 ;	COMDAT ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@$$QAV12@@Z
 _TEXT	SEGMENT
-$T153358 = -6						; size = 1
-$T153357 = -5						; size = 1
+$T151187 = -6						; size = 1
+$T151186 = -5						; size = 1
 _this$ = -4						; size = 4
 __Right$ = 8						; size = 4
 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@$$QAV12@@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign, COMDAT
@@ -7900,12 +7932,12 @@ $LN6@assign:
 
 ; 717  : 			&& this->_BUF_SIZE <= _Right._Myres)
 
-	lea	ecx, DWORD PTR $T153357[ebp]
+	lea	ecx, DWORD PTR $T151186[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$allocator@D@2@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::get_allocator
 	push	eax
-	lea	edx, DWORD PTR $T153358[ebp]
+	lea	edx, DWORD PTR $T151187[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$allocator@D@2@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::get_allocator
@@ -8155,7 +8187,7 @@ PUBLIC	?copy@?$char_traits@D@std@@SAPADPADPBDI@Z	; std::char_traits<char>::copy
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xstring
 ;	COMDAT ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEX_NI@Z
 _TEXT	SEGMENT
-__Ptr$141345 = -8					; size = 4
+__Ptr$140168 = -8					; size = 4
 _this$ = -4						; size = 4
 __Built$ = 8						; size = 1
 __Newsize$ = 12						; size = 4
@@ -8191,7 +8223,7 @@ $LN4@Tidy:
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+4]
-	mov	DWORD PTR __Ptr$141345[ebp], eax
+	mov	DWORD PTR __Ptr$140168[ebp], eax
 
 ; 1993 : 			if (0 < _Newsize)
 
@@ -8202,7 +8234,7 @@ $LN4@Tidy:
 
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Ptr$141345[ebp]
+	mov	edx, DWORD PTR __Ptr$140168[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 4
@@ -8217,7 +8249,7 @@ $LN1@Tidy:
 	mov	edx, DWORD PTR [ecx+24]
 	add	edx, 1
 	push	edx
-	mov	eax, DWORD PTR __Ptr$141345[ebp]
+	mov	eax, DWORD PTR __Ptr$140168[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 28					; 0000001cH
@@ -8344,7 +8376,7 @@ __ehfuncinfo$??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z
 xdata$x	ENDS
 ;	COMDAT ??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z
 _TEXT	SEGMENT
-$T153375 = -36						; size = 8
+$T151204 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -8402,7 +8434,7 @@ __Al$ = 8						; size = 1
 
 ; 470  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T153375[ebp]
+	lea	ecx, DWORD PTR $T151204[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -8864,7 +8896,7 @@ PUBLIC	??0?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAE@ABV01@@Z ; s
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xtree
 ;	COMDAT ??0?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE@ABU?$less@H@1@ABV?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T153416 = -8						; size = 4
+$T151245 = -8						; size = 4
 _this$ = -4						; size = 4
 __Parg$ = 8						; size = 4
 __Al$ = 12						; size = 4
@@ -8881,7 +8913,7 @@ __Al$ = 12						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T153416[ebp], esp
+	mov	DWORD PTR $T151245[ebp], esp
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAE@ABV01@@Z ; std::allocator<std::pair<int const ,Raven_Weapon *> >::allocator<std::pair<int const ,Raven_Weapon *> >
@@ -8905,7 +8937,7 @@ PUBLIC	?_Lbound@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allo
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?lower_bound@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@ABH@Z
 _TEXT	SEGMENT
-$T153421 = -8						; size = 4
+$T151250 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Keyval$ = 12						; size = 4
@@ -8920,7 +8952,7 @@ __Keyval$ = 12						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153421[ebp], 0
+	mov	DWORD PTR $T151250[ebp], 0
 
 ; 1450 : 		return (iterator(_Lbound(_Keyval), this));
 
@@ -8933,9 +8965,9 @@ __Keyval$ = 12						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	edx, DWORD PTR $T153421[ebp]
+	mov	edx, DWORD PTR $T151250[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T153421[ebp], edx
+	mov	DWORD PTR $T151250[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 1451 : 		}
@@ -8957,7 +8989,7 @@ PUBLIC	?_Right@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$a
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z
 _TEXT	SEGMENT
-__Pnode$141794 = -8					; size = 4
+__Pnode$140617 = -8					; size = 4
 _this$ = -4						; size = 4
 __Rootnode$ = 8						; size = 4
 ?_Erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z PROC ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Erase, COMDAT
@@ -8975,16 +9007,16 @@ __Rootnode$ = 8						; size = 4
 ; 1611 : 		for (_Nodeptr _Pnode = _Rootnode;
 
 	mov	eax, DWORD PTR __Rootnode$[ebp]
-	mov	DWORD PTR __Pnode$141794[ebp], eax
+	mov	DWORD PTR __Pnode$140617[ebp], eax
 
 ; 1612 : 			!this->_Isnil(_Pnode); _Rootnode = _Pnode)
 
 	jmp	SHORT $LN3@Erase
 $LN2@Erase:
-	mov	ecx, DWORD PTR __Pnode$141794[ebp]
+	mov	ecx, DWORD PTR __Pnode$140617[ebp]
 	mov	DWORD PTR __Rootnode$[ebp], ecx
 $LN3@Erase:
-	mov	edx, DWORD PTR __Pnode$141794[ebp]
+	mov	edx, DWORD PTR __Pnode$140617[ebp]
 	push	edx
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Isnil
 	add	esp, 4
@@ -8995,7 +9027,7 @@ $LN3@Erase:
 ; 1613 : 			{	// free subtrees, then node
 ; 1614 : 			_Erase(this->_Right(_Pnode));
 
-	mov	ecx, DWORD PTR __Pnode$141794[ebp]
+	mov	ecx, DWORD PTR __Pnode$140617[ebp]
 	push	ecx
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Right
 	add	esp, 4
@@ -9006,12 +9038,12 @@ $LN3@Erase:
 
 ; 1615 : 			_Pnode = this->_Left(_Pnode);
 
-	mov	eax, DWORD PTR __Pnode$141794[ebp]
+	mov	eax, DWORD PTR __Pnode$140617[ebp]
 	push	eax
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Left
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$141794[ebp], ecx
+	mov	DWORD PTR __Pnode$140617[ebp], ecx
 
 ; 1616 : 			_Dest_val(this->_Alval,
 ; 1617 : 				_STD addressof(this->_Myval(_Rootnode)));
@@ -9457,11 +9489,11 @@ tv148 = -76						; size = 4
 tv157 = -72						; size = 4
 tv146 = -68						; size = 4
 tv156 = -64						; size = 4
-$T153457 = -60						; size = 12
-$T153456 = -48						; size = 12
-$T153455 = -36						; size = 4
-$T153454 = -32						; size = 12
-$T153453 = -20						; size = 4
+$T151286 = -60						; size = 12
+$T151285 = -48						; size = 12
+$T151284 = -36						; size = 4
+$T151283 = -32						; size = 12
+$T151282 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?_Tidy@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXXZ PROC ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Tidy, COMDAT
@@ -9492,7 +9524,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 1866 : 		erase(begin(), end());
 
-	lea	eax, DWORD PTR $T153454[ebp]
+	lea	eax, DWORD PTR $T151283[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -9502,7 +9534,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153453[ebp], esp
+	mov	DWORD PTR $T151282[ebp], esp
 	mov	edx, DWORD PTR tv146[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -9510,7 +9542,7 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR tv157[ebp]
 	mov	DWORD PTR tv148[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T153456[ebp]
+	lea	ecx, DWORD PTR $T151285[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin
@@ -9520,24 +9552,24 @@ __$EHRec$ = -12						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153455[ebp], esp
+	mov	DWORD PTR $T151284[ebp], esp
 	mov	eax, DWORD PTR tv151[ebp]
 	push	eax
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv154[ebp], eax
-	lea	ecx, DWORD PTR $T153457[ebp]
+	lea	ecx, DWORD PTR $T151286[ebp]
 	push	ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@0@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::erase
 	mov	DWORD PTR tv149[ebp], eax
-	lea	ecx, DWORD PTR $T153457[ebp]
+	lea	ecx, DWORD PTR $T151286[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T153456[ebp]
+	lea	ecx, DWORD PTR $T151285[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T153454[ebp]
+	lea	ecx, DWORD PTR $T151283[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 
 ; 1867 : 		}
@@ -9556,13 +9588,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Tidy@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXXZ$0:
-	lea	ecx, DWORD PTR $T153454[ebp]
+	lea	ecx, DWORD PTR $T151283[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Tidy@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXXZ$1:
-	mov	ecx, DWORD PTR $T153453[ebp]
+	mov	ecx, DWORD PTR $T151282[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Tidy@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXXZ$2:
-	lea	ecx, DWORD PTR $T153456[ebp]
+	lea	ecx, DWORD PTR $T151285[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Tidy@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -10106,7 +10138,7 @@ PUBLIC	?_Min@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$all
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ
 _TEXT	SEGMENT
-__Pnode$142434 = -8					; size = 4
+__Pnode$141255 = -8					; size = 4
 _this$ = -4						; size = 4
 ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ PROC ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::operator++, COMDAT
 ; _this$ = ecx
@@ -10180,15 +10212,15 @@ $LN2@operator@9:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$142434[ebp], ecx
-	mov	edx, DWORD PTR __Pnode$142434[ebp]
+	mov	DWORD PTR __Pnode$141255[ebp], ecx
+	mov	edx, DWORD PTR __Pnode$141255[ebp]
 	push	edx
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Isnil
 	add	esp, 4
 	movsx	eax, BYTE PTR [eax]
 	test	eax, eax
 	jne	SHORT $LN1@operator@9
-	mov	ecx, DWORD PTR __Pnode$142434[ebp]
+	mov	ecx, DWORD PTR __Pnode$141255[ebp]
 	push	ecx
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Right
 	add	esp, 4
@@ -10200,7 +10232,7 @@ $LN2@operator@9:
 ; 69   : 				_Ptr = _Pnode;	// ==> parent while right subtree
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Pnode$142434[ebp]
+	mov	eax, DWORD PTR __Pnode$141255[ebp]
 	mov	DWORD PTR [edx+8], eax
 	jmp	SHORT $LN2@operator@9
 $LN1@operator@9:
@@ -10208,7 +10240,7 @@ $LN1@operator@9:
 ; 70   : 			_Ptr = _Pnode;	// ==> parent (head if end())
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Pnode$142434[ebp]
+	mov	edx, DWORD PTR __Pnode$141255[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN5@operator@9:
 
@@ -10574,7 +10606,7 @@ PUBLIC	?assign@?$char_traits@D@std@@SAXAADABD@Z	; std::char_traits<char>::assign
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z
 _TEXT	SEGMENT
-$T153524 = -5						; size = 1
+$T151353 = -5						; size = 1
 _this$ = -4						; size = 4
 __Newsize$ = 8						; size = 4
 ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos, COMDAT
@@ -10591,11 +10623,11 @@ __Newsize$ = 8						; size = 4
 
 ; 1953 : 		_Traits::assign(_Myptr()[this->_Mysize = _Newsize], _Elem());
 
-	mov	BYTE PTR $T153524[ebp], 0
+	mov	BYTE PTR $T151353[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	mov	DWORD PTR [eax+20], ecx
-	lea	edx, DWORD PTR $T153524[ebp]
+	lea	edx, DWORD PTR $T151353[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Myptr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEPADXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Myptr
@@ -10902,12 +10934,12 @@ tv184 = -80						; size = 4
 tv204 = -76						; size = 4
 tv179 = -72						; size = 4
 tv202 = -68						; size = 4
-$T153550 = -64						; size = 4
-$T153547 = -60						; size = 12
-$T153546 = -48						; size = 4
-$T153543 = -44						; size = 12
-$T153542 = -32						; size = 12
-$T153541 = -17						; size = 1
+$T151379 = -64						; size = 4
+$T151376 = -60						; size = 12
+$T151375 = -48						; size = 4
+$T151372 = -44						; size = 12
+$T151371 = -32						; size = 12
+$T151370 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -10938,12 +10970,12 @@ __Last$ = 24						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153550[ebp], 0
+	mov	DWORD PTR $T151379[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1380 : 		if (_First == begin() && _Last == end())
 
-	lea	eax, DWORD PTR $T153542[ebp]
+	lea	eax, DWORD PTR $T151371[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin
@@ -10951,9 +10983,9 @@ __Last$ = 24						; size = 12
 	mov	ecx, DWORD PTR tv202[ebp]
 	mov	DWORD PTR tv179[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T153550[ebp]
+	mov	edx, DWORD PTR $T151379[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T153550[ebp], edx
+	mov	DWORD PTR $T151379[ebp], edx
 	mov	eax, DWORD PTR tv179[ebp]
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
@@ -10961,7 +10993,7 @@ __Last$ = 24						; size = 12
 	movzx	ecx, al
 	test	ecx, ecx
 	je	SHORT $LN7@erase
-	lea	edx, DWORD PTR $T153543[ebp]
+	lea	edx, DWORD PTR $T151372[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -10969,9 +11001,9 @@ __Last$ = 24						; size = 12
 	mov	eax, DWORD PTR tv204[ebp]
 	mov	DWORD PTR tv184[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	ecx, DWORD PTR $T153550[ebp]
+	mov	ecx, DWORD PTR $T151379[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T153550[ebp], ecx
+	mov	DWORD PTR $T151379[ebp], ecx
 	mov	edx, DWORD PTR tv184[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Last$[ebp]
@@ -10985,24 +11017,24 @@ $LN7@erase:
 	mov	DWORD PTR tv94[ebp], 0
 $LN8@erase:
 	mov	cl, BYTE PTR tv94[ebp]
-	mov	BYTE PTR $T153541[ebp], cl
+	mov	BYTE PTR $T151370[ebp], cl
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T153550[ebp]
+	mov	edx, DWORD PTR $T151379[ebp]
 	and	edx, 2
 	je	SHORT $LN15@erase
-	and	DWORD PTR $T153550[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T153543[ebp]
+	and	DWORD PTR $T151379[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151372[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN15@erase:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T153550[ebp]
+	mov	eax, DWORD PTR $T151379[ebp]
 	and	eax, 1
 	je	SHORT $LN16@erase
-	and	DWORD PTR $T153550[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T153542[ebp]
+	and	DWORD PTR $T151379[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151371[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN16@erase:
-	movzx	ecx, BYTE PTR $T153541[ebp]
+	movzx	ecx, BYTE PTR $T151370[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@erase
 
@@ -11018,9 +11050,9 @@ $LN16@erase:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin
-	mov	eax, DWORD PTR $T153550[ebp]
+	mov	eax, DWORD PTR $T151379[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T153550[ebp], eax
+	mov	DWORD PTR $T151379[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -11051,18 +11083,18 @@ $LN2@erase:
 
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T153546[ebp], esp
+	mov	DWORD PTR $T151375[ebp], esp
 	push	0
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator++
 	mov	DWORD PTR tv196[ebp], eax
-	lea	ecx, DWORD PTR $T153547[ebp]
+	lea	ecx, DWORD PTR $T151376[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::erase
 	mov	DWORD PTR tv197[ebp], eax
-	lea	ecx, DWORD PTR $T153547[ebp]
+	lea	ecx, DWORD PTR $T151376[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@erase
 $LN1@erase:
@@ -11075,9 +11107,9 @@ $LN1@erase:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	ecx, DWORD PTR $T153550[ebp]
+	mov	ecx, DWORD PTR $T151379[ebp]
 	or	ecx, 4
-	mov	DWORD PTR $T153550[ebp], ecx
+	mov	DWORD PTR $T151379[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -11118,28 +11150,28 @@ __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@0@Z$2:
-	mov	eax, DWORD PTR $T153550[ebp]
+	mov	eax, DWORD PTR $T151379[ebp]
 	and	eax, 1
 	je	$LN12@erase
-	and	DWORD PTR $T153550[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T153542[ebp]
+	and	DWORD PTR $T151379[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151371[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN12@erase:
 	ret	0
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@0@Z$3:
-	mov	eax, DWORD PTR $T153550[ebp]
+	mov	eax, DWORD PTR $T151379[ebp]
 	and	eax, 2
 	je	$LN14@erase
-	and	DWORD PTR $T153550[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T153543[ebp]
+	and	DWORD PTR $T151379[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151372[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN14@erase:
 	ret	0
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@0@Z$4:
-	mov	eax, DWORD PTR $T153550[ebp]
+	mov	eax, DWORD PTR $T151379[ebp]
 	and	eax, 4
 	je	$LN18@erase
-	and	DWORD PTR $T153550[ebp], -5		; fffffffbH
+	and	DWORD PTR $T151379[ebp], -5		; fffffffbH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN18@erase:
@@ -11288,7 +11320,7 @@ __ehfuncinfo$??0?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$
 xdata$x	ENDS
 ;	COMDAT ??0?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE@ABU?$less@H@1@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T153571 = -20						; size = 4
+$T151400 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Parg$ = 8						; size = 4
@@ -11315,7 +11347,7 @@ __Al$ = 12						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T153571[ebp], esp
+	mov	DWORD PTR $T151400[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAE@ABV01@@Z ; std::allocator<std::pair<int const ,Raven_Weapon *> >::allocator<std::pair<int const ,Raven_Weapon *> >
@@ -12329,7 +12361,7 @@ $LN7@assign@3:
 _TEXT	ENDS
 ;	COMDAT ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z
 _TEXT	SEGMENT
-__Newsize$141324 = -8					; size = 4
+__Newsize$140147 = -8					; size = 4
 _this$ = -4						; size = 4
 __Off$ = 8						; size = 4
 __Count$ = 12						; size = 4
@@ -12405,11 +12437,11 @@ $LN2@erase@2:
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+20]
 	sub	eax, DWORD PTR __Count$[ebp]
-	mov	DWORD PTR __Newsize$141324[ebp], eax
+	mov	DWORD PTR __Newsize$140147[ebp], eax
 
 ; 1118 : 			_Eos(_Newsize);
 
-	mov	ecx, DWORD PTR __Newsize$141324[ebp]
+	mov	ecx, DWORD PTR __Newsize$140147[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos
@@ -12912,7 +12944,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv199 = -44						; size = 4
 tv187 = -40						; size = 4
-$T153672 = -36						; size = 4
+$T151501 = -36						; size = 4
 __Pnode$ = -32						; size = 4
 __Fixnodeparent$ = -28					; size = 4
 __Fixnode$ = -24					; size = 4
@@ -12949,7 +12981,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153672[ebp], 0
+	mov	DWORD PTR $T151501[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1196 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -14045,9 +14077,9 @@ $LN1@erase@3:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	ecx, DWORD PTR $T153672[ebp]
+	mov	ecx, DWORD PTR $T151501[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153672[ebp], ecx
+	mov	DWORD PTR $T151501[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -14072,10 +14104,10 @@ __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T153672[ebp]
+	mov	eax, DWORD PTR $T151501[ebp]
 	and	eax, 1
 	je	$LN50@erase@3
-	and	DWORD PTR $T153672[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151501[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN50@erase@3:
@@ -14129,7 +14161,7 @@ __ehfuncinfo$??0?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$
 xdata$x	ENDS
 ;	COMDAT ??0?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE@ABU?$less@H@1@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T153684 = -36						; size = 8
+$T151513 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -14196,7 +14228,7 @@ __Al$ = 12						; size = 1
 
 ; 493  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T153684[ebp]
+	lea	ecx, DWORD PTR $T151513[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -14321,7 +14353,7 @@ __ehfuncinfo$??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_We
 xdata$x	ENDS
 ;	COMDAT ??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T153701 = -40						; size = 4
+$T151530 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -14353,7 +14385,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153701[ebp], 0
+	mov	DWORD PTR $T151530[ebp], 0
 
 ; 271  : 		_Myiter _Tmp = *this;
 
@@ -14374,9 +14406,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T153701[ebp]
+	mov	edx, DWORD PTR $T151530[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T153701[ebp], edx
+	mov	DWORD PTR $T151530[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -14420,10 +14452,10 @@ __unwindfunclet$??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T153701[ebp]
+	mov	eax, DWORD PTR $T151530[ebp]
 	and	eax, 1
 	je	$LN5@operator@11
-	and	DWORD PTR $T153701[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151530[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@11:
@@ -14960,7 +14992,7 @@ PUBLIC	?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEA
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\string
 ;	COMDAT ??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@$$QAV10@PBD@Z
 _TEXT	SEGMENT
-$T153730 = -4						; size = 4
+$T151559 = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Left$ = 12						; size = 4
 __Right$ = 16						; size = 4
@@ -14972,7 +15004,7 @@ __Right$ = 16						; size = 4
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR $T153730[ebp], 0
+	mov	DWORD PTR $T151559[ebp], 0
 
 ; 147  : 	return (_STD move(_Left.append(_Right)));
 
@@ -14986,9 +15018,9 @@ __Right$ = 16						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T153730[ebp]
+	mov	ecx, DWORD PTR $T151559[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153730[ebp], ecx
+	mov	DWORD PTR $T151559[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 148  : 	}
@@ -15162,8 +15194,8 @@ __ehfuncinfo$??$ttos@N@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@
 xdata$x	ENDS
 ;	COMDAT ??$ttos@N@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABNH@Z
 _TEXT	SEGMENT
-$T153741 = -192						; size = 4
-$T153738 = -188						; size = 16
+$T151570 = -192						; size = 4
+$T151567 = -188						; size = 16
 _buffer$ = -168						; size = 152
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -15190,7 +15222,7 @@ _precision$ = 16					; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T153741[ebp], 0
+	mov	DWORD PTR $T151570[ebp], 0
 
 ; 23   :   std::ostringstream buffer;
 
@@ -15211,7 +15243,7 @@ _precision$ = 16					; size = 4
 	cdq
 	push	edx
 	push	eax
-	lea	ecx, DWORD PTR $T153738[ebp]
+	lea	ecx, DWORD PTR $T151567[ebp]
 	push	ecx
 	call	?setprecision@std@@YA?AU?$_Smanip@_J@1@_J@Z ; std::setprecision
 	add	esp, 12					; 0000000cH
@@ -15232,9 +15264,9 @@ _precision$ = 16					; size = 4
 	push	edx
 	lea	ecx, DWORD PTR _buffer$[ebp]
 	call	?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ ; std::basic_ostringstream<char,std::char_traits<char>,std::allocator<char> >::str
-	mov	eax, DWORD PTR $T153741[ebp]
+	mov	eax, DWORD PTR $T151570[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T153741[ebp], eax
+	mov	DWORD PTR $T151570[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _buffer$[ebp]
 	call	??_D?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXXZ
@@ -15282,10 +15314,10 @@ __unwindfunclet$??$ttos@N@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocat
 	lea	ecx, DWORD PTR _buffer$[ebp]
 	jmp	??_D?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXXZ
 __unwindfunclet$??$ttos@N@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABNH@Z$1:
-	mov	eax, DWORD PTR $T153741[ebp]
+	mov	eax, DWORD PTR $T151570[ebp]
 	and	eax, 1
 	je	$LN5@ttos
-	and	DWORD PTR $T153741[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151570[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN5@ttos:
@@ -15388,7 +15420,7 @@ PUBLIC	?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEA
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\string
 ;	COMDAT ??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@$$QAV10@ABV10@@Z
 _TEXT	SEGMENT
-$T153759 = -4						; size = 4
+$T151588 = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Left$ = 12						; size = 4
 __Right$ = 16						; size = 4
@@ -15400,7 +15432,7 @@ __Right$ = 16						; size = 4
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR $T153759[ebp], 0
+	mov	DWORD PTR $T151588[ebp], 0
 
 ; 103  : 	return (_STD move(_Left.append(_Right)));
 
@@ -15414,9 +15446,9 @@ __Right$ = 16						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T153759[ebp]
+	mov	ecx, DWORD PTR $T151588[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153759[ebp], ecx
+	mov	DWORD PTR $T151588[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 104  : 	}
@@ -15728,8 +15760,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv128 = -28						; size = 4
-$T153779 = -24						; size = 4
-$T153775 = -20						; size = 4
+$T151608 = -24						; size = 4
+$T151604 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -15759,7 +15791,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153779[ebp], 0
+	mov	DWORD PTR $T151608[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 761  : 			typename _STD tr1::remove_reference<_Valty>::type>::value,
@@ -15780,7 +15812,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153775[ebp], esp
+	mov	DWORD PTR $T151604[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -15790,9 +15822,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T153779[ebp]
+	mov	ecx, DWORD PTR $T151608[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153779[ebp], ecx
+	mov	DWORD PTR $T151608[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -15816,10 +15848,10 @@ __unwindfunclet$??$insert@U?$pair@HPAVRaven_Weapon@@@std@@@?$_Tree@V?$_Tmap_trai
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@U?$pair@HPAVRaven_Weapon@@@std@@@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QAU?$pair@HPAVRaven_Weapon@@@1@@Z$2:
-	mov	eax, DWORD PTR $T153779[ebp]
+	mov	eax, DWORD PTR $T151608[ebp]
 	and	eax, 1
 	je	$LN6@insert
-	and	DWORD PTR $T153779[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151608[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN6@insert:
@@ -15855,8 +15887,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv128 = -28						; size = 4
-$T153793 = -24						; size = 4
-$T153789 = -20						; size = 4
+$T151622 = -24						; size = 4
+$T151618 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -15886,7 +15918,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153793[ebp], 0
+	mov	DWORD PTR $T151622[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 761  : 			typename _STD tr1::remove_reference<_Valty>::type>::value,
@@ -15907,7 +15939,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153789[ebp], esp
+	mov	DWORD PTR $T151618[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -15917,9 +15949,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T153793[ebp]
+	mov	ecx, DWORD PTR $T151622[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T153793[ebp], ecx
+	mov	DWORD PTR $T151622[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -15943,10 +15975,10 @@ __unwindfunclet$??$insert@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@?$_Tree@V?$_Tmap_
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QAU?$pair@$$CBHPAVRaven_Weapon@@@1@@Z$2:
-	mov	eax, DWORD PTR $T153793[ebp]
+	mov	eax, DWORD PTR $T151622[ebp]
 	and	eax, 1
 	je	$LN6@insert@2
-	and	DWORD PTR $T153793[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151622[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN6@insert@2:
@@ -16342,7 +16374,7 @@ __TI2?AVbad_alloc@std@@ DD 00H
 xdata$x	ENDS
 ;	COMDAT ??$_Allocate@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@IPAU10@@Z
 _TEXT	SEGMENT
-$T153823 = -16						; size = 12
+$T151652 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -16395,10 +16427,10 @@ $LN1@Allocate:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T153823[ebp]
+	lea	ecx, DWORD PTR $T151652[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T153823[ebp]
+	lea	ecx, DWORD PTR $T151652[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate:
@@ -16690,7 +16722,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@YAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T153839 = -16						; size = 12
+$T151668 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -16743,10 +16775,10 @@ $LN1@Allocate@2:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T153839[ebp]
+	lea	ecx, DWORD PTR $T151668[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T153839[ebp]
+	lea	ecx, DWORD PTR $T151668[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@2:
@@ -16770,7 +16802,7 @@ $LN6@Allocate@2:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@D@std@@YAPADIPAD@Z
 _TEXT	SEGMENT
-$T153842 = -16						; size = 12
+$T151671 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -16822,10 +16854,10 @@ $LN1@Allocate@3:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T153842[ebp]
+	lea	ecx, DWORD PTR $T151671[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T153842[ebp]
+	lea	ecx, DWORD PTR $T151671[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@3:
@@ -17348,11 +17380,11 @@ tv196 = -81						; size = 1
 tv144 = -80						; size = 4
 tv193 = -76						; size = 4
 tv65 = -72						; size = 4
-$T153870 = -68						; size = 4
-$T153869 = -64						; size = 8
-$T153868 = -56						; size = 8
-$T153865 = -48						; size = 4
-__Nput_fac$147408 = -44					; size = 4
+$T151699 = -68						; size = 4
+$T151698 = -64						; size = 8
+$T151697 = -56						; size = 8
+$T151694 = -48						; size = 4
+__Nput_fac$145704 = -44					; size = 4
 __Ok$ = -36						; size = 8
 __State$ = -24						; size = 4
 _this$ = -20						; size = 4
@@ -17411,7 +17443,7 @@ __Val$ = 8						; size = 8
 ; 433  : 			{	// state okay, use facet to insert
 ; 434  : 			const _Nput& _Nput_fac = _USE(ios_base::getloc(), _Nput);
 
-	lea	ecx, DWORD PTR $T153865[ebp]
+	lea	ecx, DWORD PTR $T151694[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx]
@@ -17426,9 +17458,9 @@ __Val$ = 8						; size = 8
 	push	edx
 	call	??$use_facet@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@YAABV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@0@ABVlocale@0@@Z ; std::use_facet<std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > > >
 	add	esp, 4
-	mov	DWORD PTR __Nput_fac$147408[ebp], eax
+	mov	DWORD PTR __Nput_fac$145704[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+12], 0
-	lea	ecx, DWORD PTR $T153865[ebp]
+	lea	ecx, DWORD PTR $T151694[ebp]
 	call	??1locale@std@@QAE@XZ			; std::locale::~locale
 
 ; 435  : 
@@ -17473,15 +17505,15 @@ $LN7@operator@13:
 	push	ecx
 	mov	edx, DWORD PTR tv197[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T153868[ebp]
+	lea	ecx, DWORD PTR $T151697[ebp]
 	call	??0?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z ; std::ostreambuf_iterator<char,std::char_traits<char> >::ostreambuf_iterator<char,std::char_traits<char> >
 	mov	ecx, DWORD PTR [eax+4]
 	push	ecx
 	mov	edx, DWORD PTR [eax]
 	push	edx
-	lea	eax, DWORD PTR $T153869[ebp]
+	lea	eax, DWORD PTR $T151698[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Nput_fac$147408[ebp]
+	mov	ecx, DWORD PTR __Nput_fac$145704[ebp]
 	call	?put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@QBE?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@DN@Z ; std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::put
 	mov	DWORD PTR tv198[ebp], eax
 	mov	ecx, DWORD PTR tv198[ebp]
@@ -17533,11 +17565,11 @@ $LN12@operator@13:
 ; 444  : 		return (*this);
 
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	DWORD PTR $T153870[ebp], eax
+	mov	DWORD PTR $T151699[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+12], -1
 	lea	ecx, DWORD PTR __Ok$[ebp]
 	call	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
-	mov	eax, DWORD PTR $T153870[ebp]
+	mov	eax, DWORD PTR $T151699[ebp]
 
 ; 445  : 		}
 
@@ -17580,7 +17612,7 @@ __unwindfunclet$??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z$2:
 	lea	ecx, DWORD PTR __Ok$[ebp]
 	jmp	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 __unwindfunclet$??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z$3:
-	lea	ecx, DWORD PTR $T153865[ebp]
+	lea	ecx, DWORD PTR $T151694[ebp]
 	jmp	??1locale@std@@QAE@XZ			; std::locale::~locale
 __ehhandler$??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -17639,7 +17671,7 @@ $LN2@locale:
 _TEXT	ENDS
 ;	COMDAT ?_Decref@facet@locale@std@@QAEPAV123@XZ
 _TEXT	SEGMENT
-$T153893 = -20						; size = 4
+$T151722 = -20						; size = 4
 __Lock$117400 = -12					; size = 4
 _this$ = -4						; size = 4
 ?_Decref@facet@locale@std@@QAEPAV123@XZ PROC		; std::locale::facet::_Decref, COMDAT
@@ -17690,10 +17722,10 @@ $LN1@Decref:
 	sbb	eax, eax
 	not	eax
 	and	eax, DWORD PTR _this$[ebp]
-	mov	DWORD PTR $T153893[ebp], eax
+	mov	DWORD PTR $T151722[ebp], eax
 	lea	ecx, DWORD PTR __Lock$117400[ebp]
 	call	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
-	mov	eax, DWORD PTR $T153893[ebp]
+	mov	eax, DWORD PTR $T151722[ebp]
 
 ; 124  : 			_END_LOCK()
 ; 125  : 			}
@@ -17732,7 +17764,7 @@ PUBLIC	??0locale@std@@QAE@ABV01@@Z			; std::locale::locale
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xiosbase
 ;	COMDAT ?getloc@ios_base@std@@QBE?AVlocale@2@XZ
 _TEXT	SEGMENT
-$T153901 = -8						; size = 4
+$T151730 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?getloc@ios_base@std@@QBE?AVlocale@2@XZ PROC		; std::ios_base::getloc, COMDAT
@@ -17746,7 +17778,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T153901[ebp], 0
+	mov	DWORD PTR $T151730[ebp], 0
 
 ; 452  : 		return (*_Ploc);
 
@@ -17755,9 +17787,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0locale@std@@QAE@ABV01@@Z		; std::locale::locale
-	mov	edx, DWORD PTR $T153901[ebp]
+	mov	edx, DWORD PTR $T151730[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T153901[ebp], edx
+	mov	DWORD PTR $T151730[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 453  : 		}
@@ -18138,12 +18170,12 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?clear@ios_base@std@@QAEXH_N@Z
 _TEXT	SEGMENT
-$T153928 = -88						; size = 8
-$T153927 = -80						; size = 20
-$T153926 = -60						; size = 8
-$T153925 = -52						; size = 20
-$T153924 = -32						; size = 8
-$T153923 = -24						; size = 20
+$T151757 = -88						; size = 8
+$T151756 = -80						; size = 20
+$T151755 = -60						; size = 8
+$T151754 = -52						; size = 20
+$T151753 = -32						; size = 8
+$T151752 = -24						; size = 20
 _this$ = -4						; size = 4
 __State$ = 8						; size = 4
 __Reraise$ = 12						; size = 1
@@ -18208,16 +18240,16 @@ $LN6@clear@2:
 ; 317  : 			_THROW_NCEE(failure, "ios_base::badbit set");
 
 	push	1
-	lea	eax, DWORD PTR $T153924[ebp]
+	lea	eax, DWORD PTR $T151753[ebp]
 	push	eax
 	call	?make_error_code@std@@YA?AVerror_code@1@W4io_errc@31@@Z ; std::make_error_code
 	add	esp, 8
 	push	eax
 	push	OFFSET ??_C@_0BF@PHHKMMFD@ios_base?3?3badbit?5set?$AA@
-	lea	ecx, DWORD PTR $T153923[ebp]
+	lea	ecx, DWORD PTR $T151752[ebp]
 	call	??0failure@ios_base@std@@QAE@PBDABVerror_code@2@@Z ; std::ios_base::failure::failure
 	push	OFFSET __TI4?AVfailure@ios_base@std@@
-	lea	ecx, DWORD PTR $T153923[ebp]
+	lea	ecx, DWORD PTR $T151752[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 	jmp	SHORT $LN10@clear@2
@@ -18235,16 +18267,16 @@ $LN4@clear@2:
 ; 319  : 			_THROW_NCEE(failure, "ios_base::failbit set");
 
 	push	1
-	lea	edx, DWORD PTR $T153926[ebp]
+	lea	edx, DWORD PTR $T151755[ebp]
 	push	edx
 	call	?make_error_code@std@@YA?AVerror_code@1@W4io_errc@31@@Z ; std::make_error_code
 	add	esp, 8
 	push	eax
 	push	OFFSET ??_C@_0BG@FMKFHCIL@ios_base?3?3failbit?5set?$AA@
-	lea	ecx, DWORD PTR $T153925[ebp]
+	lea	ecx, DWORD PTR $T151754[ebp]
 	call	??0failure@ios_base@std@@QAE@PBDABVerror_code@2@@Z ; std::ios_base::failure::failure
 	push	OFFSET __TI4?AVfailure@ios_base@std@@
-	lea	eax, DWORD PTR $T153925[ebp]
+	lea	eax, DWORD PTR $T151754[ebp]
 	push	eax
 	call	__CxxThrowException@8
 
@@ -18256,16 +18288,16 @@ $LN2@clear@2:
 ; 321  : 			_THROW_NCEE(failure, "ios_base::eofbit set");
 
 	push	1
-	lea	ecx, DWORD PTR $T153928[ebp]
+	lea	ecx, DWORD PTR $T151757[ebp]
 	push	ecx
 	call	?make_error_code@std@@YA?AVerror_code@1@W4io_errc@31@@Z ; std::make_error_code
 	add	esp, 8
 	push	eax
 	push	OFFSET ??_C@_0BF@OOHOMBOF@ios_base?3?3eofbit?5set?$AA@
-	lea	ecx, DWORD PTR $T153927[ebp]
+	lea	ecx, DWORD PTR $T151756[ebp]
 	call	??0failure@ios_base@std@@QAE@PBDABVerror_code@2@@Z ; std::ios_base::failure::failure
 	push	OFFSET __TI4?AVfailure@ios_base@std@@
-	lea	edx, DWORD PTR $T153927[ebp]
+	lea	edx, DWORD PTR $T151756[ebp]
 	push	edx
 	call	__CxxThrowException@8
 $LN10@clear@2:
@@ -19786,20 +19818,20 @@ tv738 = -172						; size = 4
 tv170 = -168						; size = 4
 tv733 = -164						; size = 4
 tv82 = -160						; size = 4
-$T154053 = -156						; size = 4
-$T154049 = -152						; size = 16
-$T154045 = -136						; size = 12
-$T154044 = -121						; size = 1
-$T154043 = -120						; size = 12
-$T154042 = -105						; size = 1
-$T154041 = -104						; size = 12
-$T154040 = -89						; size = 1
-$T154036 = -88						; size = 12
-$T154035 = -73						; size = 1
-$T154034 = -72						; size = 12
-$T154033 = -57						; size = 1
-$T154032 = -56						; size = 12
-$T154031 = -42						; size = 1
+$T151882 = -156						; size = 4
+$T151878 = -152						; size = 16
+$T151874 = -136						; size = 12
+$T151873 = -121						; size = 1
+$T151872 = -120						; size = 12
+$T151871 = -105						; size = 1
+$T151870 = -104						; size = 12
+$T151869 = -89						; size = 1
+$T151865 = -88						; size = 12
+$T151864 = -73						; size = 1
+$T151863 = -72						; size = 12
+$T151862 = -57						; size = 1
+$T151861 = -56						; size = 12
+$T151860 = -42						; size = 1
 __Leftish$ = -41					; size = 1
 __Next$ = -36						; size = 12
 __Val$ = -20						; size = 4
@@ -19833,7 +19865,7 @@ __Node$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154053[ebp], 0
+	mov	DWORD PTR $T151882[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1090 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -19894,9 +19926,9 @@ $LN32@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -19916,7 +19948,7 @@ $LN31@Insert:
 ; 1103 : 			{	// insert even if duplicate
 ; 1104 : 			if (_Where == begin())
 
-	lea	ecx, DWORD PTR $T154032[ebp]
+	lea	ecx, DWORD PTR $T151861[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin
@@ -19928,11 +19960,11 @@ $LN31@Insert:
 	push	eax
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator==
-	mov	BYTE PTR $T154031[ebp], al
+	mov	BYTE PTR $T151860[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154032[ebp]
+	lea	ecx, DWORD PTR $T151861[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T154031[ebp]
+	movzx	ecx, BYTE PTR $T151860[ebp]
 	test	ecx, ecx
 	je	$LN28@Insert
 
@@ -19974,9 +20006,9 @@ $LN31@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -19996,7 +20028,7 @@ $LN28@Insert:
 ; 1110 : 				}
 ; 1111 : 			else if (_Where == end())
 
-	lea	eax, DWORD PTR $T154034[ebp]
+	lea	eax, DWORD PTR $T151863[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -20008,11 +20040,11 @@ $LN28@Insert:
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator==
-	mov	BYTE PTR $T154033[ebp], al
+	mov	BYTE PTR $T151862[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154034[ebp]
+	lea	ecx, DWORD PTR $T151863[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T154033[ebp]
+	movzx	eax, BYTE PTR $T151862[ebp]
 	test	eax, eax
 	je	$LN25@Insert
 
@@ -20056,9 +20088,9 @@ $LN28@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20157,9 +20189,9 @@ $LN25@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20186,9 +20218,9 @@ $LN21@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20230,7 +20262,7 @@ $LN22@Insert:
 	movzx	eax, al
 	test	eax, eax
 	jne	$LN36@Insert
-	lea	ecx, DWORD PTR $T154036[ebp]
+	lea	ecx, DWORD PTR $T151865[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -20238,9 +20270,9 @@ $LN22@Insert:
 	mov	edx, DWORD PTR tv301[ebp]
 	mov	DWORD PTR tv752[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 2
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	ecx, DWORD PTR tv752[ebp]
 	push	ecx
 	lea	edx, DWORD PTR __Where$[ebp]
@@ -20282,16 +20314,16 @@ $LN36@Insert:
 	mov	DWORD PTR tv378[ebp], 0
 $LN37@Insert:
 	mov	dl, BYTE PTR tv378[ebp]
-	mov	BYTE PTR $T154035[ebp], dl
+	mov	BYTE PTR $T151864[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	and	eax, 2
 	je	SHORT $LN49@Insert
-	and	DWORD PTR $T154053[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T154036[ebp]
+	and	DWORD PTR $T151882[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151865[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN49@Insert:
-	movzx	ecx, BYTE PTR $T154035[ebp]
+	movzx	ecx, BYTE PTR $T151864[ebp]
 	test	ecx, ecx
 	je	$LN18@Insert
 
@@ -20324,9 +20356,9 @@ $LN49@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20353,9 +20385,9 @@ $LN17@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20386,7 +20418,7 @@ $LN29@Insert:
 ; 1143 : 			{	// insert only if unique
 ; 1144 : 			if (_Where == begin())
 
-	lea	ecx, DWORD PTR $T154041[ebp]
+	lea	ecx, DWORD PTR $T151870[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin
@@ -20398,11 +20430,11 @@ $LN29@Insert:
 	push	eax
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator==
-	mov	BYTE PTR $T154040[ebp], al
+	mov	BYTE PTR $T151869[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154041[ebp]
+	lea	ecx, DWORD PTR $T151870[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T154040[ebp]
+	movzx	ecx, BYTE PTR $T151869[ebp]
 	test	ecx, ecx
 	je	$LN13@Insert
 
@@ -20444,9 +20476,9 @@ $LN29@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20464,7 +20496,7 @@ $LN13@Insert:
 
 ; 1150 : 			else if (_Where == end())
 
-	lea	eax, DWORD PTR $T154043[ebp]
+	lea	eax, DWORD PTR $T151872[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -20476,11 +20508,11 @@ $LN13@Insert:
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator==
-	mov	BYTE PTR $T154042[ebp], al
+	mov	BYTE PTR $T151871[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154043[ebp]
+	lea	ecx, DWORD PTR $T151872[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T154042[ebp]
+	movzx	eax, BYTE PTR $T151871[ebp]
 	test	eax, eax
 	je	$LN10@Insert
 
@@ -20524,9 +20556,9 @@ $LN13@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20625,9 +20657,9 @@ $LN10@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20654,9 +20686,9 @@ $LN6@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T154053[ebp]
+	mov	edx, DWORD PTR $T151882[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154053[ebp], edx
+	mov	DWORD PTR $T151882[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20698,7 +20730,7 @@ $LN7@Insert:
 	movzx	eax, al
 	test	eax, eax
 	je	$LN39@Insert
-	lea	ecx, DWORD PTR $T154045[ebp]
+	lea	ecx, DWORD PTR $T151874[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::end
@@ -20706,9 +20738,9 @@ $LN7@Insert:
 	mov	edx, DWORD PTR tv589[ebp]
 	mov	DWORD PTR tv781[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	ecx, DWORD PTR tv781[ebp]
 	push	ecx
 	lea	edx, DWORD PTR __Where$[ebp]
@@ -20750,16 +20782,16 @@ $LN39@Insert:
 	mov	DWORD PTR tv666[ebp], 0
 $LN40@Insert:
 	mov	dl, BYTE PTR tv666[ebp]
-	mov	BYTE PTR $T154044[ebp], dl
+	mov	BYTE PTR $T151873[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	and	eax, 4
 	je	SHORT $LN54@Insert
-	and	DWORD PTR $T154053[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T154045[ebp]
+	and	DWORD PTR $T151882[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T151874[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN54@Insert:
-	movzx	ecx, BYTE PTR $T154044[ebp]
+	movzx	ecx, BYTE PTR $T151873[ebp]
 	test	ecx, ecx
 	je	$LN30@Insert
 
@@ -20792,9 +20824,9 @@ $LN54@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20821,9 +20853,9 @@ $LN2@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
@@ -20843,7 +20875,7 @@ $LN30@Insert:
 	push	ecx
 	mov	edx, DWORD PTR __Node$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154049[ebp]
+	lea	eax, DWORD PTR $T151878[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Linsert
@@ -20855,11 +20887,11 @@ $LN30@Insert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154053[ebp], eax
+	mov	DWORD PTR $T151882[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154049[ebp]
+	lea	ecx, DWORD PTR $T151878[ebp]
 	call	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
@@ -20914,46 +20946,46 @@ __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std
 	lea	ecx, DWORD PTR __Next$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$2:
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	and	eax, 1
 	je	$LN44@Insert
-	and	DWORD PTR $T154053[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151882[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN44@Insert:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$3:
-	lea	ecx, DWORD PTR $T154032[ebp]
+	lea	ecx, DWORD PTR $T151861[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$4:
-	lea	ecx, DWORD PTR $T154034[ebp]
+	lea	ecx, DWORD PTR $T151863[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$5:
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	and	eax, 2
 	je	$LN48@Insert
-	and	DWORD PTR $T154053[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T154036[ebp]
+	and	DWORD PTR $T151882[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151865[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN48@Insert:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$6:
-	lea	ecx, DWORD PTR $T154041[ebp]
+	lea	ecx, DWORD PTR $T151870[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$7:
-	lea	ecx, DWORD PTR $T154043[ebp]
+	lea	ecx, DWORD PTR $T151872[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$8:
-	mov	eax, DWORD PTR $T154053[ebp]
+	mov	eax, DWORD PTR $T151882[ebp]
 	and	eax, 4
 	je	$LN53@Insert
-	and	DWORD PTR $T154053[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T154045[ebp]
+	and	DWORD PTR $T151882[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T151874[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN53@Insert:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z$9:
-	lea	ecx, DWORD PTR $T154049[ebp]
+	lea	ecx, DWORD PTR $T151878[ebp]
 	jmp	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 __ehhandler$?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -21018,8 +21050,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T154080 = -24						; size = 4
-$T154079 = -20						; size = 4
+$T151909 = -24						; size = 4
+$T151908 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -21055,9 +21087,9 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T154080[ebp], eax
+	mov	DWORD PTR $T151909[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T154080[ebp], 0
+	cmp	DWORD PTR $T151909[ebp], 0
 	je	SHORT $LN3@construct
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -21065,17 +21097,17 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR [eax+4]
-	mov	ecx, DWORD PTR $T154080[ebp]
+	mov	ecx, DWORD PTR $T151909[ebp]
 	mov	DWORD PTR [ecx], edx
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR $T154080[ebp]
+	mov	edx, DWORD PTR $T151909[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct
 $LN3@construct:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T154079[ebp], eax
+	mov	DWORD PTR $T151908[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -21095,7 +21127,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T154080[ebp]
+	mov	ecx, DWORD PTR $T151909[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -21333,7 +21365,7 @@ __ehfuncinfo$??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@s
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z
 _TEXT	SEGMENT
-$T154098 = -20						; size = 4
+$T151927 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Mode$ = 8						; size = 4
@@ -21358,7 +21390,7 @@ _$initVBases$ = 12					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154098[ebp], 0
+	mov	DWORD PTR $T151927[ebp], 0
 	cmp	DWORD PTR _$initVBases$[ebp], 0
 	je	SHORT $LN1@basic_ostr
 	mov	eax, DWORD PTR _this$[ebp]
@@ -21367,9 +21399,9 @@ _$initVBases$ = 12					; size = 4
 	add	ecx, 80					; 00000050H
 	call	??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ ; std::basic_ios<char,std::char_traits<char> >::basic_ios<char,std::char_traits<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR $T154098[ebp]
+	mov	ecx, DWORD PTR $T151927[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154098[ebp], ecx
+	mov	DWORD PTR $T151927[ebp], ecx
 $LN1@basic_ostr:
 	push	0
 	push	0
@@ -21408,10 +21440,10 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z$0:
-	mov	eax, DWORD PTR $T154098[ebp]
+	mov	eax, DWORD PTR $T151927[ebp]
 	and	eax, 1
 	je	$LN5@basic_ostr
-	and	DWORD PTR $T154098[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151927[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 80					; 00000050H
 	jmp	??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ ; std::basic_ios<char,std::char_traits<char> >::~basic_ios<char,std::char_traits<char> >
@@ -21619,7 +21651,7 @@ PUBLIC	?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T154128 = -8						; size = 4
+$T151957 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::basic_ostringstream<char,std::char_traits<char>,std::allocator<char> >::str, COMDAT
@@ -21633,7 +21665,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154128[ebp], 0
+	mov	DWORD PTR $T151957[ebp], 0
 
 ; 593  : 		return (_Stringbuffer.str());
 
@@ -21642,9 +21674,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
 	call	?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ ; std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char> >::str
-	mov	ecx, DWORD PTR $T154128[ebp]
+	mov	ecx, DWORD PTR $T151957[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154128[ebp], ecx
+	mov	DWORD PTR $T151957[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 594  : 		}
@@ -22170,8 +22202,8 @@ PUBLIC	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z	; std::char_traits<char>::eq
 ;	COMDAT ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ
 _TEXT	SEGMENT
 tv79 = -16						; size = 4
-$T154165 = -12						; size = 4
-$T154164 = -8						; size = 4
+$T151994 = -12						; size = 4
+$T151993 = -8						; size = 4
 _this$ = -4						; size = 4
 ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ PROC ; std::basic_streambuf<char,std::char_traits<char> >::uflow, COMDAT
 ; _this$ = ecx
@@ -22200,12 +22232,12 @@ _this$ = -4						; size = 4
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	mov	DWORD PTR $T154164[ebp], eax
+	mov	DWORD PTR $T151993[ebp], eax
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T154165[ebp], eax
-	lea	ecx, DWORD PTR $T154164[ebp]
+	mov	DWORD PTR $T151994[ebp], eax
+	lea	ecx, DWORD PTR $T151993[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T154165[ebp]
+	lea	edx, DWORD PTR $T151994[ebp]
 	push	edx
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -22294,7 +22326,7 @@ PUBLIC	?_Gnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBE_JXZ ; std::b
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\streambuf
 ;	COMDAT ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z
 _TEXT	SEGMENT
-$T154174 = -36						; size = 4
+$T152003 = -36						; size = 4
 __Copied$ = -32						; size = 8
 __Size$ = -24						; size = 8
 __Meta$ = -12						; size = 4
@@ -22428,10 +22460,10 @@ $LN5@xsgetn:
 	call	__RTC_CheckEsp
 	mov	DWORD PTR __Meta$[ebp], eax
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T154174[ebp], eax
+	mov	DWORD PTR $T152003[ebp], eax
 	lea	ecx, DWORD PTR __Meta$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T154174[ebp]
+	lea	edx, DWORD PTR $T152003[ebp]
 	push	edx
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -22554,8 +22586,8 @@ PUBLIC	?_Pnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBE_JXZ ; std::b
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\streambuf
 ;	COMDAT ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z
 _TEXT	SEGMENT
-$T154186 = -28						; size = 4
-$T154185 = -24						; size = 4
+$T152015 = -28						; size = 4
+$T152014 = -24						; size = 4
 __Copied$ = -20						; size = 8
 __Size$ = -12						; size = 8
 _this$ = -4						; size = 4
@@ -22691,12 +22723,12 @@ $LN5@xsputn:
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	mov	DWORD PTR $T154185[ebp], eax
+	mov	DWORD PTR $T152014[ebp], eax
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T154186[ebp], eax
-	lea	ecx, DWORD PTR $T154185[ebp]
+	mov	DWORD PTR $T152015[ebp], eax
+	lea	ecx, DWORD PTR $T152014[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T154186[ebp]
+	lea	edx, DWORD PTR $T152015[ebp]
 	push	edx
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -23351,12 +23383,12 @@ PUBLIC	?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::bas
 _TEXT	SEGMENT
 tv199 = -36						; size = 4
 tv195 = -32						; size = 4
-$T154228 = -28						; size = 4
-__Oldptr$148080 = -24					; size = 4
-__Newptr$148079 = -20					; size = 4
-__Inc$148074 = -16					; size = 4
-__Newsize$148073 = -12					; size = 4
-__Oldsize$148072 = -8					; size = 4
+$T152057 = -28						; size = 4
+__Oldptr$146299 = -24					; size = 4
+__Newptr$146298 = -20					; size = 4
+__Inc$146293 = -16					; size = 4
+__Newsize$146292 = -12					; size = 4
+__Oldsize$146291 = -8					; size = 4
 _this$ = -4						; size = 4
 __Meta$ = 8						; size = 4
 ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z PROC ; std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char> >::overflow, COMDAT
@@ -23417,10 +23449,10 @@ $LN18@overflow:
 ; 125  : 		if (_Traits::eq_int_type(_Traits::eof(), _Meta))
 
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T154228[ebp], eax
+	mov	DWORD PTR $T152057[ebp], eax
 	lea	edx, DWORD PTR __Meta$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154228[ebp]
+	lea	eax, DWORD PTR $T152057[ebp]
 	push	eax
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -23512,52 +23544,52 @@ $LN21@overflow:
 	mov	DWORD PTR tv195[ebp], esi
 $LN22@overflow:
 	mov	eax, DWORD PTR tv195[ebp]
-	mov	DWORD PTR __Oldsize$148072[ebp], eax
+	mov	DWORD PTR __Oldsize$146291[ebp], eax
 
 ; 139  : 			size_t _Newsize = _Oldsize;
 
-	mov	ecx, DWORD PTR __Oldsize$148072[ebp]
-	mov	DWORD PTR __Newsize$148073[ebp], ecx
+	mov	ecx, DWORD PTR __Oldsize$146291[ebp]
+	mov	DWORD PTR __Newsize$146292[ebp], ecx
 
 ; 140  : 			size_t _Inc = _Newsize / 2 < _MINSIZE
 ; 141  : 				? _MINSIZE : _Newsize / 2;	// grow by 50 per cent
 
-	mov	edx, DWORD PTR __Newsize$148073[ebp]
+	mov	edx, DWORD PTR __Newsize$146292[ebp]
 	shr	edx, 1
 	cmp	edx, 32					; 00000020H
 	jae	SHORT $LN23@overflow
 	mov	DWORD PTR tv199[ebp], 32		; 00000020H
 	jmp	SHORT $LN24@overflow
 $LN23@overflow:
-	mov	eax, DWORD PTR __Newsize$148073[ebp]
+	mov	eax, DWORD PTR __Newsize$146292[ebp]
 	shr	eax, 1
 	mov	DWORD PTR tv199[ebp], eax
 $LN24@overflow:
 	mov	ecx, DWORD PTR tv199[ebp]
-	mov	DWORD PTR __Inc$148074[ebp], ecx
+	mov	DWORD PTR __Inc$146293[ebp], ecx
 $LN11@overflow:
 
 ; 142  : 
 ; 143  : 			while (0 < _Inc && INT_MAX - _Inc < _Newsize)
 
-	cmp	DWORD PTR __Inc$148074[ebp], 0
+	cmp	DWORD PTR __Inc$146293[ebp], 0
 	jbe	SHORT $LN10@overflow
 	mov	edx, 2147483647				; 7fffffffH
-	sub	edx, DWORD PTR __Inc$148074[ebp]
-	cmp	edx, DWORD PTR __Newsize$148073[ebp]
+	sub	edx, DWORD PTR __Inc$146293[ebp]
+	cmp	edx, DWORD PTR __Newsize$146292[ebp]
 	jae	SHORT $LN10@overflow
 
 ; 144  : 				_Inc /= 2;	// increment causes overflow, halve it
 
-	mov	eax, DWORD PTR __Inc$148074[ebp]
+	mov	eax, DWORD PTR __Inc$146293[ebp]
 	shr	eax, 1
-	mov	DWORD PTR __Inc$148074[ebp], eax
+	mov	DWORD PTR __Inc$146293[ebp], eax
 	jmp	SHORT $LN11@overflow
 $LN10@overflow:
 
 ; 145  : 			if (_Inc == 0)
 
-	cmp	DWORD PTR __Inc$148074[ebp], 0
+	cmp	DWORD PTR __Inc$146293[ebp], 0
 	jne	SHORT $LN9@overflow
 
 ; 146  : 				return (_Traits::eof());	// buffer can't grow, fail
@@ -23569,39 +23601,39 @@ $LN9@overflow:
 ; 147  : 
 ; 148  : 			_Newsize += _Inc;
 
-	mov	ecx, DWORD PTR __Newsize$148073[ebp]
-	add	ecx, DWORD PTR __Inc$148074[ebp]
-	mov	DWORD PTR __Newsize$148073[ebp], ecx
+	mov	ecx, DWORD PTR __Newsize$146292[ebp]
+	add	ecx, DWORD PTR __Inc$146293[ebp]
+	mov	DWORD PTR __Newsize$146292[ebp], ecx
 
 ; 149  : 
 ; 150  : 			_Elem *_Newptr = _Al.allocate(_Newsize);
 
-	mov	edx, DWORD PTR __Newsize$148073[ebp]
+	mov	edx, DWORD PTR __Newsize$146292[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 68					; 00000044H
 	call	?allocate@?$allocator@D@std@@QAEPADI@Z	; std::allocator<char>::allocate
-	mov	DWORD PTR __Newptr$148079[ebp], eax
+	mov	DWORD PTR __Newptr$146298[ebp], eax
 
 ; 151  : 			_Elem *_Oldptr = _Mysb::eback();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::eback
-	mov	DWORD PTR __Oldptr$148080[ebp], eax
+	mov	DWORD PTR __Oldptr$146299[ebp], eax
 
 ; 152  : 
 ; 153  : 			if (0 < _Oldsize)
 
-	cmp	DWORD PTR __Oldsize$148072[ebp], 0
+	cmp	DWORD PTR __Oldsize$146291[ebp], 0
 	jbe	SHORT $LN8@overflow
 
 ; 154  : 				_Traits::copy(_Newptr, _Oldptr, _Oldsize);
 
-	mov	eax, DWORD PTR __Oldsize$148072[ebp]
+	mov	eax, DWORD PTR __Oldsize$146291[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Oldptr$148080[ebp]
+	mov	ecx, DWORD PTR __Oldptr$146299[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Newptr$148079[ebp]
+	mov	edx, DWORD PTR __Newptr$146298[ebp]
 	push	edx
 	call	?copy@?$char_traits@D@std@@SAPADPADPBDI@Z ; std::char_traits<char>::copy
 	add	esp, 12					; 0000000cH
@@ -23610,22 +23642,22 @@ $LN8@overflow:
 ; 155  : 
 ; 156  : 			if (_Oldsize == 0)
 
-	cmp	DWORD PTR __Oldsize$148072[ebp], 0
+	cmp	DWORD PTR __Oldsize$146291[ebp], 0
 	jne	SHORT $LN7@overflow
 
 ; 157  : 				{	// first growth, set up pointers
 ; 158  : 				_Seekhigh = _Newptr;
 
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR __Newptr$148079[ebp]
+	mov	ecx, DWORD PTR __Newptr$146298[ebp]
 	mov	DWORD PTR [eax+60], ecx
 
 ; 159  : 				_Mysb::setp(_Newptr, _Newptr + _Newsize);
 
-	mov	edx, DWORD PTR __Newptr$148079[ebp]
-	add	edx, DWORD PTR __Newsize$148073[ebp]
+	mov	edx, DWORD PTR __Newptr$146298[ebp]
+	add	edx, DWORD PTR __Newsize$146292[ebp]
 	push	edx
-	mov	eax, DWORD PTR __Newptr$148079[ebp]
+	mov	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD0@Z ; std::basic_streambuf<char,std::char_traits<char> >::setp
@@ -23639,10 +23671,10 @@ $LN8@overflow:
 
 ; 161  : 					_Mysb::setg(_Newptr, 0, _Newptr);
 
-	mov	eax, DWORD PTR __Newptr$148079[ebp]
+	mov	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
 	push	0
-	mov	ecx, DWORD PTR __Newptr$148079[ebp]
+	mov	ecx, DWORD PTR __Newptr$146298[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setg
@@ -23654,12 +23686,12 @@ $LN6@overflow:
 
 ; 163  : 					_Mysb::setg(_Newptr, _Newptr, _Newptr + 1);
 
-	mov	edx, DWORD PTR __Newptr$148079[ebp]
+	mov	edx, DWORD PTR __Newptr$146298[ebp]
 	add	edx, 1
 	push	edx
-	mov	eax, DWORD PTR __Newptr$148079[ebp]
+	mov	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Newptr$148079[ebp]
+	mov	ecx, DWORD PTR __Newptr$146298[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setg
@@ -23676,8 +23708,8 @@ $LN7@overflow:
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+60]
-	sub	eax, DWORD PTR __Oldptr$148080[ebp]
-	add	eax, DWORD PTR __Newptr$148079[ebp]
+	sub	eax, DWORD PTR __Oldptr$146299[ebp]
+	add	eax, DWORD PTR __Newptr$146298[ebp]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+60], eax
 
@@ -23685,18 +23717,18 @@ $LN7@overflow:
 ; 169  : 					_Newptr + (_Mysb::pptr() - _Oldptr),
 ; 170  : 					_Newptr + _Newsize);
 
-	mov	edx, DWORD PTR __Newptr$148079[ebp]
-	add	edx, DWORD PTR __Newsize$148073[ebp]
+	mov	edx, DWORD PTR __Newptr$146298[ebp]
+	add	edx, DWORD PTR __Newsize$146292[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::pptr
-	sub	eax, DWORD PTR __Oldptr$148080[ebp]
-	add	eax, DWORD PTR __Newptr$148079[ebp]
+	sub	eax, DWORD PTR __Oldptr$146299[ebp]
+	add	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::pbase
-	sub	eax, DWORD PTR __Oldptr$148080[ebp]
-	add	eax, DWORD PTR __Newptr$148079[ebp]
+	sub	eax, DWORD PTR __Oldptr$146299[ebp]
+	add	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setp
@@ -23710,10 +23742,10 @@ $LN7@overflow:
 
 ; 172  : 					_Mysb::setg(_Newptr, 0, _Newptr);
 
-	mov	edx, DWORD PTR __Newptr$148079[ebp]
+	mov	edx, DWORD PTR __Newptr$146298[ebp]
 	push	edx
 	push	0
-	mov	eax, DWORD PTR __Newptr$148079[ebp]
+	mov	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setg
@@ -23733,10 +23765,10 @@ $LN3@overflow:
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::gptr
-	sub	eax, DWORD PTR __Oldptr$148080[ebp]
-	add	eax, DWORD PTR __Newptr$148079[ebp]
+	sub	eax, DWORD PTR __Oldptr$146299[ebp]
+	add	eax, DWORD PTR __Newptr$146298[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Newptr$148079[ebp]
+	mov	ecx, DWORD PTR __Newptr$146298[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setg
@@ -23753,9 +23785,9 @@ $LN4@overflow:
 
 ; 180  : 				_Al.deallocate(_Oldptr, _Oldsize);
 
-	mov	ecx, DWORD PTR __Oldsize$148072[ebp]
+	mov	ecx, DWORD PTR __Oldsize$146291[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Oldptr$148080[ebp]
+	mov	edx, DWORD PTR __Oldptr$146299[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 68					; 00000044H
@@ -24052,9 +24084,9 @@ PUBLIC	?eq@?$char_traits@D@std@@SA_NABD0@Z		; std::char_traits<char>::eq
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\sstream
 ;	COMDAT ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z
 _TEXT	SEGMENT
-$T154251 = -16						; size = 4
-$T154250 = -9						; size = 1
-$T154249 = -8						; size = 4
+$T152080 = -16						; size = 4
+$T152079 = -9						; size = 1
+$T152078 = -8						; size = 4
 _this$ = -4						; size = 4
 __Meta$ = 8						; size = 4
 ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z PROC ; std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char> >::pbackfail, COMDAT
@@ -24092,10 +24124,10 @@ __Meta$ = 8						; size = 4
 	cmp	esi, eax
 	jbe	SHORT $LN3@pbackfail
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T154249[ebp], eax
+	mov	DWORD PTR $T152078[ebp], eax
 	lea	eax, DWORD PTR __Meta$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154249[ebp]
+	lea	ecx, DWORD PTR $T152078[ebp]
 	push	ecx
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -24106,12 +24138,12 @@ __Meta$ = 8						; size = 4
 	push	eax
 	call	?to_char_type@?$char_traits@D@std@@SADABH@Z ; std::char_traits<char>::to_char_type
 	add	esp, 4
-	mov	BYTE PTR $T154250[ebp], al
+	mov	BYTE PTR $T152079[ebp], al
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::gptr
 	sub	eax, 1
 	push	eax
-	lea	ecx, DWORD PTR $T154250[ebp]
+	lea	ecx, DWORD PTR $T152079[ebp]
 	push	ecx
 	call	?eq@?$char_traits@D@std@@SA_NABD0@Z	; std::char_traits<char>::eq
 	add	esp, 8
@@ -24144,10 +24176,10 @@ $LN4@pbackfail:
 ; 199  : 			if (!_Traits::eq_int_type(_Traits::eof(), _Meta))
 
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T154251[ebp], eax
+	mov	DWORD PTR $T152080[ebp], eax
 	lea	edx, DWORD PTR __Meta$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154251[ebp]
+	lea	eax, DWORD PTR $T152080[ebp]
 	push	eax
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -25364,7 +25396,7 @@ __ehfuncinfo$??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_stre
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
 _TEXT	SEGMENT
-$T154289 = -20						; size = 4
+$T152118 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Strbuf$ = 8						; size = 4
@@ -25390,7 +25422,7 @@ _$initVBases$ = 16					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154289[ebp], 0
+	mov	DWORD PTR $T152118[ebp], 0
 	cmp	DWORD PTR _$initVBases$[ebp], 0
 	je	SHORT $LN1@basic_ostr@2
 	mov	eax, DWORD PTR _this$[ebp]
@@ -25399,9 +25431,9 @@ _$initVBases$ = 16					; size = 4
 	add	ecx, 8
 	call	??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ ; std::basic_ios<char,std::char_traits<char> >::basic_ios<char,std::char_traits<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR $T154289[ebp]
+	mov	ecx, DWORD PTR $T152118[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154289[ebp], ecx
+	mov	DWORD PTR $T152118[ebp], ecx
 $LN1@basic_ostr@2:
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx]
@@ -25442,10 +25474,10 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z$0:
-	mov	eax, DWORD PTR $T154289[ebp]
+	mov	eax, DWORD PTR $T152118[ebp]
 	and	eax, 1
 	je	$LN5@basic_ostr@2
-	and	DWORD PTR $T154289[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152118[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 8
 	jmp	??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ ; std::basic_ios<char,std::char_traits<char> >::~basic_ios<char,std::char_traits<char> >
@@ -25635,17 +25667,17 @@ tv167 = -140						; size = 4
 tv270 = -136						; size = 4
 tv288 = -132						; size = 4
 tv151 = -128						; size = 4
-$T154322 = -124						; size = 4
-$T154319 = -117						; size = 1
-$T154318 = -116						; size = 12
-$T154317 = -101						; size = 1
-$T154316 = -100						; size = 12
-$T154315 = -85						; size = 1
-$T154314 = -84						; size = 12
-$T154313 = -69						; size = 1
-$T154312 = -68						; size = 12
-$T154311 = -53						; size = 1
-__Where$148308 = -48					; size = 12
+$T152151 = -124						; size = 4
+$T152148 = -117						; size = 1
+$T152147 = -116						; size = 12
+$T152146 = -101						; size = 1
+$T152145 = -100						; size = 12
+$T152144 = -85						; size = 1
+$T152143 = -84						; size = 12
+$T152142 = -69						; size = 1
+$T152141 = -68						; size = 12
+$T152140 = -53						; size = 1
+__Where$146496 = -48					; size = 12
 __Addleft$ = -29					; size = 1
 __Wherenode$ = -28					; size = 4
 __Trynode$ = -24					; size = 4
@@ -25680,7 +25712,7 @@ __Leftish$ = 16						; size = 1
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154322[ebp], 0
+	mov	DWORD PTR $T152151[ebp], 0
 
 ; 945  : 		const value_type& _Val = this->_Myval(_Node);
 
@@ -25824,8 +25856,8 @@ $LN11@Linsert:
 
 ; 966  : 			return (_Pairib(_Insert(_Addleft, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T154311[ebp], 1
-	lea	eax, DWORD PTR $T154311[ebp]
+	mov	BYTE PTR $T152140[ebp], 1
+	lea	eax, DWORD PTR $T152140[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Node$[ebp]
 	push	ecx
@@ -25833,7 +25865,7 @@ $LN11@Linsert:
 	push	edx
 	movzx	eax, BYTE PTR __Addleft$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154312[ebp]
+	lea	ecx, DWORD PTR $T152141[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
@@ -25845,11 +25877,11 @@ $LN11@Linsert:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>
-	mov	ecx, DWORD PTR $T154322[ebp]
+	mov	ecx, DWORD PTR $T152151[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154322[ebp], ecx
+	mov	DWORD PTR $T152151[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T154312[ebp]
+	lea	ecx, DWORD PTR $T152141[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN13@Linsert
@@ -25866,7 +25898,7 @@ $LN8@Linsert:
 	push	edx
 	mov	eax, DWORD PTR __Wherenode$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
@@ -25881,7 +25913,7 @@ $LN6@Linsert:
 ; 971  : 				;	// need to test if insert after is okay
 ; 972  : 			else if (_Where == begin())
 
-	lea	edx, DWORD PTR $T154314[ebp]
+	lea	edx, DWORD PTR $T152143[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::begin
@@ -25891,27 +25923,27 @@ $LN6@Linsert:
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR tv277[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator==
-	mov	BYTE PTR $T154313[ebp], al
+	mov	BYTE PTR $T152142[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154314[ebp]
+	lea	ecx, DWORD PTR $T152143[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T154313[ebp]
+	movzx	edx, BYTE PTR $T152142[ebp]
 	test	edx, edx
 	je	SHORT $LN4@Linsert
 
 ; 973  : 				return (_Pairib(_Insert(true, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T154315[ebp], 1
-	lea	eax, DWORD PTR $T154315[ebp]
+	mov	BYTE PTR $T152144[ebp], 1
+	lea	eax, DWORD PTR $T152144[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Node$[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Wherenode$[ebp]
 	push	edx
 	push	1
-	lea	eax, DWORD PTR $T154316[ebp]
+	lea	eax, DWORD PTR $T152145[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
@@ -25923,14 +25955,14 @@ $LN6@Linsert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>
-	mov	eax, DWORD PTR $T154322[ebp]
+	mov	eax, DWORD PTR $T152151[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154322[ebp], eax
+	mov	DWORD PTR $T152151[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154316[ebp]
+	lea	ecx, DWORD PTR $T152145[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN13@Linsert
@@ -25942,7 +25974,7 @@ $LN4@Linsert:
 
 ; 975  : 				--_Where;	// need to test if insert before is okay
 
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??F?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::operator--
 $LN5@Linsert:
 
@@ -25956,7 +25988,7 @@ $LN5@Linsert:
 	call	??$_Kfn@$$CBHPAVRaven_Weapon@@@?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@SAABHABU?$pair@$$CBHPAVRaven_Weapon@@@1@@Z ; std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0>::_Kfn<int const ,Raven_Weapon *>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	?_Mynode@?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::_Mynode
 	push	eax
 	call	?_Key@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAHPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Key
@@ -25975,8 +26007,8 @@ $LN5@Linsert:
 ; 979  : 				this->_Kfn(_Val)))
 ; 980  : 				return (_Pairib(_Insert(_Addleft, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T154317[ebp], 1
-	lea	edx, DWORD PTR $T154317[ebp]
+	mov	BYTE PTR $T152146[ebp], 1
+	lea	edx, DWORD PTR $T152146[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Node$[ebp]
 	push	eax
@@ -25984,7 +26016,7 @@ $LN5@Linsert:
 	push	ecx
 	movzx	edx, BYTE PTR __Addleft$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154318[ebp]
+	lea	eax, DWORD PTR $T152147[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Insert
@@ -25996,14 +26028,14 @@ $LN5@Linsert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>
-	mov	eax, DWORD PTR $T154322[ebp]
+	mov	eax, DWORD PTR $T152151[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154322[ebp], eax
+	mov	DWORD PTR $T152151[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T154318[ebp]
+	lea	ecx, DWORD PTR $T152147[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN13@Linsert
@@ -26044,18 +26076,18 @@ $LN2@Linsert:
 ; 987  : 
 ; 988  : 				return (_Pairib(_Where, false));
 
-	mov	BYTE PTR $T154319[ebp], 0
-	lea	ecx, DWORD PTR $T154319[ebp]
+	mov	BYTE PTR $T152148[ebp], 0
+	lea	ecx, DWORD PTR $T152148[ebp]
 	push	ecx
-	lea	edx, DWORD PTR __Where$148308[ebp]
+	lea	edx, DWORD PTR __Where$146496[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??$?0AAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@AAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >,bool><std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > > &,bool>
-	mov	eax, DWORD PTR $T154322[ebp]
+	mov	eax, DWORD PTR $T152151[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154322[ebp], eax
+	mov	DWORD PTR $T152151[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN13@Linsert
@@ -26065,7 +26097,7 @@ $LN1@Linsert:
 ; 990  : 			}
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@Linsert:
 
@@ -26108,28 +26140,28 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z$0:
-	lea	ecx, DWORD PTR $T154312[ebp]
+	lea	ecx, DWORD PTR $T152141[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z$1:
-	mov	eax, DWORD PTR $T154322[ebp]
+	mov	eax, DWORD PTR $T152151[ebp]
 	and	eax, 1
 	je	$LN19@Linsert
-	and	DWORD PTR $T154322[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152151[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 $LN19@Linsert:
 	ret	0
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z$2:
-	lea	ecx, DWORD PTR __Where$148308[ebp]
+	lea	ecx, DWORD PTR __Where$146496[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z$3:
-	lea	ecx, DWORD PTR $T154314[ebp]
+	lea	ecx, DWORD PTR $T152143[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z$4:
-	lea	ecx, DWORD PTR $T154316[ebp]
+	lea	ecx, DWORD PTR $T152145[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z$5:
-	lea	ecx, DWORD PTR $T154318[ebp]
+	lea	ecx, DWORD PTR $T152147[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Linsert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@_N@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -26151,8 +26183,8 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?_Insert@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@1@Z
 _TEXT	SEGMENT
-$T154340 = -12						; size = 4
-__Pnode$148342 = -8					; size = 4
+$T152169 = -12						; size = 4
+__Pnode$146530 = -8					; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Addleft$ = 12						; size = 1
@@ -26171,7 +26203,7 @@ __Newnode$ = 20						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154340[ebp], 0
+	mov	DWORD PTR $T152169[ebp], 0
 
 ; 1632 : 		if (max_size() - 1 <= this->_Mysize)
 
@@ -26334,12 +26366,12 @@ $LN15@Insert@2:
 ; 1663 : 		for (_Nodeptr _Pnode = _Newnode;
 
 	mov	edx, DWORD PTR __Newnode$[ebp]
-	mov	DWORD PTR __Pnode$148342[ebp], edx
+	mov	DWORD PTR __Pnode$146530[ebp], edx
 $LN10@Insert@2:
 
 ; 1664 : 			this->_Color(this->_Parent(_Pnode)) == this->_Red; )
 
-	mov	eax, DWORD PTR __Pnode$148342[ebp]
+	mov	eax, DWORD PTR __Pnode$146530[ebp]
 	push	eax
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26354,12 +26386,12 @@ $LN10@Insert@2:
 ; 1665 : 			if (this->_Parent(_Pnode)
 ; 1666 : 				== this->_Left(this->_Parent(this->_Parent(_Pnode))))
 
-	mov	eax, DWORD PTR __Pnode$148342[ebp]
+	mov	eax, DWORD PTR __Pnode$146530[ebp]
 	push	eax
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	esi, eax
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26379,7 +26411,7 @@ $LN10@Insert@2:
 ; 1668 : 				_Wherenode =
 ; 1669 : 					this->_Right(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26407,7 +26439,7 @@ $LN10@Insert@2:
 ; 1671 : 					{	// parent has two red children, blacken both
 ; 1672 : 					this->_Color(this->_Parent(_Pnode)) = this->_Black;
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26428,7 +26460,7 @@ $LN10@Insert@2:
 ; 1674 : 					this->_Color(this->_Parent(this->_Parent(_Pnode)))
 ; 1675 : 						= this->_Red;
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26444,7 +26476,7 @@ $LN10@Insert@2:
 
 ; 1676 : 					_Pnode = this->_Parent(this->_Parent(_Pnode));
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26453,7 +26485,7 @@ $LN10@Insert@2:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$148342[ebp], ecx
+	mov	DWORD PTR __Pnode$146530[ebp], ecx
 
 ; 1677 : 					}
 ; 1678 : 				else
@@ -26464,7 +26496,7 @@ $LN7@Insert@2:
 ; 1679 : 					{	// parent has red and black children
 ; 1680 : 					if (_Pnode == this->_Right(this->_Parent(_Pnode)))
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26472,23 +26504,23 @@ $LN7@Insert@2:
 	push	eax
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Right
 	add	esp, 4
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	cmp	ecx, DWORD PTR [eax]
 	jne	SHORT $LN5@Insert@2
 
 ; 1681 : 						{	// rotate right child to left
 ; 1682 : 						_Pnode = this->_Parent(_Pnode);
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$148342[ebp], eax
+	mov	DWORD PTR __Pnode$146530[ebp], eax
 
 ; 1683 : 						_Lrotate(_Pnode);
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Lrotate@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Lrotate
@@ -26498,7 +26530,7 @@ $LN5@Insert@2:
 ; 1685 : 					this->_Color(this->_Parent(_Pnode)) =
 ; 1686 : 						this->_Black;	// propagate red up
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26511,7 +26543,7 @@ $LN5@Insert@2:
 ; 1687 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1688 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26527,7 +26559,7 @@ $LN5@Insert@2:
 
 ; 1689 : 					_Rrotate(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26552,7 +26584,7 @@ $LN8@Insert@2:
 ; 1694 : 				_Wherenode =
 ; 1695 : 					this->_Left(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26580,7 +26612,7 @@ $LN8@Insert@2:
 ; 1697 : 					{	// parent has two red children, blacken both
 ; 1698 : 					this->_Color(this->_Parent(_Pnode)) = this->_Black;
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26601,7 +26633,7 @@ $LN8@Insert@2:
 ; 1700 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1701 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26617,7 +26649,7 @@ $LN8@Insert@2:
 
 ; 1702 : 					_Pnode = this->_Parent(this->_Parent(_Pnode));
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26626,7 +26658,7 @@ $LN8@Insert@2:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$148342[ebp], eax
+	mov	DWORD PTR __Pnode$146530[ebp], eax
 
 ; 1703 : 					}
 ; 1704 : 				else
@@ -26637,7 +26669,7 @@ $LN3@Insert@2:
 ; 1705 : 					{	// parent has red and black children
 ; 1706 : 					if (_Pnode == this->_Left(this->_Parent(_Pnode)))
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26645,23 +26677,23 @@ $LN3@Insert@2:
 	push	edx
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Left
 	add	esp, 4
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	cmp	ecx, DWORD PTR [eax]
 	jne	SHORT $LN1@Insert@2
 
 ; 1707 : 						{	// rotate left child to right
 ; 1708 : 						_Pnode = this->_Parent(_Pnode);
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$148342[ebp], eax
+	mov	DWORD PTR __Pnode$146530[ebp], eax
 
 ; 1709 : 						_Rrotate(_Pnode);
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Rrotate@?$_Tree@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Rrotate
@@ -26671,7 +26703,7 @@ $LN1@Insert@2:
 ; 1711 : 					this->_Color(this->_Parent(_Pnode)) =
 ; 1712 : 						this->_Black;	// propagate red up
 
-	mov	edx, DWORD PTR __Pnode$148342[ebp]
+	mov	edx, DWORD PTR __Pnode$146530[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26684,7 +26716,7 @@ $LN1@Insert@2:
 ; 1713 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1714 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26700,7 +26732,7 @@ $LN1@Insert@2:
 
 ; 1715 : 					_Lrotate(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$148342[ebp]
+	mov	ecx, DWORD PTR __Pnode$146530[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
@@ -26739,9 +26771,9 @@ $LN9@Insert@2:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> > >
-	mov	ecx, DWORD PTR $T154340[ebp]
+	mov	ecx, DWORD PTR $T152169[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154340[ebp], ecx
+	mov	DWORD PTR $T152169[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN19@Insert@2:
 
@@ -27074,10 +27106,10 @@ xdata$x	ENDS
 ;	COMDAT ?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
 tv91 = -148						; size = 4
-$T154364 = -144						; size = 4
-__Nul$148551 = -136					; size = 32
-__Str$148549 = -96					; size = 32
-__Str$148546 = -56					; size = 32
+$T152193 = -144						; size = 4
+__Nul$146688 = -136					; size = 32
+__Str$146686 = -96					; size = 32
+__Str$146683 = -56					; size = 32
 _this$ = -20						; size = 4
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -27109,7 +27141,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154364[ebp], 0
+	mov	DWORD PTR $T152193[ebp], 0
 
 ; 94   : 		if (!(_Mystate & _Constant) && _Mysb::pptr() != 0)
 
@@ -27148,21 +27180,21 @@ $LN8@str:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::pbase
 	push	eax
-	lea	ecx, DWORD PTR __Str$148546[ebp]
+	lea	ecx, DWORD PTR __Str$146683[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBDI@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 98   : 			return (_Str);
 
-	lea	eax, DWORD PTR __Str$148546[ebp]
+	lea	eax, DWORD PTR __Str$146683[ebp]
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T154364[ebp]
+	mov	ecx, DWORD PTR $T152193[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154364[ebp], ecx
+	mov	DWORD PTR $T152193[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Str$148546[ebp]
+	lea	ecx, DWORD PTR __Str$146683[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN5@str
@@ -27194,21 +27226,21 @@ $LN4@str:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::eback
 	push	eax
-	lea	ecx, DWORD PTR __Str$148549[ebp]
+	lea	ecx, DWORD PTR __Str$146686[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBDI@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 103  : 			return (_Str);
 
-	lea	ecx, DWORD PTR __Str$148549[ebp]
+	lea	ecx, DWORD PTR __Str$146686[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T154364[ebp]
+	mov	edx, DWORD PTR $T152193[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154364[ebp], edx
+	mov	DWORD PTR $T152193[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Str$148549[ebp]
+	lea	ecx, DWORD PTR __Str$146686[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN5@str
@@ -27222,21 +27254,21 @@ $LN2@str:
 ; 106  : 			{	// inaccessible, return empty string
 ; 107  : 			_Mystr _Nul;
 
-	lea	ecx, DWORD PTR __Nul$148551[ebp]
+	lea	ecx, DWORD PTR __Nul$146688[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
 
 ; 108  : 			return (_Nul);
 
-	lea	eax, DWORD PTR __Nul$148551[ebp]
+	lea	eax, DWORD PTR __Nul$146688[ebp]
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T154364[ebp]
+	mov	ecx, DWORD PTR $T152193[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154364[ebp], ecx
+	mov	DWORD PTR $T152193[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Nul$148551[ebp]
+	lea	ecx, DWORD PTR __Nul$146688[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN5@str:
@@ -27301,22 +27333,22 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ$0:
-	lea	ecx, DWORD PTR __Str$148546[ebp]
+	lea	ecx, DWORD PTR __Str$146683[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ$1:
-	mov	eax, DWORD PTR $T154364[ebp]
+	mov	eax, DWORD PTR $T152193[ebp]
 	and	eax, 1
 	je	$LN11@str
-	and	DWORD PTR $T154364[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152193[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN11@str:
 	ret	0
 __unwindfunclet$?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ$2:
-	lea	ecx, DWORD PTR __Str$148549[ebp]
+	lea	ecx, DWORD PTR __Str$146686[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ$3:
-	lea	ecx, DWORD PTR __Nul$148551[ebp]
+	lea	ecx, DWORD PTR __Nul$146688[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$?str@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -27554,7 +27586,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBDI@Z
 _TEXT	SEGMENT
-$T154391 = -20						; size = 4
+$T152220 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -27581,7 +27613,7 @@ __Count$ = 12						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T154391[ebp], esp
+	mov	DWORD PTR $T152220[ebp], esp
 	call	??0?$allocator@D@std@@QAE@XZ		; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z ; std::_String_val<char,std::allocator<char> >::_String_val<char,std::allocator<char> >
@@ -27733,7 +27765,7 @@ CONST	ENDS
 ;	COMDAT ?_Init@ios_base@std@@IAEXXZ
 _TEXT	SEGMENT
 tv84 = -12						; size = 4
-$T154403 = -8						; size = 4
+$T152232 = -8						; size = 4
 _this$ = -4						; size = 4
 ?_Init@ios_base@std@@IAEXXZ PROC			; std::ios_base::_Init, COMDAT
 ; _this$ = ecx
@@ -27805,10 +27837,10 @@ _this$ = -4						; size = 4
 	push	4
 	call	??2@YAPAXIABU_DebugHeapTag_t@std@@PADH@Z ; operator new
 	add	esp, 16					; 00000010H
-	mov	DWORD PTR $T154403[ebp], eax
-	cmp	DWORD PTR $T154403[ebp], 0
+	mov	DWORD PTR $T152232[ebp], eax
+	cmp	DWORD PTR $T152232[ebp], 0
 	je	SHORT $LN3@Init
-	mov	ecx, DWORD PTR $T154403[ebp]
+	mov	ecx, DWORD PTR $T152232[ebp]
 	call	??0locale@std@@QAE@XZ			; std::locale::locale
 	mov	DWORD PTR tv84[ebp], eax
 	jmp	SHORT $LN4@Init
@@ -27928,7 +27960,7 @@ xdata$x	ENDS
 ;	COMDAT ??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ
 _TEXT	SEGMENT
 tv79 = -24						; size = 4
-$T154412 = -20						; size = 4
+$T152241 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ PROC ; std::basic_streambuf<char,std::char_traits<char> >::basic_streambuf<char,std::char_traits<char> >, COMDAT
@@ -27965,10 +27997,10 @@ __$EHRec$ = -12						; size = 12
 	push	4
 	call	??2@YAPAXIABU_DebugHeapTag_t@std@@PADH@Z ; operator new
 	add	esp, 16					; 00000010H
-	mov	DWORD PTR $T154412[ebp], eax
-	cmp	DWORD PTR $T154412[ebp], 0
+	mov	DWORD PTR $T152241[ebp], eax
+	cmp	DWORD PTR $T152241[ebp], 0
 	je	SHORT $LN3@basic_stre
-	mov	ecx, DWORD PTR $T154412[ebp]
+	mov	ecx, DWORD PTR $T152241[ebp]
 	call	??0locale@std@@QAE@XZ			; std::locale::locale
 	mov	DWORD PTR tv79[ebp], eax
 	jmp	SHORT $LN4@basic_stre
@@ -28166,7 +28198,7 @@ _this$ = -4						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ
 _TEXT	SEGMENT
-__Pnode$148790 = -8					; size = 4
+__Pnode$146900 = -8					; size = 4
 _this$ = -4						; size = 4
 ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ PROC ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >,std::_Iterator_base12>::operator--, COMDAT
 ; _this$ = ecx
@@ -28250,15 +28282,15 @@ $LN4@operator@15:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Parent
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$148790[ebp], edx
-	mov	eax, DWORD PTR __Pnode$148790[ebp]
+	mov	DWORD PTR __Pnode$146900[ebp], edx
+	mov	eax, DWORD PTR __Pnode$146900[ebp]
 	push	eax
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Isnil
 	add	esp, 4
 	movsx	ecx, BYTE PTR [eax]
 	test	ecx, ecx
 	jne	SHORT $LN3@operator@15
-	mov	edx, DWORD PTR __Pnode$148790[ebp]
+	mov	edx, DWORD PTR __Pnode$146900[ebp]
 	push	edx
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@HPAVRaven_Weapon@@U?$less@H@std@@V?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@3@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<int,Raven_Weapon *,std::less<int>,std::allocator<std::pair<int const ,Raven_Weapon *> >,0> >::_Left
 	add	esp, 4
@@ -28270,7 +28302,7 @@ $LN4@operator@15:
 ; 94   : 				_Ptr = _Pnode;	// ==> parent while left subtree
 
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR __Pnode$148790[ebp]
+	mov	ecx, DWORD PTR __Pnode$146900[ebp]
 	mov	DWORD PTR [eax+8], ecx
 	jmp	SHORT $LN4@operator@15
 $LN3@operator@15:
@@ -28295,7 +28327,7 @@ $LN2@operator@15:
 ; 98   : 				_Ptr = _Pnode;	// ==> parent if not head
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Pnode$148790[ebp]
+	mov	eax, DWORD PTR __Pnode$146900[ebp]
 	mov	DWORD PTR [edx+8], eax
 $LN7@operator@15:
 
@@ -28319,7 +28351,7 @@ _TEXT	ENDS
 ;	COMDAT ?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z
 _TEXT	SEGMENT
 tv137 = -12						; size = 4
-__Pnew$148836 = -8					; size = 4
+__Pnew$146940 = -8					; size = 4
 _this$ = -4						; size = 4
 __Ptr$ = 8						; size = 4
 __Count$ = 12						; size = 4
@@ -28368,7 +28400,7 @@ __State$ = 16						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 68					; 00000044H
 	call	?allocate@?$allocator@D@std@@QAEPADI@Z	; std::allocator<char>::allocate
-	mov	DWORD PTR __Pnew$148836[ebp], eax
+	mov	DWORD PTR __Pnew$146940[ebp], eax
 
 ; 321  : 			_Traits::copy(_Pnew, _Ptr, _Count);
 
@@ -28376,14 +28408,14 @@ __State$ = 16						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR __Ptr$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Pnew$148836[ebp]
+	mov	edx, DWORD PTR __Pnew$146940[ebp]
 	push	edx
 	call	?copy@?$char_traits@D@std@@SAPADPADPBDI@Z ; std::char_traits<char>::copy
 	add	esp, 12					; 0000000cH
 
 ; 322  : 			_Seekhigh = _Pnew + _Count;
 
-	mov	eax, DWORD PTR __Pnew$148836[ebp]
+	mov	eax, DWORD PTR __Pnew$146940[ebp]
 	add	eax, DWORD PTR __Count$[ebp]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+60], eax
@@ -28399,12 +28431,12 @@ __State$ = 16						; size = 4
 ; 325  : 				_Mysb::setg(_Pnew, _Pnew,
 ; 326  : 					_Pnew + _Count);	// setup read buffer
 
-	mov	ecx, DWORD PTR __Pnew$148836[ebp]
+	mov	ecx, DWORD PTR __Pnew$146940[ebp]
 	add	ecx, DWORD PTR __Count$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Pnew$148836[ebp]
+	mov	edx, DWORD PTR __Pnew$146940[ebp]
 	push	edx
-	mov	eax, DWORD PTR __Pnew$148836[ebp]
+	mov	eax, DWORD PTR __Pnew$146940[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setg
@@ -28426,20 +28458,20 @@ $LN3@Init@2:
 	mov	ecx, DWORD PTR [eax+64]
 	and	ecx, 16					; 00000010H
 	je	SHORT $LN7@Init@2
-	mov	edx, DWORD PTR __Pnew$148836[ebp]
+	mov	edx, DWORD PTR __Pnew$146940[ebp]
 	add	edx, DWORD PTR __Count$[ebp]
 	mov	DWORD PTR tv137[ebp], edx
 	jmp	SHORT $LN8@Init@2
 $LN7@Init@2:
-	mov	eax, DWORD PTR __Pnew$148836[ebp]
+	mov	eax, DWORD PTR __Pnew$146940[ebp]
 	mov	DWORD PTR tv137[ebp], eax
 $LN8@Init@2:
-	mov	ecx, DWORD PTR __Pnew$148836[ebp]
+	mov	ecx, DWORD PTR __Pnew$146940[ebp]
 	add	ecx, DWORD PTR __Count$[ebp]
 	push	ecx
 	mov	edx, DWORD PTR tv137[ebp]
 	push	edx
-	mov	eax, DWORD PTR __Pnew$148836[ebp]
+	mov	eax, DWORD PTR __Pnew$146940[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setp
@@ -28453,10 +28485,10 @@ $LN8@Init@2:
 
 ; 333  : 					_Mysb::setg(_Pnew, 0, _Pnew);
 
-	mov	ecx, DWORD PTR __Pnew$148836[ebp]
+	mov	ecx, DWORD PTR __Pnew$146940[ebp]
 	push	ecx
 	push	0
-	mov	edx, DWORD PTR __Pnew$148836[ebp]
+	mov	edx, DWORD PTR __Pnew$146940[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z ; std::basic_streambuf<char,std::char_traits<char> >::setg
@@ -28632,7 +28664,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv79 = -32						; size = 4
 tv80 = -28						; size = 4
-$T154441 = -24						; size = 4
+$T152270 = -24						; size = 4
 __Ctype_fac$ = -20					; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -28664,7 +28696,7 @@ __Byte$ = 8						; size = 1
 
 ; 125  : 		const _Ctype& _Ctype_fac = _USE(getloc(), _Ctype);
 
-	lea	eax, DWORD PTR $T154441[ebp]
+	lea	eax, DWORD PTR $T152270[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?getloc@ios_base@std@@QBE?AVlocale@2@XZ	; std::ios_base::getloc
@@ -28678,7 +28710,7 @@ __Byte$ = 8						; size = 1
 	add	esp, 4
 	mov	DWORD PTR __Ctype_fac$[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T154441[ebp]
+	lea	ecx, DWORD PTR $T152270[ebp]
 	call	??1locale@std@@QAE@XZ			; std::locale::~locale
 
 ; 126  : 		return (_Ctype_fac.widen(_Byte));
@@ -28703,7 +28735,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z$0:
-	lea	ecx, DWORD PTR $T154441[ebp]
+	lea	ecx, DWORD PTR $T152270[ebp]
 	jmp	??1locale@std@@QAE@XZ			; std::locale::~locale
 __ehhandler$?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -28823,13 +28855,13 @@ __ehfuncinfo$??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z 
 xdata$x	ENDS
 ;	COMDAT ??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z
 _TEXT	SEGMENT
-$T154454 = -64						; size = 4
-$T154453 = -60						; size = 12
-__Pfmod$145121 = -48					; size = 4
-__Pf$145105 = -44					; size = 4
-__Id$145104 = -40					; size = 4
-__Psave$145092 = -32					; size = 4
-__Lock$145091 = -20					; size = 4
+$T152283 = -64						; size = 4
+$T152282 = -60						; size = 12
+__Pfmod$143763 = -48					; size = 4
+__Pf$143747 = -44					; size = 4
+__Id$143746 = -40					; size = 4
+__Psave$143734 = -32					; size = 4
+__Lock$143733 = -20					; size = 4
 __$EHRec$ = -12						; size = 12
 __Loc$ = 8						; size = 4
 ??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z PROC ; std::use_facet<std::ctype<char> >, COMDAT
@@ -28857,7 +28889,7 @@ __Loc$ = 8						; size = 4
 ; 505  : 	_BEGIN_LOCK(_LOCK_LOCALE)	// the thread lock, make get atomic
 
 	push	0
-	lea	ecx, DWORD PTR __Lock$145091[ebp]
+	lea	ecx, DWORD PTR __Lock$143733[ebp]
 	call	??0_Lockit@std@@QAE@H@Z			; std::_Lockit::_Lockit
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
@@ -28865,27 +28897,27 @@ __Loc$ = 8						; size = 4
 ; 507  : 			_Facetptr<_Facet>::_Psave;	// static pointer to lazy facet
 
 	mov	eax, DWORD PTR ?_Psave@?$_Facetptr@V?$ctype@D@std@@@std@@2PBVfacet@locale@2@B ; std::_Facetptr<std::ctype<char> >::_Psave
-	mov	DWORD PTR __Psave$145092[ebp], eax
+	mov	DWORD PTR __Psave$143734[ebp], eax
 
 ; 508  : 
 ; 509  : 		size_t _Id = _Facet::id;
 
 	mov	ecx, OFFSET ?id@?$ctype@D@std@@2V0locale@2@A ; std::ctype<char>::id
 	call	??Bid@locale@std@@QAEIXZ		; std::locale::id::operator unsigned int
-	mov	DWORD PTR __Id$145104[ebp], eax
+	mov	DWORD PTR __Id$143746[ebp], eax
 
 ; 510  : 		const locale::facet *_Pf = _Loc._Getfacet(_Id);
 
-	mov	ecx, DWORD PTR __Id$145104[ebp]
+	mov	ecx, DWORD PTR __Id$143746[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Loc$[ebp]
 	call	?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z ; std::locale::_Getfacet
-	mov	DWORD PTR __Pf$145105[ebp], eax
+	mov	DWORD PTR __Pf$143747[ebp], eax
 
 ; 511  : 
 ; 512  : 		if (_Pf != 0)
 
-	cmp	DWORD PTR __Pf$145105[ebp], 0
+	cmp	DWORD PTR __Pf$143747[ebp], 0
 	je	SHORT $LN6@use_facet
 	jmp	SHORT $LN5@use_facet
 $LN6@use_facet:
@@ -28893,13 +28925,13 @@ $LN6@use_facet:
 ; 513  : 			;	// got facet from locale
 ; 514  : 		else if (_Psave != 0)
 
-	cmp	DWORD PTR __Psave$145092[ebp], 0
+	cmp	DWORD PTR __Psave$143734[ebp], 0
 	je	SHORT $LN4@use_facet
 
 ; 515  : 			_Pf = _Psave;	// lazy facet already allocated
 
-	mov	edx, DWORD PTR __Psave$145092[ebp]
-	mov	DWORD PTR __Pf$145105[ebp], edx
+	mov	edx, DWORD PTR __Psave$143734[ebp]
+	mov	DWORD PTR __Pf$143747[ebp], edx
 	jmp	SHORT $LN5@use_facet
 $LN4@use_facet:
 
@@ -28907,7 +28939,7 @@ $LN4@use_facet:
 
 	mov	eax, DWORD PTR __Loc$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Psave$145092[ebp]
+	lea	ecx, DWORD PTR __Psave$143734[ebp]
 	push	ecx
 	call	?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z ; std::ctype<char>::_Getcat
 	add	esp, 8
@@ -28920,10 +28952,10 @@ $LN4@use_facet:
 ; 520  : 			_THROW_NCEE(bad_cast, _EMPTY_ARGUMENT);	// lazy disallowed
 
 	push	OFFSET ??_C@_08EPJLHIJG@bad?5cast?$AA@
-	lea	ecx, DWORD PTR $T154453[ebp]
+	lea	ecx, DWORD PTR $T152282[ebp]
 	call	??0bad_cast@std@@QAE@PBD@Z		; std::bad_cast::bad_cast
 	push	OFFSET __TI2?AVbad_cast@std@@
-	lea	edx, DWORD PTR $T154453[ebp]
+	lea	edx, DWORD PTR $T152282[ebp]
 	push	edx
 	call	__CxxThrowException@8
 
@@ -28940,28 +28972,28 @@ $LN2@use_facet:
 ; 527  : 			{	// queue up lazy facet for destruction
 ; 528  : 			_Pf = _Psave;
 
-	mov	eax, DWORD PTR __Psave$145092[ebp]
-	mov	DWORD PTR __Pf$145105[ebp], eax
+	mov	eax, DWORD PTR __Psave$143734[ebp]
+	mov	DWORD PTR __Pf$143747[ebp], eax
 
 ; 529  : 			_Facetptr<_Facet>::_Psave = _Psave;
 
-	mov	ecx, DWORD PTR __Psave$145092[ebp]
+	mov	ecx, DWORD PTR __Psave$143734[ebp]
 	mov	DWORD PTR ?_Psave@?$_Facetptr@V?$ctype@D@std@@@std@@2PBVfacet@locale@2@B, ecx ; std::_Facetptr<std::ctype<char> >::_Psave
 
 ; 530  : 
 ; 531  : 			locale::facet *_Pfmod = (_Facet *)_Psave;
 
-	mov	edx, DWORD PTR __Psave$145092[ebp]
-	mov	DWORD PTR __Pfmod$145121[ebp], edx
+	mov	edx, DWORD PTR __Psave$143734[ebp]
+	mov	DWORD PTR __Pfmod$143763[ebp], edx
 
 ; 532  : 			_Pfmod->_Incref();
 
-	mov	ecx, DWORD PTR __Pfmod$145121[ebp]
+	mov	ecx, DWORD PTR __Pfmod$143763[ebp]
 	call	?_Incref@facet@locale@std@@QAEXXZ	; std::locale::facet::_Incref
 
 ; 533  : 			_Pfmod->_Register();
 
-	mov	ecx, DWORD PTR __Pfmod$145121[ebp]
+	mov	ecx, DWORD PTR __Pfmod$143763[ebp]
 	call	?_Register@facet@locale@std@@QAEXXZ	; std::locale::facet::_Register
 $LN5@use_facet:
 
@@ -28969,12 +29001,12 @@ $LN5@use_facet:
 ; 535  : 
 ; 536  : 		return ((const _Facet&)(*_Pf));	// should be dynamic_cast
 
-	mov	eax, DWORD PTR __Pf$145105[ebp]
-	mov	DWORD PTR $T154454[ebp], eax
+	mov	eax, DWORD PTR __Pf$143747[ebp]
+	mov	DWORD PTR $T152283[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR __Lock$145091[ebp]
+	lea	ecx, DWORD PTR __Lock$143733[ebp]
 	call	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
-	mov	eax, DWORD PTR $T154454[ebp]
+	mov	eax, DWORD PTR $T152283[ebp]
 $LN8@use_facet:
 
 ; 537  : 	_END_LOCK()
@@ -29027,7 +29059,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z$0:
-	lea	ecx, DWORD PTR __Lock$145091[ebp]
+	lea	ecx, DWORD PTR __Lock$143733[ebp]
 	jmp	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
 __ehhandler$??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -29310,11 +29342,11 @@ _TEXT	SEGMENT
 tv92 = -76						; size = 4
 tv133 = -72						; size = 4
 tv138 = -68						; size = 4
-$T154490 = -64						; size = 4
-$T154486 = -60						; size = 36
-$T154485 = -24						; size = 4
-$T154484 = -20						; size = 4
-$T154483 = -16						; size = 4
+$T152319 = -64						; size = 4
+$T152315 = -60						; size = 36
+$T152314 = -24						; size = 4
+$T152313 = -20						; size = 4
+$T152312 = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ppf$ = 8						; size = 4
 __Ploc$ = 12						; size = 4
@@ -29339,7 +29371,7 @@ __Ploc$ = 12						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T154490[ebp], 0
+	mov	DWORD PTR $T152319[ebp], 0
 
 ; 2372 : 		if (_Ppf != 0 && *_Ppf == 0)
 
@@ -29353,34 +29385,34 @@ __Ploc$ = 12						; size = 4
 ; 2374 : 				_Locinfo(_Ploc->c_str()));
 
 	call	?_DebugHeapTag_func@std@@YAABU_DebugHeapTag_t@1@XZ ; std::_DebugHeapTag_func
-	mov	DWORD PTR $T154485[ebp], eax
+	mov	DWORD PTR $T152314[ebp], eax
 	push	2373					; 00000945H
 	push	OFFSET ??_C@_0EH@OEAMKACA@c?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@
-	mov	ecx, DWORD PTR $T154485[ebp]
+	mov	ecx, DWORD PTR $T152314[ebp]
 	push	ecx
 	push	24					; 00000018H
 	call	??2facet@locale@std@@SAPAXIABU_DebugHeapTag_t@2@PADH@Z ; std::locale::facet::operator new
 	add	esp, 16					; 00000010H
-	mov	DWORD PTR $T154484[ebp], eax
+	mov	DWORD PTR $T152313[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T154484[ebp], 0
+	cmp	DWORD PTR $T152313[ebp], 0
 	je	SHORT $LN4@Getcat
 	push	0
 	mov	ecx, DWORD PTR __Ploc$[ebp]
 	call	?c_str@locale@std@@QBEPBDXZ		; std::locale::c_str
 	push	eax
-	lea	ecx, DWORD PTR $T154486[ebp]
+	lea	ecx, DWORD PTR $T152315[ebp]
 	call	??0_Locinfo@std@@QAE@PBD@Z		; std::_Locinfo::_Locinfo
 	mov	DWORD PTR tv138[ebp], eax
 	mov	edx, DWORD PTR tv138[ebp]
 	mov	DWORD PTR tv133[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	eax, DWORD PTR $T154490[ebp]
+	mov	eax, DWORD PTR $T152319[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154490[ebp], eax
+	mov	DWORD PTR $T152319[ebp], eax
 	mov	ecx, DWORD PTR tv133[ebp]
 	push	ecx
-	mov	ecx, DWORD PTR $T154484[ebp]
+	mov	ecx, DWORD PTR $T152313[ebp]
 	call	??0?$ctype@D@std@@QAE@ABV_Locinfo@1@I@Z	; std::ctype<char>::ctype<char>
 	mov	DWORD PTR tv92[ebp], eax
 	jmp	SHORT $LN5@Getcat
@@ -29388,17 +29420,17 @@ $LN4@Getcat:
 	mov	DWORD PTR tv92[ebp], 0
 $LN5@Getcat:
 	mov	edx, DWORD PTR tv92[ebp]
-	mov	DWORD PTR $T154483[ebp], edx
+	mov	DWORD PTR $T152312[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	mov	eax, DWORD PTR __Ppf$[ebp]
-	mov	ecx, DWORD PTR $T154483[ebp]
+	mov	ecx, DWORD PTR $T152312[ebp]
 	mov	DWORD PTR [eax], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	edx, DWORD PTR $T154490[ebp]
+	mov	edx, DWORD PTR $T152319[ebp]
 	and	edx, 1
 	je	SHORT $LN1@Getcat
-	and	DWORD PTR $T154490[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T154486[ebp]
+	and	DWORD PTR $T152319[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152315[ebp]
 	call	??1_Locinfo@std@@QAE@XZ			; std::_Locinfo::~_Locinfo
 $LN1@Getcat:
 
@@ -29424,19 +29456,19 @@ text$x	SEGMENT
 __unwindfunclet$?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z$0:
 	push	2373					; 00000945H
 	push	OFFSET ??_C@_0EH@OEAMKACA@c?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@
-	mov	eax, DWORD PTR $T154485[ebp]
+	mov	eax, DWORD PTR $T152314[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T154484[ebp]
+	mov	ecx, DWORD PTR $T152313[ebp]
 	push	ecx
 	call	??3facet@locale@std@@SAXPAXABU_DebugHeapTag_t@2@PADH@Z ; std::locale::facet::operator delete
 	add	esp, 16					; 00000010H
 	ret	0
 __unwindfunclet$?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z$1:
-	mov	eax, DWORD PTR $T154490[ebp]
+	mov	eax, DWORD PTR $T152319[ebp]
 	and	eax, 1
 	je	$LN8@Getcat
-	and	DWORD PTR $T154490[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T154486[ebp]
+	and	DWORD PTR $T152319[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152315[ebp]
 	jmp	??1_Locinfo@std@@QAE@XZ			; std::_Locinfo::~_Locinfo
 $LN8@Getcat:
 	ret	0
@@ -29497,7 +29529,7 @@ __unwindtable$??0_Locinfo@std@@QAE@PBD@Z DD 0ffffffffH
 xdata$x	ENDS
 ;	COMDAT ??0_Locinfo@std@@QAE@PBD@Z
 _TEXT	SEGMENT
-$T154502 = -28						; size = 12
+$T152331 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Pch$ = 8						; size = 4
@@ -29553,10 +29585,10 @@ __Pch$ = 8						; size = 4
 ; 78   :             _THROW_NCEE(runtime_error, "bad locale name");
 
 	push	OFFSET ??_C@_0BA@ELKIONDK@bad?5locale?5name?$AA@
-	lea	ecx, DWORD PTR $T154502[ebp]
+	lea	ecx, DWORD PTR $T152331[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@
-	lea	eax, DWORD PTR $T154502[ebp]
+	lea	eax, DWORD PTR $T152331[ebp]
 	push	eax
 	call	__CxxThrowException@8
 $LN1@Locinfo:
@@ -30285,7 +30317,7 @@ PUBLIC	?_Getctype@_Locinfo@std@@QBE?AU_Ctypevec@@XZ	; std::_Locinfo::_Getctype
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Init@?$ctype@D@std@@IAEXABV_Locinfo@2@@Z
 _TEXT	SEGMENT
-$T154560 = -20						; size = 16
+$T152389 = -20						; size = 16
 _this$ = -4						; size = 4
 __Lobj$ = 8						; size = 4
 ?_Init@?$ctype@D@std@@IAEXABV_Locinfo@2@@Z PROC		; std::ctype<char>::_Init, COMDAT
@@ -30306,7 +30338,7 @@ __Lobj$ = 8						; size = 4
 
 ; 2400 : 		_Ctype = _Lobj._Getctype();
 
-	lea	eax, DWORD PTR $T154560[ebp]
+	lea	eax, DWORD PTR $T152389[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getctype@_Locinfo@std@@QBE?AU_Ctypevec@@XZ ; std::_Locinfo::_Getctype
@@ -30336,8 +30368,8 @@ EXTRN	__Getctype:PROC
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xlocinfo
 ;	COMDAT ?_Getctype@_Locinfo@std@@QBE?AU_Ctypevec@@XZ
 _TEXT	SEGMENT
-$T154564 = -36						; size = 16
-$T154563 = -20						; size = 16
+$T152393 = -36						; size = 16
+$T152392 = -20						; size = 16
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?_Getctype@_Locinfo@std@@QBE?AU_Ctypevec@@XZ PROC	; std::_Locinfo::_Getctype, COMDAT
@@ -30362,26 +30394,26 @@ ___$ReturnUdt$ = 8					; size = 4
 
 ; 118  : 		return (::_Getctype());
 
-	lea	eax, DWORD PTR $T154564[ebp]
+	lea	eax, DWORD PTR $T152393[ebp]
 	push	eax
 	call	__Getctype
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR $T154563[ebp], ecx
+	mov	DWORD PTR $T152392[ebp], ecx
 	mov	edx, DWORD PTR [eax+4]
-	mov	DWORD PTR $T154563[ebp+4], edx
+	mov	DWORD PTR $T152392[ebp+4], edx
 	mov	ecx, DWORD PTR [eax+8]
-	mov	DWORD PTR $T154563[ebp+8], ecx
+	mov	DWORD PTR $T152392[ebp+8], ecx
 	mov	edx, DWORD PTR [eax+12]
-	mov	DWORD PTR $T154563[ebp+12], edx
+	mov	DWORD PTR $T152392[ebp+12], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	mov	ecx, DWORD PTR $T154563[ebp]
+	mov	ecx, DWORD PTR $T152392[ebp]
 	mov	DWORD PTR [eax], ecx
-	mov	edx, DWORD PTR $T154563[ebp+4]
+	mov	edx, DWORD PTR $T152392[ebp+4]
 	mov	DWORD PTR [eax+4], edx
-	mov	ecx, DWORD PTR $T154563[ebp+8]
+	mov	ecx, DWORD PTR $T152392[ebp+8]
 	mov	DWORD PTR [eax+8], ecx
-	mov	edx, DWORD PTR $T154563[ebp+12]
+	mov	edx, DWORD PTR $T152392[ebp+12]
 	mov	DWORD PTR [eax+12], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
@@ -30922,7 +30954,7 @@ EXTRN	??_V@YAXPAX@Z:PROC				; operator delete[]
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Tidy@?$ctype@D@std@@IAEXXZ
 _TEXT	SEGMENT
-$T154594 = -8						; size = 4
+$T152423 = -8						; size = 4
 _this$ = -4						; size = 4
 ?_Tidy@?$ctype@D@std@@IAEXXZ PROC			; std::ctype<char>::_Tidy, COMDAT
 ; _this$ = ecx
@@ -30962,8 +30994,8 @@ $LN3@Tidy@3:
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+16]
-	mov	DWORD PTR $T154594[ebp], edx
-	mov	eax, DWORD PTR $T154594[ebp]
+	mov	DWORD PTR $T152423[ebp], edx
+	mov	eax, DWORD PTR $T152423[ebp]
 	push	eax
 	call	??_V@YAXPAX@Z				; operator delete[]
 	add	esp, 4
@@ -31137,7 +31169,7 @@ PUBLIC	??$_Iter_cat@PBD@std@@YA?AUrandom_access_iterator_tag@0@ABQBD@Z ; std::_I
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Debug_range@PBD@std@@YAXPBD0PB_WI@Z
 _TEXT	SEGMENT
-$T154607 = -1						; size = 1
+$T152436 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -31155,7 +31187,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154607[ebp]
+	lea	ecx, DWORD PTR $T152436[ebp]
 	push	ecx
 	call	??$_Iter_cat@PBD@std@@YA?AUrandom_access_iterator_tag@0@ABQBD@Z ; std::_Iter_cat<char const *>
 	add	esp, 8
@@ -32063,13 +32095,13 @@ __ehfuncinfo$??$use_facet@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@s
 xdata$x	ENDS
 ;	COMDAT ??$use_facet@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@YAABV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@0@ABVlocale@0@@Z
 _TEXT	SEGMENT
-$T154681 = -64						; size = 4
-$T154680 = -60						; size = 12
-__Pfmod$149444 = -48					; size = 4
-__Pf$149433 = -44					; size = 4
-__Id$149432 = -40					; size = 4
-__Psave$149420 = -32					; size = 4
-__Lock$149419 = -20					; size = 4
+$T152510 = -64						; size = 4
+$T152509 = -60						; size = 12
+__Pfmod$147504 = -48					; size = 4
+__Pf$147493 = -44					; size = 4
+__Id$147492 = -40					; size = 4
+__Psave$147480 = -32					; size = 4
+__Lock$147479 = -20					; size = 4
 __$EHRec$ = -12						; size = 12
 __Loc$ = 8						; size = 4
 ??$use_facet@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@YAABV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@0@ABVlocale@0@@Z PROC ; std::use_facet<std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > > >, COMDAT
@@ -32097,7 +32129,7 @@ __Loc$ = 8						; size = 4
 ; 505  : 	_BEGIN_LOCK(_LOCK_LOCALE)	// the thread lock, make get atomic
 
 	push	0
-	lea	ecx, DWORD PTR __Lock$149419[ebp]
+	lea	ecx, DWORD PTR __Lock$147479[ebp]
 	call	??0_Lockit@std@@QAE@H@Z			; std::_Lockit::_Lockit
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
@@ -32105,27 +32137,27 @@ __Loc$ = 8						; size = 4
 ; 507  : 			_Facetptr<_Facet>::_Psave;	// static pointer to lazy facet
 
 	mov	eax, DWORD PTR ?_Psave@?$_Facetptr@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@2PBVfacet@locale@2@B ; std::_Facetptr<std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > > >::_Psave
-	mov	DWORD PTR __Psave$149420[ebp], eax
+	mov	DWORD PTR __Psave$147480[ebp], eax
 
 ; 508  : 
 ; 509  : 		size_t _Id = _Facet::id;
 
 	mov	ecx, OFFSET ?id@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@2V0locale@2@A ; std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::id
 	call	??Bid@locale@std@@QAEIXZ		; std::locale::id::operator unsigned int
-	mov	DWORD PTR __Id$149432[ebp], eax
+	mov	DWORD PTR __Id$147492[ebp], eax
 
 ; 510  : 		const locale::facet *_Pf = _Loc._Getfacet(_Id);
 
-	mov	ecx, DWORD PTR __Id$149432[ebp]
+	mov	ecx, DWORD PTR __Id$147492[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Loc$[ebp]
 	call	?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z ; std::locale::_Getfacet
-	mov	DWORD PTR __Pf$149433[ebp], eax
+	mov	DWORD PTR __Pf$147493[ebp], eax
 
 ; 511  : 
 ; 512  : 		if (_Pf != 0)
 
-	cmp	DWORD PTR __Pf$149433[ebp], 0
+	cmp	DWORD PTR __Pf$147493[ebp], 0
 	je	SHORT $LN6@use_facet@2
 	jmp	SHORT $LN5@use_facet@2
 $LN6@use_facet@2:
@@ -32133,13 +32165,13 @@ $LN6@use_facet@2:
 ; 513  : 			;	// got facet from locale
 ; 514  : 		else if (_Psave != 0)
 
-	cmp	DWORD PTR __Psave$149420[ebp], 0
+	cmp	DWORD PTR __Psave$147480[ebp], 0
 	je	SHORT $LN4@use_facet@2
 
 ; 515  : 			_Pf = _Psave;	// lazy facet already allocated
 
-	mov	edx, DWORD PTR __Psave$149420[ebp]
-	mov	DWORD PTR __Pf$149433[ebp], edx
+	mov	edx, DWORD PTR __Psave$147480[ebp]
+	mov	DWORD PTR __Pf$147493[ebp], edx
 	jmp	SHORT $LN5@use_facet@2
 $LN4@use_facet@2:
 
@@ -32147,7 +32179,7 @@ $LN4@use_facet@2:
 
 	mov	eax, DWORD PTR __Loc$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Psave$149420[ebp]
+	lea	ecx, DWORD PTR __Psave$147480[ebp]
 	push	ecx
 	call	?_Getcat@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z ; std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::_Getcat
 	add	esp, 8
@@ -32160,10 +32192,10 @@ $LN4@use_facet@2:
 ; 520  : 			_THROW_NCEE(bad_cast, _EMPTY_ARGUMENT);	// lazy disallowed
 
 	push	OFFSET ??_C@_08EPJLHIJG@bad?5cast?$AA@
-	lea	ecx, DWORD PTR $T154680[ebp]
+	lea	ecx, DWORD PTR $T152509[ebp]
 	call	??0bad_cast@std@@QAE@PBD@Z		; std::bad_cast::bad_cast
 	push	OFFSET __TI2?AVbad_cast@std@@
-	lea	edx, DWORD PTR $T154680[ebp]
+	lea	edx, DWORD PTR $T152509[ebp]
 	push	edx
 	call	__CxxThrowException@8
 
@@ -32180,28 +32212,28 @@ $LN2@use_facet@2:
 ; 527  : 			{	// queue up lazy facet for destruction
 ; 528  : 			_Pf = _Psave;
 
-	mov	eax, DWORD PTR __Psave$149420[ebp]
-	mov	DWORD PTR __Pf$149433[ebp], eax
+	mov	eax, DWORD PTR __Psave$147480[ebp]
+	mov	DWORD PTR __Pf$147493[ebp], eax
 
 ; 529  : 			_Facetptr<_Facet>::_Psave = _Psave;
 
-	mov	ecx, DWORD PTR __Psave$149420[ebp]
+	mov	ecx, DWORD PTR __Psave$147480[ebp]
 	mov	DWORD PTR ?_Psave@?$_Facetptr@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@2PBVfacet@locale@2@B, ecx ; std::_Facetptr<std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > > >::_Psave
 
 ; 530  : 
 ; 531  : 			locale::facet *_Pfmod = (_Facet *)_Psave;
 
-	mov	edx, DWORD PTR __Psave$149420[ebp]
-	mov	DWORD PTR __Pfmod$149444[ebp], edx
+	mov	edx, DWORD PTR __Psave$147480[ebp]
+	mov	DWORD PTR __Pfmod$147504[ebp], edx
 
 ; 532  : 			_Pfmod->_Incref();
 
-	mov	ecx, DWORD PTR __Pfmod$149444[ebp]
+	mov	ecx, DWORD PTR __Pfmod$147504[ebp]
 	call	?_Incref@facet@locale@std@@QAEXXZ	; std::locale::facet::_Incref
 
 ; 533  : 			_Pfmod->_Register();
 
-	mov	ecx, DWORD PTR __Pfmod$149444[ebp]
+	mov	ecx, DWORD PTR __Pfmod$147504[ebp]
 	call	?_Register@facet@locale@std@@QAEXXZ	; std::locale::facet::_Register
 $LN5@use_facet@2:
 
@@ -32209,12 +32241,12 @@ $LN5@use_facet@2:
 ; 535  : 
 ; 536  : 		return ((const _Facet&)(*_Pf));	// should be dynamic_cast
 
-	mov	eax, DWORD PTR __Pf$149433[ebp]
-	mov	DWORD PTR $T154681[ebp], eax
+	mov	eax, DWORD PTR __Pf$147493[ebp]
+	mov	DWORD PTR $T152510[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR __Lock$149419[ebp]
+	lea	ecx, DWORD PTR __Lock$147479[ebp]
 	call	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
-	mov	eax, DWORD PTR $T154681[ebp]
+	mov	eax, DWORD PTR $T152510[ebp]
 $LN8@use_facet@2:
 
 ; 537  : 	_END_LOCK()
@@ -32267,7 +32299,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$use_facet@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@YAABV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@0@ABVlocale@0@@Z$0:
-	lea	ecx, DWORD PTR __Lock$149419[ebp]
+	lea	ecx, DWORD PTR __Lock$147479[ebp]
 	jmp	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
 __ehhandler$??$use_facet@V?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@@std@@YAABV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@0@ABVlocale@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -32591,11 +32623,11 @@ _TEXT	SEGMENT
 tv92 = -76						; size = 4
 tv133 = -72						; size = 4
 tv138 = -68						; size = 4
-$T154718 = -64						; size = 4
-$T154714 = -60						; size = 36
-$T154713 = -24						; size = 4
-$T154712 = -20						; size = 4
-$T154711 = -16						; size = 4
+$T152547 = -64						; size = 4
+$T152543 = -60						; size = 36
+$T152542 = -24						; size = 4
+$T152541 = -20						; size = 4
+$T152540 = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ppf$ = 8						; size = 4
 __Ploc$ = 12						; size = 4
@@ -32620,7 +32652,7 @@ __Ploc$ = 12						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T154718[ebp], 0
+	mov	DWORD PTR $T152547[ebp], 0
 
 ; 1052 : 		if (_Ppf != 0 && *_Ppf == 0)
 
@@ -32634,34 +32666,34 @@ __Ploc$ = 12						; size = 4
 ; 1054 : 				_Locinfo(_Ploc->c_str()));
 
 	call	?_DebugHeapTag_func@std@@YAABU_DebugHeapTag_t@1@XZ ; std::_DebugHeapTag_func
-	mov	DWORD PTR $T154713[ebp], eax
+	mov	DWORD PTR $T152542[ebp], eax
 	push	1053					; 0000041dH
 	push	OFFSET ??_C@_0EH@GHEBKCIB@c?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@
-	mov	ecx, DWORD PTR $T154713[ebp]
+	mov	ecx, DWORD PTR $T152542[ebp]
 	push	ecx
 	push	16					; 00000010H
 	call	??2facet@locale@std@@SAPAXIABU_DebugHeapTag_t@2@PADH@Z ; std::locale::facet::operator new
 	add	esp, 16					; 00000010H
-	mov	DWORD PTR $T154712[ebp], eax
+	mov	DWORD PTR $T152541[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T154712[ebp], 0
+	cmp	DWORD PTR $T152541[ebp], 0
 	je	SHORT $LN4@Getcat@2
 	push	0
 	mov	ecx, DWORD PTR __Ploc$[ebp]
 	call	?c_str@locale@std@@QBEPBDXZ		; std::locale::c_str
 	push	eax
-	lea	ecx, DWORD PTR $T154714[ebp]
+	lea	ecx, DWORD PTR $T152543[ebp]
 	call	??0_Locinfo@std@@QAE@PBD@Z		; std::_Locinfo::_Locinfo
 	mov	DWORD PTR tv138[ebp], eax
 	mov	edx, DWORD PTR tv138[ebp]
 	mov	DWORD PTR tv133[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	eax, DWORD PTR $T154718[ebp]
+	mov	eax, DWORD PTR $T152547[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154718[ebp], eax
+	mov	DWORD PTR $T152547[ebp], eax
 	mov	ecx, DWORD PTR tv133[ebp]
 	push	ecx
-	mov	ecx, DWORD PTR $T154712[ebp]
+	mov	ecx, DWORD PTR $T152541[ebp]
 	call	??0?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@QAE@ABV_Locinfo@1@I@Z ; std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >
 	mov	DWORD PTR tv92[ebp], eax
 	jmp	SHORT $LN5@Getcat@2
@@ -32669,17 +32701,17 @@ $LN4@Getcat@2:
 	mov	DWORD PTR tv92[ebp], 0
 $LN5@Getcat@2:
 	mov	edx, DWORD PTR tv92[ebp]
-	mov	DWORD PTR $T154711[ebp], edx
+	mov	DWORD PTR $T152540[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	mov	eax, DWORD PTR __Ppf$[ebp]
-	mov	ecx, DWORD PTR $T154711[ebp]
+	mov	ecx, DWORD PTR $T152540[ebp]
 	mov	DWORD PTR [eax], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	edx, DWORD PTR $T154718[ebp]
+	mov	edx, DWORD PTR $T152547[ebp]
 	and	edx, 1
 	je	SHORT $LN1@Getcat@2
-	and	DWORD PTR $T154718[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T154714[ebp]
+	and	DWORD PTR $T152547[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152543[ebp]
 	call	??1_Locinfo@std@@QAE@XZ			; std::_Locinfo::~_Locinfo
 $LN1@Getcat@2:
 
@@ -32705,19 +32737,19 @@ text$x	SEGMENT
 __unwindfunclet$?_Getcat@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z$0:
 	push	1053					; 0000041dH
 	push	OFFSET ??_C@_0EH@GHEBKCIB@c?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@
-	mov	eax, DWORD PTR $T154713[ebp]
+	mov	eax, DWORD PTR $T152542[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T154712[ebp]
+	mov	ecx, DWORD PTR $T152541[ebp]
 	push	ecx
 	call	??3facet@locale@std@@SAXPAXABU_DebugHeapTag_t@2@PADH@Z ; std::locale::facet::operator delete
 	add	esp, 16					; 00000010H
 	ret	0
 __unwindfunclet$?_Getcat@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z$1:
-	mov	eax, DWORD PTR $T154718[ebp]
+	mov	eax, DWORD PTR $T152547[ebp]
 	and	eax, 1
 	je	$LN8@Getcat@2
-	and	DWORD PTR $T154718[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T154714[ebp]
+	and	DWORD PTR $T152547[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152543[ebp]
 	jmp	??1_Locinfo@std@@QAE@XZ			; std::_Locinfo::~_Locinfo
 $LN8@Getcat@2:
 	ret	0
@@ -32933,14 +32965,14 @@ tv187 = -168						; size = 4
 tv88 = -164						; size = 4
 tv184 = -160						; size = 4
 tv191 = -156						; size = 4
-$T154744 = -152						; size = 8
-$T154743 = -144						; size = 8
-$T154740 = -136						; size = 4
-__Fillcount$148619 = -132				; size = 4
-$T148618 = -128						; size = 32
-$T148616 = -96						; size = 32
-__Str$148614 = -60					; size = 32
-__Punct_fac$148611 = -24				; size = 4
+$T152573 = -152						; size = 8
+$T152572 = -144						; size = 8
+$T152569 = -136						; size = 4
+__Fillcount$146751 = -132				; size = 4
+$T146750 = -128						; size = 32
+$T146748 = -96						; size = 32
+__Str$146746 = -60					; size = 32
+__Punct_fac$146743 = -24				; size = 4
 _this$ = -20						; size = 4
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -33026,7 +33058,7 @@ $LN5@do_put:
 ; 1148 : 			{	// put "false" or "true"
 ; 1149 : 			const _Mypunct& _Punct_fac = _USE(_Iosbase.getloc(), _Mypunct);
 
-	lea	ecx, DWORD PTR $T154740[ebp]
+	lea	ecx, DWORD PTR $T152569[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Iosbase$[ebp]
 	call	?getloc@ios_base@std@@QBE?AVlocale@2@XZ	; std::ios_base::getloc
@@ -33038,14 +33070,14 @@ $LN5@do_put:
 	push	eax
 	call	??$use_facet@V?$numpunct@D@std@@@std@@YAABV?$numpunct@D@0@ABVlocale@0@@Z ; std::use_facet<std::numpunct<char> >
 	add	esp, 4
-	mov	DWORD PTR __Punct_fac$148611[ebp], eax
+	mov	DWORD PTR __Punct_fac$146743[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T154740[ebp]
+	lea	ecx, DWORD PTR $T152569[ebp]
 	call	??1locale@std@@QAE@XZ			; std::locale::~locale
 
 ; 1150 : 			_Mystr _Str;
 
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
@@ -33057,9 +33089,9 @@ $LN5@do_put:
 
 ; 1152 : 				_Str.assign(_Punct_fac.truename());
 
-	lea	edx, DWORD PTR $T148616[ebp]
+	lea	edx, DWORD PTR $T146748[ebp]
 	push	edx
-	mov	ecx, DWORD PTR __Punct_fac$148611[ebp]
+	mov	ecx, DWORD PTR __Punct_fac$146743[ebp]
 	call	?truename@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ ; std::numpunct<char>::truename
 	mov	DWORD PTR tv88[ebp], eax
 	mov	eax, DWORD PTR tv88[ebp]
@@ -33067,10 +33099,10 @@ $LN5@do_put:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	mov	ecx, DWORD PTR tv187[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@$$QAV12@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T148616[ebp]
+	lea	ecx, DWORD PTR $T146748[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 1153 : 			else
@@ -33080,9 +33112,9 @@ $LN3@do_put:
 
 ; 1154 : 				_Str.assign(_Punct_fac.falsename());
 
-	lea	edx, DWORD PTR $T148618[ebp]
+	lea	edx, DWORD PTR $T146750[ebp]
 	push	edx
-	mov	ecx, DWORD PTR __Punct_fac$148611[ebp]
+	mov	ecx, DWORD PTR __Punct_fac$146743[ebp]
 	call	?falsename@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ ; std::numpunct<char>::falsename
 	mov	DWORD PTR tv192[ebp], eax
 	mov	eax, DWORD PTR tv192[ebp]
@@ -33090,10 +33122,10 @@ $LN3@do_put:
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR tv189[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@$$QAV12@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T148618[ebp]
+	lea	ecx, DWORD PTR $T146750[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN2@do_put:
 
@@ -33115,14 +33147,14 @@ $LN14@do_put:
 	mov	ecx, DWORD PTR __Iosbase$[ebp]
 	call	?width@ios_base@std@@QBE_JXZ		; std::ios_base::width
 	mov	esi, eax
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	?size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::size
 	cmp	esi, eax
 	jbe	SHORT $LN8@do_put
 	mov	ecx, DWORD PTR __Iosbase$[ebp]
 	call	?width@ios_base@std@@QBE_JXZ		; std::ios_base::width
 	mov	esi, eax
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	?size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::size
 	sub	esi, eax
 	mov	DWORD PTR tv153[ebp], esi
@@ -33131,7 +33163,7 @@ $LN8@do_put:
 	mov	DWORD PTR tv153[ebp], 0
 $LN9@do_put:
 	mov	edx, DWORD PTR tv153[ebp]
-	mov	DWORD PTR __Fillcount$148619[ebp], edx
+	mov	DWORD PTR __Fillcount$146751[ebp], edx
 
 ; 1159 : 
 ; 1160 : 			if ((_Iosbase.flags() & ios_base::adjustfield) != ios_base::left)
@@ -33145,7 +33177,7 @@ $LN9@do_put:
 ; 1161 : 				{	// put leading fill
 ; 1162 : 				_Dest = _Rep(_Dest, _Fill, _Fillcount);
 
-	mov	eax, DWORD PTR __Fillcount$148619[ebp]
+	mov	eax, DWORD PTR __Fillcount$146751[ebp]
 	push	eax
 	movzx	ecx, BYTE PTR __Fill$[ebp]
 	push	ecx
@@ -33153,7 +33185,7 @@ $LN9@do_put:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154743[ebp]
+	lea	ecx, DWORD PTR $T152572[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -33166,23 +33198,23 @@ $LN9@do_put:
 
 ; 1163 : 				_Fillcount = 0;
 
-	mov	DWORD PTR __Fillcount$148619[ebp], 0
+	mov	DWORD PTR __Fillcount$146751[ebp], 0
 $LN1@do_put:
 
 ; 1164 : 				}
 ; 1165 : 			_Dest = _Put(_Dest, _Str.c_str(), _Str.size());	// put field
 
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	?size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::size
 	push	eax
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::c_str
 	push	eax
 	mov	eax, DWORD PTR __Dest$[ebp+4]
 	push	eax
 	mov	ecx, DWORD PTR __Dest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T154744[ebp]
+	lea	edx, DWORD PTR $T152573[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
@@ -33202,7 +33234,7 @@ $LN1@do_put:
 
 ; 1167 : 			return (_Rep(_Dest, _Fill, _Fillcount));	// put trailing fill
 
-	mov	eax, DWORD PTR __Fillcount$148619[ebp]
+	mov	eax, DWORD PTR __Fillcount$146751[ebp]
 	push	eax
 	movzx	ecx, BYTE PTR __Fill$[ebp]
 	push	ecx
@@ -33217,7 +33249,7 @@ $LN1@do_put:
 	call	?_Rep@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ABA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@DI@Z ; std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::_Rep
 	add	esp, 24					; 00000018H
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN6@do_put:
@@ -33263,16 +33295,16 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MBE?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@D_N@Z$0:
-	lea	ecx, DWORD PTR $T154740[ebp]
+	lea	ecx, DWORD PTR $T152569[ebp]
 	jmp	??1locale@std@@QAE@XZ			; std::locale::~locale
 __unwindfunclet$?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MBE?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@D_N@Z$1:
-	lea	ecx, DWORD PTR __Str$148614[ebp]
+	lea	ecx, DWORD PTR __Str$146746[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MBE?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@D_N@Z$2:
-	lea	ecx, DWORD PTR $T148616[ebp]
+	lea	ecx, DWORD PTR $T146748[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MBE?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@D_N@Z$3:
-	lea	ecx, DWORD PTR $T148618[ebp]
+	lea	ecx, DWORD PTR $T146750[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MBE?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@D_N@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -33367,7 +33399,7 @@ __Newwidth$ = 8						; size = 8
 _TEXT	ENDS
 ;	COMDAT ?falsename@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T154766 = -8						; size = 4
+$T152595 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?falsename@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::numpunct<char>::falsename, COMDAT
@@ -33382,7 +33414,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154766[ebp], 0
+	mov	DWORD PTR $T152595[ebp], 0
 
 ; 84   : 		return (do_falsename());
 
@@ -33396,9 +33428,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	mov	ecx, DWORD PTR $T154766[ebp]
+	mov	ecx, DWORD PTR $T152595[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154766[ebp], ecx
+	mov	DWORD PTR $T152595[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 85   : 		}
@@ -33415,7 +33447,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?truename@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T154771 = -8						; size = 4
+$T152600 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?truename@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::numpunct<char>::truename, COMDAT
@@ -33430,7 +33462,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154771[ebp], 0
+	mov	DWORD PTR $T152600[ebp], 0
 
 ; 89   : 		return (do_truename());
 
@@ -33444,9 +33476,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	mov	ecx, DWORD PTR $T154771[ebp]
+	mov	ecx, DWORD PTR $T152600[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T154771[ebp], ecx
+	mov	DWORD PTR $T152600[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 90   : 		}
@@ -33482,13 +33514,13 @@ __ehfuncinfo$??$use_facet@V?$numpunct@D@std@@@std@@YAABV?$numpunct@D@0@ABVlocale
 xdata$x	ENDS
 ;	COMDAT ??$use_facet@V?$numpunct@D@std@@@std@@YAABV?$numpunct@D@0@ABVlocale@0@@Z
 _TEXT	SEGMENT
-$T154776 = -64						; size = 4
-$T154775 = -60						; size = 12
-__Pfmod$146427 = -48					; size = 4
-__Pf$146416 = -44					; size = 4
-__Id$146415 = -40					; size = 4
-__Psave$146403 = -32					; size = 4
-__Lock$146402 = -20					; size = 4
+$T152605 = -64						; size = 4
+$T152604 = -60						; size = 12
+__Pfmod$144753 = -48					; size = 4
+__Pf$144742 = -44					; size = 4
+__Id$144741 = -40					; size = 4
+__Psave$144729 = -32					; size = 4
+__Lock$144728 = -20					; size = 4
 __$EHRec$ = -12						; size = 12
 __Loc$ = 8						; size = 4
 ??$use_facet@V?$numpunct@D@std@@@std@@YAABV?$numpunct@D@0@ABVlocale@0@@Z PROC ; std::use_facet<std::numpunct<char> >, COMDAT
@@ -33516,7 +33548,7 @@ __Loc$ = 8						; size = 4
 ; 505  : 	_BEGIN_LOCK(_LOCK_LOCALE)	// the thread lock, make get atomic
 
 	push	0
-	lea	ecx, DWORD PTR __Lock$146402[ebp]
+	lea	ecx, DWORD PTR __Lock$144728[ebp]
 	call	??0_Lockit@std@@QAE@H@Z			; std::_Lockit::_Lockit
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
@@ -33524,27 +33556,27 @@ __Loc$ = 8						; size = 4
 ; 507  : 			_Facetptr<_Facet>::_Psave;	// static pointer to lazy facet
 
 	mov	eax, DWORD PTR ?_Psave@?$_Facetptr@V?$numpunct@D@std@@@std@@2PBVfacet@locale@2@B ; std::_Facetptr<std::numpunct<char> >::_Psave
-	mov	DWORD PTR __Psave$146403[ebp], eax
+	mov	DWORD PTR __Psave$144729[ebp], eax
 
 ; 508  : 
 ; 509  : 		size_t _Id = _Facet::id;
 
 	mov	ecx, OFFSET ?id@?$numpunct@D@std@@2V0locale@2@A ; std::numpunct<char>::id
 	call	??Bid@locale@std@@QAEIXZ		; std::locale::id::operator unsigned int
-	mov	DWORD PTR __Id$146415[ebp], eax
+	mov	DWORD PTR __Id$144741[ebp], eax
 
 ; 510  : 		const locale::facet *_Pf = _Loc._Getfacet(_Id);
 
-	mov	ecx, DWORD PTR __Id$146415[ebp]
+	mov	ecx, DWORD PTR __Id$144741[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Loc$[ebp]
 	call	?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z ; std::locale::_Getfacet
-	mov	DWORD PTR __Pf$146416[ebp], eax
+	mov	DWORD PTR __Pf$144742[ebp], eax
 
 ; 511  : 
 ; 512  : 		if (_Pf != 0)
 
-	cmp	DWORD PTR __Pf$146416[ebp], 0
+	cmp	DWORD PTR __Pf$144742[ebp], 0
 	je	SHORT $LN6@use_facet@3
 	jmp	SHORT $LN5@use_facet@3
 $LN6@use_facet@3:
@@ -33552,13 +33584,13 @@ $LN6@use_facet@3:
 ; 513  : 			;	// got facet from locale
 ; 514  : 		else if (_Psave != 0)
 
-	cmp	DWORD PTR __Psave$146403[ebp], 0
+	cmp	DWORD PTR __Psave$144729[ebp], 0
 	je	SHORT $LN4@use_facet@3
 
 ; 515  : 			_Pf = _Psave;	// lazy facet already allocated
 
-	mov	edx, DWORD PTR __Psave$146403[ebp]
-	mov	DWORD PTR __Pf$146416[ebp], edx
+	mov	edx, DWORD PTR __Psave$144729[ebp]
+	mov	DWORD PTR __Pf$144742[ebp], edx
 	jmp	SHORT $LN5@use_facet@3
 $LN4@use_facet@3:
 
@@ -33566,7 +33598,7 @@ $LN4@use_facet@3:
 
 	mov	eax, DWORD PTR __Loc$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Psave$146403[ebp]
+	lea	ecx, DWORD PTR __Psave$144729[ebp]
 	push	ecx
 	call	?_Getcat@?$numpunct@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z ; std::numpunct<char>::_Getcat
 	add	esp, 8
@@ -33579,10 +33611,10 @@ $LN4@use_facet@3:
 ; 520  : 			_THROW_NCEE(bad_cast, _EMPTY_ARGUMENT);	// lazy disallowed
 
 	push	OFFSET ??_C@_08EPJLHIJG@bad?5cast?$AA@
-	lea	ecx, DWORD PTR $T154775[ebp]
+	lea	ecx, DWORD PTR $T152604[ebp]
 	call	??0bad_cast@std@@QAE@PBD@Z		; std::bad_cast::bad_cast
 	push	OFFSET __TI2?AVbad_cast@std@@
-	lea	edx, DWORD PTR $T154775[ebp]
+	lea	edx, DWORD PTR $T152604[ebp]
 	push	edx
 	call	__CxxThrowException@8
 
@@ -33599,28 +33631,28 @@ $LN2@use_facet@3:
 ; 527  : 			{	// queue up lazy facet for destruction
 ; 528  : 			_Pf = _Psave;
 
-	mov	eax, DWORD PTR __Psave$146403[ebp]
-	mov	DWORD PTR __Pf$146416[ebp], eax
+	mov	eax, DWORD PTR __Psave$144729[ebp]
+	mov	DWORD PTR __Pf$144742[ebp], eax
 
 ; 529  : 			_Facetptr<_Facet>::_Psave = _Psave;
 
-	mov	ecx, DWORD PTR __Psave$146403[ebp]
+	mov	ecx, DWORD PTR __Psave$144729[ebp]
 	mov	DWORD PTR ?_Psave@?$_Facetptr@V?$numpunct@D@std@@@std@@2PBVfacet@locale@2@B, ecx ; std::_Facetptr<std::numpunct<char> >::_Psave
 
 ; 530  : 
 ; 531  : 			locale::facet *_Pfmod = (_Facet *)_Psave;
 
-	mov	edx, DWORD PTR __Psave$146403[ebp]
-	mov	DWORD PTR __Pfmod$146427[ebp], edx
+	mov	edx, DWORD PTR __Psave$144729[ebp]
+	mov	DWORD PTR __Pfmod$144753[ebp], edx
 
 ; 532  : 			_Pfmod->_Incref();
 
-	mov	ecx, DWORD PTR __Pfmod$146427[ebp]
+	mov	ecx, DWORD PTR __Pfmod$144753[ebp]
 	call	?_Incref@facet@locale@std@@QAEXXZ	; std::locale::facet::_Incref
 
 ; 533  : 			_Pfmod->_Register();
 
-	mov	ecx, DWORD PTR __Pfmod$146427[ebp]
+	mov	ecx, DWORD PTR __Pfmod$144753[ebp]
 	call	?_Register@facet@locale@std@@QAEXXZ	; std::locale::facet::_Register
 $LN5@use_facet@3:
 
@@ -33628,12 +33660,12 @@ $LN5@use_facet@3:
 ; 535  : 
 ; 536  : 		return ((const _Facet&)(*_Pf));	// should be dynamic_cast
 
-	mov	eax, DWORD PTR __Pf$146416[ebp]
-	mov	DWORD PTR $T154776[ebp], eax
+	mov	eax, DWORD PTR __Pf$144742[ebp]
+	mov	DWORD PTR $T152605[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR __Lock$146402[ebp]
+	lea	ecx, DWORD PTR __Lock$144728[ebp]
 	call	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
-	mov	eax, DWORD PTR $T154776[ebp]
+	mov	eax, DWORD PTR $T152605[ebp]
 $LN8@use_facet@3:
 
 ; 537  : 	_END_LOCK()
@@ -33686,7 +33718,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$use_facet@V?$numpunct@D@std@@@std@@YAABV?$numpunct@D@0@ABVlocale@0@@Z$0:
-	lea	ecx, DWORD PTR __Lock$146402[ebp]
+	lea	ecx, DWORD PTR __Lock$144728[ebp]
 	jmp	??1_Lockit@std@@QAE@XZ			; std::_Lockit::~_Lockit
 __ehhandler$??$use_facet@V?$numpunct@D@std@@@std@@YAABV?$numpunct@D@0@ABVlocale@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -33722,11 +33754,11 @@ _TEXT	SEGMENT
 tv93 = -76						; size = 4
 tv134 = -72						; size = 4
 tv139 = -68						; size = 4
-$T154798 = -64						; size = 4
-$T154794 = -60						; size = 36
-$T154793 = -24						; size = 4
-$T154792 = -20						; size = 4
-$T154791 = -16						; size = 4
+$T152627 = -64						; size = 4
+$T152623 = -60						; size = 36
+$T152622 = -24						; size = 4
+$T152621 = -20						; size = 4
+$T152620 = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ppf$ = 8						; size = 4
 __Ploc$ = 12						; size = 4
@@ -33751,7 +33783,7 @@ __Ploc$ = 12						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T154798[ebp], 0
+	mov	DWORD PTR $T152627[ebp], 0
 
 ; 112  : 		if (_Ppf != 0 && *_Ppf == 0)
 
@@ -33765,35 +33797,35 @@ __Ploc$ = 12						; size = 4
 ; 114  : 				_Locinfo(_Ploc->c_str()), 0, true);
 
 	call	?_DebugHeapTag_func@std@@YAABU_DebugHeapTag_t@1@XZ ; std::_DebugHeapTag_func
-	mov	DWORD PTR $T154793[ebp], eax
+	mov	DWORD PTR $T152622[ebp], eax
 	push	113					; 00000071H
 	push	OFFSET ??_C@_0EH@GHEBKCIB@c?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@
-	mov	ecx, DWORD PTR $T154793[ebp]
+	mov	ecx, DWORD PTR $T152622[ebp]
 	push	ecx
 	push	24					; 00000018H
 	call	??2facet@locale@std@@SAPAXIABU_DebugHeapTag_t@2@PADH@Z ; std::locale::facet::operator new
 	add	esp, 16					; 00000010H
-	mov	DWORD PTR $T154792[ebp], eax
+	mov	DWORD PTR $T152621[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T154792[ebp], 0
+	cmp	DWORD PTR $T152621[ebp], 0
 	je	SHORT $LN4@Getcat@3
 	push	1
 	push	0
 	mov	ecx, DWORD PTR __Ploc$[ebp]
 	call	?c_str@locale@std@@QBEPBDXZ		; std::locale::c_str
 	push	eax
-	lea	ecx, DWORD PTR $T154794[ebp]
+	lea	ecx, DWORD PTR $T152623[ebp]
 	call	??0_Locinfo@std@@QAE@PBD@Z		; std::_Locinfo::_Locinfo
 	mov	DWORD PTR tv139[ebp], eax
 	mov	edx, DWORD PTR tv139[ebp]
 	mov	DWORD PTR tv134[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	eax, DWORD PTR $T154798[ebp]
+	mov	eax, DWORD PTR $T152627[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T154798[ebp], eax
+	mov	DWORD PTR $T152627[ebp], eax
 	mov	ecx, DWORD PTR tv134[ebp]
 	push	ecx
-	mov	ecx, DWORD PTR $T154792[ebp]
+	mov	ecx, DWORD PTR $T152621[ebp]
 	call	??0?$numpunct@D@std@@QAE@ABV_Locinfo@1@I_N@Z ; std::numpunct<char>::numpunct<char>
 	mov	DWORD PTR tv93[ebp], eax
 	jmp	SHORT $LN5@Getcat@3
@@ -33801,17 +33833,17 @@ $LN4@Getcat@3:
 	mov	DWORD PTR tv93[ebp], 0
 $LN5@Getcat@3:
 	mov	edx, DWORD PTR tv93[ebp]
-	mov	DWORD PTR $T154791[ebp], edx
+	mov	DWORD PTR $T152620[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	mov	eax, DWORD PTR __Ppf$[ebp]
-	mov	ecx, DWORD PTR $T154791[ebp]
+	mov	ecx, DWORD PTR $T152620[ebp]
 	mov	DWORD PTR [eax], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	edx, DWORD PTR $T154798[ebp]
+	mov	edx, DWORD PTR $T152627[ebp]
 	and	edx, 1
 	je	SHORT $LN1@Getcat@3
-	and	DWORD PTR $T154798[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T154794[ebp]
+	and	DWORD PTR $T152627[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152623[ebp]
 	call	??1_Locinfo@std@@QAE@XZ			; std::_Locinfo::~_Locinfo
 $LN1@Getcat@3:
 
@@ -33837,19 +33869,19 @@ text$x	SEGMENT
 __unwindfunclet$?_Getcat@?$numpunct@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z$0:
 	push	113					; 00000071H
 	push	OFFSET ??_C@_0EH@GHEBKCIB@c?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@
-	mov	eax, DWORD PTR $T154793[ebp]
+	mov	eax, DWORD PTR $T152622[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T154792[ebp]
+	mov	ecx, DWORD PTR $T152621[ebp]
 	push	ecx
 	call	??3facet@locale@std@@SAXPAXABU_DebugHeapTag_t@2@PADH@Z ; std::locale::facet::operator delete
 	add	esp, 16					; 00000010H
 	ret	0
 __unwindfunclet$?_Getcat@?$numpunct@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z$1:
-	mov	eax, DWORD PTR $T154798[ebp]
+	mov	eax, DWORD PTR $T152627[ebp]
 	and	eax, 1
 	je	$LN8@Getcat@3
-	and	DWORD PTR $T154798[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T154794[ebp]
+	and	DWORD PTR $T152627[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152623[ebp]
 	jmp	??1_Locinfo@std@@QAE@XZ			; std::_Locinfo::~_Locinfo
 $LN8@Getcat@3:
 	ret	0
@@ -34065,7 +34097,7 @@ PUBLIC	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?do_grouping@?$numpunct@D@std@@MBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T154824 = -8						; size = 4
+$T152653 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?do_grouping@?$numpunct@D@std@@MBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::numpunct<char>::do_grouping, COMDAT
@@ -34079,7 +34111,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154824[ebp], 0
+	mov	DWORD PTR $T152653[ebp], 0
 
 ; 174  : 		return (string(_Grouping));
 
@@ -34088,9 +34120,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T154824[ebp]
+	mov	edx, DWORD PTR $T152653[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154824[ebp], edx
+	mov	DWORD PTR $T152653[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 175  : 		}
@@ -34119,7 +34151,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z
 _TEXT	SEGMENT
-$T154828 = -20						; size = 4
+$T152657 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -34145,7 +34177,7 @@ __Ptr$ = 8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T154828[ebp], esp
+	mov	DWORD PTR $T152657[ebp], esp
 	call	??0?$allocator@D@std@@QAE@XZ		; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z ; std::_String_val<char,std::allocator<char> >::_String_val<char,std::allocator<char> >
@@ -34198,7 +34230,7 @@ text$x	ENDS
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xlocnum
 ;	COMDAT ?do_falsename@?$numpunct@D@std@@MBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T154839 = -8						; size = 4
+$T152668 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?do_falsename@?$numpunct@D@std@@MBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::numpunct<char>::do_falsename, COMDAT
@@ -34212,7 +34244,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154839[ebp], 0
+	mov	DWORD PTR $T152668[ebp], 0
 
 ; 179  : 		return (string_type(_Falsename));
 
@@ -34221,9 +34253,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T154839[ebp]
+	mov	edx, DWORD PTR $T152668[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154839[ebp], edx
+	mov	DWORD PTR $T152668[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 180  : 		}
@@ -34239,7 +34271,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?do_truename@?$numpunct@D@std@@MBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T154844 = -8						; size = 4
+$T152673 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?do_truename@?$numpunct@D@std@@MBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::numpunct<char>::do_truename, COMDAT
@@ -34253,7 +34285,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T154844[ebp], 0
+	mov	DWORD PTR $T152673[ebp], 0
 
 ; 184  : 		return (string_type(_Truename));
 
@@ -34262,9 +34294,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T154844[ebp]
+	mov	edx, DWORD PTR $T152673[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T154844[ebp], edx
+	mov	DWORD PTR $T152673[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 185  : 		}
@@ -35012,7 +35044,7 @@ tv86 = -188						; size = 4
 tv76 = -184						; size = 4
 tv73 = -180						; size = 8
 tv166 = -172						; size = 8
-__Signed$148665 = -161					; size = 1
+__Signed$146797 = -161					; size = 1
 __Afterpoint$ = -160					; size = 4
 __Beforepoint$ = -156					; size = 4
 __Significance$ = -152					; size = 4
@@ -35147,11 +35179,11 @@ $LN17@do_put@6:
 	mov	DWORD PTR tv86[ebp], 0
 $LN18@do_put@6:
 	mov	cl, BYTE PTR tv86[ebp]
-	mov	BYTE PTR __Signed$148665[ebp], cl
+	mov	BYTE PTR __Signed$146797[ebp], cl
 
 ; 1230 : 			if (_Signed)
 
-	movzx	edx, BYTE PTR __Signed$148665[ebp]
+	movzx	edx, BYTE PTR __Signed$146797[ebp]
 	test	edx, edx
 	je	SHORT $LN9@do_put@6
 
@@ -35243,7 +35275,7 @@ $LN2@do_put@6:
 ; 1243 : 
 ; 1244 : 			if (_Signed)
 
-	movzx	ecx, BYTE PTR __Signed$148665[ebp]
+	movzx	ecx, BYTE PTR __Signed$146797[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@do_put@6
 
@@ -35390,7 +35422,7 @@ tv84 = -188						; size = 4
 tv76 = -184						; size = 4
 tv73 = -180						; size = 8
 tv164 = -172						; size = 8
-__Signed$148688 = -161					; size = 1
+__Signed$146820 = -161					; size = 1
 __Afterpoint$ = -160					; size = 4
 __Beforepoint$ = -156					; size = 4
 __Significance$ = -152					; size = 4
@@ -35517,11 +35549,11 @@ $LN17@do_put@7:
 	mov	DWORD PTR tv84[ebp], 0
 $LN18@do_put@7:
 	mov	cl, BYTE PTR tv84[ebp]
-	mov	BYTE PTR __Signed$148688[ebp], cl
+	mov	BYTE PTR __Signed$146820[ebp], cl
 
 ; 1271 : 			if (_Signed)
 
-	movzx	edx, BYTE PTR __Signed$148688[ebp]
+	movzx	edx, BYTE PTR __Signed$146820[ebp]
 	test	edx, edx
 	je	SHORT $LN9@do_put@7
 
@@ -35613,7 +35645,7 @@ $LN2@do_put@7:
 ; 1284 : 
 ; 1285 : 			if (_Signed)
 
-	movzx	ecx, BYTE PTR __Signed$148688[ebp]
+	movzx	ecx, BYTE PTR __Signed$146820[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@do_put@7
 
@@ -35934,13 +35966,13 @@ tv176 = -96						; size = 4
 tv175 = -92						; size = 4
 tv174 = -88						; size = 4
 tv79 = -84						; size = 4
-$T154952 = -80						; size = 8
-$T154951 = -72						; size = 8
-$T154950 = -64						; size = 8
-$T154949 = -56						; size = 8
-$T154948 = -48						; size = 8
-$T154947 = -40						; size = 8
-$T154944 = -32						; size = 8
+$T152781 = -80						; size = 8
+$T152780 = -72						; size = 8
+$T152779 = -64						; size = 8
+$T152778 = -56						; size = 8
+$T152777 = -48						; size = 8
+$T152776 = -40						; size = 8
+$T152773 = -32						; size = 8
 __Ptr$ = -24						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
@@ -36015,7 +36047,7 @@ $LN5@Init@3:
 	mov	edx, DWORD PTR [ecx+8]
 	mov	DWORD PTR tv79[ebp], edx
 $LN6@Init@3:
-	lea	eax, DWORD PTR $T154944[ebp]
+	lea	eax, DWORD PTR $T152773[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36035,7 +36067,7 @@ $LN6@Init@3:
 ; 142  : 			_Lobj._Getcvt());
 ; 143  : 		_Falsename = _MAKLOCSTR(_Elem, _Lobj._Getfalse(), _Lobj._Getcvt());
 
-	lea	edx, DWORD PTR $T154947[ebp]
+	lea	edx, DWORD PTR $T152776[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36057,7 +36089,7 @@ $LN6@Init@3:
 
 ; 144  : 		_Truename = _MAKLOCSTR(_Elem, _Lobj._Gettrue(), _Lobj._Getcvt());
 
-	lea	ecx, DWORD PTR $T154948[ebp]
+	lea	ecx, DWORD PTR $T152777[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36103,7 +36135,7 @@ __tryend$?_Init@?$numpunct@D@std@@IAEXABV_Locinfo@2@_N@Z$1:
 ; 149  : 
 ; 150  : 		_Dp = _MAKLOCCHR(_Elem, _Ptr->decimal_point[0], _Lobj._Getcvt());
 
-	lea	eax, DWORD PTR $T154949[ebp]
+	lea	eax, DWORD PTR $T152778[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36121,7 +36153,7 @@ __tryend$?_Init@?$numpunct@D@std@@IAEXABV_Locinfo@2@_N@Z$1:
 ; 151  : 		_Kseparator =
 ; 152  : 			_MAKLOCCHR(_Elem, _Ptr->thousands_sep[0], _Lobj._Getcvt());
 
-	lea	edx, DWORD PTR $T154950[ebp]
+	lea	edx, DWORD PTR $T152779[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36147,7 +36179,7 @@ __tryend$?_Init@?$numpunct@D@std@@IAEXABV_Locinfo@2@_N@Z$1:
 ; 156  : //			_Grouping = _MAKLOCSTR(char, "", _Lobj._Getcvt());
 ; 157  : 			_Dp = _MAKLOCCHR(_Elem, '.', _Lobj._Getcvt());
 
-	lea	eax, DWORD PTR $T154951[ebp]
+	lea	eax, DWORD PTR $T152780[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36161,7 +36193,7 @@ __tryend$?_Init@?$numpunct@D@std@@IAEXABV_Locinfo@2@_N@Z$1:
 
 ; 158  : 			_Kseparator = _MAKLOCCHR(_Elem, ',', _Lobj._Getcvt());
 
-	lea	edx, DWORD PTR $T154952[ebp]
+	lea	edx, DWORD PTR $T152781[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -36207,7 +36239,7 @@ EXTRN	__Getcvt:PROC
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xlocinfo
 ;	COMDAT ?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ
 _TEXT	SEGMENT
-$T154968 = -12						; size = 8
+$T152797 = -12						; size = 8
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ PROC		; std::_Locinfo::_Getcvt, COMDAT
@@ -36226,12 +36258,12 @@ ___$ReturnUdt$ = 8					; size = 4
 ; 123  : 		return (::_Getcvt());
 
 	call	__Getcvt
-	mov	DWORD PTR $T154968[ebp], eax
-	mov	DWORD PTR $T154968[ebp+4], edx
+	mov	DWORD PTR $T152797[ebp], eax
+	mov	DWORD PTR $T152797[ebp+4], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	mov	ecx, DWORD PTR $T154968[ebp]
+	mov	ecx, DWORD PTR $T152797[ebp]
 	mov	DWORD PTR [eax], ecx
-	mov	edx, DWORD PTR $T154968[ebp+4]
+	mov	edx, DWORD PTR $T152797[ebp+4]
 	mov	DWORD PTR [eax+4], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
@@ -36558,25 +36590,25 @@ tv447 = -276						; size = 8
 tv92 = -268						; size = 4
 tv387 = -264						; size = 4
 tv392 = -260						; size = 4
-$T155004 = -256						; size = 8
-$T155003 = -248						; size = 8
-$T155002 = -240						; size = 8
-$T154999 = -232						; size = 8
-$T154998 = -224						; size = 8
-$T154997 = -216						; size = 8
-$T154996 = -208						; size = 8
-$T154995 = -200						; size = 8
-$T154994 = -192						; size = 8
-$T154993 = -184						; size = 8
-$T154992 = -176						; size = 8
-$T154991 = -168						; size = 8
-$T154986 = -160						; size = 4
-__Expoffset$148914 = -156				; size = 4
-__Fracoffset$148907 = -152				; size = 4
+$T152833 = -256						; size = 8
+$T152832 = -248						; size = 8
+$T152831 = -240						; size = 8
+$T152828 = -232						; size = 8
+$T152827 = -224						; size = 8
+$T152826 = -216						; size = 8
+$T152825 = -208						; size = 8
+$T152824 = -200						; size = 8
+$T152823 = -192						; size = 8
+$T152822 = -184						; size = 8
+$T152821 = -176						; size = 8
+$T152820 = -168						; size = 8
+$T152815 = -160						; size = 4
+__Expoffset$147016 = -156				; size = 4
+__Fracoffset$147009 = -152				; size = 4
 __Adjustfield$ = -148					; size = 4
 __Fillcount$ = -144					; size = 4
-__Off$148887 = -140					; size = 4
-__Pg$148886 = -136					; size = 4
+__Off$146989 = -140					; size = 4
+__Pg$146988 = -136					; size = 4
 __Pointptr$ = -132					; size = 4
 __Eptr$ = -128						; size = 4
 __Enders$ = -120					; size = 3
@@ -36632,7 +36664,7 @@ __Count$ = 48						; size = 4
 
 ; 1335 : 		const _Mypunct& _Punct_fac = _USE(_Iosbase.getloc(), _Mypunct);
 
-	lea	ecx, DWORD PTR $T154986[ebp]
+	lea	ecx, DWORD PTR $T152815[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Iosbase$[ebp]
 	call	?getloc@ios_base@std@@QBE?AVlocale@2@XZ	; std::ios_base::getloc
@@ -36646,7 +36678,7 @@ __Count$ = 48						; size = 4
 	add	esp, 4
 	mov	DWORD PTR __Punct_fac$[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T154986[ebp]
+	lea	ecx, DWORD PTR $T152815[ebp]
 	call	??1locale@std@@QAE@XZ			; std::locale::~locale
 
 ; 1336 : 		const string _Grouping = _Punct_fac.grouping();
@@ -36889,7 +36921,7 @@ $LN10@Fput:
 
 	lea	ecx, DWORD PTR __Grouping$[ebp]
 	call	?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::c_str
-	mov	DWORD PTR __Pg$148886[ebp], eax
+	mov	DWORD PTR __Pg$146988[ebp], eax
 
 ; 1381 : 			size_t _Off = _CSTD strcspn(&_Groupstring[0], &_Enders[0]);
 
@@ -36901,23 +36933,23 @@ $LN10@Fput:
 	push	eax
 	call	_strcspn
 	add	esp, 8
-	mov	DWORD PTR __Off$148887[ebp], eax
+	mov	DWORD PTR __Off$146989[ebp], eax
 $LN9@Fput:
 
 ; 1382 : 			while (*_Pg != CHAR_MAX && '\0' < *_Pg
 ; 1383 : 				&& (size_t)*_Pg < _Off - _Prefix)
 
-	mov	edx, DWORD PTR __Pg$148886[ebp]
+	mov	edx, DWORD PTR __Pg$146988[ebp]
 	movsx	eax, BYTE PTR [edx]
 	cmp	eax, 127				; 0000007fH
 	je	SHORT $LN8@Fput
-	mov	ecx, DWORD PTR __Pg$148886[ebp]
+	mov	ecx, DWORD PTR __Pg$146988[ebp]
 	movsx	edx, BYTE PTR [ecx]
 	test	edx, edx
 	jle	SHORT $LN8@Fput
-	mov	eax, DWORD PTR __Pg$148886[ebp]
+	mov	eax, DWORD PTR __Pg$146988[ebp]
 	movsx	ecx, BYTE PTR [eax]
-	mov	edx, DWORD PTR __Off$148887[ebp]
+	mov	edx, DWORD PTR __Off$146989[ebp]
 	sub	edx, DWORD PTR __Prefix$[ebp]
 	cmp	ecx, edx
 	jae	SHORT $LN8@Fput
@@ -36925,30 +36957,30 @@ $LN9@Fput:
 ; 1384 : 				{	// add a NUL to mark thousands separator
 ; 1385 : 				_Groupstring.insert(_Off -= *_Pg, (size_t)1, '\0');
 
-	mov	eax, DWORD PTR __Pg$148886[ebp]
+	mov	eax, DWORD PTR __Pg$146988[ebp]
 	movsx	ecx, BYTE PTR [eax]
-	mov	edx, DWORD PTR __Off$148887[ebp]
+	mov	edx, DWORD PTR __Off$146989[ebp]
 	sub	edx, ecx
-	mov	DWORD PTR __Off$148887[ebp], edx
+	mov	DWORD PTR __Off$146989[ebp], edx
 	push	0
 	push	1
-	mov	eax, DWORD PTR __Off$148887[ebp]
+	mov	eax, DWORD PTR __Off$146989[ebp]
 	push	eax
 	lea	ecx, DWORD PTR __Groupstring$[ebp]
 	call	?insert@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@IID@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::insert
 
 ; 1386 : 				if ('\0' < _Pg[1])
 
-	mov	ecx, DWORD PTR __Pg$148886[ebp]
+	mov	ecx, DWORD PTR __Pg$146988[ebp]
 	movsx	edx, BYTE PTR [ecx+1]
 	test	edx, edx
 	jle	SHORT $LN7@Fput
 
 ; 1387 : 					++_Pg;	// not last group, advance
 
-	mov	eax, DWORD PTR __Pg$148886[ebp]
+	mov	eax, DWORD PTR __Pg$146988[ebp]
 	add	eax, 1
-	mov	DWORD PTR __Pg$148886[ebp], eax
+	mov	DWORD PTR __Pg$146988[ebp], eax
 $LN7@Fput:
 
 ; 1388 : 				}
@@ -37041,7 +37073,7 @@ $LN22@Fput:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154991[ebp]
+	lea	ecx, DWORD PTR $T152820[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -37080,7 +37112,7 @@ $LN6@Fput:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154992[ebp]
+	lea	eax, DWORD PTR $T152821[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -37112,7 +37144,7 @@ $LN3@Fput:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154993[ebp]
+	lea	ecx, DWORD PTR $T152822[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -37154,13 +37186,13 @@ $LN5@Fput:
 	mov	eax, DWORD PTR __Pointptr$[ebp]
 	sub	eax, DWORD PTR __Buf$[ebp]
 	add	eax, 1
-	mov	DWORD PTR __Fracoffset$148907[ebp], eax
+	mov	DWORD PTR __Fracoffset$147009[ebp], eax
 
 ; 1423 : 			_Dest = _Putgrouped(_Dest, _Buf, _Fracoffset - 1, _Kseparator);
 
 	movzx	ecx, BYTE PTR __Kseparator$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Fracoffset$148907[ebp]
+	mov	edx, DWORD PTR __Fracoffset$147009[ebp]
 	sub	edx, 1
 	push	edx
 	mov	eax, DWORD PTR __Buf$[ebp]
@@ -37169,7 +37201,7 @@ $LN5@Fput:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154994[ebp]
+	lea	eax, DWORD PTR $T152823[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -37190,7 +37222,7 @@ $LN5@Fput:
 	push	eax
 	mov	ecx, DWORD PTR __Dest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T154995[ebp]
+	lea	edx, DWORD PTR $T152824[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
@@ -37212,7 +37244,7 @@ $LN5@Fput:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T154996[ebp]
+	lea	eax, DWORD PTR $T152825[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -37233,7 +37265,7 @@ $LN5@Fput:
 	push	eax
 	mov	ecx, DWORD PTR __Dest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T154997[ebp]
+	lea	edx, DWORD PTR $T152826[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
@@ -37247,10 +37279,10 @@ $LN5@Fput:
 ; 1427 : 			_Buf += _Fracoffset, _Count -= _Fracoffset;
 
 	mov	eax, DWORD PTR __Buf$[ebp]
-	add	eax, DWORD PTR __Fracoffset$148907[ebp]
+	add	eax, DWORD PTR __Fracoffset$147009[ebp]
 	mov	DWORD PTR __Buf$[ebp], eax
 	mov	ecx, DWORD PTR __Count$[ebp]
-	sub	ecx, DWORD PTR __Fracoffset$148907[ebp]
+	sub	ecx, DWORD PTR __Fracoffset$147009[ebp]
 	mov	DWORD PTR __Count$[ebp], ecx
 $LN2@Fput:
 
@@ -37279,13 +37311,13 @@ $LN2@Fput:
 	mov	ecx, DWORD PTR __Eptr$[ebp]
 	sub	ecx, DWORD PTR __Buf$[ebp]
 	add	ecx, 1
-	mov	DWORD PTR __Expoffset$148914[ebp], ecx
+	mov	DWORD PTR __Expoffset$147016[ebp], ecx
 
 ; 1435 : 			_Dest = _Putgrouped(_Dest, _Buf, _Expoffset - 1, _Kseparator);
 
 	movzx	edx, BYTE PTR __Kseparator$[ebp]
 	push	edx
-	mov	eax, DWORD PTR __Expoffset$148914[ebp]
+	mov	eax, DWORD PTR __Expoffset$147016[ebp]
 	sub	eax, 1
 	push	eax
 	mov	ecx, DWORD PTR __Buf$[ebp]
@@ -37294,7 +37326,7 @@ $LN2@Fput:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154998[ebp]
+	lea	ecx, DWORD PTR $T152827[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -37315,7 +37347,7 @@ $LN2@Fput:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T154999[ebp]
+	lea	ecx, DWORD PTR $T152828[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -37346,7 +37378,7 @@ $LN24@Fput:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T155002[ebp]
+	lea	eax, DWORD PTR $T152831[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -37360,10 +37392,10 @@ $LN24@Fput:
 ; 1439 : 			_Buf += _Expoffset, _Count -= _Expoffset;
 
 	mov	ecx, DWORD PTR __Buf$[ebp]
-	add	ecx, DWORD PTR __Expoffset$148914[ebp]
+	add	ecx, DWORD PTR __Expoffset$147016[ebp]
 	mov	DWORD PTR __Buf$[ebp], ecx
 	mov	edx, DWORD PTR __Count$[ebp]
-	sub	edx, DWORD PTR __Expoffset$148914[ebp]
+	sub	edx, DWORD PTR __Expoffset$147016[ebp]
 	mov	DWORD PTR __Count$[ebp], edx
 $LN1@Fput:
 
@@ -37382,7 +37414,7 @@ $LN1@Fput:
 	push	eax
 	mov	ecx, DWORD PTR __Dest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T155003[ebp]
+	lea	edx, DWORD PTR $T152832[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
@@ -37403,7 +37435,7 @@ $LN1@Fput:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T155004[ebp]
+	lea	ecx, DWORD PTR $T152833[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -37519,7 +37551,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Fput@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ABA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@DPBDIIII@Z$0:
-	lea	ecx, DWORD PTR $T154986[ebp]
+	lea	ecx, DWORD PTR $T152815[ebp]
 	jmp	??1locale@std@@QAE@XZ			; std::locale::~locale
 __unwindfunclet$?_Fput@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ABA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@DPBDIIII@Z$1:
 	lea	ecx, DWORD PTR __Grouping$[ebp]
@@ -37996,7 +38028,7 @@ _this$ = -4						; size = 4
 _TEXT	ENDS
 ;	COMDAT ?grouping@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ
 _TEXT	SEGMENT
-$T155037 = -8						; size = 4
+$T152866 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?grouping@?$numpunct@D@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ PROC ; std::numpunct<char>::grouping, COMDAT
@@ -38011,7 +38043,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T155037[ebp], 0
+	mov	DWORD PTR $T152866[ebp], 0
 
 ; 79   : 		return (do_grouping());
 
@@ -38025,9 +38057,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	mov	ecx, DWORD PTR $T155037[ebp]
+	mov	ecx, DWORD PTR $T152866[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T155037[ebp], ecx
+	mov	DWORD PTR $T152866[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 80   : 		}
@@ -38239,15 +38271,15 @@ tv91 = -132						; size = 4
 tv90 = -128						; size = 4
 tv220 = -124						; size = 4
 tv223 = -120						; size = 4
-$T155059 = -116						; size = 8
-$T155058 = -108						; size = 8
-$T155057 = -100						; size = 8
-$T155056 = -92						; size = 8
-$T155048 = -84						; size = 4
+$T152888 = -116						; size = 8
+$T152887 = -108						; size = 8
+$T152886 = -100						; size = 8
+$T152885 = -92						; size = 8
+$T152877 = -84						; size = 4
 __Adjustfield$ = -80					; size = 4
 __Fillcount$ = -76					; size = 4
-__Off$148942 = -72					; size = 4
-__Pg$148941 = -68					; size = 4
+__Off$147044 = -72					; size = 4
+__Pg$147043 = -68					; size = 4
 __Prefix$ = -64						; size = 4
 __Grouping$ = -56					; size = 32
 __Punct_fac$ = -20					; size = 4
@@ -38294,7 +38326,7 @@ __Count$ = 36						; size = 4
 
 ; 1481 : 		const _Mypunct& _Punct_fac = _USE(_Iosbase.getloc(), _Mypunct);
 
-	lea	ecx, DWORD PTR $T155048[ebp]
+	lea	ecx, DWORD PTR $T152877[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Iosbase$[ebp]
 	call	?getloc@ios_base@std@@QBE?AVlocale@2@XZ	; std::ios_base::getloc
@@ -38308,7 +38340,7 @@ __Count$ = 36						; size = 4
 	add	esp, 4
 	mov	DWORD PTR __Punct_fac$[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T155048[ebp]
+	lea	ecx, DWORD PTR $T152877[ebp]
 	call	??1locale@std@@QAE@XZ			; std::locale::~locale
 
 ; 1482 : 		const string _Grouping = _Punct_fac.grouping();
@@ -38377,28 +38409,28 @@ $LN17@Iput:
 
 	lea	ecx, DWORD PTR __Grouping$[ebp]
 	call	?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::c_str
-	mov	DWORD PTR __Pg$148941[ebp], eax
+	mov	DWORD PTR __Pg$147043[ebp], eax
 
 ; 1490 : 			size_t _Off = _Count;
 
 	mov	ecx, DWORD PTR __Count$[ebp]
-	mov	DWORD PTR __Off$148942[ebp], ecx
+	mov	DWORD PTR __Off$147044[ebp], ecx
 $LN9@Iput:
 
 ; 1491 : 			while (*_Pg != CHAR_MAX && '\0' < *_Pg
 ; 1492 : 				&& (size_t)*_Pg < _Off - _Prefix)
 
-	mov	edx, DWORD PTR __Pg$148941[ebp]
+	mov	edx, DWORD PTR __Pg$147043[ebp]
 	movsx	eax, BYTE PTR [edx]
 	cmp	eax, 127				; 0000007fH
 	je	$LN10@Iput
-	mov	ecx, DWORD PTR __Pg$148941[ebp]
+	mov	ecx, DWORD PTR __Pg$147043[ebp]
 	movsx	edx, BYTE PTR [ecx]
 	test	edx, edx
 	jle	SHORT $LN10@Iput
-	mov	eax, DWORD PTR __Pg$148941[ebp]
+	mov	eax, DWORD PTR __Pg$147043[ebp]
 	movsx	ecx, BYTE PTR [eax]
-	mov	edx, DWORD PTR __Off$148942[ebp]
+	mov	edx, DWORD PTR __Off$147044[ebp]
 	sub	edx, DWORD PTR __Prefix$[ebp]
 	cmp	ecx, edx
 	jae	SHORT $LN10@Iput
@@ -38406,11 +38438,11 @@ $LN9@Iput:
 ; 1493 : 				{	// add a NUL to mark thousands separator
 ; 1494 : 				_Off -= *_Pg;
 
-	mov	eax, DWORD PTR __Pg$148941[ebp]
+	mov	eax, DWORD PTR __Pg$147043[ebp]
 	movsx	ecx, BYTE PTR [eax]
-	mov	edx, DWORD PTR __Off$148942[ebp]
+	mov	edx, DWORD PTR __Off$147044[ebp]
 	sub	edx, ecx
-	mov	DWORD PTR __Off$148942[ebp], edx
+	mov	DWORD PTR __Off$147044[ebp], edx
 $LN6@Iput:
 
 ; 1495 : 
@@ -38423,16 +38455,16 @@ $LN6@Iput:
 
 	mov	ecx, DWORD PTR __Count$[ebp]
 	add	ecx, 1
-	sub	ecx, DWORD PTR __Off$148942[ebp]
+	sub	ecx, DWORD PTR __Off$147044[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Buf$[ebp]
-	add	edx, DWORD PTR __Off$148942[ebp]
+	add	edx, DWORD PTR __Off$147044[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Count$[ebp]
 	add	eax, 1
-	sub	eax, DWORD PTR __Off$148942[ebp]
+	sub	eax, DWORD PTR __Off$147044[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Off$148942[ebp]
+	mov	ecx, DWORD PTR __Off$147044[ebp]
 	mov	edx, DWORD PTR __Buf$[ebp]
 	lea	eax, DWORD PTR [edx+ecx+1]
 	push	eax
@@ -38444,7 +38476,7 @@ $LN6@Iput:
 ; 1500 : 				_Buf[_Off] = '\0', ++_Count;
 
 	mov	ecx, DWORD PTR __Buf$[ebp]
-	add	ecx, DWORD PTR __Off$148942[ebp]
+	add	ecx, DWORD PTR __Off$147044[ebp]
 	mov	BYTE PTR [ecx], 0
 	mov	edx, DWORD PTR __Count$[ebp]
 	add	edx, 1
@@ -38452,16 +38484,16 @@ $LN6@Iput:
 
 ; 1501 : 				if ('\0' < _Pg[1])
 
-	mov	eax, DWORD PTR __Pg$148941[ebp]
+	mov	eax, DWORD PTR __Pg$147043[ebp]
 	movsx	ecx, BYTE PTR [eax+1]
 	test	ecx, ecx
 	jle	SHORT $LN4@Iput
 
 ; 1502 : 					++_Pg;	// not last group, advance
 
-	mov	edx, DWORD PTR __Pg$148941[ebp]
+	mov	edx, DWORD PTR __Pg$147043[ebp]
 	add	edx, 1
-	mov	DWORD PTR __Pg$148941[ebp], edx
+	mov	DWORD PTR __Pg$147043[ebp], edx
 $LN4@Iput:
 
 ; 1503 : 				}
@@ -38528,7 +38560,7 @@ $LN19@Iput:
 	push	eax
 	mov	ecx, DWORD PTR __Dest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T155056[ebp]
+	lea	edx, DWORD PTR $T152885[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
@@ -38562,7 +38594,7 @@ $LN3@Iput:
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T155057[ebp]
+	lea	ecx, DWORD PTR $T152886[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	push	edx
@@ -38592,7 +38624,7 @@ $LN3@Iput:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T155058[ebp]
+	lea	eax, DWORD PTR $T152887[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -38622,7 +38654,7 @@ $LN2@Iput:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T155059[ebp]
+	lea	eax, DWORD PTR $T152888[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -38706,7 +38738,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Iput@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ABA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@DPADI@Z$0:
-	lea	ecx, DWORD PTR $T155048[ebp]
+	lea	ecx, DWORD PTR $T152877[ebp]
 	jmp	??1locale@std@@QAE@XZ			; std::locale::~locale
 __unwindfunclet$?_Iput@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ABA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AAVios_base@2@DPADI@Z$1:
 	lea	ecx, DWORD PTR __Grouping$[ebp]
@@ -38915,10 +38947,10 @@ _TEXT	ENDS
 ;	COMDAT ?_Putgrouped@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ABA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@PBDID@Z
 _TEXT	SEGMENT
 tv72 = -28						; size = 4
-$T155083 = -24						; size = 8
-$T155082 = -16						; size = 8
-__Groupsize$149079 = -8					; size = 4
-__Pend$149077 = -4					; size = 4
+$T152912 = -24						; size = 8
+$T152911 = -16						; size = 8
+__Groupsize$147167 = -8					; size = 4
+__Pend$147165 = -4					; size = 4
 _this$ = 8						; size = 4
 ___$ReturnUdt$ = 12					; size = 4
 __Dest$ = 16						; size = 8
@@ -38964,13 +38996,13 @@ $LN5@Putgrouped:
 	push	eax
 	call	_memchr
 	add	esp, 12					; 0000000cH
-	mov	DWORD PTR __Pend$149077[ebp], eax
+	mov	DWORD PTR __Pend$147165[ebp], eax
 
 ; 1554 : 			size_t _Groupsize = _Pend != 0 ? _Pend - _Ptr : _Count;
 
-	cmp	DWORD PTR __Pend$149077[ebp], 0
+	cmp	DWORD PTR __Pend$147165[ebp], 0
 	je	SHORT $LN8@Putgrouped
-	mov	ecx, DWORD PTR __Pend$149077[ebp]
+	mov	ecx, DWORD PTR __Pend$147165[ebp]
 	sub	ecx, DWORD PTR __Ptr$[ebp]
 	mov	DWORD PTR tv72[ebp], ecx
 	jmp	SHORT $LN9@Putgrouped
@@ -38979,12 +39011,12 @@ $LN8@Putgrouped:
 	mov	DWORD PTR tv72[ebp], edx
 $LN9@Putgrouped:
 	mov	eax, DWORD PTR tv72[ebp]
-	mov	DWORD PTR __Groupsize$149079[ebp], eax
+	mov	DWORD PTR __Groupsize$147167[ebp], eax
 
 ; 1555 : 
 ; 1556 : 			_Dest = _Putc(_Dest, _Ptr, _Groupsize);
 
-	mov	ecx, DWORD PTR __Groupsize$149079[ebp]
+	mov	ecx, DWORD PTR __Groupsize$147167[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Ptr$[ebp]
 	push	edx
@@ -38992,7 +39024,7 @@ $LN9@Putgrouped:
 	push	eax
 	mov	ecx, DWORD PTR __Dest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T155082[ebp]
+	lea	edx, DWORD PTR $T152911[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
@@ -39006,10 +39038,10 @@ $LN9@Putgrouped:
 ; 1557 : 			_Ptr += _Groupsize, _Count -= _Groupsize;
 
 	mov	eax, DWORD PTR __Ptr$[ebp]
-	add	eax, DWORD PTR __Groupsize$149079[ebp]
+	add	eax, DWORD PTR __Groupsize$147167[ebp]
 	mov	DWORD PTR __Ptr$[ebp], eax
 	mov	ecx, DWORD PTR __Count$[ebp]
-	sub	ecx, DWORD PTR __Groupsize$149079[ebp]
+	sub	ecx, DWORD PTR __Groupsize$147167[ebp]
 	mov	DWORD PTR __Count$[ebp], ecx
 
 ; 1558 : 			if (_Count == 0)
@@ -39036,7 +39068,7 @@ $LN2@Putgrouped:
 	push	ecx
 	mov	edx, DWORD PTR __Dest$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T155083[ebp]
+	lea	eax, DWORD PTR $T152912[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
@@ -39077,8 +39109,8 @@ PUBLIC	?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z ; std::basi
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\streambuf
 ;	COMDAT ??4?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@QAEAAV01@D@Z
 _TEXT	SEGMENT
-$T155087 = -12						; size = 4
-$T155086 = -8						; size = 4
+$T152916 = -12						; size = 4
+$T152915 = -8						; size = 4
 _this$ = -4						; size = 4
 __Right$ = 8						; size = 1
 ??4?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@QAEAAV01@D@Z PROC ; std::ostreambuf_iterator<char,std::char_traits<char> >::operator=, COMDAT
@@ -39106,12 +39138,12 @@ __Right$ = 8						; size = 1
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx+4]
 	call	?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z ; std::basic_streambuf<char,std::char_traits<char> >::sputc
-	mov	DWORD PTR $T155086[ebp], eax
+	mov	DWORD PTR $T152915[ebp], eax
 	call	?eof@?$char_traits@D@std@@SAHXZ		; std::char_traits<char>::eof
-	mov	DWORD PTR $T155087[ebp], eax
-	lea	eax, DWORD PTR $T155086[ebp]
+	mov	DWORD PTR $T152916[ebp], eax
+	lea	eax, DWORD PTR $T152915[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T155087[ebp]
+	lea	ecx, DWORD PTR $T152916[ebp]
 	push	ecx
 	call	?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z ; std::char_traits<char>::eq_int_type
 	add	esp, 8
@@ -39145,7 +39177,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 tv78 = -20						; size = 4
 tv85 = -16						; size = 8
-$T155090 = -8						; size = 4
+$T152919 = -8						; size = 4
 _this$ = -4						; size = 4
 __Ch$ = 8						; size = 1
 ?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z PROC ; std::basic_streambuf<char,std::char_traits<char> >::sputc, COMDAT
@@ -39181,11 +39213,11 @@ __Ch$ = 8						; size = 1
 $LN5@sputc:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ ; std::basic_streambuf<char,std::char_traits<char> >::_Pninc
-	mov	DWORD PTR $T155090[ebp], eax
-	mov	eax, DWORD PTR $T155090[ebp]
+	mov	DWORD PTR $T152919[ebp], eax
+	mov	eax, DWORD PTR $T152919[ebp]
 	mov	cl, BYTE PTR __Ch$[ebp]
 	mov	BYTE PTR [eax], cl
-	mov	edx, DWORD PTR $T155090[ebp]
+	mov	edx, DWORD PTR $T152919[ebp]
 	push	edx
 	call	?to_int_type@?$char_traits@D@std@@SAHABD@Z ; std::char_traits<char>::to_int_type
 	add	esp, 4
@@ -39297,8 +39329,8 @@ EXTRN	??_U@YAPAXIABU_DebugHeapTag_t@std@@PADH@Z:PROC	; operator new[]
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xlocale
 ;	COMDAT ??$_Maklocstr@D@std@@YAPADPBDPADABU_Cvtvec@@@Z
 _TEXT	SEGMENT
-$T155102 = -16						; size = 4
-__Ptrnext$149554 = -12					; size = 4
+$T152931 = -16						; size = 4
+__Ptrnext$147588 = -12					; size = 4
 __Ptrdest$ = -8						; size = 4
 __Count$ = -4						; size = 4
 __Ptr$ = 8						; size = 4
@@ -39336,8 +39368,8 @@ ___formal$ = 16						; size = 4
 	push	ecx
 	call	??_U@YAPAXIABU_DebugHeapTag_t@std@@PADH@Z ; operator new[]
 	add	esp, 16					; 00000010H
-	mov	DWORD PTR $T155102[ebp], eax
-	mov	edx, DWORD PTR $T155102[ebp]
+	mov	DWORD PTR $T152931[ebp], eax
+	mov	edx, DWORD PTR $T152931[ebp]
 	mov	DWORD PTR __Ptrdest$[ebp], edx
 
 ; 661  : 
@@ -39346,15 +39378,15 @@ ___formal$ = 16						; size = 4
 ; 664  : 	for (_Elem *_Ptrnext = _Ptrdest; 0 < _Count; --_Count, ++_Ptrnext, ++_Ptr)
 
 	mov	eax, DWORD PTR __Ptrdest$[ebp]
-	mov	DWORD PTR __Ptrnext$149554[ebp], eax
+	mov	DWORD PTR __Ptrnext$147588[ebp], eax
 	jmp	SHORT $LN3@Maklocstr
 $LN2@Maklocstr:
 	mov	ecx, DWORD PTR __Count$[ebp]
 	sub	ecx, 1
 	mov	DWORD PTR __Count$[ebp], ecx
-	mov	edx, DWORD PTR __Ptrnext$149554[ebp]
+	mov	edx, DWORD PTR __Ptrnext$147588[ebp]
 	add	edx, 1
-	mov	DWORD PTR __Ptrnext$149554[ebp], edx
+	mov	DWORD PTR __Ptrnext$147588[ebp], edx
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	add	eax, 1
 	mov	DWORD PTR __Ptr$[ebp], eax
@@ -39364,7 +39396,7 @@ $LN3@Maklocstr:
 
 ; 665  : 		*_Ptrnext = (_Elem)(unsigned char)*_Ptr;
 
-	mov	ecx, DWORD PTR __Ptrnext$149554[ebp]
+	mov	ecx, DWORD PTR __Ptrnext$147588[ebp]
 	mov	edx, DWORD PTR __Ptr$[ebp]
 	mov	al, BYTE PTR [edx]
 	mov	BYTE PTR [ecx], al
@@ -39391,7 +39423,7 @@ $LN1@Maklocstr:
 _TEXT	ENDS
 ;	COMDAT ?_Init@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@IAEXABV_Locinfo@2@@Z
 _TEXT	SEGMENT
-$T155105 = -12						; size = 8
+$T152934 = -12						; size = 8
 _this$ = -4						; size = 4
 __Lobj$ = 8						; size = 4
 ?_Init@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@IAEXABV_Locinfo@2@@Z PROC ; std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::_Init, COMDAT
@@ -39409,7 +39441,7 @@ __Lobj$ = 8						; size = 4
 
 ; 1067 : 		_Cvt = _Lobj._Getcvt();
 
-	lea	eax, DWORD PTR $T155105[ebp]
+	lea	eax, DWORD PTR $T152934[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Lobj$[ebp]
 	call	?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ ; std::_Locinfo::_Getcvt
@@ -39642,8 +39674,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAEXPAU?$pair@$$CBHPAVRaven_Weapon@@@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv76 = -28						; size = 4
-$T155126 = -24						; size = 4
-$T155125 = -20						; size = 4
+$T152955 = -24						; size = 4
+$T152954 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -39679,16 +39711,16 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T155126[ebp], eax
+	mov	DWORD PTR $T152955[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T155126[ebp], 0
+	cmp	DWORD PTR $T152955[ebp], 0
 	je	SHORT $LN3@construct@2
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@YA$$QAU?$pair@$$CBHPAVRaven_Weapon@@@0@AAU10@@Z ; std::forward<std::pair<int const ,Raven_Weapon *> >
 	add	esp, 4
 	push	eax
-	mov	ecx, DWORD PTR $T155126[ebp]
+	mov	ecx, DWORD PTR $T152955[ebp]
 	call	??$?0$$CBHPAVRaven_Weapon@@@?$pair@$$CBHPAVRaven_Weapon@@@std@@QAE@$$QAU01@@Z ; std::pair<int const ,Raven_Weapon *>::pair<int const ,Raven_Weapon *><int const ,Raven_Weapon *>
 	mov	DWORD PTR tv76[ebp], eax
 	jmp	SHORT $LN4@construct@2
@@ -39696,7 +39728,7 @@ $LN3@construct@2:
 	mov	DWORD PTR tv76[ebp], 0
 $LN4@construct@2:
 	mov	edx, DWORD PTR tv76[ebp]
-	mov	DWORD PTR $T155125[ebp], edx
+	mov	DWORD PTR $T152954[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -39716,7 +39748,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAEXPAU?$pair@$$CBHPAVRaven_Weapon@@@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T155126[ebp]
+	mov	ecx, DWORD PTR $T152955[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -39748,8 +39780,8 @@ xdata$x	ENDS
 ;	COMDAT ??$construct@U?$pair@HPAVRaven_Weapon@@@std@@@?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAEXPAU?$pair@$$CBHPAVRaven_Weapon@@@1@$$QAU?$pair@HPAVRaven_Weapon@@@1@@Z
 _TEXT	SEGMENT
 tv76 = -28						; size = 4
-$T155139 = -24						; size = 4
-$T155138 = -20						; size = 4
+$T152968 = -24						; size = 4
+$T152967 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -39786,16 +39818,16 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T155139[ebp], eax
+	mov	DWORD PTR $T152968[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T155139[ebp], 0
+	cmp	DWORD PTR $T152968[ebp], 0
 	je	SHORT $LN3@construct@3
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@U?$pair@HPAVRaven_Weapon@@@std@@@std@@YA$$QAU?$pair@HPAVRaven_Weapon@@@0@AAU10@@Z ; std::forward<std::pair<int,Raven_Weapon *> >
 	add	esp, 4
 	push	eax
-	mov	ecx, DWORD PTR $T155139[ebp]
+	mov	ecx, DWORD PTR $T152968[ebp]
 	call	??$?0HPAVRaven_Weapon@@@?$pair@$$CBHPAVRaven_Weapon@@@std@@QAE@$$QAU?$pair@HPAVRaven_Weapon@@@1@@Z ; std::pair<int const ,Raven_Weapon *>::pair<int const ,Raven_Weapon *><int,Raven_Weapon *>
 	mov	DWORD PTR tv76[ebp], eax
 	jmp	SHORT $LN4@construct@3
@@ -39803,7 +39835,7 @@ $LN3@construct@3:
 	mov	DWORD PTR tv76[ebp], 0
 $LN4@construct@3:
 	mov	edx, DWORD PTR tv76[ebp]
-	mov	DWORD PTR $T155138[ebp], edx
+	mov	DWORD PTR $T152967[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 209  : 		}
@@ -39823,7 +39855,7 @@ text$x	SEGMENT
 __unwindfunclet$??$construct@U?$pair@HPAVRaven_Weapon@@@std@@@?$allocator@U?$pair@$$CBHPAVRaven_Weapon@@@std@@@std@@QAEXPAU?$pair@$$CBHPAVRaven_Weapon@@@1@$$QAU?$pair@HPAVRaven_Weapon@@@1@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T155139[ebp]
+	mov	ecx, DWORD PTR $T152968[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8

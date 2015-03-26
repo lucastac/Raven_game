@@ -11,6 +11,8 @@
 #include "triggers/Trigger_WeaponGiver.h"
 #include "triggers/Trigger_OnButtonSendMsg.h"
 #include "triggers/Trigger_SoundNotify.h"
+#include "triggers/Trigger_Flag1.h"
+#include "triggers/Trigger_Flag2.h"
 
 #include "Raven_UserOptions.h"
 
@@ -143,6 +145,40 @@ void Raven_Map::AddHealth_Giver(std::ifstream& in)
   EntityMgr->RegisterEntity(hg);
 }
 
+//----------------------- AddFlag1 ----------------------------------
+//-----------------------------------------------------------------------------
+void Raven_Map::AddFlag1(std::ifstream& in)
+{
+  Trigger_Flag1* fg = new Trigger_Flag1(in);
+
+  m_TriggerSystem.Register(fg);
+
+  //let the corresponding navgraph node point to this object
+  NavGraph::NodeType& node = m_pNavGraph->GetNode(fg->GraphNodeIndex());
+
+  node.SetExtraInfo(fg);
+
+  //register the entity 
+  EntityMgr->RegisterEntity(fg);
+}
+
+//----------------------- AddFlag2 ----------------------------------
+//-----------------------------------------------------------------------------
+void Raven_Map::AddFlag2(std::ifstream& in)
+{
+  Trigger_Flag2* fg = new Trigger_Flag2(in);
+
+  m_TriggerSystem.Register(fg);
+
+  //let the corresponding navgraph node point to this object
+  NavGraph::NodeType& node = m_pNavGraph->GetNode(fg->GraphNodeIndex());
+
+  node.SetExtraInfo(fg);
+
+  //register the entity 
+  EntityMgr->RegisterEntity(fg);
+}
+
 //----------------------- AddWeapon__Giver ----------------------------------
 //-----------------------------------------------------------------------------
 void Raven_Map::AddWeapon_Giver(int type_of_weapon, std::ifstream& in)
@@ -264,6 +300,14 @@ bool Raven_Map::LoadMap(const std::string& filename)
    case type_health:
      
        AddHealth_Giver(in); break;
+
+   case type_flag1:
+     
+       AddFlag1(in); break;
+
+   case type_flag2:
+     
+       AddFlag2(in); break;
 
    case type_shotgun:
      
