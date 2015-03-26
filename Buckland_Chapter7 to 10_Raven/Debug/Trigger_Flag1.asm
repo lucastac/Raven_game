@@ -1325,31 +1325,34 @@ _pBot$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 21   :   if (isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
+; 21   : 	if (pBot->my_type == 1 && isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
 
+	mov	eax, DWORD PTR _pBot$[ebp]
+	cmp	DWORD PTR [eax+196], 1
+	jne	SHORT $LN1@Try
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?isActive@?$Trigger@VRaven_Bot@@@@QAE_NXZ ; Trigger<Raven_Bot>::isActive
-	movzx	eax, al
-	test	eax, eax
+	movzx	ecx, al
+	test	ecx, ecx
 	je	SHORT $LN1@Try
 	mov	ecx, DWORD PTR _pBot$[ebp]
 	call	?BRadius@BaseGameEntity@@QBENXZ		; BaseGameEntity::BRadius
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T140769[ebp]
-	push	ecx
+	lea	edx, DWORD PTR $T140769[ebp]
+	push	edx
 	mov	ecx, DWORD PTR _pBot$[ebp]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	sub	esp, 16					; 00000010H
-	mov	edx, esp
-	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR [edx], ecx
-	mov	ecx, DWORD PTR [eax+4]
-	mov	DWORD PTR [edx+4], ecx
-	mov	ecx, DWORD PTR [eax+8]
-	mov	DWORD PTR [edx+8], ecx
+	mov	ecx, esp
+	mov	edx, DWORD PTR [eax]
+	mov	DWORD PTR [ecx], edx
+	mov	edx, DWORD PTR [eax+4]
+	mov	DWORD PTR [ecx+4], edx
+	mov	edx, DWORD PTR [eax+8]
+	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
-	mov	DWORD PTR [edx+12], eax
+	mov	DWORD PTR [ecx+12], eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?isTouchingTrigger@?$Trigger@VRaven_Bot@@@@IBE_NUVector2D@@N@Z ; Trigger<Raven_Bot>::isTouchingTrigger
 	movzx	ecx, al

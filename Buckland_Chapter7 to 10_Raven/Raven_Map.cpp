@@ -149,34 +149,34 @@ void Raven_Map::AddHealth_Giver(std::ifstream& in)
 //-----------------------------------------------------------------------------
 void Raven_Map::AddFlag1(std::ifstream& in)
 {
-  Trigger_Flag1* fg = new Trigger_Flag1(in);
+  Trigger_Flag1* fg1 = new Trigger_Flag1(in);
 
-  m_TriggerSystem.Register(fg);
+  m_TriggerSystem.Register(fg1);
 
   //let the corresponding navgraph node point to this object
-  NavGraph::NodeType& node = m_pNavGraph->GetNode(fg->GraphNodeIndex());
+  NavGraph::NodeType& node = m_pNavGraph->GetNode(fg1->GraphNodeIndex());
 
-  node.SetExtraInfo(fg);
+  node.SetExtraInfo(fg1);
 
   //register the entity 
-  EntityMgr->RegisterEntity(fg);
+  EntityMgr->RegisterEntity(fg1);
 }
 
 //----------------------- AddFlag2 ----------------------------------
 //-----------------------------------------------------------------------------
 void Raven_Map::AddFlag2(std::ifstream& in)
 {
-  Trigger_Flag2* fg = new Trigger_Flag2(in);
+  Trigger_Flag2* fg2 = new Trigger_Flag2(in);
 
-  m_TriggerSystem.Register(fg);
+  m_TriggerSystem.Register(fg2);
 
   //let the corresponding navgraph node point to this object
-  NavGraph::NodeType& node = m_pNavGraph->GetNode(fg->GraphNodeIndex());
+  NavGraph::NodeType& node = m_pNavGraph->GetNode(fg2->GraphNodeIndex());
 
-  node.SetExtraInfo(fg);
+  node.SetExtraInfo(fg2);
 
   //register the entity 
-  EntityMgr->RegisterEntity(fg);
+  EntityMgr->RegisterEntity(fg2);
 }
 
 //----------------------- AddWeapon__Giver ----------------------------------

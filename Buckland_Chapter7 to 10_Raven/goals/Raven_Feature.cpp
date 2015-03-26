@@ -18,7 +18,7 @@ double Raven_Feature::DistanceToItem(Raven_Bot* pBot, int ItemType)
 
   //these values represent cutoffs. Any distance over MaxDistance results in
   //a value of 0, and value below MinDistance results in a value of 1
-  const double MaxDistance = 500.0;
+  const double MaxDistance = 1000.0;
   const double MinDistance = 50.0;
 
   Clamp(DistanceToItem, MinDistance, MaxDistance);

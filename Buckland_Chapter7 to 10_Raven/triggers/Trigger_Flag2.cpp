@@ -18,7 +18,7 @@ Trigger_Flag2::Trigger_Flag2(std::ifstream& datafile):
 
 void Trigger_Flag2::Try(Raven_Bot* pBot)
 {
-  if (isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
+  if (pBot->my_type == 0 && isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
   {
     pBot->IncreaseHealth(m_iHealthGiven);
 
@@ -59,6 +59,6 @@ void Trigger_Flag2::Read(std::ifstream& in)
   //create this trigger's region of fluence
   AddCircularTriggerRegion(Pos(), script->GetDouble("DefaultGiverTriggerRange"));
 
-  SetRespawnDelay((unsigned int)(script->GetDouble("Flag_RespawnDelay") * FrameRate));
+  SetRespawnDelay(1000 * FrameRate);
   SetEntityType(type_flag2);
 }

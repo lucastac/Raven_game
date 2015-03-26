@@ -17,6 +17,7 @@
 #include "GetHealthGoal_Evaluator.h"
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
+#include "GetFlagGoal_Evaluator.h"
 
 //#include "Goal_Think_Plus.h"
 
@@ -52,7 +53,8 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
   double RocketLauncherBias = 0.8;
   double RailgunBias = 0.8;
   double ExploreBias = 0.5;
-  double AttackBias = 1.5;
+  double AttackBias = 4.0;
+  double FlagBias = 1.0;
 
   //create the evaluator objects
   m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
@@ -64,6 +66,7 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
                                                      type_rail_gun));
   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
                                                      type_rocket_launcher));
+  m_Evaluators.push_back(new GetFlagGoal_Evaluator(FlagBias));
 }
 
 //----------------------------- dtor ------------------------------------------
@@ -138,7 +141,7 @@ void Goal_Think::Arbitrate()
   //assert(MostDesirable && "<Goal_Think::Arbitrate>: no evaluator selected");
 
   MostDesirable->SetGoal(m_pOwner);
-  //AddGoal_GetItem(8);
+  //AddGoal_GetItem(14 - m_pOwner->my_type);
 }
 
 

@@ -277,6 +277,9 @@
     <ClCompile Include="triggers\Trigger_Flag2.cpp">
       <Filter>AI\Triggers</Filter>
     </ClCompile>
+    <ClCompile Include="goals\GetFlagGoal_Evaluator.cpp">
+      <Filter>AI\goals\goal evaluation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Raven_Bot.h">
@@ -623,6 +626,9 @@
     </ClInclude>
     <ClInclude Include="triggers\Trigger_Flag2.h">
       <Filter>AI\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="goals\GetFlagGoal_Evaluator.h">
+      <Filter>AI\goals\goal evaluation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@
 
 
 
-class Trigger_Flag2: public Trigger_Respawning<Raven_Bot>
+class Trigger_Flag2 : public Trigger_Respawning<Raven_Bot>
 {
 private:
 

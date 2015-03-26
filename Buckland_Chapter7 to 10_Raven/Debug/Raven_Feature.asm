@@ -946,7 +946,7 @@ CONST	SEGMENT
 CONST	ENDS
 PUBLIC	??$Clamp@NNN@@YAXAANABN1@Z			; Clamp<double,double,double>
 PUBLIC	__real@4049000000000000
-PUBLIC	__real@407f400000000000
+PUBLIC	__real@408f400000000000
 PUBLIC	__real@3ff0000000000000
 PUBLIC	__real@0000000000000000
 PUBLIC	?GetPathPlanner@Raven_Bot@@QAEQAVRaven_PathPlanner@@XZ ; Raven_Bot::GetPathPlanner
@@ -962,9 +962,9 @@ EXTRN	__RTC_InitBase:PROC
 CONST	SEGMENT
 __real@4049000000000000 DQ 04049000000000000r	; 50
 CONST	ENDS
-;	COMDAT __real@407f400000000000
+;	COMDAT __real@408f400000000000
 CONST	SEGMENT
-__real@407f400000000000 DQ 0407f400000000000r	; 500
+__real@408f400000000000 DQ 0408f400000000000r	; 1000
 CONST	ENDS
 ;	COMDAT __real@3ff0000000000000
 CONST	SEGMENT
@@ -1030,9 +1030,9 @@ $LN1@DistanceTo:
 ; 18   : 
 ; 19   :   //these values represent cutoffs. Any distance over MaxDistance results in
 ; 20   :   //a value of 0, and value below MinDistance results in a value of 1
-; 21   :   const double MaxDistance = 500.0;
+; 21   :   const double MaxDistance = 1000.0;
 
-	fld	QWORD PTR __real@407f400000000000
+	fld	QWORD PTR __real@408f400000000000
 	fstp	QWORD PTR _MaxDistance$[ebp]
 
 ; 22   :   const double MinDistance = 50.0;

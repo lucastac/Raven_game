@@ -18,7 +18,7 @@ Trigger_Flag1::Trigger_Flag1(std::ifstream& datafile):
 
 void Trigger_Flag1::Try(Raven_Bot* pBot)
 {
-  if (isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
+	if (pBot->my_type == 1 && isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
   {
     pBot->IncreaseHealth(m_iHealthGiven);
 

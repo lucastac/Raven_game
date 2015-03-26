@@ -11,6 +11,11 @@ std::string GoalTypeToString::Convert(int gt)
 {
   switch(gt)
   {
+
+  case goal_get_flag:
+
+	  return "get_flag";
+
   case goal_explore:
 
     return "explore";

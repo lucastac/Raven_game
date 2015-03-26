@@ -192,39 +192,41 @@ PUBLIC	?beg@?$_Iosb@H@std@@2W4_Seekdir@12@B		; std::_Iosb<int>::beg
 PUBLIC	?cur@?$_Iosb@H@std@@2W4_Seekdir@12@B		; std::_Iosb<int>::cur
 PUBLIC	?end@?$_Iosb@H@std@@2W4_Seekdir@12@B		; std::_Iosb<int>::end
 CONST	SEGMENT
-$SG27975 DB	'explore', 00H
-$SG27977 DB	'think', 00H
-	ORG $+2
-$SG27979 DB	'Think_Plus', 00H
-	ORG $+1
-$SG27981 DB	'arrive_at_position', 00H
-	ORG $+1
-$SG27983 DB	'seek_to_position', 00H
+$SG27976 DB	'get_flag', 00H
 	ORG $+3
-$SG27985 DB	'follow_path', 00H
-$SG27987 DB	'traverse_edge', 00H
+$SG27978 DB	'explore', 00H
+$SG27980 DB	'think', 00H
 	ORG $+2
-$SG27989 DB	'move_to_position', 00H
+$SG27982 DB	'Think_Plus', 00H
+	ORG $+1
+$SG27984 DB	'arrive_at_position', 00H
+	ORG $+1
+$SG27986 DB	'seek_to_position', 00H
 	ORG $+3
-$SG27991 DB	'get_health', 00H
-	ORG $+1
-$SG27993 DB	'get_shotgun', 00H
-$SG27995 DB	'get_railgun', 00H
-$SG27997 DB	'get_rocket_launcher', 00H
-$SG27999 DB	'wander', 00H
-	ORG $+1
-$SG28001 DB	'negotiate_door', 00H
-	ORG $+1
-$SG28003 DB	'attack_target', 00H
+$SG27988 DB	'follow_path', 00H
+$SG27990 DB	'traverse_edge', 00H
 	ORG $+2
-$SG28005 DB	'hunt_target', 00H
-$SG28007 DB	'strafe', 00H
-	ORG $+1
-$SG28009 DB	'adjust_range', 00H
+$SG27992 DB	'move_to_position', 00H
 	ORG $+3
-$SG28011 DB	'say_phrase', 00H
+$SG27994 DB	'get_health', 00H
 	ORG $+1
-$SG28013 DB	'UNKNOWN GOAL TYPE!', 00H
+$SG27996 DB	'get_shotgun', 00H
+$SG27998 DB	'get_railgun', 00H
+$SG28000 DB	'get_rocket_launcher', 00H
+$SG28002 DB	'wander', 00H
+	ORG $+1
+$SG28004 DB	'negotiate_door', 00H
+	ORG $+1
+$SG28006 DB	'attack_target', 00H
+	ORG $+2
+$SG28008 DB	'hunt_target', 00H
+$SG28010 DB	'strafe', 00H
+	ORG $+1
+$SG28012 DB	'adjust_range', 00H
+	ORG $+3
+$SG28014 DB	'say_phrase', 00H
+	ORG $+1
+$SG28016 DB	'UNKNOWN GOAL TYPE!', 00H
 CONST	ENDS
 ;	COMDAT ?end@?$_Iosb@H@std@@2W4_Seekdir@12@B
 CONST	SEGMENT
@@ -1144,7 +1146,7 @@ _this$ = -4						; size = 4
 ??0GoalTypeToString@@AAE@XZ PROC			; GoalTypeToString::GoalTypeToString, COMDAT
 ; _this$ = ecx
 
-; 34   :   GoalTypeToString(){}
+; 35   :   GoalTypeToString(){}
 
 	push	ebp
 	mov	ebp, esp
@@ -1204,7 +1206,7 @@ PUBLIC	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\goals\raven_goal_types.cpp
 _TEXT	SEGMENT
 tv64 = -12						; size = 4
-$T31642 = -8						; size = 4
+$T31645 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 _gt$ = 12						; size = 4
@@ -1220,320 +1222,336 @@ _gt$ = 12						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T31642[ebp], 0
+	mov	DWORD PTR $T31645[ebp], 0
 
 ; 12   :   switch(gt)
 
 	mov	eax, DWORD PTR _gt$[ebp]
 	mov	DWORD PTR tv64[ebp], eax
-	cmp	DWORD PTR tv64[ebp], 18			; 00000012H
+	cmp	DWORD PTR tv64[ebp], 19			; 00000013H
 	ja	$LN1@Convert
 	mov	ecx, DWORD PTR tv64[ebp]
-	jmp	DWORD PTR $LN27@Convert[ecx*4]
-$LN20@Convert:
+	jmp	DWORD PTR $LN28@Convert[ecx*4]
+$LN21@Convert:
 
 ; 13   :   {
-; 14   :   case goal_explore:
-; 15   : 
-; 16   :     return "explore";
+; 14   : 
+; 15   :   case goal_get_flag:
+; 16   : 
+; 17   : 	  return "get_flag";
 
-	push	OFFSET $SG27975
+	push	OFFSET $SG27976
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
+	mov	edx, DWORD PTR $T31645[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
+$LN20@Convert:
+
+; 18   : 
+; 19   :   case goal_explore:
+; 20   : 
+; 21   :     return "explore";
+
+	push	OFFSET $SG27978
+	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
+	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
+	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
+	jmp	$LN24@Convert
 $LN19@Convert:
 
-; 17   : 
-; 18   :   case goal_think:
-; 19   : 
-; 20   :     return "think";
+; 22   : 
+; 23   :   case goal_think:
+; 24   : 
+; 25   :     return "think";
 
-	push	OFFSET $SG27977
+	push	OFFSET $SG27980
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN18@Convert:
 
-; 21   : 
-; 22   :   case goal_think_plus:
-; 23   : 
-; 24   : 	  return "Think_Plus";
+; 26   : 
+; 27   :   case goal_think_plus:
+; 28   : 
+; 29   : 	  return "Think_Plus";
 
-	push	OFFSET $SG27979
+	push	OFFSET $SG27982
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T31642[ebp]
-	or	ecx, 1
-	mov	DWORD PTR $T31642[ebp], ecx
+	mov	edx, DWORD PTR $T31645[ebp]
+	or	edx, 1
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN17@Convert:
 
-; 25   : 
-; 26   :   case goal_arrive_at_position:
-; 27   : 
-; 28   :     return "arrive_at_position";
+; 30   : 
+; 31   :   case goal_arrive_at_position:
+; 32   : 
+; 33   :     return "arrive_at_position";
 
-	push	OFFSET $SG27981
+	push	OFFSET $SG27984
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
-	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN16@Convert:
 
-; 29   : 
-; 30   :   case goal_seek_to_position:
-; 31   : 
-; 32   :     return "seek_to_position";
+; 34   : 
+; 35   :   case goal_seek_to_position:
+; 36   : 
+; 37   :     return "seek_to_position";
 
-	push	OFFSET $SG27983
+	push	OFFSET $SG27986
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN15@Convert:
 
-; 33   : 
-; 34   :   case goal_follow_path:
-; 35   : 
-; 36   :     return "follow_path";
+; 38   : 
+; 39   :   case goal_follow_path:
+; 40   : 
+; 41   :     return "follow_path";
 
-	push	OFFSET $SG27985
+	push	OFFSET $SG27988
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T31642[ebp]
-	or	ecx, 1
-	mov	DWORD PTR $T31642[ebp], ecx
+	mov	edx, DWORD PTR $T31645[ebp]
+	or	edx, 1
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN14@Convert:
 
-; 37   : 
-; 38   :   case goal_traverse_edge:
-; 39   : 
-; 40   :     return "traverse_edge";
+; 42   : 
+; 43   :   case goal_traverse_edge:
+; 44   : 
+; 45   :     return "traverse_edge";
 
-	push	OFFSET $SG27987
+	push	OFFSET $SG27990
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
-	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN13@Convert:
 
-; 41   : 
-; 42   :   case goal_move_to_position:
-; 43   : 
-; 44   :     return "move_to_position";
+; 46   : 
+; 47   :   case goal_move_to_position:
+; 48   : 
+; 49   :     return "move_to_position";
 
-	push	OFFSET $SG27989
+	push	OFFSET $SG27992
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN12@Convert:
 
-; 45   : 
-; 46   :   case goal_get_health:
-; 47   : 
-; 48   :     return "get_health";
+; 50   : 
+; 51   :   case goal_get_health:
+; 52   : 
+; 53   :     return "get_health";
 
-	push	OFFSET $SG27991
+	push	OFFSET $SG27994
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T31642[ebp]
-	or	ecx, 1
-	mov	DWORD PTR $T31642[ebp], ecx
+	mov	edx, DWORD PTR $T31645[ebp]
+	or	edx, 1
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN11@Convert:
 
-; 49   : 
-; 50   :   case goal_get_shotgun:
-; 51   : 
-; 52   :     return "get_shotgun";
+; 54   : 
+; 55   :   case goal_get_shotgun:
+; 56   : 
+; 57   :     return "get_shotgun";
 
-	push	OFFSET $SG27993
+	push	OFFSET $SG27996
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
-	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN10@Convert:
 
-; 53   : 
-; 54   :   case goal_get_railgun:
-; 55   : 
-; 56   :     return "get_railgun";
+; 58   : 
+; 59   :   case goal_get_railgun:
+; 60   : 
+; 61   :     return "get_railgun";
 
-	push	OFFSET $SG27995
+	push	OFFSET $SG27998
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN9@Convert:
 
-; 57   : 
-; 58   :   case goal_get_rocket_launcher:
-; 59   : 
-; 60   :     return "get_rocket_launcher";
+; 62   : 
+; 63   :   case goal_get_rocket_launcher:
+; 64   : 
+; 65   :     return "get_rocket_launcher";
 
-	push	OFFSET $SG27997
+	push	OFFSET $SG28000
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T31642[ebp]
-	or	ecx, 1
-	mov	DWORD PTR $T31642[ebp], ecx
+	mov	edx, DWORD PTR $T31645[ebp]
+	or	edx, 1
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN8@Convert:
 
-; 61   : 
-; 62   :   case goal_wander:
-; 63   : 
-; 64   :     return "wander";
+; 66   : 
+; 67   :   case goal_wander:
+; 68   : 
+; 69   :     return "wander";
 
-	push	OFFSET $SG27999
+	push	OFFSET $SG28002
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
-	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN7@Convert:
 
-; 65   : 
-; 66   :   case goal_negotiate_door:
-; 67   : 
-; 68   :     return "negotiate_door";
+; 70   : 
+; 71   :   case goal_negotiate_door:
+; 72   : 
+; 73   :     return "negotiate_door";
 
-	push	OFFSET $SG28001
+	push	OFFSET $SG28004
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN6@Convert:
 
-; 69   : 
-; 70   :   case goal_attack_target:
-; 71   : 
-; 72   :     return "attack_target";
+; 74   : 
+; 75   :   case goal_attack_target:
+; 76   : 
+; 77   :     return "attack_target";
 
-	push	OFFSET $SG28003
+	push	OFFSET $SG28006
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T31642[ebp]
-	or	ecx, 1
-	mov	DWORD PTR $T31642[ebp], ecx
+	mov	edx, DWORD PTR $T31645[ebp]
+	or	edx, 1
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	$LN23@Convert
+	jmp	$LN24@Convert
 $LN5@Convert:
 
-; 73   : 
-; 74   :   case goal_hunt_target:
-; 75   : 
-; 76   :     return "hunt_target";
+; 78   : 
+; 79   :   case goal_hunt_target:
+; 80   : 
+; 81   :     return "hunt_target";
 
-	push	OFFSET $SG28005
+	push	OFFSET $SG28008
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
-	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	SHORT $LN23@Convert
+	jmp	SHORT $LN24@Convert
 $LN4@Convert:
 
-; 77   : 
-; 78   :   case goal_strafe:
-; 79   : 
-; 80   :     return "strafe";
+; 82   : 
+; 83   :   case goal_strafe:
+; 84   : 
+; 85   :     return "strafe";
 
-	push	OFFSET $SG28007
+	push	OFFSET $SG28010
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	SHORT $LN23@Convert
+	jmp	SHORT $LN24@Convert
 $LN3@Convert:
 
-; 81   : 
-; 82   :   case goal_adjust_range:
-; 83   : 
-; 84   :     return "adjust_range";
+; 86   : 
+; 87   :   case goal_adjust_range:
+; 88   : 
+; 89   :     return "adjust_range";
 
-	push	OFFSET $SG28009
+	push	OFFSET $SG28012
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T31642[ebp]
-	or	ecx, 1
-	mov	DWORD PTR $T31642[ebp], ecx
+	mov	edx, DWORD PTR $T31645[ebp]
+	or	edx, 1
+	mov	DWORD PTR $T31645[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	SHORT $LN23@Convert
+	jmp	SHORT $LN24@Convert
 $LN2@Convert:
 
-; 85   : 
-; 86   :   case goal_say_phrase:
-; 87   : 
-; 88   :     return "say_phrase";
+; 90   : 
+; 91   :   case goal_say_phrase:
+; 92   : 
+; 93   :     return "say_phrase";
 
-	push	OFFSET $SG28011
+	push	OFFSET $SG28014
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	edx, DWORD PTR $T31642[ebp]
-	or	edx, 1
-	mov	DWORD PTR $T31642[ebp], edx
+	mov	eax, DWORD PTR $T31645[ebp]
+	or	eax, 1
+	mov	DWORD PTR $T31645[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-	jmp	SHORT $LN23@Convert
+	jmp	SHORT $LN24@Convert
 $LN1@Convert:
 
-; 89   : 
-; 90   :   default:
-; 91   : 
-; 92   :     return "UNKNOWN GOAL TYPE!";
+; 94   : 
+; 95   :   default:
+; 96   : 
+; 97   :     return "UNKNOWN GOAL TYPE!";
 
-	push	OFFSET $SG28013
+	push	OFFSET $SG28016
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	eax, DWORD PTR $T31642[ebp]
-	or	eax, 1
-	mov	DWORD PTR $T31642[ebp], eax
+	mov	ecx, DWORD PTR $T31645[ebp]
+	or	ecx, 1
+	mov	DWORD PTR $T31645[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
-$LN23@Convert:
+$LN24@Convert:
 
-; 93   : 
-; 94   :   }//end switch
-; 95   : }
+; 98   : 
+; 99   :   }//end switch
+; 100  : }
 
 	add	esp, 12					; 0000000cH
 	cmp	ebp, esp
@@ -1541,8 +1559,7 @@ $LN23@Convert:
 	mov	esp, ebp
 	pop	ebp
 	ret	8
-	npad	2
-$LN27@Convert:
+$LN28@Convert:
 	DD	$LN19@Convert
 	DD	$LN20@Convert
 	DD	$LN17@Convert
@@ -1562,6 +1579,7 @@ $LN27@Convert:
 	DD	$LN3@Convert
 	DD	$LN2@Convert
 	DD	$LN18@Convert
+	DD	$LN21@Convert
 ?Convert@GoalTypeToString@@UAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z ENDP ; GoalTypeToString::Convert
 _TEXT	ENDS
 PUBLIC	??1?$_String_val@DV?$allocator@D@std@@@std@@QAE@XZ ; std::_String_val<char,std::allocator<char> >::~_String_val<char,std::allocator<char> >
@@ -1585,7 +1603,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z
 _TEXT	SEGMENT
-$T31646 = -20						; size = 4
+$T31649 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -1611,7 +1629,7 @@ __Ptr$ = 8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T31646[ebp], esp
+	mov	DWORD PTR $T31649[ebp], esp
 	call	??0?$allocator@D@std@@QAE@XZ		; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z ; std::_String_val<char,std::allocator<char> >::_String_val<char,std::allocator<char> >
@@ -1761,7 +1779,7 @@ PUBLIC	?copy@?$char_traits@D@std@@SAPADPADPBDI@Z	; std::char_traits<char>::copy
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xstring
 ;	COMDAT ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEX_NI@Z
 _TEXT	SEGMENT
-__Ptr$28864 = -8					; size = 4
+__Ptr$28867 = -8					; size = 4
 _this$ = -4						; size = 4
 __Built$ = 8						; size = 1
 __Newsize$ = 12						; size = 4
@@ -1797,7 +1815,7 @@ $LN4@Tidy:
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+4]
-	mov	DWORD PTR __Ptr$28864[ebp], eax
+	mov	DWORD PTR __Ptr$28867[ebp], eax
 
 ; 1993 : 			if (0 < _Newsize)
 
@@ -1808,7 +1826,7 @@ $LN4@Tidy:
 
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Ptr$28864[ebp]
+	mov	edx, DWORD PTR __Ptr$28867[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 4
@@ -1823,7 +1841,7 @@ $LN1@Tidy:
 	mov	edx, DWORD PTR [ecx+24]
 	add	edx, 1
 	push	edx
-	mov	eax, DWORD PTR __Ptr$28864[ebp]
+	mov	eax, DWORD PTR __Ptr$28867[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 28					; 0000001cH
@@ -1911,7 +1929,7 @@ __ehfuncinfo$??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z
 xdata$x	ENDS
 ;	COMDAT ??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z
 _TEXT	SEGMENT
-$T31664 = -36						; size = 8
+$T31667 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -1969,7 +1987,7 @@ __Al$ = 8						; size = 1
 
 ; 470  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T31664[ebp]
+	lea	ecx, DWORD PTR $T31667[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -2546,7 +2564,7 @@ PUBLIC	?assign@?$char_traits@D@std@@SAXAADABD@Z	; std::char_traits<char>::assign
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z
 _TEXT	SEGMENT
-$T31708 = -5						; size = 1
+$T31711 = -5						; size = 1
 _this$ = -4						; size = 4
 __Newsize$ = 8						; size = 4
 ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos, COMDAT
@@ -2563,11 +2581,11 @@ __Newsize$ = 8						; size = 4
 
 ; 1953 : 		_Traits::assign(_Myptr()[this->_Mysize = _Newsize], _Elem());
 
-	mov	BYTE PTR $T31708[ebp], 0
+	mov	BYTE PTR $T31711[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	mov	DWORD PTR [eax+20], ecx
-	lea	edx, DWORD PTR $T31708[ebp]
+	lea	edx, DWORD PTR $T31711[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Myptr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEPADXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Myptr
@@ -3214,7 +3232,7 @@ PUBLIC	?move@?$char_traits@D@std@@SAPADPADPBDI@Z	; std::char_traits<char>::move
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z
 _TEXT	SEGMENT
-__Newsize$29506 = -8					; size = 4
+__Newsize$29509 = -8					; size = 4
 _this$ = -4						; size = 4
 __Off$ = 8						; size = 4
 __Count$ = 12						; size = 4
@@ -3290,11 +3308,11 @@ $LN2@erase:
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+20]
 	sub	eax, DWORD PTR __Count$[ebp]
-	mov	DWORD PTR __Newsize$29506[ebp], eax
+	mov	DWORD PTR __Newsize$29509[ebp], eax
 
 ; 1118 : 			_Eos(_Newsize);
 
-	mov	ecx, DWORD PTR __Newsize$29506[ebp]
+	mov	ecx, DWORD PTR __Newsize$29509[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos
@@ -3976,7 +3994,7 @@ __TI2?AVbad_alloc@std@@ DD 00H
 xdata$x	ENDS
 ;	COMDAT ??$_Allocate@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@IPAU10@@Z
 _TEXT	SEGMENT
-$T31784 = -16						; size = 12
+$T31787 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -4029,10 +4047,10 @@ $LN1@Allocate:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T31784[ebp]
+	lea	ecx, DWORD PTR $T31787[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T31784[ebp]
+	lea	ecx, DWORD PTR $T31787[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate:
@@ -4220,7 +4238,7 @@ $LN1@scalar:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@D@std@@YAPADIPAD@Z
 _TEXT	SEGMENT
-$T31793 = -16						; size = 12
+$T31796 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -4272,10 +4290,10 @@ $LN1@Allocate@2:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T31793[ebp]
+	lea	ecx, DWORD PTR $T31796[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T31793[ebp]
+	lea	ecx, DWORD PTR $T31796[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@2:
@@ -4341,8 +4359,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T31800 = -24						; size = 4
-$T31799 = -20						; size = 4
+$T31803 = -24						; size = 4
+$T31802 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -4378,9 +4396,9 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T31800[ebp], eax
+	mov	DWORD PTR $T31803[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T31800[ebp], 0
+	cmp	DWORD PTR $T31803[ebp], 0
 	je	SHORT $LN3@construct
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -4388,17 +4406,17 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR [eax+4]
-	mov	ecx, DWORD PTR $T31800[ebp]
+	mov	ecx, DWORD PTR $T31803[ebp]
 	mov	DWORD PTR [ecx], edx
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR $T31800[ebp]
+	mov	edx, DWORD PTR $T31803[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct
 $LN3@construct:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T31799[ebp], eax
+	mov	DWORD PTR $T31802[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -4418,7 +4436,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T31800[ebp]
+	mov	ecx, DWORD PTR $T31803[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8

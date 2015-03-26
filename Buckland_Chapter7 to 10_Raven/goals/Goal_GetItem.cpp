@@ -29,6 +29,14 @@ int ItemTypeToGoalType(int gt)
   case type_rocket_launcher:
 
     return goal_get_rocket_launcher;
+ 
+  case type_flag1:
+	  
+	  return goal_get_flag;
+
+  case type_flag2:
+	  
+	  return goal_get_flag;
 
   default: throw std::runtime_error("Goal_GetItem cannot determine item type");
 
