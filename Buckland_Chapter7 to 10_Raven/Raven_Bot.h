@@ -77,6 +77,9 @@ public:
   //gambiarra
 	int                                my_type;
 
+  //se está ou não com a bandeira
+	bool                               Has_flag;
+
   //the bot's health. Every time the bot is shot this value is decreased. If
   //it reaches zero then the bot dies (and respawns)
   int                                m_iHealth;

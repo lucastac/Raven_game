@@ -262,7 +262,6 @@ void Raven_Game::AddBots(unsigned int NumBotsToAdd)
 	rbp->GetSteering()->WallAvoidanceOn();
     rbp->GetSteering()->SeparationOn();
 
-
     m_Bots.push_back(rb);
 	m_Bots.push_back(rbp);
 

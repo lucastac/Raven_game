@@ -21,6 +21,7 @@
 
 class Goal_Think : public Goal_Composite<Raven_Bot>
 {
+
 public:
   
   typedef std::vector<Goal_Evaluator*>   GoalEvaluators;
@@ -58,6 +59,7 @@ public:
   //this renders the evaluations (goal scores) at the specified location
   void  RenderEvaluations(int left, int top)const;
   void  Render();
+  bool HandleMessage(const Telegram& msg);
 
 
 };

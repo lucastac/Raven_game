@@ -82,6 +82,7 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
 
   m_pSensoryMem = new Raven_SensoryMemory(this, script->GetDouble("Bot_MemorySpan"));
   my_type = 0;
+  Has_flag = false;
 }
 
 //-------------------------------- dtor ---------------------------------------
@@ -277,6 +278,22 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
       return true;
     }
 
+
+  case Msg_Took_Flag:
+	  {
+		  std::list<Raven_Bot*> bots = GetWorld()->GetAllBots();
+		  std::list<Raven_Bot*>::const_iterator curBot = bots.begin();
+		  for (curBot; curBot != bots.end(); ++curBot)
+		  {
+			  Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                              my_type,
+							  (* curBot)->ID(),
+							  Msg_We_Won,
+                              NO_ADDITIONAL_INFO);
+		  }
+
+		  return true;
+	  }
 
   default: return false;
   }

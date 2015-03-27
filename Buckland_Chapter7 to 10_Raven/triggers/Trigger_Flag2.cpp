@@ -20,7 +20,12 @@ void Trigger_Flag2::Try(Raven_Bot* pBot)
 {
   if (pBot->my_type == 0 && isActive() && isTouchingTrigger(pBot->Pos(), pBot->BRadius()))
   {
-    pBot->IncreaseHealth(m_iHealthGiven);
+   //pBot->IncreaseHealth(m_iHealthGiven);
+	  Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                              ID(),
+							  pBot->ID(),
+                              Msg_Took_Flag,
+                              NO_ADDITIONAL_INFO);
 
     Deactivate();
   } 

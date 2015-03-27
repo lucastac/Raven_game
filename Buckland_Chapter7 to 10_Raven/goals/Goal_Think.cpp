@@ -5,6 +5,10 @@
 #include "misc/utils.h"
 #include "../lua/Raven_Scriptor.h"
 
+#include "Messaging/Telegram.h"
+#include "../Raven_Messages.h"
+#include "Messaging/MessageDispatcher.h"
+
 #include "Goal_MoveToPosition.h"
 #include "Goal_Explore.h"
 #include "Goal_GetItem.h"
@@ -47,6 +51,7 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
                                                      type_rail_gun));
   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
                                                      type_rocket_launcher));*/
+
 
   double HealthBias = 1.0;
   double ShotgunBias = 0.8;
@@ -98,18 +103,21 @@ void Goal_Think::Activate()
 //-----------------------------------------------------------------------------
 int Goal_Think::Process()
 {
-  //if(m_pOwner->my_type ==1) return active ;
-  ActivateIfInactive();
+	if(m_iStatus != completed)
+	{
+	  //if(m_pOwner->my_type ==1) return active ;
+	  ActivateIfInactive();
   
-  int SubgoalStatus = ProcessSubgoals();
+	  int SubgoalStatus = ProcessSubgoals();
 
-  //if (SubgoalStatus == completed || SubgoalStatus == failed)
- // {
-    if (!m_pOwner->isPossessed())
-    {
-      m_iStatus = inactive;
-    }
-  //}
+	  //if (SubgoalStatus == completed || SubgoalStatus == failed)
+	 // {
+		if (!m_pOwner->isPossessed())
+		{
+		  m_iStatus = inactive;
+		}
+	  //}
+	}
 
   return m_iStatus;
 }
@@ -121,6 +129,7 @@ int Goal_Think::Process()
 //-----------------------------------------------------------------------------
 void Goal_Think::Arbitrate()
 {
+	if(m_iStatus == completed) return;
 	//if(m_pOwner->my_type ==1) return ;
   double best = 0;
   Goal_Evaluator* MostDesirable = 0;
@@ -244,6 +253,23 @@ void Goal_Think::Render()
   {
     (*curG)->Render();
   }
+}
+
+bool Goal_Think::HandleMessage(const Telegram& msg)
+{
+	switch(msg.Msg)
+	{
+		case Msg_We_Won:
+		{
+			RemoveAllSubgoals();
+			m_iStatus = completed;
+			//if(msg.Sender == m_pOwner->my_type) AddGoal_Explore();
+			//else AddGoal_AttackTarget();
+		}
+
+		default: return ForwardMessageToFrontMostSubgoal(msg);
+	}
+	
 }
 
 

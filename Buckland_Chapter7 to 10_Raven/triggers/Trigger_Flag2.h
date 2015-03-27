@@ -15,6 +15,9 @@
 #include "Triggers/TriggerRegion.h"
 #include <iosfwd>
 #include "../Raven_Bot.h"
+#include "../../Common/Messaging/MessageDispatcher.h"
+#include "../../Common/Messaging/Telegram.h"
+#include "../Raven_Messages.h"
 
 
 
