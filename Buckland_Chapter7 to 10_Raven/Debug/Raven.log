@@ -1,4 +1,4 @@
-﻿Build started 27/03/2015 10:30:36.
+﻿Build started 27/03/2015 14:15:45.
      1>Project "C:\Users\Lucas\Desktop\jogos - game ai by example\Raven_Game\Buckland_Chapter7 to 10_Raven\Raven.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating ".\Debug\Raven.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -21,4 +21,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.32
+Time Elapsed 00:00:01.09
