@@ -110,13 +110,13 @@ int Goal_Think::Process()
   
 	  int SubgoalStatus = ProcessSubgoals();
 
-	  //if (SubgoalStatus == completed || SubgoalStatus == failed)
-	 // {
+	  if (SubgoalStatus == completed || SubgoalStatus == failed)
+	  {
 		if (!m_pOwner->isPossessed())
 		{
 		  m_iStatus = inactive;
 		}
-	  //}
+	  }
 	}
 
   return m_iStatus;
@@ -259,6 +259,12 @@ bool Goal_Think::HandleMessage(const Telegram& msg)
 {
 	switch(msg.Msg)
 	{
+		case Msg_TakeThatMF:
+		{
+			if(m_pOwner->Health() <=50 && m_iStatus != completed) m_iStatus = inactive;
+			return ForwardMessageToFrontMostSubgoal(msg);
+		}
+
 		case Msg_We_Won:
 		{
 			RemoveAllSubgoals();

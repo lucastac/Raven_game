@@ -151,9 +151,14 @@ void Raven_Game::Update()
   {
     //if this bot's status is 'respawning' attempt to resurrect it from
     //an unoccupied spawn point
-    if ((*curBot)->isSpawning() && bSpawnPossible)
+    if ((*curBot)->isSpawning())
     {
-      bSpawnPossible = AttemptToAddBot(*curBot);
+		(*curBot)->spawn_Time -= 1; //decrementa o tempo de respawn
+
+		if( ( (*curBot)->spawn_Time <= 0 )  && bSpawnPossible)
+		{
+			 bSpawnPossible = AttemptToAddBot(*curBot);
+		}
     }
     
     //if this bot's status is 'dead' add a grave at its current location 

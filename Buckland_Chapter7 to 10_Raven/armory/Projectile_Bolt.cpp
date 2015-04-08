@@ -18,6 +18,7 @@ Bolt::Bolt(Raven_Bot* shooter, Vector2D target):
         Raven_Projectile(target,
                          shooter->GetWorld(),
                          shooter->ID(),
+						 shooter->my_type,
                          shooter->Pos(),
                          shooter->Facing(),
                          script->GetInt("Bolt_Damage"),
@@ -93,6 +94,12 @@ void Bolt::Update()
 //-----------------------------------------------------------------------------
 void Bolt::Render()
 {
-  gdi->ThickGreenPen();
+  if(source_Type==1)
+  {
+	gdi->ThickGreenPen();
+  }else if(source_Type == 0)
+  {
+	  gdi->BrownPen();
+  }
   gdi->Line(Pos(), Pos()-Velocity());
 }

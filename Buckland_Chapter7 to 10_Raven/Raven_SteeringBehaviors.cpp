@@ -389,7 +389,7 @@ Vector2D Raven_Steering::Separation(const std::list<Raven_Bot*>& neighbors)
     //make sure this agent isn't included in the calculations and that
     //the agent being examined is close enough. ***also make sure it doesn't
     //include the evade target ***
-    if((*it != m_pRaven_Bot) && (*it)->IsTagged() &&
+	  if( (*it)->isAlive() && (*it != m_pRaven_Bot) && (*it)->IsTagged() &&
       (*it != m_pTargetAgent1))
     {
       Vector2D ToAgent = m_pRaven_Bot->Pos() - (*it)->Pos();

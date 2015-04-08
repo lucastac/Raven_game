@@ -20,6 +20,7 @@ Slug::Slug(Raven_Bot* shooter, Vector2D target):
         Raven_Projectile(target,
                          shooter->GetWorld(),
                          shooter->ID(),
+						 shooter->my_type,
                          shooter->Pos(),
                          shooter->Facing(),
                          script->GetInt("Slug_Damage"),
@@ -108,7 +109,8 @@ void Slug::Render()
 {
   if (isVisibleToPlayer() && m_bImpacted)
   {
-    gdi->GreenPen();
+    if(source_Type == 1)gdi->GreenPen();
+	else if(source_Type == 0)gdi->RedPen();
     gdi->Line(m_vOrigin, m_vImpactPoint);
   }
 }

@@ -64,9 +64,14 @@ protected:
 
 public:
 
+	//tipo do bot que atirou
+	int source_Type;
+
+
   Raven_Projectile(Vector2D  target,   //the target's position
                    Raven_Game* world,  //a pointer to the world data
                    int      ShooterID, //the ID of the bot that fired this shot
+				   int       source,  //type of the shooter
                    Vector2D origin,  //the start position of the projectile
                    Vector2D heading,   //the heading of the projectile
                    int      damage,    //how much damage it inflicts
@@ -92,7 +97,7 @@ public:
                                         m_iShooterID(ShooterID)
                 
 
-  {m_dTimeOfCreation = Clock->GetCurrentTime();}
+  {source_Type = source; m_dTimeOfCreation = Clock->GetCurrentTime();}
 
   //unimportant for this class unless you want to implement a full state 
   //save/restore (which can be useful for debugging purposes)

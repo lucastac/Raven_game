@@ -24,6 +24,7 @@ GraveLifetime = 5
 -------------------------[[ bot parameters ]]----------------------------------
 -------------------------------------------------------------------------------
 
+Bot_ReSpawnTime = 170
 Bot_MaxHealth = 100
 Bot_MaxSpeed  = 1
 Bot_Mass      = 1
@@ -113,7 +114,7 @@ DefaultGiverTriggerRange = 10
 --how many seconds before a giver-trigger reactivates itself
 Health_RespawnDelay  = 10
 Weapon_RespawnDelay  = 15
-Flag_RespawmDelay = 1000
+Flag_RespawnDelay = 1000
 
 
 
@@ -131,7 +132,7 @@ Bolt_MaxSpeed    = 5
 Bolt_Mass        = 1
 Bolt_MaxForce    = 100.0
 Bolt_Scale       = Bot_Scale
-Bolt_Damage      = 1
+Bolt_Damage      = 5
 
 
 
@@ -146,7 +147,7 @@ Rocket_MaxSpeed    = 3
 Rocket_Mass        = 1
 Rocket_MaxForce    = 10.0
 Rocket_Scale       = Bot_Scale
-Rocket_Damage      = 10
+Rocket_Damage      = 20
 Rocket_ExplosionDecayRate = 2.0   --how fast the explosion occurs (in secs)
 
 
@@ -161,7 +162,7 @@ Slug_Mass        = 0.1
 Slug_MaxForce    = 10000.0
 Slug_Scale       = Bot_Scale
 Slug_Persistance = 0.2
-Slug_Damage      = 10
+Slug_Damage      = 20
 
 
 
@@ -178,7 +179,7 @@ Pellet_Mass        = 0.1
 Pellet_MaxForce    = 1000.0
 Pellet_Scale       = Bot_Scale
 Pellet_Persistance = 0.1
-Pellet_Damage      = 1
+Pellet_Damage      = 5
 
 
   

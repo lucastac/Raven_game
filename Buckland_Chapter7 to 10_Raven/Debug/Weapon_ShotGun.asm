@@ -209,40 +209,40 @@ _colors	DD	0ffH
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG139514 DB	'Pellet_MaxSpeed', 00H
-$SG139515 DB	'ShotGun_IdealRange', 00H
+$SG139515 DB	'Pellet_MaxSpeed', 00H
+$SG139516 DB	'ShotGun_IdealRange', 00H
 	ORG $+1
-$SG139516 DB	'ShotGun_FiringFreq', 00H
+$SG139517 DB	'ShotGun_FiringFreq', 00H
 	ORG $+1
-$SG139517 DB	'ShotGun_MaxRoundsCarried', 00H
+$SG139518 DB	'ShotGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG139518 DB	'ShotGun_DefaultRounds', 00H
+$SG139519 DB	'ShotGun_DefaultRounds', 00H
 	ORG $+2
-$SG139519 DB	'ShotGun_NumBallsInShell', 00H
-$SG139520 DB	'ShotGun_Spread', 00H
+$SG139520 DB	'ShotGun_NumBallsInShell', 00H
+$SG139521 DB	'ShotGun_Spread', 00H
 	ORG $+1
-$SG139575 DB	'DistanceToTarget', 00H
+$SG139576 DB	'DistanceToTarget', 00H
 	ORG $+3
-$SG139580 DB	'Target_Close', 00H
+$SG139581 DB	'Target_Close', 00H
 	ORG $+3
-$SG139585 DB	'Target_Medium', 00H
+$SG139586 DB	'Target_Medium', 00H
 	ORG $+2
-$SG139590 DB	'Target_Far', 00H
+$SG139591 DB	'Target_Far', 00H
 	ORG $+1
-$SG139593 DB	'Desirability', 00H
+$SG139594 DB	'Desirability', 00H
 	ORG $+3
-$SG139598 DB	'VeryDesirable', 00H
+$SG139599 DB	'VeryDesirable', 00H
 	ORG $+2
-$SG139603 DB	'Desirable', 00H
+$SG139604 DB	'Desirable', 00H
 	ORG $+2
-$SG139608 DB	'Undesirable', 00H
-$SG139611 DB	'AmmoStatus', 00H
+$SG139609 DB	'Undesirable', 00H
+$SG139612 DB	'AmmoStatus', 00H
 	ORG $+1
-$SG139616 DB	'Ammo_Loads', 00H
+$SG139617 DB	'Ammo_Loads', 00H
 	ORG $+1
-$SG139621 DB	'Ammo_Okay', 00H
+$SG139622 DB	'Ammo_Okay', 00H
 	ORG $+2
-$SG139626 DB	'Ammo_Low', 00H
+$SG139627 DB	'Ammo_Low', 00H
 CONST	ENDS
 ;	COMDAT ?end@?$_Iosb@H@std@@2W4_Seekdir@12@B
 CONST	SEGMENT
@@ -1119,7 +1119,7 @@ __RTC_InitBase.rtc$IMZ DD FLAT:__RTC_InitBase
 ; Function compile flags: /Odtp /RTCsu
 rtc$IMZ	ENDS
 _TEXT	SEGMENT
-_vtx$139531 = -164					; size = 4
+_vtx$139532 = -164					; size = 4
 _weapon$ = -156						; size = 128
 _NumWeaponVerts$ = -24					; size = 4
 _this$ = -20						; size = 4
@@ -1154,12 +1154,6 @@ _owner$ = 8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _owner$[ebp]
 	push	eax
-	push	OFFSET $SG139514
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
 	push	OFFSET $SG139515
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
@@ -1175,9 +1169,15 @@ _owner$ = 8						; size = 4
 	push	OFFSET $SG139517
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG139518
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
 	push	eax
-	push	OFFSET $SG139518
+	push	OFFSET $SG139519
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -1188,13 +1188,13 @@ _owner$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx], OFFSET ??_7ShotGun@@6B@
-	push	OFFSET $SG139519
+	push	OFFSET $SG139520
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [edx+144], eax
-	push	OFFSET $SG139520
+	push	OFFSET $SG139521
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -1300,20 +1300,20 @@ _owner$ = 8						; size = 4
 ; 39   :   
 ; 40   :   for (int vtx=0; vtx<NumWeaponVerts; ++vtx)
 
-	mov	DWORD PTR _vtx$139531[ebp], 0
+	mov	DWORD PTR _vtx$139532[ebp], 0
 	jmp	SHORT $LN3@ShotGun
 $LN2@ShotGun:
-	mov	ecx, DWORD PTR _vtx$139531[ebp]
+	mov	ecx, DWORD PTR _vtx$139532[ebp]
 	add	ecx, 1
-	mov	DWORD PTR _vtx$139531[ebp], ecx
+	mov	DWORD PTR _vtx$139532[ebp], ecx
 $LN3@ShotGun:
-	cmp	DWORD PTR _vtx$139531[ebp], 8
+	cmp	DWORD PTR _vtx$139532[ebp], 8
 	jge	SHORT $LN1@ShotGun
 
 ; 41   :   {
 ; 42   :     m_vecWeaponVB.push_back(weapon[vtx]);
 
-	mov	edx, DWORD PTR _vtx$139531[ebp]
+	mov	edx, DWORD PTR _vtx$139532[ebp]
 	shl	edx, 4
 	lea	eax, DWORD PTR _weapon$[ebp+edx]
 	push	eax
@@ -1981,12 +1981,12 @@ CONST	ENDS
 ;	COMDAT ?ShootAt@ShotGun@@UAEXUVector2D@@@Z
 _TEXT	SEGMENT
 tv277 = -96						; size = 8
-$T151352 = -88						; size = 16
-$T151351 = -72						; size = 16
-$T151350 = -56						; size = 16
-_AdjustedTarget$139551 = -36				; size = 16
-_deviation$139550 = -16					; size = 8
-_b$139546 = -8						; size = 4
+$T151353 = -88						; size = 16
+$T151352 = -72						; size = 16
+$T151351 = -56						; size = 16
+_AdjustedTarget$139552 = -36				; size = 16
+_deviation$139551 = -16					; size = 8
+_b$139547 = -8						; size = 4
 _this$ = -4						; size = 4
 _pos$ = 8						; size = 16
 ?ShootAt@ShotGun@@UAEXUVector2D@@@Z PROC		; ShotGun::ShootAt, COMDAT
@@ -2024,15 +2024,15 @@ _pos$ = 8						; size = 16
 ; 58   :     //the spread of the pellets and add one for each trajectory
 ; 59   :     for (int b=0; b<m_iNumBallsInShell; ++b)
 
-	mov	DWORD PTR _b$139546[ebp], 0
+	mov	DWORD PTR _b$139547[ebp], 0
 	jmp	SHORT $LN3@ShootAt
 $LN2@ShootAt:
-	mov	ecx, DWORD PTR _b$139546[ebp]
+	mov	ecx, DWORD PTR _b$139547[ebp]
 	add	ecx, 1
-	mov	DWORD PTR _b$139546[ebp], ecx
+	mov	DWORD PTR _b$139547[ebp], ecx
 $LN3@ShootAt:
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR _b$139546[ebp]
+	mov	eax, DWORD PTR _b$139547[ebp]
 	cmp	eax, DWORD PTR [edx+144]
 	jge	$LN1@ShootAt
 
@@ -2062,12 +2062,12 @@ $LN3@ShootAt:
 	fadd	QWORD PTR tv277[ebp]
 	mov	eax, DWORD PTR _this$[ebp]
 	fsub	QWORD PTR [eax+152]
-	fstp	QWORD PTR _deviation$139550[ebp]
+	fstp	QWORD PTR _deviation$139551[ebp]
 
 ; 63   : 
 ; 64   :       Vector2D AdjustedTarget = pos - m_pOwner->Pos();
 
-	lea	ecx, DWORD PTR $T151350[ebp]
+	lea	ecx, DWORD PTR $T151351[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx+8]
@@ -2075,7 +2075,7 @@ $LN3@ShootAt:
 	push	eax
 	lea	eax, DWORD PTR _pos$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR _AdjustedTarget$139551[ebp]
+	lea	ecx, DWORD PTR _AdjustedTarget$139552[ebp]
 	push	ecx
 	call	??G@YA?AUVector2D@@ABU0@0@Z		; operator-
 	add	esp, 12					; 0000000cH
@@ -2085,9 +2085,9 @@ $LN3@ShootAt:
 ; 67   :       Vec2DRotateAroundOrigin(AdjustedTarget, deviation);
 
 	sub	esp, 8
-	fld	QWORD PTR _deviation$139550[ebp]
+	fld	QWORD PTR _deviation$139551[ebp]
 	fstp	QWORD PTR [esp]
-	lea	edx, DWORD PTR _AdjustedTarget$139551[ebp]
+	lea	edx, DWORD PTR _AdjustedTarget$139552[ebp]
 	push	edx
 	call	?Vec2DRotateAroundOrigin@@YAXAAUVector2D@@N@Z ; Vec2DRotateAroundOrigin
 	add	esp, 12					; 0000000cH
@@ -2096,15 +2096,15 @@ $LN3@ShootAt:
 ; 69   :       //add a pellet to the game world
 ; 70   :       m_pOwner->GetWorld()->AddShotGunPellet(m_pOwner, AdjustedTarget + m_pOwner->Pos());
 
-	lea	eax, DWORD PTR $T151351[ebp]
+	lea	eax, DWORD PTR $T151352[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	push	eax
-	lea	edx, DWORD PTR _AdjustedTarget$139551[ebp]
+	lea	edx, DWORD PTR _AdjustedTarget$139552[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T151352[ebp]
+	lea	eax, DWORD PTR $T151353[ebp]
 	push	eax
 	call	??H@YA?AUVector2D@@ABU0@0@Z		; operator+
 	add	esp, -4					; fffffffcH
@@ -3164,7 +3164,7 @@ _this$ = -4						; size = 4
 ?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ PROC		; Raven_Bot::GetWorld, COMDAT
 ; _this$ = ecx
 
-; 209  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
+; 212  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
 
 	push	ebp
 	mov	ebp, esp
@@ -3172,7 +3172,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [eax+148]
+	mov	eax, DWORD PTR [eax+156]
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -3350,9 +3350,9 @@ xdata$x	ENDS
 ;	COMDAT ?GetDesirability@ShotGun@@UAENN@Z
 _TEXT	SEGMENT
 tv169 = -124						; size = 8
-$T139568 = -116						; size = 32
-$T139566 = -84						; size = 32
-$T139563 = -52						; size = 32
+$T139569 = -116						; size = 32
+$T139567 = -84						; size = 32
+$T139564 = -52						; size = 32
 _this$ = -20						; size = 4
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -3408,25 +3408,25 @@ $LN2@GetDesirab:
 ; 96   :     m_FuzzyModule.Fuzzify("DistanceToTarget", DistToTarget);
 
 	push	OFFSET ??_C@_0BB@OGJDLKHB@DistanceToTarget?$AA@
-	lea	ecx, DWORD PTR $T139563[ebp]
+	lea	ecx, DWORD PTR $T139564[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 8
 	fld	QWORD PTR _DistToTarget$[ebp]
 	fstp	QWORD PTR [esp]
-	lea	edx, DWORD PTR $T139563[ebp]
+	lea	edx, DWORD PTR $T139564[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?Fuzzify@FuzzyModule@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@N@Z ; FuzzyModule::Fuzzify
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T139563[ebp]
+	lea	ecx, DWORD PTR $T139564[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 97   :     m_FuzzyModule.Fuzzify("AmmoStatus", (double)m_iNumRoundsLeft);
 
 	push	OFFSET ??_C@_0L@JHOJIGFN@AmmoStatus?$AA@
-	lea	ecx, DWORD PTR $T139566[ebp]
+	lea	ecx, DWORD PTR $T139567[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 	mov	eax, DWORD PTR _this$[ebp]
@@ -3436,24 +3436,24 @@ $LN2@GetDesirab:
 	fild	QWORD PTR tv169[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	lea	edx, DWORD PTR $T139566[ebp]
+	lea	edx, DWORD PTR $T139567[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?Fuzzify@FuzzyModule@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@N@Z ; FuzzyModule::Fuzzify
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T139566[ebp]
+	lea	ecx, DWORD PTR $T139567[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 98   : 
 ; 99   :     m_dLastDesirabilityScore = m_FuzzyModule.DeFuzzify("Desirability", FuzzyModule::max_av);
 
 	push	OFFSET ??_C@_0N@DBFDCKMO@Desirability?$AA@
-	lea	ecx, DWORD PTR $T139568[ebp]
+	lea	ecx, DWORD PTR $T139569[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	push	0
-	lea	eax, DWORD PTR $T139568[ebp]
+	lea	eax, DWORD PTR $T139569[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -3461,7 +3461,7 @@ $LN2@GetDesirab:
 	mov	ecx, DWORD PTR _this$[ebp]
 	fstp	QWORD PTR [ecx+80]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T139568[ebp]
+	lea	ecx, DWORD PTR $T139569[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN1@GetDesirab:
 
@@ -3491,13 +3491,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?GetDesirability@ShotGun@@UAENN@Z$0:
-	lea	ecx, DWORD PTR $T139563[ebp]
+	lea	ecx, DWORD PTR $T139564[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?GetDesirability@ShotGun@@UAENN@Z$1:
-	lea	ecx, DWORD PTR $T139566[ebp]
+	lea	ecx, DWORD PTR $T139567[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?GetDesirability@ShotGun@@UAENN@Z$2:
-	lea	ecx, DWORD PTR $T139568[ebp]
+	lea	ecx, DWORD PTR $T139569[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$?GetDesirability@ShotGun@@UAENN@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -3591,9 +3591,9 @@ tv147 = -60						; size = 4
 tv154 = -56						; size = 4
 tv142 = -52						; size = 4
 tv152 = -48						; size = 4
-$T151427 = -44						; size = 4
-$T151424 = -40						; size = 12
-$T151423 = -28						; size = 12
+$T151428 = -44						; size = 4
+$T151425 = -40						; size = 12
+$T151424 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _NameOfFLV$ = 8						; size = 4
@@ -3623,13 +3623,13 @@ _val$ = 12						; size = 8
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151427[ebp], 0
+	mov	DWORD PTR $T151428[ebp], 0
 
 ; 90   :   //first make sure the key exists
 ; 91   :   assert ( (m_Variables.find(NameOfFLV) != m_Variables.end()) &&
 ; 92   :           "<FuzzyModule::Fuzzify>:key not found");
 
-	lea	eax, DWORD PTR $T151424[ebp]
+	lea	eax, DWORD PTR $T151425[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -3637,14 +3637,14 @@ _val$ = 12						; size = 8
 	mov	ecx, DWORD PTR tv152[ebp]
 	mov	DWORD PTR tv142[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	edx, DWORD PTR $T151427[ebp]
+	mov	edx, DWORD PTR $T151428[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T151427[ebp], edx
+	mov	DWORD PTR $T151428[ebp], edx
 	mov	eax, DWORD PTR tv142[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _NameOfFLV$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T151423[ebp]
+	lea	edx, DWORD PTR $T151424[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::find
@@ -3652,9 +3652,9 @@ _val$ = 12						; size = 8
 	mov	eax, DWORD PTR tv154[ebp]
 	mov	DWORD PTR tv147[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T151427[ebp]
+	mov	ecx, DWORD PTR $T151428[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T151427[ebp], ecx
+	mov	DWORD PTR $T151428[ebp], ecx
 	mov	ecx, DWORD PTR tv147[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator!=
 	movzx	edx, al
@@ -3671,19 +3671,19 @@ $LN3@Fuzzify:
 	add	esp, 12					; 0000000cH
 $LN4@Fuzzify:
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	edx, DWORD PTR $T151427[ebp]
+	mov	edx, DWORD PTR $T151428[ebp]
 	and	edx, 2
 	je	SHORT $LN9@Fuzzify
-	and	DWORD PTR $T151427[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T151423[ebp]
+	and	DWORD PTR $T151428[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151424[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@Fuzzify:
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	eax, DWORD PTR $T151427[ebp]
+	mov	eax, DWORD PTR $T151428[ebp]
 	and	eax, 1
 	je	SHORT $LN10@Fuzzify
-	and	DWORD PTR $T151427[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151424[ebp]
+	and	DWORD PTR $T151428[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151425[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN10@Fuzzify:
 
@@ -3716,20 +3716,20 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?Fuzzify@FuzzyModule@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@N@Z$0:
-	mov	eax, DWORD PTR $T151427[ebp]
+	mov	eax, DWORD PTR $T151428[ebp]
 	and	eax, 1
 	je	$LN6@Fuzzify
-	and	DWORD PTR $T151427[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151424[ebp]
+	and	DWORD PTR $T151428[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151425[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN6@Fuzzify:
 	ret	0
 __unwindfunclet$?Fuzzify@FuzzyModule@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@N@Z$1:
-	mov	eax, DWORD PTR $T151427[ebp]
+	mov	eax, DWORD PTR $T151428[ebp]
 	and	eax, 2
 	je	$LN8@Fuzzify
-	and	DWORD PTR $T151427[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T151423[ebp]
+	and	DWORD PTR $T151428[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151424[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@Fuzzify:
 	ret	0
@@ -4128,14 +4128,14 @@ tv185 = -120						; size = 4
 tv198 = -116						; size = 4
 tv180 = -112						; size = 4
 tv196 = -108						; size = 4
-$T151477 = -104						; size = 4
-$T151476 = -100						; size = 8
-$T151475 = -92						; size = 8
-$T151474 = -84						; size = 8
-$T151473 = -76						; size = 12
-$T151472 = -61						; size = 1
-$T151469 = -60						; size = 12
-$T151468 = -48						; size = 12
+$T151478 = -104						; size = 4
+$T151477 = -100						; size = 8
+$T151476 = -92						; size = 8
+$T151475 = -84						; size = 8
+$T151474 = -76						; size = 12
+$T151473 = -61						; size = 1
+$T151470 = -60						; size = 12
+$T151469 = -48						; size = 12
 _curRule$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4166,13 +4166,13 @@ _method$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151477[ebp], 0
+	mov	DWORD PTR $T151478[ebp], 0
 
 ; 105  :   //first make sure the key exists
 ; 106  :   assert ( (m_Variables.find(NameOfFLV) != m_Variables.end()) &&
 ; 107  :           "<FuzzyModule::DeFuzzifyMaxAv>:key not found");
 
-	lea	eax, DWORD PTR $T151469[ebp]
+	lea	eax, DWORD PTR $T151470[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -4180,14 +4180,14 @@ _method$ = 12						; size = 4
 	mov	ecx, DWORD PTR tv196[ebp]
 	mov	DWORD PTR tv180[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	edx, DWORD PTR $T151477[ebp]
+	mov	edx, DWORD PTR $T151478[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T151477[ebp], edx
+	mov	DWORD PTR $T151478[ebp], edx
 	mov	eax, DWORD PTR tv180[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _NameOfFLV$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T151468[ebp]
+	lea	edx, DWORD PTR $T151469[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::find
@@ -4195,9 +4195,9 @@ _method$ = 12						; size = 4
 	mov	eax, DWORD PTR tv198[ebp]
 	mov	DWORD PTR tv185[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T151477[ebp]
+	mov	ecx, DWORD PTR $T151478[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T151477[ebp], ecx
+	mov	DWORD PTR $T151478[ebp], ecx
 	mov	ecx, DWORD PTR tv185[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator!=
 	movzx	edx, al
@@ -4214,19 +4214,19 @@ $LN10@DeFuzzify:
 	add	esp, 12					; 0000000cH
 $LN11@DeFuzzify:
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	edx, DWORD PTR $T151477[ebp]
+	mov	edx, DWORD PTR $T151478[ebp]
 	and	edx, 2
 	je	SHORT $LN16@DeFuzzify
-	and	DWORD PTR $T151477[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T151468[ebp]
+	and	DWORD PTR $T151478[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151469[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN16@DeFuzzify:
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	eax, DWORD PTR $T151477[ebp]
+	mov	eax, DWORD PTR $T151478[ebp]
 	and	eax, 1
 	je	SHORT $LN17@DeFuzzify
-	and	DWORD PTR $T151477[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151469[ebp]
+	and	DWORD PTR $T151478[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151470[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN17@DeFuzzify:
 
@@ -4255,7 +4255,7 @@ $LN6@DeFuzzify:
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >::operator++
 $LN7@DeFuzzify:
-	lea	edx, DWORD PTR $T151473[ebp]
+	lea	edx, DWORD PTR $T151474[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 20					; 00000014H
@@ -4268,11 +4268,11 @@ $LN7@DeFuzzify:
 	push	ecx
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >::operator!=
-	mov	BYTE PTR $T151472[ebp], al
+	mov	BYTE PTR $T151473[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T151473[ebp]
+	lea	ecx, DWORD PTR $T151474[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T151472[ebp]
+	movzx	edx, BYTE PTR $T151473[ebp]
 	test	edx, edx
 	je	SHORT $LN5@DeFuzzify
 
@@ -4314,11 +4314,11 @@ $LN2@DeFuzzify:
 	call	??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAEAAPAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z ; std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> > >::operator[]
 	mov	ecx, DWORD PTR [eax]
 	call	?DeFuzzifyCentroid@FuzzyVariable@@QBENH@Z ; FuzzyVariable::DeFuzzifyCentroid
-	fstp	QWORD PTR $T151474[ebp]
+	fstp	QWORD PTR $T151475[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T151474[ebp]
+	fld	QWORD PTR $T151475[ebp]
 	jmp	SHORT $LN8@DeFuzzify
 
 ; 125  : 
@@ -4338,11 +4338,11 @@ $LN1@DeFuzzify:
 	call	??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAEAAPAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z ; std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> > >::operator[]
 	mov	ecx, DWORD PTR [eax]
 	call	?DeFuzzifyMaxAv@FuzzyVariable@@QBENXZ	; FuzzyVariable::DeFuzzifyMaxAv
-	fstp	QWORD PTR $T151475[ebp]
+	fstp	QWORD PTR $T151476[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T151475[ebp]
+	fld	QWORD PTR $T151476[ebp]
 	jmp	SHORT $LN8@DeFuzzify
 $LN3@DeFuzzify:
 
@@ -4353,11 +4353,11 @@ $LN3@DeFuzzify:
 ; 135  :   return 0;
 
 	fldz
-	fstp	QWORD PTR $T151476[ebp]
+	fstp	QWORD PTR $T151477[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T151476[ebp]
+	fld	QWORD PTR $T151477[ebp]
 $LN8@DeFuzzify:
 
 ; 136  : }
@@ -4399,20 +4399,20 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?DeFuzzify@FuzzyModule@@QAENABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4DefuzzifyMethod@1@@Z$0:
-	mov	eax, DWORD PTR $T151477[ebp]
+	mov	eax, DWORD PTR $T151478[ebp]
 	and	eax, 1
 	je	$LN13@DeFuzzify
-	and	DWORD PTR $T151477[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151469[ebp]
+	and	DWORD PTR $T151478[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151470[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@DeFuzzify:
 	ret	0
 __unwindfunclet$?DeFuzzify@FuzzyModule@@QAENABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4DefuzzifyMethod@1@@Z$1:
-	mov	eax, DWORD PTR $T151477[ebp]
+	mov	eax, DWORD PTR $T151478[ebp]
 	and	eax, 2
 	je	$LN15@DeFuzzify
-	and	DWORD PTR $T151477[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T151468[ebp]
+	and	DWORD PTR $T151478[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151469[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN15@DeFuzzify:
 	ret	0
@@ -4420,7 +4420,7 @@ __unwindfunclet$?DeFuzzify@FuzzyModule@@QAENABV?$basic_string@DU?$char_traits@D@
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?DeFuzzify@FuzzyModule@@QAENABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4DefuzzifyMethod@1@@Z$3:
-	lea	ecx, DWORD PTR $T151473[ebp]
+	lea	ecx, DWORD PTR $T151474[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?DeFuzzify@FuzzyModule@@QAENABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4DefuzzifyMethod@1@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -4572,8 +4572,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv94 = -60						; size = 4
 tv66 = -56						; size = 4
-$T151509 = -52						; size = 12
-$T151508 = -37						; size = 1
+$T151510 = -52						; size = 12
+$T151509 = -37						; size = 1
 _curRule$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4619,7 +4619,7 @@ $LN2@SetConfide:
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >::operator++
 $LN3@SetConfide:
-	lea	ecx, DWORD PTR $T151509[ebp]
+	lea	ecx, DWORD PTR $T151510[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 20					; 00000014H
@@ -4632,11 +4632,11 @@ $LN3@SetConfide:
 	push	eax
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >::operator!=
-	mov	BYTE PTR $T151508[ebp], al
+	mov	BYTE PTR $T151509[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151509[ebp]
+	lea	ecx, DWORD PTR $T151510[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T151508[ebp]
+	movzx	ecx, BYTE PTR $T151509[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@SetConfide
 
@@ -4698,7 +4698,7 @@ __unwindfunclet$?SetConfidencesOfConsequentsToZero@FuzzyModule@@AAEXXZ$0:
 	lea	ecx, DWORD PTR _curRule$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SetConfidencesOfConsequentsToZero@FuzzyModule@@AAEXXZ$1:
-	lea	ecx, DWORD PTR $T151509[ebp]
+	lea	ecx, DWORD PTR $T151510[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?SetConfidencesOfConsequentsToZero@FuzzyModule@@AAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -4890,31 +4890,31 @@ tv130 = -576						; size = 4
 tv634 = -572						; size = 4
 tv77 = -568						; size = 4
 tv628 = -564						; size = 4
-$T151543 = -560						; size = 24
-$T151542 = -536						; size = 24
-$T151541 = -512						; size = 24
-$T151540 = -488						; size = 24
-$T151539 = -464						; size = 24
-$T151538 = -440						; size = 24
-$T151537 = -416						; size = 24
-$T151536 = -392						; size = 24
-$T151535 = -368						; size = 24
-$T151534 = -344						; size = 4
-$T151533 = -340						; size = 4
-$T151532 = -336						; size = 4
-$T151531 = -332						; size = 4
-$T151530 = -328						; size = 4
-$T151529 = -324						; size = 4
-$T151528 = -320						; size = 4
-$T151527 = -316						; size = 4
-$T151526 = -312						; size = 4
+$T151544 = -560						; size = 24
+$T151543 = -536						; size = 24
+$T151542 = -512						; size = 24
+$T151541 = -488						; size = 24
+$T151540 = -464						; size = 24
+$T151539 = -440						; size = 24
+$T151538 = -416						; size = 24
+$T151537 = -392						; size = 24
+$T151536 = -368						; size = 24
+$T151535 = -344						; size = 4
+$T151534 = -340						; size = 4
+$T151533 = -336						; size = 4
+$T151532 = -332						; size = 4
+$T151531 = -328						; size = 4
+$T151530 = -324						; size = 4
+$T151529 = -320						; size = 4
+$T151528 = -316						; size = 4
+$T151527 = -312						; size = 4
 _$S9$ = -304						; size = 8
 _Ammo_Low$ = -292					; size = 4
 _$S8$ = -284						; size = 8
 _Ammo_Okay$ = -272					; size = 4
 _$S7$ = -264						; size = 8
 _Ammo_Loads$ = -252					; size = 4
-$T139610 = -248						; size = 32
+$T139611 = -248						; size = 32
 _AmmoStatus$ = -216					; size = 4
 _$S6$ = -208						; size = 8
 _Undesirable$ = -196					; size = 4
@@ -4922,7 +4922,7 @@ _$S5$ = -188						; size = 8
 _Desirable$ = -176					; size = 4
 _$S4$ = -168						; size = 8
 _VeryDesirable$ = -156					; size = 4
-$T139592 = -152						; size = 32
+$T139593 = -152						; size = 32
 _Desirability$ = -120					; size = 4
 _$S3$ = -112						; size = 8
 _Target_Far$ = -100					; size = 4
@@ -4930,7 +4930,7 @@ _$S2$ = -92						; size = 8
 _Target_Medium$ = -80					; size = 4
 _$S1$ = -72						; size = 8
 _Target_Close$ = -60					; size = 4
-$T139574 = -56						; size = 32
+$T139575 = -56						; size = 32
 _DistanceToTarget$ = -24				; size = 4
 _this$ = -20						; size = 4
 __$ArrayPad$ = -16					; size = 4
@@ -4964,18 +4964,18 @@ __$EHRec$ = -12						; size = 12
 
 ; 111  :   FuzzyVariable& DistanceToTarget = m_FuzzyModule.CreateFLV("DistanceToTarget");
 
-	push	OFFSET $SG139575
-	lea	ecx, DWORD PTR $T139574[ebp]
+	push	OFFSET $SG139576
+	lea	ecx, DWORD PTR $T139575[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	lea	eax, DWORD PTR $T139574[ebp]
+	lea	eax, DWORD PTR $T139575[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?CreateFLV@FuzzyModule@@QAEAAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; FuzzyModule::CreateFLV
 	mov	DWORD PTR _DistanceToTarget$[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T139574[ebp]
+	lea	ecx, DWORD PTR $T139575[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 112  : 
@@ -4992,8 +4992,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151526[ebp], esp
-	push	OFFSET $SG139580
+	mov	DWORD PTR $T151527[ebp], esp
+	push	OFFSET $SG139581
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv628[ebp], eax
 	lea	ecx, DWORD PTR _$S1$[ebp]
@@ -5018,8 +5018,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151527[ebp], esp
-	push	OFFSET $SG139585
+	mov	DWORD PTR $T151528[ebp], esp
+	push	OFFSET $SG139586
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv634[ebp], eax
 	lea	eax, DWORD PTR _$S2$[ebp]
@@ -5044,8 +5044,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151528[ebp], esp
-	push	OFFSET $SG139590
+	mov	DWORD PTR $T151529[ebp], esp
+	push	OFFSET $SG139591
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv640[ebp], eax
 	lea	edx, DWORD PTR _$S3$[ebp]
@@ -5060,18 +5060,18 @@ __$EHRec$ = -12						; size = 12
 ; 116  : 
 ; 117  :   FuzzyVariable& Desirability = m_FuzzyModule.CreateFLV("Desirability");
 
-	push	OFFSET $SG139593
-	lea	ecx, DWORD PTR $T139592[ebp]
+	push	OFFSET $SG139594
+	lea	ecx, DWORD PTR $T139593[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T139592[ebp]
+	lea	ecx, DWORD PTR $T139593[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?CreateFLV@FuzzyModule@@QAEAAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; FuzzyModule::CreateFLV
 	mov	DWORD PTR _Desirability$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR $T139592[ebp]
+	lea	ecx, DWORD PTR $T139593[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 118  :   
@@ -5088,8 +5088,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151529[ebp], esp
-	push	OFFSET $SG139598
+	mov	DWORD PTR $T151530[ebp], esp
+	push	OFFSET $SG139599
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv647[ebp], eax
 	lea	edx, DWORD PTR _$S4$[ebp]
@@ -5114,8 +5114,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151530[ebp], esp
-	push	OFFSET $SG139603
+	mov	DWORD PTR $T151531[ebp], esp
+	push	OFFSET $SG139604
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv653[ebp], eax
 	lea	ecx, DWORD PTR _$S5$[ebp]
@@ -5140,8 +5140,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151531[ebp], esp
-	push	OFFSET $SG139608
+	mov	DWORD PTR $T151532[ebp], esp
+	push	OFFSET $SG139609
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv659[ebp], eax
 	lea	eax, DWORD PTR _$S6$[ebp]
@@ -5156,18 +5156,18 @@ __$EHRec$ = -12						; size = 12
 ; 122  : 
 ; 123  :   FuzzyVariable& AmmoStatus = m_FuzzyModule.CreateFLV("AmmoStatus");
 
-	push	OFFSET $SG139611
-	lea	ecx, DWORD PTR $T139610[ebp]
+	push	OFFSET $SG139612
+	lea	ecx, DWORD PTR $T139611[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
-	lea	edx, DWORD PTR $T139610[ebp]
+	lea	edx, DWORD PTR $T139611[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?CreateFLV@FuzzyModule@@QAEAAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; FuzzyModule::CreateFLV
 	mov	DWORD PTR _AmmoStatus$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
-	lea	ecx, DWORD PTR $T139610[ebp]
+	lea	ecx, DWORD PTR $T139611[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 124  :   FzSet& Ammo_Loads = AmmoStatus.AddRightShoulderSet("Ammo_Loads", 30, 60, 100);
@@ -5183,8 +5183,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151532[ebp], esp
-	push	OFFSET $SG139616
+	mov	DWORD PTR $T151533[ebp], esp
+	push	OFFSET $SG139617
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv666[ebp], eax
 	lea	eax, DWORD PTR _$S7$[ebp]
@@ -5209,8 +5209,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151533[ebp], esp
-	push	OFFSET $SG139621
+	mov	DWORD PTR $T151534[ebp], esp
+	push	OFFSET $SG139622
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv672[ebp], eax
 	lea	edx, DWORD PTR _$S8$[ebp]
@@ -5235,8 +5235,8 @@ __$EHRec$ = -12						; size = 12
 	fstp	QWORD PTR [esp]
 	sub	esp, 32					; 00000020H
 	mov	ecx, esp
-	mov	DWORD PTR $T151534[ebp], esp
-	push	OFFSET $SG139626
+	mov	DWORD PTR $T151535[ebp], esp
+	push	OFFSET $SG139627
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR tv678[ebp], eax
 	lea	ecx, DWORD PTR _$S9$[ebp]
@@ -5258,7 +5258,7 @@ __$EHRec$ = -12						; size = 12
 	push	ecx
 	mov	edx, DWORD PTR _Target_Close$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T151535[ebp]
+	lea	ecx, DWORD PTR $T151536[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv254[ebp], eax
 	mov	eax, DWORD PTR tv254[ebp]
@@ -5270,7 +5270,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151535[ebp]
+	lea	ecx, DWORD PTR $T151536[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 130  :   m_FuzzyModule.AddRule(FzAND(Target_Close, Ammo_Okay), VeryDesirable);
@@ -5281,7 +5281,7 @@ __$EHRec$ = -12						; size = 12
 	push	eax
 	mov	ecx, DWORD PTR _Target_Close$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR $T151536[ebp]
+	lea	ecx, DWORD PTR $T151537[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv179[ebp], eax
 	mov	edx, DWORD PTR tv179[ebp]
@@ -5293,7 +5293,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151536[ebp]
+	lea	ecx, DWORD PTR $T151537[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 131  :   m_FuzzyModule.AddRule(FzAND(Target_Close, Ammo_Low), VeryDesirable);
@@ -5304,7 +5304,7 @@ __$EHRec$ = -12						; size = 12
 	push	edx
 	mov	eax, DWORD PTR _Target_Close$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T151537[ebp]
+	lea	ecx, DWORD PTR $T151538[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv72[ebp], eax
 	mov	ecx, DWORD PTR tv72[ebp]
@@ -5316,7 +5316,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151537[ebp]
+	lea	ecx, DWORD PTR $T151538[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 132  : 
@@ -5328,7 +5328,7 @@ __$EHRec$ = -12						; size = 12
 	push	ecx
 	mov	edx, DWORD PTR _Target_Medium$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T151538[ebp]
+	lea	ecx, DWORD PTR $T151539[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv698[ebp], eax
 	mov	eax, DWORD PTR tv698[ebp]
@@ -5340,7 +5340,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151538[ebp]
+	lea	ecx, DWORD PTR $T151539[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 134  :   m_FuzzyModule.AddRule(FzAND(Target_Medium, Ammo_Okay), Desirable);
@@ -5351,7 +5351,7 @@ __$EHRec$ = -12						; size = 12
 	push	eax
 	mov	ecx, DWORD PTR _Target_Medium$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR $T151539[ebp]
+	lea	ecx, DWORD PTR $T151540[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv699[ebp], eax
 	mov	edx, DWORD PTR tv699[ebp]
@@ -5363,7 +5363,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151539[ebp]
+	lea	ecx, DWORD PTR $T151540[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 135  :   m_FuzzyModule.AddRule(FzAND(Target_Medium, Ammo_Low), Undesirable);
@@ -5374,7 +5374,7 @@ __$EHRec$ = -12						; size = 12
 	push	edx
 	mov	eax, DWORD PTR _Target_Medium$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T151540[ebp]
+	lea	ecx, DWORD PTR $T151541[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv700[ebp], eax
 	mov	ecx, DWORD PTR tv700[ebp]
@@ -5386,7 +5386,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151540[ebp]
+	lea	ecx, DWORD PTR $T151541[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 136  : 
@@ -5398,7 +5398,7 @@ __$EHRec$ = -12						; size = 12
 	push	ecx
 	mov	edx, DWORD PTR _Target_Far$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T151541[ebp]
+	lea	ecx, DWORD PTR $T151542[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv701[ebp], eax
 	mov	eax, DWORD PTR tv701[ebp]
@@ -5410,7 +5410,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151541[ebp]
+	lea	ecx, DWORD PTR $T151542[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 138  :   m_FuzzyModule.AddRule(FzAND(Target_Far, Ammo_Okay), Undesirable);
@@ -5421,7 +5421,7 @@ __$EHRec$ = -12						; size = 12
 	push	eax
 	mov	ecx, DWORD PTR _Target_Far$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR $T151542[ebp]
+	lea	ecx, DWORD PTR $T151543[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv702[ebp], eax
 	mov	edx, DWORD PTR tv702[ebp]
@@ -5433,7 +5433,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151542[ebp]
+	lea	ecx, DWORD PTR $T151543[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 139  :   m_FuzzyModule.AddRule(FzAND(Target_Far, Ammo_Low), Undesirable);
@@ -5444,7 +5444,7 @@ __$EHRec$ = -12						; size = 12
 	push	edx
 	mov	eax, DWORD PTR _Target_Far$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T151543[ebp]
+	lea	ecx, DWORD PTR $T151544[ebp]
 	call	??0FzAND@@QAE@AAVFuzzyTerm@@0@Z		; FzAND::FzAND
 	mov	DWORD PTR tv703[ebp], eax
 	mov	ecx, DWORD PTR tv703[ebp]
@@ -5456,7 +5456,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 16					; 00000010H
 	call	?AddRule@FuzzyModule@@QAEXAAVFuzzyTerm@@0@Z ; FuzzyModule::AddRule
 	mov	BYTE PTR __$EHRec$[ebp+8], 11		; 0000000bH
-	lea	ecx, DWORD PTR $T151543[ebp]
+	lea	ecx, DWORD PTR $T151544[ebp]
 	call	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 
 ; 140  : }
@@ -5588,7 +5588,7 @@ $LN33@Initialize:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$0:
-	lea	ecx, DWORD PTR $T139574[ebp]
+	lea	ecx, DWORD PTR $T139575[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$2:
 	lea	ecx, DWORD PTR _$S1$[ebp]
@@ -5600,7 +5600,7 @@ __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$6:
 	lea	ecx, DWORD PTR _$S3$[ebp]
 	jmp	??1FzSet@@UAE@XZ
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$7:
-	lea	ecx, DWORD PTR $T139592[ebp]
+	lea	ecx, DWORD PTR $T139593[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$9:
 	lea	ecx, DWORD PTR _$S4$[ebp]
@@ -5612,7 +5612,7 @@ __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$13:
 	lea	ecx, DWORD PTR _$S6$[ebp]
 	jmp	??1FzSet@@UAE@XZ
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$14:
-	lea	ecx, DWORD PTR $T139610[ebp]
+	lea	ecx, DWORD PTR $T139611[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$16:
 	lea	ecx, DWORD PTR _$S7$[ebp]
@@ -5624,31 +5624,31 @@ __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$20:
 	lea	ecx, DWORD PTR _$S9$[ebp]
 	jmp	??1FzSet@@UAE@XZ
 __unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$21:
-	lea	ecx, DWORD PTR $T151535[ebp]
-	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$22:
 	lea	ecx, DWORD PTR $T151536[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$23:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$22:
 	lea	ecx, DWORD PTR $T151537[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$24:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$23:
 	lea	ecx, DWORD PTR $T151538[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$25:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$24:
 	lea	ecx, DWORD PTR $T151539[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$26:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$25:
 	lea	ecx, DWORD PTR $T151540[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$27:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$26:
 	lea	ecx, DWORD PTR $T151541[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$28:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$27:
 	lea	ecx, DWORD PTR $T151542[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
-__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$29:
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$28:
 	lea	ecx, DWORD PTR $T151543[ebp]
+	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
+__unwindfunclet$?InitializeFuzzyModule@ShotGun@@EAEXXZ$29:
+	lea	ecx, DWORD PTR $T151544[ebp]
 	jmp	??1FzAND@@UAE@XZ			; FzAND::~FzAND
 __ehhandler$?InitializeFuzzyModule@ShotGun@@EAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -5813,12 +5813,12 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv171 = -124						; size = 4
 tv172 = -120						; size = 4
-$T151620 = -116						; size = 20
-$T151619 = -96						; size = 16
-$T151618 = -80						; size = 16
-$T151617 = -64						; size = 16
-$T151616 = -48						; size = 16
-$T151615 = -32						; size = 16
+$T151621 = -116						; size = 20
+$T151620 = -96						; size = 16
+$T151619 = -80						; size = 16
+$T151618 = -64						; size = 16
+$T151617 = -48						; size = 16
+$T151616 = -32						; size = 16
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?Render@ShotGun@@UAEXXZ PROC				; ShotGun::Render
@@ -5853,15 +5853,15 @@ __$EHRec$ = -12						; size = 12
 ; 149  :                                    m_pOwner->Facing().Perp(),
 ; 150  :                                    m_pOwner->Scale());
 
-	lea	eax, DWORD PTR $T151615[ebp]
+	lea	eax, DWORD PTR $T151616[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
 	call	?Scale@BaseGameEntity@@QBE?AUVector2D@@XZ ; BaseGameEntity::Scale
 	push	eax
-	lea	edx, DWORD PTR $T151617[ebp]
+	lea	edx, DWORD PTR $T151618[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T151616[ebp]
+	lea	eax, DWORD PTR $T151617[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -5869,13 +5869,13 @@ __$EHRec$ = -12						; size = 12
 	mov	ecx, eax
 	call	?Perp@Vector2D@@QBE?AU1@XZ		; Vector2D::Perp
 	push	eax
-	lea	edx, DWORD PTR $T151618[ebp]
+	lea	edx, DWORD PTR $T151619[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	call	?Facing@Raven_Bot@@QBE?AUVector2D@@XZ	; Raven_Bot::Facing
 	push	eax
-	lea	ecx, DWORD PTR $T151619[ebp]
+	lea	ecx, DWORD PTR $T151620[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx+8]
@@ -5884,7 +5884,7 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 104				; 00000068H
 	push	eax
-	lea	ecx, DWORD PTR $T151620[ebp]
+	lea	ecx, DWORD PTR $T151621[ebp]
 	push	ecx
 	call	?WorldTransform@@YA?AV?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@AAV12@ABUVector2D@@111@Z ; WorldTransform
 	add	esp, 24					; 00000018H
@@ -5898,7 +5898,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 124				; 0000007cH
 	call	??4?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEAAV01@$$QAV01@@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::operator=
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T151620[ebp]
+	lea	ecx, DWORD PTR $T151621[ebp]
 	call	??1?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::~vector<Vector2D,std::allocator<Vector2D> >
 
 ; 151  : 
@@ -5934,7 +5934,7 @@ __$EHRec$ = -12						; size = 12
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?Render@ShotGun@@UAEXXZ$0:
-	lea	ecx, DWORD PTR $T151620[ebp]
+	lea	ecx, DWORD PTR $T151621[ebp]
 	jmp	??1?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::~vector<Vector2D,std::allocator<Vector2D> >
 __ehhandler$?Render@ShotGun@@UAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -6012,7 +6012,7 @@ __ehfuncinfo$?WorldTransform@@YA?AV?$vector@UVector2D@@V?$allocator@UVector2D@@@
 xdata$x	ENDS
 ;	COMDAT ?WorldTransform@@YA?AV?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@AAV12@ABUVector2D@@111@Z
 _TEXT	SEGMENT
-$T151631 = -124						; size = 4
+$T151632 = -124						; size = 4
 _matTransform$ = -116					; size = 72
 _TranVector2Ds$ = -36					; size = 20
 __$EHRec$ = -12						; size = 12
@@ -6043,7 +6043,7 @@ _scale$ = 28						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T151631[ebp], 0
+	mov	DWORD PTR $T151632[ebp], 0
 
 ; 35   : 	//copy the original vertices into the buffer about to be transformed
 ; 36   :   std::vector<Vector2D> TranVector2Ds = points;
@@ -6139,9 +6139,9 @@ $LN2@WorldTrans:
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@$$QAV01@@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::vector<Vector2D,std::allocator<Vector2D> >
-	mov	edx, DWORD PTR $T151631[ebp]
+	mov	edx, DWORD PTR $T151632[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T151631[ebp], edx
+	mov	DWORD PTR $T151632[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _TranVector2Ds$[ebp]
 	call	??1?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::~vector<Vector2D,std::allocator<Vector2D> >
@@ -6213,10 +6213,10 @@ __unwindfunclet$?WorldTransform@@YA?AV?$vector@UVector2D@@V?$allocator@UVector2D
 	lea	ecx, DWORD PTR _TranVector2Ds$[ebp]
 	jmp	??1?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::~vector<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$?WorldTransform@@YA?AV?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@AAV12@ABUVector2D@@111@Z$1:
-	mov	eax, DWORD PTR $T151631[ebp]
+	mov	eax, DWORD PTR $T151632[ebp]
 	and	eax, 1
 	je	$LN7@WorldTrans
-	and	DWORD PTR $T151631[ebp], -2		; fffffffeH
+	and	DWORD PTR $T151632[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::~vector<Vector2D,std::allocator<Vector2D> >
 $LN7@WorldTrans:
@@ -6698,7 +6698,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?Facing@Raven_Bot@@QBE?AUVector2D@@XZ PROC		; Raven_Bot::Facing, COMDAT
 ; _this$ = ecx
 
-; 158  :   Vector2D      Facing()const{return m_vFacing;}
+; 161  :   Vector2D      Facing()const{return m_vFacing;}
 
 	push	ebp
 	mov	ebp, esp
@@ -6706,7 +6706,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	add	eax, 216				; 000000d8H
+	add	eax, 224				; 000000e0H
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
@@ -6769,7 +6769,7 @@ EXTRN	__ftol2_sse:PROC
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?PolyLine@Cgdi@@QAEXABV?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z
 _TEXT	SEGMENT
-_p$133677 = -8						; size = 4
+_p$133678 = -8						; size = 4
 _this$ = -4						; size = 4
 _points$ = 8						; size = 4
 ?PolyLine@Cgdi@@QAEXABV?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z PROC ; Cgdi::PolyLine, COMDAT
@@ -6822,22 +6822,22 @@ $LN4@PolyLine:
 ; 269  : 
 ; 270  :     for (unsigned int p=1; p<points.size(); ++p)
 
-	mov	DWORD PTR _p$133677[ebp], 1
+	mov	DWORD PTR _p$133678[ebp], 1
 	jmp	SHORT $LN3@PolyLine
 $LN2@PolyLine:
-	mov	edx, DWORD PTR _p$133677[ebp]
+	mov	edx, DWORD PTR _p$133678[ebp]
 	add	edx, 1
-	mov	DWORD PTR _p$133677[ebp], edx
+	mov	DWORD PTR _p$133678[ebp], edx
 $LN3@PolyLine:
 	mov	ecx, DWORD PTR _points$[ebp]
 	call	?size@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBEIXZ ; std::vector<Vector2D,std::allocator<Vector2D> >::size
-	cmp	DWORD PTR _p$133677[ebp], eax
+	cmp	DWORD PTR _p$133678[ebp], eax
 	jae	SHORT $LN1@PolyLine
 
 ; 271  :     {
 ; 272  :       LineTo(m_hdc, (int)points[p].x, (int)points[p].y);
 
-	mov	eax, DWORD PTR _p$133677[ebp]
+	mov	eax, DWORD PTR _p$133678[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _points$[ebp]
 	call	??A?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBEABUVector2D@@I@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::operator[]
@@ -6845,7 +6845,7 @@ $LN3@PolyLine:
 	call	__ftol2_sse
 	mov	esi, esp
 	push	eax
-	mov	ecx, DWORD PTR _p$133677[ebp]
+	mov	ecx, DWORD PTR _p$133678[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _points$[ebp]
 	call	??A?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBEABUVector2D@@I@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::operator[]
@@ -6897,7 +6897,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z
 _TEXT	SEGMENT
-$T151671 = -20						; size = 4
+$T151672 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -6923,7 +6923,7 @@ __Ptr$ = 8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151671[ebp], esp
+	mov	DWORD PTR $T151672[ebp], esp
 	call	??0?$allocator@D@std@@QAE@XZ		; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z ; std::_String_val<char,std::allocator<char> >::_String_val<char,std::allocator<char> >
@@ -7053,7 +7053,7 @@ PUBLIC	??0?$allocator@UVector2D@@@std@@QAE@XZ		; std::allocator<Vector2D>::alloc
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151690 = -8						; size = 4
+$T151691 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::vector<Vector2D,std::allocator<Vector2D> >, COMDAT
 ; _this$ = ecx
@@ -7068,7 +7068,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151690[ebp], esp
+	mov	DWORD PTR $T151691[ebp], esp
 	call	??0?$allocator@UVector2D@@@std@@QAE@XZ	; std::allocator<Vector2D>::allocator<Vector2D>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V?$allocator@UVector2D@@@1@@Z ; std::_Vector_val<Vector2D,std::allocator<Vector2D> >::_Vector_val<Vector2D,std::allocator<Vector2D> >
@@ -7128,9 +7128,9 @@ tv136 = -48						; size = 4
 tv179 = -44						; size = 4
 tv176 = -40						; size = 4
 tv69 = -36						; size = 4
-$T151696 = -32						; size = 4
-$T151695 = -28						; size = 4
-$T151694 = -24						; size = 4
+$T151697 = -32						; size = 4
+$T151696 = -28						; size = 4
+$T151695 = -24						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Right$ = 8						; size = 4
@@ -7170,7 +7170,7 @@ __Right$ = 8						; size = 4
 	add	eax, 16					; 00000010H
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151694[ebp], esp
+	mov	DWORD PTR $T151695[ebp], esp
 	push	eax
 	call	??0?$allocator@UVector2D@@@std@@QAE@ABV01@@Z ; std::allocator<Vector2D>::allocator<Vector2D>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -7200,7 +7200,7 @@ __Right$ = 8						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T151695[ebp], esp
+	mov	DWORD PTR $T151696[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::end
@@ -7210,7 +7210,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T151696[ebp], esp
+	mov	DWORD PTR $T151697[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::begin
@@ -7270,7 +7270,7 @@ __unwindfunclet$??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@A
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::_Vector_val<Vector2D,std::allocator<Vector2D> >::~_Vector_val<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z$3:
-	mov	ecx, DWORD PTR $T151695[ebp]
+	mov	ecx, DWORD PTR $T151696[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -7299,7 +7299,7 @@ __ehfuncinfo$??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@$$QA
 xdata$x	ENDS
 ;	COMDAT ??0?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@$$QAV01@@Z
 _TEXT	SEGMENT
-$T151716 = -20						; size = 4
+$T151717 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -7327,7 +7327,7 @@ __Right$ = 8						; size = 4
 	add	eax, 16					; 00000010H
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151716[ebp], esp
+	mov	DWORD PTR $T151717[ebp], esp
 	push	eax
 	call	??0?$allocator@UVector2D@@@std@@QAE@ABV01@@Z ; std::allocator<Vector2D>::allocator<Vector2D>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -7765,7 +7765,7 @@ PUBLIC	??$addressof@$$CBUVector2D@@@std@@YAPBUVector2D@@ABU1@@Z ; std::addressof
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?push_back@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXABUVector2D@@@Z
 _TEXT	SEGMENT
-__Idx$141118 = -8					; size = 4
+__Idx$141119 = -8					; size = 4
 _this$ = -4						; size = 4
 __Val$ = 8						; size = 4
 ?push_back@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXABUVector2D@@@Z PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::push_back, COMDAT
@@ -7803,7 +7803,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	sub	eax, DWORD PTR [ecx+4]
 	sar	eax, 4
-	mov	DWORD PTR __Idx$141118[ebp], eax
+	mov	DWORD PTR __Idx$141119[ebp], eax
 
 ; 980  : 			if (this->_Mylast == this->_Myend)
 
@@ -7835,7 +7835,7 @@ $LN3@push_back:
 ; 984  : 				this->_Mylast,
 ; 985  : 				this->_Myfirst[_Idx]);
 
-	mov	eax, DWORD PTR __Idx$141118[ebp]
+	mov	eax, DWORD PTR __Idx$141119[ebp]
 	shl	eax, 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	eax, DWORD PTR [ecx+4]
@@ -7931,8 +7931,8 @@ PUBLIC	??0?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allo
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\map
 ;	COMDAT ??0?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151750 = -6						; size = 1
-$T151749 = -5						; size = 1
+$T151751 = -6						; size = 1
+$T151750 = -5						; size = 1
 _this$ = -4						; size = 4
 ??0?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAE@XZ PROC ; std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> > >::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> > >, COMDAT
 ; _this$ = ecx
@@ -7945,10 +7945,10 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	lea	ecx, DWORD PTR $T151749[ebp]
+	lea	ecx, DWORD PTR $T151750[ebp]
 	call	??0?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@std@@QAE@XZ ; std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >
 	push	eax
-	lea	eax, DWORD PTR $T151750[ebp]
+	lea	eax, DWORD PTR $T151751[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@ABV?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@1@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >
@@ -8005,14 +8005,14 @@ tv210 = -136						; size = 4
 tv146 = -132						; size = 4
 tv198 = -128						; size = 4
 tv69 = -124						; size = 4
-$T151764 = -120						; size = 4
-$T151762 = -116						; size = 4
-$T151761 = -112						; size = 12
-$T151760 = -100						; size = 4
-$T151759 = -96						; size = 4
-$T151756 = -92						; size = 12
-$T151755 = -77						; size = 1
-$T141318 = -76						; size = 36
+$T151765 = -120						; size = 4
+$T151763 = -116						; size = 4
+$T151762 = -112						; size = 12
+$T151761 = -100						; size = 4
+$T151760 = -96						; size = 4
+$T151757 = -92						; size = 12
+$T151756 = -77						; size = 1
+$T141319 = -76						; size = 36
 __Where$ = -36						; size = 12
 _this$ = -20						; size = 4
 __$ArrayPad$ = -16					; size = 4
@@ -8044,7 +8044,7 @@ __Keyval$ = 8						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151764[ebp], 0
+	mov	DWORD PTR $T151765[ebp], 0
 
 ; 211  : 		iterator _Where = this->lower_bound(_Keyval);
 
@@ -8059,7 +8059,7 @@ __Keyval$ = 8						; size = 4
 ; 212  : 		if (_Where == this->end()
 ; 213  : 			|| this->comp(_Keyval, this->_Key(_Where._Mynode())))
 
-	lea	edx, DWORD PTR $T151756[ebp]
+	lea	edx, DWORD PTR $T151757[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -8067,9 +8067,9 @@ __Keyval$ = 8						; size = 4
 	mov	eax, DWORD PTR tv69[ebp]
 	mov	DWORD PTR tv198[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T151764[ebp]
+	mov	ecx, DWORD PTR $T151765[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T151764[ebp], ecx
+	mov	DWORD PTR $T151765[ebp], ecx
 	mov	edx, DWORD PTR tv198[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -8097,28 +8097,28 @@ $LN4@operator@5:
 	mov	DWORD PTR tv146[ebp], 1
 $LN5@operator@5:
 	mov	al, BYTE PTR tv146[ebp]
-	mov	BYTE PTR $T151755[ebp], al
+	mov	BYTE PTR $T151756[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR $T151764[ebp]
+	mov	ecx, DWORD PTR $T151765[ebp]
 	and	ecx, 1
 	je	SHORT $LN9@operator@5
-	and	DWORD PTR $T151764[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151756[ebp]
+	and	DWORD PTR $T151765[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151757[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@operator@5:
-	movzx	edx, BYTE PTR $T151755[ebp]
+	movzx	edx, BYTE PTR $T151756[ebp]
 	test	edx, edx
 	je	$LN1@operator@5
 
 ; 214  : 			_Where = this->insert(_Where,
 ; 215  : 				value_type(_Keyval, mapped_type()));
 
-	mov	DWORD PTR $T151759[ebp], 0
-	lea	eax, DWORD PTR $T151759[ebp]
+	mov	DWORD PTR $T151760[ebp], 0
+	lea	eax, DWORD PTR $T151760[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Keyval$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR $T141318[ebp]
+	lea	ecx, DWORD PTR $T141319[ebp]
 	call	??0?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@$$QAPAVFuzzyVariable@@@Z ; std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *>::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *>
 	mov	DWORD PTR tv210[ebp], eax
 	mov	edx, DWORD PTR tv210[ebp]
@@ -8128,12 +8128,12 @@ $LN9@operator@5:
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T151760[ebp], esp
+	mov	DWORD PTR $T151761[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv205[ebp], eax
-	lea	eax, DWORD PTR $T151761[ebp]
+	lea	eax, DWORD PTR $T151762[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@$$QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@1@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::insert<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >
@@ -8146,10 +8146,10 @@ $LN9@operator@5:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??4?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T151761[ebp]
+	lea	ecx, DWORD PTR $T151762[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T141318[ebp]
+	lea	ecx, DWORD PTR $T141319[ebp]
 	call	??1?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@QAE@XZ
 $LN1@operator@5:
 
@@ -8158,11 +8158,11 @@ $LN1@operator@5:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??D?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBEAAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@1@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator*
 	add	eax, 32					; 00000020H
-	mov	DWORD PTR $T151762[ebp], eax
+	mov	DWORD PTR $T151763[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T151762[ebp]
+	mov	eax, DWORD PTR $T151763[ebp]
 
 ; 217  : 		}
 
@@ -8209,19 +8209,19 @@ __unwindfunclet$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAEAAPAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z$1:
-	mov	eax, DWORD PTR $T151764[ebp]
+	mov	eax, DWORD PTR $T151765[ebp]
 	and	eax, 1
 	je	$LN8@operator@5
-	and	DWORD PTR $T151764[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151756[ebp]
+	and	DWORD PTR $T151765[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151757[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@operator@5:
 	ret	0
 __unwindfunclet$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAEAAPAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z$2:
-	lea	ecx, DWORD PTR $T141318[ebp]
+	lea	ecx, DWORD PTR $T141319[ebp]
 	jmp	??1?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@QAE@XZ
 __unwindfunclet$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAEAAPAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z$4:
-	lea	ecx, DWORD PTR $T151761[ebp]
+	lea	ecx, DWORD PTR $T151762[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@@std@@QAEAAPAVFuzzyVariable@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -8316,7 +8316,7 @@ PUBLIC	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151792 = -8						; size = 4
+$T151793 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end, COMDAT
@@ -8330,7 +8330,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151792[ebp], 0
+	mov	DWORD PTR $T151793[ebp], 0
 
 ; 817  : 		return (iterator(this->_Myhead, this));
 
@@ -8341,9 +8341,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
-	mov	eax, DWORD PTR $T151792[ebp]
+	mov	eax, DWORD PTR $T151793[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151792[ebp], eax
+	mov	DWORD PTR $T151793[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 818  : 		}
@@ -8404,11 +8404,11 @@ tv165 = -96						; size = 4
 tv183 = -92						; size = 4
 tv160 = -88						; size = 4
 tv65 = -84						; size = 4
-$T151803 = -80						; size = 4
-$T151800 = -76						; size = 12
-$T151799 = -64						; size = 12
-$T151797 = -52						; size = 12
-$T151796 = -40						; size = 4
+$T151804 = -80						; size = 4
+$T151801 = -76						; size = 12
+$T151800 = -64						; size = 12
+$T151798 = -52						; size = 12
+$T151797 = -40						; size = 4
 __Where$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -8439,7 +8439,7 @@ __Keyval$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151803[ebp], 0
+	mov	DWORD PTR $T151804[ebp], 0
 
 ; 1424 : 		iterator _Where = lower_bound(_Keyval);
 
@@ -8456,7 +8456,7 @@ __Keyval$ = 12						; size = 4
 ; 1427 : 				_Keyval, this->_Key(_Where._Mynode()))
 ; 1428 : 					? end() : _Where);
 
-	lea	edx, DWORD PTR $T151797[ebp]
+	lea	edx, DWORD PTR $T151798[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -8464,9 +8464,9 @@ __Keyval$ = 12						; size = 4
 	mov	eax, DWORD PTR tv65[ebp]
 	mov	DWORD PTR tv160[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	mov	ecx, DWORD PTR $T151803[ebp]
+	mov	ecx, DWORD PTR $T151804[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T151803[ebp], ecx
+	mov	DWORD PTR $T151804[ebp], ecx
 	mov	edx, DWORD PTR tv160[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -8494,20 +8494,20 @@ __Keyval$ = 12						; size = 4
 	jne	SHORT $LN3@find
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T151800[ebp]
+	lea	ecx, DWORD PTR $T151801[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv183[ebp], eax
 	mov	eax, DWORD PTR tv183[ebp]
 	mov	DWORD PTR tv165[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	ecx, DWORD PTR $T151803[ebp]
+	mov	ecx, DWORD PTR $T151804[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T151803[ebp], ecx
+	mov	DWORD PTR $T151804[ebp], ecx
 	mov	edx, DWORD PTR tv165[ebp]
 	mov	DWORD PTR tv152[ebp], edx
 	jmp	SHORT $LN4@find
 $LN3@find:
-	lea	eax, DWORD PTR $T151799[ebp]
+	lea	eax, DWORD PTR $T151800[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -8515,43 +8515,43 @@ $LN3@find:
 	mov	ecx, DWORD PTR tv185[ebp]
 	mov	DWORD PTR tv170[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	edx, DWORD PTR $T151803[ebp]
+	mov	edx, DWORD PTR $T151804[ebp]
 	or	edx, 4
-	mov	DWORD PTR $T151803[ebp], edx
+	mov	DWORD PTR $T151804[ebp], edx
 	mov	eax, DWORD PTR tv170[ebp]
 	mov	DWORD PTR tv152[ebp], eax
 $LN4@find:
 	mov	ecx, DWORD PTR tv152[ebp]
-	mov	DWORD PTR $T151796[ebp], ecx
-	mov	edx, DWORD PTR $T151796[ebp]
+	mov	DWORD PTR $T151797[ebp], ecx
+	mov	edx, DWORD PTR $T151797[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T151803[ebp]
+	mov	eax, DWORD PTR $T151804[ebp]
 	or	eax, 8
-	mov	DWORD PTR $T151803[ebp], eax
+	mov	DWORD PTR $T151804[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	ecx, DWORD PTR $T151803[ebp]
+	mov	ecx, DWORD PTR $T151804[ebp]
 	and	ecx, 4
 	je	SHORT $LN14@find
-	and	DWORD PTR $T151803[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T151799[ebp]
+	and	DWORD PTR $T151804[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T151800[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN14@find:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	edx, DWORD PTR $T151803[ebp]
+	mov	edx, DWORD PTR $T151804[ebp]
 	and	edx, 2
 	je	SHORT $LN15@find
-	and	DWORD PTR $T151803[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T151800[ebp]
+	and	DWORD PTR $T151804[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151801[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN15@find:
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	mov	eax, DWORD PTR $T151803[ebp]
+	mov	eax, DWORD PTR $T151804[ebp]
 	and	eax, 1
 	je	SHORT $LN16@find
-	and	DWORD PTR $T151803[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151797[ebp]
+	and	DWORD PTR $T151804[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151798[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN16@find:
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
@@ -8600,37 +8600,37 @@ __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z$1:
-	mov	eax, DWORD PTR $T151803[ebp]
+	mov	eax, DWORD PTR $T151804[ebp]
 	and	eax, 1
 	je	$LN7@find
-	and	DWORD PTR $T151803[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T151797[ebp]
+	and	DWORD PTR $T151804[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T151798[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN7@find:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z$2:
-	mov	eax, DWORD PTR $T151803[ebp]
+	mov	eax, DWORD PTR $T151804[ebp]
 	and	eax, 2
 	je	$LN9@find
-	and	DWORD PTR $T151803[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T151800[ebp]
+	and	DWORD PTR $T151804[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T151801[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@find:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z$3:
-	mov	eax, DWORD PTR $T151803[ebp]
+	mov	eax, DWORD PTR $T151804[ebp]
 	and	eax, 4
 	je	$LN11@find
-	and	DWORD PTR $T151803[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T151799[ebp]
+	and	DWORD PTR $T151804[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T151800[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN11@find:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z$4:
-	mov	eax, DWORD PTR $T151803[ebp]
+	mov	eax, DWORD PTR $T151804[ebp]
 	and	eax, 8
 	je	$LN13@find
-	and	DWORD PTR $T151803[ebp], -9		; fffffff7H
+	and	DWORD PTR $T151804[ebp], -9		; fffffff7H
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@find:
@@ -8651,7 +8651,7 @@ PUBLIC	??0?$allocator@PAVFuzzyRule@@@std@@QAE@XZ	; std::allocator<FuzzyRule *>::
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ??0?$vector@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151826 = -8						; size = 4
+$T151827 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$vector@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE@XZ PROC ; std::vector<FuzzyRule *,std::allocator<FuzzyRule *> >::vector<FuzzyRule *,std::allocator<FuzzyRule *> >, COMDAT
 ; _this$ = ecx
@@ -8666,7 +8666,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151826[ebp], esp
+	mov	DWORD PTR $T151827[ebp], esp
 	call	??0?$allocator@PAVFuzzyRule@@@std@@QAE@XZ ; std::allocator<FuzzyRule *>::allocator<FuzzyRule *>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE@V?$allocator@PAVFuzzyRule@@@1@@Z ; std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> >::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> >
@@ -8686,7 +8686,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyR
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151831 = -8						; size = 4
+$T151832 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@2@XZ PROC ; std::vector<FuzzyRule *,std::allocator<FuzzyRule *> >::begin, COMDAT
@@ -8700,7 +8700,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151831[ebp], 0
+	mov	DWORD PTR $T151832[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -8711,9 +8711,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@PAPAVFuzzyRule@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >::_Vector_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >
-	mov	eax, DWORD PTR $T151831[ebp]
+	mov	eax, DWORD PTR $T151832[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151831[ebp], eax
+	mov	DWORD PTR $T151832[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -8729,7 +8729,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151836 = -8						; size = 4
+$T151837 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@2@XZ PROC ; std::vector<FuzzyRule *,std::allocator<FuzzyRule *> >::end, COMDAT
@@ -8743,7 +8743,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151836[ebp], 0
+	mov	DWORD PTR $T151837[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -8754,9 +8754,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@@std@@QAE@PAPAVFuzzyRule@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >::_Vector_iterator<std::_Vector_val<FuzzyRule *,std::allocator<FuzzyRule *> > >
-	mov	eax, DWORD PTR $T151836[ebp]
+	mov	eax, DWORD PTR $T151837[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151836[ebp], eax
+	mov	DWORD PTR $T151837[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -9561,7 +9561,7 @@ PUBLIC	?copy@?$char_traits@D@std@@SAPADPADPBDI@Z	; std::char_traits<char>::copy
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xstring
 ;	COMDAT ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEX_NI@Z
 _TEXT	SEGMENT
-__Ptr$141941 = -8					; size = 4
+__Ptr$141942 = -8					; size = 4
 _this$ = -4						; size = 4
 __Built$ = 8						; size = 1
 __Newsize$ = 12						; size = 4
@@ -9597,7 +9597,7 @@ $LN4@Tidy:
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+4]
-	mov	DWORD PTR __Ptr$141941[ebp], eax
+	mov	DWORD PTR __Ptr$141942[ebp], eax
 
 ; 1993 : 			if (0 < _Newsize)
 
@@ -9608,7 +9608,7 @@ $LN4@Tidy:
 
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Ptr$141941[ebp]
+	mov	edx, DWORD PTR __Ptr$141942[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 4
@@ -9623,7 +9623,7 @@ $LN1@Tidy:
 	mov	edx, DWORD PTR [ecx+24]
 	add	edx, 1
 	push	edx
-	mov	eax, DWORD PTR __Ptr$141941[ebp]
+	mov	eax, DWORD PTR __Ptr$141942[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 28					; 0000001cH
@@ -9710,7 +9710,7 @@ __ehfuncinfo$??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z
 xdata$x	ENDS
 ;	COMDAT ??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z
 _TEXT	SEGMENT
-$T151904 = -36						; size = 8
+$T151905 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -9768,7 +9768,7 @@ __Al$ = 8						; size = 1
 
 ; 470  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T151904[ebp]
+	lea	ecx, DWORD PTR $T151905[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -10256,11 +10256,11 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv196 = -60						; size = 4
 tv78 = -56						; size = 4
-$T151948 = -52						; size = 12
-$T151947 = -39						; size = 1
-$T151946 = -38						; size = 1
-$T151945 = -37						; size = 1
-__Next$142457 = -32					; size = 12
+$T151949 = -52						; size = 12
+$T151948 = -39						; size = 1
+$T151947 = -38						; size = 1
+$T151946 = -37						; size = 1
+__Next$142458 = -32					; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -10301,12 +10301,12 @@ $LN7@Assign_rv:
 ; 608  : 			;
 ; 609  : 		else if (get_allocator() != _Right.get_allocator())
 
-	lea	ecx, DWORD PTR $T151945[ebp]
+	lea	ecx, DWORD PTR $T151946[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?get_allocator@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$allocator@UVector2D@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::get_allocator
 	push	eax
-	lea	edx, DWORD PTR $T151946[ebp]
+	lea	edx, DWORD PTR $T151947[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?get_allocator@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$allocator@UVector2D@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::get_allocator
@@ -10325,7 +10325,7 @@ $LN7@Assign_rv:
 
 ; 612  : 			for (iterator _Next = _Right.begin(); _Next != _Right.end();
 
-	lea	ecx, DWORD PTR __Next$142457[ebp]
+	lea	ecx, DWORD PTR __Next$142458[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::begin
@@ -10335,10 +10335,10 @@ $LN3@Assign_rv:
 
 ; 613  : 				++_Next)
 
-	lea	ecx, DWORD PTR __Next$142457[ebp]
+	lea	ecx, DWORD PTR __Next$142458[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::operator++
 $LN4@Assign_rv:
-	lea	edx, DWORD PTR $T151948[ebp]
+	lea	edx, DWORD PTR $T151949[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::end
@@ -10348,19 +10348,19 @@ $LN4@Assign_rv:
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	ecx, DWORD PTR tv196[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$142457[ebp]
+	lea	ecx, DWORD PTR __Next$142458[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::operator!=
-	mov	BYTE PTR $T151947[ebp], al
+	mov	BYTE PTR $T151948[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151948[ebp]
+	lea	ecx, DWORD PTR $T151949[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T151947[ebp]
+	movzx	edx, BYTE PTR $T151948[ebp]
 	test	edx, edx
 	je	SHORT $LN2@Assign_rv
 
 ; 614  : 				push_back(_STD forward<_Ty>(*_Next));
 
-	lea	ecx, DWORD PTR __Next$142457[ebp]
+	lea	ecx, DWORD PTR __Next$142458[ebp]
 	call	??D?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QBEAAUVector2D@@XZ ; std::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::operator*
 	push	eax
 	call	??$forward@UVector2D@@@std@@YA$$QAUVector2D@@AAU1@@Z ; std::forward<Vector2D>
@@ -10371,7 +10371,7 @@ $LN4@Assign_rv:
 	jmp	SHORT $LN3@Assign_rv
 $LN2@Assign_rv:
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR __Next$142457[ebp]
+	lea	ecx, DWORD PTR __Next$142458[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 
 ; 615  : 			}
@@ -10470,10 +10470,10 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Assign_rv@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAV12@@Z$0:
-	lea	ecx, DWORD PTR __Next$142457[ebp]
+	lea	ecx, DWORD PTR __Next$142458[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAV12@@Z$1:
-	lea	ecx, DWORD PTR $T151948[ebp]
+	lea	ecx, DWORD PTR $T151949[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Assign_rv@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAV12@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -10606,7 +10606,7 @@ PUBLIC	??$addressof@UVector2D@@@std@@YAPAUVector2D@@AAU1@@Z ; std::addressof<Vec
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ?push_back@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAUVector2D@@@Z
 _TEXT	SEGMENT
-__Idx$141068 = -8					; size = 4
+__Idx$141069 = -8					; size = 4
 _this$ = -4						; size = 4
 __Val$ = 8						; size = 4
 ?push_back@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAUVector2D@@@Z PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::push_back, COMDAT
@@ -10644,7 +10644,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	sub	eax, DWORD PTR [ecx+4]
 	sar	eax, 4
-	mov	DWORD PTR __Idx$141068[ebp], eax
+	mov	DWORD PTR __Idx$141069[ebp], eax
 
 ; 635  : 			if (this->_Mylast == this->_Myend)
 
@@ -10676,7 +10676,7 @@ $LN3@push_back@2:
 ; 639  : 				this->_Mylast,
 ; 640  : 				_STD forward<_Ty>(this->_Myfirst[_Idx]));
 
-	mov	eax, DWORD PTR __Idx$141068[ebp]
+	mov	eax, DWORD PTR __Idx$141069[ebp]
 	shl	eax, 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	eax, DWORD PTR [ecx+4]
@@ -10776,7 +10776,7 @@ PUBLIC	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVecto
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151971 = -8						; size = 4
+$T151972 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::begin, COMDAT
@@ -10790,7 +10790,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151971[ebp], 0
+	mov	DWORD PTR $T151972[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Myfirst, this));
 
@@ -10801,9 +10801,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAUVector2D@@PBU_Container_base12@1@@Z ; std::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >
-	mov	eax, DWORD PTR $T151971[ebp]
+	mov	eax, DWORD PTR $T151972[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151971[ebp], eax
+	mov	DWORD PTR $T151972[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -10819,7 +10819,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151976 = -8						; size = 4
+$T151977 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::end, COMDAT
@@ -10833,7 +10833,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151976[ebp], 0
+	mov	DWORD PTR $T151977[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Mylast, this));
 
@@ -10844,9 +10844,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAUVector2D@@PBU_Container_base12@1@@Z ; std::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >
-	mov	eax, DWORD PTR $T151976[ebp]
+	mov	eax, DWORD PTR $T151977[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151976[ebp], eax
+	mov	DWORD PTR $T151977[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -11456,7 +11456,7 @@ __ehfuncinfo$??0?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V?$allocator@UVector2D@@@1@@Z
 _TEXT	SEGMENT
-$T152010 = -36						; size = 8
+$T152011 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -11514,7 +11514,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T152010[ebp]
+	lea	ecx, DWORD PTR $T152011[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -11831,7 +11831,7 @@ PUBLIC	??0?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allo
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xtree
 ;	COMDAT ??0?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@ABV?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T152041 = -8						; size = 4
+$T152042 = -8						; size = 4
 _this$ = -4						; size = 4
 __Parg$ = 8						; size = 4
 __Al$ = 12						; size = 4
@@ -11848,7 +11848,7 @@ __Al$ = 12						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T152041[ebp], esp
+	mov	DWORD PTR $T152042[ebp], esp
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@std@@QAE@ABV01@@Z ; std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >
@@ -11872,7 +11872,7 @@ PUBLIC	?_Lbound@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?lower_bound@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z
 _TEXT	SEGMENT
-$T152046 = -8						; size = 4
+$T152047 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Keyval$ = 12						; size = 4
@@ -11887,7 +11887,7 @@ __Keyval$ = 12						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152046[ebp], 0
+	mov	DWORD PTR $T152047[ebp], 0
 
 ; 1450 : 		return (iterator(_Lbound(_Keyval), this));
 
@@ -11900,9 +11900,9 @@ __Keyval$ = 12						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
-	mov	edx, DWORD PTR $T152046[ebp]
+	mov	edx, DWORD PTR $T152047[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152046[ebp], edx
+	mov	DWORD PTR $T152047[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 1451 : 		}
@@ -11946,11 +11946,11 @@ tv148 = -76						; size = 4
 tv157 = -72						; size = 4
 tv146 = -68						; size = 4
 tv156 = -64						; size = 4
-$T152054 = -60						; size = 12
-$T152053 = -48						; size = 12
-$T152052 = -36						; size = 4
-$T152051 = -32						; size = 12
-$T152050 = -20						; size = 4
+$T152055 = -60						; size = 12
+$T152054 = -48						; size = 12
+$T152053 = -36						; size = 4
+$T152052 = -32						; size = 12
+$T152051 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?_Tidy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXXZ PROC ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Tidy, COMDAT
@@ -11981,7 +11981,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 1866 : 		erase(begin(), end());
 
-	lea	eax, DWORD PTR $T152051[ebp]
+	lea	eax, DWORD PTR $T152052[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -11991,7 +11991,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152050[ebp], esp
+	mov	DWORD PTR $T152051[ebp], esp
 	mov	edx, DWORD PTR tv146[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -11999,7 +11999,7 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR tv157[ebp]
 	mov	DWORD PTR tv148[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T152053[ebp]
+	lea	ecx, DWORD PTR $T152054[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin
@@ -12009,24 +12009,24 @@ __$EHRec$ = -12						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152052[ebp], esp
+	mov	DWORD PTR $T152053[ebp], esp
 	mov	eax, DWORD PTR tv151[ebp]
 	push	eax
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv154[ebp], eax
-	lea	ecx, DWORD PTR $T152054[ebp]
+	lea	ecx, DWORD PTR $T152055[ebp]
 	push	ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@0@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::erase
 	mov	DWORD PTR tv149[ebp], eax
-	lea	ecx, DWORD PTR $T152054[ebp]
+	lea	ecx, DWORD PTR $T152055[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152053[ebp]
+	lea	ecx, DWORD PTR $T152054[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T152051[ebp]
+	lea	ecx, DWORD PTR $T152052[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 
 ; 1867 : 		}
@@ -12045,13 +12045,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Tidy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXXZ$0:
-	lea	ecx, DWORD PTR $T152051[ebp]
+	lea	ecx, DWORD PTR $T152052[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Tidy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXXZ$1:
-	mov	ecx, DWORD PTR $T152050[ebp]
+	mov	ecx, DWORD PTR $T152051[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Tidy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXXZ$2:
-	lea	ecx, DWORD PTR $T152053[ebp]
+	lea	ecx, DWORD PTR $T152054[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Tidy@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -12217,7 +12217,7 @@ __ehfuncinfo$??0?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@st
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@PAVFuzzyRule@@V?$allocator@PAVFuzzyRule@@@std@@@std@@QAE@V?$allocator@PAVFuzzyRule@@@1@@Z
 _TEXT	SEGMENT
-$T152081 = -36						; size = 8
+$T152082 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -12275,7 +12275,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T152081[ebp]
+	lea	ecx, DWORD PTR $T152082[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -13276,7 +13276,7 @@ PUBLIC	?assign@?$char_traits@D@std@@SAXAADABD@Z	; std::char_traits<char>::assign
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z
 _TEXT	SEGMENT
-$T152132 = -5						; size = 1
+$T152133 = -5						; size = 1
 _this$ = -4						; size = 4
 __Newsize$ = 8						; size = 4
 ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos, COMDAT
@@ -13293,11 +13293,11 @@ __Newsize$ = 8						; size = 4
 
 ; 1953 : 		_Traits::assign(_Myptr()[this->_Mysize = _Newsize], _Elem());
 
-	mov	BYTE PTR $T152132[ebp], 0
+	mov	BYTE PTR $T152133[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	mov	DWORD PTR [eax+20], ecx
-	lea	edx, DWORD PTR $T152132[ebp]
+	lea	edx, DWORD PTR $T152133[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Myptr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEPADXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Myptr
@@ -13600,8 +13600,8 @@ __ehfuncinfo$?reserve@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QA
 xdata$x	ENDS
 ;	COMDAT ?reserve@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXI@Z
 _TEXT	SEGMENT
-__Size$143544 = -28					; size = 4
-__Ptr$143537 = -24					; size = 4
+__Size$143545 = -28					; size = 4
+__Ptr$143538 = -24					; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Count$ = 8						; size = 4
@@ -13661,7 +13661,7 @@ $LN5@reserve:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?allocate@?$allocator@UVector2D@@@std@@QAEPAUVector2D@@I@Z ; std::allocator<Vector2D>::allocate
-	mov	DWORD PTR __Ptr$143537[ebp], eax
+	mov	DWORD PTR __Ptr$143538[ebp], eax
 
 ; 752  : 
 ; 753  : 			_TRY_BEGIN
@@ -13670,7 +13670,7 @@ $LN5@reserve:
 
 ; 754  : 			_Umove(this->_Myfirst, this->_Mylast, _Ptr);
 
-	mov	ecx, DWORD PTR __Ptr$143537[ebp]
+	mov	ecx, DWORD PTR __Ptr$143538[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
@@ -13688,7 +13688,7 @@ __catch$?reserve@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXI@Z
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Ptr$143537[ebp]
+	mov	ecx, DWORD PTR __Ptr$143538[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -13714,7 +13714,7 @@ __tryend$?reserve@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXI@
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?size@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBEIXZ ; std::vector<Vector2D,std::allocator<Vector2D> >::size
-	mov	DWORD PTR __Size$143544[ebp], eax
+	mov	DWORD PTR __Size$143545[ebp], eax
 
 ; 761  : 			if (this->_Myfirst != 0)
 
@@ -13762,22 +13762,22 @@ $LN1@reserve:
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	shl	eax, 4
-	add	eax, DWORD PTR __Ptr$143537[ebp]
+	add	eax, DWORD PTR __Ptr$143538[ebp]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], eax
 
 ; 770  : 			this->_Mylast = _Ptr + _Size;
 
-	mov	edx, DWORD PTR __Size$143544[ebp]
+	mov	edx, DWORD PTR __Size$143545[ebp]
 	shl	edx, 4
-	add	edx, DWORD PTR __Ptr$143537[ebp]
+	add	edx, DWORD PTR __Ptr$143538[ebp]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+8], edx
 
 ; 771  : 			this->_Myfirst = _Ptr;
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Ptr$143537[ebp]
+	mov	edx, DWORD PTR __Ptr$143538[ebp]
 	mov	DWORD PTR [ecx+4], edx
 $LN7@reserve:
 
@@ -13843,7 +13843,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T152167 = -8						; size = 4
+$T152168 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::begin, COMDAT
@@ -13857,7 +13857,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152167[ebp], 0
+	mov	DWORD PTR $T152168[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -13868,9 +13868,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAUVector2D@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >
-	mov	eax, DWORD PTR $T152167[ebp]
+	mov	eax, DWORD PTR $T152168[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152167[ebp], eax
+	mov	DWORD PTR $T152168[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -13886,7 +13886,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T152172 = -8						; size = 4
+$T152173 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::end, COMDAT
@@ -13900,7 +13900,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152172[ebp], 0
+	mov	DWORD PTR $T152173[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -13911,9 +13911,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAUVector2D@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >
-	mov	eax, DWORD PTR $T152172[ebp]
+	mov	eax, DWORD PTR $T152173[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152172[ebp], eax
+	mov	DWORD PTR $T152173[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -14024,11 +14024,11 @@ tv148 = -76						; size = 4
 tv157 = -72						; size = 4
 tv146 = -68						; size = 4
 tv156 = -64						; size = 4
-$T152184 = -60						; size = 12
-$T152183 = -48						; size = 12
-$T152182 = -36						; size = 4
-$T152181 = -32						; size = 12
-$T152180 = -20						; size = 4
+$T152185 = -60						; size = 12
+$T152184 = -48						; size = 12
+$T152183 = -36						; size = 4
+$T152182 = -32						; size = 12
+$T152181 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?clear@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXXZ PROC ; std::vector<Vector2D,std::allocator<Vector2D> >::clear, COMDAT
@@ -14059,7 +14059,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 1218 : 		erase(begin(), end());
 
-	lea	eax, DWORD PTR $T152181[ebp]
+	lea	eax, DWORD PTR $T152182[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::end
@@ -14069,7 +14069,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152180[ebp], esp
+	mov	DWORD PTR $T152181[ebp], esp
 	mov	edx, DWORD PTR tv146[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -14077,7 +14077,7 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR tv157[ebp]
 	mov	DWORD PTR tv148[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T152183[ebp]
+	lea	ecx, DWORD PTR $T152184[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::vector<Vector2D,std::allocator<Vector2D> >::begin
@@ -14087,24 +14087,24 @@ __$EHRec$ = -12						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152182[ebp], esp
+	mov	DWORD PTR $T152183[ebp], esp
 	mov	eax, DWORD PTR tv151[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv154[ebp], eax
-	lea	ecx, DWORD PTR $T152184[ebp]
+	lea	ecx, DWORD PTR $T152185[ebp]
 	push	ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@0@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::erase
 	mov	DWORD PTR tv149[ebp], eax
-	lea	ecx, DWORD PTR $T152184[ebp]
+	lea	ecx, DWORD PTR $T152185[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152183[ebp]
+	lea	ecx, DWORD PTR $T152184[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T152181[ebp]
+	lea	ecx, DWORD PTR $T152182[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 
 ; 1219 : 		}
@@ -14123,13 +14123,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?clear@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXXZ$0:
-	lea	ecx, DWORD PTR $T152181[ebp]
+	lea	ecx, DWORD PTR $T152182[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?clear@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXXZ$1:
-	mov	ecx, DWORD PTR $T152180[ebp]
+	mov	ecx, DWORD PTR $T152181[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?clear@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXXZ$2:
-	lea	ecx, DWORD PTR $T152183[ebp]
+	lea	ecx, DWORD PTR $T152184[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?clear@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -14367,7 +14367,7 @@ PUBLIC	?_Lmost@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xtree
 ;	COMDAT ?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T152211 = -8						; size = 4
+$T152212 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin, COMDAT
@@ -14381,7 +14381,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152211[ebp], 0
+	mov	DWORD PTR $T152212[ebp], 0
 
 ; 807  : 		return (iterator(_Lmost(), this));
 
@@ -14393,9 +14393,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
-	mov	edx, DWORD PTR $T152211[ebp]
+	mov	edx, DWORD PTR $T152212[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152211[ebp], edx
+	mov	DWORD PTR $T152212[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 808  : 		}
@@ -14441,12 +14441,12 @@ tv184 = -80						; size = 4
 tv204 = -76						; size = 4
 tv179 = -72						; size = 4
 tv202 = -68						; size = 4
-$T152224 = -64						; size = 4
-$T152221 = -60						; size = 12
-$T152220 = -48						; size = 4
-$T152217 = -44						; size = 12
-$T152216 = -32						; size = 12
-$T152215 = -17						; size = 1
+$T152225 = -64						; size = 4
+$T152222 = -60						; size = 12
+$T152221 = -48						; size = 4
+$T152218 = -44						; size = 12
+$T152217 = -32						; size = 12
+$T152216 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -14477,12 +14477,12 @@ __Last$ = 24						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152224[ebp], 0
+	mov	DWORD PTR $T152225[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1380 : 		if (_First == begin() && _Last == end())
 
-	lea	eax, DWORD PTR $T152216[ebp]
+	lea	eax, DWORD PTR $T152217[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin
@@ -14490,9 +14490,9 @@ __Last$ = 24						; size = 12
 	mov	ecx, DWORD PTR tv202[ebp]
 	mov	DWORD PTR tv179[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T152224[ebp]
+	mov	edx, DWORD PTR $T152225[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152224[ebp], edx
+	mov	DWORD PTR $T152225[ebp], edx
 	mov	eax, DWORD PTR tv179[ebp]
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
@@ -14500,7 +14500,7 @@ __Last$ = 24						; size = 12
 	movzx	ecx, al
 	test	ecx, ecx
 	je	SHORT $LN7@erase
-	lea	edx, DWORD PTR $T152217[ebp]
+	lea	edx, DWORD PTR $T152218[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -14508,9 +14508,9 @@ __Last$ = 24						; size = 12
 	mov	eax, DWORD PTR tv204[ebp]
 	mov	DWORD PTR tv184[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	ecx, DWORD PTR $T152224[ebp]
+	mov	ecx, DWORD PTR $T152225[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T152224[ebp], ecx
+	mov	DWORD PTR $T152225[ebp], ecx
 	mov	edx, DWORD PTR tv184[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Last$[ebp]
@@ -14524,24 +14524,24 @@ $LN7@erase:
 	mov	DWORD PTR tv94[ebp], 0
 $LN8@erase:
 	mov	cl, BYTE PTR tv94[ebp]
-	mov	BYTE PTR $T152215[ebp], cl
+	mov	BYTE PTR $T152216[ebp], cl
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T152224[ebp]
+	mov	edx, DWORD PTR $T152225[ebp]
 	and	edx, 2
 	je	SHORT $LN15@erase
-	and	DWORD PTR $T152224[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T152217[ebp]
+	and	DWORD PTR $T152225[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T152218[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN15@erase:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T152224[ebp]
+	mov	eax, DWORD PTR $T152225[ebp]
 	and	eax, 1
 	je	SHORT $LN16@erase
-	and	DWORD PTR $T152224[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T152216[ebp]
+	and	DWORD PTR $T152225[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152217[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN16@erase:
-	movzx	ecx, BYTE PTR $T152215[ebp]
+	movzx	ecx, BYTE PTR $T152216[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@erase
 
@@ -14557,9 +14557,9 @@ $LN16@erase:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin
-	mov	eax, DWORD PTR $T152224[ebp]
+	mov	eax, DWORD PTR $T152225[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T152224[ebp], eax
+	mov	DWORD PTR $T152225[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -14590,18 +14590,18 @@ $LN2@erase:
 
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T152220[ebp], esp
+	mov	DWORD PTR $T152221[ebp], esp
 	push	0
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator++
 	mov	DWORD PTR tv196[ebp], eax
-	lea	ecx, DWORD PTR $T152221[ebp]
+	lea	ecx, DWORD PTR $T152222[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::erase
 	mov	DWORD PTR tv197[ebp], eax
-	lea	ecx, DWORD PTR $T152221[ebp]
+	lea	ecx, DWORD PTR $T152222[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@erase
 $LN1@erase:
@@ -14614,9 +14614,9 @@ $LN1@erase:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
-	mov	ecx, DWORD PTR $T152224[ebp]
+	mov	ecx, DWORD PTR $T152225[ebp]
 	or	ecx, 4
-	mov	DWORD PTR $T152224[ebp], ecx
+	mov	DWORD PTR $T152225[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -14657,28 +14657,28 @@ __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@0@Z$2:
-	mov	eax, DWORD PTR $T152224[ebp]
+	mov	eax, DWORD PTR $T152225[ebp]
 	and	eax, 1
 	je	$LN12@erase
-	and	DWORD PTR $T152224[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T152216[ebp]
+	and	DWORD PTR $T152225[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T152217[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN12@erase:
 	ret	0
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@0@Z$3:
-	mov	eax, DWORD PTR $T152224[ebp]
+	mov	eax, DWORD PTR $T152225[ebp]
 	and	eax, 2
 	je	$LN14@erase
-	and	DWORD PTR $T152224[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T152217[ebp]
+	and	DWORD PTR $T152225[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T152218[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN14@erase:
 	ret	0
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@0@Z$4:
-	mov	eax, DWORD PTR $T152224[ebp]
+	mov	eax, DWORD PTR $T152225[ebp]
 	and	eax, 4
 	je	$LN18@erase
-	and	DWORD PTR $T152224[ebp], -5		; fffffffbH
+	and	DWORD PTR $T152225[ebp], -5		; fffffffbH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN18@erase:
@@ -14832,7 +14832,7 @@ __ehfuncinfo$??0?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@st
 xdata$x	ENDS
 ;	COMDAT ??0?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T152245 = -20						; size = 4
+$T152246 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Parg$ = 8						; size = 4
@@ -14859,7 +14859,7 @@ __Al$ = 12						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T152245[ebp], esp
+	mov	DWORD PTR $T152246[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@std@@QAE@ABV01@@Z ; std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >
@@ -16139,7 +16139,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV01@@Z
 _TEXT	SEGMENT
-$T152340 = -20						; size = 4
+$T152341 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -16167,7 +16167,7 @@ __Right$ = 8						; size = 4
 	add	eax, 28					; 0000001cH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T152340[ebp], esp
+	mov	DWORD PTR $T152341[ebp], esp
 	push	eax
 	call	??0?$allocator@D@std@@QAE@ABV01@@Z	; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -16381,7 +16381,7 @@ PUBLIC	?move@?$char_traits@D@std@@SAPADPADPBDI@Z	; std::char_traits<char>::move
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z
 _TEXT	SEGMENT
-__Newsize$141920 = -8					; size = 4
+__Newsize$141921 = -8					; size = 4
 _this$ = -4						; size = 4
 __Off$ = 8						; size = 4
 __Count$ = 12						; size = 4
@@ -16457,11 +16457,11 @@ $LN2@erase@2:
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+20]
 	sub	eax, DWORD PTR __Count$[ebp]
-	mov	DWORD PTR __Newsize$141920[ebp], eax
+	mov	DWORD PTR __Newsize$141921[ebp], eax
 
 ; 1118 : 			_Eos(_Newsize);
 
-	mov	ecx, DWORD PTR __Newsize$141920[ebp]
+	mov	ecx, DWORD PTR __Newsize$141921[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos
@@ -17048,11 +17048,11 @@ tv271 = -92						; size = 4
 tv270 = -88						; size = 4
 tv267 = -84						; size = 4
 tv266 = -80						; size = 4
-$T152401 = -76						; size = 4
-$T152392 = -72						; size = 4
-$T152391 = -68						; size = 4
-$T152390 = -64						; size = 4
-__Ptr$144317 = -60					; size = 4
+$T152402 = -76						; size = 4
+$T152393 = -72						; size = 4
+$T152392 = -68						; size = 4
+$T152391 = -64						; size = 4
+__Ptr$144318 = -60					; size = 4
 __Last$ = -52						; size = 12
 __First$ = -32						; size = 12
 _this$ = -16						; size = 4
@@ -17085,14 +17085,14 @@ __Last_arg$ = 24					; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152401[ebp], 0
+	mov	DWORD PTR $T152402[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1191 : 		iterator _First = _Make_iter(_First_arg);
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152390[ebp], esp
+	mov	DWORD PTR $T152391[ebp], esp
 	lea	eax, DWORD PTR __First_arg$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -17108,7 +17108,7 @@ __Last_arg$ = 24					; size = 12
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152391[ebp], esp
+	mov	DWORD PTR $T152392[ebp], esp
 	lea	edx, DWORD PTR __Last_arg$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -17179,7 +17179,7 @@ $LN2@erase@3:
 	push	eax
 	call	??$_Move@PAUVector2D@@PAU1@@std@@YAPAUVector2D@@PAU1@00@Z ; std::_Move<Vector2D *,Vector2D *>
 	add	esp, 12					; 0000000cH
-	mov	DWORD PTR __Ptr$144317[ebp], eax
+	mov	DWORD PTR __Ptr$144318[ebp], eax
 
 ; 1203 : 			_Orphan_range(_VIPTR(_First), this->_Mylast);
 
@@ -17202,7 +17202,7 @@ $LN2@erase@3:
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	eax, DWORD PTR __Ptr$144317[ebp]
+	mov	eax, DWORD PTR __Ptr$144318[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Destroy@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@IAEXPAUVector2D@@0@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::_Destroy
@@ -17210,7 +17210,7 @@ $LN2@erase@3:
 ; 1211 : 			this->_Mylast = _Ptr;
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Ptr$144317[ebp]
+	mov	edx, DWORD PTR __Ptr$144318[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN3@erase@3:
 
@@ -17219,7 +17219,7 @@ $LN3@erase@3:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152392[ebp], esp
+	mov	DWORD PTR $T152393[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -17229,9 +17229,9 @@ $LN3@erase@3:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z ; std::vector<Vector2D,std::allocator<Vector2D> >::_Make_iter
 	mov	DWORD PTR tv275[ebp], eax
-	mov	edx, DWORD PTR $T152401[ebp]
+	mov	edx, DWORD PTR $T152402[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152401[ebp], edx
+	mov	DWORD PTR $T152402[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
@@ -17307,10 +17307,10 @@ __unwindfunclet$?erase@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@Q
 	lea	ecx, DWORD PTR __Last$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@0@Z$7:
-	mov	eax, DWORD PTR $T152401[ebp]
+	mov	eax, DWORD PTR $T152402[ebp]
 	and	eax, 1
 	je	$LN14@erase@3
-	and	DWORD PTR $T152401[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152402[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 $LN14@erase@3:
@@ -17409,7 +17409,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv199 = -44						; size = 4
 tv187 = -40						; size = 4
-$T152425 = -36						; size = 4
+$T152426 = -36						; size = 4
 __Pnode$ = -32						; size = 4
 __Fixnodeparent$ = -28					; size = 4
 __Fixnode$ = -24					; size = 4
@@ -17446,7 +17446,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152425[ebp], 0
+	mov	DWORD PTR $T152426[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1196 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -18542,9 +18542,9 @@ $LN1@erase@4:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
-	mov	ecx, DWORD PTR $T152425[ebp]
+	mov	ecx, DWORD PTR $T152426[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152425[ebp], ecx
+	mov	DWORD PTR $T152426[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -18569,10 +18569,10 @@ __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T152425[ebp]
+	mov	eax, DWORD PTR $T152426[ebp]
 	and	eax, 1
 	je	$LN50@erase@4
-	and	DWORD PTR $T152425[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152426[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN50@erase@4:
@@ -18854,7 +18854,7 @@ __ehfuncinfo$??0?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@st
 xdata$x	ENDS
 ;	COMDAT ??0?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE@ABU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T152451 = -36						; size = 8
+$T152452 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -18921,7 +18921,7 @@ __Al$ = 12						; size = 1
 
 ; 493  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T152451[ebp]
+	lea	ecx, DWORD PTR $T152452[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -19046,7 +19046,7 @@ __ehfuncinfo$??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_str
 xdata$x	ENDS
 ;	COMDAT ??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T152468 = -40						; size = 4
+$T152469 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -19078,7 +19078,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152468[ebp], 0
+	mov	DWORD PTR $T152469[ebp], 0
 
 ; 271  : 		_Myiter _Tmp = *this;
 
@@ -19099,9 +19099,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T152468[ebp]
+	mov	edx, DWORD PTR $T152469[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152468[ebp], edx
+	mov	DWORD PTR $T152469[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -19145,10 +19145,10 @@ __unwindfunclet$??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T152468[ebp]
+	mov	eax, DWORD PTR $T152469[ebp]
 	and	eax, 1
 	je	$LN5@operator@11
-	and	DWORD PTR $T152468[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152469[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@11:
@@ -19699,7 +19699,7 @@ __ehfuncinfo$?_Make_iter@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T152514 = -20						; size = 4
+$T152515 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -19724,7 +19724,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152514[ebp], 0
+	mov	DWORD PTR $T152515[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -19735,9 +19735,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAUVector2D@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >::_Vector_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >
-	mov	edx, DWORD PTR $T152514[ebp]
+	mov	edx, DWORD PTR $T152515[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152514[ebp], edx
+	mov	DWORD PTR $T152515[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
@@ -19761,10 +19761,10 @@ __unwindfunclet$?_Make_iter@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@s
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T152514[ebp]
+	mov	eax, DWORD PTR $T152515[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter
-	and	DWORD PTR $T152514[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152515[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter:
@@ -19783,7 +19783,7 @@ text$x	ENDS
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xtree
 ;	COMDAT ?_Erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z
 _TEXT	SEGMENT
-__Pnode$145008 = -8					; size = 4
+__Pnode$145009 = -8					; size = 4
 _this$ = -4						; size = 4
 __Rootnode$ = 8						; size = 4
 ?_Erase@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z PROC ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Erase, COMDAT
@@ -19801,16 +19801,16 @@ __Rootnode$ = 8						; size = 4
 ; 1611 : 		for (_Nodeptr _Pnode = _Rootnode;
 
 	mov	eax, DWORD PTR __Rootnode$[ebp]
-	mov	DWORD PTR __Pnode$145008[ebp], eax
+	mov	DWORD PTR __Pnode$145009[ebp], eax
 
 ; 1612 : 			!this->_Isnil(_Pnode); _Rootnode = _Pnode)
 
 	jmp	SHORT $LN3@Erase
 $LN2@Erase:
-	mov	ecx, DWORD PTR __Pnode$145008[ebp]
+	mov	ecx, DWORD PTR __Pnode$145009[ebp]
 	mov	DWORD PTR __Rootnode$[ebp], ecx
 $LN3@Erase:
-	mov	edx, DWORD PTR __Pnode$145008[ebp]
+	mov	edx, DWORD PTR __Pnode$145009[ebp]
 	push	edx
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Isnil
 	add	esp, 4
@@ -19821,7 +19821,7 @@ $LN3@Erase:
 ; 1613 : 			{	// free subtrees, then node
 ; 1614 : 			_Erase(this->_Right(_Pnode));
 
-	mov	ecx, DWORD PTR __Pnode$145008[ebp]
+	mov	ecx, DWORD PTR __Pnode$145009[ebp]
 	push	ecx
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Right
 	add	esp, 4
@@ -19832,12 +19832,12 @@ $LN3@Erase:
 
 ; 1615 : 			_Pnode = this->_Left(_Pnode);
 
-	mov	eax, DWORD PTR __Pnode$145008[ebp]
+	mov	eax, DWORD PTR __Pnode$145009[ebp]
 	push	eax
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Left
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$145008[ebp], ecx
+	mov	DWORD PTR __Pnode$145009[ebp], ecx
 
 ; 1616 : 			_Dest_val(this->_Alval,
 ; 1617 : 				_STD addressof(this->_Myval(_Rootnode)));
@@ -20917,7 +20917,7 @@ $LN3@Compat@2:
 _TEXT	ENDS
 ;	COMDAT ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ
 _TEXT	SEGMENT
-__Pnode$145126 = -8					; size = 4
+__Pnode$145127 = -8					; size = 4
 _this$ = -4						; size = 4
 ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ PROC ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >,std::_Iterator_base12>::operator++, COMDAT
 ; _this$ = ecx
@@ -20991,15 +20991,15 @@ $LN2@operator@15:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$145126[ebp], ecx
-	mov	edx, DWORD PTR __Pnode$145126[ebp]
+	mov	DWORD PTR __Pnode$145127[ebp], ecx
+	mov	edx, DWORD PTR __Pnode$145127[ebp]
 	push	edx
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Isnil
 	add	esp, 4
 	movsx	eax, BYTE PTR [eax]
 	test	eax, eax
 	jne	SHORT $LN1@operator@15
-	mov	ecx, DWORD PTR __Pnode$145126[ebp]
+	mov	ecx, DWORD PTR __Pnode$145127[ebp]
 	push	ecx
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Right
 	add	esp, 4
@@ -21011,7 +21011,7 @@ $LN2@operator@15:
 ; 69   : 				_Ptr = _Pnode;	// ==> parent while right subtree
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Pnode$145126[ebp]
+	mov	eax, DWORD PTR __Pnode$145127[ebp]
 	mov	DWORD PTR [edx+8], eax
 	jmp	SHORT $LN2@operator@15
 $LN1@operator@15:
@@ -21019,7 +21019,7 @@ $LN1@operator@15:
 ; 70   : 			_Ptr = _Pnode;	// ==> parent (head if end())
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Pnode$145126[ebp]
+	mov	edx, DWORD PTR __Pnode$145127[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN5@operator@15:
 
@@ -21125,10 +21125,10 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv95 = -112						; size = 4
 tv74 = -108						; size = 4
-$T152564 = -104						; size = 12
+$T152565 = -104						; size = 12
 _val$ = -92						; size = 4
-$T145865 = -88						; size = 32
-_err$145863 = -52					; size = 32
+$T145866 = -88						; size = 32
+_err$145864 = -52					; size = 32
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
 _pL$ = 8						; size = 4
@@ -21192,7 +21192,7 @@ _name$ = 12						; size = 4
 ; 64   :     std::string err("<PopLuaNumber> Cannot retrieve: ");
 
 	push	OFFSET ??_C@_0CB@NOKEJIID@?$DMPopLuaNumber?$DO?5Cannot?5retrieve?3?5@
-	lea	ecx, DWORD PTR _err$145863[ebp]
+	lea	ecx, DWORD PTR _err$145864[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
@@ -21201,9 +21201,9 @@ _name$ = 12						; size = 4
 
 	mov	ecx, DWORD PTR _name$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR _err$145863[ebp]
+	lea	edx, DWORD PTR _err$145864[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T145865[ebp]
+	lea	eax, DWORD PTR $T145866[ebp]
 	push	eax
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@ABV10@PBD@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
 	add	esp, 12					; 0000000cH
@@ -21213,20 +21213,20 @@ _name$ = 12						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	edx, DWORD PTR tv95[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T152564[ebp]
+	lea	ecx, DWORD PTR $T152565[ebp]
 	call	??0runtime_error@std@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z ; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@
-	lea	eax, DWORD PTR $T152564[ebp]
+	lea	eax, DWORD PTR $T152565[ebp]
 	push	eax
 	call	__CxxThrowException@8
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T145865[ebp]
+	lea	ecx, DWORD PTR $T145866[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 67   :   }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR _err$145863[ebp]
+	lea	ecx, DWORD PTR _err$145864[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN1@PopLuaNumb:
 
@@ -21297,10 +21297,10 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z$0:
-	lea	ecx, DWORD PTR _err$145863[ebp]
+	lea	ecx, DWORD PTR _err$145864[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z$1:
-	lea	ecx, DWORD PTR $T145865[ebp]
+	lea	ecx, DWORD PTR $T145866[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -21388,7 +21388,7 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ??0runtime_error@std@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z
 _TEXT	SEGMENT
-$T152578 = -8						; size = 4
+$T152579 = -8						; size = 4
 _this$ = -4						; size = 4
 __Message$ = 8						; size = 4
 ??0runtime_error@std@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z PROC ; std::runtime_error::runtime_error, COMDAT
@@ -21404,8 +21404,8 @@ __Message$ = 8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	ecx, DWORD PTR __Message$[ebp]
 	call	?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::c_str
-	mov	DWORD PTR $T152578[ebp], eax
-	lea	eax, DWORD PTR $T152578[ebp]
+	mov	DWORD PTR $T152579[ebp], eax
+	lea	eax, DWORD PTR $T152579[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0exception@std@@QAE@ABQBD@Z		; std::exception::exception
@@ -21558,7 +21558,7 @@ __ehfuncinfo$??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_str
 xdata$x	ENDS
 ;	COMDAT ??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@ABV10@PBD@Z
 _TEXT	SEGMENT
-$T152595 = -60						; size = 4
+$T152596 = -60						; size = 4
 __Ans$ = -52						; size = 32
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -21588,7 +21588,7 @@ __Right$ = 16						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T152595[ebp], 0
+	mov	DWORD PTR $T152596[ebp], 0
 
 ; 65   : 	basic_string<_Elem, _Traits, _Alloc> _Ans;
 
@@ -21630,9 +21630,9 @@ __Right$ = 16						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	ecx, DWORD PTR $T152595[ebp]
+	mov	ecx, DWORD PTR $T152596[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152595[ebp], ecx
+	mov	DWORD PTR $T152596[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Ans$[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
@@ -21682,10 +21682,10 @@ __unwindfunclet$??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_
 	lea	ecx, DWORD PTR __Ans$[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@ABV10@PBD@Z$1:
-	mov	eax, DWORD PTR $T152595[ebp]
+	mov	eax, DWORD PTR $T152596[ebp]
 	and	eax, 1
 	je	$LN5@operator@16
-	and	DWORD PTR $T152595[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152596[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN5@operator@16:
@@ -21719,7 +21719,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T152608 = -20						; size = 4
+$T152609 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >, COMDAT
@@ -21744,7 +21744,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T152608[ebp], esp
+	mov	DWORD PTR $T152609[ebp], esp
 	call	??0?$allocator@D@std@@QAE@XZ		; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_String_val@DV?$allocator@D@std@@@std@@QAE@V?$allocator@D@1@@Z ; std::_String_val<char,std::allocator<char> >::_String_val<char,std::allocator<char> >
@@ -21804,7 +21804,7 @@ __ehfuncinfo$??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE
 xdata$x	ENDS
 ;	COMDAT ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z
 _TEXT	SEGMENT
-$T152618 = -20						; size = 4
+$T152619 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -21833,7 +21833,7 @@ __Right$ = 8						; size = 4
 	push	eax
 	call	??$forward@V?$allocator@D@std@@@std@@YA$$QAV?$allocator@D@0@AAV10@@Z ; std::forward<std::allocator<char> >
 	mov	ecx, esp
-	mov	DWORD PTR $T152618[ebp], esp
+	mov	DWORD PTR $T152619[ebp], esp
 	push	eax
 	call	??0?$allocator@D@std@@QAE@ABV01@@Z	; std::allocator<char>::allocator<char>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -21892,8 +21892,8 @@ PUBLIC	?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@st
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@$$QAV12@@Z
 _TEXT	SEGMENT
-$T152629 = -6						; size = 1
-$T152628 = -5						; size = 1
+$T152630 = -6						; size = 1
+$T152629 = -5						; size = 1
 _this$ = -4						; size = 4
 __Right$ = 8						; size = 4
 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@$$QAV12@@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign, COMDAT
@@ -21922,12 +21922,12 @@ $LN6@assign@3:
 
 ; 717  : 			&& this->_BUF_SIZE <= _Right._Myres)
 
-	lea	ecx, DWORD PTR $T152628[ebp]
+	lea	ecx, DWORD PTR $T152629[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$allocator@D@2@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::get_allocator
 	push	eax
-	lea	edx, DWORD PTR $T152629[ebp]
+	lea	edx, DWORD PTR $T152630[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?get_allocator@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$allocator@D@2@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::get_allocator
@@ -22364,10 +22364,10 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv94 = -116						; size = 4
 tv74 = -112						; size = 4
-$T152645 = -108						; size = 12
+$T152646 = -108						; size = 12
 _val$ = -96						; size = 8
-$T145881 = -88						; size = 32
-_err$145880 = -52					; size = 32
+$T145882 = -88						; size = 32
+_err$145881 = -52					; size = 32
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
 _pL$ = 8						; size = 4
@@ -22431,7 +22431,7 @@ _name$ = 12						; size = 4
 ; 64   :     std::string err("<PopLuaNumber> Cannot retrieve: ");
 
 	push	OFFSET ??_C@_0CB@NOKEJIID@?$DMPopLuaNumber?$DO?5Cannot?5retrieve?3?5@
-	lea	ecx, DWORD PTR _err$145880[ebp]
+	lea	ecx, DWORD PTR _err$145881[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
@@ -22440,9 +22440,9 @@ _name$ = 12						; size = 4
 
 	mov	ecx, DWORD PTR _name$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR _err$145880[ebp]
+	lea	edx, DWORD PTR _err$145881[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T145881[ebp]
+	lea	eax, DWORD PTR $T145882[ebp]
 	push	eax
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@ABV10@PBD@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
 	add	esp, 12					; 0000000cH
@@ -22452,20 +22452,20 @@ _name$ = 12						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	edx, DWORD PTR tv94[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T152645[ebp]
+	lea	ecx, DWORD PTR $T152646[ebp]
 	call	??0runtime_error@std@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z ; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@
-	lea	eax, DWORD PTR $T152645[ebp]
+	lea	eax, DWORD PTR $T152646[ebp]
 	push	eax
 	call	__CxxThrowException@8
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T145881[ebp]
+	lea	ecx, DWORD PTR $T145882[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 67   :   }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR _err$145880[ebp]
+	lea	ecx, DWORD PTR _err$145881[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN1@PopLuaNumb@2:
 
@@ -22535,10 +22535,10 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z$0:
-	lea	ecx, DWORD PTR _err$145880[ebp]
+	lea	ecx, DWORD PTR _err$145881[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __unwindfunclet$??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z$1:
-	lea	ecx, DWORD PTR $T145881[ebp]
+	lea	ecx, DWORD PTR $T145882[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -22668,9 +22668,9 @@ tv66 = -44						; size = 4
 tv141 = -40						; size = 4
 tv138 = -36						; size = 4
 tv144 = -32						; size = 4
-$T152667 = -28						; size = 4
-$T152666 = -24						; size = 4
-$T152665 = -20						; size = 4
+$T152668 = -28						; size = 4
+$T152667 = -24						; size = 4
+$T152666 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
@@ -22716,7 +22716,7 @@ __Ptr$ = 32						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152666[ebp], esp
+	mov	DWORD PTR $T152667[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -22726,7 +22726,7 @@ __Ptr$ = 32						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152667[ebp], esp
+	mov	DWORD PTR $T152668[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -22736,14 +22736,14 @@ __Ptr$ = 32						; size = 4
 	add	esp, 32					; 00000020H
 	mov	DWORD PTR tv66[ebp], eax
 	mov	eax, DWORD PTR tv66[ebp]
-	mov	DWORD PTR $T152665[ebp], eax
+	mov	DWORD PTR $T152666[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T152665[ebp]
+	mov	eax, DWORD PTR $T152666[ebp]
 
 ; 1319 : 		}
 
@@ -22766,7 +22766,7 @@ __unwindfunclet$??$_Ucopy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Ucopy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@IAEPAUVector2D@@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0PAU2@@Z$2:
-	mov	ecx, DWORD PTR $T152666[ebp]
+	mov	ecx, DWORD PTR $T152667[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Ucopy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@IAEPAUVector2D@@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0PAU2@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -22993,8 +22993,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv128 = -28						; size = 4
-$T152698 = -24						; size = 4
-$T152694 = -20						; size = 4
+$T152699 = -24						; size = 4
+$T152695 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -23024,7 +23024,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152698[ebp], 0
+	mov	DWORD PTR $T152699[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 761  : 			typename _STD tr1::remove_reference<_Valty>::type>::value,
@@ -23045,7 +23045,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152694[ebp], esp
+	mov	DWORD PTR $T152695[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -23055,9 +23055,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T152698[ebp]
+	mov	ecx, DWORD PTR $T152699[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152698[ebp], ecx
+	mov	DWORD PTR $T152699[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -23081,10 +23081,10 @@ __unwindfunclet$??$insert@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@$$QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@1@@Z$2:
-	mov	eax, DWORD PTR $T152698[ebp]
+	mov	eax, DWORD PTR $T152699[ebp]
 	and	eax, 1
 	je	$LN6@insert
-	and	DWORD PTR $T152698[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152699[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN6@insert:
@@ -23732,7 +23732,7 @@ PUBLIC	??$_Ptr_cat@UVector2D@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUVec
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xmemory
 ;	COMDAT ??$_Destroy_range@V?$allocator@UVector2D@@@std@@@std@@YAXPAUVector2D@@0AAV?$allocator@UVector2D@@@0@@Z
 _TEXT	SEGMENT
-$T152744 = -1						; size = 1
+$T152745 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -23753,8 +23753,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@UVector2D@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUVector2D@@0@Z ; std::_Ptr_cat<Vector2D,Vector2D>
 	add	esp, 8
-	mov	BYTE PTR $T152744[ebp], al
-	movzx	edx, BYTE PTR $T152744[ebp]
+	mov	BYTE PTR $T152745[ebp], al
+	movzx	edx, BYTE PTR $T152745[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -23815,7 +23815,7 @@ __TI2?AVbad_alloc@std@@ DD 00H
 xdata$x	ENDS
 ;	COMDAT ??$_Allocate@UVector2D@@@std@@YAPAUVector2D@@IPAU1@@Z
 _TEXT	SEGMENT
-$T152747 = -16						; size = 12
+$T152748 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -23868,10 +23868,10 @@ $LN1@Allocate:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152747[ebp]
+	lea	ecx, DWORD PTR $T152748[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152747[ebp]
+	lea	ecx, DWORD PTR $T152748[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate:
@@ -24128,7 +24128,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@IPAU10@@Z
 _TEXT	SEGMENT
-$T152760 = -16						; size = 12
+$T152761 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -24181,10 +24181,10 @@ $LN1@Allocate@2:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152760[ebp]
+	lea	ecx, DWORD PTR $T152761[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152760[ebp]
+	lea	ecx, DWORD PTR $T152761[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@2:
@@ -24210,7 +24210,7 @@ PUBLIC	??$_Move@PAUVector2D@@PAU1@@std@@YAPAUVector2D@@PAU1@00U_Nonscalar_ptr_it
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility
 ;	COMDAT ??$_Move@PAUVector2D@@PAU1@@std@@YAPAUVector2D@@PAU1@00@Z
 _TEXT	SEGMENT
-$T152763 = -1						; size = 1
+$T152764 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -24232,8 +24232,8 @@ __Dest$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@UVector2D@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUVector2D@@0@Z ; std::_Ptr_cat<Vector2D,Vector2D>
 	add	esp, 8
-	mov	BYTE PTR $T152763[ebp], al
-	movzx	edx, BYTE PTR $T152763[ebp]
+	mov	BYTE PTR $T152764[ebp], al
+	movzx	edx, BYTE PTR $T152764[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
@@ -24411,7 +24411,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@YAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T152777 = -16						; size = 12
+$T152778 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -24464,10 +24464,10 @@ $LN1@Allocate@3:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152777[ebp]
+	lea	ecx, DWORD PTR $T152778[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152777[ebp]
+	lea	ecx, DWORD PTR $T152778[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@3:
@@ -24491,7 +24491,7 @@ $LN6@Allocate@3:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@D@std@@YAPADIPAD@Z
 _TEXT	SEGMENT
-$T152780 = -16						; size = 12
+$T152781 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -24543,10 +24543,10 @@ $LN1@Allocate@4:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152780[ebp]
+	lea	ecx, DWORD PTR $T152781[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152780[ebp]
+	lea	ecx, DWORD PTR $T152781[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@4:
@@ -24815,7 +24815,7 @@ $LN6@append@2:
 _TEXT	ENDS
 ;	COMDAT ?reserve@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z
 _TEXT	SEGMENT
-__Size$147166 = -8					; size = 4
+__Size$147167 = -8					; size = 4
 _this$ = -4						; size = 4
 __Newcap$ = 8						; size = 4
 ?reserve@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::reserve, COMDAT
@@ -24846,7 +24846,7 @@ __Newcap$ = 8						; size = 4
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+20]
-	mov	DWORD PTR __Size$147166[ebp], edx
+	mov	DWORD PTR __Size$147167[ebp], edx
 
 ; 1543 : 			if (_Grow(_Newcap, true))
 
@@ -24861,7 +24861,7 @@ __Newcap$ = 8						; size = 4
 
 ; 1544 : 				_Eos(_Size);
 
-	mov	edx, DWORD PTR __Size$147166[ebp]
+	mov	edx, DWORD PTR __Size$147167[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos
@@ -24934,8 +24934,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@UVector2D@@@std@@QAEXPAUVector2D@@$$QAU3@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T152797 = -24						; size = 4
-$T152796 = -20						; size = 4
+$T152798 = -24						; size = 4
+$T152797 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -24971,15 +24971,15 @@ __Val$ = 12						; size = 4
 	push	16					; 00000010H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152797[ebp], eax
+	mov	DWORD PTR $T152798[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152797[ebp], 0
+	cmp	DWORD PTR $T152798[ebp], 0
 	je	SHORT $LN3@construct
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@UVector2D@@@std@@YA$$QAUVector2D@@AAU1@@Z ; std::forward<Vector2D>
 	add	esp, 4
-	mov	edx, DWORD PTR $T152797[ebp]
+	mov	edx, DWORD PTR $T152798[ebp]
 	mov	ecx, DWORD PTR [eax]
 	mov	DWORD PTR [edx], ecx
 	mov	ecx, DWORD PTR [eax+4]
@@ -24988,14 +24988,14 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR [edx+8], ecx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [edx+12], eax
-	mov	ecx, DWORD PTR $T152797[ebp]
+	mov	ecx, DWORD PTR $T152798[ebp]
 	mov	DWORD PTR tv74[ebp], ecx
 	jmp	SHORT $LN4@construct
 $LN3@construct:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct:
 	mov	edx, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T152796[ebp], edx
+	mov	DWORD PTR $T152797[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -25015,7 +25015,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@UVector2D@@@std@@QAEXPAUVector2D@@$$QAU3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152797[ebp]
+	mov	ecx, DWORD PTR $T152798[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -25138,20 +25138,20 @@ tv738 = -172						; size = 4
 tv170 = -168						; size = 4
 tv733 = -164						; size = 4
 tv82 = -160						; size = 4
-$T152835 = -156						; size = 4
-$T152831 = -152						; size = 16
-$T152827 = -136						; size = 12
-$T152826 = -121						; size = 1
-$T152825 = -120						; size = 12
-$T152824 = -105						; size = 1
-$T152823 = -104						; size = 12
-$T152822 = -89						; size = 1
-$T152818 = -88						; size = 12
-$T152817 = -73						; size = 1
-$T152816 = -72						; size = 12
-$T152815 = -57						; size = 1
-$T152814 = -56						; size = 12
-$T152813 = -42						; size = 1
+$T152836 = -156						; size = 4
+$T152832 = -152						; size = 16
+$T152828 = -136						; size = 12
+$T152827 = -121						; size = 1
+$T152826 = -120						; size = 12
+$T152825 = -105						; size = 1
+$T152824 = -104						; size = 12
+$T152823 = -89						; size = 1
+$T152819 = -88						; size = 12
+$T152818 = -73						; size = 1
+$T152817 = -72						; size = 12
+$T152816 = -57						; size = 1
+$T152815 = -56						; size = 12
+$T152814 = -42						; size = 1
 __Leftish$ = -41					; size = 1
 __Next$ = -36						; size = 12
 __Val$ = -20						; size = 4
@@ -25185,7 +25185,7 @@ __Node$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152835[ebp], 0
+	mov	DWORD PTR $T152836[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1090 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -25246,9 +25246,9 @@ $LN32@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25268,7 +25268,7 @@ $LN31@Insert:
 ; 1103 : 			{	// insert even if duplicate
 ; 1104 : 			if (_Where == begin())
 
-	lea	ecx, DWORD PTR $T152814[ebp]
+	lea	ecx, DWORD PTR $T152815[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin
@@ -25280,11 +25280,11 @@ $LN31@Insert:
 	push	eax
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator==
-	mov	BYTE PTR $T152813[ebp], al
+	mov	BYTE PTR $T152814[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152814[ebp]
+	lea	ecx, DWORD PTR $T152815[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T152813[ebp]
+	movzx	ecx, BYTE PTR $T152814[ebp]
 	test	ecx, ecx
 	je	$LN28@Insert
 
@@ -25326,9 +25326,9 @@ $LN31@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25348,7 +25348,7 @@ $LN28@Insert:
 ; 1110 : 				}
 ; 1111 : 			else if (_Where == end())
 
-	lea	eax, DWORD PTR $T152816[ebp]
+	lea	eax, DWORD PTR $T152817[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -25360,11 +25360,11 @@ $LN28@Insert:
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator==
-	mov	BYTE PTR $T152815[ebp], al
+	mov	BYTE PTR $T152816[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152816[ebp]
+	lea	ecx, DWORD PTR $T152817[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T152815[ebp]
+	movzx	eax, BYTE PTR $T152816[ebp]
 	test	eax, eax
 	je	$LN25@Insert
 
@@ -25408,9 +25408,9 @@ $LN28@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25509,9 +25509,9 @@ $LN25@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25538,9 +25538,9 @@ $LN21@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25582,7 +25582,7 @@ $LN22@Insert:
 	movzx	eax, al
 	test	eax, eax
 	jne	$LN36@Insert
-	lea	ecx, DWORD PTR $T152818[ebp]
+	lea	ecx, DWORD PTR $T152819[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -25590,9 +25590,9 @@ $LN22@Insert:
 	mov	edx, DWORD PTR tv301[ebp]
 	mov	DWORD PTR tv752[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 2
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	ecx, DWORD PTR tv752[ebp]
 	push	ecx
 	lea	edx, DWORD PTR __Where$[ebp]
@@ -25634,16 +25634,16 @@ $LN36@Insert:
 	mov	DWORD PTR tv378[ebp], 0
 $LN37@Insert:
 	mov	dl, BYTE PTR tv378[ebp]
-	mov	BYTE PTR $T152817[ebp], dl
+	mov	BYTE PTR $T152818[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	and	eax, 2
 	je	SHORT $LN49@Insert
-	and	DWORD PTR $T152835[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T152818[ebp]
+	and	DWORD PTR $T152836[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T152819[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN49@Insert:
-	movzx	ecx, BYTE PTR $T152817[ebp]
+	movzx	ecx, BYTE PTR $T152818[ebp]
 	test	ecx, ecx
 	je	$LN18@Insert
 
@@ -25676,9 +25676,9 @@ $LN49@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25705,9 +25705,9 @@ $LN17@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25738,7 +25738,7 @@ $LN29@Insert:
 ; 1143 : 			{	// insert only if unique
 ; 1144 : 			if (_Where == begin())
 
-	lea	ecx, DWORD PTR $T152823[ebp]
+	lea	ecx, DWORD PTR $T152824[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin
@@ -25750,11 +25750,11 @@ $LN29@Insert:
 	push	eax
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator==
-	mov	BYTE PTR $T152822[ebp], al
+	mov	BYTE PTR $T152823[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152823[ebp]
+	lea	ecx, DWORD PTR $T152824[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T152822[ebp]
+	movzx	ecx, BYTE PTR $T152823[ebp]
 	test	ecx, ecx
 	je	$LN13@Insert
 
@@ -25796,9 +25796,9 @@ $LN29@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25816,7 +25816,7 @@ $LN13@Insert:
 
 ; 1150 : 			else if (_Where == end())
 
-	lea	eax, DWORD PTR $T152825[ebp]
+	lea	eax, DWORD PTR $T152826[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -25828,11 +25828,11 @@ $LN13@Insert:
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator==
-	mov	BYTE PTR $T152824[ebp], al
+	mov	BYTE PTR $T152825[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152825[ebp]
+	lea	ecx, DWORD PTR $T152826[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T152824[ebp]
+	movzx	eax, BYTE PTR $T152825[ebp]
 	test	eax, eax
 	je	$LN10@Insert
 
@@ -25876,9 +25876,9 @@ $LN13@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -25977,9 +25977,9 @@ $LN10@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -26006,9 +26006,9 @@ $LN6@Insert:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	edx, DWORD PTR $T152835[ebp]
+	mov	edx, DWORD PTR $T152836[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152835[ebp], edx
+	mov	DWORD PTR $T152836[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -26050,7 +26050,7 @@ $LN7@Insert:
 	movzx	eax, al
 	test	eax, eax
 	je	$LN39@Insert
-	lea	ecx, DWORD PTR $T152827[ebp]
+	lea	ecx, DWORD PTR $T152828[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::end
@@ -26058,9 +26058,9 @@ $LN7@Insert:
 	mov	edx, DWORD PTR tv589[ebp]
 	mov	DWORD PTR tv781[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	ecx, DWORD PTR tv781[ebp]
 	push	ecx
 	lea	edx, DWORD PTR __Where$[ebp]
@@ -26102,16 +26102,16 @@ $LN39@Insert:
 	mov	DWORD PTR tv666[ebp], 0
 $LN40@Insert:
 	mov	dl, BYTE PTR tv666[ebp]
-	mov	BYTE PTR $T152826[ebp], dl
+	mov	BYTE PTR $T152827[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	and	eax, 4
 	je	SHORT $LN54@Insert
-	and	DWORD PTR $T152835[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T152827[ebp]
+	and	DWORD PTR $T152836[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T152828[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN54@Insert:
-	movzx	ecx, BYTE PTR $T152826[ebp]
+	movzx	ecx, BYTE PTR $T152827[ebp]
 	test	ecx, ecx
 	je	$LN30@Insert
 
@@ -26144,9 +26144,9 @@ $LN54@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -26173,9 +26173,9 @@ $LN2@Insert:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
@@ -26195,7 +26195,7 @@ $LN30@Insert:
 	push	ecx
 	mov	edx, DWORD PTR __Node$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T152831[ebp]
+	lea	eax, DWORD PTR $T152832[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Linsert
@@ -26207,11 +26207,11 @@ $LN30@Insert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152835[ebp], eax
+	mov	DWORD PTR $T152836[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152831[ebp]
+	lea	ecx, DWORD PTR $T152832[ebp]
 	call	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
@@ -26266,46 +26266,46 @@ __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits
 	lea	ecx, DWORD PTR __Next$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$2:
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	and	eax, 1
 	je	$LN44@Insert
-	and	DWORD PTR $T152835[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152836[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN44@Insert:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$3:
-	lea	ecx, DWORD PTR $T152814[ebp]
+	lea	ecx, DWORD PTR $T152815[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$4:
-	lea	ecx, DWORD PTR $T152816[ebp]
+	lea	ecx, DWORD PTR $T152817[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$5:
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	and	eax, 2
 	je	$LN48@Insert
-	and	DWORD PTR $T152835[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T152818[ebp]
+	and	DWORD PTR $T152836[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T152819[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN48@Insert:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$6:
-	lea	ecx, DWORD PTR $T152823[ebp]
+	lea	ecx, DWORD PTR $T152824[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$7:
-	lea	ecx, DWORD PTR $T152825[ebp]
+	lea	ecx, DWORD PTR $T152826[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$8:
-	mov	eax, DWORD PTR $T152835[ebp]
+	mov	eax, DWORD PTR $T152836[ebp]
 	and	eax, 4
 	je	$LN53@Insert
-	and	DWORD PTR $T152835[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T152827[ebp]
+	and	DWORD PTR $T152836[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T152828[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN53@Insert:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z$9:
-	lea	ecx, DWORD PTR $T152831[ebp]
+	lea	ecx, DWORD PTR $T152832[ebp]
 	jmp	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 __ehhandler$?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -26368,8 +26368,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T152862 = -24						; size = 4
-$T152861 = -20						; size = 4
+$T152863 = -24						; size = 4
+$T152862 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -26405,9 +26405,9 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152862[ebp], eax
+	mov	DWORD PTR $T152863[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152862[ebp], 0
+	cmp	DWORD PTR $T152863[ebp], 0
 	je	SHORT $LN3@construct@2
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -26415,17 +26415,17 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR [eax+4]
-	mov	ecx, DWORD PTR $T152862[ebp]
+	mov	ecx, DWORD PTR $T152863[ebp]
 	mov	DWORD PTR [ecx], edx
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR $T152862[ebp]
+	mov	edx, DWORD PTR $T152863[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct@2
 $LN3@construct@2:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct@2:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T152861[ebp], eax
+	mov	DWORD PTR $T152862[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -26445,7 +26445,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152862[ebp]
+	mov	ecx, DWORD PTR $T152863[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -26602,17 +26602,17 @@ tv167 = -140						; size = 4
 tv270 = -136						; size = 4
 tv288 = -132						; size = 4
 tv151 = -128						; size = 4
-$T152897 = -124						; size = 4
-$T152894 = -117						; size = 1
-$T152893 = -116						; size = 12
-$T152892 = -101						; size = 1
-$T152891 = -100						; size = 12
-$T152890 = -85						; size = 1
-$T152889 = -84						; size = 12
-$T152888 = -69						; size = 1
-$T152887 = -68						; size = 12
-$T152886 = -53						; size = 1
-__Where$147740 = -48					; size = 12
+$T152898 = -124						; size = 4
+$T152895 = -117						; size = 1
+$T152894 = -116						; size = 12
+$T152893 = -101						; size = 1
+$T152892 = -100						; size = 12
+$T152891 = -85						; size = 1
+$T152890 = -84						; size = 12
+$T152889 = -69						; size = 1
+$T152888 = -68						; size = 12
+$T152887 = -53						; size = 1
+__Where$147741 = -48					; size = 12
 __Addleft$ = -29					; size = 1
 __Wherenode$ = -28					; size = 4
 __Trynode$ = -24					; size = 4
@@ -26647,7 +26647,7 @@ __Leftish$ = 16						; size = 1
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152897[ebp], 0
+	mov	DWORD PTR $T152898[ebp], 0
 
 ; 945  : 		const value_type& _Val = this->_Myval(_Node);
 
@@ -26791,8 +26791,8 @@ $LN11@Linsert:
 
 ; 966  : 			return (_Pairib(_Insert(_Addleft, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T152886[ebp], 1
-	lea	eax, DWORD PTR $T152886[ebp]
+	mov	BYTE PTR $T152887[ebp], 1
+	lea	eax, DWORD PTR $T152887[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Node$[ebp]
 	push	ecx
@@ -26800,7 +26800,7 @@ $LN11@Linsert:
 	push	edx
 	movzx	eax, BYTE PTR __Addleft$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T152887[ebp]
+	lea	ecx, DWORD PTR $T152888[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
@@ -26812,11 +26812,11 @@ $LN11@Linsert:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>
-	mov	ecx, DWORD PTR $T152897[ebp]
+	mov	ecx, DWORD PTR $T152898[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152897[ebp], ecx
+	mov	DWORD PTR $T152898[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152887[ebp]
+	lea	ecx, DWORD PTR $T152888[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN13@Linsert
@@ -26833,7 +26833,7 @@ $LN8@Linsert:
 	push	edx
 	mov	eax, DWORD PTR __Wherenode$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
@@ -26848,7 +26848,7 @@ $LN6@Linsert:
 ; 971  : 				;	// need to test if insert after is okay
 ; 972  : 			else if (_Where == begin())
 
-	lea	edx, DWORD PTR $T152889[ebp]
+	lea	edx, DWORD PTR $T152890[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::begin
@@ -26858,27 +26858,27 @@ $LN6@Linsert:
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR tv277[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator==
-	mov	BYTE PTR $T152888[ebp], al
+	mov	BYTE PTR $T152889[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152889[ebp]
+	lea	ecx, DWORD PTR $T152890[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T152888[ebp]
+	movzx	edx, BYTE PTR $T152889[ebp]
 	test	edx, edx
 	je	SHORT $LN4@Linsert
 
 ; 973  : 				return (_Pairib(_Insert(true, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T152890[ebp], 1
-	lea	eax, DWORD PTR $T152890[ebp]
+	mov	BYTE PTR $T152891[ebp], 1
+	lea	eax, DWORD PTR $T152891[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Node$[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Wherenode$[ebp]
 	push	edx
 	push	1
-	lea	eax, DWORD PTR $T152891[ebp]
+	lea	eax, DWORD PTR $T152892[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
@@ -26890,14 +26890,14 @@ $LN6@Linsert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>
-	mov	eax, DWORD PTR $T152897[ebp]
+	mov	eax, DWORD PTR $T152898[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152897[ebp], eax
+	mov	DWORD PTR $T152898[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152891[ebp]
+	lea	ecx, DWORD PTR $T152892[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN13@Linsert
@@ -26909,7 +26909,7 @@ $LN4@Linsert:
 
 ; 975  : 				--_Where;	// need to test if insert before is okay
 
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??F?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::operator--
 $LN5@Linsert:
 
@@ -26923,7 +26923,7 @@ $LN5@Linsert:
 	call	??$_Kfn@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@SAABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@1@@Z ; std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0>::_Kfn<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	?_Mynode@?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >,std::_Iterator_base12>::_Mynode
 	push	eax
 	call	?_Key@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Key
@@ -26942,8 +26942,8 @@ $LN5@Linsert:
 ; 979  : 				this->_Kfn(_Val)))
 ; 980  : 				return (_Pairib(_Insert(_Addleft, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T152892[ebp], 1
-	lea	edx, DWORD PTR $T152892[ebp]
+	mov	BYTE PTR $T152893[ebp], 1
+	lea	edx, DWORD PTR $T152893[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Node$[ebp]
 	push	eax
@@ -26951,7 +26951,7 @@ $LN5@Linsert:
 	push	ecx
 	movzx	edx, BYTE PTR __Addleft$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T152893[ebp]
+	lea	eax, DWORD PTR $T152894[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Insert
@@ -26963,14 +26963,14 @@ $LN5@Linsert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>
-	mov	eax, DWORD PTR $T152897[ebp]
+	mov	eax, DWORD PTR $T152898[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152897[ebp], eax
+	mov	DWORD PTR $T152898[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T152893[ebp]
+	lea	ecx, DWORD PTR $T152894[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN13@Linsert
@@ -27011,18 +27011,18 @@ $LN2@Linsert:
 ; 987  : 
 ; 988  : 				return (_Pairib(_Where, false));
 
-	mov	BYTE PTR $T152894[ebp], 0
-	lea	ecx, DWORD PTR $T152894[ebp]
+	mov	BYTE PTR $T152895[ebp], 0
+	lea	ecx, DWORD PTR $T152895[ebp]
 	push	ecx
-	lea	edx, DWORD PTR __Where$147740[ebp]
+	lea	edx, DWORD PTR __Where$147741[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??$?0AAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@AAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >,bool><std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > > &,bool>
-	mov	eax, DWORD PTR $T152897[ebp]
+	mov	eax, DWORD PTR $T152898[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152897[ebp], eax
+	mov	DWORD PTR $T152898[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN13@Linsert
@@ -27032,7 +27032,7 @@ $LN1@Linsert:
 ; 990  : 			}
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@Linsert:
 
@@ -27075,28 +27075,28 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z$0:
-	lea	ecx, DWORD PTR $T152887[ebp]
+	lea	ecx, DWORD PTR $T152888[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z$1:
-	mov	eax, DWORD PTR $T152897[ebp]
+	mov	eax, DWORD PTR $T152898[ebp]
 	and	eax, 1
 	je	$LN19@Linsert
-	and	DWORD PTR $T152897[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152898[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 $LN19@Linsert:
 	ret	0
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z$2:
-	lea	ecx, DWORD PTR __Where$147740[ebp]
+	lea	ecx, DWORD PTR __Where$147741[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z$3:
-	lea	ecx, DWORD PTR $T152889[ebp]
+	lea	ecx, DWORD PTR $T152890[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z$4:
-	lea	ecx, DWORD PTR $T152891[ebp]
+	lea	ecx, DWORD PTR $T152892[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z$5:
-	lea	ecx, DWORD PTR $T152893[ebp]
+	lea	ecx, DWORD PTR $T152894[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Linsert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@_N@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -27118,8 +27118,8 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?_Insert@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@1@Z
 _TEXT	SEGMENT
-$T152915 = -12						; size = 4
-__Pnode$147774 = -8					; size = 4
+$T152916 = -12						; size = 4
+__Pnode$147775 = -8					; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Addleft$ = 12						; size = 1
@@ -27138,7 +27138,7 @@ __Newnode$ = 20						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152915[ebp], 0
+	mov	DWORD PTR $T152916[ebp], 0
 
 ; 1632 : 		if (max_size() - 1 <= this->_Mysize)
 
@@ -27301,12 +27301,12 @@ $LN15@Insert@2:
 ; 1663 : 		for (_Nodeptr _Pnode = _Newnode;
 
 	mov	edx, DWORD PTR __Newnode$[ebp]
-	mov	DWORD PTR __Pnode$147774[ebp], edx
+	mov	DWORD PTR __Pnode$147775[ebp], edx
 $LN10@Insert@2:
 
 ; 1664 : 			this->_Color(this->_Parent(_Pnode)) == this->_Red; )
 
-	mov	eax, DWORD PTR __Pnode$147774[ebp]
+	mov	eax, DWORD PTR __Pnode$147775[ebp]
 	push	eax
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27321,12 +27321,12 @@ $LN10@Insert@2:
 ; 1665 : 			if (this->_Parent(_Pnode)
 ; 1666 : 				== this->_Left(this->_Parent(this->_Parent(_Pnode))))
 
-	mov	eax, DWORD PTR __Pnode$147774[ebp]
+	mov	eax, DWORD PTR __Pnode$147775[ebp]
 	push	eax
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	esi, eax
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27346,7 +27346,7 @@ $LN10@Insert@2:
 ; 1668 : 				_Wherenode =
 ; 1669 : 					this->_Right(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27374,7 +27374,7 @@ $LN10@Insert@2:
 ; 1671 : 					{	// parent has two red children, blacken both
 ; 1672 : 					this->_Color(this->_Parent(_Pnode)) = this->_Black;
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27395,7 +27395,7 @@ $LN10@Insert@2:
 ; 1674 : 					this->_Color(this->_Parent(this->_Parent(_Pnode)))
 ; 1675 : 						= this->_Red;
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27411,7 +27411,7 @@ $LN10@Insert@2:
 
 ; 1676 : 					_Pnode = this->_Parent(this->_Parent(_Pnode));
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27420,7 +27420,7 @@ $LN10@Insert@2:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$147774[ebp], ecx
+	mov	DWORD PTR __Pnode$147775[ebp], ecx
 
 ; 1677 : 					}
 ; 1678 : 				else
@@ -27431,7 +27431,7 @@ $LN7@Insert@2:
 ; 1679 : 					{	// parent has red and black children
 ; 1680 : 					if (_Pnode == this->_Right(this->_Parent(_Pnode)))
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27439,23 +27439,23 @@ $LN7@Insert@2:
 	push	eax
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Right
 	add	esp, 4
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	cmp	ecx, DWORD PTR [eax]
 	jne	SHORT $LN5@Insert@2
 
 ; 1681 : 						{	// rotate right child to left
 ; 1682 : 						_Pnode = this->_Parent(_Pnode);
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$147774[ebp], eax
+	mov	DWORD PTR __Pnode$147775[ebp], eax
 
 ; 1683 : 						_Lrotate(_Pnode);
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Lrotate@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Lrotate
@@ -27465,7 +27465,7 @@ $LN5@Insert@2:
 ; 1685 : 					this->_Color(this->_Parent(_Pnode)) =
 ; 1686 : 						this->_Black;	// propagate red up
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27478,7 +27478,7 @@ $LN5@Insert@2:
 ; 1687 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1688 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27494,7 +27494,7 @@ $LN5@Insert@2:
 
 ; 1689 : 					_Rrotate(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27519,7 +27519,7 @@ $LN8@Insert@2:
 ; 1694 : 				_Wherenode =
 ; 1695 : 					this->_Left(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27547,7 +27547,7 @@ $LN8@Insert@2:
 ; 1697 : 					{	// parent has two red children, blacken both
 ; 1698 : 					this->_Color(this->_Parent(_Pnode)) = this->_Black;
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27568,7 +27568,7 @@ $LN8@Insert@2:
 ; 1700 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1701 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27584,7 +27584,7 @@ $LN8@Insert@2:
 
 ; 1702 : 					_Pnode = this->_Parent(this->_Parent(_Pnode));
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27593,7 +27593,7 @@ $LN8@Insert@2:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$147774[ebp], eax
+	mov	DWORD PTR __Pnode$147775[ebp], eax
 
 ; 1703 : 					}
 ; 1704 : 				else
@@ -27604,7 +27604,7 @@ $LN3@Insert@2:
 ; 1705 : 					{	// parent has red and black children
 ; 1706 : 					if (_Pnode == this->_Left(this->_Parent(_Pnode)))
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27612,23 +27612,23 @@ $LN3@Insert@2:
 	push	edx
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Left
 	add	esp, 4
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	cmp	ecx, DWORD PTR [eax]
 	jne	SHORT $LN1@Insert@2
 
 ; 1707 : 						{	// rotate left child to right
 ; 1708 : 						_Pnode = this->_Parent(_Pnode);
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$147774[ebp], eax
+	mov	DWORD PTR __Pnode$147775[ebp], eax
 
 ; 1709 : 						_Rrotate(_Pnode);
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Rrotate@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Rrotate
@@ -27638,7 +27638,7 @@ $LN1@Insert@2:
 ; 1711 : 					this->_Color(this->_Parent(_Pnode)) =
 ; 1712 : 						this->_Black;	// propagate red up
 
-	mov	edx, DWORD PTR __Pnode$147774[ebp]
+	mov	edx, DWORD PTR __Pnode$147775[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27651,7 +27651,7 @@ $LN1@Insert@2:
 ; 1713 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1714 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27667,7 +27667,7 @@ $LN1@Insert@2:
 
 ; 1715 : 					_Lrotate(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$147774[ebp]
+	mov	ecx, DWORD PTR __Pnode$147775[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
@@ -27706,9 +27706,9 @@ $LN9@Insert@2:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> > >
-	mov	ecx, DWORD PTR $T152915[ebp]
+	mov	ecx, DWORD PTR $T152916[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152915[ebp], ecx
+	mov	DWORD PTR $T152916[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN19@Insert@2:
 
@@ -28091,7 +28091,7 @@ _this$ = -4						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ
 _TEXT	SEGMENT
-__Pnode$147897 = -8					; size = 4
+__Pnode$147898 = -8					; size = 4
 _this$ = -4						; size = 4
 ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ PROC ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >,std::_Iterator_base12>::operator--, COMDAT
 ; _this$ = ecx
@@ -28175,15 +28175,15 @@ $LN4@operator@18:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Parent
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$147897[ebp], edx
-	mov	eax, DWORD PTR __Pnode$147897[ebp]
+	mov	DWORD PTR __Pnode$147898[ebp], edx
+	mov	eax, DWORD PTR __Pnode$147898[ebp]
 	push	eax
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Isnil
 	add	esp, 4
 	movsx	ecx, BYTE PTR [eax]
 	test	ecx, ecx
 	jne	SHORT $LN3@operator@18
-	mov	edx, DWORD PTR __Pnode$147897[ebp]
+	mov	edx, DWORD PTR __Pnode$147898[ebp]
 	push	edx
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@2@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,FuzzyVariable *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >,0> >::_Left
 	add	esp, 4
@@ -28195,7 +28195,7 @@ $LN4@operator@18:
 ; 94   : 				_Ptr = _Pnode;	// ==> parent while left subtree
 
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR __Pnode$147897[ebp]
+	mov	ecx, DWORD PTR __Pnode$147898[ebp]
 	mov	DWORD PTR [eax+8], ecx
 	jmp	SHORT $LN4@operator@18
 $LN3@operator@18:
@@ -28220,7 +28220,7 @@ $LN2@operator@18:
 ; 98   : 				_Ptr = _Pnode;	// ==> parent if not head
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Pnode$147897[ebp]
+	mov	eax, DWORD PTR __Pnode$147898[ebp]
 	mov	DWORD PTR [edx+8], eax
 $LN7@operator@18:
 
@@ -28436,10 +28436,10 @@ tv66 = -44						; size = 4
 tv141 = -40						; size = 4
 tv138 = -36						; size = 4
 tv144 = -32						; size = 4
-$T152956 = -28						; size = 4
-$T152955 = -24						; size = 4
-$T152954 = -17						; size = 1
-$T152953 = -16						; size = 4
+$T152957 = -28						; size = 4
+$T152956 = -24						; size = 4
+$T152955 = -17						; size = 1
+$T152954 = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -28481,8 +28481,8 @@ __Al$ = 36						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@PAUVector2D@@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@AAV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@AAPAUVector2D@@@Z ; std::_Ptr_cat<std::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > >,Vector2D *>
 	add	esp, 8
-	mov	BYTE PTR $T152954[ebp], al
-	movzx	edx, BYTE PTR $T152954[ebp]
+	mov	BYTE PTR $T152955[ebp], al
+	movzx	edx, BYTE PTR $T152955[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -28490,7 +28490,7 @@ __Al$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152955[ebp], esp
+	mov	DWORD PTR $T152956[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -28500,7 +28500,7 @@ __Al$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152956[ebp], esp
+	mov	DWORD PTR $T152957[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -28510,14 +28510,14 @@ __Al$ = 36						; size = 4
 	add	esp, 36					; 00000024H
 	mov	DWORD PTR tv66[ebp], eax
 	mov	eax, DWORD PTR tv66[ebp]
-	mov	DWORD PTR $T152953[ebp], eax
+	mov	DWORD PTR $T152954[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T152953[ebp]
+	mov	eax, DWORD PTR $T152954[ebp]
 
 ; 415  : 	}
 
@@ -28540,7 +28540,7 @@ __unwindfunclet$??$_Uninitialized_copy@V?$_Vector_const_iterator@V?$_Vector_val@
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Uninitialized_copy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@PAUVector2D@@V?$allocator@UVector2D@@@2@@std@@YAPAUVector2D@@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PAU1@AAV?$allocator@UVector2D@@@0@@Z$2:
-	mov	ecx, DWORD PTR $T152955[ebp]
+	mov	ecx, DWORD PTR $T152956[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Uninitialized_copy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@PAUVector2D@@V?$allocator@UVector2D@@@2@@std@@YAPAUVector2D@@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PAU1@AAV?$allocator@UVector2D@@@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -28591,8 +28591,8 @@ xdata$x	ENDS
 ;	COMDAT ??$construct@AAUVector2D@@@?$allocator@UVector2D@@@std@@QAEXPAUVector2D@@AAU2@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T152972 = -24						; size = 4
-$T152971 = -20						; size = 4
+$T152973 = -24						; size = 4
+$T152972 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -28629,15 +28629,15 @@ __Val$ = 12						; size = 4
 	push	16					; 00000010H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152972[ebp], eax
+	mov	DWORD PTR $T152973[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152972[ebp], 0
+	cmp	DWORD PTR $T152973[ebp], 0
 	je	SHORT $LN3@construct@3
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@AAUVector2D@@@std@@YAAAUVector2D@@AAU1@@Z ; std::forward<Vector2D &>
 	add	esp, 4
-	mov	edx, DWORD PTR $T152972[ebp]
+	mov	edx, DWORD PTR $T152973[ebp]
 	mov	ecx, DWORD PTR [eax]
 	mov	DWORD PTR [edx], ecx
 	mov	ecx, DWORD PTR [eax+4]
@@ -28646,14 +28646,14 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR [edx+8], ecx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [edx+12], eax
-	mov	ecx, DWORD PTR $T152972[ebp]
+	mov	ecx, DWORD PTR $T152973[ebp]
 	mov	DWORD PTR tv74[ebp], ecx
 	jmp	SHORT $LN4@construct@3
 $LN3@construct@3:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct@3:
 	mov	edx, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T152971[ebp], edx
+	mov	DWORD PTR $T152972[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 209  : 		}
@@ -28673,7 +28673,7 @@ text$x	SEGMENT
 __unwindfunclet$??$construct@AAUVector2D@@@?$allocator@UVector2D@@@std@@QAEXPAUVector2D@@AAU2@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152972[ebp]
+	mov	ecx, DWORD PTR $T152973[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -28972,7 +28972,7 @@ PUBLIC	??$_Val_type@PAUVector2D@@@std@@YAPAUVector2D@@PAU1@@Z ; std::_Val_type<V
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_move@PAUVector2D@@PAU1@V?$allocator@UVector2D@@@std@@@std@@YAPAUVector2D@@PAU1@00AAV?$allocator@UVector2D@@@0@@Z
 _TEXT	SEGMENT
-$T153009 = -1						; size = 1
+$T153010 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -28995,8 +28995,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@UVector2D@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUVector2D@@0@Z ; std::_Ptr_cat<Vector2D,Vector2D>
 	add	esp, 8
-	mov	BYTE PTR $T153009[ebp], al
-	movzx	edx, BYTE PTR $T153009[ebp]
+	mov	BYTE PTR $T153010[ebp], al
+	movzx	edx, BYTE PTR $T153010[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -29222,8 +29222,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@UVector2D@@ABU1@@std@@YAXPAUVector2D@@ABU1@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T153024 = -24						; size = 4
-$T153023 = -20						; size = 4
+$T153025 = -24						; size = 4
+$T153024 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -29262,15 +29262,15 @@ __Val$ = 12						; size = 4
 	push	16					; 00000010H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T153024[ebp], eax
+	mov	DWORD PTR $T153025[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T153024[ebp], 0
+	cmp	DWORD PTR $T153025[ebp], 0
 	je	SHORT $LN3@Construct
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABUVector2D@@@std@@YAABUVector2D@@ABU1@@Z ; std::forward<Vector2D const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T153024[ebp]
+	mov	ecx, DWORD PTR $T153025[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
 	mov	edx, DWORD PTR [eax+4]
@@ -29279,14 +29279,14 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	mov	ecx, DWORD PTR $T153024[ebp]
+	mov	ecx, DWORD PTR $T153025[ebp]
 	mov	DWORD PTR tv74[ebp], ecx
 	jmp	SHORT $LN4@Construct
 $LN3@Construct:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@Construct:
 	mov	edx, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T153023[ebp], edx
+	mov	DWORD PTR $T153024[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -29306,7 +29306,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@UVector2D@@ABU1@@std@@YAXPAUVector2D@@ABU1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T153024[ebp]
+	mov	ecx, DWORD PTR $T153025[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -29677,9 +29677,9 @@ tv162 = -45						; size = 1
 tv156 = -44						; size = 4
 tv153 = -40						; size = 4
 tv160 = -36						; size = 4
-$T153058 = -32						; size = 4
-$T153057 = -28						; size = 4
-$T153056 = -24						; size = 4
+$T153059 = -32						; size = 4
+$T153058 = -28						; size = 4
+$T153057 = -24						; size = 4
 __Next$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __First$ = 8						; size = 12
@@ -29726,7 +29726,7 @@ ___formal$ = 40						; size = 1
 	push	OFFSET ??_C@_1IM@LEDFCGBB@?$AAc?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe?$AAs?$AA?5?$AA?$CI?$AAx?$AA8?$AA6?$AA?$CJ?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt@
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153056[ebp], esp
+	mov	DWORD PTR $T153057[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -29736,7 +29736,7 @@ ___formal$ = 40						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153057[ebp], esp
+	mov	DWORD PTR $T153058[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -29843,14 +29843,14 @@ __tryend$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$
 ; 382  : 	return (_Dest);
 
 	mov	eax, DWORD PTR __Dest$[ebp]
-	mov	DWORD PTR $T153058[ebp], eax
+	mov	DWORD PTR $T153059[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+12], 0
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+12], -1
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T153058[ebp]
+	mov	eax, DWORD PTR $T153059[ebp]
 $LN9@Uninit_cop:
 
 ; 383  : 	}
@@ -29877,7 +29877,7 @@ __unwindfunclet$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@UVector
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@PAUVector2D@@V?$allocator@UVector2D@@@2@@std@@YAPAUVector2D@@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PAU1@AAV?$allocator@UVector2D@@@0@U_Nonscalar_ptr_iterator_tag@0@@Z$4:
-	mov	ecx, DWORD PTR $T153056[ebp]
+	mov	ecx, DWORD PTR $T153057[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@PAUVector2D@@V?$allocator@UVector2D@@@2@@std@@YAPAUVector2D@@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PAU1@AAV?$allocator@UVector2D@@@0@U_Nonscalar_ptr_iterator_tag@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -30365,8 +30365,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@std@@QAEXPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv76 = -28						; size = 4
-$T153117 = -24						; size = 4
-$T153116 = -20						; size = 4
+$T153118 = -24						; size = 4
+$T153117 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -30402,16 +30402,16 @@ __Val$ = 12						; size = 4
 	push	36					; 00000024H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T153117[ebp], eax
+	mov	DWORD PTR $T153118[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T153117[ebp], 0
+	cmp	DWORD PTR $T153118[ebp], 0
 	je	SHORT $LN3@construct@4
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@std@@YA$$QAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@0@AAU10@@Z ; std::forward<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *> >
 	add	esp, 4
 	push	eax
-	mov	ecx, DWORD PTR $T153117[ebp]
+	mov	ecx, DWORD PTR $T153118[ebp]
 	call	??$?0$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@QAE@$$QAU01@@Z ; std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *>::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *><std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzyVariable *>
 	mov	DWORD PTR tv76[ebp], eax
 	jmp	SHORT $LN4@construct@4
@@ -30419,7 +30419,7 @@ $LN3@construct@4:
 	mov	DWORD PTR tv76[ebp], 0
 $LN4@construct@4:
 	mov	edx, DWORD PTR tv76[ebp]
-	mov	DWORD PTR $T153116[ebp], edx
+	mov	DWORD PTR $T153117[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -30439,7 +30439,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@std@@@std@@QAEXPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzyVariable@@@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T153117[ebp]
+	mov	ecx, DWORD PTR $T153118[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -30479,9 +30479,9 @@ _TEXT	SEGMENT
 tv140 = -36						; size = 4
 tv137 = -32						; size = 4
 tv143 = -28						; size = 4
-$T153131 = -24						; size = 4
-$T153130 = -20						; size = 4
-$T153129 = -13						; size = 1
+$T153132 = -24						; size = 4
+$T153131 = -20						; size = 4
+$T153130 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -30516,7 +30516,7 @@ __Line$ = 36						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T153129[ebp]
+	lea	ecx, DWORD PTR $T153130[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YA?AUrandom_access_iterator_tag@0@ABV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_Vector_const_iterator<std::_Vector_val<Vector2D,std::allocator<Vector2D> > > >
 	add	esp, 8
@@ -30528,7 +30528,7 @@ __Line$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153130[ebp], esp
+	mov	DWORD PTR $T153131[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30538,7 +30538,7 @@ __Line$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T153131[ebp], esp
+	mov	DWORD PTR $T153132[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30574,7 +30574,7 @@ __unwindfunclet$??$_Debug_range@V?$_Vector_const_iterator@V?$_Vector_val@UVector
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Debug_range@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YAXV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PB_WI@Z$2:
-	mov	ecx, DWORD PTR $T153130[ebp]
+	mov	ecx, DWORD PTR $T153131[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Debug_range@V?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YAXV?$_Vector_const_iterator@V?$_Vector_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PB_WI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -30628,7 +30628,7 @@ PUBLIC	??$_Iter_cat@PAUVector2D@@@std@@YA?AUrandom_access_iterator_tag@0@ABQAUVe
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Debug_range@PAUVector2D@@@std@@YAXPAUVector2D@@0PB_WI@Z
 _TEXT	SEGMENT
-$T153146 = -1						; size = 1
+$T153147 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -30646,7 +30646,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T153146[ebp]
+	lea	ecx, DWORD PTR $T153147[ebp]
 	push	ecx
 	call	??$_Iter_cat@PAUVector2D@@@std@@YA?AUrandom_access_iterator_tag@0@ABQAUVector2D@@@Z ; std::_Iter_cat<Vector2D *>
 	add	esp, 8

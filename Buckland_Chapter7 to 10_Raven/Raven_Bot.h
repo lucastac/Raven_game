@@ -40,6 +40,9 @@ public:
 
 public:
 
+  //time that bot need to wait until respawn
+  double                           spawn_Time;
+
   //alive, dead or spawning?
   Status                             m_Status;
 

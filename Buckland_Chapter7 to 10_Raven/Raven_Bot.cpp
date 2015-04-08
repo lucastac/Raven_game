@@ -83,6 +83,7 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
   m_pSensoryMem = new Raven_SensoryMemory(this, script->GetDouble("Bot_MemorySpan"));
   my_type = 0;
   Has_flag = false;
+  spawn_Time = 0;
 }
 
 //-------------------------------- dtor ---------------------------------------
@@ -242,6 +243,7 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
                               Msg_YouGotMeYouSOB,
                               NO_ADDITIONAL_INFO);
 	  m_iScore--;
+	  spawn_Time = script->GetDouble("Bot_ReSpawnTime");
     }
 
     return true;

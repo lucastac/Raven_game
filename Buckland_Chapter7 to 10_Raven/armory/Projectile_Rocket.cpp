@@ -18,6 +18,7 @@ Rocket::Rocket(Raven_Bot* shooter, Vector2D target):
         Raven_Projectile(target,
                          shooter->GetWorld(),
                          shooter->ID(),
+						 shooter->my_type,
                          shooter->Pos(),
                          shooter->Facing(),
                          script->GetInt("Rocket_Damage"),
@@ -151,14 +152,27 @@ void Rocket::InflictDamageOnBotsWithinBlastRadius()
 //-----------------------------------------------------------------------------
 void Rocket::Render()
 {
-  
-  gdi->RedPen();
-  gdi->OrangeBrush();
+  if(source_Type == 1)
+  {
+	  gdi->GreenPen();
+	  gdi->BlueBrush();
+
+  }else if(source_Type == 0)
+  {
+	  gdi->RedPen();
+	  gdi->OrangeBrush();
+  }
   gdi->Circle(Pos(), 2);
 
   if (m_bImpacted)
   {
-    gdi->HollowBrush();
+	if(source_Type == 1)
+	{
+		gdi->DarkGreenBrush();
+	}else if(source_Type == 0)
+	{
+		gdi->HollowBrush();
+	}
     gdi->Circle(Pos(), m_dCurrentBlastRadius);
   }
 }

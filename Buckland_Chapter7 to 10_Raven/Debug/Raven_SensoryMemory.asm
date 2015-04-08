@@ -210,7 +210,7 @@ _colors	DD	0ffH
 	DD	0e6e6ffH
 	ORG $+4
 _pi	DQ	0400921f9f01b866er		; 3.14159
-$SG134043 DB	'< Raven_SensoryMemory::GetLastRecordedPositionOfOpponent'
+$SG134044 DB	'< Raven_SensoryMemory::GetLastRecordedPositionOfOpponent'
 	DB	'>: Attempting to get position of unrecorded bot', 00H
 CONST	ENDS
 ;	COMDAT ?end@?$_Iosb@H@std@@2W4_Seekdir@12@B
@@ -1018,10 +1018,10 @@ tv140 = -108						; size = 4
 tv142 = -104						; size = 4
 tv138 = -100						; size = 4
 tv141 = -96						; size = 4
-$T143243 = -92						; size = 48
-$T143242 = -44						; size = 12
-$T143241 = -32						; size = 12
-$T143240 = -17						; size = 1
+$T143244 = -92						; size = 48
+$T143243 = -44						; size = 12
+$T143242 = -32						; size = 12
+$T143241 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _pOpponent$ = 8						; size = 4
@@ -1056,7 +1056,7 @@ _pOpponent$ = 8						; size = 4
 ; 20   :   //create a new record
 ; 21   :   if (m_MemoryMap.find(pOpponent) == m_MemoryMap.end())
 
-	lea	eax, DWORD PTR $T143242[ebp]
+	lea	eax, DWORD PTR $T143243[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1069,7 +1069,7 @@ _pOpponent$ = 8						; size = 4
 	push	edx
 	lea	eax, DWORD PTR _pOpponent$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T143241[ebp]
+	lea	ecx, DWORD PTR $T143242[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1080,21 +1080,21 @@ _pOpponent$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	ecx, DWORD PTR tv140[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator==
-	mov	BYTE PTR $T143240[ebp], al
+	mov	BYTE PTR $T143241[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143241[ebp]
-	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR $T143242[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T143240[ebp]
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR $T143243[ebp]
+	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
+	movzx	eax, BYTE PTR $T143241[ebp]
 	test	eax, eax
 	je	SHORT $LN2@MakeNewRec
 
 ; 22   :   {
 ; 23   :     m_MemoryMap[pOpponent] = MemoryRecord();
 
-	lea	ecx, DWORD PTR $T143243[ebp]
+	lea	ecx, DWORD PTR $T143244[ebp]
 	call	??0MemoryRecord@@QAE@XZ			; MemoryRecord::MemoryRecord
 	mov	esi, eax
 	lea	ecx, DWORD PTR _pOpponent$[ebp]
@@ -1124,10 +1124,10 @@ $LN2@MakeNewRec:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?MakeNewRecordIfNotAlreadyPresent@Raven_SensoryMemory@@AAEXPAVRaven_Bot@@@Z$0:
-	lea	ecx, DWORD PTR $T143242[ebp]
+	lea	ecx, DWORD PTR $T143243[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?MakeNewRecordIfNotAlreadyPresent@Raven_SensoryMemory@@AAEXPAVRaven_Bot@@@Z$1:
-	lea	ecx, DWORD PTR $T143241[ebp]
+	lea	ecx, DWORD PTR $T143242[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?MakeNewRecordIfNotAlreadyPresent@Raven_SensoryMemory@@AAEXPAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -1561,10 +1561,10 @@ tv161 = -84						; size = 4
 tv160 = -80						; size = 4
 tv158 = -76						; size = 4
 tv70 = -72						; size = 4
-$T143294 = -68						; size = 12
-$T143293 = -56						; size = 4
-$T143292 = -52						; size = 12
-$T143291 = -37						; size = 1
+$T143295 = -68						; size = 12
+$T143294 = -56						; size = 4
+$T143293 = -52						; size = 12
+$T143292 = -37						; size = 1
 _record$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -1609,7 +1609,7 @@ _pBot$ = 8						; size = 4
 ; 34   :   
 ; 35   :   if (record != m_MemoryMap.end())
 
-	lea	edx, DWORD PTR $T143292[ebp]
+	lea	edx, DWORD PTR $T143293[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -1622,11 +1622,11 @@ _pBot$ = 8						; size = 4
 	push	ecx
 	lea	ecx, DWORD PTR _record$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator!=
-	mov	BYTE PTR $T143291[ebp], al
+	mov	BYTE PTR $T143292[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143292[ebp]
+	lea	ecx, DWORD PTR $T143293[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T143291[ebp]
+	movzx	edx, BYTE PTR $T143292[ebp]
 	test	edx, edx
 	je	SHORT $LN1@RemoveBotF
 
@@ -1635,18 +1635,18 @@ _pBot$ = 8						; size = 4
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143293[ebp], esp
+	mov	DWORD PTR $T143294[ebp], esp
 	lea	eax, DWORD PTR _record$[ebp]
 	push	eax
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv160[ebp], eax
-	lea	ecx, DWORD PTR $T143294[ebp]
+	lea	ecx, DWORD PTR $T143295[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
 	call	?erase@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::erase
 	mov	DWORD PTR tv161[ebp], eax
-	lea	ecx, DWORD PTR $T143294[ebp]
+	lea	ecx, DWORD PTR $T143295[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN1@RemoveBotF:
 
@@ -1695,7 +1695,7 @@ __unwindfunclet$?RemoveBotFromMemory@Raven_SensoryMemory@@QAEXPAVRaven_Bot@@@Z$0
 	lea	ecx, DWORD PTR _record$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RemoveBotFromMemory@Raven_SensoryMemory@@QAEXPAVRaven_Bot@@@Z$1:
-	lea	ecx, DWORD PTR $T143292[ebp]
+	lea	ecx, DWORD PTR $T143293[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?RemoveBotFromMemory@Raven_SensoryMemory@@QAEXPAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -2045,10 +2045,10 @@ EXTRN	?isLOSOkay@Raven_Game@@QBE_NUVector2D@@0@Z:PROC	; Raven_Game::isLOSOkay
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_sensorymemory.cpp
 _TEXT	SEGMENT
-$T143334 = -56						; size = 16
-$T143333 = -40						; size = 16
-$T143332 = -24						; size = 16
-_info$133637 = -8					; size = 4
+$T143335 = -56						; size = 16
+$T143334 = -40						; size = 16
+$T143333 = -24						; size = 16
+_info$133638 = -8					; size = 4
 _this$ = -4						; size = 4
 _pNoiseMaker$ = 8					; size = 4
 ?UpdateWithSoundSource@Raven_SensoryMemory@@QAEXPAVRaven_Bot@@@Z PROC ; Raven_SensoryMemory::UpdateWithSoundSource
@@ -2094,13 +2094,13 @@ _pNoiseMaker$ = 8					; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
 	call	??A?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAEAAVMemoryRecord@@ABQAVRaven_Bot@@@Z ; std::map<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> > >::operator[]
-	mov	DWORD PTR _info$133637[ebp], eax
+	mov	DWORD PTR _info$133638[ebp], eax
 
 ; 57   : 
 ; 58   :     //test if there is LOS between bots 
 ; 59   :     if (m_pOwner->GetWorld()->isLOSOkay(m_pOwner->Pos(), pNoiseMaker->Pos()))
 
-	lea	ecx, DWORD PTR $T143332[ebp]
+	lea	ecx, DWORD PTR $T143333[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _pNoiseMaker$[ebp]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
@@ -2114,7 +2114,7 @@ _pNoiseMaker$ = 8					; size = 4
 	mov	DWORD PTR [edx+8], ecx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [edx+12], eax
-	lea	ecx, DWORD PTR $T143333[ebp]
+	lea	ecx, DWORD PTR $T143334[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -2141,18 +2141,18 @@ _pNoiseMaker$ = 8					; size = 4
 ; 60   :     {
 ; 61   :       info.bShootable = true;
 
-	mov	eax, DWORD PTR _info$133637[ebp]
+	mov	eax, DWORD PTR _info$133638[ebp]
 	mov	BYTE PTR [eax+41], 1
 
 ; 62   :       
 ; 63   :      //record the position of the bot
 ; 64   :       info.vLastSensedPosition = pNoiseMaker->Pos();
 
-	lea	ecx, DWORD PTR $T143334[ebp]
+	lea	ecx, DWORD PTR $T143335[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _pNoiseMaker$[ebp]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
-	mov	edx, DWORD PTR _info$133637[ebp]
+	mov	edx, DWORD PTR _info$133638[ebp]
 	add	edx, 24					; 00000018H
 	mov	ecx, DWORD PTR [eax]
 	mov	DWORD PTR [edx], ecx
@@ -2172,7 +2172,7 @@ $LN2@UpdateWith:
 ; 67   :     {
 ; 68   :       info.bShootable = false;
 
-	mov	ecx, DWORD PTR _info$133637[ebp]
+	mov	ecx, DWORD PTR _info$133638[ebp]
 	mov	BYTE PTR [ecx+41], 0
 $LN1@UpdateWith:
 
@@ -2184,7 +2184,7 @@ $LN1@UpdateWith:
 	call	?Instance@CrudeTimer@@SAPAV1@XZ		; CrudeTimer::Instance
 	mov	ecx, eax
 	call	?GetTickCount@CrudeTimer@@QAENXZ	; CrudeTimer::GetTickCount
-	mov	edx, DWORD PTR _info$133637[ebp]
+	mov	edx, DWORD PTR _info$133638[ebp]
 	fstp	QWORD PTR [edx]
 $LN3@UpdateWith:
 
@@ -2241,7 +2241,7 @@ _this$ = -4						; size = 4
 ?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ PROC		; Raven_Bot::GetWorld, COMDAT
 ; _this$ = ecx
 
-; 209  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
+; 212  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
 
 	push	ebp
 	mov	ebp, esp
@@ -2249,7 +2249,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [eax+148]
+	mov	eax, DWORD PTR [eax+156]
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -2334,16 +2334,16 @@ tv217 = -184						; size = 4
 tv218 = -180						; size = 4
 tv215 = -176						; size = 4
 tv69 = -172						; size = 4
-$T143352 = -168						; size = 16
-$T143351 = -152						; size = 16
-$T143350 = -136						; size = 16
-$T143349 = -120						; size = 16
-$T143348 = -104						; size = 16
-$T143347 = -88						; size = 16
-$T143346 = -72						; size = 12
-$T143345 = -57						; size = 1
-$T143344 = -56						; size = 12
-_info$133794 = -44					; size = 4
+$T143353 = -168						; size = 16
+$T143352 = -152						; size = 16
+$T143351 = -136						; size = 16
+$T143350 = -120						; size = 16
+$T143349 = -104						; size = 16
+$T143348 = -88						; size = 16
+$T143347 = -72						; size = 12
+$T143346 = -57						; size = 1
+$T143345 = -56						; size = 12
+_info$133795 = -44					; size = 4
 _curBot$ = -36						; size = 12
 _bots$ = -20						; size = 4
 _this$ = -16						; size = 4
@@ -2393,7 +2393,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 88   :   for (curBot = bots.begin(); curBot!=bots.end(); ++curBot)
 
-	lea	ecx, DWORD PTR $T143344[ebp]
+	lea	ecx, DWORD PTR $T143345[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _bots$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -2406,14 +2406,14 @@ __$EHRec$ = -12						; size = 12
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143344[ebp]
+	lea	ecx, DWORD PTR $T143345[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN9@UpdateVisi
 $LN8@UpdateVisi:
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
 $LN9@UpdateVisi:
-	lea	ecx, DWORD PTR $T143346[ebp]
+	lea	ecx, DWORD PTR $T143347[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _bots$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -2425,11 +2425,11 @@ $LN9@UpdateVisi:
 	push	eax
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
-	mov	BYTE PTR $T143345[ebp], al
+	mov	BYTE PTR $T143346[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143346[ebp]
+	lea	ecx, DWORD PTR $T143347[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T143345[ebp]
+	movzx	ecx, BYTE PTR $T143346[ebp]
 	test	ecx, ecx
 	je	$LN7@UpdateVisi
 
@@ -2465,13 +2465,13 @@ $LN9@UpdateVisi:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
 	call	??A?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAEAAVMemoryRecord@@ABQAVRaven_Bot@@@Z ; std::map<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> > >::operator[]
-	mov	DWORD PTR _info$133794[ebp], eax
+	mov	DWORD PTR _info$133795[ebp], eax
 
 ; 98   : 
 ; 99   :       //test if there is LOS between bots 
 ; 100  :       if (m_pOwner->GetWorld()->isLOSOkay(m_pOwner->Pos(), (*curBot)->Pos()))
 
-	lea	eax, DWORD PTR $T143347[ebp]
+	lea	eax, DWORD PTR $T143348[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
@@ -2487,7 +2487,7 @@ $LN9@UpdateVisi:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T143348[ebp]
+	lea	ecx, DWORD PTR $T143349[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -2514,7 +2514,7 @@ $LN9@UpdateVisi:
 ; 101  :       {
 ; 102  :         info.bShootable = true;
 
-	mov	eax, DWORD PTR _info$133794[ebp]
+	mov	eax, DWORD PTR _info$133795[ebp]
 	mov	BYTE PTR [eax+41], 1
 
 ; 103  : 
@@ -2529,7 +2529,7 @@ $LN9@UpdateVisi:
 	call	?FieldOfView@Raven_Bot@@QBENXZ		; Raven_Bot::FieldOfView
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	lea	edx, DWORD PTR $T143349[ebp]
+	lea	edx, DWORD PTR $T143350[ebp]
 	push	edx
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
@@ -2545,7 +2545,7 @@ $LN9@UpdateVisi:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T143350[ebp]
+	lea	ecx, DWORD PTR $T143351[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -2560,7 +2560,7 @@ $LN9@UpdateVisi:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T143351[ebp]
+	lea	ecx, DWORD PTR $T143352[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -2587,18 +2587,18 @@ $LN9@UpdateVisi:
 	call	?Instance@CrudeTimer@@SAPAV1@XZ		; CrudeTimer::Instance
 	mov	ecx, eax
 	call	?GetTickCount@CrudeTimer@@QAENXZ	; CrudeTimer::GetTickCount
-	mov	edx, DWORD PTR _info$133794[ebp]
+	mov	edx, DWORD PTR _info$133795[ebp]
 	fstp	QWORD PTR [edx]
 
 ; 111  :           info.vLastSensedPosition = (*curBot)->Pos();
 
-	lea	eax, DWORD PTR $T143352[ebp]
+	lea	eax, DWORD PTR $T143353[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
 	mov	ecx, DWORD PTR [eax]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
-	mov	ecx, DWORD PTR _info$133794[ebp]
+	mov	ecx, DWORD PTR _info$133795[ebp]
 	add	ecx, 24					; 00000018H
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
@@ -2614,13 +2614,13 @@ $LN9@UpdateVisi:
 	call	?Instance@CrudeTimer@@SAPAV1@XZ		; CrudeTimer::Instance
 	mov	ecx, eax
 	call	?GetTickCount@CrudeTimer@@QAENXZ	; CrudeTimer::GetTickCount
-	mov	ecx, DWORD PTR _info$133794[ebp]
+	mov	ecx, DWORD PTR _info$133795[ebp]
 	fstp	QWORD PTR [ecx+16]
 
 ; 113  : 
 ; 114  :           if (info.bWithinFOV == false)
 
-	mov	edx, DWORD PTR _info$133794[ebp]
+	mov	edx, DWORD PTR _info$133795[ebp]
 	movzx	eax, BYTE PTR [edx+40]
 	test	eax, eax
 	jne	SHORT $LN3@UpdateVisi
@@ -2628,13 +2628,13 @@ $LN9@UpdateVisi:
 ; 115  :           {
 ; 116  :             info.bWithinFOV           = true;
 
-	mov	ecx, DWORD PTR _info$133794[ebp]
+	mov	ecx, DWORD PTR _info$133795[ebp]
 	mov	BYTE PTR [ecx+40], 1
 
 ; 117  :             info.fTimeBecameVisible    = info.fTimeLastSensed;
 
-	mov	edx, DWORD PTR _info$133794[ebp]
-	mov	eax, DWORD PTR _info$133794[ebp]
+	mov	edx, DWORD PTR _info$133795[ebp]
+	mov	eax, DWORD PTR _info$133795[ebp]
 	fld	QWORD PTR [eax]
 	fstp	QWORD PTR [edx+8]
 $LN3@UpdateVisi:
@@ -2651,7 +2651,7 @@ $LN4@UpdateVisi:
 ; 123  :         {
 ; 124  :           info.bWithinFOV = false;         
 
-	mov	ecx, DWORD PTR _info$133794[ebp]
+	mov	ecx, DWORD PTR _info$133795[ebp]
 	mov	BYTE PTR [ecx+40], 0
 $LN2@UpdateVisi:
 
@@ -2666,12 +2666,12 @@ $LN5@UpdateVisi:
 ; 129  :       {
 ; 130  :         info.bShootable = false;
 
-	mov	edx, DWORD PTR _info$133794[ebp]
+	mov	edx, DWORD PTR _info$133795[ebp]
 	mov	BYTE PTR [edx+41], 0
 
 ; 131  :         info.bWithinFOV = false;
 
-	mov	eax, DWORD PTR _info$133794[ebp]
+	mov	eax, DWORD PTR _info$133795[ebp]
 	mov	BYTE PTR [eax+40], 0
 $LN1@UpdateVisi:
 
@@ -2726,10 +2726,10 @@ __unwindfunclet$?UpdateVision@Raven_SensoryMemory@@QAEXXZ$0:
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?UpdateVision@Raven_SensoryMemory@@QAEXXZ$1:
-	lea	ecx, DWORD PTR $T143344[ebp]
+	lea	ecx, DWORD PTR $T143345[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?UpdateVision@Raven_SensoryMemory@@QAEXXZ$2:
-	lea	ecx, DWORD PTR $T143346[ebp]
+	lea	ecx, DWORD PTR $T143347[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?UpdateVision@Raven_SensoryMemory@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -2756,7 +2756,7 @@ CONST	ENDS
 _TEXT	SEGMENT
 tv77 = -52						; size = 4
 tv128 = -48						; size = 8
-$T143364 = -40						; size = 16
+$T143365 = -40						; size = 16
 _toTarget$ = -20					; size = 16
 _posFirst$ = 8						; size = 16
 _facingFirst$ = 24					; size = 16
@@ -2781,7 +2781,7 @@ _fov$ = 56						; size = 8
 	push	eax
 	lea	ecx, DWORD PTR _posSecond$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T143364[ebp]
+	lea	edx, DWORD PTR $T143365[ebp]
 	push	edx
 	call	??G@YA?AUVector2D@@ABU0@0@Z		; operator-
 	add	esp, 12					; 0000000cH
@@ -3153,7 +3153,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?Facing@Raven_Bot@@QBE?AUVector2D@@XZ PROC		; Raven_Bot::Facing, COMDAT
 ; _this$ = ecx
 
-; 158  :   Vector2D      Facing()const{return m_vFacing;}
+; 161  :   Vector2D      Facing()const{return m_vFacing;}
 
 	push	ebp
 	mov	ebp, esp
@@ -3161,7 +3161,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	add	eax, 216				; 000000d8H
+	add	eax, 224				; 000000e0H
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
@@ -3184,7 +3184,7 @@ _this$ = -4						; size = 4
 ?FieldOfView@Raven_Bot@@QBENXZ PROC			; Raven_Bot::FieldOfView, COMDAT
 ; _this$ = ecx
 
-; 159  :   double        FieldOfView()const{return m_dFieldOfView;}
+; 162  :   double        FieldOfView()const{return m_dFieldOfView;}
 
 	push	ebp
 	mov	ebp, esp
@@ -3192,7 +3192,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	fld	QWORD PTR [eax+232]
+	fld	QWORD PTR [eax+240]
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -3397,9 +3397,9 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv163 = -96						; size = 4
 tv76 = -92						; size = 4
-$T143419 = -88						; size = 4
-$T143414 = -84						; size = 12
-$T143413 = -69						; size = 1
+$T143420 = -88						; size = 4
+$T143415 = -84						; size = 12
+$T143414 = -69						; size = 1
 _curRecord$ = -64					; size = 12
 _CurrentTime$ = -48					; size = 8
 _opponents$ = -36					; size = 16
@@ -3431,7 +3431,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143419[ebp], 0
+	mov	DWORD PTR $T143420[ebp], 0
 
 ; 145  :   //this will store all the opponents the bot can remember
 ; 146  :   std::list<Raven_Bot*> opponents;
@@ -3465,7 +3465,7 @@ $LN3@GetListOfR:
 	lea	ecx, DWORD PTR _curRecord$[ebp]
 	call	??E?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator++
 $LN4@GetListOfR:
-	lea	ecx, DWORD PTR $T143414[ebp]
+	lea	ecx, DWORD PTR $T143415[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -3478,11 +3478,11 @@ $LN4@GetListOfR:
 	push	eax
 	lea	ecx, DWORD PTR _curRecord$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator!=
-	mov	BYTE PTR $T143413[ebp], al
+	mov	BYTE PTR $T143414[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T143414[ebp]
+	lea	ecx, DWORD PTR $T143415[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T143413[ebp]
+	movzx	ecx, BYTE PTR $T143414[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@GetListOfR
 
@@ -3523,9 +3523,9 @@ $LN2@GetListOfR:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >
-	mov	ecx, DWORD PTR $T143419[ebp]
+	mov	ecx, DWORD PTR $T143420[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143419[ebp], ecx
+	mov	DWORD PTR $T143420[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR _curRecord$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -3595,13 +3595,13 @@ __unwindfunclet$?GetListOfRecentlySensedOpponents@Raven_SensoryMemory@@QBE?AV?$l
 	lea	ecx, DWORD PTR _curRecord$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetListOfRecentlySensedOpponents@Raven_SensoryMemory@@QBE?AV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ$2:
-	lea	ecx, DWORD PTR $T143414[ebp]
+	lea	ecx, DWORD PTR $T143415[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetListOfRecentlySensedOpponents@Raven_SensoryMemory@@QBE?AV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ$3:
-	mov	eax, DWORD PTR $T143419[ebp]
+	mov	eax, DWORD PTR $T143420[ebp]
 	and	eax, 1
 	je	$LN11@GetListOfR
-	and	DWORD PTR $T143419[ebp], -2		; fffffffeH
+	and	DWORD PTR $T143420[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
 $LN11@GetListOfR:
@@ -3635,10 +3635,10 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv135 = -64						; size = 4
 tv70 = -60						; size = 4
-$T143433 = -54						; size = 1
-$T143432 = -53						; size = 1
-$T143431 = -52						; size = 12
-$T143430 = -37						; size = 1
+$T143434 = -54						; size = 1
+$T143433 = -53						; size = 1
+$T143432 = -52						; size = 12
+$T143431 = -37						; size = 1
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -3683,7 +3683,7 @@ _pOpponent$ = 8						; size = 4
 ; 171  :  
 ; 172  :   if (it != m_MemoryMap.end())
 
-	lea	edx, DWORD PTR $T143431[ebp]
+	lea	edx, DWORD PTR $T143432[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -3696,11 +3696,11 @@ _pOpponent$ = 8						; size = 4
 	push	ecx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator!=
-	mov	BYTE PTR $T143430[ebp], al
+	mov	BYTE PTR $T143431[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143431[ebp]
+	lea	ecx, DWORD PTR $T143432[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T143430[ebp]
+	movzx	edx, BYTE PTR $T143431[ebp]
 	test	edx, edx
 	je	SHORT $LN1@isOpponent
 
@@ -3710,11 +3710,11 @@ _pOpponent$ = 8						; size = 4
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator->
 	mov	al, BYTE PTR [eax+49]
-	mov	BYTE PTR $T143432[ebp], al
+	mov	BYTE PTR $T143433[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	al, BYTE PTR $T143432[ebp]
+	mov	al, BYTE PTR $T143433[ebp]
 	jmp	SHORT $LN2@isOpponent
 $LN1@isOpponent:
 
@@ -3722,11 +3722,11 @@ $LN1@isOpponent:
 ; 176  : 
 ; 177  :   return false;
 
-	mov	BYTE PTR $T143433[ebp], 0
+	mov	BYTE PTR $T143434[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	al, BYTE PTR $T143433[ebp]
+	mov	al, BYTE PTR $T143434[ebp]
 $LN2@isOpponent:
 
 ; 178  : }
@@ -3765,7 +3765,7 @@ __unwindfunclet$?isOpponentShootable@Raven_SensoryMemory@@QBE_NPAVRaven_Bot@@@Z$
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?isOpponentShootable@Raven_SensoryMemory@@QBE_NPAVRaven_Bot@@@Z$1:
-	lea	ecx, DWORD PTR $T143431[ebp]
+	lea	ecx, DWORD PTR $T143432[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?isOpponentShootable@Raven_SensoryMemory@@QBE_NPAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -3795,10 +3795,10 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv135 = -64						; size = 4
 tv70 = -60						; size = 4
-$T143447 = -54						; size = 1
-$T143446 = -53						; size = 1
-$T143445 = -52						; size = 12
-$T143444 = -37						; size = 1
+$T143448 = -54						; size = 1
+$T143447 = -53						; size = 1
+$T143446 = -52						; size = 12
+$T143445 = -37						; size = 1
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -3843,7 +3843,7 @@ _pOpponent$ = 8						; size = 4
 ; 187  :  
 ; 188  :   if (it != m_MemoryMap.end())
 
-	lea	edx, DWORD PTR $T143445[ebp]
+	lea	edx, DWORD PTR $T143446[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -3856,11 +3856,11 @@ _pOpponent$ = 8						; size = 4
 	push	ecx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator!=
-	mov	BYTE PTR $T143444[ebp], al
+	mov	BYTE PTR $T143445[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143445[ebp]
+	lea	ecx, DWORD PTR $T143446[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T143444[ebp]
+	movzx	edx, BYTE PTR $T143445[ebp]
 	test	edx, edx
 	je	SHORT $LN1@isOpponent@2
 
@@ -3870,11 +3870,11 @@ _pOpponent$ = 8						; size = 4
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator->
 	mov	al, BYTE PTR [eax+48]
-	mov	BYTE PTR $T143446[ebp], al
+	mov	BYTE PTR $T143447[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	al, BYTE PTR $T143446[ebp]
+	mov	al, BYTE PTR $T143447[ebp]
 	jmp	SHORT $LN2@isOpponent@2
 $LN1@isOpponent@2:
 
@@ -3882,11 +3882,11 @@ $LN1@isOpponent@2:
 ; 192  : 
 ; 193  :   return false;
 
-	mov	BYTE PTR $T143447[ebp], 0
+	mov	BYTE PTR $T143448[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	al, BYTE PTR $T143447[ebp]
+	mov	al, BYTE PTR $T143448[ebp]
 $LN2@isOpponent@2:
 
 ; 194  : }
@@ -3925,7 +3925,7 @@ __unwindfunclet$?isOpponentWithinFOV@Raven_SensoryMemory@@QBE_NPAVRaven_Bot@@@Z$
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?isOpponentWithinFOV@Raven_SensoryMemory@@QBE_NPAVRaven_Bot@@@Z$1:
-	lea	ecx, DWORD PTR $T143445[ebp]
+	lea	ecx, DWORD PTR $T143446[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?isOpponentWithinFOV@Raven_SensoryMemory@@QBE_NPAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -4012,9 +4012,9 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv140 = -72						; size = 4
 tv70 = -68						; size = 4
-$T143460 = -64						; size = 12
-$T143459 = -52						; size = 12
-$T143458 = -37						; size = 1
+$T143461 = -64						; size = 12
+$T143460 = -52						; size = 12
+$T143459 = -37						; size = 1
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4060,7 +4060,7 @@ _pOpponent$ = 12					; size = 4
 ; 203  :  
 ; 204  :   if (it != m_MemoryMap.end())
 
-	lea	edx, DWORD PTR $T143459[ebp]
+	lea	edx, DWORD PTR $T143460[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -4073,11 +4073,11 @@ _pOpponent$ = 12					; size = 4
 	push	ecx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator!=
-	mov	BYTE PTR $T143458[ebp], al
+	mov	BYTE PTR $T143459[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143459[ebp]
+	lea	ecx, DWORD PTR $T143460[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T143458[ebp]
+	movzx	edx, BYTE PTR $T143459[ebp]
 	test	edx, edx
 	je	SHORT $LN1@GetLastRec
 
@@ -4107,11 +4107,11 @@ $LN1@GetLastRec:
 ; 208  : 
 ; 209  :   throw std::runtime_error("< Raven_SensoryMemory::GetLastRecordedPositionOfOpponent>: Attempting to get position of unrecorded bot");
 
-	push	OFFSET $SG134043
-	lea	ecx, DWORD PTR $T143460[ebp]
+	push	OFFSET $SG134044
+	lea	ecx, DWORD PTR $T143461[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@
-	lea	ecx, DWORD PTR $T143460[ebp]
+	lea	ecx, DWORD PTR $T143461[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 
@@ -4156,7 +4156,7 @@ __unwindfunclet$?GetLastRecordedPositionOfOpponent@Raven_SensoryMemory@@QBE?AUVe
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetLastRecordedPositionOfOpponent@Raven_SensoryMemory@@QBE?AUVector2D@@PAVRaven_Bot@@@Z$1:
-	lea	ecx, DWORD PTR $T143459[ebp]
+	lea	ecx, DWORD PTR $T143460[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?GetLastRecordedPositionOfOpponent@Raven_SensoryMemory@@QBE?AUVector2D@@PAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -4372,11 +4372,11 @@ tv188 = -92						; size = 8
 tv135 = -84						; size = 4
 tv160 = -80						; size = 4
 tv70 = -76						; size = 4
-$T143490 = -72						; size = 4
-$T143488 = -68						; size = 8
-$T143487 = -60						; size = 8
-$T143484 = -52						; size = 12
-$T143483 = -37						; size = 1
+$T143491 = -72						; size = 4
+$T143489 = -68						; size = 8
+$T143488 = -60						; size = 8
+$T143485 = -52						; size = 12
+$T143484 = -37						; size = 1
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4406,7 +4406,7 @@ _pOpponent$ = 8						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143490[ebp], 0
+	mov	DWORD PTR $T143491[ebp], 0
 
 ; 218  :   MemoryMap::const_iterator it = m_MemoryMap.find(pOpponent);
 
@@ -4422,7 +4422,7 @@ _pOpponent$ = 8						; size = 4
 ; 219  :  
 ; 220  :   if (it != m_MemoryMap.end() && it->second.bWithinFOV)
 
-	lea	edx, DWORD PTR $T143484[ebp]
+	lea	edx, DWORD PTR $T143485[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -4431,9 +4431,9 @@ _pOpponent$ = 8						; size = 4
 	mov	eax, DWORD PTR tv70[ebp]
 	mov	DWORD PTR tv160[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T143490[ebp]
+	mov	ecx, DWORD PTR $T143491[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143490[ebp], ecx
+	mov	DWORD PTR $T143491[ebp], ecx
 	mov	edx, DWORD PTR tv160[ebp]
 	push	edx
 	lea	ecx, DWORD PTR _it$[ebp]
@@ -4452,16 +4452,16 @@ $LN4@GetTimeOpp:
 	mov	DWORD PTR tv135[ebp], 0
 $LN5@GetTimeOpp:
 	mov	dl, BYTE PTR tv135[ebp]
-	mov	BYTE PTR $T143483[ebp], dl
+	mov	BYTE PTR $T143484[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	eax, DWORD PTR $T143490[ebp]
+	mov	eax, DWORD PTR $T143491[ebp]
 	and	eax, 1
 	je	SHORT $LN9@GetTimeOpp
-	and	DWORD PTR $T143490[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143484[ebp]
+	and	DWORD PTR $T143491[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143485[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@GetTimeOpp:
-	movzx	ecx, BYTE PTR $T143483[ebp]
+	movzx	ecx, BYTE PTR $T143484[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@GetTimeOpp
 
@@ -4476,11 +4476,11 @@ $LN9@GetTimeOpp:
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator->
 	fld	QWORD PTR tv188[ebp]
 	fsub	QWORD PTR [eax+16]
-	fstp	QWORD PTR $T143487[ebp]
+	fstp	QWORD PTR $T143488[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T143487[ebp]
+	fld	QWORD PTR $T143488[ebp]
 	jmp	SHORT $LN2@GetTimeOpp
 $LN1@GetTimeOpp:
 
@@ -4489,11 +4489,11 @@ $LN1@GetTimeOpp:
 ; 225  :   return 0;
 
 	fldz
-	fstp	QWORD PTR $T143488[ebp]
+	fstp	QWORD PTR $T143489[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T143488[ebp]
+	fld	QWORD PTR $T143489[ebp]
 $LN2@GetTimeOpp:
 
 ; 226  : }
@@ -4532,11 +4532,11 @@ __unwindfunclet$?GetTimeOpponentHasBeenVisible@Raven_SensoryMemory@@QBENPAVRaven
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetTimeOpponentHasBeenVisible@Raven_SensoryMemory@@QBENPAVRaven_Bot@@@Z$1:
-	mov	eax, DWORD PTR $T143490[ebp]
+	mov	eax, DWORD PTR $T143491[ebp]
 	and	eax, 1
 	je	$LN8@GetTimeOpp
-	and	DWORD PTR $T143490[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143484[ebp]
+	and	DWORD PTR $T143491[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143485[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@GetTimeOpp:
 	ret	0
@@ -4569,10 +4569,10 @@ _TEXT	SEGMENT
 tv160 = -84						; size = 8
 tv139 = -76						; size = 4
 tv70 = -72						; size = 4
-$T143505 = -68						; size = 8
-$T143504 = -60						; size = 8
-$T143503 = -52						; size = 12
-$T143502 = -37						; size = 1
+$T143506 = -68						; size = 8
+$T143505 = -60						; size = 8
+$T143504 = -52						; size = 12
+$T143503 = -37						; size = 1
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4617,7 +4617,7 @@ _pOpponent$ = 8						; size = 4
 ; 236  :  
 ; 237  :   if (it != m_MemoryMap.end())
 
-	lea	edx, DWORD PTR $T143503[ebp]
+	lea	edx, DWORD PTR $T143504[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -4630,11 +4630,11 @@ _pOpponent$ = 8						; size = 4
 	push	ecx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator!=
-	mov	BYTE PTR $T143502[ebp], al
+	mov	BYTE PTR $T143503[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143503[ebp]
+	lea	ecx, DWORD PTR $T143504[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T143502[ebp]
+	movzx	edx, BYTE PTR $T143503[ebp]
 	test	edx, edx
 	je	SHORT $LN1@GetTimeOpp@2
 
@@ -4649,11 +4649,11 @@ _pOpponent$ = 8						; size = 4
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator->
 	fld	QWORD PTR tv160[ebp]
 	fsub	QWORD PTR [eax+24]
-	fstp	QWORD PTR $T143504[ebp]
+	fstp	QWORD PTR $T143505[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T143504[ebp]
+	fld	QWORD PTR $T143505[ebp]
 	jmp	SHORT $LN2@GetTimeOpp@2
 $LN1@GetTimeOpp@2:
 
@@ -4662,11 +4662,11 @@ $LN1@GetTimeOpp@2:
 ; 242  :   return MaxDouble;
 
 	fld	QWORD PTR _MaxDouble
-	fstp	QWORD PTR $T143505[ebp]
+	fstp	QWORD PTR $T143506[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T143505[ebp]
+	fld	QWORD PTR $T143506[ebp]
 $LN2@GetTimeOpp@2:
 
 ; 243  : }
@@ -4706,7 +4706,7 @@ __unwindfunclet$?GetTimeOpponentHasBeenOutOfView@Raven_SensoryMemory@@QBENPAVRav
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetTimeOpponentHasBeenOutOfView@Raven_SensoryMemory@@QBENPAVRaven_Bot@@@Z$1:
-	lea	ecx, DWORD PTR $T143503[ebp]
+	lea	ecx, DWORD PTR $T143504[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?GetTimeOpponentHasBeenOutOfView@Raven_SensoryMemory@@QBENPAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -4738,11 +4738,11 @@ tv188 = -92						; size = 8
 tv135 = -84						; size = 4
 tv160 = -80						; size = 4
 tv70 = -76						; size = 4
-$T143523 = -72						; size = 4
-$T143521 = -68						; size = 8
-$T143520 = -60						; size = 8
-$T143517 = -52						; size = 12
-$T143516 = -37						; size = 1
+$T143524 = -72						; size = 4
+$T143522 = -68						; size = 8
+$T143521 = -60						; size = 8
+$T143518 = -52						; size = 12
+$T143517 = -37						; size = 1
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4772,7 +4772,7 @@ _pOpponent$ = 8						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143523[ebp], 0
+	mov	DWORD PTR $T143524[ebp], 0
 
 ; 251  :   MemoryMap::const_iterator it = m_MemoryMap.find(pOpponent);
 
@@ -4788,7 +4788,7 @@ _pOpponent$ = 8						; size = 4
 ; 252  :  
 ; 253  :   if (it != m_MemoryMap.end() && it->second.bWithinFOV)
 
-	lea	edx, DWORD PTR $T143517[ebp]
+	lea	edx, DWORD PTR $T143518[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -4797,9 +4797,9 @@ _pOpponent$ = 8						; size = 4
 	mov	eax, DWORD PTR tv70[ebp]
 	mov	DWORD PTR tv160[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T143523[ebp]
+	mov	ecx, DWORD PTR $T143524[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143523[ebp], ecx
+	mov	DWORD PTR $T143524[ebp], ecx
 	mov	edx, DWORD PTR tv160[ebp]
 	push	edx
 	lea	ecx, DWORD PTR _it$[ebp]
@@ -4818,16 +4818,16 @@ $LN4@GetTimeSin:
 	mov	DWORD PTR tv135[ebp], 0
 $LN5@GetTimeSin:
 	mov	dl, BYTE PTR tv135[ebp]
-	mov	BYTE PTR $T143516[ebp], dl
+	mov	BYTE PTR $T143517[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	eax, DWORD PTR $T143523[ebp]
+	mov	eax, DWORD PTR $T143524[ebp]
 	and	eax, 1
 	je	SHORT $LN9@GetTimeSin
-	and	DWORD PTR $T143523[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143517[ebp]
+	and	DWORD PTR $T143524[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143518[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@GetTimeSin:
-	movzx	ecx, BYTE PTR $T143516[ebp]
+	movzx	ecx, BYTE PTR $T143517[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@GetTimeSin
 
@@ -4842,11 +4842,11 @@ $LN9@GetTimeSin:
 	call	??C?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPBU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator->
 	fld	QWORD PTR tv188[ebp]
 	fsub	QWORD PTR [eax+8]
-	fstp	QWORD PTR $T143520[ebp]
+	fstp	QWORD PTR $T143521[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T143520[ebp]
+	fld	QWORD PTR $T143521[ebp]
 	jmp	SHORT $LN2@GetTimeSin
 $LN1@GetTimeSin:
 
@@ -4855,11 +4855,11 @@ $LN1@GetTimeSin:
 ; 258  :   return 0;
 
 	fldz
-	fstp	QWORD PTR $T143521[ebp]
+	fstp	QWORD PTR $T143522[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T143521[ebp]
+	fld	QWORD PTR $T143522[ebp]
 $LN2@GetTimeSin:
 
 ; 259  : }
@@ -4898,11 +4898,11 @@ __unwindfunclet$?GetTimeSinceLastSensed@Raven_SensoryMemory@@QBENPAVRaven_Bot@@@
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetTimeSinceLastSensed@Raven_SensoryMemory@@QBENPAVRaven_Bot@@@Z$1:
-	mov	eax, DWORD PTR $T143523[ebp]
+	mov	eax, DWORD PTR $T143524[ebp]
 	and	eax, 1
 	je	$LN8@GetTimeSin
-	and	DWORD PTR $T143523[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143517[ebp]
+	and	DWORD PTR $T143524[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143518[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@GetTimeSin:
 	ret	0
@@ -4947,11 +4947,11 @@ tv192 = -136						; size = 4
 tv65 = -132						; size = 4
 tv190 = -128						; size = 4
 tv69 = -124						; size = 4
-$T143537 = -120						; size = 12
-$T143536 = -105						; size = 1
-$T143535 = -104						; size = 12
-_b$134138 = -92						; size = 8
-_p$134136 = -80						; size = 16
+$T143538 = -120						; size = 12
+$T143537 = -105						; size = 1
+$T143536 = -104						; size = 12
+_b$134139 = -92						; size = 8
+_p$134137 = -80						; size = 16
 _it$ = -56						; size = 12
 _opponents$ = -36					; size = 16
 _this$ = -16						; size = 4
@@ -4998,7 +4998,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 269  :   for (it = opponents.begin(); it != opponents.end(); ++it)
 
-	lea	ecx, DWORD PTR $T143535[ebp]
+	lea	ecx, DWORD PTR $T143536[ebp]
 	push	ecx
 	lea	ecx, DWORD PTR _opponents$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -5011,14 +5011,14 @@ __$EHRec$ = -12						; size = 12
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T143535[ebp]
+	lea	ecx, DWORD PTR $T143536[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN3@RenderBoxe
 $LN2@RenderBoxe:
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
 $LN3@RenderBoxe:
-	lea	ecx, DWORD PTR $T143537[ebp]
+	lea	ecx, DWORD PTR $T143538[ebp]
 	push	ecx
 	lea	ecx, DWORD PTR _opponents$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -5030,11 +5030,11 @@ $LN3@RenderBoxe:
 	push	eax
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
-	mov	BYTE PTR $T143536[ebp], al
+	mov	BYTE PTR $T143537[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T143537[ebp]
+	lea	ecx, DWORD PTR $T143538[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T143536[ebp]
+	movzx	ecx, BYTE PTR $T143537[ebp]
 	test	ecx, ecx
 	je	$LN1@RenderBoxe
 
@@ -5047,7 +5047,7 @@ $LN3@RenderBoxe:
 
 ; 272  :     Vector2D p = (*it)->Pos();
 
-	lea	edx, DWORD PTR _p$134136[ebp]
+	lea	edx, DWORD PTR _p$134137[ebp]
 	push	edx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
@@ -5060,25 +5060,25 @@ $LN3@RenderBoxe:
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
 	mov	ecx, DWORD PTR [eax]
 	call	?BRadius@BaseGameEntity@@QBENXZ		; BaseGameEntity::BRadius
-	fstp	QWORD PTR _b$134138[ebp]
+	fstp	QWORD PTR _b$134139[ebp]
 
 ; 274  :       
 ; 275  :     gdi->Line(p.x-b, p.y-b, p.x+b, p.y-b);
 
-	fld	QWORD PTR _p$134136[ebp+8]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp+8]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
@@ -5087,20 +5087,20 @@ $LN3@RenderBoxe:
 
 ; 276  :     gdi->Line(p.x+b, p.y-b, p.x+b, p.y+b);
 
-	fld	QWORD PTR _p$134136[ebp+8]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp+8]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
@@ -5109,20 +5109,20 @@ $LN3@RenderBoxe:
 
 ; 277  :     gdi->Line(p.x+b, p.y+b, p.x-b, p.y+b);
 
-	fld	QWORD PTR _p$134136[ebp+8]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp+8]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
@@ -5131,20 +5131,20 @@ $LN3@RenderBoxe:
 
 ; 278  :     gdi->Line(p.x-b, p.y+b, p.x-b, p.y-b);
 
-	fld	QWORD PTR _p$134136[ebp+8]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp+8]
-	fadd	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp+8]
+	fadd	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	fld	QWORD PTR _p$134136[ebp]
-	fsub	QWORD PTR _b$134138[ebp]
+	fld	QWORD PTR _p$134137[ebp]
+	fsub	QWORD PTR _b$134139[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
@@ -5223,10 +5223,10 @@ __unwindfunclet$?RenderBoxesAroundRecentlySensed@Raven_SensoryMemory@@QBEXXZ$1:
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderBoxesAroundRecentlySensed@Raven_SensoryMemory@@QBEXXZ$2:
-	lea	ecx, DWORD PTR $T143535[ebp]
+	lea	ecx, DWORD PTR $T143536[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderBoxesAroundRecentlySensed@Raven_SensoryMemory@@QBEXXZ$3:
-	lea	ecx, DWORD PTR $T143537[ebp]
+	lea	ecx, DWORD PTR $T143538[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?RenderBoxesAroundRecentlySensed@Raven_SensoryMemory@@QBEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -5394,8 +5394,8 @@ PUBLIC	??0?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAE@XZ ; 
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\map
 ;	COMDAT ??0?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T143563 = -6						; size = 1
-$T143562 = -5						; size = 1
+$T143564 = -6						; size = 1
+$T143563 = -5						; size = 1
 _this$ = -4						; size = 4
 ??0?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAE@XZ PROC ; std::map<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> > >::map<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> > >, COMDAT
 ; _this$ = ecx
@@ -5408,10 +5408,10 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	lea	ecx, DWORD PTR $T143562[ebp]
+	lea	ecx, DWORD PTR $T143563[ebp]
 	call	??0?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAE@XZ ; std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >::allocator<std::pair<Raven_Bot * const,MemoryRecord> >
 	push	eax
-	lea	eax, DWORD PTR $T143563[ebp]
+	lea	eax, DWORD PTR $T143564[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE@ABU?$less@PAVRaven_Bot@@@1@ABV?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@1@@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >
@@ -5460,14 +5460,14 @@ tv203 = -196						; size = 4
 tv146 = -192						; size = 4
 tv198 = -188						; size = 4
 tv69 = -184						; size = 4
-$T143577 = -180						; size = 4
-$T143575 = -176						; size = 4
-$T143574 = -172						; size = 12
-$T143573 = -160						; size = 4
-$T143572 = -156						; size = 48
-$T143571 = -108						; size = 56
-$T143568 = -52						; size = 12
-$T143567 = -37						; size = 1
+$T143578 = -180						; size = 4
+$T143576 = -176						; size = 4
+$T143575 = -172						; size = 12
+$T143574 = -160						; size = 4
+$T143573 = -156						; size = 48
+$T143572 = -108						; size = 56
+$T143569 = -52						; size = 12
+$T143568 = -37						; size = 1
 __Where$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -5497,7 +5497,7 @@ __Keyval$ = 8						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143577[ebp], 0
+	mov	DWORD PTR $T143578[ebp], 0
 
 ; 211  : 		iterator _Where = this->lower_bound(_Keyval);
 
@@ -5512,7 +5512,7 @@ __Keyval$ = 8						; size = 4
 ; 212  : 		if (_Where == this->end()
 ; 213  : 			|| this->comp(_Keyval, this->_Key(_Where._Mynode())))
 
-	lea	edx, DWORD PTR $T143568[ebp]
+	lea	edx, DWORD PTR $T143569[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -5520,9 +5520,9 @@ __Keyval$ = 8						; size = 4
 	mov	eax, DWORD PTR tv69[ebp]
 	mov	DWORD PTR tv198[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR $T143577[ebp]
+	mov	ecx, DWORD PTR $T143578[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143577[ebp], ecx
+	mov	DWORD PTR $T143578[ebp], ecx
 	mov	edx, DWORD PTR tv198[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -5550,38 +5550,38 @@ $LN4@operator@3:
 	mov	DWORD PTR tv146[ebp], 1
 $LN5@operator@3:
 	mov	al, BYTE PTR tv146[ebp]
-	mov	BYTE PTR $T143567[ebp], al
+	mov	BYTE PTR $T143568[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR $T143577[ebp]
+	mov	ecx, DWORD PTR $T143578[ebp]
 	and	ecx, 1
 	je	SHORT $LN9@operator@3
-	and	DWORD PTR $T143577[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143568[ebp]
+	and	DWORD PTR $T143578[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143569[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@operator@3:
-	movzx	edx, BYTE PTR $T143567[ebp]
+	movzx	edx, BYTE PTR $T143568[ebp]
 	test	edx, edx
 	je	SHORT $LN1@operator@3
 
 ; 214  : 			_Where = this->insert(_Where,
 ; 215  : 				value_type(_Keyval, mapped_type()));
 
-	lea	ecx, DWORD PTR $T143572[ebp]
+	lea	ecx, DWORD PTR $T143573[ebp]
 	call	??0MemoryRecord@@QAE@XZ			; MemoryRecord::MemoryRecord
 	push	eax
 	mov	eax, DWORD PTR __Keyval$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T143571[ebp]
+	lea	ecx, DWORD PTR $T143572[ebp]
 	call	??0?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@QAE@ABQAVRaven_Bot@@$$QAVMemoryRecord@@@Z ; std::pair<Raven_Bot * const,MemoryRecord>::pair<Raven_Bot * const,MemoryRecord>
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143573[ebp], esp
+	mov	DWORD PTR $T143574[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv203[ebp], eax
-	lea	eax, DWORD PTR $T143574[ebp]
+	lea	eax, DWORD PTR $T143575[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@$$QAU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::insert<std::pair<Raven_Bot * const,MemoryRecord> >
@@ -5594,7 +5594,7 @@ $LN9@operator@3:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??4?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143574[ebp]
+	lea	ecx, DWORD PTR $T143575[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN1@operator@3:
 
@@ -5603,11 +5603,11 @@ $LN1@operator@3:
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??D?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBEAAU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator*
 	add	eax, 8
-	mov	DWORD PTR $T143575[ebp], eax
+	mov	DWORD PTR $T143576[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T143575[ebp]
+	mov	eax, DWORD PTR $T143576[ebp]
 
 ; 217  : 		}
 
@@ -5650,16 +5650,16 @@ __unwindfunclet$??A?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??A?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAEAAVMemoryRecord@@ABQAVRaven_Bot@@@Z$1:
-	mov	eax, DWORD PTR $T143577[ebp]
+	mov	eax, DWORD PTR $T143578[ebp]
 	and	eax, 1
 	je	$LN8@operator@3
-	and	DWORD PTR $T143577[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143568[ebp]
+	and	DWORD PTR $T143578[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143569[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN8@operator@3:
 	ret	0
 __unwindfunclet$??A?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAEAAVMemoryRecord@@ABQAVRaven_Bot@@@Z$3:
-	lea	ecx, DWORD PTR $T143574[ebp]
+	lea	ecx, DWORD PTR $T143575[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??A?$map@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@@std@@QAEAAVMemoryRecord@@ABQAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -5677,7 +5677,7 @@ PUBLIC	?_Lmost@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVR
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xtree
 ;	COMDAT ?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143595 = -8						; size = 4
+$T143596 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::begin, COMDAT
@@ -5691,7 +5691,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143595[ebp], 0
+	mov	DWORD PTR $T143596[ebp], 0
 
 ; 812  : 		return (const_iterator(_Lmost(), this));
 
@@ -5703,9 +5703,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	edx, DWORD PTR $T143595[ebp]
+	mov	edx, DWORD PTR $T143596[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T143595[ebp], edx
+	mov	DWORD PTR $T143596[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 813  : 		}
@@ -5722,7 +5722,7 @@ PUBLIC	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRec
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143600 = -8						; size = 4
+$T143601 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end, COMDAT
@@ -5736,7 +5736,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143600[ebp], 0
+	mov	DWORD PTR $T143601[ebp], 0
 
 ; 817  : 		return (iterator(this->_Myhead, this));
 
@@ -5747,9 +5747,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	eax, DWORD PTR $T143600[ebp]
+	mov	eax, DWORD PTR $T143601[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T143600[ebp], eax
+	mov	DWORD PTR $T143601[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 818  : 		}
@@ -5765,7 +5765,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143605 = -8						; size = 4
+$T143606 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end, COMDAT
@@ -5779,7 +5779,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143605[ebp], 0
+	mov	DWORD PTR $T143606[ebp], 0
 
 ; 822  : 		return (const_iterator(this->_Myhead, this));
 
@@ -5790,9 +5790,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	eax, DWORD PTR $T143605[ebp]
+	mov	eax, DWORD PTR $T143606[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T143605[ebp], eax
+	mov	DWORD PTR $T143606[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 823  : 		}
@@ -5869,7 +5869,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv199 = -44						; size = 4
 tv187 = -40						; size = 4
-$T143615 = -36						; size = 4
+$T143616 = -36						; size = 4
 __Pnode$ = -32						; size = 4
 __Fixnodeparent$ = -28					; size = 4
 __Fixnode$ = -24					; size = 4
@@ -5906,7 +5906,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143615[ebp], 0
+	mov	DWORD PTR $T143616[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1196 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -7002,9 +7002,9 @@ $LN1@erase:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	ecx, DWORD PTR $T143615[ebp]
+	mov	ecx, DWORD PTR $T143616[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143615[ebp], ecx
+	mov	DWORD PTR $T143616[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -7029,10 +7029,10 @@ __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$l
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T143615[ebp]
+	mov	eax, DWORD PTR $T143616[ebp]
 	and	eax, 1
 	je	$LN50@erase
-	and	DWORD PTR $T143615[ebp], -2		; fffffffeH
+	and	DWORD PTR $T143616[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN50@erase:
@@ -7120,11 +7120,11 @@ tv165 = -96						; size = 4
 tv183 = -92						; size = 4
 tv160 = -88						; size = 4
 tv65 = -84						; size = 4
-$T143636 = -80						; size = 4
-$T143633 = -76						; size = 12
-$T143632 = -64						; size = 12
-$T143630 = -52						; size = 12
-$T143629 = -40						; size = 4
+$T143637 = -80						; size = 4
+$T143634 = -76						; size = 12
+$T143633 = -64						; size = 12
+$T143631 = -52						; size = 12
+$T143630 = -40						; size = 4
 __Where$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -7155,7 +7155,7 @@ __Keyval$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143636[ebp], 0
+	mov	DWORD PTR $T143637[ebp], 0
 
 ; 1424 : 		iterator _Where = lower_bound(_Keyval);
 
@@ -7172,7 +7172,7 @@ __Keyval$ = 12						; size = 4
 ; 1427 : 				_Keyval, this->_Key(_Where._Mynode()))
 ; 1428 : 					? end() : _Where);
 
-	lea	edx, DWORD PTR $T143630[ebp]
+	lea	edx, DWORD PTR $T143631[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -7180,9 +7180,9 @@ __Keyval$ = 12						; size = 4
 	mov	eax, DWORD PTR tv65[ebp]
 	mov	DWORD PTR tv160[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	mov	ecx, DWORD PTR $T143636[ebp]
+	mov	ecx, DWORD PTR $T143637[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143636[ebp], ecx
+	mov	DWORD PTR $T143637[ebp], ecx
 	mov	edx, DWORD PTR tv160[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -7210,20 +7210,20 @@ __Keyval$ = 12						; size = 4
 	jne	SHORT $LN3@find
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T143633[ebp]
+	lea	ecx, DWORD PTR $T143634[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv183[ebp], eax
 	mov	eax, DWORD PTR tv183[ebp]
 	mov	DWORD PTR tv165[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	ecx, DWORD PTR $T143636[ebp]
+	mov	ecx, DWORD PTR $T143637[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T143636[ebp], ecx
+	mov	DWORD PTR $T143637[ebp], ecx
 	mov	edx, DWORD PTR tv165[ebp]
 	mov	DWORD PTR tv152[ebp], edx
 	jmp	SHORT $LN4@find
 $LN3@find:
-	lea	eax, DWORD PTR $T143632[ebp]
+	lea	eax, DWORD PTR $T143633[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -7231,43 +7231,43 @@ $LN3@find:
 	mov	ecx, DWORD PTR tv185[ebp]
 	mov	DWORD PTR tv170[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	edx, DWORD PTR $T143636[ebp]
+	mov	edx, DWORD PTR $T143637[ebp]
 	or	edx, 4
-	mov	DWORD PTR $T143636[ebp], edx
+	mov	DWORD PTR $T143637[ebp], edx
 	mov	eax, DWORD PTR tv170[ebp]
 	mov	DWORD PTR tv152[ebp], eax
 $LN4@find:
 	mov	ecx, DWORD PTR tv152[ebp]
-	mov	DWORD PTR $T143629[ebp], ecx
-	mov	edx, DWORD PTR $T143629[ebp]
+	mov	DWORD PTR $T143630[ebp], ecx
+	mov	edx, DWORD PTR $T143630[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T143636[ebp]
+	mov	eax, DWORD PTR $T143637[ebp]
 	or	eax, 8
-	mov	DWORD PTR $T143636[ebp], eax
+	mov	DWORD PTR $T143637[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	ecx, DWORD PTR $T143636[ebp]
+	mov	ecx, DWORD PTR $T143637[ebp]
 	and	ecx, 4
 	je	SHORT $LN14@find
-	and	DWORD PTR $T143636[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T143632[ebp]
+	and	DWORD PTR $T143637[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T143633[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN14@find:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	edx, DWORD PTR $T143636[ebp]
+	mov	edx, DWORD PTR $T143637[ebp]
 	and	edx, 2
 	je	SHORT $LN15@find
-	and	DWORD PTR $T143636[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T143633[ebp]
+	and	DWORD PTR $T143637[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T143634[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN15@find:
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	mov	eax, DWORD PTR $T143636[ebp]
+	mov	eax, DWORD PTR $T143637[ebp]
 	and	eax, 1
 	je	SHORT $LN16@find
-	and	DWORD PTR $T143636[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143630[ebp]
+	and	DWORD PTR $T143637[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143631[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN16@find:
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
@@ -7316,37 +7316,37 @@ __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$le
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$1:
-	mov	eax, DWORD PTR $T143636[ebp]
+	mov	eax, DWORD PTR $T143637[ebp]
 	and	eax, 1
 	je	$LN7@find
-	and	DWORD PTR $T143636[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143630[ebp]
+	and	DWORD PTR $T143637[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143631[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN7@find:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$2:
-	mov	eax, DWORD PTR $T143636[ebp]
+	mov	eax, DWORD PTR $T143637[ebp]
 	and	eax, 2
 	je	$LN9@find
-	and	DWORD PTR $T143636[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T143633[ebp]
+	and	DWORD PTR $T143637[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T143634[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@find:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$3:
-	mov	eax, DWORD PTR $T143636[ebp]
+	mov	eax, DWORD PTR $T143637[ebp]
 	and	eax, 4
 	je	$LN11@find
-	and	DWORD PTR $T143636[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T143632[ebp]
+	and	DWORD PTR $T143637[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T143633[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN11@find:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$4:
-	mov	eax, DWORD PTR $T143636[ebp]
+	mov	eax, DWORD PTR $T143637[ebp]
 	and	eax, 8
 	je	$LN13@find
-	and	DWORD PTR $T143636[ebp], -9		; fffffff7H
+	and	DWORD PTR $T143637[ebp], -9		; fffffff7H
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@find:
@@ -7392,11 +7392,11 @@ tv157 = -96						; size = 4
 tv175 = -92						; size = 4
 tv152 = -88						; size = 4
 tv65 = -84						; size = 4
-$T143666 = -80						; size = 4
-$T143663 = -76						; size = 12
-$T143662 = -64						; size = 12
-$T143660 = -52						; size = 12
-$T143659 = -40						; size = 4
+$T143667 = -80						; size = 4
+$T143664 = -76						; size = 12
+$T143663 = -64						; size = 12
+$T143661 = -52						; size = 12
+$T143660 = -40						; size = 4
 __Where$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -7427,7 +7427,7 @@ __Keyval$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143666[ebp], 0
+	mov	DWORD PTR $T143667[ebp], 0
 
 ; 1433 : 		const_iterator _Where = lower_bound(_Keyval);
 
@@ -7444,7 +7444,7 @@ __Keyval$ = 12						; size = 4
 ; 1436 : 				_Keyval, this->_Key(_Where._Mynode()))
 ; 1437 : 					? end() : _Where);
 
-	lea	edx, DWORD PTR $T143660[ebp]
+	lea	edx, DWORD PTR $T143661[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -7452,9 +7452,9 @@ __Keyval$ = 12						; size = 4
 	mov	eax, DWORD PTR tv65[ebp]
 	mov	DWORD PTR tv152[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	mov	ecx, DWORD PTR $T143666[ebp]
+	mov	ecx, DWORD PTR $T143667[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143666[ebp], ecx
+	mov	DWORD PTR $T143667[ebp], ecx
 	mov	edx, DWORD PTR tv152[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
@@ -7482,20 +7482,20 @@ __Keyval$ = 12						; size = 4
 	jne	SHORT $LN3@find@2
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR $T143663[ebp]
+	lea	ecx, DWORD PTR $T143664[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv175[ebp], eax
 	mov	eax, DWORD PTR tv175[ebp]
 	mov	DWORD PTR tv157[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	ecx, DWORD PTR $T143666[ebp]
+	mov	ecx, DWORD PTR $T143667[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T143666[ebp], ecx
+	mov	DWORD PTR $T143667[ebp], ecx
 	mov	edx, DWORD PTR tv157[ebp]
 	mov	DWORD PTR tv144[ebp], edx
 	jmp	SHORT $LN4@find@2
 $LN3@find@2:
-	lea	eax, DWORD PTR $T143662[ebp]
+	lea	eax, DWORD PTR $T143663[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -7503,43 +7503,43 @@ $LN3@find@2:
 	mov	ecx, DWORD PTR tv177[ebp]
 	mov	DWORD PTR tv162[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	edx, DWORD PTR $T143666[ebp]
+	mov	edx, DWORD PTR $T143667[ebp]
 	or	edx, 4
-	mov	DWORD PTR $T143666[ebp], edx
+	mov	DWORD PTR $T143667[ebp], edx
 	mov	eax, DWORD PTR tv162[ebp]
 	mov	DWORD PTR tv144[ebp], eax
 $LN4@find@2:
 	mov	ecx, DWORD PTR tv144[ebp]
-	mov	DWORD PTR $T143659[ebp], ecx
-	mov	edx, DWORD PTR $T143659[ebp]
+	mov	DWORD PTR $T143660[ebp], ecx
+	mov	edx, DWORD PTR $T143660[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T143666[ebp]
+	mov	eax, DWORD PTR $T143667[ebp]
 	or	eax, 8
-	mov	DWORD PTR $T143666[ebp], eax
+	mov	DWORD PTR $T143667[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	ecx, DWORD PTR $T143666[ebp]
+	mov	ecx, DWORD PTR $T143667[ebp]
 	and	ecx, 4
 	je	SHORT $LN14@find@2
-	and	DWORD PTR $T143666[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T143662[ebp]
+	and	DWORD PTR $T143667[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T143663[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN14@find@2:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	edx, DWORD PTR $T143666[ebp]
+	mov	edx, DWORD PTR $T143667[ebp]
 	and	edx, 2
 	je	SHORT $LN15@find@2
-	and	DWORD PTR $T143666[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T143663[ebp]
+	and	DWORD PTR $T143667[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T143664[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN15@find@2:
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	mov	eax, DWORD PTR $T143666[ebp]
+	mov	eax, DWORD PTR $T143667[ebp]
 	and	eax, 1
 	je	SHORT $LN16@find@2
-	and	DWORD PTR $T143666[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143660[ebp]
+	and	DWORD PTR $T143667[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143661[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN16@find@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
@@ -7588,37 +7588,37 @@ __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$le
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$1:
-	mov	eax, DWORD PTR $T143666[ebp]
+	mov	eax, DWORD PTR $T143667[ebp]
 	and	eax, 1
 	je	$LN7@find@2
-	and	DWORD PTR $T143666[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T143660[ebp]
+	and	DWORD PTR $T143667[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T143661[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN7@find@2:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$2:
-	mov	eax, DWORD PTR $T143666[ebp]
+	mov	eax, DWORD PTR $T143667[ebp]
 	and	eax, 2
 	je	$LN9@find@2
-	and	DWORD PTR $T143666[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T143663[ebp]
+	and	DWORD PTR $T143667[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T143664[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN9@find@2:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$3:
-	mov	eax, DWORD PTR $T143666[ebp]
+	mov	eax, DWORD PTR $T143667[ebp]
 	and	eax, 4
 	je	$LN11@find@2
-	and	DWORD PTR $T143666[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T143662[ebp]
+	and	DWORD PTR $T143667[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T143663[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN11@find@2:
 	ret	0
 __unwindfunclet$?find@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z$4:
-	mov	eax, DWORD PTR $T143666[ebp]
+	mov	eax, DWORD PTR $T143667[ebp]
 	and	eax, 8
 	je	$LN13@find@2
-	and	DWORD PTR $T143666[ebp], -9		; fffffff7H
+	and	DWORD PTR $T143667[ebp], -9		; fffffff7H
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@find@2:
@@ -7639,7 +7639,7 @@ PUBLIC	??0?$allocator@PAVRaven_Bot@@@std@@QAE@XZ	; std::allocator<Raven_Bot *>::
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T143689 = -8						; size = 4
+$T143690 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >, COMDAT
 ; _this$ = ecx
@@ -7654,7 +7654,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T143689[ebp], esp
+	mov	DWORD PTR $T143690[ebp], esp
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@XZ ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z ; std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >
@@ -7689,7 +7689,7 @@ __ehfuncinfo$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@
 xdata$x	ENDS
 ;	COMDAT ??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@$$QAV01@@Z
 _TEXT	SEGMENT
-$T143693 = -20						; size = 4
+$T143694 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -7717,7 +7717,7 @@ __Right$ = 8						; size = 4
 	add	eax, 13					; 0000000dH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T143693[ebp], esp
+	mov	DWORD PTR $T143694[ebp], esp
 	push	eax
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@ABV01@@Z ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -7842,7 +7842,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143713 = -8						; size = 4
+$T143714 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin, COMDAT
@@ -7856,7 +7856,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143713[ebp], 0
+	mov	DWORD PTR $T143714[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -7871,9 +7871,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	ecx, DWORD PTR $T143713[ebp]
+	mov	ecx, DWORD PTR $T143714[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143713[ebp], ecx
+	mov	DWORD PTR $T143714[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -7890,7 +7890,7 @@ PUBLIC	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRave
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143718 = -8						; size = 4
+$T143719 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin, COMDAT
@@ -7904,7 +7904,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143718[ebp], 0
+	mov	DWORD PTR $T143719[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -7919,9 +7919,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	ecx, DWORD PTR $T143718[ebp]
+	mov	ecx, DWORD PTR $T143719[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T143718[ebp], ecx
+	mov	DWORD PTR $T143719[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -7937,7 +7937,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143723 = -8						; size = 4
+$T143724 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end, COMDAT
@@ -7951,7 +7951,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143723[ebp], 0
+	mov	DWORD PTR $T143724[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -7962,9 +7962,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	eax, DWORD PTR $T143723[ebp]
+	mov	eax, DWORD PTR $T143724[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T143723[ebp], eax
+	mov	DWORD PTR $T143724[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -7980,7 +7980,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T143728 = -8						; size = 4
+$T143729 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end, COMDAT
@@ -7994,7 +7994,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143728[ebp], 0
+	mov	DWORD PTR $T143729[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -8005,9 +8005,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	eax, DWORD PTR $T143728[ebp]
+	mov	eax, DWORD PTR $T143729[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T143728[ebp], eax
+	mov	DWORD PTR $T143729[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -8040,8 +8040,8 @@ _TEXT	SEGMENT
 tv93 = -44						; size = 4
 tv90 = -40						; size = 4
 tv94 = -36						; size = 4
-$T143733 = -32						; size = 12
-$T143732 = -20						; size = 4
+$T143734 = -32						; size = 12
+$T143733 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -8077,7 +8077,7 @@ __Val$ = 8						; size = 4
 
 	mov	eax, DWORD PTR __Val$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T143733[ebp]
+	lea	ecx, DWORD PTR $T143734[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -8087,7 +8087,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143732[ebp], esp
+	mov	DWORD PTR $T143733[ebp], esp
 	mov	eax, DWORD PTR tv90[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -8095,7 +8095,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@ABQAVRaven_Bot@@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Insert
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T143733[ebp]
+	lea	ecx, DWORD PTR $T143734[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 928  : 		}
@@ -8113,7 +8113,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_back@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXABQAVRaven_Bot@@@Z$0:
-	lea	ecx, DWORD PTR $T143733[ebp]
+	lea	ecx, DWORD PTR $T143734[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_back@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXABQAVRaven_Bot@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -9132,7 +9132,7 @@ PUBLIC	??0?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAE@ABV01
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xtree
 ;	COMDAT ??0?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE@ABU?$less@PAVRaven_Bot@@@1@ABV?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T143789 = -8						; size = 4
+$T143790 = -8						; size = 4
 _this$ = -4						; size = 4
 __Parg$ = 8						; size = 4
 __Al$ = 12						; size = 4
@@ -9149,7 +9149,7 @@ __Al$ = 12						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T143789[ebp], esp
+	mov	DWORD PTR $T143790[ebp], esp
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAE@ABV01@@Z ; std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >::allocator<std::pair<Raven_Bot * const,MemoryRecord> >
@@ -9173,7 +9173,7 @@ PUBLIC	?_Lbound@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAV
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?lower_bound@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z
 _TEXT	SEGMENT
-$T143794 = -8						; size = 4
+$T143795 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Keyval$ = 12						; size = 4
@@ -9188,7 +9188,7 @@ __Keyval$ = 12						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143794[ebp], 0
+	mov	DWORD PTR $T143795[ebp], 0
 
 ; 1450 : 		return (iterator(_Lbound(_Keyval), this));
 
@@ -9201,9 +9201,9 @@ __Keyval$ = 12						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	edx, DWORD PTR $T143794[ebp]
+	mov	edx, DWORD PTR $T143795[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T143794[ebp], edx
+	mov	DWORD PTR $T143795[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 1451 : 		}
@@ -9220,7 +9220,7 @@ PUBLIC	?_Lbound@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAV
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?lower_bound@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QBE?AV?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@ABQAVRaven_Bot@@@Z
 _TEXT	SEGMENT
-$T143799 = -8						; size = 4
+$T143800 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Keyval$ = 12						; size = 4
@@ -9235,7 +9235,7 @@ __Keyval$ = 12						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T143799[ebp], 0
+	mov	DWORD PTR $T143800[ebp], 0
 
 ; 1455 : 		return (const_iterator(_Lbound(_Keyval), this));
 
@@ -9248,9 +9248,9 @@ __Keyval$ = 12						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	edx, DWORD PTR $T143799[ebp]
+	mov	edx, DWORD PTR $T143800[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T143799[ebp], edx
+	mov	DWORD PTR $T143800[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 1456 : 		}
@@ -10387,12 +10387,12 @@ tv181 = -80						; size = 4
 tv194 = -76						; size = 4
 tv178 = -72						; size = 4
 tv193 = -68						; size = 4
-$T143862 = -64						; size = 12
-$T143861 = -52						; size = 4
-$T143860 = -48						; size = 12
-$T143859 = -36						; size = 4
-$T143858 = -32						; size = 12
-$T143857 = -20						; size = 4
+$T143863 = -64						; size = 12
+$T143862 = -52						; size = 4
+$T143861 = -48						; size = 12
+$T143860 = -36						; size = 4
+$T143859 = -32						; size = 12
+$T143858 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -10448,7 +10448,7 @@ __Right$ = 8						; size = 4
 	mov	edx, DWORD PTR __Right$[ebp]
 	mov	eax, DWORD PTR [edx+8]
 	push	eax
-	lea	ecx, DWORD PTR $T143858[ebp]
+	lea	ecx, DWORD PTR $T143859[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -10458,7 +10458,7 @@ __Right$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143857[ebp], esp
+	mov	DWORD PTR $T143858[ebp], esp
 	mov	eax, DWORD PTR tv178[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -10466,7 +10466,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR tv194[ebp]
 	mov	DWORD PTR tv181[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	edx, DWORD PTR $T143860[ebp]
+	lea	edx, DWORD PTR $T143861[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -10476,7 +10476,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143859[ebp], esp
+	mov	DWORD PTR $T143860[ebp], esp
 	mov	edx, DWORD PTR tv183[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -10486,7 +10486,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR __Right$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T143862[ebp]
+	lea	edx, DWORD PTR $T143863[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -10496,7 +10496,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143861[ebp], esp
+	mov	DWORD PTR $T143862[ebp], esp
 	mov	edx, DWORD PTR tv188[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -10505,13 +10505,13 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Splice
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	lea	ecx, DWORD PTR $T143862[ebp]
+	lea	ecx, DWORD PTR $T143863[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T143860[ebp]
+	lea	ecx, DWORD PTR $T143861[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T143858[ebp]
+	lea	ecx, DWORD PTR $T143859[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN3@Assign_rv:
 
@@ -10532,19 +10532,19 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Assign_rv@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEX$$QAV12@@Z$0:
-	lea	ecx, DWORD PTR $T143858[ebp]
+	lea	ecx, DWORD PTR $T143859[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEX$$QAV12@@Z$1:
-	mov	ecx, DWORD PTR $T143857[ebp]
+	mov	ecx, DWORD PTR $T143858[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEX$$QAV12@@Z$2:
-	lea	ecx, DWORD PTR $T143860[ebp]
+	lea	ecx, DWORD PTR $T143861[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEX$$QAV12@@Z$3:
-	mov	ecx, DWORD PTR $T143859[ebp]
+	mov	ecx, DWORD PTR $T143860[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEX$$QAV12@@Z$4:
-	lea	ecx, DWORD PTR $T143862[ebp]
+	lea	ecx, DWORD PTR $T143863[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Assign_rv@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEX$$QAV12@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -10763,7 +10763,7 @@ __ehfuncinfo$??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z
 _TEXT	SEGMENT
-$T143888 = -20						; size = 4
+$T143889 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -10789,7 +10789,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T143888[ebp], esp
+	mov	DWORD PTR $T143889[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@ABV01@@Z ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
@@ -11171,7 +11171,7 @@ _this$ = -4						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ
 _TEXT	SEGMENT
-__Pnode$136986 = -8					; size = 4
+__Pnode$136987 = -8					; size = 4
 _this$ = -4						; size = 4
 ??E?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ PROC ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator++, COMDAT
 ; _this$ = ecx
@@ -11245,15 +11245,15 @@ $LN2@operator@8:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$136986[ebp], ecx
-	mov	edx, DWORD PTR __Pnode$136986[ebp]
+	mov	DWORD PTR __Pnode$136987[ebp], ecx
+	mov	edx, DWORD PTR __Pnode$136987[ebp]
 	push	edx
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Isnil
 	add	esp, 4
 	movsx	eax, BYTE PTR [eax]
 	test	eax, eax
 	jne	SHORT $LN1@operator@8
-	mov	ecx, DWORD PTR __Pnode$136986[ebp]
+	mov	ecx, DWORD PTR __Pnode$136987[ebp]
 	push	ecx
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Right
 	add	esp, 4
@@ -11265,7 +11265,7 @@ $LN2@operator@8:
 ; 69   : 				_Ptr = _Pnode;	// ==> parent while right subtree
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Pnode$136986[ebp]
+	mov	eax, DWORD PTR __Pnode$136987[ebp]
 	mov	DWORD PTR [edx+8], eax
 	jmp	SHORT $LN2@operator@8
 $LN1@operator@8:
@@ -11273,7 +11273,7 @@ $LN1@operator@8:
 ; 70   : 			_Ptr = _Pnode;	// ==> parent (head if end())
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Pnode$136986[ebp]
+	mov	edx, DWORD PTR __Pnode$136987[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN5@operator@8:
 
@@ -11894,7 +11894,7 @@ __ehfuncinfo$??0?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less
 xdata$x	ENDS
 ;	COMDAT ??0?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE@ABU?$less@PAVRaven_Bot@@@1@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T143953 = -20						; size = 4
+$T143954 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Parg$ = 8						; size = 4
@@ -11921,7 +11921,7 @@ __Al$ = 12						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T143953[ebp], esp
+	mov	DWORD PTR $T143954[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAE@ABV01@@Z ; std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >::allocator<std::pair<Raven_Bot * const,MemoryRecord> >
@@ -12522,17 +12522,17 @@ tv276 = -140						; size = 4
 tv130 = -136						; size = 4
 tv273 = -132						; size = 4
 tv139 = -128						; size = 4
-$T143994 = -124						; size = 12
-$T143993 = -112						; size = 4
-$T143992 = -108						; size = 4
-$T143991 = -104						; size = 12
-$T143990 = -92						; size = 4
-$T143989 = -88						; size = 4
-$T143988 = -84						; size = 4
-$T143987 = -80						; size = 4
-__Next$137680 = -72					; size = 12
-__Iter$137674 = -52					; size = 12
-__Next$137670 = -32					; size = 12
+$T143995 = -124						; size = 12
+$T143994 = -112						; size = 4
+$T143993 = -108						; size = 4
+$T143992 = -104						; size = 12
+$T143991 = -92						; size = 4
+$T143990 = -88						; size = 4
+$T143989 = -84						; size = 4
+$T143988 = -80						; size = 4
+__Next$137681 = -72					; size = 12
+__Iter$137675 = -52					; size = 12
+__Next$137671 = -32					; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -12609,13 +12609,13 @@ $LN9@Splice:
 
 	lea	ecx, DWORD PTR __First$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$137670[ebp]
+	lea	ecx, DWORD PTR __Next$137671[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 $LN6@Splice:
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR __Next$137670[ebp]
+	lea	ecx, DWORD PTR __Next$137671[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
 	movzx	eax, al
 	test	eax, eax
@@ -12625,15 +12625,15 @@ $LN6@Splice:
 ; 1444 : 					const_iterator _Iter = _Next++;
 
 	push	0
-	lea	ecx, DWORD PTR __Iter$137674[ebp]
+	lea	ecx, DWORD PTR __Iter$137675[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$137670[ebp]
+	lea	ecx, DWORD PTR __Next$137671[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 
 ; 1445 : 					_Orphan_ptr(_Right, _Iter._Ptr);
 
-	mov	edx, DWORD PTR __Iter$137674[ebp+8]
+	mov	edx, DWORD PTR __Iter$137675[ebp+8]
 	push	edx
 	mov	eax, DWORD PTR __Right$[ebp]
 	push	eax
@@ -12644,18 +12644,18 @@ $LN6@Splice:
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Iter$137674[ebp]
+	lea	ecx, DWORD PTR __Iter$137675[ebp]
 	call	?_Adopt@_Iterator_base12@std@@QAEXPBU_Container_base12@2@@Z ; std::_Iterator_base12::_Adopt
 
 ; 1447 : 					}
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR __Iter$137674[ebp]
+	lea	ecx, DWORD PTR __Iter$137675[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN6@Splice
 $LN5@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR __Next$137670[ebp]
+	lea	ecx, DWORD PTR __Next$137671[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN7@Splice:
 
@@ -12665,7 +12665,7 @@ $LN7@Splice:
 	push	edx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143987[ebp], esp
+	mov	DWORD PTR $T143988[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -12675,7 +12675,7 @@ $LN7@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143988[ebp], esp
+	mov	DWORD PTR $T143989[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -12687,7 +12687,7 @@ $LN7@Splice:
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143989[ebp], esp
+	mov	DWORD PTR $T143990[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -12713,17 +12713,17 @@ $LN8@Splice:
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Next$137680[ebp]
+	lea	ecx, DWORD PTR __Next$137681[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
 	jmp	SHORT $LN3@Splice
 $LN2@Splice:
-	lea	ecx, DWORD PTR __Next$137680[ebp]
+	lea	ecx, DWORD PTR __Next$137681[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
 $LN3@Splice:
 	lea	ecx, DWORD PTR __Last$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$137680[ebp]
+	lea	ecx, DWORD PTR __Next$137681[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
 	movzx	edx, al
 	test	edx, edx
@@ -12731,34 +12731,34 @@ $LN3@Splice:
 
 ; 1459 : 				insert(_Where, (_Ty &&)*_Next);
 
-	lea	ecx, DWORD PTR __Next$137680[ebp]
+	lea	ecx, DWORD PTR __Next$137681[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143990[ebp], esp
+	mov	DWORD PTR $T143991[ebp], esp
 	lea	eax, DWORD PTR __Where$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv284[ebp], eax
-	lea	ecx, DWORD PTR $T143991[ebp]
+	lea	ecx, DWORD PTR $T143992[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@PAVRaven_Bot@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@$$QAPAVRaven_Bot@@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::insert<Raven_Bot *>
 	mov	DWORD PTR tv215[ebp], eax
-	lea	ecx, DWORD PTR $T143991[ebp]
+	lea	ecx, DWORD PTR $T143992[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@Splice
 $LN1@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR __Next$137680[ebp]
+	lea	ecx, DWORD PTR __Next$137681[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 1460 : 			_Right.erase(_First, _Last);
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143992[ebp], esp
+	mov	DWORD PTR $T143993[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -12768,18 +12768,18 @@ $LN1@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T143993[ebp], esp
+	mov	DWORD PTR $T143994[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv291[ebp], eax
-	lea	eax, DWORD PTR $T143994[ebp]
+	lea	eax, DWORD PTR $T143995[ebp]
 	push	eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@0@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::erase
 	mov	DWORD PTR tv288[ebp], eax
-	lea	ecx, DWORD PTR $T143994[ebp]
+	lea	ecx, DWORD PTR $T143995[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN4@Splice:
 
@@ -12860,22 +12860,22 @@ __unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$3:
-	lea	ecx, DWORD PTR __Next$137670[ebp]
+	lea	ecx, DWORD PTR __Next$137671[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$4:
-	lea	ecx, DWORD PTR __Iter$137674[ebp]
+	lea	ecx, DWORD PTR __Iter$137675[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$5:
-	mov	ecx, DWORD PTR $T143987[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$6:
 	mov	ecx, DWORD PTR $T143988[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$6:
+	mov	ecx, DWORD PTR $T143989[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$8:
-	lea	ecx, DWORD PTR __Next$137680[ebp]
+	lea	ecx, DWORD PTR __Next$137681[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z$11:
-	mov	ecx, DWORD PTR $T143992[ebp]
+	mov	ecx, DWORD PTR $T143993[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Splice@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@AAV12@00I@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -13176,7 +13176,7 @@ __ehfuncinfo$??0?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z
 _TEXT	SEGMENT
-$T144041 = -36						; size = 8
+$T144042 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -13239,7 +13239,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T144041[ebp]
+	lea	ecx, DWORD PTR $T144042[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -14122,7 +14122,7 @@ __ehfuncinfo$??0?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less
 xdata$x	ENDS
 ;	COMDAT ??0?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE@ABU?$less@PAVRaven_Bot@@@1@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@1@@Z
 _TEXT	SEGMENT
-$T144112 = -36						; size = 8
+$T144113 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -14189,7 +14189,7 @@ __Al$ = 12						; size = 1
 
 ; 493  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T144112[ebp]
+	lea	ecx, DWORD PTR $T144113[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -14366,13 +14366,13 @@ tv194 = -84						; size = 4
 tv218 = -80						; size = 4
 tv189 = -76						; size = 4
 tv216 = -72						; size = 4
-$T144139 = -68						; size = 4
-$T144136 = -64						; size = 4
-$T144135 = -60						; size = 12
-$T144134 = -48						; size = 4
-$T144131 = -44						; size = 12
-$T144130 = -32						; size = 12
-$T144129 = -17						; size = 1
+$T144140 = -68						; size = 4
+$T144137 = -64						; size = 4
+$T144136 = -60						; size = 12
+$T144135 = -48						; size = 4
+$T144132 = -44						; size = 12
+$T144131 = -32						; size = 12
+$T144130 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -14403,12 +14403,12 @@ __Last$ = 24						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144139[ebp], 0
+	mov	DWORD PTR $T144140[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1082 : 		if (_First == begin() && _Last == end())
 
-	lea	eax, DWORD PTR $T144130[ebp]
+	lea	eax, DWORD PTR $T144131[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -14416,9 +14416,9 @@ __Last$ = 24						; size = 12
 	mov	ecx, DWORD PTR tv216[ebp]
 	mov	DWORD PTR tv189[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T144139[ebp]
+	mov	edx, DWORD PTR $T144140[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144139[ebp], edx
+	mov	DWORD PTR $T144140[ebp], edx
 	mov	eax, DWORD PTR tv189[ebp]
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
@@ -14426,7 +14426,7 @@ __Last$ = 24						; size = 12
 	movzx	ecx, al
 	test	ecx, ecx
 	je	SHORT $LN7@erase@2
-	lea	edx, DWORD PTR $T144131[ebp]
+	lea	edx, DWORD PTR $T144132[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -14434,9 +14434,9 @@ __Last$ = 24						; size = 12
 	mov	eax, DWORD PTR tv218[ebp]
 	mov	DWORD PTR tv194[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	ecx, DWORD PTR $T144139[ebp]
+	mov	ecx, DWORD PTR $T144140[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T144139[ebp], ecx
+	mov	DWORD PTR $T144140[ebp], ecx
 	mov	edx, DWORD PTR tv194[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Last$[ebp]
@@ -14450,24 +14450,24 @@ $LN7@erase@2:
 	mov	DWORD PTR tv94[ebp], 0
 $LN8@erase@2:
 	mov	cl, BYTE PTR tv94[ebp]
-	mov	BYTE PTR $T144129[ebp], cl
+	mov	BYTE PTR $T144130[ebp], cl
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T144139[ebp]
+	mov	edx, DWORD PTR $T144140[ebp]
 	and	edx, 2
 	je	SHORT $LN15@erase@2
-	and	DWORD PTR $T144139[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T144131[ebp]
+	and	DWORD PTR $T144140[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T144132[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN15@erase@2:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T144139[ebp]
+	mov	eax, DWORD PTR $T144140[ebp]
 	and	eax, 1
 	je	SHORT $LN16@erase@2
-	and	DWORD PTR $T144139[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T144130[ebp]
+	and	DWORD PTR $T144140[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T144131[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN16@erase@2:
-	movzx	ecx, BYTE PTR $T144129[ebp]
+	movzx	ecx, BYTE PTR $T144130[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@erase@2
 
@@ -14483,9 +14483,9 @@ $LN16@erase@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
-	mov	eax, DWORD PTR $T144139[ebp]
+	mov	eax, DWORD PTR $T144140[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T144139[ebp], eax
+	mov	DWORD PTR $T144140[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -14516,12 +14516,12 @@ $LN2@erase@2:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144134[ebp], esp
+	mov	DWORD PTR $T144135[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv206[ebp], eax
-	lea	ecx, DWORD PTR $T144135[ebp]
+	lea	ecx, DWORD PTR $T144136[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::erase
@@ -14534,7 +14534,7 @@ $LN2@erase@2:
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144135[ebp]
+	lea	ecx, DWORD PTR $T144136[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@erase@2
 $LN1@erase@2:
@@ -14543,7 +14543,7 @@ $LN1@erase@2:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144136[ebp], esp
+	mov	DWORD PTR $T144137[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -14553,9 +14553,9 @@ $LN1@erase@2:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Make_iter
 	mov	DWORD PTR tv212[ebp], eax
-	mov	ecx, DWORD PTR $T144139[ebp]
+	mov	ecx, DWORD PTR $T144140[ebp]
 	or	ecx, 4
-	mov	DWORD PTR $T144139[ebp], ecx
+	mov	DWORD PTR $T144140[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -14596,34 +14596,34 @@ __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@0@Z$2:
-	mov	eax, DWORD PTR $T144139[ebp]
+	mov	eax, DWORD PTR $T144140[ebp]
 	and	eax, 1
 	je	$LN12@erase@2
-	and	DWORD PTR $T144139[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T144130[ebp]
+	and	DWORD PTR $T144140[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T144131[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN12@erase@2:
 	ret	0
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@0@Z$3:
-	mov	eax, DWORD PTR $T144139[ebp]
+	mov	eax, DWORD PTR $T144140[ebp]
 	and	eax, 2
 	je	$LN14@erase@2
-	and	DWORD PTR $T144139[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T144131[ebp]
+	and	DWORD PTR $T144140[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T144132[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN14@erase@2:
 	ret	0
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@0@Z$4:
-	mov	eax, DWORD PTR $T144139[ebp]
+	mov	eax, DWORD PTR $T144140[ebp]
 	and	eax, 4
 	je	$LN18@erase@2
-	and	DWORD PTR $T144139[ebp], -5		; fffffffbH
+	and	DWORD PTR $T144140[ebp], -5		; fffffffbH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN18@erase@2:
 	ret	0
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@0@Z$6:
-	lea	ecx, DWORD PTR $T144135[ebp]
+	lea	ecx, DWORD PTR $T144136[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@0@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -15049,7 +15049,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@P
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T144184 = -40						; size = 4
+$T144185 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -15081,7 +15081,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144184[ebp], 0
+	mov	DWORD PTR $T144185[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -15102,9 +15102,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T144184[ebp]
+	mov	edx, DWORD PTR $T144185[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144184[ebp], edx
+	mov	DWORD PTR $T144185[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -15148,10 +15148,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocato
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T144184[ebp]
+	mov	eax, DWORD PTR $T144185[ebp]
 	and	eax, 1
 	je	$LN5@operator@11
-	and	DWORD PTR $T144184[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144185[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@11:
@@ -15214,7 +15214,7 @@ __ehfuncinfo$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T144202 = -20						; size = 4
+$T144203 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -15239,7 +15239,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144202[ebp], 0
+	mov	DWORD PTR $T144203[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -15250,9 +15250,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	edx, DWORD PTR $T144202[ebp]
+	mov	edx, DWORD PTR $T144203[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144202[ebp], edx
+	mov	DWORD PTR $T144203[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -15276,10 +15276,10 @@ __unwindfunclet$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T144202[ebp]
+	mov	eax, DWORD PTR $T144203[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter
-	and	DWORD PTR $T144202[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144203[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter:
@@ -15328,9 +15328,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T144218 = -40						; size = 4
-$T144213 = -36						; size = 4
-$T144212 = -32						; size = 12
+$T144219 = -40						; size = 4
+$T144214 = -36						; size = 4
+$T144213 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -15362,7 +15362,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144218[ebp], 0
+	mov	DWORD PTR $T144219[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -15390,7 +15390,7 @@ $LN3@erase@3:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T144212[ebp]
+	lea	edx, DWORD PTR $T144213[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
@@ -15402,7 +15402,7 @@ $LN3@erase@3:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T144212[ebp]
+	lea	ecx, DWORD PTR $T144213[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -15500,7 +15500,7 @@ $LN1@erase@3:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144213[ebp], esp
+	mov	DWORD PTR $T144214[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -15510,9 +15510,9 @@ $LN1@erase@3:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T144218[ebp]
+	mov	ecx, DWORD PTR $T144219[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T144218[ebp], ecx
+	mov	DWORD PTR $T144219[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -15538,13 +15538,13 @@ __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T144212[ebp]
+	lea	ecx, DWORD PTR $T144213[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T144218[ebp]
+	mov	eax, DWORD PTR $T144219[ebp]
 	and	eax, 1
 	je	$LN10@erase@3
-	and	DWORD PTR $T144218[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144219[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN10@erase@3:
@@ -15625,8 +15625,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv128 = -28						; size = 4
-$T144236 = -24						; size = 4
-$T144232 = -20						; size = 4
+$T144237 = -24						; size = 4
+$T144233 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -15656,7 +15656,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144236[ebp], 0
+	mov	DWORD PTR $T144237[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 761  : 			typename _STD tr1::remove_reference<_Valty>::type>::value,
@@ -15677,7 +15677,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144232[ebp], esp
+	mov	DWORD PTR $T144233[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -15687,9 +15687,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T144236[ebp]
+	mov	ecx, DWORD PTR $T144237[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T144236[ebp], ecx
+	mov	DWORD PTR $T144237[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -15713,10 +15713,10 @@ __unwindfunclet$??$insert@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@?$_Tree@V?
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@$$QAU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@@Z$2:
-	mov	eax, DWORD PTR $T144236[ebp]
+	mov	eax, DWORD PTR $T144237[ebp]
 	and	eax, 1
 	je	$LN6@insert
-	and	DWORD PTR $T144236[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144237[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN6@insert:
@@ -16239,8 +16239,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv89 = -28						; size = 4
-$T144279 = -24						; size = 4
-$T144275 = -20						; size = 4
+$T144280 = -24						; size = 4
+$T144276 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -16270,7 +16270,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144279[ebp], 0
+	mov	DWORD PTR $T144280[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 734  : 		{	// insert _Val at _Where
@@ -16283,7 +16283,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144275[ebp], esp
+	mov	DWORD PTR $T144276[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -16293,9 +16293,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$emplace@PAVRaven_Bot@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@$$QAPAVRaven_Bot@@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::emplace<Raven_Bot *>
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T144279[ebp]
+	mov	ecx, DWORD PTR $T144280[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T144279[ebp], ecx
+	mov	DWORD PTR $T144280[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -16319,10 +16319,10 @@ __unwindfunclet$??$insert@PAVRaven_Bot@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRa
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@PAVRaven_Bot@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@$$QAPAVRaven_Bot@@@Z$2:
-	mov	eax, DWORD PTR $T144279[ebp]
+	mov	eax, DWORD PTR $T144280[ebp]
 	and	eax, 1
 	je	$LN6@insert@2
-	and	DWORD PTR $T144279[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144280[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN6@insert@2:
@@ -16484,7 +16484,7 @@ __TI2?AVbad_alloc@std@@ DD 00H
 xdata$x	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T144297 = -16						; size = 12
+$T144298 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -16537,10 +16537,10 @@ $LN1@Allocate:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T144297[ebp]
+	lea	ecx, DWORD PTR $T144298[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T144297[ebp]
+	lea	ecx, DWORD PTR $T144298[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate:
@@ -16701,7 +16701,7 @@ $LN1@scalar@2:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@IPAU10@@Z
 _TEXT	SEGMENT
-$T144306 = -16						; size = 12
+$T144307 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -16754,10 +16754,10 @@ $LN1@Allocate@2:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T144306[ebp]
+	lea	ecx, DWORD PTR $T144307[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T144306[ebp]
+	lea	ecx, DWORD PTR $T144307[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@2:
@@ -16806,7 +16806,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@YAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T144311 = -16						; size = 12
+$T144312 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -16859,10 +16859,10 @@ $LN1@Allocate@3:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T144311[ebp]
+	lea	ecx, DWORD PTR $T144312[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T144311[ebp]
+	lea	ecx, DWORD PTR $T144312[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@3:
@@ -16978,20 +16978,20 @@ tv738 = -172						; size = 4
 tv170 = -168						; size = 4
 tv733 = -164						; size = 4
 tv82 = -160						; size = 4
-$T144339 = -156						; size = 4
-$T144335 = -152						; size = 16
-$T144331 = -136						; size = 12
-$T144330 = -121						; size = 1
-$T144329 = -120						; size = 12
-$T144328 = -105						; size = 1
-$T144327 = -104						; size = 12
-$T144326 = -89						; size = 1
-$T144322 = -88						; size = 12
-$T144321 = -73						; size = 1
-$T144320 = -72						; size = 12
-$T144319 = -57						; size = 1
-$T144318 = -56						; size = 12
-$T144317 = -42						; size = 1
+$T144340 = -156						; size = 4
+$T144336 = -152						; size = 16
+$T144332 = -136						; size = 12
+$T144331 = -121						; size = 1
+$T144330 = -120						; size = 12
+$T144329 = -105						; size = 1
+$T144328 = -104						; size = 12
+$T144327 = -89						; size = 1
+$T144323 = -88						; size = 12
+$T144322 = -73						; size = 1
+$T144321 = -72						; size = 12
+$T144320 = -57						; size = 1
+$T144319 = -56						; size = 12
+$T144318 = -42						; size = 1
 __Leftish$ = -41					; size = 1
 __Next$ = -36						; size = 12
 __Val$ = -20						; size = 4
@@ -17025,7 +17025,7 @@ __Node$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144339[ebp], 0
+	mov	DWORD PTR $T144340[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1090 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -17086,9 +17086,9 @@ $LN32@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17108,7 +17108,7 @@ $LN31@Insert@2:
 ; 1103 : 			{	// insert even if duplicate
 ; 1104 : 			if (_Where == begin())
 
-	lea	ecx, DWORD PTR $T144318[ebp]
+	lea	ecx, DWORD PTR $T144319[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::begin
@@ -17120,11 +17120,11 @@ $LN31@Insert@2:
 	push	eax
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator==
-	mov	BYTE PTR $T144317[ebp], al
+	mov	BYTE PTR $T144318[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144318[ebp]
+	lea	ecx, DWORD PTR $T144319[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T144317[ebp]
+	movzx	ecx, BYTE PTR $T144318[ebp]
 	test	ecx, ecx
 	je	$LN28@Insert@2
 
@@ -17166,9 +17166,9 @@ $LN31@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17188,7 +17188,7 @@ $LN28@Insert@2:
 ; 1110 : 				}
 ; 1111 : 			else if (_Where == end())
 
-	lea	eax, DWORD PTR $T144320[ebp]
+	lea	eax, DWORD PTR $T144321[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -17200,11 +17200,11 @@ $LN28@Insert@2:
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator==
-	mov	BYTE PTR $T144319[ebp], al
+	mov	BYTE PTR $T144320[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144320[ebp]
+	lea	ecx, DWORD PTR $T144321[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T144319[ebp]
+	movzx	eax, BYTE PTR $T144320[ebp]
 	test	eax, eax
 	je	$LN25@Insert@2
 
@@ -17248,9 +17248,9 @@ $LN28@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17349,9 +17349,9 @@ $LN25@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17378,9 +17378,9 @@ $LN21@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17422,7 +17422,7 @@ $LN22@Insert@2:
 	movzx	eax, al
 	test	eax, eax
 	jne	$LN36@Insert@2
-	lea	ecx, DWORD PTR $T144322[ebp]
+	lea	ecx, DWORD PTR $T144323[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -17430,9 +17430,9 @@ $LN22@Insert@2:
 	mov	edx, DWORD PTR tv301[ebp]
 	mov	DWORD PTR tv752[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 2
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	ecx, DWORD PTR tv752[ebp]
 	push	ecx
 	lea	edx, DWORD PTR __Where$[ebp]
@@ -17474,16 +17474,16 @@ $LN36@Insert@2:
 	mov	DWORD PTR tv378[ebp], 0
 $LN37@Insert@2:
 	mov	dl, BYTE PTR tv378[ebp]
-	mov	BYTE PTR $T144321[ebp], dl
+	mov	BYTE PTR $T144322[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	and	eax, 2
 	je	SHORT $LN49@Insert@2
-	and	DWORD PTR $T144339[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T144322[ebp]
+	and	DWORD PTR $T144340[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T144323[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN49@Insert@2:
-	movzx	ecx, BYTE PTR $T144321[ebp]
+	movzx	ecx, BYTE PTR $T144322[ebp]
 	test	ecx, ecx
 	je	$LN18@Insert@2
 
@@ -17516,9 +17516,9 @@ $LN49@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17545,9 +17545,9 @@ $LN17@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17578,7 +17578,7 @@ $LN29@Insert@2:
 ; 1143 : 			{	// insert only if unique
 ; 1144 : 			if (_Where == begin())
 
-	lea	ecx, DWORD PTR $T144327[ebp]
+	lea	ecx, DWORD PTR $T144328[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::begin
@@ -17590,11 +17590,11 @@ $LN29@Insert@2:
 	push	eax
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator==
-	mov	BYTE PTR $T144326[ebp], al
+	mov	BYTE PTR $T144327[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144327[ebp]
+	lea	ecx, DWORD PTR $T144328[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T144326[ebp]
+	movzx	ecx, BYTE PTR $T144327[ebp]
 	test	ecx, ecx
 	je	$LN13@Insert@2
 
@@ -17636,9 +17636,9 @@ $LN29@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17656,7 +17656,7 @@ $LN13@Insert@2:
 
 ; 1150 : 			else if (_Where == end())
 
-	lea	eax, DWORD PTR $T144329[ebp]
+	lea	eax, DWORD PTR $T144330[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -17668,11 +17668,11 @@ $LN13@Insert@2:
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator==
-	mov	BYTE PTR $T144328[ebp], al
+	mov	BYTE PTR $T144329[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144329[ebp]
+	lea	ecx, DWORD PTR $T144330[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T144328[ebp]
+	movzx	eax, BYTE PTR $T144329[ebp]
 	test	eax, eax
 	je	$LN10@Insert@2
 
@@ -17716,9 +17716,9 @@ $LN13@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17817,9 +17817,9 @@ $LN10@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17846,9 +17846,9 @@ $LN6@Insert@2:
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	edx, DWORD PTR $T144339[ebp]
+	mov	edx, DWORD PTR $T144340[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144339[ebp], edx
+	mov	DWORD PTR $T144340[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -17890,7 +17890,7 @@ $LN7@Insert@2:
 	movzx	eax, al
 	test	eax, eax
 	je	$LN39@Insert@2
-	lea	ecx, DWORD PTR $T144331[ebp]
+	lea	ecx, DWORD PTR $T144332[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::end
@@ -17898,9 +17898,9 @@ $LN7@Insert@2:
 	mov	edx, DWORD PTR tv589[ebp]
 	mov	DWORD PTR tv781[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	ecx, DWORD PTR tv781[ebp]
 	push	ecx
 	lea	edx, DWORD PTR __Where$[ebp]
@@ -17942,16 +17942,16 @@ $LN39@Insert@2:
 	mov	DWORD PTR tv666[ebp], 0
 $LN40@Insert@2:
 	mov	dl, BYTE PTR tv666[ebp]
-	mov	BYTE PTR $T144330[ebp], dl
+	mov	BYTE PTR $T144331[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	and	eax, 4
 	je	SHORT $LN54@Insert@2
-	and	DWORD PTR $T144339[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T144331[ebp]
+	and	DWORD PTR $T144340[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T144332[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN54@Insert@2:
-	movzx	ecx, BYTE PTR $T144330[ebp]
+	movzx	ecx, BYTE PTR $T144331[ebp]
 	test	ecx, ecx
 	je	$LN30@Insert@2
 
@@ -17984,9 +17984,9 @@ $LN54@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -18013,9 +18013,9 @@ $LN2@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
 	call	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
@@ -18035,7 +18035,7 @@ $LN30@Insert@2:
 	push	ecx
 	mov	edx, DWORD PTR __Node$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T144335[ebp]
+	lea	eax, DWORD PTR $T144336[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Linsert
@@ -18047,11 +18047,11 @@ $LN30@Insert@2:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144339[ebp], eax
+	mov	DWORD PTR $T144340[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144335[ebp]
+	lea	ecx, DWORD PTR $T144336[ebp]
 	call	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __Next$[ebp]
@@ -18106,46 +18106,46 @@ __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?
 	lea	ecx, DWORD PTR __Next$[ebp]
 	jmp	??1?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$2:
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	and	eax, 1
 	je	$LN44@Insert@2
-	and	DWORD PTR $T144339[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144340[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN44@Insert@2:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$3:
-	lea	ecx, DWORD PTR $T144318[ebp]
+	lea	ecx, DWORD PTR $T144319[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$4:
-	lea	ecx, DWORD PTR $T144320[ebp]
+	lea	ecx, DWORD PTR $T144321[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$5:
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	and	eax, 2
 	je	$LN48@Insert@2
-	and	DWORD PTR $T144339[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T144322[ebp]
+	and	DWORD PTR $T144340[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T144323[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN48@Insert@2:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$6:
-	lea	ecx, DWORD PTR $T144327[ebp]
+	lea	ecx, DWORD PTR $T144328[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$7:
-	lea	ecx, DWORD PTR $T144329[ebp]
+	lea	ecx, DWORD PTR $T144330[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$8:
-	mov	eax, DWORD PTR $T144339[ebp]
+	mov	eax, DWORD PTR $T144340[ebp]
 	and	eax, 4
 	je	$LN53@Insert@2
-	and	DWORD PTR $T144339[ebp], -5		; fffffffbH
-	lea	ecx, DWORD PTR $T144331[ebp]
+	and	DWORD PTR $T144340[ebp], -5		; fffffffbH
+	lea	ecx, DWORD PTR $T144332[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN53@Insert@2:
 	ret	0
 __unwindfunclet$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z$9:
-	lea	ecx, DWORD PTR $T144335[ebp]
+	lea	ecx, DWORD PTR $T144336[ebp]
 	jmp	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 __ehhandler$?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@V?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -18160,7 +18160,7 @@ text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T144364 = -8						; size = 4
+$T144365 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ PROC ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::begin, COMDAT
@@ -18174,7 +18174,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144364[ebp], 0
+	mov	DWORD PTR $T144365[ebp], 0
 
 ; 807  : 		return (iterator(_Lmost(), this));
 
@@ -18186,9 +18186,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	edx, DWORD PTR $T144364[ebp]
+	mov	edx, DWORD PTR $T144365[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T144364[ebp], edx
+	mov	DWORD PTR $T144365[ebp], edx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 808  : 		}
@@ -18325,8 +18325,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T144375 = -24						; size = 4
-$T144374 = -20						; size = 4
+$T144376 = -24						; size = 4
+$T144375 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -18362,9 +18362,9 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T144375[ebp], eax
+	mov	DWORD PTR $T144376[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T144375[ebp], 0
+	cmp	DWORD PTR $T144376[ebp], 0
 	je	SHORT $LN3@construct
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -18372,17 +18372,17 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR [eax+4]
-	mov	ecx, DWORD PTR $T144375[ebp]
+	mov	ecx, DWORD PTR $T144376[ebp]
 	mov	DWORD PTR [ecx], edx
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR $T144375[ebp]
+	mov	edx, DWORD PTR $T144376[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct
 $LN3@construct:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T144374[ebp], eax
+	mov	DWORD PTR $T144375[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -18402,7 +18402,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T144375[ebp]
+	mov	ecx, DWORD PTR $T144376[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -18601,17 +18601,17 @@ tv167 = -140						; size = 4
 tv270 = -136						; size = 4
 tv288 = -132						; size = 4
 tv151 = -128						; size = 4
-$T144414 = -124						; size = 4
-$T144411 = -117						; size = 1
-$T144410 = -116						; size = 12
-$T144409 = -101						; size = 1
-$T144408 = -100						; size = 12
-$T144407 = -85						; size = 1
-$T144406 = -84						; size = 12
-$T144405 = -69						; size = 1
-$T144404 = -68						; size = 12
-$T144403 = -53						; size = 1
-__Where$140200 = -48					; size = 12
+$T144415 = -124						; size = 4
+$T144412 = -117						; size = 1
+$T144411 = -116						; size = 12
+$T144410 = -101						; size = 1
+$T144409 = -100						; size = 12
+$T144408 = -85						; size = 1
+$T144407 = -84						; size = 12
+$T144406 = -69						; size = 1
+$T144405 = -68						; size = 12
+$T144404 = -53						; size = 1
+__Where$140201 = -48					; size = 12
 __Addleft$ = -29					; size = 1
 __Wherenode$ = -28					; size = 4
 __Trynode$ = -24					; size = 4
@@ -18646,7 +18646,7 @@ __Leftish$ = 16						; size = 1
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144414[ebp], 0
+	mov	DWORD PTR $T144415[ebp], 0
 
 ; 945  : 		const value_type& _Val = this->_Myval(_Node);
 
@@ -18790,8 +18790,8 @@ $LN11@Linsert:
 
 ; 966  : 			return (_Pairib(_Insert(_Addleft, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T144403[ebp], 1
-	lea	eax, DWORD PTR $T144403[ebp]
+	mov	BYTE PTR $T144404[ebp], 1
+	lea	eax, DWORD PTR $T144404[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Node$[ebp]
 	push	ecx
@@ -18799,7 +18799,7 @@ $LN11@Linsert:
 	push	edx
 	movzx	eax, BYTE PTR __Addleft$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T144404[ebp]
+	lea	ecx, DWORD PTR $T144405[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
@@ -18811,11 +18811,11 @@ $LN11@Linsert:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>
-	mov	ecx, DWORD PTR $T144414[ebp]
+	mov	ecx, DWORD PTR $T144415[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T144414[ebp], ecx
+	mov	DWORD PTR $T144415[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T144404[ebp]
+	lea	ecx, DWORD PTR $T144405[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN13@Linsert
@@ -18832,7 +18832,7 @@ $LN8@Linsert:
 	push	edx
 	mov	eax, DWORD PTR __Wherenode$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
@@ -18847,7 +18847,7 @@ $LN6@Linsert:
 ; 971  : 				;	// need to test if insert after is okay
 ; 972  : 			else if (_Where == begin())
 
-	lea	edx, DWORD PTR $T144406[ebp]
+	lea	edx, DWORD PTR $T144407[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@XZ ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::begin
@@ -18857,27 +18857,27 @@ $LN6@Linsert:
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR tv277[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??8?$_Tree_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Tree_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator==
-	mov	BYTE PTR $T144405[ebp], al
+	mov	BYTE PTR $T144406[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144406[ebp]
+	lea	ecx, DWORD PTR $T144407[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T144405[ebp]
+	movzx	edx, BYTE PTR $T144406[ebp]
 	test	edx, edx
 	je	SHORT $LN4@Linsert
 
 ; 973  : 				return (_Pairib(_Insert(true, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T144407[ebp], 1
-	lea	eax, DWORD PTR $T144407[ebp]
+	mov	BYTE PTR $T144408[ebp], 1
+	lea	eax, DWORD PTR $T144408[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Node$[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Wherenode$[ebp]
 	push	edx
 	push	1
-	lea	eax, DWORD PTR $T144408[ebp]
+	lea	eax, DWORD PTR $T144409[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
@@ -18889,14 +18889,14 @@ $LN6@Linsert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>
-	mov	eax, DWORD PTR $T144414[ebp]
+	mov	eax, DWORD PTR $T144415[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144414[ebp], eax
+	mov	DWORD PTR $T144415[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144408[ebp]
+	lea	ecx, DWORD PTR $T144409[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	$LN13@Linsert
@@ -18908,7 +18908,7 @@ $LN4@Linsert:
 
 ; 975  : 				--_Where;	// need to test if insert before is okay
 
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??F?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::operator--
 $LN5@Linsert:
 
@@ -18922,7 +18922,7 @@ $LN5@Linsert:
 	call	??$_Kfn@QAVRaven_Bot@@VMemoryRecord@@@?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@SAABQAVRaven_Bot@@ABU?$pair@QAVRaven_Bot@@VMemoryRecord@@@1@@Z ; std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0>::_Kfn<Raven_Bot * const,MemoryRecord>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	?_Mynode@?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@XZ ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::_Mynode
 	push	eax
 	call	?_Key@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAVRaven_Bot@@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Key
@@ -18941,8 +18941,8 @@ $LN5@Linsert:
 ; 979  : 				this->_Kfn(_Val)))
 ; 980  : 				return (_Pairib(_Insert(_Addleft, _Wherenode, _Node), true));
 
-	mov	BYTE PTR $T144409[ebp], 1
-	lea	edx, DWORD PTR $T144409[ebp]
+	mov	BYTE PTR $T144410[ebp], 1
+	lea	edx, DWORD PTR $T144410[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Node$[ebp]
 	push	eax
@@ -18950,7 +18950,7 @@ $LN5@Linsert:
 	push	ecx
 	movzx	edx, BYTE PTR __Addleft$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T144410[ebp]
+	lea	eax, DWORD PTR $T144411[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Insert
@@ -18962,14 +18962,14 @@ $LN5@Linsert:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@$$QAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>
-	mov	eax, DWORD PTR $T144414[ebp]
+	mov	eax, DWORD PTR $T144415[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144414[ebp], eax
+	mov	DWORD PTR $T144415[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T144410[ebp]
+	lea	ecx, DWORD PTR $T144411[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN13@Linsert
@@ -19010,18 +19010,18 @@ $LN2@Linsert:
 ; 987  : 
 ; 988  : 				return (_Pairib(_Where, false));
 
-	mov	BYTE PTR $T144411[ebp], 0
-	lea	ecx, DWORD PTR $T144411[ebp]
+	mov	BYTE PTR $T144412[ebp], 0
+	lea	ecx, DWORD PTR $T144412[ebp]
 	push	ecx
-	lea	edx, DWORD PTR __Where$140200[ebp]
+	lea	edx, DWORD PTR __Where$140201[ebp]
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??$?0AAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@AAV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@1@$$QA_N@Z ; std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool>::pair<std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >,bool><std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > > &,bool>
-	mov	eax, DWORD PTR $T144414[ebp]
+	mov	eax, DWORD PTR $T144415[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T144414[ebp], eax
+	mov	DWORD PTR $T144415[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	SHORT $LN13@Linsert
@@ -19031,7 +19031,7 @@ $LN1@Linsert:
 ; 990  : 			}
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	call	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 $LN13@Linsert:
 
@@ -19074,28 +19074,28 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z$0:
-	lea	ecx, DWORD PTR $T144404[ebp]
+	lea	ecx, DWORD PTR $T144405[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z$1:
-	mov	eax, DWORD PTR $T144414[ebp]
+	mov	eax, DWORD PTR $T144415[ebp]
 	and	eax, 1
 	je	$LN19@Linsert
-	and	DWORD PTR $T144414[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144415[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@std@@QAE@XZ
 $LN19@Linsert:
 	ret	0
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z$2:
-	lea	ecx, DWORD PTR __Where$140200[ebp]
+	lea	ecx, DWORD PTR __Where$140201[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z$3:
-	lea	ecx, DWORD PTR $T144406[ebp]
+	lea	ecx, DWORD PTR $T144407[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z$4:
-	lea	ecx, DWORD PTR $T144408[ebp]
+	lea	ecx, DWORD PTR $T144409[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z$5:
-	lea	ecx, DWORD PTR $T144410[ebp]
+	lea	ecx, DWORD PTR $T144411[ebp]
 	jmp	??1?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Linsert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@_N@2@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@_N@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -19117,8 +19117,8 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?_Insert@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@2@_NPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@1@Z
 _TEXT	SEGMENT
-$T144432 = -12						; size = 4
-__Pnode$140234 = -8					; size = 4
+$T144433 = -12						; size = 4
+__Pnode$140235 = -8					; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 __Addleft$ = 12						; size = 1
@@ -19137,7 +19137,7 @@ __Newnode$ = 20						; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144432[ebp], 0
+	mov	DWORD PTR $T144433[ebp], 0
 
 ; 1632 : 		if (max_size() - 1 <= this->_Mysize)
 
@@ -19300,12 +19300,12 @@ $LN15@Insert@3:
 ; 1663 : 		for (_Nodeptr _Pnode = _Newnode;
 
 	mov	edx, DWORD PTR __Newnode$[ebp]
-	mov	DWORD PTR __Pnode$140234[ebp], edx
+	mov	DWORD PTR __Pnode$140235[ebp], edx
 $LN10@Insert@3:
 
 ; 1664 : 			this->_Color(this->_Parent(_Pnode)) == this->_Red; )
 
-	mov	eax, DWORD PTR __Pnode$140234[ebp]
+	mov	eax, DWORD PTR __Pnode$140235[ebp]
 	push	eax
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19320,12 +19320,12 @@ $LN10@Insert@3:
 ; 1665 : 			if (this->_Parent(_Pnode)
 ; 1666 : 				== this->_Left(this->_Parent(this->_Parent(_Pnode))))
 
-	mov	eax, DWORD PTR __Pnode$140234[ebp]
+	mov	eax, DWORD PTR __Pnode$140235[ebp]
 	push	eax
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	esi, eax
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19345,7 +19345,7 @@ $LN10@Insert@3:
 ; 1668 : 				_Wherenode =
 ; 1669 : 					this->_Right(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19373,7 +19373,7 @@ $LN10@Insert@3:
 ; 1671 : 					{	// parent has two red children, blacken both
 ; 1672 : 					this->_Color(this->_Parent(_Pnode)) = this->_Black;
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19394,7 +19394,7 @@ $LN10@Insert@3:
 ; 1674 : 					this->_Color(this->_Parent(this->_Parent(_Pnode)))
 ; 1675 : 						= this->_Red;
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19410,7 +19410,7 @@ $LN10@Insert@3:
 
 ; 1676 : 					_Pnode = this->_Parent(this->_Parent(_Pnode));
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19419,7 +19419,7 @@ $LN10@Insert@3:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$140234[ebp], ecx
+	mov	DWORD PTR __Pnode$140235[ebp], ecx
 
 ; 1677 : 					}
 ; 1678 : 				else
@@ -19430,7 +19430,7 @@ $LN7@Insert@3:
 ; 1679 : 					{	// parent has red and black children
 ; 1680 : 					if (_Pnode == this->_Right(this->_Parent(_Pnode)))
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19438,23 +19438,23 @@ $LN7@Insert@3:
 	push	eax
 	call	?_Right@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Right
 	add	esp, 4
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	cmp	ecx, DWORD PTR [eax]
 	jne	SHORT $LN5@Insert@3
 
 ; 1681 : 						{	// rotate right child to left
 ; 1682 : 						_Pnode = this->_Parent(_Pnode);
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$140234[ebp], eax
+	mov	DWORD PTR __Pnode$140235[ebp], eax
 
 ; 1683 : 						_Lrotate(_Pnode);
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Lrotate@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Lrotate
@@ -19464,7 +19464,7 @@ $LN5@Insert@3:
 ; 1685 : 					this->_Color(this->_Parent(_Pnode)) =
 ; 1686 : 						this->_Black;	// propagate red up
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19477,7 +19477,7 @@ $LN5@Insert@3:
 ; 1687 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1688 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19493,7 +19493,7 @@ $LN5@Insert@3:
 
 ; 1689 : 					_Rrotate(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19518,7 +19518,7 @@ $LN8@Insert@3:
 ; 1694 : 				_Wherenode =
 ; 1695 : 					this->_Left(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19546,7 +19546,7 @@ $LN8@Insert@3:
 ; 1697 : 					{	// parent has two red children, blacken both
 ; 1698 : 					this->_Color(this->_Parent(_Pnode)) = this->_Black;
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19567,7 +19567,7 @@ $LN8@Insert@3:
 ; 1700 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1701 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19583,7 +19583,7 @@ $LN8@Insert@3:
 
 ; 1702 : 					_Pnode = this->_Parent(this->_Parent(_Pnode));
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19592,7 +19592,7 @@ $LN8@Insert@3:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$140234[ebp], eax
+	mov	DWORD PTR __Pnode$140235[ebp], eax
 
 ; 1703 : 					}
 ; 1704 : 				else
@@ -19603,7 +19603,7 @@ $LN3@Insert@3:
 ; 1705 : 					{	// parent has red and black children
 ; 1706 : 					if (_Pnode == this->_Left(this->_Parent(_Pnode)))
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19611,23 +19611,23 @@ $LN3@Insert@3:
 	push	edx
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Left
 	add	esp, 4
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	cmp	ecx, DWORD PTR [eax]
 	jne	SHORT $LN1@Insert@3
 
 ; 1707 : 						{	// rotate left child to right
 ; 1708 : 						_Pnode = this->_Parent(_Pnode);
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$140234[ebp], eax
+	mov	DWORD PTR __Pnode$140235[ebp], eax
 
 ; 1709 : 						_Rrotate(_Pnode);
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Rrotate@?$_Tree@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@IAEXPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z ; std::_Tree<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Rrotate
@@ -19637,7 +19637,7 @@ $LN1@Insert@3:
 ; 1711 : 					this->_Color(this->_Parent(_Pnode)) =
 ; 1712 : 						this->_Black;	// propagate red up
 
-	mov	edx, DWORD PTR __Pnode$140234[ebp]
+	mov	edx, DWORD PTR __Pnode$140235[ebp]
 	push	edx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19650,7 +19650,7 @@ $LN1@Insert@3:
 ; 1713 : 					this->_Color(this->_Parent(this->_Parent(_Pnode))) =
 ; 1714 : 						this->_Red;
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19666,7 +19666,7 @@ $LN1@Insert@3:
 
 ; 1715 : 					_Lrotate(this->_Parent(this->_Parent(_Pnode)));
 
-	mov	ecx, DWORD PTR __Pnode$140234[ebp]
+	mov	ecx, DWORD PTR __Pnode$140235[ebp]
 	push	ecx
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
@@ -19705,9 +19705,9 @@ $LN9@Insert@3:
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Tree_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@@std@@QAE@PAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@PBV?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@1@@Z ; std::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >::_Tree_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> > >
-	mov	ecx, DWORD PTR $T144432[ebp]
+	mov	ecx, DWORD PTR $T144433[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T144432[ebp], ecx
+	mov	DWORD PTR $T144433[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN19@Insert@3:
 
@@ -20057,7 +20057,7 @@ _this$ = -4						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ
 _TEXT	SEGMENT
-__Pnode$140279 = -8					; size = 4
+__Pnode$140280 = -8					; size = 4
 _this$ = -4						; size = 4
 ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@U_Iterator_base12@2@@std@@QAEAAV01@XZ PROC ; std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >,std::_Iterator_base12>::operator--, COMDAT
 ; _this$ = ecx
@@ -20141,15 +20141,15 @@ $LN4@operator@13:
 	call	?_Parent@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Parent
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
-	mov	DWORD PTR __Pnode$140279[ebp], edx
-	mov	eax, DWORD PTR __Pnode$140279[ebp]
+	mov	DWORD PTR __Pnode$140280[ebp], edx
+	mov	eax, DWORD PTR __Pnode$140280[ebp]
 	push	eax
 	call	?_Isnil@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAADPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Isnil
 	add	esp, 4
 	movsx	ecx, BYTE PTR [eax]
 	test	ecx, ecx
 	jne	SHORT $LN3@operator@13
-	mov	edx, DWORD PTR __Pnode$140279[ebp]
+	mov	edx, DWORD PTR __Pnode$140280[ebp]
 	push	edx
 	call	?_Left@?$_Tree_val@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@std@@SAAAPAU_Node@?$_Tree_nod@V?$_Tmap_traits@PAVRaven_Bot@@VMemoryRecord@@U?$less@PAVRaven_Bot@@@std@@V?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@4@$0A@@std@@@2@PAU342@@Z ; std::_Tree_val<std::_Tmap_traits<Raven_Bot *,MemoryRecord,std::less<Raven_Bot *>,std::allocator<std::pair<Raven_Bot * const,MemoryRecord> >,0> >::_Left
 	add	esp, 4
@@ -20161,7 +20161,7 @@ $LN4@operator@13:
 ; 94   : 				_Ptr = _Pnode;	// ==> parent while left subtree
 
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR __Pnode$140279[ebp]
+	mov	ecx, DWORD PTR __Pnode$140280[ebp]
 	mov	DWORD PTR [eax+8], ecx
 	jmp	SHORT $LN4@operator@13
 $LN3@operator@13:
@@ -20186,7 +20186,7 @@ $LN2@operator@13:
 ; 98   : 				_Ptr = _Pnode;	// ==> parent if not head
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Pnode$140279[ebp]
+	mov	eax, DWORD PTR __Pnode$140280[ebp]
 	mov	DWORD PTR [edx+8], eax
 $LN7@operator@13:
 
@@ -20651,9 +20651,9 @@ _TEXT	SEGMENT
 tv141 = -40						; size = 4
 tv140 = -36						; size = 4
 tv138 = -32						; size = 4
-$T144499 = -28						; size = 4
-$T144494 = -24						; size = 4
-$T144493 = -20						; size = 4
+$T144500 = -28						; size = 4
+$T144495 = -24						; size = 4
+$T144494 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -20685,7 +20685,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T144499[ebp], 0
+	mov	DWORD PTR $T144500[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 740  : 		{	// insert _Val at _Where
@@ -20698,7 +20698,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144493[ebp], esp
+	mov	DWORD PTR $T144494[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -20712,7 +20712,7 @@ __Val$ = 24						; size = 4
 	call	??F?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator--
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T144494[ebp], esp
+	mov	DWORD PTR $T144495[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv140[ebp], eax
@@ -20721,9 +20721,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Make_iter
 	mov	DWORD PTR tv141[ebp], eax
-	mov	ecx, DWORD PTR $T144499[ebp]
+	mov	ecx, DWORD PTR $T144500[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T144499[ebp], ecx
+	mov	DWORD PTR $T144500[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -20747,10 +20747,10 @@ __unwindfunclet$??$emplace@PAVRaven_Bot@@@?$list@PAVRaven_Bot@@V?$allocator@PAVR
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$emplace@PAVRaven_Bot@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@$$QAPAVRaven_Bot@@@Z$3:
-	mov	eax, DWORD PTR $T144499[ebp]
+	mov	eax, DWORD PTR $T144500[ebp]
 	and	eax, 1
 	je	$LN7@emplace
-	and	DWORD PTR $T144499[ebp], -2		; fffffffeH
+	and	DWORD PTR $T144500[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN7@emplace:
@@ -20822,8 +20822,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@PAVRaven_Bot@@ABQAV1@@std@@YAXPAPAVRaven_Bot@@ABQAV1@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T144514 = -24						; size = 4
-$T144513 = -20						; size = 4
+$T144515 = -24						; size = 4
+$T144514 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -20862,25 +20862,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T144514[ebp], eax
+	mov	DWORD PTR $T144515[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T144514[ebp], 0
+	cmp	DWORD PTR $T144515[ebp], 0
 	je	SHORT $LN3@Construct
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABQAVRaven_Bot@@@std@@YAABQAVRaven_Bot@@ABQAV1@@Z ; std::forward<Raven_Bot * const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T144514[ebp]
+	mov	ecx, DWORD PTR $T144515[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T144514[ebp]
+	mov	eax, DWORD PTR $T144515[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct
 $LN3@Construct:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T144513[ebp], ecx
+	mov	DWORD PTR $T144514[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -20900,7 +20900,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@PAVRaven_Bot@@ABQAV1@@std@@YAXPAPAVRaven_Bot@@ABQAV1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T144514[ebp]
+	mov	ecx, DWORD PTR $T144515[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -21597,8 +21597,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAEXPAU?$pair@QAVRaven_Bot@@VMemoryRecord@@@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv76 = -28						; size = 4
-$T144568 = -24						; size = 4
-$T144567 = -20						; size = 4
+$T144569 = -24						; size = 4
+$T144568 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -21634,16 +21634,16 @@ __Val$ = 12						; size = 4
 	push	56					; 00000038H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T144568[ebp], eax
+	mov	DWORD PTR $T144569[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T144568[ebp], 0
+	cmp	DWORD PTR $T144569[ebp], 0
 	je	SHORT $LN3@construct@2
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@YA$$QAU?$pair@QAVRaven_Bot@@VMemoryRecord@@@0@AAU10@@Z ; std::forward<std::pair<Raven_Bot * const,MemoryRecord> >
 	add	esp, 4
 	push	eax
-	mov	ecx, DWORD PTR $T144568[ebp]
+	mov	ecx, DWORD PTR $T144569[ebp]
 	call	??$?0QAVRaven_Bot@@VMemoryRecord@@@?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@QAE@$$QAU01@@Z ; std::pair<Raven_Bot * const,MemoryRecord>::pair<Raven_Bot * const,MemoryRecord><Raven_Bot * const,MemoryRecord>
 	mov	DWORD PTR tv76[ebp], eax
 	jmp	SHORT $LN4@construct@2
@@ -21651,7 +21651,7 @@ $LN3@construct@2:
 	mov	DWORD PTR tv76[ebp], 0
 $LN4@construct@2:
 	mov	edx, DWORD PTR tv76[ebp]
-	mov	DWORD PTR $T144567[ebp], edx
+	mov	DWORD PTR $T144568[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -21671,7 +21671,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U?$pair@QAVRaven_Bot@@VMemoryRecord@@@std@@@std@@QAEXPAU?$pair@QAVRaven_Bot@@VMemoryRecord@@@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T144568[ebp]
+	mov	ecx, DWORD PTR $T144569[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -22092,8 +22092,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@PAVRaven_Bot@@@std@@QAEXPAPAVRaven_Bot@@$$QAPAV3@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T144608 = -24						; size = 4
-$T144607 = -20						; size = 4
+$T144609 = -24						; size = 4
+$T144608 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -22129,25 +22129,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T144608[ebp], eax
+	mov	DWORD PTR $T144609[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T144608[ebp], 0
+	cmp	DWORD PTR $T144609[ebp], 0
 	je	SHORT $LN3@construct@3
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@PAVRaven_Bot@@@std@@YA$$QAPAVRaven_Bot@@AAPAV1@@Z ; std::forward<Raven_Bot *>
 	add	esp, 4
-	mov	edx, DWORD PTR $T144608[ebp]
+	mov	edx, DWORD PTR $T144609[ebp]
 	mov	eax, DWORD PTR [eax]
 	mov	DWORD PTR [edx], eax
-	mov	ecx, DWORD PTR $T144608[ebp]
+	mov	ecx, DWORD PTR $T144609[ebp]
 	mov	DWORD PTR tv73[ebp], ecx
 	jmp	SHORT $LN4@construct@3
 $LN3@construct@3:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@construct@3:
 	mov	edx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T144607[ebp], edx
+	mov	DWORD PTR $T144608[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -22167,7 +22167,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@PAVRaven_Bot@@@std@@QAEXPAPAVRaven_Bot@@$$QAPAV3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T144608[ebp]
+	mov	ecx, DWORD PTR $T144609[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8

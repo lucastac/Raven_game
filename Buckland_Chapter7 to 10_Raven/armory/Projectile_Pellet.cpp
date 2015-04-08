@@ -21,6 +21,7 @@ Pellet::Pellet(Raven_Bot* shooter, Vector2D target):
         Raven_Projectile(target,
                          shooter->GetWorld(),
                          shooter->ID(),
+						 shooter->my_type,
                          shooter->Pos(),
                          shooter->Facing(),
                          script->GetInt("Pellet_Damage"),
@@ -111,7 +112,14 @@ void Pellet::Render()
 {
   if ( isVisibleToPlayer() && m_bImpacted)
   {
-    gdi->YellowPen();
+
+	if(source_Type == 1)
+	{
+		gdi->YellowPen();
+	}else if(source_Type == 0)
+	{
+		gdi->RedPen();
+	}
     gdi->Line(m_vOrigin, m_vImpactPoint);
 
     gdi->BrownBrush();

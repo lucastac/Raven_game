@@ -16,8 +16,8 @@ Raven_Bot* Raven_Projectile::GetClosestIntersectingBot(Vector2D    From,
        curBot != m_pWorld->GetAllBots().end();
        ++curBot)
   {
-    //make sure we don't check against the shooter of the projectile
-    if ( ((*curBot)->ID() != m_iShooterID))
+    //make sure we don't check against the same team shooter of the projectile
+    if ( ((*curBot)->my_type != source_Type))
     {
       //if the distance to FromTo is less than the entity's bounding radius then
       //there is an intersection

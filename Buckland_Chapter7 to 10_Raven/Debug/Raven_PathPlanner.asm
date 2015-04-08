@@ -212,16 +212,16 @@ _colors	DD	0ffH
 _pi	DQ	0400921f9f01b866er		; 3.14159
 _SmallestDelay DQ 03fd0000000000000r		; 0.25
 _SEND_MSG_IMMEDIATELY DQ 00000000000000000r	; 0
-$SG145153 DB	'<Raven_PathPlanner::GetPathAsNodes>: no current search', 00H
+$SG145154 DB	'<Raven_PathPlanner::GetPathAsNodes>: no current search', 00H
 	ORG $+1
-$SG145154 DB	'n', 00H, 'a', 00H, 'v', 00H, 'i', 00H, 'g', 00H, 'a', 00H
+$SG145155 DB	'n', 00H, 'a', 00H, 'v', 00H, 'i', 00H, 'g', 00H, 'a', 00H
 	DB	't', 00H, 'i', 00H, 'o', 00H, 'n', 00H, '\', 00H, 'R', 00H, 'a'
 	DB	00H, 'v', 00H, 'e', 00H, 'n', 00H, '_', 00H, 'P', 00H, 'a', 00H
 	DB	't', 00H, 'h', 00H, 'P', 00H, 'l', 00H, 'a', 00H, 'n', 00H, 'n'
 	DB	00H, 'e', 00H, 'r', 00H, '.', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+6
-$SG145155 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
+$SG145156 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	'r', 00H, 'e', 00H, 'n', 00H, 't', 00H, 'S', 00H, 'e', 00H, 'a'
 	DB	00H, 'r', 00H, 'c', 00H, 'h', 00H, ' ', 00H, '&', 00H, '&', 00H
 	DB	' ', 00H, '"', 00H, '<', 00H, 'R', 00H, 'a', 00H, 'v', 00H, 'e'
@@ -234,17 +234,17 @@ $SG145155 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	00H, 'e', 00H, 'n', 00H, 't', 00H, ' ', 00H, 's', 00H, 'e', 00H
 	DB	'a', 00H, 'r', 00H, 'c', 00H, 'h', 00H, '"', 00H, 00H, 00H
 	ORG $+2
-$SG145416 DB	'<Raven_PathPlanner::CycleOnce>: No search object instant'
+$SG145417 DB	'<Raven_PathPlanner::CycleOnce>: No search object instant'
 	DB	'iated', 00H
 	ORG $+6
-$SG145417 DB	'n', 00H, 'a', 00H, 'v', 00H, 'i', 00H, 'g', 00H, 'a', 00H
+$SG145418 DB	'n', 00H, 'a', 00H, 'v', 00H, 'i', 00H, 'g', 00H, 'a', 00H
 	DB	't', 00H, 'i', 00H, 'o', 00H, 'n', 00H, '\', 00H, 'R', 00H, 'a'
 	DB	00H, 'v', 00H, 'e', 00H, 'n', 00H, '_', 00H, 'P', 00H, 'a', 00H
 	DB	't', 00H, 'h', 00H, 'P', 00H, 'l', 00H, 'a', 00H, 'n', 00H, 'n'
 	DB	00H, 'e', 00H, 'r', 00H, '.', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+6
-$SG145418 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
+$SG145419 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	'r', 00H, 'e', 00H, 'n', 00H, 't', 00H, 'S', 00H, 'e', 00H, 'a'
 	DB	00H, 'r', 00H, 'c', 00H, 'h', 00H, ' ', 00H, '&', 00H, '&', 00H
 	DB	' ', 00H, '"', 00H, '<', 00H, 'R', 00H, 'a', 00H, 'v', 00H, 'e'
@@ -257,9 +257,9 @@ $SG145418 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	00H, 'j', 00H, 'e', 00H, 'c', 00H, 't', 00H, ' ', 00H, 'i', 00H
 	DB	'n', 00H, 's', 00H, 't', 00H, 'a', 00H, 'n', 00H, 't', 00H, 'i'
 	DB	00H, 'a', 00H, 't', 00H, 'e', 00H, 'd', 00H, '"', 00H, 00H, 00H
-$SG154810 DB	'<SparseGraph::GetNode>: invalid index', 00H
+$SG154811 DB	'<SparseGraph::GetNode>: invalid index', 00H
 	ORG $+2
-$SG154811 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG154812 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'L', 00H, 'u', 00H, 'c', 00H, 'a'
 	DB	00H, 's', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H, 'k', 00H
 	DB	't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'j', 00H, 'o', 00H, 'g'
@@ -279,7 +279,7 @@ $SG154811 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'e', 00H, 'G', 00H, 'r', 00H, 'a', 00H, 'p', 00H, 'h', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG154812 DB	'(', 00H, 'i', 00H, 'd', 00H, 'x', 00H, ' ', 00H, '<', 00H
+$SG154813 DB	'(', 00H, 'i', 00H, 'd', 00H, 'x', 00H, ' ', 00H, '<', 00H
 	DB	' ', 00H, '(', 00H, 'i', 00H, 'n', 00H, 't', 00H, ')', 00H, 'm'
 	DB	00H, '_', 00H, 'N', 00H, 'o', 00H, 'd', 00H, 'e', 00H, 's', 00H
 	DB	'.', 00H, 's', 00H, 'i', 00H, 'z', 00H, 'e', 00H, '(', 00H, ')'
@@ -1122,7 +1122,7 @@ _this$ = -4						; size = 4
 ?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ PROC		; Raven_Bot::GetWorld, COMDAT
 ; _this$ = ecx
 
-; 209  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
+; 212  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
 
 	push	ebp
 	mov	ebp, esp
@@ -1130,7 +1130,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [eax+148]
+	mov	eax, DWORD PTR [eax+156]
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -1217,8 +1217,8 @@ PUBLIC	?GetPathManager@Raven_Game@@QAEQAV?$PathManager@VRaven_PathPlanner@@@@XZ 
 ; Function compile flags: /Odtp /RTCsu
 _TEXT	SEGMENT
 tv77 = -16						; size = 4
-$T165499 = -12						; size = 4
-$T165498 = -8						; size = 4
+$T165500 = -12						; size = 4
+$T165499 = -8						; size = 4
 _this$ = -4						; size = 4
 ?GetReadyForNewSearch@Raven_PathPlanner@@IAEXXZ PROC	; Raven_PathPlanner::GetReadyForNewSearch
 ; _this$ = ecx
@@ -1255,16 +1255,16 @@ _this$ = -4						; size = 4
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
-	mov	DWORD PTR $T165499[ebp], eax
-	mov	ecx, DWORD PTR $T165499[ebp]
-	mov	DWORD PTR $T165498[ebp], ecx
-	cmp	DWORD PTR $T165498[ebp], 0
+	mov	DWORD PTR $T165500[ebp], eax
+	mov	ecx, DWORD PTR $T165500[ebp]
+	mov	DWORD PTR $T165499[ebp], ecx
+	cmp	DWORD PTR $T165499[ebp], 0
 	je	SHORT $LN3@GetReadyFo
 	mov	esi, esp
 	push	1
-	mov	edx, DWORD PTR $T165498[ebp]
+	mov	edx, DWORD PTR $T165499[ebp]
 	mov	eax, DWORD PTR [edx]
-	mov	ecx, DWORD PTR $T165498[ebp]
+	mov	ecx, DWORD PTR $T165499[ebp]
 	mov	edx, DWORD PTR [eax]
 	call	edx
 	cmp	esi, esp
@@ -1323,9 +1323,9 @@ EXTRN	?CalculateCostToTravelBetweenNodes@Raven_Map@@QBENHH@Z:PROC ; Raven_Map::C
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\navigation\raven_pathplanner.cpp
 _TEXT	SEGMENT
-$T165507 = -64						; size = 16
-$T165506 = -48						; size = 16
-$T165505 = -32						; size = 16
+$T165508 = -64						; size = 16
+$T165507 = -48						; size = 16
+$T165506 = -32						; size = 16
 _cost$ = -16						; size = 8
 _nd$ = -8						; size = 4
 _this$ = -4						; size = 4
@@ -1350,7 +1350,7 @@ _NodeIdx$ = 8						; size = 4
 ; 59   :   //find the closest visible node to the bots position
 ; 60   :   int nd = GetClosestNodeToPosition(m_pOwner->Pos());
 
-	lea	eax, DWORD PTR $T165505[ebp]
+	lea	eax, DWORD PTR $T165506[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -1374,7 +1374,7 @@ _NodeIdx$ = 8						; size = 4
 ; 63   :   double cost =Vec2DDistance(m_pOwner->Pos(),
 ; 64   :                             m_NavGraph.GetNode(nd).Pos());
 
-	lea	ecx, DWORD PTR $T165506[ebp]
+	lea	ecx, DWORD PTR $T165507[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -1384,7 +1384,7 @@ _NodeIdx$ = 8						; size = 4
 	mov	ecx, eax
 	call	?Pos@?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@QBE?AUVector2D@@XZ ; NavGraphNode<Trigger<Raven_Bot> *>::Pos
 	push	eax
-	lea	ecx, DWORD PTR $T165507[ebp]
+	lea	ecx, DWORD PTR $T165508[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -1562,13 +1562,13 @@ tv171 = -136						; size = 4
 tv174 = -132						; size = 4
 tv169 = -128						; size = 4
 tv82 = -124						; size = 4
-$T165518 = -120						; size = 8
-$T165517 = -112						; size = 8
-$T165516 = -104						; size = 12
-$T165515 = -89						; size = 1
-$T165514 = -88						; size = 12
-$T165513 = -76						; size = 16
-_cost$144624 = -60					; size = 8
+$T165519 = -120						; size = 8
+$T165518 = -112						; size = 8
+$T165517 = -104						; size = 12
+$T165516 = -89						; size = 1
+$T165515 = -88						; size = 12
+$T165514 = -76						; size = 16
+_cost$144625 = -60					; size = 8
 _it$ = -48						; size = 12
 _triggers$ = -32					; size = 4
 _ClosestSoFar$ = -28					; size = 8
@@ -1605,7 +1605,7 @@ _GiverType$ = 8						; size = 4
 ; 78   :   //find the closest visible node to the bots position
 ; 79   :   int nd = GetClosestNodeToPosition(m_pOwner->Pos());
 
-	lea	eax, DWORD PTR $T165513[ebp]
+	lea	eax, DWORD PTR $T165514[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -1663,7 +1663,7 @@ $LN7@GetCostToC:
 
 ; 91   :   for (it = triggers.begin(); it != triggers.end(); ++it)
 
-	lea	edx, DWORD PTR $T165514[ebp]
+	lea	edx, DWORD PTR $T165515[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _triggers$[ebp]
 	call	?begin@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> >::begin
@@ -1676,14 +1676,14 @@ $LN7@GetCostToC:
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T165514[ebp]
+	lea	ecx, DWORD PTR $T165515[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN6@GetCostToC
 $LN5@GetCostToC:
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >::operator++
 $LN6@GetCostToC:
-	lea	edx, DWORD PTR $T165516[ebp]
+	lea	edx, DWORD PTR $T165517[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _triggers$[ebp]
 	call	?end@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> >::end
@@ -1695,11 +1695,11 @@ $LN6@GetCostToC:
 	push	ecx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >::operator!=
-	mov	BYTE PTR $T165515[ebp], al
+	mov	BYTE PTR $T165516[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T165516[ebp]
+	lea	ecx, DWORD PTR $T165517[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T165515[ebp]
+	movzx	edx, BYTE PTR $T165516[ebp]
 	test	edx, edx
 	je	SHORT $LN4@GetCostToC
 
@@ -1739,13 +1739,13 @@ $LN6@GetCostToC:
 	call	?GetMap@Raven_Game@@QAEQAVRaven_Map@@XZ	; Raven_Game::GetMap
 	mov	ecx, eax
 	call	?CalculateCostToTravelBetweenNodes@Raven_Map@@QBENHH@Z ; Raven_Map::CalculateCostToTravelBetweenNodes
-	fstp	QWORD PTR _cost$144624[ebp]
+	fstp	QWORD PTR _cost$144625[ebp]
 
 ; 98   : 
 ; 99   :       if (cost < ClosestSoFar)
 
 	fld	QWORD PTR _ClosestSoFar$[ebp]
-	fcomp	QWORD PTR _cost$144624[ebp]
+	fcomp	QWORD PTR _cost$144625[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jne	SHORT $LN2@GetCostToC
@@ -1753,7 +1753,7 @@ $LN6@GetCostToC:
 ; 100  :       {
 ; 101  :         ClosestSoFar = cost;
 
-	fld	QWORD PTR _cost$144624[ebp]
+	fld	QWORD PTR _cost$144625[ebp]
 	fstp	QWORD PTR _ClosestSoFar$[ebp]
 $LN2@GetCostToC:
 
@@ -1784,11 +1784,11 @@ $LN4@GetCostToC:
 ; 109  :     return -1;
 
 	fld	QWORD PTR __real@bff0000000000000
-	fstp	QWORD PTR $T165517[ebp]
+	fstp	QWORD PTR $T165518[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T165517[ebp]
+	fld	QWORD PTR $T165518[ebp]
 	jmp	SHORT $LN8@GetCostToC
 $LN1@GetCostToC:
 
@@ -1797,11 +1797,11 @@ $LN1@GetCostToC:
 ; 112  :   return ClosestSoFar;
 
 	fld	QWORD PTR _ClosestSoFar$[ebp]
-	fstp	QWORD PTR $T165518[ebp]
+	fstp	QWORD PTR $T165519[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	fld	QWORD PTR $T165518[ebp]
+	fld	QWORD PTR $T165519[ebp]
 $LN8@GetCostToC:
 
 ; 113  : }
@@ -1841,10 +1841,10 @@ __unwindfunclet$?GetCostToClosestItem@Raven_PathPlanner@@QBENI@Z$0:
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetCostToClosestItem@Raven_PathPlanner@@QBENI@Z$1:
-	lea	ecx, DWORD PTR $T165514[ebp]
+	lea	ecx, DWORD PTR $T165515[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetCostToClosestItem@Raven_PathPlanner@@QBENI@Z$2:
-	lea	ecx, DWORD PTR $T165516[ebp]
+	lea	ecx, DWORD PTR $T165517[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?GetCostToClosestItem@Raven_PathPlanner@@QBENI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -2568,13 +2568,13 @@ tv175 = -132						; size = 4
 tv178 = -128						; size = 4
 tv173 = -124						; size = 4
 tv82 = -120						; size = 4
-$T165594 = -116						; size = 4
-$T165593 = -112						; size = 4
-$T165592 = -108						; size = 12
-$T165591 = -93						; size = 1
-$T165590 = -92						; size = 12
-$T165589 = -80						; size = 16
-_cost$144662 = -64					; size = 8
+$T165595 = -116						; size = 4
+$T165594 = -112						; size = 4
+$T165593 = -108						; size = 12
+$T165592 = -93						; size = 1
+$T165591 = -92						; size = 12
+$T165590 = -80						; size = 16
+_cost$144663 = -64					; size = 8
 _it$ = -52						; size = 12
 _triggers$ = -36					; size = 4
 _closestItem$ = -32					; size = 4
@@ -2612,7 +2612,7 @@ _GiverType$ = 8						; size = 4
 ; 123  :   //find the closest visible node to the bots position
 ; 124  :   int nd = GetClosestNodeToPosition(m_pOwner->Pos());
 
-	lea	eax, DWORD PTR $T165589[ebp]
+	lea	eax, DWORD PTR $T165590[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -2674,7 +2674,7 @@ $LN7@GetPosToCl:
 
 ; 137  :   for (it = triggers.begin(); it != triggers.end(); ++it)
 
-	lea	edx, DWORD PTR $T165590[ebp]
+	lea	edx, DWORD PTR $T165591[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _triggers$[ebp]
 	call	?begin@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> >::begin
@@ -2687,14 +2687,14 @@ $LN7@GetPosToCl:
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T165590[ebp]
+	lea	ecx, DWORD PTR $T165591[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN6@GetPosToCl
 $LN5@GetPosToCl:
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >::operator++
 $LN6@GetPosToCl:
-	lea	edx, DWORD PTR $T165592[ebp]
+	lea	edx, DWORD PTR $T165593[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _triggers$[ebp]
 	call	?end@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> >::end
@@ -2706,11 +2706,11 @@ $LN6@GetPosToCl:
 	push	ecx
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >::operator!=
-	mov	BYTE PTR $T165591[ebp], al
+	mov	BYTE PTR $T165592[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T165592[ebp]
+	lea	ecx, DWORD PTR $T165593[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T165591[ebp]
+	movzx	edx, BYTE PTR $T165592[ebp]
 	test	edx, edx
 	je	$LN4@GetPosToCl
 
@@ -2750,13 +2750,13 @@ $LN6@GetPosToCl:
 	call	?GetMap@Raven_Game@@QAEQAVRaven_Map@@XZ	; Raven_Game::GetMap
 	mov	ecx, eax
 	call	?CalculateCostToTravelBetweenNodes@Raven_Map@@QBENHH@Z ; Raven_Map::CalculateCostToTravelBetweenNodes
-	fstp	QWORD PTR _cost$144662[ebp]
+	fstp	QWORD PTR _cost$144663[ebp]
 
 ; 144  : 
 ; 145  :       if (cost < ClosestSoFar)
 
 	fld	QWORD PTR _ClosestSoFar$[ebp]
-	fcomp	QWORD PTR _cost$144662[ebp]
+	fcomp	QWORD PTR _cost$144663[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jne	SHORT $LN2@GetPosToCl
@@ -2764,7 +2764,7 @@ $LN6@GetPosToCl:
 ; 146  :       {
 ; 147  :         ClosestSoFar = cost;
 
-	fld	QWORD PTR _cost$144662[ebp]
+	fld	QWORD PTR _cost$144663[ebp]
 	fstp	QWORD PTR _ClosestSoFar$[ebp]
 
 ; 148  : 		closestItem = (*it)->GraphNodeIndex();
@@ -2802,11 +2802,11 @@ $LN4@GetPosToCl:
 ; 155  :   {
 ; 156  :     return -1;
 
-	mov	DWORD PTR $T165593[ebp], -1
+	mov	DWORD PTR $T165594[ebp], -1
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T165593[ebp]
+	mov	eax, DWORD PTR $T165594[ebp]
 	jmp	SHORT $LN8@GetPosToCl
 $LN1@GetPosToCl:
 
@@ -2815,11 +2815,11 @@ $LN1@GetPosToCl:
 ; 159  :   return closestItem;
 
 	mov	ecx, DWORD PTR _closestItem$[ebp]
-	mov	DWORD PTR $T165594[ebp], ecx
+	mov	DWORD PTR $T165595[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T165594[ebp]
+	mov	eax, DWORD PTR $T165595[ebp]
 $LN8@GetPosToCl:
 
 ; 160  : }
@@ -2858,10 +2858,10 @@ __unwindfunclet$?GetPosToClosestItem@Raven_PathPlanner@@QBEHI@Z$0:
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetPosToClosestItem@Raven_PathPlanner@@QBEHI@Z$1:
-	lea	ecx, DWORD PTR $T165590[ebp]
+	lea	ecx, DWORD PTR $T165591[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?GetPosToClosestItem@Raven_PathPlanner@@QBEHI@Z$2:
-	lea	ecx, DWORD PTR $T165592[ebp]
+	lea	ecx, DWORD PTR $T165593[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?GetPosToClosestItem@Raven_PathPlanner@@QBEHI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -2902,13 +2902,13 @@ __ehfuncinfo$?GetPath@Raven_PathPlanner@@QAE?AV?$list@VPathEdge@@V?$allocator@VP
 ; Function compile flags: /Odtp /RTCsu
 xdata$x	ENDS
 _TEXT	SEGMENT
-$T165616 = -192						; size = 4
-$T165613 = -188						; size = 16
-$T165612 = -172						; size = 40
-$T165611 = -132						; size = 16
-$T165610 = -116						; size = 16
-$T165609 = -100						; size = 40
-$T165608 = -60						; size = 16
+$T165617 = -192						; size = 4
+$T165614 = -188						; size = 16
+$T165613 = -172						; size = 40
+$T165612 = -132						; size = 16
+$T165611 = -116						; size = 16
+$T165610 = -100						; size = 40
+$T165609 = -60						; size = 16
 _closest$ = -44						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -2940,7 +2940,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165616[ebp], 0
+	mov	DWORD PTR $T165617[ebp], 0
 
 ; 172  :   assert (m_pCurrentSearch && 
 ; 173  :           "<Raven_PathPlanner::GetPathAsNodes>: no current search");
@@ -2948,13 +2948,13 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+8], 0
 	je	SHORT $LN6@GetPath
-	mov	ecx, OFFSET $SG145153
+	mov	ecx, OFFSET $SG145154
 	test	ecx, ecx
 	jne	SHORT $LN7@GetPath
 $LN6@GetPath:
 	push	173					; 000000adH
-	push	OFFSET $SG145154
 	push	OFFSET $SG145155
+	push	OFFSET $SG145156
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN7@GetPath:
@@ -2979,7 +2979,7 @@ $LN7@GetPath:
 ; 176  : 
 ; 177  :   int closest = GetClosestNodeToPosition(m_pOwner->Pos());
 
-	lea	ecx, DWORD PTR $T165608[ebp]
+	lea	ecx, DWORD PTR $T165609[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -3007,7 +3007,7 @@ $LN7@GetPath:
 	push	0
 	mov	ecx, DWORD PTR _closest$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T165610[ebp]
+	lea	edx, DWORD PTR $T165611[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?GetNodePosition@Raven_PathPlanner@@QBE?AUVector2D@@H@Z ; Raven_PathPlanner::GetNodePosition
@@ -3021,7 +3021,7 @@ $LN7@GetPath:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T165611[ebp]
+	lea	ecx, DWORD PTR $T165612[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx]
@@ -3036,7 +3036,7 @@ $LN7@GetPath:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T165609[ebp]
+	lea	ecx, DWORD PTR $T165610[ebp]
 	call	??0PathEdge@@QAE@UVector2D@@0HH@Z	; PathEdge::PathEdge
 	push	eax
 	lea	ecx, DWORD PTR _path$[ebp]
@@ -3073,7 +3073,7 @@ $LN7@GetPath:
 	mov	DWORD PTR [eax+8], ecx
 	mov	edx, DWORD PTR [edx+12]
 	mov	DWORD PTR [eax+12], edx
-	lea	eax, DWORD PTR $T165613[ebp]
+	lea	eax, DWORD PTR $T165614[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	?back@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEAAVPathEdge@@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::back
@@ -3089,7 +3089,7 @@ $LN7@GetPath:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T165612[ebp]
+	lea	ecx, DWORD PTR $T165613[ebp]
 	call	??0PathEdge@@QAE@UVector2D@@0HH@Z	; PathEdge::PathEdge
 	push	eax
 	lea	ecx, DWORD PTR _path$[ebp]
@@ -3141,9 +3141,9 @@ $LN1@GetPath:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	eax, DWORD PTR $T165616[ebp]
+	mov	eax, DWORD PTR $T165617[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T165616[ebp], eax
+	mov	DWORD PTR $T165617[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -3189,10 +3189,10 @@ __unwindfunclet$?GetPath@Raven_PathPlanner@@QAE?AV?$list@VPathEdge@@V?$allocator
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 __unwindfunclet$?GetPath@Raven_PathPlanner@@QAE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T165616[ebp]
+	mov	eax, DWORD PTR $T165617[ebp]
 	and	eax, 1
 	je	$LN10@GetPath
-	and	DWORD PTR $T165616[ebp], -2		; fffffffeH
+	and	DWORD PTR $T165617[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 $LN10@GetPath:
@@ -3327,13 +3327,13 @@ tv187 = -152						; size = 4
 tv186 = -148						; size = 4
 tv184 = -144						; size = 4
 tv69 = -140						; size = 4
-$T165636 = -136						; size = 12
-$T165635 = -124						; size = 4
-$T165634 = -120						; size = 16
-$T165633 = -104						; size = 16
-$T165632 = -88						; size = 16
-$T165631 = -72						; size = 12
-$T165630 = -57						; size = 1
+$T165637 = -136						; size = 12
+$T165636 = -124						; size = 4
+$T165635 = -120						; size = 16
+$T165634 = -104						; size = 16
+$T165633 = -88						; size = 16
+$T165632 = -72						; size = 12
+$T165631 = -57						; size = 1
 _e2$ = -52						; size = 12
 _e1$ = -32						; size = 12
 _this$ = -16						; size = 4
@@ -3394,7 +3394,7 @@ $LN4@SmoothPath:
 ; 222  :   //positions then the two edges are replaced with a single edge.
 ; 223  :   while (e2 != path.end())
 
-	lea	edx, DWORD PTR $T165631[ebp]
+	lea	edx, DWORD PTR $T165632[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _path$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -3406,11 +3406,11 @@ $LN4@SmoothPath:
 	push	ecx
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator!=
-	mov	BYTE PTR $T165630[ebp], al
+	mov	BYTE PTR $T165631[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T165631[ebp]
+	lea	ecx, DWORD PTR $T165632[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T165630[ebp]
+	movzx	edx, BYTE PTR $T165631[ebp]
 	test	edx, edx
 	je	$LN3@SmoothPath
 
@@ -3425,7 +3425,7 @@ $LN4@SmoothPath:
 	call	?Behavior@PathEdge@@QBEHXZ		; PathEdge::Behavior
 	test	eax, eax
 	jne	$LN2@SmoothPath
-	lea	eax, DWORD PTR $T165632[ebp]
+	lea	eax, DWORD PTR $T165633[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??C?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEPAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator->
@@ -3441,7 +3441,7 @@ $LN4@SmoothPath:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T165633[ebp]
+	lea	ecx, DWORD PTR $T165634[ebp]
 	push	ecx
 	lea	ecx, DWORD PTR _e1$[ebp]
 	call	??C?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEPAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator->
@@ -3467,7 +3467,7 @@ $LN4@SmoothPath:
 ; 228  :     {
 ; 229  :       e1->SetDestination(e2->Destination());
 
-	lea	eax, DWORD PTR $T165634[ebp]
+	lea	eax, DWORD PTR $T165635[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??C?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEPAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator->
@@ -3492,12 +3492,12 @@ $LN4@SmoothPath:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165635[ebp], esp
+	mov	DWORD PTR $T165636[ebp], esp
 	lea	edx, DWORD PTR _e2$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv186[ebp], eax
-	lea	eax, DWORD PTR $T165636[ebp]
+	lea	eax, DWORD PTR $T165637[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _path$[ebp]
 	call	?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::erase
@@ -3510,7 +3510,7 @@ $LN4@SmoothPath:
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??4?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T165636[ebp]
+	lea	ecx, DWORD PTR $T165637[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 231  :     }
@@ -3592,10 +3592,10 @@ __unwindfunclet$?SmoothPathEdgesQuick@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge
 	lea	ecx, DWORD PTR _e2$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesQuick@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$2:
-	lea	ecx, DWORD PTR $T165631[ebp]
+	lea	ecx, DWORD PTR $T165632[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesQuick@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$4:
-	lea	ecx, DWORD PTR $T165636[ebp]
+	lea	ecx, DWORD PTR $T165637[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?SmoothPathEdgesQuick@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -4045,17 +4045,17 @@ tv234 = -184						; size = 4
 tv65 = -180						; size = 4
 tv232 = -176						; size = 4
 tv68 = -172						; size = 4
-$T165698 = -168						; size = 12
-$T165697 = -156						; size = 4
-$T165696 = -152						; size = 4
-$T165695 = -148						; size = 16
-$T165694 = -132						; size = 16
-$T165693 = -116						; size = 16
-$T165692 = -100						; size = 12
-$T165691 = -85						; size = 1
-$T165690 = -84						; size = 12
-$T165689 = -69						; size = 1
-$T165688 = -68						; size = 12
+$T165699 = -168						; size = 12
+$T165698 = -156						; size = 4
+$T165697 = -152						; size = 4
+$T165696 = -148						; size = 16
+$T165695 = -132						; size = 16
+$T165694 = -116						; size = 16
+$T165693 = -100						; size = 12
+$T165692 = -85						; size = 1
+$T165691 = -84						; size = 12
+$T165690 = -69						; size = 1
+$T165689 = -68						; size = 12
 _e2$ = -52						; size = 12
 _e1$ = -32						; size = 12
 _this$ = -16						; size = 4
@@ -4101,7 +4101,7 @@ _path$ = 8						; size = 4
 ; 251  :   //point e1 to the beginning of the path
 ; 252  :   e1 = path.begin();
 
-	lea	eax, DWORD PTR $T165688[ebp]
+	lea	eax, DWORD PTR $T165689[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _path$[ebp]
 	call	?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::begin
@@ -4114,14 +4114,14 @@ _path$ = 8						; size = 4
 	lea	ecx, DWORD PTR _e1$[ebp]
 	call	??4?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T165688[ebp]
+	lea	ecx, DWORD PTR $T165689[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN6@SmoothPath@2:
 
 ; 253  :     
 ; 254  :   while (e1 != path.end())
 
-	lea	eax, DWORD PTR $T165690[ebp]
+	lea	eax, DWORD PTR $T165691[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _path$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -4133,11 +4133,11 @@ $LN6@SmoothPath@2:
 	push	edx
 	lea	ecx, DWORD PTR _e1$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator!=
-	mov	BYTE PTR $T165689[ebp], al
+	mov	BYTE PTR $T165690[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T165690[ebp]
+	lea	ecx, DWORD PTR $T165691[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T165689[ebp]
+	movzx	eax, BYTE PTR $T165690[ebp]
 	test	eax, eax
 	je	$LN5@SmoothPath@2
 
@@ -4164,7 +4164,7 @@ $LN4@SmoothPath@2:
 ; 264  :     //replaced with a single edge.
 ; 265  :     while (e2 != path.end())
 
-	lea	edx, DWORD PTR $T165692[ebp]
+	lea	edx, DWORD PTR $T165693[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _path$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -4176,11 +4176,11 @@ $LN4@SmoothPath@2:
 	push	ecx
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator!=
-	mov	BYTE PTR $T165691[ebp], al
+	mov	BYTE PTR $T165692[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T165692[ebp]
+	lea	ecx, DWORD PTR $T165693[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T165691[ebp]
+	movzx	edx, BYTE PTR $T165692[ebp]
 	test	edx, edx
 	je	$LN3@SmoothPath@2
 
@@ -4195,7 +4195,7 @@ $LN4@SmoothPath@2:
 	call	?Behavior@PathEdge@@QBEHXZ		; PathEdge::Behavior
 	test	eax, eax
 	jne	$LN2@SmoothPath@2
-	lea	eax, DWORD PTR $T165693[ebp]
+	lea	eax, DWORD PTR $T165694[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??C?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEPAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator->
@@ -4211,7 +4211,7 @@ $LN4@SmoothPath@2:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T165694[ebp]
+	lea	ecx, DWORD PTR $T165695[ebp]
 	push	ecx
 	lea	ecx, DWORD PTR _e1$[ebp]
 	call	??C?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEPAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator->
@@ -4237,7 +4237,7 @@ $LN4@SmoothPath@2:
 ; 270  :       {
 ; 271  :         e1->SetDestination(e2->Destination());
 
-	lea	eax, DWORD PTR $T165695[ebp]
+	lea	eax, DWORD PTR $T165696[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??C?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEPAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator->
@@ -4264,7 +4264,7 @@ $LN4@SmoothPath@2:
 	call	??E?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator++
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165696[ebp], esp
+	mov	DWORD PTR $T165697[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv246[ebp], eax
@@ -4275,11 +4275,11 @@ $LN4@SmoothPath@2:
 	call	??E?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator++
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165697[ebp], esp
+	mov	DWORD PTR $T165698[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv242[ebp], eax
-	lea	edx, DWORD PTR $T165698[ebp]
+	lea	edx, DWORD PTR $T165699[ebp]
 	push	edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	ecx, DWORD PTR _path$[ebp]
@@ -4293,7 +4293,7 @@ $LN4@SmoothPath@2:
 	lea	ecx, DWORD PTR _e2$[ebp]
 	call	??4?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T165698[ebp]
+	lea	ecx, DWORD PTR $T165699[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 273  :         e1 = e2;
@@ -4392,19 +4392,19 @@ __unwindfunclet$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEd
 	lea	ecx, DWORD PTR _e2$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$2:
-	lea	ecx, DWORD PTR $T165688[ebp]
+	lea	ecx, DWORD PTR $T165689[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$3:
-	lea	ecx, DWORD PTR $T165690[ebp]
+	lea	ecx, DWORD PTR $T165691[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$4:
-	lea	ecx, DWORD PTR $T165692[ebp]
+	lea	ecx, DWORD PTR $T165693[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$5:
-	mov	ecx, DWORD PTR $T165696[ebp]
+	mov	ecx, DWORD PTR $T165697[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z$7:
-	lea	ecx, DWORD PTR $T165698[ebp]
+	lea	ecx, DWORD PTR $T165699[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?SmoothPathEdgesPrecise@Raven_PathPlanner@@IAEXAAV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -4438,8 +4438,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv159 = -48						; size = 4
 tv160 = -44						; size = 4
-$T165718 = -40						; size = 16
-_pTrigger$145423 = -24					; size = 4
+$T165719 = -40						; size = 16
+_pTrigger$145424 = -24					; size = 4
 _result$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -4478,13 +4478,13 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+8], 0
 	je	SHORT $LN6@CycleOnce@2
-	mov	ecx, OFFSET $SG145416
+	mov	ecx, OFFSET $SG145417
 	test	ecx, ecx
 	jne	SHORT $LN7@CycleOnce@2
 $LN6@CycleOnce@2:
 	push	296					; 00000128H
-	push	OFFSET $SG145417
 	push	OFFSET $SG145418
+	push	OFFSET $SG145419
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN7@CycleOnce@2:
@@ -4553,7 +4553,7 @@ $LN3@CycleOnce@2:
 ; 319  :     m_NavGraph.GetNode(m_pCurrentSearch->GetPathToTarget().back()).ExtraInfo();
 
 	mov	esi, esp
-	lea	edx, DWORD PTR $T165718[ebp]
+	lea	edx, DWORD PTR $T165719[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
@@ -4578,9 +4578,9 @@ $LN3@CycleOnce@2:
 	call	?GetNode@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QBEABV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@H@Z ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::GetNode
 	mov	ecx, eax
 	call	?ExtraInfo@?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@QBEPAV?$Trigger@VRaven_Bot@@@@XZ ; NavGraphNode<Trigger<Raven_Bot> *>::ExtraInfo
-	mov	DWORD PTR _pTrigger$145423[ebp], eax
+	mov	DWORD PTR _pTrigger$145424[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T165718[ebp]
+	lea	ecx, DWORD PTR $T165719[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 
 ; 320  : 
@@ -4590,7 +4590,7 @@ $LN3@CycleOnce@2:
 ; 324  :                             Msg_PathReady,
 ; 325  :                             pTrigger);
 
-	mov	ecx, DWORD PTR _pTrigger$145423[ebp]
+	mov	ecx, DWORD PTR _pTrigger$145424[ebp]
 	push	ecx
 	push	1
 	mov	edx, DWORD PTR _this$[ebp]
@@ -4627,7 +4627,7 @@ $LN1@CycleOnce@2:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?CycleOnce@Raven_PathPlanner@@QBEHXZ$0:
-	lea	ecx, DWORD PTR $T165718[ebp]
+	lea	ecx, DWORD PTR $T165719[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 __ehhandler$?CycleOnce@Raven_PathPlanner@@QBEHXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -4672,10 +4672,10 @@ PUBLIC	?GetCellSpaceNeighborhoodRange@Raven_Map@@QBENXZ ; Raven_Map::GetCellSpac
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\navigation\raven_pathplanner.cpp
 _TEXT	SEGMENT
-$T165728 = -68						; size = 16
-$T165727 = -52						; size = 16
-_dist$146714 = -36					; size = 8
-_pN$146708 = -28					; size = 4
+$T165729 = -68						; size = 16
+$T165728 = -52						; size = 16
+_dist$146715 = -36					; size = 8
+_pN$146709 = -28					; size = 4
 _range$ = -24						; size = 8
 _ClosestNode$ = -16					; size = 4
 _ClosestSoFar$ = -12					; size = 8
@@ -4763,7 +4763,7 @@ _pos$ = 8						; size = 16
 	mov	ecx, eax
 	call	?begin@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ ; CellSpacePartition<NavGraphNode<Trigger<Raven_Bot> *> *>::begin
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR _pN$146708[ebp], eax
+	mov	DWORD PTR _pN$146709[ebp], eax
 
 ; 350  :                  !m_pOwner->GetWorld()->GetMap()->GetCellSpace()->end();     
 
@@ -4782,7 +4782,7 @@ $LN4@GetClosest:
 	mov	ecx, eax
 	call	?next@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ ; CellSpacePartition<NavGraphNode<Trigger<Raven_Bot> *> *>::next
 	mov	edx, DWORD PTR [eax]
-	mov	DWORD PTR _pN$146708[ebp], edx
+	mov	DWORD PTR _pN$146709[ebp], edx
 $LN5@GetClosest:
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -4802,9 +4802,9 @@ $LN5@GetClosest:
 ; 354  :     //distance
 ; 355  :     if (m_pOwner->canWalkBetween(pos, pN->Pos()))
 
-	lea	edx, DWORD PTR $T165727[ebp]
+	lea	edx, DWORD PTR $T165728[ebp]
 	push	edx
-	mov	ecx, DWORD PTR _pN$146708[ebp]
+	mov	ecx, DWORD PTR _pN$146709[ebp]
 	call	?Pos@?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@QBE?AUVector2D@@XZ ; NavGraphNode<Trigger<Raven_Bot> *>::Pos
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -4836,23 +4836,23 @@ $LN5@GetClosest:
 ; 356  :     {
 ; 357  :       double dist = Vec2DDistanceSq(pos, pN->Pos());
 
-	lea	eax, DWORD PTR $T165728[ebp]
+	lea	eax, DWORD PTR $T165729[ebp]
 	push	eax
-	mov	ecx, DWORD PTR _pN$146708[ebp]
+	mov	ecx, DWORD PTR _pN$146709[ebp]
 	call	?Pos@?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@QBE?AUVector2D@@XZ ; NavGraphNode<Trigger<Raven_Bot> *>::Pos
 	push	eax
 	lea	ecx, DWORD PTR _pos$[ebp]
 	push	ecx
 	call	?Vec2DDistanceSq@@YANABUVector2D@@0@Z	; Vec2DDistanceSq
 	add	esp, 8
-	fstp	QWORD PTR _dist$146714[ebp]
+	fstp	QWORD PTR _dist$146715[ebp]
 
 ; 358  : 
 ; 359  :       //keep a record of the closest so far
 ; 360  :       if (dist < ClosestSoFar)
 
 	fld	QWORD PTR _ClosestSoFar$[ebp]
-	fcomp	QWORD PTR _dist$146714[ebp]
+	fcomp	QWORD PTR _dist$146715[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jne	SHORT $LN1@GetClosest
@@ -4860,12 +4860,12 @@ $LN5@GetClosest:
 ; 361  :       {
 ; 362  :         ClosestSoFar = dist;
 
-	fld	QWORD PTR _dist$146714[ebp]
+	fld	QWORD PTR _dist$146715[ebp]
 	fstp	QWORD PTR _ClosestSoFar$[ebp]
 
 ; 363  :         ClosestNode  = pN->Index();
 
-	mov	ecx, DWORD PTR _pN$146708[ebp]
+	mov	ecx, DWORD PTR _pN$146709[ebp]
 	call	?Index@GraphNode@@QBEHXZ		; GraphNode::Index
 	mov	DWORD PTR _ClosestNode$[ebp], eax
 $LN1@GetClosest:
@@ -5033,9 +5033,9 @@ __ehfuncinfo$?RequestPathToPosition@Raven_PathPlanner@@QAE_NUVector2D@@@Z DD 019
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv133 = -52						; size = 4
-$T165740 = -48						; size = 4
-$T165739 = -44						; size = 4
-$T165738 = -40						; size = 16
+$T165741 = -48						; size = 4
+$T165740 = -44						; size = 4
+$T165739 = -40						; size = 16
 _ClosestNodeToTarget$ = -24				; size = 4
 _ClosestNodeToBot$ = -20				; size = 4
 _this$ = -16						; size = 4
@@ -5125,7 +5125,7 @@ $LN3@RequestPat:
 ; 400  :   //find the closest visible node to the bots position
 ; 401  :   int ClosestNodeToBot = GetClosestNodeToPosition(m_pOwner->Pos());
 
-	lea	edx, DWORD PTR $T165738[ebp]
+	lea	edx, DWORD PTR $T165739[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -5225,9 +5225,9 @@ $LN1@RequestPat:
 	push	120					; 00000078H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T165740[ebp], eax
+	mov	DWORD PTR $T165741[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T165740[ebp], 0
+	cmp	DWORD PTR $T165741[ebp], 0
 	je	SHORT $LN6@RequestPat
 	mov	ecx, DWORD PTR _ClosestNodeToTarget$[ebp]
 	push	ecx
@@ -5236,7 +5236,7 @@ $LN1@RequestPat:
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+4]
 	push	ecx
-	mov	ecx, DWORD PTR $T165740[ebp]
+	mov	ecx, DWORD PTR $T165741[ebp]
 	call	??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Euclid>::Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Euclid>
 	mov	DWORD PTR tv133[ebp], eax
 	jmp	SHORT $LN7@RequestPat
@@ -5244,10 +5244,10 @@ $LN6@RequestPat:
 	mov	DWORD PTR tv133[ebp], 0
 $LN7@RequestPat:
 	mov	edx, DWORD PTR tv133[ebp]
-	mov	DWORD PTR $T165739[ebp], edx
+	mov	DWORD PTR $T165740[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR $T165739[ebp]
+	mov	ecx, DWORD PTR $T165740[ebp]
 	mov	DWORD PTR [eax+8], ecx
 
 ; 446  : 
@@ -5285,7 +5285,7 @@ $LN4@RequestPat:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?RequestPathToPosition@Raven_PathPlanner@@QAE_NUVector2D@@@Z$0:
-	mov	eax, DWORD PTR $T165740[ebp]
+	mov	eax, DWORD PTR $T165741[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -5354,20 +5354,20 @@ tv228 = -188						; size = 4
 tv95 = -184						; size = 4
 tv225 = -180						; size = 4
 tv87 = -176						; size = 4
-$T165760 = -172						; size = 4
-$T165759 = -168						; size = 4
-$T165756 = -164						; size = 4
-$T165755 = -160						; size = 4
-$T165754 = -156						; size = 4
-$T165753 = -152						; size = 16
-$T165752 = -136						; size = 12
-$T165751 = -121						; size = 1
-$T165750 = -120						; size = 12
-$T165749 = -108						; size = 16
-_curBot$147296 = -88					; size = 12
-_m_bots$147177 = -68					; size = 16
-_pos$147172 = -44					; size = 16
-_closestNodeToItem$147166 = -24				; size = 4
+$T165761 = -172						; size = 4
+$T165760 = -168						; size = 4
+$T165757 = -164						; size = 4
+$T165756 = -160						; size = 4
+$T165755 = -156						; size = 4
+$T165754 = -152						; size = 16
+$T165753 = -136						; size = 12
+$T165752 = -121						; size = 1
+$T165751 = -120						; size = 12
+$T165750 = -108						; size = 16
+_curBot$147297 = -88					; size = 12
+_m_bots$147178 = -68					; size = 16
+_pos$147173 = -44					; size = 16
+_closestNodeToItem$147167 = -24				; size = 4
 _ClosestNodeToBot$ = -20				; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -5408,7 +5408,7 @@ _ItemType$ = 8						; size = 4
 ; 466  :   //find the closest visible node to the bots position
 ; 467  :   int ClosestNodeToBot = GetClosestNodeToPosition(m_pOwner->Pos());
 
-	lea	eax, DWORD PTR $T165749[ebp]
+	lea	eax, DWORD PTR $T165750[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx]
@@ -5470,13 +5470,13 @@ $LN8@RequestPat@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?GetPosToClosestItem@Raven_PathPlanner@@QBEHI@Z ; Raven_PathPlanner::GetPosToClosestItem
-	mov	DWORD PTR _closestNodeToItem$147166[ebp], eax
+	mov	DWORD PTR _closestNodeToItem$147167[ebp], eax
 
 ; 490  : 
 ; 491  : 	  //retorna falso caso não tenha item do tipo
 ; 492  : 	  if(closestNodeToItem == no_closest_node_found) return false; 
 
-	cmp	DWORD PTR _closestNodeToItem$147166[ebp], -1
+	cmp	DWORD PTR _closestNodeToItem$147167[ebp], -1
 	jne	SHORT $LN6@RequestPat@2
 	xor	al, al
 	jmp	$LN9@RequestPat@2
@@ -5485,7 +5485,7 @@ $LN6@RequestPat@2:
 ; 493  : 
 ; 494  : 		  std::list<Vector2D> pos;
 
-	lea	ecx, DWORD PTR _pos$147172[ebp]
+	lea	ecx, DWORD PTR _pos$147173[ebp]
 	call	??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::list<Vector2D,std::allocator<Vector2D> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
@@ -5497,16 +5497,16 @@ $LN6@RequestPat@2:
 	mov	ecx, eax
 	call	?GetAllBots@Raven_Game@@QBEABV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ ; Raven_Game::GetAllBots
 	push	eax
-	lea	ecx, DWORD PTR _m_bots$147177[ebp]
+	lea	ecx, DWORD PTR _m_bots$147178[ebp]
 	call	??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 
 ; 496  : 
 ; 497  : 		  std::list<Raven_Bot*>::const_iterator curBot = m_bots.begin();
 
-	lea	ecx, DWORD PTR $T165750[ebp]
+	lea	ecx, DWORD PTR $T165751[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR _m_bots$147177[ebp]
+	lea	ecx, DWORD PTR _m_bots$147178[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
 	mov	DWORD PTR tv87[ebp], eax
 	mov	edx, DWORD PTR tv87[ebp]
@@ -5514,22 +5514,22 @@ $LN6@RequestPat@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	mov	eax, DWORD PTR tv225[ebp]
 	push	eax
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T165750[ebp]
+	lea	ecx, DWORD PTR $T165751[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN5@RequestPat@2
 $LN4@RequestPat@2:
 
 ; 498  : 		  for(curBot ; curBot != m_bots.end();++curBot)
 
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
 $LN5@RequestPat@2:
-	lea	ecx, DWORD PTR $T165752[ebp]
+	lea	ecx, DWORD PTR $T165753[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR _m_bots$147177[ebp]
+	lea	ecx, DWORD PTR _m_bots$147178[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
 	mov	DWORD PTR tv95[ebp], eax
 	mov	edx, DWORD PTR tv95[ebp]
@@ -5537,38 +5537,38 @@ $LN5@RequestPat@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	mov	eax, DWORD PTR tv228[ebp]
 	push	eax
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
-	mov	BYTE PTR $T165751[ebp], al
+	mov	BYTE PTR $T165752[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T165752[ebp]
+	lea	ecx, DWORD PTR $T165753[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T165751[ebp]
+	movzx	ecx, BYTE PTR $T165752[ebp]
 	test	ecx, ecx
 	je	SHORT $LN3@RequestPat@2
 
 ; 499  : 		  {
 ; 500  : 			  if((*curBot)->my_type != m_pOwner->my_type)
 
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
-	mov	edx, DWORD PTR [edx+196]
-	cmp	edx, DWORD PTR [ecx+196]
+	mov	edx, DWORD PTR [edx+204]
+	cmp	edx, DWORD PTR [ecx+204]
 	je	SHORT $LN2@RequestPat@2
 
 ; 501  : 				pos.push_back((*curBot)->Pos());
 
-	lea	eax, DWORD PTR $T165753[ebp]
+	lea	eax, DWORD PTR $T165754[ebp]
 	push	eax
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
 	mov	ecx, DWORD PTR [eax]
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	push	eax
-	lea	ecx, DWORD PTR _pos$147172[ebp]
+	lea	ecx, DWORD PTR _pos$147173[ebp]
 	call	?push_back@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAUVector2D@@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::push_back
 $LN2@RequestPat@2:
 
@@ -5590,25 +5590,25 @@ $LN3@RequestPat@2:
 	push	120					; 00000078H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T165755[ebp], eax
+	mov	DWORD PTR $T165756[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
-	cmp	DWORD PTR $T165755[ebp], 0
+	cmp	DWORD PTR $T165756[ebp], 0
 	je	SHORT $LN11@RequestPat@2
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
-	mov	DWORD PTR $T165756[ebp], esp
-	lea	edx, DWORD PTR _pos$147172[ebp]
+	mov	DWORD PTR $T165757[ebp], esp
+	lea	edx, DWORD PTR _pos$147173[ebp]
 	push	edx
 	call	??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::list<Vector2D,std::allocator<Vector2D> >
 	mov	DWORD PTR tv231[ebp], eax
-	mov	eax, DWORD PTR _closestNodeToItem$147166[ebp]
+	mov	eax, DWORD PTR _closestNodeToItem$147167[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _ClosestNodeToBot$[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+4]
 	push	eax
-	mov	ecx, DWORD PTR $T165755[ebp]
+	mov	ecx, DWORD PTR $T165756[ebp]
 	call	??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Bot>::Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Bot>
 	mov	DWORD PTR tv232[ebp], eax
 	mov	ecx, DWORD PTR tv232[ebp]
@@ -5618,22 +5618,22 @@ $LN11@RequestPat@2:
 	mov	DWORD PTR tv199[ebp], 0
 $LN12@RequestPat@2:
 	mov	edx, DWORD PTR tv199[ebp]
-	mov	DWORD PTR $T165754[ebp], edx
+	mov	DWORD PTR $T165755[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR $T165754[ebp]
+	mov	ecx, DWORD PTR $T165755[ebp]
 	mov	DWORD PTR [eax+8], ecx
 
 ; 512  :   }else
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR _m_bots$147177[ebp]
+	lea	ecx, DWORD PTR _m_bots$147178[ebp]
 	call	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR _pos$147172[ebp]
+	lea	ecx, DWORD PTR _pos$147173[ebp]
 	call	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 	jmp	SHORT $LN1@RequestPat@2
 $LN7@RequestPat@2:
@@ -5646,9 +5646,9 @@ $LN7@RequestPat@2:
 	push	84					; 00000054H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T165760[ebp], eax
+	mov	DWORD PTR $T165761[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 7
-	cmp	DWORD PTR $T165760[ebp], 0
+	cmp	DWORD PTR $T165761[ebp], 0
 	je	SHORT $LN13@RequestPat@2
 	mov	edx, DWORD PTR _ItemType$[ebp]
 	push	edx
@@ -5657,7 +5657,7 @@ $LN7@RequestPat@2:
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+4]
 	push	edx
-	mov	ecx, DWORD PTR $T165760[ebp]
+	mov	ecx, DWORD PTR $T165761[ebp]
 	call	??0?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >
 	mov	DWORD PTR tv215[ebp], eax
 	jmp	SHORT $LN14@RequestPat@2
@@ -5665,10 +5665,10 @@ $LN13@RequestPat@2:
 	mov	DWORD PTR tv215[ebp], 0
 $LN14@RequestPat@2:
 	mov	eax, DWORD PTR tv215[ebp]
-	mov	DWORD PTR $T165759[ebp], eax
+	mov	DWORD PTR $T165760[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR $T165759[ebp]
+	mov	edx, DWORD PTR $T165760[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN1@RequestPat@2:
 
@@ -5749,28 +5749,28 @@ $LN23@RequestPat@2:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$0:
-	lea	ecx, DWORD PTR _pos$147172[ebp]
+	lea	ecx, DWORD PTR _pos$147173[ebp]
 	jmp	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$1:
-	lea	ecx, DWORD PTR _m_bots$147177[ebp]
+	lea	ecx, DWORD PTR _m_bots$147178[ebp]
 	jmp	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$2:
-	lea	ecx, DWORD PTR $T165750[ebp]
+	lea	ecx, DWORD PTR $T165751[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$3:
-	lea	ecx, DWORD PTR _curBot$147296[ebp]
+	lea	ecx, DWORD PTR _curBot$147297[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$4:
-	lea	ecx, DWORD PTR $T165752[ebp]
+	lea	ecx, DWORD PTR $T165753[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$5:
-	mov	eax, DWORD PTR $T165755[ebp]
+	mov	eax, DWORD PTR $T165756[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$?RequestPathToItem@Raven_PathPlanner@@QAE_NI@Z$7:
-	mov	eax, DWORD PTR $T165760[ebp]
+	mov	eax, DWORD PTR $T165761[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -5793,7 +5793,7 @@ _this$ = -4						; size = 4
 ?Health@Raven_Bot@@QBEHXZ PROC				; Raven_Bot::Health, COMDAT
 ; _this$ = ecx
 
-; 149  :   int           Health()const{return m_iHealth;}
+; 152  :   int           Health()const{return m_iHealth;}
 
 	push	ebp
 	mov	ebp, esp
@@ -5801,7 +5801,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [eax+204]
+	mov	eax, DWORD PTR [eax+212]
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -6042,7 +6042,7 @@ PUBLIC	??0?$allocator@UVector2D@@@std@@QAE@XZ		; std::allocator<Vector2D>::alloc
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T165807 = -8						; size = 4
+$T165808 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ PROC ; std::list<Vector2D,std::allocator<Vector2D> >::list<Vector2D,std::allocator<Vector2D> >, COMDAT
 ; _this$ = ecx
@@ -6057,7 +6057,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T165807[ebp], esp
+	mov	DWORD PTR $T165808[ebp], esp
 	call	??0?$allocator@UVector2D@@@std@@QAE@XZ	; std::allocator<Vector2D>::allocator<Vector2D>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V?$allocator@UVector2D@@@1@@Z ; std::_List_val<Vector2D,std::allocator<Vector2D> >::_List_val<Vector2D,std::allocator<Vector2D> >
@@ -6128,11 +6128,11 @@ tv181 = -64						; size = 4
 tv188 = -60						; size = 4
 tv178 = -56						; size = 4
 tv69 = -52						; size = 4
-$T165815 = -48						; size = 12
-$T165814 = -36						; size = 4
-$T165813 = -32						; size = 4
-$T165812 = -28						; size = 4
-$T165811 = -24						; size = 4
+$T165816 = -48						; size = 12
+$T165815 = -36						; size = 4
+$T165814 = -32						; size = 4
+$T165813 = -28						; size = 4
+$T165812 = -24						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Right$ = 8						; size = 4
@@ -6169,7 +6169,7 @@ __Right$ = 8						; size = 4
 	add	eax, 13					; 0000000dH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T165811[ebp], esp
+	mov	DWORD PTR $T165812[ebp], esp
 	push	eax
 	call	??0?$allocator@UVector2D@@@std@@QAE@ABV01@@Z ; std::allocator<Vector2D>::allocator<Vector2D>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -6184,7 +6184,7 @@ __Right$ = 8						; size = 4
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165812[ebp], esp
+	mov	DWORD PTR $T165813[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::end
@@ -6194,7 +6194,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T165813[ebp], esp
+	mov	DWORD PTR $T165814[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::begin
@@ -6202,7 +6202,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR tv188[ebp]
 	mov	DWORD PTR tv181[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+12], 3
-	lea	edx, DWORD PTR $T165815[ebp]
+	lea	edx, DWORD PTR $T165816[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::begin
@@ -6212,7 +6212,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165814[ebp], esp
+	mov	DWORD PTR $T165815[ebp], esp
 	mov	edx, DWORD PTR tv183[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -6221,7 +6221,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00@Z ; std::list<Vector2D,std::allocator<Vector2D> >::insert<std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > > >
 	mov	BYTE PTR __$EHRec$[ebp+12], 1
-	lea	ecx, DWORD PTR $T165815[ebp]
+	lea	ecx, DWORD PTR $T165816[ebp]
 	call	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN4@list
 __catch$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z$0:
@@ -6271,13 +6271,13 @@ __unwindfunclet$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::_List_val<Vector2D,std::allocator<Vector2D> >::~_List_val<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z$3:
-	mov	ecx, DWORD PTR $T165812[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z$4:
 	mov	ecx, DWORD PTR $T165813[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z$4:
+	mov	ecx, DWORD PTR $T165814[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z$5:
-	lea	ecx, DWORD PTR $T165815[ebp]
+	lea	ecx, DWORD PTR $T165816[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -6310,8 +6310,8 @@ _TEXT	SEGMENT
 tv95 = -44						; size = 4
 tv92 = -40						; size = 4
 tv128 = -36						; size = 4
-$T165838 = -32						; size = 12
-$T165837 = -20						; size = 4
+$T165839 = -32						; size = 12
+$T165838 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -6350,7 +6350,7 @@ __Val$ = 8						; size = 4
 	call	??$forward@UVector2D@@@std@@YA$$QAUVector2D@@AAU1@@Z ; std::forward<Vector2D>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR $T165838[ebp]
+	lea	ecx, DWORD PTR $T165839[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::end
@@ -6360,7 +6360,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165837[ebp], esp
+	mov	DWORD PTR $T165838[ebp], esp
 	mov	eax, DWORD PTR tv92[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -6368,7 +6368,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$_Insert_rv@UVector2D@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@$$QAUVector2D@@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::_Insert_rv<Vector2D>
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T165838[ebp]
+	lea	ecx, DWORD PTR $T165839[ebp]
 	call	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 
 ; 718  : 		}
@@ -6386,7 +6386,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_back@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAUVector2D@@@Z$0:
-	lea	ecx, DWORD PTR $T165838[ebp]
+	lea	ecx, DWORD PTR $T165839[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_back@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEX$$QAUVector2D@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -6498,7 +6498,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigg
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ?begin@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T165861 = -8						; size = 4
+$T165862 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::list<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> >::begin, COMDAT
@@ -6512,7 +6512,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165861[ebp], 0
+	mov	DWORD PTR $T165862[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -6527,9 +6527,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >
-	mov	ecx, DWORD PTR $T165861[ebp]
+	mov	ecx, DWORD PTR $T165862[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T165861[ebp], ecx
+	mov	DWORD PTR $T165862[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -6545,7 +6545,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T165866 = -8						; size = 4
+$T165867 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::list<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> >::end, COMDAT
@@ -6559,7 +6559,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165866[ebp], 0
+	mov	DWORD PTR $T165867[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -6570,9 +6570,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Trigger@VRaven_Bot@@@@V?$allocator@PAV?$Trigger@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >::_List_const_iterator<std::_List_val<Trigger<Raven_Bot> *,std::allocator<Trigger<Raven_Bot> *> > >
-	mov	eax, DWORD PTR $T165866[ebp]
+	mov	eax, DWORD PTR $T165867[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T165866[ebp], eax
+	mov	DWORD PTR $T165867[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -6636,11 +6636,11 @@ tv181 = -64						; size = 4
 tv188 = -60						; size = 4
 tv178 = -56						; size = 4
 tv69 = -52						; size = 4
-$T165874 = -48						; size = 12
-$T165873 = -36						; size = 4
-$T165872 = -32						; size = 4
-$T165871 = -28						; size = 4
-$T165870 = -24						; size = 4
+$T165875 = -48						; size = 12
+$T165874 = -36						; size = 4
+$T165873 = -32						; size = 4
+$T165872 = -28						; size = 4
+$T165871 = -24						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Right$ = 8						; size = 4
@@ -6677,7 +6677,7 @@ __Right$ = 8						; size = 4
 	add	eax, 13					; 0000000dH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T165870[ebp], esp
+	mov	DWORD PTR $T165871[ebp], esp
 	push	eax
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@ABV01@@Z ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -6692,7 +6692,7 @@ __Right$ = 8						; size = 4
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165871[ebp], esp
+	mov	DWORD PTR $T165872[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -6702,7 +6702,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T165872[ebp], esp
+	mov	DWORD PTR $T165873[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -6710,7 +6710,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR tv188[ebp]
 	mov	DWORD PTR tv181[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+12], 3
-	lea	edx, DWORD PTR $T165874[ebp]
+	lea	edx, DWORD PTR $T165875[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -6720,7 +6720,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165873[ebp], esp
+	mov	DWORD PTR $T165874[ebp], esp
 	mov	edx, DWORD PTR tv183[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -6729,7 +6729,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::insert<std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > > >
 	mov	BYTE PTR __$EHRec$[ebp+12], 1
-	lea	ecx, DWORD PTR $T165874[ebp]
+	lea	ecx, DWORD PTR $T165875[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN4@list@2
 __catch$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$0:
@@ -6779,13 +6779,13 @@ __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@Q
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >::~_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >
 __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$3:
-	mov	ecx, DWORD PTR $T165871[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$4:
 	mov	ecx, DWORD PTR $T165872[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$4:
+	mov	ecx, DWORD PTR $T165873[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$5:
-	lea	ecx, DWORD PTR $T165874[ebp]
+	lea	ecx, DWORD PTR $T165875[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -6875,7 +6875,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T165905 = -8						; size = 4
+$T165906 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin, COMDAT
@@ -6889,7 +6889,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165905[ebp], 0
+	mov	DWORD PTR $T165906[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -6904,9 +6904,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	ecx, DWORD PTR $T165905[ebp]
+	mov	ecx, DWORD PTR $T165906[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T165905[ebp], ecx
+	mov	DWORD PTR $T165906[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -6922,7 +6922,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T165910 = -8						; size = 4
+$T165911 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end, COMDAT
@@ -6936,7 +6936,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165910[ebp], 0
+	mov	DWORD PTR $T165911[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -6947,9 +6947,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	eax, DWORD PTR $T165910[ebp]
+	mov	eax, DWORD PTR $T165911[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T165910[ebp], eax
+	mov	DWORD PTR $T165911[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -7538,7 +7538,7 @@ __ehfuncinfo$??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV0
 xdata$x	ENDS
 ;	COMDAT ??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z
 _TEXT	SEGMENT
-$T165941 = -20						; size = 4
+$T165942 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -7566,7 +7566,7 @@ __Right$ = 8						; size = 4
 	add	eax, 13					; 0000000dH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T165941[ebp], esp
+	mov	DWORD PTR $T165942[ebp], esp
 	push	eax
 	call	??0?$allocator@VPathEdge@@@std@@QAE@ABV01@@Z ; std::allocator<PathEdge>::allocator<PathEdge>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -7632,8 +7632,8 @@ _TEXT	SEGMENT
 tv95 = -44						; size = 4
 tv92 = -40						; size = 4
 tv128 = -36						; size = 4
-$T165952 = -32						; size = 12
-$T165951 = -20						; size = 4
+$T165953 = -32						; size = 12
+$T165952 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -7672,7 +7672,7 @@ __Val$ = 8						; size = 4
 	call	??$forward@VPathEdge@@@std@@YA$$QAVPathEdge@@AAV1@@Z ; std::forward<PathEdge>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR $T165952[ebp]
+	lea	ecx, DWORD PTR $T165953[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::begin
@@ -7682,7 +7682,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165951[ebp], esp
+	mov	DWORD PTR $T165952[ebp], esp
 	mov	eax, DWORD PTR tv92[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -7690,7 +7690,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$_Insert_rv@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@$$QAVPathEdge@@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::_Insert_rv<PathEdge>
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T165952[ebp]
+	lea	ecx, DWORD PTR $T165953[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 713  : 		}
@@ -7708,7 +7708,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_front@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAVPathEdge@@@Z$0:
-	lea	ecx, DWORD PTR $T165952[ebp]
+	lea	ecx, DWORD PTR $T165953[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_front@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAVPathEdge@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -7738,8 +7738,8 @@ _TEXT	SEGMENT
 tv95 = -44						; size = 4
 tv92 = -40						; size = 4
 tv128 = -36						; size = 4
-$T165964 = -32						; size = 12
-$T165963 = -20						; size = 4
+$T165965 = -32						; size = 12
+$T165964 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -7778,7 +7778,7 @@ __Val$ = 8						; size = 4
 	call	??$forward@VPathEdge@@@std@@YA$$QAVPathEdge@@AAV1@@Z ; std::forward<PathEdge>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR $T165964[ebp]
+	lea	ecx, DWORD PTR $T165965[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -7788,7 +7788,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T165963[ebp], esp
+	mov	DWORD PTR $T165964[ebp], esp
 	mov	eax, DWORD PTR tv92[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -7796,7 +7796,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$_Insert_rv@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@$$QAVPathEdge@@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::_Insert_rv<PathEdge>
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T165964[ebp]
+	lea	ecx, DWORD PTR $T165965[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 718  : 		}
@@ -7814,7 +7814,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_back@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAVPathEdge@@@Z$0:
-	lea	ecx, DWORD PTR $T165964[ebp]
+	lea	ecx, DWORD PTR $T165965[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_back@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAVPathEdge@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -7905,7 +7905,7 @@ PUBLIC	?_Nextnode@?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@SAA
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T165985 = -8						; size = 4
+$T165986 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ PROC ; std::list<PathEdge,std::allocator<PathEdge> >::begin, COMDAT
@@ -7919,7 +7919,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165985[ebp], 0
+	mov	DWORD PTR $T165986[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -7934,9 +7934,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@1@PBV?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >
-	mov	ecx, DWORD PTR $T165985[ebp]
+	mov	ecx, DWORD PTR $T165986[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T165985[ebp], ecx
+	mov	DWORD PTR $T165986[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -7952,7 +7952,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T165990 = -8						; size = 4
+$T165991 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ PROC ; std::list<PathEdge,std::allocator<PathEdge> >::end, COMDAT
@@ -7966,7 +7966,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T165990[ebp], 0
+	mov	DWORD PTR $T165991[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -7977,9 +7977,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@1@PBV?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >
-	mov	eax, DWORD PTR $T165990[ebp]
+	mov	eax, DWORD PTR $T165991[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T165990[ebp], eax
+	mov	DWORD PTR $T165991[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -8010,8 +8010,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv74 = -40						; size = 4
 tv75 = -36						; size = 4
-$T165995 = -32						; size = 12
-$T165994 = -20						; size = 4
+$T165996 = -32						; size = 12
+$T165995 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?back@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEAAVPathEdge@@XZ PROC ; std::list<PathEdge,std::allocator<PathEdge> >::back, COMDAT
@@ -8043,7 +8043,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 907  : 		return (*(--end()));
 
-	lea	eax, DWORD PTR $T165995[ebp]
+	lea	eax, DWORD PTR $T165996[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -8055,11 +8055,11 @@ __$EHRec$ = -12						; size = 12
 	call	??F?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator--
 	mov	ecx, eax
 	call	??D?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEAAVPathEdge@@XZ ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator*
-	mov	DWORD PTR $T165994[ebp], eax
+	mov	DWORD PTR $T165995[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T165995[ebp]
+	lea	ecx, DWORD PTR $T165996[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T165994[ebp]
+	mov	eax, DWORD PTR $T165995[ebp]
 
 ; 908  : 		}
 
@@ -8076,7 +8076,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?back@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEAAVPathEdge@@XZ$0:
-	lea	ecx, DWORD PTR $T165995[ebp]
+	lea	ecx, DWORD PTR $T165996[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?back@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEAAVPathEdge@@XZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -8129,9 +8129,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T166011 = -40						; size = 4
-$T166006 = -36						; size = 4
-$T166005 = -32						; size = 12
+$T166012 = -40						; size = 4
+$T166007 = -36						; size = 4
+$T166006 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -8163,7 +8163,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166011[ebp], 0
+	mov	DWORD PTR $T166012[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -8191,7 +8191,7 @@ $LN3@erase:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T166005[ebp]
+	lea	edx, DWORD PTR $T166006[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator++
@@ -8203,7 +8203,7 @@ $LN3@erase:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T166005[ebp]
+	lea	ecx, DWORD PTR $T166006[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -8301,7 +8301,7 @@ $LN1@erase:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166006[ebp], esp
+	mov	DWORD PTR $T166007[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -8311,9 +8311,9 @@ $LN1@erase:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T166011[ebp]
+	mov	ecx, DWORD PTR $T166012[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166011[ebp], ecx
+	mov	DWORD PTR $T166012[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -8339,13 +8339,13 @@ __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T166005[ebp]
+	lea	ecx, DWORD PTR $T166006[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T166011[ebp]
+	mov	eax, DWORD PTR $T166012[ebp]
 	and	eax, 1
 	je	$LN10@erase
-	and	DWORD PTR $T166011[ebp], -2		; fffffffeH
+	and	DWORD PTR $T166012[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN10@erase:
@@ -8397,13 +8397,13 @@ tv194 = -84						; size = 4
 tv218 = -80						; size = 4
 tv189 = -76						; size = 4
 tv216 = -72						; size = 4
-$T166031 = -68						; size = 4
-$T166028 = -64						; size = 4
-$T166027 = -60						; size = 12
-$T166026 = -48						; size = 4
-$T166023 = -44						; size = 12
-$T166022 = -32						; size = 12
-$T166021 = -17						; size = 1
+$T166032 = -68						; size = 4
+$T166029 = -64						; size = 4
+$T166028 = -60						; size = 12
+$T166027 = -48						; size = 4
+$T166024 = -44						; size = 12
+$T166023 = -32						; size = 12
+$T166022 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -8434,12 +8434,12 @@ __Last$ = 24						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166031[ebp], 0
+	mov	DWORD PTR $T166032[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1082 : 		if (_First == begin() && _Last == end())
 
-	lea	eax, DWORD PTR $T166022[ebp]
+	lea	eax, DWORD PTR $T166023[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::begin
@@ -8447,9 +8447,9 @@ __Last$ = 24						; size = 12
 	mov	ecx, DWORD PTR tv216[ebp]
 	mov	DWORD PTR tv189[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T166031[ebp]
+	mov	edx, DWORD PTR $T166032[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T166031[ebp], edx
+	mov	DWORD PTR $T166032[ebp], edx
 	mov	eax, DWORD PTR tv189[ebp]
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
@@ -8457,7 +8457,7 @@ __Last$ = 24						; size = 12
 	movzx	ecx, al
 	test	ecx, ecx
 	je	SHORT $LN7@erase@2
-	lea	edx, DWORD PTR $T166023[ebp]
+	lea	edx, DWORD PTR $T166024[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -8465,9 +8465,9 @@ __Last$ = 24						; size = 12
 	mov	eax, DWORD PTR tv218[ebp]
 	mov	DWORD PTR tv194[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	ecx, DWORD PTR $T166031[ebp]
+	mov	ecx, DWORD PTR $T166032[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T166031[ebp], ecx
+	mov	DWORD PTR $T166032[ebp], ecx
 	mov	edx, DWORD PTR tv194[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Last$[ebp]
@@ -8481,24 +8481,24 @@ $LN7@erase@2:
 	mov	DWORD PTR tv94[ebp], 0
 $LN8@erase@2:
 	mov	cl, BYTE PTR tv94[ebp]
-	mov	BYTE PTR $T166021[ebp], cl
+	mov	BYTE PTR $T166022[ebp], cl
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T166031[ebp]
+	mov	edx, DWORD PTR $T166032[ebp]
 	and	edx, 2
 	je	SHORT $LN15@erase@2
-	and	DWORD PTR $T166031[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T166023[ebp]
+	and	DWORD PTR $T166032[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T166024[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN15@erase@2:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T166031[ebp]
+	mov	eax, DWORD PTR $T166032[ebp]
 	and	eax, 1
 	je	SHORT $LN16@erase@2
-	and	DWORD PTR $T166031[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T166022[ebp]
+	and	DWORD PTR $T166032[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T166023[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN16@erase@2:
-	movzx	ecx, BYTE PTR $T166021[ebp]
+	movzx	ecx, BYTE PTR $T166022[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@erase@2
 
@@ -8514,9 +8514,9 @@ $LN16@erase@2:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
-	mov	eax, DWORD PTR $T166031[ebp]
+	mov	eax, DWORD PTR $T166032[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T166031[ebp], eax
+	mov	DWORD PTR $T166032[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -8547,12 +8547,12 @@ $LN2@erase@2:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166026[ebp], esp
+	mov	DWORD PTR $T166027[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv206[ebp], eax
-	lea	ecx, DWORD PTR $T166027[ebp]
+	lea	ecx, DWORD PTR $T166028[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::erase
@@ -8565,7 +8565,7 @@ $LN2@erase@2:
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T166027[ebp]
+	lea	ecx, DWORD PTR $T166028[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@erase@2
 $LN1@erase@2:
@@ -8574,7 +8574,7 @@ $LN1@erase@2:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166028[ebp], esp
+	mov	DWORD PTR $T166029[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -8584,9 +8584,9 @@ $LN1@erase@2:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::_Make_iter
 	mov	DWORD PTR tv212[ebp], eax
-	mov	ecx, DWORD PTR $T166031[ebp]
+	mov	ecx, DWORD PTR $T166032[ebp]
 	or	ecx, 4
-	mov	DWORD PTR $T166031[ebp], ecx
+	mov	DWORD PTR $T166032[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -8627,34 +8627,34 @@ __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@0@Z$2:
-	mov	eax, DWORD PTR $T166031[ebp]
+	mov	eax, DWORD PTR $T166032[ebp]
 	and	eax, 1
 	je	$LN12@erase@2
-	and	DWORD PTR $T166031[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T166022[ebp]
+	and	DWORD PTR $T166032[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T166023[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN12@erase@2:
 	ret	0
 __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@0@Z$3:
-	mov	eax, DWORD PTR $T166031[ebp]
+	mov	eax, DWORD PTR $T166032[ebp]
 	and	eax, 2
 	je	$LN14@erase@2
-	and	DWORD PTR $T166031[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T166023[ebp]
+	and	DWORD PTR $T166032[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T166024[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN14@erase@2:
 	ret	0
 __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@0@Z$4:
-	mov	eax, DWORD PTR $T166031[ebp]
+	mov	eax, DWORD PTR $T166032[ebp]
 	and	eax, 4
 	je	$LN18@erase@2
-	and	DWORD PTR $T166031[ebp], -5		; fffffffbH
+	and	DWORD PTR $T166032[ebp], -5		; fffffffbH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN18@erase@2:
 	ret	0
 __unwindfunclet$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@0@Z$6:
-	lea	ecx, DWORD PTR $T166027[ebp]
+	lea	ecx, DWORD PTR $T166028[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@0@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -8929,8 +8929,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv74 = -40						; size = 4
 tv75 = -36						; size = 4
-$T166072 = -32						; size = 12
-$T166071 = -20						; size = 4
+$T166073 = -32						; size = 12
+$T166072 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?back@?$list@HV?$allocator@H@std@@@std@@QAEAAHXZ PROC	; std::list<int,std::allocator<int> >::back, COMDAT
@@ -8962,7 +8962,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 907  : 		return (*(--end()));
 
-	lea	eax, DWORD PTR $T166072[ebp]
+	lea	eax, DWORD PTR $T166073[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::end
@@ -8974,11 +8974,11 @@ __$EHRec$ = -12						; size = 12
 	call	??F?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<int,std::allocator<int> > >::operator--
 	mov	ecx, eax
 	call	??D?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QBEAAHXZ ; std::_List_iterator<std::_List_val<int,std::allocator<int> > >::operator*
-	mov	DWORD PTR $T166071[ebp], eax
+	mov	DWORD PTR $T166072[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T166072[ebp]
+	lea	ecx, DWORD PTR $T166073[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T166071[ebp]
+	mov	eax, DWORD PTR $T166072[ebp]
 
 ; 908  : 		}
 
@@ -8995,7 +8995,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?back@?$list@HV?$allocator@H@std@@@std@@QAEAAHXZ$0:
-	lea	ecx, DWORD PTR $T166072[ebp]
+	lea	ecx, DWORD PTR $T166073[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?back@?$list@HV?$allocator@H@std@@@std@@QAEAAHXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -9029,7 +9029,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv77 = -36						; size = 4
 tv78 = -32						; size = 4
-$T166082 = -28						; size = 12
+$T166083 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?begin@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ PROC ; CellSpacePartition<NavGraphNode<Trigger<Raven_Bot> *> *>::begin, COMDAT
@@ -9057,7 +9057,7 @@ __$EHRec$ = -12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	lea	eax, DWORD PTR $T166082[ebp]
+	lea	eax, DWORD PTR $T166083[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 20					; 00000014H
@@ -9072,7 +9072,7 @@ __$EHRec$ = -12						; size = 12
 	add	ecx, 40					; 00000028H
 	call	??4?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T166082[ebp]
+	lea	ecx, DWORD PTR $T166083[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 40					; 00000028H
@@ -9090,7 +9090,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?begin@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ$0:
-	lea	ecx, DWORD PTR $T166082[ebp]
+	lea	ecx, DWORD PTR $T166083[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?begin@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -9151,9 +9151,9 @@ _TEXT	SEGMENT
 tv88 = -48						; size = 4
 tv94 = -44						; size = 4
 tv129 = -40						; size = 4
-$T166098 = -36						; size = 4
-$T166095 = -32						; size = 12
-$T166094 = -17						; size = 1
+$T166099 = -36						; size = 4
+$T166096 = -32						; size = 12
+$T166095 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?end@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAE_NXZ PROC ; CellSpacePartition<NavGraphNode<Trigger<Raven_Bot> *> *>::end, COMDAT
@@ -9184,8 +9184,8 @@ __$EHRec$ = -12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166098[ebp], 0
-	lea	eax, DWORD PTR $T166095[ebp]
+	mov	DWORD PTR $T166099[ebp], 0
+	lea	eax, DWORD PTR $T166096[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 20					; 00000014H
@@ -9194,9 +9194,9 @@ __$EHRec$ = -12						; size = 12
 	mov	ecx, DWORD PTR tv129[ebp]
 	mov	DWORD PTR tv94[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	edx, DWORD PTR $T166098[ebp]
+	mov	edx, DWORD PTR $T166099[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T166098[ebp], edx
+	mov	DWORD PTR $T166099[ebp], edx
 	mov	eax, DWORD PTR tv94[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -9216,16 +9216,16 @@ $LN3@end:
 	mov	DWORD PTR tv88[ebp], 1
 $LN4@end:
 	mov	dl, BYTE PTR tv88[ebp]
-	mov	BYTE PTR $T166094[ebp], dl
+	mov	BYTE PTR $T166095[ebp], dl
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	eax, DWORD PTR $T166098[ebp]
+	mov	eax, DWORD PTR $T166099[ebp]
 	and	eax, 1
 	je	SHORT $LN7@end
-	and	DWORD PTR $T166098[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T166095[ebp]
+	and	DWORD PTR $T166099[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T166096[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 $LN7@end:
-	mov	al, BYTE PTR $T166094[ebp]
+	mov	al, BYTE PTR $T166095[ebp]
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
 	pop	ecx
@@ -9239,11 +9239,11 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?end@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAE_NXZ$0:
-	mov	eax, DWORD PTR $T166098[ebp]
+	mov	eax, DWORD PTR $T166099[ebp]
 	and	eax, 1
 	je	$LN6@end
-	and	DWORD PTR $T166098[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T166095[ebp]
+	and	DWORD PTR $T166099[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T166096[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 $LN6@end:
 	ret	0
@@ -9387,10 +9387,10 @@ xdata$x	ENDS
 ;	COMDAT ??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z
 _TEXT	SEGMENT
 tv169 = -44						; size = 4
-$T166113 = -40						; size = 4
-$T166112 = -36						; size = 4
-$T166111 = -32						; size = 8
-$T166110 = -24						; size = 8
+$T166114 = -40						; size = 4
+$T166113 = -36						; size = 4
+$T166112 = -32						; size = 8
+$T166111 = -24						; size = 8
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _G$ = 8							; size = 4
@@ -9433,8 +9433,8 @@ _target$ = 16						; size = 4
 	mov	edx, DWORD PTR _G$[ebp]
 	mov	DWORD PTR [ecx+8], edx
 	fldz
-	fstp	QWORD PTR $T166110[ebp]
-	lea	eax, DWORD PTR $T166110[ebp]
+	fstp	QWORD PTR $T166111[ebp]
+	lea	eax, DWORD PTR $T166111[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _G$[ebp]
 	call	?NumNodes@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QBEHXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::NumNodes
@@ -9444,8 +9444,8 @@ _target$ = 16						; size = 4
 	call	??0?$vector@NV?$allocator@N@std@@@std@@QAE@IABN@Z ; std::vector<double,std::allocator<double> >::vector<double,std::allocator<double> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	fldz
-	fstp	QWORD PTR $T166111[ebp]
-	lea	ecx, DWORD PTR $T166111[ebp]
+	fstp	QWORD PTR $T166112[ebp]
+	lea	ecx, DWORD PTR $T166112[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _G$[ebp]
 	call	?NumNodes@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QBEHXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::NumNodes
@@ -9486,9 +9486,9 @@ _target$ = 16						; size = 4
 	push	52					; 00000034H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T166113[ebp], eax
+	mov	DWORD PTR $T166114[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
-	cmp	DWORD PTR $T166113[ebp], 0
+	cmp	DWORD PTR $T166114[ebp], 0
 	je	SHORT $LN3@Graph_Sear
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
@@ -9497,7 +9497,7 @@ _target$ = 16						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
 	push	ecx
-	mov	ecx, DWORD PTR $T166113[ebp]
+	mov	ecx, DWORD PTR $T166114[ebp]
 	call	??0?$IndexedPriorityQLow@N@@QAE@AAV?$vector@NV?$allocator@N@std@@@std@@H@Z ; IndexedPriorityQLow<double>::IndexedPriorityQLow<double>
 	mov	DWORD PTR tv169[ebp], eax
 	jmp	SHORT $LN4@Graph_Sear
@@ -9505,10 +9505,10 @@ $LN3@Graph_Sear:
 	mov	DWORD PTR tv169[ebp], 0
 $LN4@Graph_Sear:
 	mov	edx, DWORD PTR tv169[ebp]
-	mov	DWORD PTR $T166112[ebp], edx
+	mov	DWORD PTR $T166113[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR $T166112[ebp]
+	mov	ecx, DWORD PTR $T166113[ebp]
 	mov	DWORD PTR [eax+116], ecx
 
 ; 138  : 
@@ -9562,7 +9562,7 @@ __unwindfunclet$??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Tr
 	add	ecx, 92					; 0000005cH
 	jmp	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z$6:
-	mov	eax, DWORD PTR $T166113[ebp]
+	mov	eax, DWORD PTR $T166114[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -9624,7 +9624,7 @@ PUBLIC	??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QA
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?GetSPT@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ
 _TEXT	SEGMENT
-$T166134 = -8						; size = 4
+$T166135 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?GetSPT@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ PROC ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Euclid>::GetSPT, COMDAT
@@ -9638,15 +9638,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166134[ebp], 0
+	mov	DWORD PTR $T166135[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 52					; 00000034H
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@ABV01@@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
-	mov	ecx, DWORD PTR $T166134[ebp]
+	mov	ecx, DWORD PTR $T166135[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166134[ebp], ecx
+	mov	DWORD PTR $T166135[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	add	esp, 8
 	cmp	ebp, esp
@@ -10226,10 +10226,10 @@ xdata$x	ENDS
 ;	COMDAT ??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z
 _TEXT	SEGMENT
 tv173 = -44						; size = 4
-$T166159 = -40						; size = 4
-$T166158 = -36						; size = 4
-$T166157 = -32						; size = 8
-$T166156 = -24						; size = 8
+$T166160 = -40						; size = 4
+$T166159 = -36						; size = 4
+$T166158 = -32						; size = 8
+$T166157 = -24						; size = 8
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _G$ = 8							; size = 4
@@ -10274,8 +10274,8 @@ _bots$ = 20						; size = 16
 	mov	edx, DWORD PTR _G$[ebp]
 	mov	DWORD PTR [ecx+8], edx
 	fldz
-	fstp	QWORD PTR $T166156[ebp]
-	lea	eax, DWORD PTR $T166156[ebp]
+	fstp	QWORD PTR $T166157[ebp]
+	lea	eax, DWORD PTR $T166157[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _G$[ebp]
 	call	?NumNodes@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QBEHXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::NumNodes
@@ -10285,8 +10285,8 @@ _bots$ = 20						; size = 16
 	call	??0?$vector@NV?$allocator@N@std@@@std@@QAE@IABN@Z ; std::vector<double,std::allocator<double> >::vector<double,std::allocator<double> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	fldz
-	fstp	QWORD PTR $T166157[ebp]
-	lea	ecx, DWORD PTR $T166157[ebp]
+	fstp	QWORD PTR $T166158[ebp]
+	lea	ecx, DWORD PTR $T166158[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _G$[ebp]
 	call	?NumNodes@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QBEHXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::NumNodes
@@ -10334,9 +10334,9 @@ _bots$ = 20						; size = 16
 	push	52					; 00000034H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T166159[ebp], eax
+	mov	DWORD PTR $T166160[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
-	cmp	DWORD PTR $T166159[ebp], 0
+	cmp	DWORD PTR $T166160[ebp], 0
 	je	SHORT $LN3@Graph_Sear@2
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -10345,7 +10345,7 @@ _bots$ = 20						; size = 16
 	mov	edx, DWORD PTR _this$[ebp]
 	add	edx, 32					; 00000020H
 	push	edx
-	mov	ecx, DWORD PTR $T166159[ebp]
+	mov	ecx, DWORD PTR $T166160[ebp]
 	call	??0?$IndexedPriorityQLow@N@@QAE@AAV?$vector@NV?$allocator@N@std@@@std@@H@Z ; IndexedPriorityQLow<double>::IndexedPriorityQLow<double>
 	mov	DWORD PTR tv173[ebp], eax
 	jmp	SHORT $LN4@Graph_Sear@2
@@ -10353,10 +10353,10 @@ $LN3@Graph_Sear@2:
 	mov	DWORD PTR tv173[ebp], 0
 $LN4@Graph_Sear@2:
 	mov	eax, DWORD PTR tv173[ebp]
-	mov	DWORD PTR $T166158[ebp], eax
+	mov	DWORD PTR $T166159[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR $T166158[ebp]
+	mov	edx, DWORD PTR $T166159[ebp]
 	mov	DWORD PTR [ecx+116], edx
 
 ; 159  : 
@@ -10415,7 +10415,7 @@ __unwindfunclet$??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Tr
 	add	ecx, 92					; 0000005cH
 	jmp	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$??0?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z$7:
-	mov	eax, DWORD PTR $T166159[ebp]
+	mov	eax, DWORD PTR $T166160[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -10433,7 +10433,7 @@ text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?GetSPT@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ
 _TEXT	SEGMENT
-$T166179 = -8						; size = 4
+$T166180 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?GetSPT@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ PROC ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Bot>::GetSPT, COMDAT
@@ -10447,15 +10447,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166179[ebp], 0
+	mov	DWORD PTR $T166180[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 52					; 00000034H
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@ABV01@@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
-	mov	ecx, DWORD PTR $T166179[ebp]
+	mov	ecx, DWORD PTR $T166180[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166179[ebp], ecx
+	mov	DWORD PTR $T166180[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	add	esp, 8
 	cmp	ebp, esp
@@ -10578,9 +10578,9 @@ xdata$x	ENDS
 ;	COMDAT ??0?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z
 _TEXT	SEGMENT
 tv155 = -36						; size = 4
-$T166187 = -32						; size = 4
-$T166186 = -28						; size = 4
-$T166185 = -24						; size = 8
+$T166188 = -32						; size = 4
+$T166187 = -28						; size = 4
+$T166186 = -24						; size = 8
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _G$ = 8							; size = 4
@@ -10621,8 +10621,8 @@ _target$ = 16						; size = 4
 	mov	edx, DWORD PTR _G$[ebp]
 	mov	DWORD PTR [ecx+8], edx
 	fldz
-	fstp	QWORD PTR $T166185[ebp]
-	lea	eax, DWORD PTR $T166185[ebp]
+	fstp	QWORD PTR $T166186[ebp]
+	lea	eax, DWORD PTR $T166186[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _G$[ebp]
 	call	?NumNodes@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QBEHXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::NumNodes
@@ -10658,9 +10658,9 @@ _target$ = 16						; size = 4
 	push	52					; 00000034H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T166187[ebp], eax
+	mov	DWORD PTR $T166188[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	cmp	DWORD PTR $T166187[ebp], 0
+	cmp	DWORD PTR $T166188[ebp], 0
 	je	SHORT $LN3@Graph_Sear@3
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx+8]
@@ -10669,7 +10669,7 @@ _target$ = 16						; size = 4
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 12					; 0000000cH
 	push	eax
-	mov	ecx, DWORD PTR $T166187[ebp]
+	mov	ecx, DWORD PTR $T166188[ebp]
 	call	??0?$IndexedPriorityQLow@N@@QAE@AAV?$vector@NV?$allocator@N@std@@@std@@H@Z ; IndexedPriorityQLow<double>::IndexedPriorityQLow<double>
 	mov	DWORD PTR tv155[ebp], eax
 	jmp	SHORT $LN4@Graph_Sear@3
@@ -10677,10 +10677,10 @@ $LN3@Graph_Sear@3:
 	mov	DWORD PTR tv155[ebp], 0
 $LN4@Graph_Sear@3:
 	mov	ecx, DWORD PTR tv155[ebp]
-	mov	DWORD PTR $T166186[ebp], ecx
+	mov	DWORD PTR $T166187[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR $T166186[ebp]
+	mov	eax, DWORD PTR $T166187[ebp]
 	mov	DWORD PTR [edx+80], eax
 
 ; 351  : 
@@ -10726,7 +10726,7 @@ __unwindfunclet$??0?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV
 	add	ecx, 52					; 00000034H
 	jmp	??1?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@XZ ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::~vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
 __unwindfunclet$??0?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z$4:
-	mov	eax, DWORD PTR $T166187[ebp]
+	mov	eax, DWORD PTR $T166188[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -10744,7 +10744,7 @@ text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?GetSPT@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ
 _TEXT	SEGMENT
-$T166204 = -8						; size = 4
+$T166205 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?GetSPT@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::GetSPT, COMDAT
@@ -10758,15 +10758,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166204[ebp], 0
+	mov	DWORD PTR $T166205[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 32					; 00000020H
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@ABV01@@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
-	mov	ecx, DWORD PTR $T166204[ebp]
+	mov	ecx, DWORD PTR $T166205[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166204[ebp], ecx
+	mov	DWORD PTR $T166205[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 	add	esp, 8
 	cmp	ebp, esp
@@ -11034,8 +11034,8 @@ xdata$x	ENDS
 ;	COMDAT ??1?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UAE@XZ
 _TEXT	SEGMENT
 tv89 = -28						; size = 4
-$T166232 = -24						; size = 4
-$T166231 = -20						; size = 4
+$T166233 = -24						; size = 4
+$T166232 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UAE@XZ PROC ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Euclid>::~Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Euclid>, COMDAT
@@ -11066,13 +11066,13 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 5
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+116]
-	mov	DWORD PTR $T166232[ebp], edx
-	mov	eax, DWORD PTR $T166232[ebp]
-	mov	DWORD PTR $T166231[ebp], eax
-	cmp	DWORD PTR $T166231[ebp], 0
+	mov	DWORD PTR $T166233[ebp], edx
+	mov	eax, DWORD PTR $T166233[ebp]
+	mov	DWORD PTR $T166232[ebp], eax
+	cmp	DWORD PTR $T166232[ebp], 0
 	je	SHORT $LN3@Graph_Sear@4
 	push	1
-	mov	ecx, DWORD PTR $T166231[ebp]
+	mov	ecx, DWORD PTR $T166232[ebp]
 	call	??_G?$IndexedPriorityQLow@N@@QAEPAXI@Z
 	mov	DWORD PTR tv89[ebp], eax
 	jmp	SHORT $LN1@Graph_Sear@4
@@ -11237,8 +11237,8 @@ xdata$x	ENDS
 ;	COMDAT ??1?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UAE@XZ
 _TEXT	SEGMENT
 tv89 = -28						; size = 4
-$T166254 = -24						; size = 4
-$T166253 = -20						; size = 4
+$T166255 = -24						; size = 4
+$T166254 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UAE@XZ PROC ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Bot>::~Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Bot>, COMDAT
@@ -11269,13 +11269,13 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 5
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+116]
-	mov	DWORD PTR $T166254[ebp], edx
-	mov	eax, DWORD PTR $T166254[ebp]
-	mov	DWORD PTR $T166253[ebp], eax
-	cmp	DWORD PTR $T166253[ebp], 0
+	mov	DWORD PTR $T166255[ebp], edx
+	mov	eax, DWORD PTR $T166255[ebp]
+	mov	DWORD PTR $T166254[ebp], eax
+	cmp	DWORD PTR $T166254[ebp], 0
 	je	SHORT $LN3@Graph_Sear@5
 	push	1
-	mov	ecx, DWORD PTR $T166253[ebp]
+	mov	ecx, DWORD PTR $T166254[ebp]
 	call	??_G?$IndexedPriorityQLow@N@@QAEPAXI@Z
 	mov	DWORD PTR tv89[ebp], eax
 	jmp	SHORT $LN1@Graph_Sear@5
@@ -11404,8 +11404,8 @@ xdata$x	ENDS
 ;	COMDAT ??1?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UAE@XZ
 _TEXT	SEGMENT
 tv85 = -28						; size = 4
-$T166274 = -24						; size = 4
-$T166273 = -20						; size = 4
+$T166275 = -24						; size = 4
+$T166274 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UAE@XZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::~Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >, COMDAT
@@ -11439,13 +11439,13 @@ __$EHRec$ = -12						; size = 12
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+80]
-	mov	DWORD PTR $T166274[ebp], edx
-	mov	eax, DWORD PTR $T166274[ebp]
-	mov	DWORD PTR $T166273[ebp], eax
-	cmp	DWORD PTR $T166273[ebp], 0
+	mov	DWORD PTR $T166275[ebp], edx
+	mov	eax, DWORD PTR $T166275[ebp]
+	mov	DWORD PTR $T166274[ebp], eax
+	cmp	DWORD PTR $T166274[ebp], 0
 	je	SHORT $LN3@Graph_Sear@6
 	push	1
-	mov	ecx, DWORD PTR $T166273[ebp]
+	mov	ecx, DWORD PTR $T166274[ebp]
 	call	??_G?$IndexedPriorityQLow@N@@QAEPAXI@Z
 	mov	DWORD PTR tv85[ebp], eax
 	jmp	SHORT $LN1@Graph_Sear@6
@@ -11857,7 +11857,7 @@ __ehfuncinfo$??0?$vector@NV?$allocator@N@std@@@std@@QAE@IABN@Z DD 019930522H
 xdata$x	ENDS
 ;	COMDAT ??0?$vector@NV?$allocator@N@std@@@std@@QAE@IABN@Z
 _TEXT	SEGMENT
-$T166330 = -20						; size = 4
+$T166331 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Count$ = 8						; size = 4
@@ -11884,7 +11884,7 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166330[ebp], esp
+	mov	DWORD PTR $T166331[ebp], esp
 	call	??0?$allocator@N@std@@QAE@XZ		; std::allocator<double>::allocator<double>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@NV?$allocator@N@std@@@std@@QAE@V?$allocator@N@1@@Z ; std::_Vector_val<double,std::allocator<double> >::_Vector_val<double,std::allocator<double> >
@@ -12100,8 +12100,8 @@ _TEXT	SEGMENT
 tv129 = -36						; size = 4
 tv94 = -32						; size = 4
 tv130 = -28						; size = 4
-$T166359 = -24						; size = 4
-$T166358 = -20						; size = 4
+$T166360 = -24						; size = 4
+$T166359 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -12141,7 +12141,7 @@ __Right$ = 8						; size = 4
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166358[ebp], esp
+	mov	DWORD PTR $T166359[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::end
@@ -12151,7 +12151,7 @@ __Right$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T166359[ebp], esp
+	mov	DWORD PTR $T166360[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::begin
@@ -12180,7 +12180,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??4?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEAAV01@ABV01@@Z$0:
-	mov	ecx, DWORD PTR $T166358[ebp]
+	mov	ecx, DWORD PTR $T166359[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??4?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEAAV01@ABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -12197,7 +12197,7 @@ PUBLIC	?_Nextnode@?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@SAA
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166371 = -8						; size = 4
+$T166372 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::list<Vector2D,std::allocator<Vector2D> >::begin, COMDAT
@@ -12211,7 +12211,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166371[ebp], 0
+	mov	DWORD PTR $T166372[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -12226,9 +12226,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@1@PBV?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::_List_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >
-	mov	ecx, DWORD PTR $T166371[ebp]
+	mov	ecx, DWORD PTR $T166372[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166371[ebp], ecx
+	mov	DWORD PTR $T166372[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -12245,7 +12245,7 @@ PUBLIC	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166376 = -8						; size = 4
+$T166377 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::list<Vector2D,std::allocator<Vector2D> >::begin, COMDAT
@@ -12259,7 +12259,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166376[ebp], 0
+	mov	DWORD PTR $T166377[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -12274,9 +12274,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@1@PBV?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >
-	mov	ecx, DWORD PTR $T166376[ebp]
+	mov	ecx, DWORD PTR $T166377[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166376[ebp], ecx
+	mov	DWORD PTR $T166377[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -12292,7 +12292,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166381 = -8						; size = 4
+$T166382 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::list<Vector2D,std::allocator<Vector2D> >::end, COMDAT
@@ -12306,7 +12306,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166381[ebp], 0
+	mov	DWORD PTR $T166382[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -12317,9 +12317,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@1@PBV?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::_List_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >
-	mov	eax, DWORD PTR $T166381[ebp]
+	mov	eax, DWORD PTR $T166382[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166381[ebp], eax
+	mov	DWORD PTR $T166382[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -12335,7 +12335,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166386 = -8						; size = 4
+$T166387 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ PROC ; std::list<Vector2D,std::allocator<Vector2D> >::end, COMDAT
@@ -12349,7 +12349,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166386[ebp], 0
+	mov	DWORD PTR $T166387[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -12360,9 +12360,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@1@PBV?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >
-	mov	eax, DWORD PTR $T166386[ebp]
+	mov	eax, DWORD PTR $T166387[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166386[ebp], eax
+	mov	DWORD PTR $T166387[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -12425,7 +12425,7 @@ __ehfuncinfo$??0?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V?$allocator@UVector2D@@@1@@Z
 _TEXT	SEGMENT
-$T166392 = -20						; size = 4
+$T166393 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -12451,7 +12451,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166392[ebp], esp
+	mov	DWORD PTR $T166393[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@UVector2D@@@std@@QAE@ABV01@@Z ; std::allocator<Vector2D>::allocator<Vector2D>
@@ -12727,7 +12727,7 @@ PUBLIC	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRave
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166422 = -8						; size = 4
+$T166423 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin, COMDAT
@@ -12741,7 +12741,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166422[ebp], 0
+	mov	DWORD PTR $T166423[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -12756,9 +12756,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	ecx, DWORD PTR $T166422[ebp]
+	mov	ecx, DWORD PTR $T166423[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T166422[ebp], ecx
+	mov	DWORD PTR $T166423[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -12774,7 +12774,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166427 = -8						; size = 4
+$T166428 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end, COMDAT
@@ -12788,7 +12788,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166427[ebp], 0
+	mov	DWORD PTR $T166428[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -12799,9 +12799,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	eax, DWORD PTR $T166427[ebp]
+	mov	eax, DWORD PTR $T166428[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166427[ebp], eax
+	mov	DWORD PTR $T166428[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -12864,7 +12864,7 @@ __ehfuncinfo$??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z
 _TEXT	SEGMENT
-$T166433 = -20						; size = 4
+$T166434 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -12890,7 +12890,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166433[ebp], esp
+	mov	DWORD PTR $T166434[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@ABV01@@Z ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
@@ -13409,12 +13409,12 @@ tv181 = -80						; size = 4
 tv194 = -76						; size = 4
 tv178 = -72						; size = 4
 tv193 = -68						; size = 4
-$T166475 = -64						; size = 12
-$T166474 = -52						; size = 4
-$T166473 = -48						; size = 12
-$T166472 = -36						; size = 4
-$T166471 = -32						; size = 12
-$T166470 = -20						; size = 4
+$T166476 = -64						; size = 12
+$T166475 = -52						; size = 4
+$T166474 = -48						; size = 12
+$T166473 = -36						; size = 4
+$T166472 = -32						; size = 12
+$T166471 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -13470,7 +13470,7 @@ __Right$ = 8						; size = 4
 	mov	edx, DWORD PTR __Right$[ebp]
 	mov	eax, DWORD PTR [edx+8]
 	push	eax
-	lea	ecx, DWORD PTR $T166471[ebp]
+	lea	ecx, DWORD PTR $T166472[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::end
@@ -13480,7 +13480,7 @@ __Right$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166470[ebp], esp
+	mov	DWORD PTR $T166471[ebp], esp
 	mov	eax, DWORD PTR tv178[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -13488,7 +13488,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR tv194[ebp]
 	mov	DWORD PTR tv181[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	edx, DWORD PTR $T166473[ebp]
+	lea	edx, DWORD PTR $T166474[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::begin
@@ -13498,7 +13498,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166472[ebp], esp
+	mov	DWORD PTR $T166473[ebp], esp
 	mov	edx, DWORD PTR tv183[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -13508,7 +13508,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR __Right$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T166475[ebp]
+	lea	edx, DWORD PTR $T166476[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::begin
@@ -13518,7 +13518,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166474[ebp], esp
+	mov	DWORD PTR $T166475[ebp], esp
 	mov	edx, DWORD PTR tv188[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -13527,13 +13527,13 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z ; std::list<PathEdge,std::allocator<PathEdge> >::_Splice
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	lea	ecx, DWORD PTR $T166475[ebp]
+	lea	ecx, DWORD PTR $T166476[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T166473[ebp]
+	lea	ecx, DWORD PTR $T166474[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T166471[ebp]
+	lea	ecx, DWORD PTR $T166472[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN3@Assign_rv:
 
@@ -13554,19 +13554,19 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Assign_rv@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAV12@@Z$0:
-	lea	ecx, DWORD PTR $T166471[ebp]
+	lea	ecx, DWORD PTR $T166472[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAV12@@Z$1:
-	mov	ecx, DWORD PTR $T166470[ebp]
+	mov	ecx, DWORD PTR $T166471[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAV12@@Z$2:
-	lea	ecx, DWORD PTR $T166473[ebp]
+	lea	ecx, DWORD PTR $T166474[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAV12@@Z$3:
-	mov	ecx, DWORD PTR $T166472[ebp]
+	mov	ecx, DWORD PTR $T166473[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAV12@@Z$4:
-	lea	ecx, DWORD PTR $T166475[ebp]
+	lea	ecx, DWORD PTR $T166476[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Assign_rv@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAV12@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -13595,7 +13595,7 @@ __ehfuncinfo$?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@Q
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T166492 = -20						; size = 4
+$T166493 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -13620,7 +13620,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166492[ebp], 0
+	mov	DWORD PTR $T166493[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -13631,9 +13631,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@1@PBV?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::_List_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >
-	mov	edx, DWORD PTR $T166492[ebp]
+	mov	edx, DWORD PTR $T166493[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T166492[ebp], edx
+	mov	DWORD PTR $T166493[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -13657,10 +13657,10 @@ __unwindfunclet$?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T166492[ebp]
+	mov	eax, DWORD PTR $T166493[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter
-	and	DWORD PTR $T166492[ebp], -2		; fffffffeH
+	and	DWORD PTR $T166493[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter:
@@ -14121,7 +14121,7 @@ __ehfuncinfo$??0?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@V
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@V?$allocator@VPathEdge@@@1@@Z
 _TEXT	SEGMENT
-$T166526 = -20						; size = 4
+$T166527 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -14147,7 +14147,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166526[ebp], esp
+	mov	DWORD PTR $T166527[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@VPathEdge@@@std@@QAE@ABV01@@Z ; std::allocator<PathEdge>::allocator<PathEdge>
@@ -14642,7 +14642,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPat
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T166567 = -40						; size = 4
+$T166568 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -14674,7 +14674,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166567[ebp], 0
+	mov	DWORD PTR $T166568[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -14695,9 +14695,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T166567[ebp]
+	mov	edx, DWORD PTR $T166568[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T166567[ebp], edx
+	mov	DWORD PTR $T166568[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -14741,10 +14741,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@V
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T166567[ebp]
+	mov	eax, DWORD PTR $T166568[ebp]
 	and	eax, 1
 	je	$LN5@operator@10
-	and	DWORD PTR $T166567[ebp], -2		; fffffffeH
+	and	DWORD PTR $T166568[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@10:
@@ -15051,7 +15051,7 @@ PUBLIC	??0?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAU
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166591 = -8						; size = 4
+$T166592 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ PROC ; std::list<int,std::allocator<int> >::end, COMDAT
@@ -15065,7 +15065,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166591[ebp], 0
+	mov	DWORD PTR $T166592[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -15076,9 +15076,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@HV?$allocator@H@std@@@1@PBV?$_List_val@HV?$allocator@H@std@@@1@@Z ; std::_List_iterator<std::_List_val<int,std::allocator<int> > >::_List_iterator<std::_List_val<int,std::allocator<int> > >
-	mov	eax, DWORD PTR $T166591[ebp]
+	mov	eax, DWORD PTR $T166592[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166591[ebp], eax
+	mov	DWORD PTR $T166592[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -15207,7 +15207,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRave
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ?begin@?$vector@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166607 = -8						; size = 4
+$T166608 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ PROC ; std::vector<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> >::begin, COMDAT
@@ -15221,7 +15221,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166607[ebp], 0
+	mov	DWORD PTR $T166608[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -15232,9 +15232,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@PAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::_Vector_iterator<std::_Vector_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >
-	mov	eax, DWORD PTR $T166607[ebp]
+	mov	eax, DWORD PTR $T166608[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166607[ebp], eax
+	mov	DWORD PTR $T166608[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -15250,7 +15250,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166612 = -8						; size = 4
+$T166613 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ PROC ; std::vector<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> >::end, COMDAT
@@ -15264,7 +15264,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166612[ebp], 0
+	mov	DWORD PTR $T166613[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -15275,9 +15275,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@PAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::_Vector_iterator<std::_Vector_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >
-	mov	eax, DWORD PTR $T166612[ebp]
+	mov	eax, DWORD PTR $T166613[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166612[ebp], eax
+	mov	DWORD PTR $T166613[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -15419,7 +15419,7 @@ __ehfuncinfo$??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@s
 xdata$x	ENDS
 ;	COMDAT ??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@I@Z
 _TEXT	SEGMENT
-$T166622 = -20						; size = 4
+$T166623 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Count$ = 8						; size = 4
@@ -15445,7 +15445,7 @@ __Count$ = 8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166622[ebp], esp
+	mov	DWORD PTR $T166623[ebp], esp
 	call	??0?$allocator@PBVNavGraphEdge@@@std@@QAE@XZ ; std::allocator<NavGraphEdge const *>::allocator<NavGraphEdge const *>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@V?$allocator@PBVNavGraphEdge@@@1@@Z ; std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
@@ -15530,9 +15530,9 @@ tv136 = -48						; size = 4
 tv179 = -44						; size = 4
 tv176 = -40						; size = 4
 tv69 = -36						; size = 4
-$T166634 = -32						; size = 4
-$T166633 = -28						; size = 4
-$T166632 = -24						; size = 4
+$T166635 = -32						; size = 4
+$T166634 = -28						; size = 4
+$T166633 = -24						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Right$ = 8						; size = 4
@@ -15572,7 +15572,7 @@ __Right$ = 8						; size = 4
 	add	eax, 16					; 00000010H
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166632[ebp], esp
+	mov	DWORD PTR $T166633[ebp], esp
 	push	eax
 	call	??0?$allocator@PBVNavGraphEdge@@@std@@QAE@ABV01@@Z ; std::allocator<NavGraphEdge const *>::allocator<NavGraphEdge const *>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -15602,7 +15602,7 @@ __Right$ = 8						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166633[ebp], esp
+	mov	DWORD PTR $T166634[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::end
@@ -15612,7 +15612,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T166634[ebp], esp
+	mov	DWORD PTR $T166635[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::begin
@@ -15672,7 +15672,7 @@ __unwindfunclet$??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@XZ ; std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::~_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
 __unwindfunclet$??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@ABV01@@Z$3:
-	mov	ecx, DWORD PTR $T166633[ebp]
+	mov	ecx, DWORD PTR $T166634[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@ABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -16668,7 +16668,7 @@ __ehfuncinfo$??0?$_Vector_val@NV?$allocator@N@std@@@std@@QAE@V?$allocator@N@1@@Z
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@NV?$allocator@N@std@@@std@@QAE@V?$allocator@N@1@@Z
 _TEXT	SEGMENT
-$T166720 = -36						; size = 8
+$T166721 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -16726,7 +16726,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T166720[ebp]
+	lea	ecx, DWORD PTR $T166721[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -17066,7 +17066,7 @@ PUBLIC	??0?$allocator@H@std@@QAE@XZ			; std::allocator<int>::allocator<int>
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T166753 = -8						; size = 4
+$T166754 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ PROC	; std::vector<int,std::allocator<int> >::vector<int,std::allocator<int> >, COMDAT
 ; _this$ = ecx
@@ -17081,7 +17081,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T166753[ebp], esp
+	mov	DWORD PTR $T166754[ebp], esp
 	call	??0?$allocator@H@std@@QAE@XZ		; std::allocator<int>::allocator<int>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z ; std::_Vector_val<int,std::allocator<int> >::_Vector_val<int,std::allocator<int> >
@@ -17605,7 +17605,7 @@ __ehfuncinfo$??0?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@V?$allocator@UVector2D@@@1@@Z
 _TEXT	SEGMENT
-$T166781 = -36						; size = 8
+$T166782 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -17668,7 +17668,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T166781[ebp]
+	lea	ecx, DWORD PTR $T166782[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -18145,7 +18145,7 @@ __ehfuncinfo$??0?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z
 _TEXT	SEGMENT
-$T166816 = -36						; size = 8
+$T166817 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -18208,7 +18208,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T166816[ebp]
+	lea	ecx, DWORD PTR $T166817[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -18654,17 +18654,17 @@ tv276 = -140						; size = 4
 tv130 = -136						; size = 4
 tv273 = -132						; size = 4
 tv139 = -128						; size = 4
-$T166863 = -124						; size = 12
-$T166862 = -112						; size = 4
-$T166861 = -108						; size = 4
-$T166860 = -104						; size = 12
-$T166859 = -92						; size = 4
-$T166858 = -88						; size = 4
-$T166857 = -84						; size = 4
-$T166856 = -80						; size = 4
-__Next$152566 = -72					; size = 12
-__Iter$152560 = -52					; size = 12
-__Next$152556 = -32					; size = 12
+$T166864 = -124						; size = 12
+$T166863 = -112						; size = 4
+$T166862 = -108						; size = 4
+$T166861 = -104						; size = 12
+$T166860 = -92						; size = 4
+$T166859 = -88						; size = 4
+$T166858 = -84						; size = 4
+$T166857 = -80						; size = 4
+__Next$152567 = -72					; size = 12
+__Iter$152561 = -52					; size = 12
+__Next$152557 = -32					; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -18741,13 +18741,13 @@ $LN9@Splice:
 
 	lea	ecx, DWORD PTR __First$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$152556[ebp]
+	lea	ecx, DWORD PTR __Next$152557[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 $LN6@Splice:
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR __Next$152556[ebp]
+	lea	ecx, DWORD PTR __Next$152557[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator!=
 	movzx	eax, al
 	test	eax, eax
@@ -18757,15 +18757,15 @@ $LN6@Splice:
 ; 1444 : 					const_iterator _Iter = _Next++;
 
 	push	0
-	lea	ecx, DWORD PTR __Iter$152560[ebp]
+	lea	ecx, DWORD PTR __Iter$152561[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$152556[ebp]
+	lea	ecx, DWORD PTR __Next$152557[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator++
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 
 ; 1445 : 					_Orphan_ptr(_Right, _Iter._Ptr);
 
-	mov	edx, DWORD PTR __Iter$152560[ebp+8]
+	mov	edx, DWORD PTR __Iter$152561[ebp+8]
 	push	edx
 	mov	eax, DWORD PTR __Right$[ebp]
 	push	eax
@@ -18776,18 +18776,18 @@ $LN6@Splice:
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Iter$152560[ebp]
+	lea	ecx, DWORD PTR __Iter$152561[ebp]
 	call	?_Adopt@_Iterator_base12@std@@QAEXPBU_Container_base12@2@@Z ; std::_Iterator_base12::_Adopt
 
 ; 1447 : 					}
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR __Iter$152560[ebp]
+	lea	ecx, DWORD PTR __Iter$152561[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN6@Splice
 $LN5@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR __Next$152556[ebp]
+	lea	ecx, DWORD PTR __Next$152557[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN7@Splice:
 
@@ -18797,7 +18797,7 @@ $LN7@Splice:
 	push	edx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166856[ebp], esp
+	mov	DWORD PTR $T166857[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -18807,7 +18807,7 @@ $LN7@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166857[ebp], esp
+	mov	DWORD PTR $T166858[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -18819,7 +18819,7 @@ $LN7@Splice:
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166858[ebp], esp
+	mov	DWORD PTR $T166859[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -18845,17 +18845,17 @@ $LN8@Splice:
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Next$152566[ebp]
+	lea	ecx, DWORD PTR __Next$152567[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
 	jmp	SHORT $LN3@Splice
 $LN2@Splice:
-	lea	ecx, DWORD PTR __Next$152566[ebp]
+	lea	ecx, DWORD PTR __Next$152567[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator++
 $LN3@Splice:
 	lea	ecx, DWORD PTR __Last$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$152566[ebp]
+	lea	ecx, DWORD PTR __Next$152567[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator!=
 	movzx	edx, al
 	test	edx, edx
@@ -18863,34 +18863,34 @@ $LN3@Splice:
 
 ; 1459 : 				insert(_Where, (_Ty &&)*_Next);
 
-	lea	ecx, DWORD PTR __Next$152566[ebp]
+	lea	ecx, DWORD PTR __Next$152567[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QBEABVPathEdge@@XZ ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator*
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166859[ebp], esp
+	mov	DWORD PTR $T166860[ebp], esp
 	lea	eax, DWORD PTR __Where$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv284[ebp], eax
-	lea	ecx, DWORD PTR $T166860[ebp]
+	lea	ecx, DWORD PTR $T166861[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@$$QAVPathEdge@@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::insert<PathEdge>
 	mov	DWORD PTR tv215[ebp], eax
-	lea	ecx, DWORD PTR $T166860[ebp]
+	lea	ecx, DWORD PTR $T166861[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@Splice
 $LN1@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR __Next$152566[ebp]
+	lea	ecx, DWORD PTR __Next$152567[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 1460 : 			_Right.erase(_First, _Last);
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166861[ebp], esp
+	mov	DWORD PTR $T166862[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -18900,18 +18900,18 @@ $LN1@Splice:
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166862[ebp], esp
+	mov	DWORD PTR $T166863[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv291[ebp], eax
-	lea	eax, DWORD PTR $T166863[ebp]
+	lea	eax, DWORD PTR $T166864[ebp]
 	push	eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?erase@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@0@Z ; std::list<PathEdge,std::allocator<PathEdge> >::erase
 	mov	DWORD PTR tv288[ebp], eax
-	lea	ecx, DWORD PTR $T166863[ebp]
+	lea	ecx, DWORD PTR $T166864[ebp]
 	call	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN4@Splice:
 
@@ -18992,22 +18992,22 @@ __unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@Q
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$3:
-	lea	ecx, DWORD PTR __Next$152556[ebp]
+	lea	ecx, DWORD PTR __Next$152557[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$4:
-	lea	ecx, DWORD PTR __Iter$152560[ebp]
+	lea	ecx, DWORD PTR __Iter$152561[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$5:
-	mov	ecx, DWORD PTR $T166856[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$6:
 	mov	ecx, DWORD PTR $T166857[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$6:
+	mov	ecx, DWORD PTR $T166858[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$8:
-	lea	ecx, DWORD PTR __Next$152566[ebp]
+	lea	ecx, DWORD PTR __Next$152567[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z$11:
-	mov	ecx, DWORD PTR $T166861[ebp]
+	mov	ecx, DWORD PTR $T166862[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Splice@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@AAV12@00I@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -19036,7 +19036,7 @@ __ehfuncinfo$??0?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@V
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@V?$allocator@VPathEdge@@@1@@Z
 _TEXT	SEGMENT
-$T166891 = -36						; size = 8
+$T166892 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -19099,7 +19099,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T166891[ebp]
+	lea	ecx, DWORD PTR $T166892[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -20305,7 +20305,7 @@ PUBLIC	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166960 = -8						; size = 4
+$T166961 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ PROC ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::begin, COMDAT
@@ -20319,7 +20319,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166960[ebp], 0
+	mov	DWORD PTR $T166961[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Myfirst, this));
 
@@ -20330,9 +20330,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@PAPBVNavGraphEdge@@PBU_Container_base12@1@@Z ; std::_Vector_const_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >::_Vector_const_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >
-	mov	eax, DWORD PTR $T166960[ebp]
+	mov	eax, DWORD PTR $T166961[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166960[ebp], eax
+	mov	DWORD PTR $T166961[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -20348,7 +20348,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T166965 = -8						; size = 4
+$T166966 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ PROC ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::end, COMDAT
@@ -20362,7 +20362,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T166965[ebp], 0
+	mov	DWORD PTR $T166966[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Mylast, this));
 
@@ -20373,9 +20373,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@PAPBVNavGraphEdge@@PBU_Container_base12@1@@Z ; std::_Vector_const_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >::_Vector_const_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >
-	mov	eax, DWORD PTR $T166965[ebp]
+	mov	eax, DWORD PTR $T166966[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T166965[ebp], eax
+	mov	DWORD PTR $T166966[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -20431,12 +20431,12 @@ tv193 = -88						; size = 4
 tv204 = -84						; size = 4
 tv191 = -80						; size = 4
 tv203 = -76						; size = 4
-$T166974 = -72						; size = 12
-$T166973 = -60						; size = 12
-$T166972 = -48						; size = 12
-$T166971 = -36						; size = 4
-$T166970 = -32						; size = 12
-$T166969 = -20						; size = 4
+$T166975 = -72						; size = 12
+$T166974 = -60						; size = 12
+$T166973 = -48						; size = 12
+$T166972 = -36						; size = 4
+$T166971 = -32						; size = 12
+$T166970 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Newsize$ = 8						; size = 4
@@ -20475,7 +20475,7 @@ __Newsize$ = 8						; size = 4
 
 ; 859  : 			erase(begin() + _Newsize, end());
 
-	lea	eax, DWORD PTR $T166970[ebp]
+	lea	eax, DWORD PTR $T166971[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::end
@@ -20485,7 +20485,7 @@ __Newsize$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166969[ebp], esp
+	mov	DWORD PTR $T166970[ebp], esp
 	mov	edx, DWORD PTR tv191[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -20495,9 +20495,9 @@ __Newsize$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T166973[ebp]
+	lea	edx, DWORD PTR $T166974[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T166972[ebp]
+	lea	eax, DWORD PTR $T166973[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::begin
@@ -20513,27 +20513,27 @@ __Newsize$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T166971[ebp], esp
+	mov	DWORD PTR $T166972[ebp], esp
 	mov	eax, DWORD PTR tv198[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv201[ebp], eax
-	lea	ecx, DWORD PTR $T166974[ebp]
+	lea	ecx, DWORD PTR $T166975[ebp]
 	push	ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@0@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::erase
 	mov	DWORD PTR tv194[ebp], eax
-	lea	ecx, DWORD PTR $T166974[ebp]
+	lea	ecx, DWORD PTR $T166975[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T166973[ebp]
+	lea	ecx, DWORD PTR $T166974[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T166972[ebp]
+	lea	ecx, DWORD PTR $T166973[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T166970[ebp]
+	lea	ecx, DWORD PTR $T166971[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN4@resize
 $LN3@resize:
@@ -20604,16 +20604,16 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?resize@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEXI@Z$0:
-	lea	ecx, DWORD PTR $T166970[ebp]
+	lea	ecx, DWORD PTR $T166971[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?resize@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEXI@Z$1:
-	mov	ecx, DWORD PTR $T166969[ebp]
+	mov	ecx, DWORD PTR $T166970[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?resize@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEXI@Z$2:
-	lea	ecx, DWORD PTR $T166972[ebp]
+	lea	ecx, DWORD PTR $T166973[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?resize@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEXI@Z$3:
-	lea	ecx, DWORD PTR $T166973[ebp]
+	lea	ecx, DWORD PTR $T166974[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?resize@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEXI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -20862,7 +20862,7 @@ __ehfuncinfo$??0?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@st
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@V?$allocator@PBVNavGraphEdge@@@1@@Z
 _TEXT	SEGMENT
-$T166995 = -36						; size = 8
+$T166996 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -20920,7 +20920,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T166995[ebp]
+	lea	ecx, DWORD PTR $T166996[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -22270,7 +22270,7 @@ __ehfuncinfo$??0?$_Vector_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z
 _TEXT	SEGMENT
-$T167080 = -36						; size = 8
+$T167081 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -22328,7 +22328,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T167080[ebp]
+	lea	ecx, DWORD PTR $T167081[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -23476,7 +23476,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNav
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T167171 = -8						; size = 4
+$T167172 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ PROC ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::begin, COMDAT
@@ -23490,7 +23490,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167171[ebp], 0
+	mov	DWORD PTR $T167172[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -23501,9 +23501,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@PAPBVNavGraphEdge@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >::_Vector_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >
-	mov	eax, DWORD PTR $T167171[ebp]
+	mov	eax, DWORD PTR $T167172[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167171[ebp], eax
+	mov	DWORD PTR $T167172[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -23519,7 +23519,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T167176 = -8						; size = 4
+$T167177 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@XZ PROC ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::end, COMDAT
@@ -23533,7 +23533,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167176[ebp], 0
+	mov	DWORD PTR $T167177[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -23544,9 +23544,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@PAPBVNavGraphEdge@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >::_Vector_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >
-	mov	eax, DWORD PTR $T167176[ebp]
+	mov	eax, DWORD PTR $T167177[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167176[ebp], eax
+	mov	DWORD PTR $T167177[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -23636,11 +23636,11 @@ tv271 = -92						; size = 4
 tv270 = -88						; size = 4
 tv267 = -84						; size = 4
 tv266 = -80						; size = 4
-$T167193 = -76						; size = 4
-$T167184 = -72						; size = 4
-$T167183 = -68						; size = 4
-$T167182 = -64						; size = 4
-__Ptr$153664 = -60					; size = 4
+$T167194 = -76						; size = 4
+$T167185 = -72						; size = 4
+$T167184 = -68						; size = 4
+$T167183 = -64						; size = 4
+__Ptr$153665 = -60					; size = 4
 __Last$ = -52						; size = 12
 __First$ = -32						; size = 12
 _this$ = -16						; size = 4
@@ -23673,14 +23673,14 @@ __Last_arg$ = 24					; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167193[ebp], 0
+	mov	DWORD PTR $T167194[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1191 : 		iterator _First = _Make_iter(_First_arg);
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167182[ebp], esp
+	mov	DWORD PTR $T167183[ebp], esp
 	lea	eax, DWORD PTR __First_arg$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -23696,7 +23696,7 @@ __Last_arg$ = 24					; size = 12
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167183[ebp], esp
+	mov	DWORD PTR $T167184[ebp], esp
 	lea	edx, DWORD PTR __Last_arg$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -23767,7 +23767,7 @@ $LN2@erase@3:
 	push	eax
 	call	??$_Move@PAPBVNavGraphEdge@@PAPBV1@@std@@YAPAPBVNavGraphEdge@@PAPBV1@00@Z ; std::_Move<NavGraphEdge const * *,NavGraphEdge const * *>
 	add	esp, 12					; 0000000cH
-	mov	DWORD PTR __Ptr$153664[ebp], eax
+	mov	DWORD PTR __Ptr$153665[ebp], eax
 
 ; 1203 : 			_Orphan_range(_VIPTR(_First), this->_Mylast);
 
@@ -23790,7 +23790,7 @@ $LN2@erase@3:
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	eax, DWORD PTR __Ptr$153664[ebp]
+	mov	eax, DWORD PTR __Ptr$153665[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Destroy@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@IAEXPAPBVNavGraphEdge@@0@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::_Destroy
@@ -23798,7 +23798,7 @@ $LN2@erase@3:
 ; 1211 : 			this->_Mylast = _Ptr;
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Ptr$153664[ebp]
+	mov	edx, DWORD PTR __Ptr$153665[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN3@erase@3:
 
@@ -23807,7 +23807,7 @@ $LN3@erase@3:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167184[ebp], esp
+	mov	DWORD PTR $T167185[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -23817,9 +23817,9 @@ $LN3@erase@3:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::_Make_iter
 	mov	DWORD PTR tv275[ebp], eax
-	mov	edx, DWORD PTR $T167193[ebp]
+	mov	edx, DWORD PTR $T167194[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167193[ebp], edx
+	mov	DWORD PTR $T167194[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
@@ -23895,10 +23895,10 @@ __unwindfunclet$?erase@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@
 	lea	ecx, DWORD PTR __Last$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@0@Z$7:
-	mov	eax, DWORD PTR $T167193[ebp]
+	mov	eax, DWORD PTR $T167194[ebp]
 	and	eax, 1
 	je	$LN14@erase@3
-	and	DWORD PTR $T167193[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167194[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 $LN14@erase@3:
@@ -24533,7 +24533,7 @@ __ehfuncinfo$??H?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@
 xdata$x	ENDS
 ;	COMDAT ??H?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QBE?AV01@H@Z
 _TEXT	SEGMENT
-$T167251 = -40						; size = 4
+$T167252 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -24565,7 +24565,7 @@ __Off$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167251[ebp], 0
+	mov	DWORD PTR $T167252[ebp], 0
 
 ; 364  : 		_Myiter _Tmp = *this;
 
@@ -24584,9 +24584,9 @@ __Off$ = 12						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T167251[ebp]
+	mov	edx, DWORD PTR $T167252[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167251[ebp], edx
+	mov	DWORD PTR $T167252[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
@@ -24631,10 +24631,10 @@ __unwindfunclet$??H?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocat
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??H?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QBE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T167251[ebp]
+	mov	eax, DWORD PTR $T167252[ebp]
 	and	eax, 1
 	je	$LN5@operator@21
-	and	DWORD PTR $T167251[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167252[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@21:
@@ -24973,8 +24973,8 @@ __ehfuncinfo$?reserve@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@s
 xdata$x	ENDS
 ;	COMDAT ?reserve@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEXI@Z
 _TEXT	SEGMENT
-__Size$154085 = -28					; size = 4
-__Ptr$154078 = -24					; size = 4
+__Size$154086 = -28					; size = 4
+__Ptr$154079 = -24					; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Count$ = 8						; size = 4
@@ -25034,7 +25034,7 @@ $LN5@reserve:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?allocate@?$allocator@PBVNavGraphEdge@@@std@@QAEPAPBVNavGraphEdge@@I@Z ; std::allocator<NavGraphEdge const *>::allocate
-	mov	DWORD PTR __Ptr$154078[ebp], eax
+	mov	DWORD PTR __Ptr$154079[ebp], eax
 
 ; 752  : 
 ; 753  : 			_TRY_BEGIN
@@ -25043,7 +25043,7 @@ $LN5@reserve:
 
 ; 754  : 			_Umove(this->_Myfirst, this->_Mylast, _Ptr);
 
-	mov	ecx, DWORD PTR __Ptr$154078[ebp]
+	mov	ecx, DWORD PTR __Ptr$154079[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
@@ -25061,7 +25061,7 @@ __catch$?reserve@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Ptr$154078[ebp]
+	mov	ecx, DWORD PTR __Ptr$154079[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -25087,7 +25087,7 @@ __tryend$?reserve@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?size@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBEIXZ ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::size
-	mov	DWORD PTR __Size$154085[ebp], eax
+	mov	DWORD PTR __Size$154086[ebp], eax
 
 ; 761  : 			if (this->_Myfirst != 0)
 
@@ -25134,15 +25134,15 @@ $LN1@reserve:
 ; 769  : 			this->_Myend = _Ptr + _Count;
 
 	mov	eax, DWORD PTR __Count$[ebp]
-	mov	ecx, DWORD PTR __Ptr$154078[ebp]
+	mov	ecx, DWORD PTR __Ptr$154079[ebp]
 	lea	edx, DWORD PTR [ecx+eax*4]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], edx
 
 ; 770  : 			this->_Mylast = _Ptr + _Size;
 
-	mov	ecx, DWORD PTR __Size$154085[ebp]
-	mov	edx, DWORD PTR __Ptr$154078[ebp]
+	mov	ecx, DWORD PTR __Size$154086[ebp]
+	mov	edx, DWORD PTR __Ptr$154079[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+8], eax
@@ -25150,7 +25150,7 @@ $LN1@reserve:
 ; 771  : 			this->_Myfirst = _Ptr;
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Ptr$154078[ebp]
+	mov	eax, DWORD PTR __Ptr$154079[ebp]
 	mov	DWORD PTR [edx+4], eax
 $LN7@reserve:
 
@@ -25229,7 +25229,7 @@ __ehfuncinfo$?_Make_iter@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T167308 = -20						; size = 4
+$T167309 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -25254,7 +25254,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167308[ebp], 0
+	mov	DWORD PTR $T167309[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -25265,9 +25265,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@PAPBVNavGraphEdge@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >::_Vector_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >
-	mov	edx, DWORD PTR $T167308[ebp]
+	mov	edx, DWORD PTR $T167309[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167308[ebp], edx
+	mov	DWORD PTR $T167309[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
@@ -25291,10 +25291,10 @@ __unwindfunclet$?_Make_iter@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEd
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T167308[ebp]
+	mov	eax, DWORD PTR $T167309[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter@2
-	and	DWORD PTR $T167308[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167309[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter@2:
@@ -26307,13 +26307,13 @@ _idx$ = 8						; size = 4
 	jge	SHORT $LN3@GetNode
 	cmp	DWORD PTR _idx$[ebp], 0
 	jl	SHORT $LN3@GetNode
-	mov	eax, OFFSET $SG154810
+	mov	eax, OFFSET $SG154811
 	test	eax, eax
 	jne	SHORT $LN4@GetNode
 $LN3@GetNode:
 	push	449					; 000001c1H
-	push	OFFSET $SG154811
 	push	OFFSET $SG154812
+	push	OFFSET $SG154813
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN4@GetNode:
@@ -26372,11 +26372,11 @@ tv153 = -68						; size = 4
 tv160 = -64						; size = 4
 tv149 = -60						; size = 4
 tv159 = -56						; size = 4
-$T167387 = -52						; size = 12
-$T167386 = -40						; size = 12
-$T167385 = -28						; size = 4
-$T167384 = -24						; size = 4
-$T167383 = -17						; size = 1
+$T167388 = -52						; size = 12
+$T167387 = -40						; size = 12
+$T167386 = -28						; size = 4
+$T167385 = -24						; size = 4
+$T167384 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _pPathPlanner$ = 8					; size = 4
@@ -26411,7 +26411,7 @@ _pPathPlanner$ = 8					; size = 4
 ; 105  :                m_SearchRequests.end(),
 ; 106  :                pPathPlanner) == m_SearchRequests.end())
 
-	lea	eax, DWORD PTR $T167387[ebp]
+	lea	eax, DWORD PTR $T167388[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::end
@@ -26425,7 +26425,7 @@ _pPathPlanner$ = 8					; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167384[ebp], esp
+	mov	DWORD PTR $T167385[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::end
@@ -26435,12 +26435,12 @@ _pPathPlanner$ = 8					; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T167385[ebp], esp
+	mov	DWORD PTR $T167386[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::begin
 	mov	DWORD PTR tv156[ebp], eax
-	lea	ecx, DWORD PTR $T167386[ebp]
+	lea	ecx, DWORD PTR $T167387[ebp]
 	push	ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	call	??$find@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@PAVRaven_PathPlanner@@@std@@YA?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@V10@0ABQAVRaven_PathPlanner@@@Z ; std::find<std::_List_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >,Raven_PathPlanner *>
@@ -26453,14 +26453,14 @@ _pPathPlanner$ = 8					; size = 4
 	call	??8?$_List_const_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >::operator==
 	mov	BYTE PTR tv133[ebp], al
 	mov	al, BYTE PTR tv133[ebp]
-	mov	BYTE PTR $T167383[ebp], al
+	mov	BYTE PTR $T167384[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T167386[ebp]
-	call	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR $T167387[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T167383[ebp]
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR $T167388[ebp]
+	call	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
+	movzx	ecx, BYTE PTR $T167384[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@Register
 
@@ -26491,13 +26491,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?Register@?$PathManager@VRaven_PathPlanner@@@@QAEXPAVRaven_PathPlanner@@@Z$0:
-	lea	ecx, DWORD PTR $T167387[ebp]
+	lea	ecx, DWORD PTR $T167388[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Register@?$PathManager@VRaven_PathPlanner@@@@QAEXPAVRaven_PathPlanner@@@Z$1:
-	mov	ecx, DWORD PTR $T167384[ebp]
+	mov	ecx, DWORD PTR $T167385[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Register@?$PathManager@VRaven_PathPlanner@@@@QAEXPAVRaven_PathPlanner@@@Z$3:
-	lea	ecx, DWORD PTR $T167386[ebp]
+	lea	ecx, DWORD PTR $T167387[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?Register@?$PathManager@VRaven_PathPlanner@@@@QAEXPAVRaven_PathPlanner@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -26601,18 +26601,18 @@ tv217 = -284						; size = 4
 tv66 = -280						; size = 4
 tv215 = -276						; size = 4
 tv89 = -272						; size = 4
-$T167412 = -268						; size = 12
-$T167411 = -256						; size = 16
-$T167410 = -240						; size = 12
-$T167409 = -225						; size = 1
-$T167408 = -224						; size = 12
-$T167407 = -209						; size = 1
-$T167406 = -208						; size = 12
-$T167405 = -196						; size = 16
-$T167404 = -180						; size = 16
-$T167403 = -164						; size = 16
-$T167402 = -148						; size = 16
-_it$156066 = -128					; size = 12
+$T167413 = -268						; size = 12
+$T167412 = -256						; size = 16
+$T167411 = -240						; size = 12
+$T167410 = -225						; size = 1
+$T167409 = -224						; size = 12
+$T167408 = -209						; size = 1
+$T167407 = -208						; size = 12
+$T167406 = -196						; size = 16
+$T167405 = -180						; size = 16
+$T167404 = -164						; size = 16
+$T167403 = -148						; size = 16
+_it$156067 = -128					; size = 12
 _curCell$ = -108					; size = 12
 _QueryBox$ = -88					; size = 48
 _curNbor$ = -32						; size = 12
@@ -26669,12 +26669,12 @@ _QueryRadius$ = 24					; size = 8
 	sub	esp, 8
 	fld	QWORD PTR _QueryRadius$[ebp]
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T167402[ebp]
+	lea	ecx, DWORD PTR $T167403[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	push	eax
 	lea	ecx, DWORD PTR _TargetPos$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T167403[ebp]
+	lea	edx, DWORD PTR $T167404[ebp]
 	push	edx
 	call	??H@YA?AUVector2D@@ABU0@0@Z		; operator+
 	add	esp, -4					; fffffffcH
@@ -26693,12 +26693,12 @@ _QueryRadius$ = 24					; size = 8
 	sub	esp, 8
 	fld	QWORD PTR _QueryRadius$[ebp]
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T167404[ebp]
+	lea	ecx, DWORD PTR $T167405[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	push	eax
 	lea	ecx, DWORD PTR _TargetPos$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T167405[ebp]
+	lea	edx, DWORD PTR $T167406[ebp]
 	push	edx
 	call	??G@YA?AUVector2D@@ABU0@0@Z		; operator-
 	add	esp, -4					; fffffffcH
@@ -26726,7 +26726,7 @@ _QueryRadius$ = 24					; size = 8
 
 ; 181  :   for (curCell=m_Cells.begin(); curCell!=m_Cells.end(); ++curCell)
 
-	lea	ecx, DWORD PTR $T167406[ebp]
+	lea	ecx, DWORD PTR $T167407[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$vector@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@2@XZ ; std::vector<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > >::begin
@@ -26739,14 +26739,14 @@ _QueryRadius$ = 24					; size = 8
 	lea	ecx, DWORD PTR _curCell$[ebp]
 	call	??4?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T167406[ebp]
+	lea	ecx, DWORD PTR $T167407[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN8@CalculateN
 $LN7@CalculateN:
 	lea	ecx, DWORD PTR _curCell$[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >::operator++
 $LN8@CalculateN:
-	lea	ecx, DWORD PTR $T167408[ebp]
+	lea	ecx, DWORD PTR $T167409[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$vector@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@2@XZ ; std::vector<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > >::end
@@ -26758,11 +26758,11 @@ $LN8@CalculateN:
 	push	eax
 	lea	ecx, DWORD PTR _curCell$[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >::operator!=
-	mov	BYTE PTR $T167407[ebp], al
+	mov	BYTE PTR $T167408[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T167408[ebp]
+	lea	ecx, DWORD PTR $T167409[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T167407[ebp]
+	movzx	ecx, BYTE PTR $T167408[ebp]
 	test	ecx, ecx
 	je	$LN6@CalculateN
 
@@ -26794,7 +26794,7 @@ $LN8@CalculateN:
 ; 188  :       //add any entities found within query radius to the neighbor list
 ; 189  :       std::list<entity>::iterator it = curCell->Members.begin();
 
-	lea	edx, DWORD PTR _it$156066[ebp]
+	lea	edx, DWORD PTR _it$156067[ebp]
 	push	edx
 	lea	ecx, DWORD PTR _curCell$[ebp]
 	call	??C?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QBEPAU?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@XZ ; std::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >::operator->
@@ -26806,10 +26806,10 @@ $LN3@CalculateN:
 
 ; 190  :       for (it; it!=curCell->Members.end(); ++it)
 
-	lea	ecx, DWORD PTR _it$156066[ebp]
+	lea	ecx, DWORD PTR _it$156067[ebp]
 	call	??E?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::operator++
 $LN4@CalculateN:
-	lea	eax, DWORD PTR $T167410[ebp]
+	lea	eax, DWORD PTR $T167411[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _curCell$[ebp]
 	call	??C?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QBEPAU?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@XZ ; std::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >::operator->
@@ -26821,13 +26821,13 @@ $LN4@CalculateN:
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	mov	edx, DWORD PTR tv220[ebp]
 	push	edx
-	lea	ecx, DWORD PTR _it$156066[ebp]
+	lea	ecx, DWORD PTR _it$156067[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::operator!=
-	mov	BYTE PTR $T167409[ebp], al
+	mov	BYTE PTR $T167410[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T167410[ebp]
+	lea	ecx, DWORD PTR $T167411[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T167409[ebp]
+	movzx	eax, BYTE PTR $T167410[ebp]
 	test	eax, eax
 	je	$LN2@CalculateN
 
@@ -26837,9 +26837,9 @@ $LN4@CalculateN:
 
 	lea	ecx, DWORD PTR _TargetPos$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T167411[ebp]
+	lea	edx, DWORD PTR $T167412[ebp]
 	push	edx
-	lea	ecx, DWORD PTR _it$156066[ebp]
+	lea	ecx, DWORD PTR _it$156067[ebp]
 	call	??D?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QBEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ ; std::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::operator*
 	mov	ecx, DWORD PTR [eax]
 	call	?Pos@?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@QBE?AUVector2D@@XZ ; NavGraphNode<Trigger<Raven_Bot> *>::Pos
@@ -26856,11 +26856,11 @@ $LN4@CalculateN:
 ; 194  :         {
 ; 195  :           *curNbor++ = *it;
 
-	lea	ecx, DWORD PTR _it$156066[ebp]
+	lea	ecx, DWORD PTR _it$156067[ebp]
 	call	??D?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QBEAAPAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@XZ ; std::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::operator*
 	mov	esi, eax
 	push	0
-	lea	eax, DWORD PTR $T167412[ebp]
+	lea	eax, DWORD PTR $T167413[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _curNbor$[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_Vector_iterator<std::_Vector_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::operator++
@@ -26873,7 +26873,7 @@ $LN4@CalculateN:
 	mov	edx, DWORD PTR [esi]
 	mov	DWORD PTR [eax], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T167412[ebp]
+	lea	ecx, DWORD PTR $T167413[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 $LN1@CalculateN:
 
@@ -26886,7 +26886,7 @@ $LN2@CalculateN:
 ; 198  :     }
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR _it$156066[ebp]
+	lea	ecx, DWORD PTR _it$156067[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 $LN5@CalculateN:
 
@@ -26988,19 +26988,19 @@ __unwindfunclet$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$
 	lea	ecx, DWORD PTR _curCell$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEXUVector2D@@N@Z$2:
-	lea	ecx, DWORD PTR $T167406[ebp]
+	lea	ecx, DWORD PTR $T167407[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEXUVector2D@@N@Z$3:
-	lea	ecx, DWORD PTR $T167408[ebp]
+	lea	ecx, DWORD PTR $T167409[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEXUVector2D@@N@Z$4:
-	lea	ecx, DWORD PTR _it$156066[ebp]
+	lea	ecx, DWORD PTR _it$156067[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEXUVector2D@@N@Z$5:
-	lea	ecx, DWORD PTR $T167410[ebp]
+	lea	ecx, DWORD PTR $T167411[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEXUVector2D@@N@Z$6:
-	lea	ecx, DWORD PTR $T167412[ebp]
+	lea	ecx, DWORD PTR $T167413[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?CalculateNeighbors@?$CellSpacePartition@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@QAEXUVector2D@@N@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -27217,7 +27217,7 @@ __real@4000000000000000 DQ 04000000000000000r	; 2
 CONST	ENDS
 ;	COMDAT ??0InvertedAABBox2D@@QAE@UVector2D@@0@Z
 _TEXT	SEGMENT
-$T167446 = -20						; size = 16
+$T167447 = -20						; size = 16
 _this$ = -4						; size = 4
 _tl$ = 8						; size = 16
 _br$ = 24						; size = 16
@@ -27262,7 +27262,7 @@ _br$ = 24						; size = 16
 	push	eax
 	lea	ecx, DWORD PTR _tl$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T167446[ebp]
+	lea	edx, DWORD PTR $T167447[ebp]
 	push	edx
 	call	??H@YA?AUVector2D@@ABU0@0@Z		; operator+
 	add	esp, 12					; 0000000cH
@@ -27574,11 +27574,11 @@ tv370 = -100						; size = 8
 tv282 = -92						; size = 8
 tv281 = -84						; size = 4
 tv83 = -80						; size = 4
-$T167469 = -76						; size = 4
-$T167468 = -72						; size = 4
-_GCost$156736 = -68					; size = 8
-_HCost$156724 = -60					; size = 8
-_pE$156720 = -52					; size = 4
+$T167470 = -76						; size = 4
+$T167469 = -72						; size = 4
+_GCost$156737 = -68					; size = 8
+_HCost$156725 = -60					; size = 8
+_pE$156721 = -52					; size = 4
 _ConstEdgeItr$ = -44					; size = 20
 _NextClosestNode$ = -20					; size = 4
 _this$ = -16						; size = 4
@@ -27689,7 +27689,7 @@ $LN7@CycleOnce@3:
 
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::begin
-	mov	DWORD PTR _pE$156720[ebp], eax
+	mov	DWORD PTR _pE$156721[ebp], eax
 
 ; 211  :       !ConstEdgeItr.end();
 ; 212  :        pE=ConstEdgeItr.next())
@@ -27698,7 +27698,7 @@ $LN7@CycleOnce@3:
 $LN5@CycleOnce@3:
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?next@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::next
-	mov	DWORD PTR _pE$156720[ebp], eax
+	mov	DWORD PTR _pE$156721[ebp], eax
 $LN6@CycleOnce@3:
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::end
@@ -27714,14 +27714,14 @@ $LN6@CycleOnce@3:
 	add	eax, 92					; 0000005cH
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
-	mov	DWORD PTR $T167468[ebp], esp
+	mov	DWORD PTR $T167469[ebp], esp
 	push	eax
 	call	??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::list<Vector2D,std::allocator<Vector2D> >
 	mov	DWORD PTR tv83[ebp], eax
 	mov	ecx, DWORD PTR tv83[ebp]
 	mov	DWORD PTR tv281[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -27735,7 +27735,7 @@ $LN6@CycleOnce@3:
 	add	esp, 28					; 0000001cH
 	fstp	QWORD PTR tv282[ebp]
 	fld	QWORD PTR tv282[ebp]
-	fstp	QWORD PTR _HCost$156724[ebp]
+	fstp	QWORD PTR _HCost$156725[ebp]
 
 ; 216  : 
 ; 217  :     //calculate the 'real' cost to this node from the source (G)
@@ -27747,17 +27747,17 @@ $LN6@CycleOnce@3:
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	mov	esi, eax
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?Cost@GraphEdge@@QBENXZ			; GraphEdge::Cost
 	fadd	QWORD PTR [esi]
-	fstp	QWORD PTR _GCost$156736[ebp]
+	fstp	QWORD PTR _GCost$156737[ebp]
 
 ; 219  : 
 ; 220  :     //if the node has not been added to the frontier, add it and update
 ; 221  :     //the G and F costs
 ; 222  :     if (m_SearchFrontier[pE->To()] == NULL)
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -27769,9 +27769,9 @@ $LN6@CycleOnce@3:
 ; 223  :     {
 ; 224  :       m_FCosts[pE->To()] = GCost + HCost;
 
-	fld	QWORD PTR _GCost$156736[ebp]
-	fadd	QWORD PTR _HCost$156724[ebp]
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	fld	QWORD PTR _GCost$156737[ebp]
+	fadd	QWORD PTR _HCost$156725[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	fstp	QWORD PTR tv370[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
@@ -27783,19 +27783,19 @@ $LN6@CycleOnce@3:
 
 ; 225  :       m_GCosts[pE->To()] = GCost;
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
-	fld	QWORD PTR _GCost$156736[ebp]
+	fld	QWORD PTR _GCost$156737[ebp]
 	fstp	QWORD PTR [eax]
 
 ; 226  : 
 ; 227  :       m_pPQ->insert(pE->To());
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -27805,13 +27805,13 @@ $LN6@CycleOnce@3:
 ; 228  : 
 ; 229  :       m_SearchFrontier[pE->To()] = pE;
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEAAPBVNavGraphEdge@@I@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::operator[]
-	mov	edx, DWORD PTR _pE$156720[ebp]
+	mov	edx, DWORD PTR _pE$156721[ebp]
 	mov	DWORD PTR [eax], edx
 	jmp	$LN1@CycleOnce@3
 $LN3@CycleOnce@3:
@@ -27823,18 +27823,18 @@ $LN3@CycleOnce@3:
 ; 234  :     //costs and frontier accordingly.
 ; 235  :     else if ((GCost < m_GCosts[pE->To()]) && (m_ShortestPathTree[pE->To()]==NULL))
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	fld	QWORD PTR [eax]
-	fcomp	QWORD PTR _GCost$156736[ebp]
+	fcomp	QWORD PTR _GCost$156737[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jne	$LN1@CycleOnce@3
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -27846,9 +27846,9 @@ $LN3@CycleOnce@3:
 ; 236  :     {
 ; 237  :       m_FCosts[pE->To()] = GCost + HCost;
 
-	fld	QWORD PTR _GCost$156736[ebp]
-	fadd	QWORD PTR _HCost$156724[ebp]
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	fld	QWORD PTR _GCost$156737[ebp]
+	fadd	QWORD PTR _HCost$156725[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	fstp	QWORD PTR tv372[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
@@ -27860,19 +27860,19 @@ $LN3@CycleOnce@3:
 
 ; 238  :       m_GCosts[pE->To()] = GCost;
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
-	fld	QWORD PTR _GCost$156736[ebp]
+	fld	QWORD PTR _GCost$156737[ebp]
 	fstp	QWORD PTR [eax]
 
 ; 239  : 
 ; 240  :       m_pPQ->ChangePriority(pE->To());
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -27882,13 +27882,13 @@ $LN3@CycleOnce@3:
 ; 241  : 
 ; 242  :       m_SearchFrontier[pE->To()] = pE;
 
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEAAPBVNavGraphEdge@@I@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::operator[]
-	mov	ecx, DWORD PTR _pE$156720[ebp]
+	mov	ecx, DWORD PTR _pE$156721[ebp]
 	mov	DWORD PTR [eax], ecx
 $LN1@CycleOnce@3:
 
@@ -27902,11 +27902,11 @@ $LN4@CycleOnce@3:
 ; 246  :   //there are still nodes to explore
 ; 247  :   return search_incomplete;
 
-	mov	DWORD PTR $T167469[ebp], 2
+	mov	DWORD PTR $T167470[ebp], 2
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	??1ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@XZ
-	mov	eax, DWORD PTR $T167469[ebp]
+	mov	eax, DWORD PTR $T167470[ebp]
 $LN9@CycleOnce@3:
 
 ; 248  : }
@@ -27957,7 +27957,7 @@ __unwindfunclet$?CycleOnce@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	jmp	??1ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@XZ
 __unwindfunclet$?CycleOnce@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UAEHXZ$1:
-	mov	ecx, DWORD PTR $T167468[ebp]
+	mov	ecx, DWORD PTR $T167469[ebp]
 	jmp	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 __ehhandler$?CycleOnce@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UAEHXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -28036,7 +28036,7 @@ __ehfuncinfo$?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphN
 xdata$x	ENDS
 ;	COMDAT ?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ
 _TEXT	SEGMENT
-$T167489 = -56						; size = 4
+$T167490 = -56						; size = 4
 _nd$ = -48						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -28067,7 +28067,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167489[ebp], 0
+	mov	DWORD PTR $T167490[ebp], 0
 
 ; 255  :   std::list<int> path;
 
@@ -28086,9 +28086,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
-	mov	edx, DWORD PTR $T167489[ebp]
+	mov	edx, DWORD PTR $T167490[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167489[ebp], edx
+	mov	DWORD PTR $T167490[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
@@ -28159,9 +28159,9 @@ $LN1@GetPathToT:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
-	mov	eax, DWORD PTR $T167489[ebp]
+	mov	eax, DWORD PTR $T167490[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167489[ebp], eax
+	mov	DWORD PTR $T167490[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
@@ -28215,10 +28215,10 @@ __unwindfunclet$?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGra
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 __unwindfunclet$?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T167489[ebp]
+	mov	eax, DWORD PTR $T167490[ebp]
 	and	eax, 1
 	je	$LN8@GetPathToT
-	and	DWORD PTR $T167489[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167490[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 $LN8@GetPathToT:
@@ -28276,10 +28276,10 @@ __ehfuncinfo$?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGra
 xdata$x	ENDS
 ;	COMDAT ?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ
 _TEXT	SEGMENT
-$T167510 = -120						; size = 4
-$T167507 = -116						; size = 16
-$T167506 = -100						; size = 16
-$T167505 = -84						; size = 40
+$T167511 = -120						; size = 4
+$T167508 = -116						; size = 16
+$T167507 = -100						; size = 16
+$T167506 = -84						; size = 40
 _nd$ = -44						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -28310,7 +28310,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167510[ebp], 0
+	mov	DWORD PTR $T167511[ebp], 0
 
 ; 283  :   std::list<PathEdge> path;
 
@@ -28329,9 +28329,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	edx, DWORD PTR $T167510[ebp]
+	mov	edx, DWORD PTR $T167511[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167510[ebp], edx
+	mov	DWORD PTR $T167511[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -28384,7 +28384,7 @@ $LN2@GetPathAsP:
 	mov	ecx, DWORD PTR [eax]
 	call	?Flags@NavGraphEdge@@QBEHXZ		; NavGraphEdge::Flags
 	push	eax
-	lea	ecx, DWORD PTR $T167506[ebp]
+	lea	ecx, DWORD PTR $T167507[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -28409,7 +28409,7 @@ $LN2@GetPathAsP:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T167507[ebp]
+	lea	ecx, DWORD PTR $T167508[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -28434,7 +28434,7 @@ $LN2@GetPathAsP:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T167505[ebp]
+	lea	ecx, DWORD PTR $T167506[ebp]
 	call	??0PathEdge@@QAE@UVector2D@@0HH@Z	; PathEdge::PathEdge
 	push	eax
 	lea	ecx, DWORD PTR _path$[ebp]
@@ -28464,9 +28464,9 @@ $LN1@GetPathAsP:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	eax, DWORD PTR $T167510[ebp]
+	mov	eax, DWORD PTR $T167511[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167510[ebp], eax
+	mov	DWORD PTR $T167511[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -28512,10 +28512,10 @@ __unwindfunclet$?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$Nav
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 __unwindfunclet$?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T167510[ebp]
+	mov	eax, DWORD PTR $T167511[ebp]
 	and	eax, 1
 	je	$LN8@GetPathAsP
-	and	DWORD PTR $T167510[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167511[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 $LN8@GetPathAsP:
@@ -28597,11 +28597,11 @@ tv370 = -100						; size = 8
 tv282 = -92						; size = 8
 tv281 = -84						; size = 4
 tv83 = -80						; size = 4
-$T167528 = -76						; size = 4
-$T167527 = -72						; size = 4
-_GCost$156815 = -68					; size = 8
-_HCost$156803 = -60					; size = 8
-_pE$156799 = -52					; size = 4
+$T167529 = -76						; size = 4
+$T167528 = -72						; size = 4
+_GCost$156816 = -68					; size = 8
+_HCost$156804 = -60					; size = 8
+_pE$156800 = -52					; size = 4
 _ConstEdgeItr$ = -44					; size = 20
 _NextClosestNode$ = -20					; size = 4
 _this$ = -16						; size = 4
@@ -28712,7 +28712,7 @@ $LN7@CycleOnce@4:
 
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::begin
-	mov	DWORD PTR _pE$156799[ebp], eax
+	mov	DWORD PTR _pE$156800[ebp], eax
 
 ; 211  :       !ConstEdgeItr.end();
 ; 212  :        pE=ConstEdgeItr.next())
@@ -28721,7 +28721,7 @@ $LN7@CycleOnce@4:
 $LN5@CycleOnce@4:
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?next@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::next
-	mov	DWORD PTR _pE$156799[ebp], eax
+	mov	DWORD PTR _pE$156800[ebp], eax
 $LN6@CycleOnce@4:
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::end
@@ -28737,14 +28737,14 @@ $LN6@CycleOnce@4:
 	add	eax, 92					; 0000005cH
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
-	mov	DWORD PTR $T167527[ebp], esp
+	mov	DWORD PTR $T167528[ebp], esp
 	push	eax
 	call	??0?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@ABV01@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::list<Vector2D,std::allocator<Vector2D> >
 	mov	DWORD PTR tv83[ebp], eax
 	mov	ecx, DWORD PTR tv83[ebp]
 	mov	DWORD PTR tv281[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -28758,7 +28758,7 @@ $LN6@CycleOnce@4:
 	add	esp, 28					; 0000001cH
 	fstp	QWORD PTR tv282[ebp]
 	fld	QWORD PTR tv282[ebp]
-	fstp	QWORD PTR _HCost$156803[ebp]
+	fstp	QWORD PTR _HCost$156804[ebp]
 
 ; 216  : 
 ; 217  :     //calculate the 'real' cost to this node from the source (G)
@@ -28770,17 +28770,17 @@ $LN6@CycleOnce@4:
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	mov	esi, eax
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?Cost@GraphEdge@@QBENXZ			; GraphEdge::Cost
 	fadd	QWORD PTR [esi]
-	fstp	QWORD PTR _GCost$156815[ebp]
+	fstp	QWORD PTR _GCost$156816[ebp]
 
 ; 219  : 
 ; 220  :     //if the node has not been added to the frontier, add it and update
 ; 221  :     //the G and F costs
 ; 222  :     if (m_SearchFrontier[pE->To()] == NULL)
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -28792,9 +28792,9 @@ $LN6@CycleOnce@4:
 ; 223  :     {
 ; 224  :       m_FCosts[pE->To()] = GCost + HCost;
 
-	fld	QWORD PTR _GCost$156815[ebp]
-	fadd	QWORD PTR _HCost$156803[ebp]
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	fld	QWORD PTR _GCost$156816[ebp]
+	fadd	QWORD PTR _HCost$156804[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	fstp	QWORD PTR tv370[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
@@ -28806,19 +28806,19 @@ $LN6@CycleOnce@4:
 
 ; 225  :       m_GCosts[pE->To()] = GCost;
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
-	fld	QWORD PTR _GCost$156815[ebp]
+	fld	QWORD PTR _GCost$156816[ebp]
 	fstp	QWORD PTR [eax]
 
 ; 226  : 
 ; 227  :       m_pPQ->insert(pE->To());
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -28828,13 +28828,13 @@ $LN6@CycleOnce@4:
 ; 228  : 
 ; 229  :       m_SearchFrontier[pE->To()] = pE;
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEAAPBVNavGraphEdge@@I@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::operator[]
-	mov	edx, DWORD PTR _pE$156799[ebp]
+	mov	edx, DWORD PTR _pE$156800[ebp]
 	mov	DWORD PTR [eax], edx
 	jmp	$LN1@CycleOnce@4
 $LN3@CycleOnce@4:
@@ -28846,18 +28846,18 @@ $LN3@CycleOnce@4:
 ; 234  :     //costs and frontier accordingly.
 ; 235  :     else if ((GCost < m_GCosts[pE->To()]) && (m_ShortestPathTree[pE->To()]==NULL))
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	fld	QWORD PTR [eax]
-	fcomp	QWORD PTR _GCost$156815[ebp]
+	fcomp	QWORD PTR _GCost$156816[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jne	$LN1@CycleOnce@4
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -28869,9 +28869,9 @@ $LN3@CycleOnce@4:
 ; 236  :     {
 ; 237  :       m_FCosts[pE->To()] = GCost + HCost;
 
-	fld	QWORD PTR _GCost$156815[ebp]
-	fadd	QWORD PTR _HCost$156803[ebp]
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	fld	QWORD PTR _GCost$156816[ebp]
+	fadd	QWORD PTR _HCost$156804[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	fstp	QWORD PTR tv372[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
@@ -28883,19 +28883,19 @@ $LN3@CycleOnce@4:
 
 ; 238  :       m_GCosts[pE->To()] = GCost;
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
-	fld	QWORD PTR _GCost$156815[ebp]
+	fld	QWORD PTR _GCost$156816[ebp]
 	fstp	QWORD PTR [eax]
 
 ; 239  : 
 ; 240  :       m_pPQ->ChangePriority(pE->To());
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -28905,13 +28905,13 @@ $LN3@CycleOnce@4:
 ; 241  : 
 ; 242  :       m_SearchFrontier[pE->To()] = pE;
 
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEAAPBVNavGraphEdge@@I@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::operator[]
-	mov	ecx, DWORD PTR _pE$156799[ebp]
+	mov	ecx, DWORD PTR _pE$156800[ebp]
 	mov	DWORD PTR [eax], ecx
 $LN1@CycleOnce@4:
 
@@ -28925,11 +28925,11 @@ $LN4@CycleOnce@4:
 ; 246  :   //there are still nodes to explore
 ; 247  :   return search_incomplete;
 
-	mov	DWORD PTR $T167528[ebp], 2
+	mov	DWORD PTR $T167529[ebp], 2
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	??1ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@XZ
-	mov	eax, DWORD PTR $T167528[ebp]
+	mov	eax, DWORD PTR $T167529[ebp]
 $LN9@CycleOnce@4:
 
 ; 248  : }
@@ -28980,7 +28980,7 @@ __unwindfunclet$?CycleOnce@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	jmp	??1ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@XZ
 __unwindfunclet$?CycleOnce@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UAEHXZ$1:
-	mov	ecx, DWORD PTR $T167527[ebp]
+	mov	ecx, DWORD PTR $T167528[ebp]
 	jmp	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 __ehhandler$?CycleOnce@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UAEHXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -29009,7 +29009,7 @@ __ehfuncinfo$?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphN
 xdata$x	ENDS
 ;	COMDAT ?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ
 _TEXT	SEGMENT
-$T167544 = -56						; size = 4
+$T167545 = -56						; size = 4
 _nd$ = -48						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -29040,7 +29040,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167544[ebp], 0
+	mov	DWORD PTR $T167545[ebp], 0
 
 ; 255  :   std::list<int> path;
 
@@ -29059,9 +29059,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
-	mov	edx, DWORD PTR $T167544[ebp]
+	mov	edx, DWORD PTR $T167545[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167544[ebp], edx
+	mov	DWORD PTR $T167545[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
@@ -29132,9 +29132,9 @@ $LN1@GetPathToT@2:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
-	mov	eax, DWORD PTR $T167544[ebp]
+	mov	eax, DWORD PTR $T167545[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167544[ebp], eax
+	mov	DWORD PTR $T167545[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
@@ -29188,10 +29188,10 @@ __unwindfunclet$?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGra
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 __unwindfunclet$?GetPathToTarget@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T167544[ebp]
+	mov	eax, DWORD PTR $T167545[ebp]
 	and	eax, 1
 	je	$LN8@GetPathToT@2
-	and	DWORD PTR $T167544[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167545[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 $LN8@GetPathToT@2:
@@ -29223,10 +29223,10 @@ __ehfuncinfo$?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGra
 xdata$x	ENDS
 ;	COMDAT ?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ
 _TEXT	SEGMENT
-$T167563 = -120						; size = 4
-$T167560 = -116						; size = 16
-$T167559 = -100						; size = 16
-$T167558 = -84						; size = 40
+$T167564 = -120						; size = 4
+$T167561 = -116						; size = 16
+$T167560 = -100						; size = 16
+$T167559 = -84						; size = 40
 _nd$ = -44						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -29257,7 +29257,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167563[ebp], 0
+	mov	DWORD PTR $T167564[ebp], 0
 
 ; 283  :   std::list<PathEdge> path;
 
@@ -29276,9 +29276,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	edx, DWORD PTR $T167563[ebp]
+	mov	edx, DWORD PTR $T167564[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167563[ebp], edx
+	mov	DWORD PTR $T167564[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -29331,7 +29331,7 @@ $LN2@GetPathAsP@2:
 	mov	ecx, DWORD PTR [eax]
 	call	?Flags@NavGraphEdge@@QBEHXZ		; NavGraphEdge::Flags
 	push	eax
-	lea	ecx, DWORD PTR $T167559[ebp]
+	lea	ecx, DWORD PTR $T167560[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -29356,7 +29356,7 @@ $LN2@GetPathAsP@2:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T167560[ebp]
+	lea	ecx, DWORD PTR $T167561[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -29381,7 +29381,7 @@ $LN2@GetPathAsP@2:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T167558[ebp]
+	lea	ecx, DWORD PTR $T167559[ebp]
 	call	??0PathEdge@@QAE@UVector2D@@0HH@Z	; PathEdge::PathEdge
 	push	eax
 	lea	ecx, DWORD PTR _path$[ebp]
@@ -29411,9 +29411,9 @@ $LN1@GetPathAsP@2:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	eax, DWORD PTR $T167563[ebp]
+	mov	eax, DWORD PTR $T167564[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167563[ebp], eax
+	mov	DWORD PTR $T167564[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -29459,10 +29459,10 @@ __unwindfunclet$?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$Nav
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 __unwindfunclet$?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Bot@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T167563[ebp]
+	mov	eax, DWORD PTR $T167564[ebp]
 	and	eax, 1
 	je	$LN8@GetPathAsP@2
-	and	DWORD PTR $T167563[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167564[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 $LN8@GetPathAsP@2:
@@ -29493,9 +29493,9 @@ __ehfuncinfo$?CycleOnce@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNod
 xdata$x	ENDS
 ;	COMDAT ?CycleOnce@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UAEHXZ
 _TEXT	SEGMENT
-$T167576 = -64						; size = 4
-_NewCost$156899 = -60					; size = 8
-_pE$156895 = -52					; size = 4
+$T167577 = -64						; size = 4
+_NewCost$156900 = -60					; size = 8
+_pE$156896 = -52					; size = 4
 _ConstEdgeItr$ = -44					; size = 20
 _NextClosestNode$ = -20					; size = 4
 _this$ = -16						; size = 4
@@ -29625,7 +29625,7 @@ $LN7@CycleOnce@5:
 
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::begin
-	mov	DWORD PTR _pE$156895[ebp], eax
+	mov	DWORD PTR _pE$156896[ebp], eax
 
 ; 414  :       !ConstEdgeItr.end();
 ; 415  :        pE=ConstEdgeItr.next())
@@ -29634,7 +29634,7 @@ $LN7@CycleOnce@5:
 $LN5@CycleOnce@5:
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?next@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::next
-	mov	DWORD PTR _pE$156895[ebp], eax
+	mov	DWORD PTR _pE$156896[ebp], eax
 $LN6@CycleOnce@5:
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::end
@@ -29653,10 +29653,10 @@ $LN6@CycleOnce@5:
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	mov	esi, eax
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?Cost@GraphEdge@@QBENXZ			; GraphEdge::Cost
 	fadd	QWORD PTR [esi]
-	fstp	QWORD PTR _NewCost$156899[ebp]
+	fstp	QWORD PTR _NewCost$156900[ebp]
 
 ; 420  : 
 ; 421  :     //if this edge has never been on the frontier make a note of the cost
@@ -29664,7 +29664,7 @@ $LN6@CycleOnce@5:
 ; 423  :     //and the destination node to the PQ.
 ; 424  :     if (m_SearchFrontier[pE->To()] == 0)
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -29676,19 +29676,19 @@ $LN6@CycleOnce@5:
 ; 425  :     {
 ; 426  :       m_CostToThisNode[pE->To()] = NewCost;
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
-	fld	QWORD PTR _NewCost$156899[ebp]
+	fld	QWORD PTR _NewCost$156900[ebp]
 	fstp	QWORD PTR [eax]
 
 ; 427  : 
 ; 428  :       m_pPQ->insert(pE->To());
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -29698,13 +29698,13 @@ $LN6@CycleOnce@5:
 ; 429  : 
 ; 430  :       m_SearchFrontier[pE->To()] = pE;
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	??A?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEAAPBVNavGraphEdge@@I@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::operator[]
-	mov	edx, DWORD PTR _pE$156895[ebp]
+	mov	edx, DWORD PTR _pE$156896[ebp]
 	mov	DWORD PTR [eax], edx
 
 ; 431  :     }
@@ -29721,18 +29721,18 @@ $LN3@CycleOnce@5:
 
 ; 439  :               (m_ShortestPathTree[pE->To()] == 0) )
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	fld	QWORD PTR [eax]
-	fcomp	QWORD PTR _NewCost$156899[ebp]
+	fcomp	QWORD PTR _NewCost$156900[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jne	SHORT $LN1@CycleOnce@5
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -29744,13 +29744,13 @@ $LN3@CycleOnce@5:
 ; 440  :     {
 ; 441  :       m_CostToThisNode[pE->To()] = NewCost;
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
-	fld	QWORD PTR _NewCost$156899[ebp]
+	fld	QWORD PTR _NewCost$156900[ebp]
 	fstp	QWORD PTR [eax]
 
 ; 442  : 
@@ -29758,7 +29758,7 @@ $LN3@CycleOnce@5:
 ; 444  :       //re-sorted to account for this.
 ; 445  :       m_pPQ->ChangePriority(pE->To());
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -29768,13 +29768,13 @@ $LN3@CycleOnce@5:
 ; 446  : 
 ; 447  :       m_SearchFrontier[pE->To()] = pE;
 
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	??A?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAEAAPBVNavGraphEdge@@I@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::operator[]
-	mov	ecx, DWORD PTR _pE$156895[ebp]
+	mov	ecx, DWORD PTR _pE$156896[ebp]
 	mov	DWORD PTR [eax], ecx
 $LN1@CycleOnce@5:
 
@@ -29788,11 +29788,11 @@ $LN4@CycleOnce@5:
 ; 451  :   //there are still nodes to explore
 ; 452  :   return search_incomplete;
 
-	mov	DWORD PTR $T167576[ebp], 2
+	mov	DWORD PTR $T167577[ebp], 2
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	??1ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@XZ
-	mov	eax, DWORD PTR $T167576[ebp]
+	mov	eax, DWORD PTR $T167577[ebp]
 $LN9@CycleOnce@5:
 
 ; 453  : }
@@ -29870,7 +29870,7 @@ __ehfuncinfo$?GetPathToTarget@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGr
 xdata$x	ENDS
 ;	COMDAT ?GetPathToTarget@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ
 _TEXT	SEGMENT
-$T167591 = -56						; size = 4
+$T167592 = -56						; size = 4
 _nd$ = -48						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -29901,7 +29901,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167591[ebp], 0
+	mov	DWORD PTR $T167592[ebp], 0
 
 ; 460  :   std::list<int> path;
 
@@ -29920,9 +29920,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
-	mov	edx, DWORD PTR $T167591[ebp]
+	mov	edx, DWORD PTR $T167592[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167591[ebp], edx
+	mov	DWORD PTR $T167592[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
@@ -29993,9 +29993,9 @@ $LN1@GetPathToT@3:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
-	mov	eax, DWORD PTR $T167591[ebp]
+	mov	eax, DWORD PTR $T167592[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167591[ebp], eax
+	mov	DWORD PTR $T167592[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
@@ -30049,10 +30049,10 @@ __unwindfunclet$?GetPathToTarget@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$Na
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 __unwindfunclet$?GetPathToTarget@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T167591[ebp]
+	mov	eax, DWORD PTR $T167592[ebp]
 	and	eax, 1
 	je	$LN8@GetPathToT@3
-	and	DWORD PTR $T167591[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167592[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::~list<int,std::allocator<int> >
 $LN8@GetPathToT@3:
@@ -30084,10 +30084,10 @@ __ehfuncinfo$?GetPathAsPathEdges@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$Na
 xdata$x	ENDS
 ;	COMDAT ?GetPathAsPathEdges@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ
 _TEXT	SEGMENT
-$T167610 = -120						; size = 4
-$T167607 = -116						; size = 16
-$T167606 = -100						; size = 16
-$T167605 = -84						; size = 40
+$T167611 = -120						; size = 4
+$T167608 = -116						; size = 16
+$T167607 = -100						; size = 16
+$T167606 = -84						; size = 40
 _nd$ = -44						; size = 4
 _path$ = -36						; size = 16
 _this$ = -16						; size = 4
@@ -30118,7 +30118,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167610[ebp], 0
+	mov	DWORD PTR $T167611[ebp], 0
 
 ; 488  :   std::list<PathEdge> path;
 
@@ -30137,9 +30137,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	edx, DWORD PTR $T167610[ebp]
+	mov	edx, DWORD PTR $T167611[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167610[ebp], edx
+	mov	DWORD PTR $T167611[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -30192,7 +30192,7 @@ $LN2@GetPathAsP@3:
 	mov	ecx, DWORD PTR [eax]
 	call	?Flags@NavGraphEdge@@QBEHXZ		; NavGraphEdge::Flags
 	push	eax
-	lea	ecx, DWORD PTR $T167606[ebp]
+	lea	ecx, DWORD PTR $T167607[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -30217,7 +30217,7 @@ $LN2@GetPathAsP@3:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T167607[ebp]
+	lea	ecx, DWORD PTR $T167608[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -30242,7 +30242,7 @@ $LN2@GetPathAsP@3:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T167605[ebp]
+	lea	ecx, DWORD PTR $T167606[ebp]
 	call	??0PathEdge@@QAE@UVector2D@@0HH@Z	; PathEdge::PathEdge
 	push	eax
 	lea	ecx, DWORD PTR _path$[ebp]
@@ -30272,9 +30272,9 @@ $LN1@GetPathAsP@3:
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@$$QAV01@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
-	mov	eax, DWORD PTR $T167610[ebp]
+	mov	eax, DWORD PTR $T167611[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167610[ebp], eax
+	mov	DWORD PTR $T167611[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
@@ -30320,10 +30320,10 @@ __unwindfunclet$?GetPathAsPathEdges@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?
 	lea	ecx, DWORD PTR _path$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 __unwindfunclet$?GetPathAsPathEdges@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ$1:
-	mov	eax, DWORD PTR $T167610[ebp]
+	mov	eax, DWORD PTR $T167611[ebp]
 	and	eax, 1
 	je	$LN8@GetPathAsP@3
-	and	DWORD PTR $T167610[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167611[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::~list<PathEdge,std::allocator<PathEdge> >
 $LN8@GetPathAsP@3:
@@ -30369,11 +30369,11 @@ tv157 = -48						; size = 4
 tv165 = -44						; size = 4
 tv154 = -40						; size = 4
 tv164 = -36						; size = 4
-$T167627 = -32						; size = 4
-$T167626 = -28						; size = 4
-$T167625 = -24						; size = 4
-$T167624 = -18						; size = 1
-$T167623 = -17						; size = 1
+$T167628 = -32						; size = 4
+$T167627 = -28						; size = 4
+$T167626 = -24						; size = 4
+$T167625 = -18						; size = 1
+$T167624 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -30411,17 +30411,17 @@ __Last$ = 32						; size = 12
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T167624[ebp]
+	lea	ecx, DWORD PTR $T167625[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > > >
 	add	esp, 8
 	mov	dl, BYTE PTR [eax]
-	mov	BYTE PTR $T167623[ebp], dl
-	movzx	eax, BYTE PTR $T167623[ebp]
+	mov	BYTE PTR $T167624[ebp], dl
+	movzx	eax, BYTE PTR $T167624[ebp]
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167625[ebp], esp
+	mov	DWORD PTR $T167626[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30431,7 +30431,7 @@ __Last$ = 32						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167626[ebp], esp
+	mov	DWORD PTR $T167627[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30441,7 +30441,7 @@ __Last$ = 32						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167627[ebp], esp
+	mov	DWORD PTR $T167628[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30484,10 +30484,10 @@ __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$all
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00@Z$3:
-	mov	ecx, DWORD PTR $T167625[ebp]
+	mov	ecx, DWORD PTR $T167626[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00@Z$4:
-	mov	ecx, DWORD PTR $T167626[ebp]
+	mov	ecx, DWORD PTR $T167627[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -30716,11 +30716,11 @@ tv157 = -48						; size = 4
 tv165 = -44						; size = 4
 tv154 = -40						; size = 4
 tv164 = -36						; size = 4
-$T167657 = -32						; size = 4
-$T167656 = -28						; size = 4
-$T167655 = -24						; size = 4
-$T167654 = -18						; size = 1
-$T167653 = -17						; size = 1
+$T167658 = -32						; size = 4
+$T167657 = -28						; size = 4
+$T167656 = -24						; size = 4
+$T167655 = -18						; size = 1
+$T167654 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -30758,17 +30758,17 @@ __Last$ = 32						; size = 12
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T167654[ebp]
+	lea	ecx, DWORD PTR $T167655[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > > >
 	add	esp, 8
 	mov	dl, BYTE PTR [eax]
-	mov	BYTE PTR $T167653[ebp], dl
-	movzx	eax, BYTE PTR $T167653[ebp]
+	mov	BYTE PTR $T167654[ebp], dl
+	movzx	eax, BYTE PTR $T167654[ebp]
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167655[ebp], esp
+	mov	DWORD PTR $T167656[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30778,7 +30778,7 @@ __Last$ = 32						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167656[ebp], esp
+	mov	DWORD PTR $T167657[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30788,7 +30788,7 @@ __Last$ = 32						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167657[ebp], esp
+	mov	DWORD PTR $T167658[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -30831,10 +30831,10 @@ __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z$3:
-	mov	ecx, DWORD PTR $T167655[ebp]
+	mov	ecx, DWORD PTR $T167656[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z$4:
-	mov	ecx, DWORD PTR $T167656[ebp]
+	mov	ecx, DWORD PTR $T167657[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -31178,10 +31178,10 @@ _TEXT	SEGMENT
 tv140 = -40						; size = 4
 tv137 = -36						; size = 4
 tv143 = -32						; size = 4
-$T167696 = -28						; size = 4
-$T167695 = -24						; size = 4
-$T167694 = -18						; size = 1
-$T167693 = -17						; size = 1
+$T167697 = -28						; size = 4
+$T167696 = -24						; size = 4
+$T167695 = -18						; size = 1
+$T167694 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
@@ -31219,15 +31219,15 @@ __Last$ = 20						; size = 12
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T167693[ebp]
+	lea	ecx, DWORD PTR $T167694[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > > >
 	add	esp, 8
-	movzx	edx, BYTE PTR $T167694[ebp]
+	movzx	edx, BYTE PTR $T167695[ebp]
 	push	edx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167695[ebp], esp
+	mov	DWORD PTR $T167696[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -31237,7 +31237,7 @@ __Last$ = 20						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167696[ebp], esp
+	mov	DWORD PTR $T167697[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -31273,7 +31273,7 @@ __unwindfunclet$??$assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$all
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0@Z$2:
-	mov	ecx, DWORD PTR $T167695[ebp]
+	mov	ecx, DWORD PTR $T167696[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -31310,9 +31310,9 @@ tv66 = -44						; size = 4
 tv141 = -40						; size = 4
 tv138 = -36						; size = 4
 tv144 = -32						; size = 4
-$T167711 = -28						; size = 4
-$T167710 = -24						; size = 4
-$T167709 = -20						; size = 4
+$T167712 = -28						; size = 4
+$T167711 = -24						; size = 4
+$T167710 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
@@ -31358,7 +31358,7 @@ __Ptr$ = 32						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167710[ebp], esp
+	mov	DWORD PTR $T167711[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -31368,7 +31368,7 @@ __Ptr$ = 32						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167711[ebp], esp
+	mov	DWORD PTR $T167712[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -31378,14 +31378,14 @@ __Ptr$ = 32						; size = 4
 	add	esp, 32					; 00000020H
 	mov	DWORD PTR tv66[ebp], eax
 	mov	eax, DWORD PTR tv66[ebp]
-	mov	DWORD PTR $T167709[ebp], eax
+	mov	DWORD PTR $T167710[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T167709[ebp]
+	mov	eax, DWORD PTR $T167710[ebp]
 
 ; 1319 : 		}
 
@@ -31408,7 +31408,7 @@ __unwindfunclet$??$_Ucopy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEd
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Ucopy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@IAEPAPBVNavGraphEdge@@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@1@0PAPBV2@@Z$2:
-	mov	ecx, DWORD PTR $T167710[ebp]
+	mov	ecx, DWORD PTR $T167711[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Ucopy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@@?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@IAEPAPBVNavGraphEdge@@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@1@0PAPBV2@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -31425,7 +31425,7 @@ PUBLIC	??$_Iter_cat@H@std@@YA?AU_Int_iterator_tag@0@ABH@Z ; std::_Iter_cat<int>
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$assign@H@?$vector@HV?$allocator@H@std@@@std@@QAEXHH@Z
 _TEXT	SEGMENT
-$T167724 = -5						; size = 1
+$T167725 = -5						; size = 1
 _this$ = -4						; size = 4
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
@@ -31448,8 +31448,8 @@ __Last$ = 12						; size = 4
 	push	eax
 	call	??$_Iter_cat@H@std@@YA?AU_Int_iterator_tag@0@ABH@Z ; std::_Iter_cat<int>
 	add	esp, 4
-	mov	BYTE PTR $T167724[ebp], al
-	movzx	ecx, BYTE PTR $T167724[ebp]
+	mov	BYTE PTR $T167725[ebp], al
+	movzx	ecx, BYTE PTR $T167725[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Last$[ebp]
 	push	edx
@@ -31655,7 +31655,7 @@ __TI2?AVbad_alloc@std@@ DD 00H
 xdata$x	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T167737 = -16						; size = 12
+$T167738 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -31708,10 +31708,10 @@ $LN1@Allocate:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T167737[ebp]
+	lea	ecx, DWORD PTR $T167738[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T167737[ebp]
+	lea	ecx, DWORD PTR $T167738[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate:
@@ -31977,7 +31977,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T167752 = -16						; size = 12
+$T167753 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -32030,10 +32030,10 @@ $LN1@Allocate@2:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T167752[ebp]
+	lea	ecx, DWORD PTR $T167753[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T167752[ebp]
+	lea	ecx, DWORD PTR $T167753[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@2:
@@ -32097,8 +32097,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv89 = -28						; size = 4
-$T167761 = -24						; size = 4
-$T167757 = -20						; size = 4
+$T167762 = -24						; size = 4
+$T167758 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -32128,7 +32128,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167761[ebp], 0
+	mov	DWORD PTR $T167762[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 734  : 		{	// insert _Val at _Where
@@ -32141,7 +32141,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167757[ebp], esp
+	mov	DWORD PTR $T167758[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -32151,9 +32151,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$emplace@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@$$QAVPathEdge@@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::emplace<PathEdge>
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T167761[ebp]
+	mov	ecx, DWORD PTR $T167762[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T167761[ebp], ecx
+	mov	DWORD PTR $T167762[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -32177,10 +32177,10 @@ __unwindfunclet$??$insert@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@$$QAVPathEdge@@@Z$2:
-	mov	eax, DWORD PTR $T167761[ebp]
+	mov	eax, DWORD PTR $T167762[ebp]
 	and	eax, 1
 	je	$LN6@insert@2
-	and	DWORD PTR $T167761[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167762[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN6@insert@2:
@@ -32249,7 +32249,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@VPathEdge@@V?$allocator@VPathEdge@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T167775 = -16						; size = 12
+$T167776 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -32302,10 +32302,10 @@ $LN1@Allocate@3:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T167775[ebp]
+	lea	ecx, DWORD PTR $T167776[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T167775[ebp]
+	lea	ecx, DWORD PTR $T167776[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@3:
@@ -32386,7 +32386,7 @@ PUBLIC	??$_Ptr_cat@PBVNavGraphEdge@@PBV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@P
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_default_fill_n@PAPBVNavGraphEdge@@IPBV1@V?$allocator@PBVNavGraphEdge@@@std@@@std@@YAXPAPBVNavGraphEdge@@IPBQBV1@AAV?$allocator@PBVNavGraphEdge@@@0@@Z
 _TEXT	SEGMENT
-$T167782 = -1						; size = 1
+$T167783 = -1						; size = 1
 __First$ = 8						; size = 4
 __Count$ = 12						; size = 4
 __Pval$ = 16						; size = 4
@@ -32409,8 +32409,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@PBVNavGraphEdge@@PBV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAPBVNavGraphEdge@@0@Z ; std::_Ptr_cat<NavGraphEdge const *,NavGraphEdge const *>
 	add	esp, 8
-	mov	BYTE PTR $T167782[ebp], al
-	movzx	edx, BYTE PTR $T167782[ebp]
+	mov	BYTE PTR $T167783[ebp], al
+	movzx	edx, BYTE PTR $T167783[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -32467,7 +32467,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@IPAU10@@Z
 _TEXT	SEGMENT
-$T167787 = -16						; size = 12
+$T167788 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -32520,10 +32520,10 @@ $LN1@Allocate@4:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T167787[ebp]
+	lea	ecx, DWORD PTR $T167788[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T167787[ebp]
+	lea	ecx, DWORD PTR $T167788[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@4:
@@ -32549,7 +32549,7 @@ PUBLIC	??$_Ptr_cat@NN@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAN0@Z ; std::_Ptr_ca
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Destroy_range@V?$allocator@N@std@@@std@@YAXPAN0AAV?$allocator@N@0@@Z
 _TEXT	SEGMENT
-$T167790 = -1						; size = 1
+$T167791 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -32570,8 +32570,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@NN@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAN0@Z ; std::_Ptr_cat<double,double>
 	add	esp, 8
-	mov	BYTE PTR $T167790[ebp], al
-	movzx	edx, BYTE PTR $T167790[ebp]
+	mov	BYTE PTR $T167791[ebp], al
+	movzx	edx, BYTE PTR $T167791[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -32598,7 +32598,7 @@ PUBLIC	??$_Val_type@PAN@std@@YAPANPAN@Z		; std::_Val_type<double *>
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_fill_n@PANINV?$allocator@N@std@@@std@@YAXPANIPBNAAV?$allocator@N@0@@Z
 _TEXT	SEGMENT
-$T167793 = -1						; size = 1
+$T167794 = -1						; size = 1
 __First$ = 8						; size = 4
 __Count$ = 12						; size = 4
 __Pval$ = 16						; size = 4
@@ -32621,8 +32621,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@NN@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAN0@Z ; std::_Ptr_cat<double,double>
 	add	esp, 8
-	mov	BYTE PTR $T167793[ebp], al
-	movzx	edx, BYTE PTR $T167793[ebp]
+	mov	BYTE PTR $T167794[ebp], al
+	movzx	edx, BYTE PTR $T167794[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -32656,7 +32656,7 @@ PUBLIC	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_ca
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xmemory
 ;	COMDAT ??$_Destroy_range@V?$allocator@H@std@@@std@@YAXPAH0AAV?$allocator@H@0@@Z
 _TEXT	SEGMENT
-$T167796 = -1						; size = 1
+$T167797 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -32677,8 +32677,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T167796[ebp], al
-	movzx	edx, BYTE PTR $T167796[ebp]
+	mov	BYTE PTR $T167797[ebp], al
+	movzx	edx, BYTE PTR $T167797[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -32704,7 +32704,7 @@ PUBLIC	??$_Move@PAPBVNavGraphEdge@@PAPBV1@@std@@YAPAPBVNavGraphEdge@@PAPBV1@00U_
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility
 ;	COMDAT ??$_Move@PAPBVNavGraphEdge@@PAPBV1@@std@@YAPAPBVNavGraphEdge@@PAPBV1@00@Z
 _TEXT	SEGMENT
-$T167799 = -1						; size = 1
+$T167800 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -32726,8 +32726,8 @@ __Dest$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@PBVNavGraphEdge@@PBV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAPBVNavGraphEdge@@0@Z ; std::_Ptr_cat<NavGraphEdge const *,NavGraphEdge const *>
 	add	esp, 8
-	mov	BYTE PTR $T167799[ebp], al
-	movzx	edx, BYTE PTR $T167799[ebp]
+	mov	BYTE PTR $T167800[ebp], al
+	movzx	edx, BYTE PTR $T167800[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
@@ -32753,7 +32753,7 @@ PUBLIC	??$_Destroy_range@V?$allocator@PBVNavGraphEdge@@@std@@@std@@YAXPAPBVNavGr
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xmemory
 ;	COMDAT ??$_Destroy_range@V?$allocator@PBVNavGraphEdge@@@std@@@std@@YAXPAPBVNavGraphEdge@@0AAV?$allocator@PBVNavGraphEdge@@@0@@Z
 _TEXT	SEGMENT
-$T167802 = -1						; size = 1
+$T167803 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -32774,8 +32774,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@PBVNavGraphEdge@@PBV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAPBVNavGraphEdge@@0@Z ; std::_Ptr_cat<NavGraphEdge const *,NavGraphEdge const *>
 	add	esp, 8
-	mov	BYTE PTR $T167802[ebp], al
-	movzx	edx, BYTE PTR $T167802[ebp]
+	mov	BYTE PTR $T167803[ebp], al
+	movzx	edx, BYTE PTR $T167803[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -32799,7 +32799,7 @@ __Al$ = 16						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@PBVNavGraphEdge@@@std@@YAPAPBVNavGraphEdge@@IPAPBV1@@Z
 _TEXT	SEGMENT
-$T167805 = -16						; size = 12
+$T167806 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -32852,10 +32852,10 @@ $LN1@Allocate@5:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T167805[ebp]
+	lea	ecx, DWORD PTR $T167806[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T167805[ebp]
+	lea	ecx, DWORD PTR $T167806[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@5:
@@ -32879,7 +32879,7 @@ $LN6@Allocate@5:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@N@std@@YAPANIPAN@Z
 _TEXT	SEGMENT
-$T167808 = -16						; size = 12
+$T167809 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -32932,10 +32932,10 @@ $LN1@Allocate@6:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T167808[ebp]
+	lea	ecx, DWORD PTR $T167809[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T167808[ebp]
+	lea	ecx, DWORD PTR $T167809[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@6:
@@ -33679,7 +33679,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPl
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ?begin@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T167878 = -8						; size = 4
+$T167879 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ PROC ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::begin, COMDAT
@@ -33693,7 +33693,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167878[ebp], 0
+	mov	DWORD PTR $T167879[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -33708,9 +33708,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@1@PBV?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >::_List_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >
-	mov	ecx, DWORD PTR $T167878[ebp]
+	mov	ecx, DWORD PTR $T167879[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T167878[ebp], ecx
+	mov	DWORD PTR $T167879[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -33726,7 +33726,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T167883 = -8						; size = 4
+$T167884 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ PROC ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::end, COMDAT
@@ -33740,7 +33740,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167883[ebp], 0
+	mov	DWORD PTR $T167884[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -33751,9 +33751,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@1@PBV?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >::_List_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >
-	mov	eax, DWORD PTR $T167883[ebp]
+	mov	eax, DWORD PTR $T167884[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167883[ebp], eax
+	mov	DWORD PTR $T167884[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -33786,8 +33786,8 @@ _TEXT	SEGMENT
 tv93 = -44						; size = 4
 tv90 = -40						; size = 4
 tv94 = -36						; size = 4
-$T167888 = -32						; size = 12
-$T167887 = -20						; size = 4
+$T167889 = -32						; size = 12
+$T167888 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -33823,7 +33823,7 @@ __Val$ = 8						; size = 4
 
 	mov	eax, DWORD PTR __Val$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T167888[ebp]
+	lea	ecx, DWORD PTR $T167889[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@XZ ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::end
@@ -33833,7 +33833,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167887[ebp], esp
+	mov	DWORD PTR $T167888[ebp], esp
 	mov	eax, DWORD PTR tv90[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -33841,7 +33841,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@2@ABQAVRaven_PathPlanner@@@Z ; std::list<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> >::_Insert
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T167888[ebp]
+	lea	ecx, DWORD PTR $T167889[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 
 ; 928  : 		}
@@ -33859,7 +33859,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_back@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAEXABQAVRaven_PathPlanner@@@Z$0:
-	lea	ecx, DWORD PTR $T167888[ebp]
+	lea	ecx, DWORD PTR $T167889[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_back@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAEXABQAVRaven_PathPlanner@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -33876,8 +33876,8 @@ PUBLIC	??$_Dest_val@V?$allocator@U_Node@?$_List_nod@PAVRaven_PathPlanner@@V?$all
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?remove@?$list@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@QAEXABQAVRaven_PathPlanner@@@Z
 _TEXT	SEGMENT
-__Perase$159053 = -24					; size = 4
-__Pprev$159052 = -20					; size = 4
+__Perase$159054 = -24					; size = 4
+__Pprev$159053 = -20					; size = 4
 __Pnode$ = -16						; size = 4
 __Phead$ = -12						; size = 4
 __Val$ = -8						; size = 4
@@ -33938,12 +33938,12 @@ $LN4@remove:
 
 	mov	eax, DWORD PTR __Pnode$[ebp]
 	mov	ecx, DWORD PTR [eax+4]
-	mov	DWORD PTR __Pprev$159052[ebp], ecx
+	mov	DWORD PTR __Pprev$159053[ebp], ecx
 
 ; 1197 : 				const _Nodeptr _Perase = _Pnode;
 
 	mov	edx, DWORD PTR __Pnode$[ebp]
-	mov	DWORD PTR __Perase$159053[ebp], edx
+	mov	DWORD PTR __Perase$159054[ebp], edx
 
 ; 1198 : 				_Pnode = _Pnode->_Next;
 
@@ -33954,20 +33954,20 @@ $LN4@remove:
 ; 1199 : 
 ; 1200 : 				_Pprev->_Next = _Pnode;
 
-	mov	edx, DWORD PTR __Pprev$159052[ebp]
+	mov	edx, DWORD PTR __Pprev$159053[ebp]
 	mov	eax, DWORD PTR __Pnode$[ebp]
 	mov	DWORD PTR [edx], eax
 
 ; 1201 : 				_Pnode->_Prev = _Pprev;
 
 	mov	ecx, DWORD PTR __Pnode$[ebp]
-	mov	edx, DWORD PTR __Pprev$159052[ebp]
+	mov	edx, DWORD PTR __Pprev$159053[ebp]
 	mov	DWORD PTR [ecx+4], edx
 
 ; 1202 : 
 ; 1203 : 				_Dest_val(this->_Alnod, _Perase);
 
-	mov	eax, DWORD PTR __Perase$159053[ebp]
+	mov	eax, DWORD PTR __Perase$159054[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
@@ -33978,7 +33978,7 @@ $LN4@remove:
 ; 1204 : 				this->_Alnod.deallocate(_Perase, 1);
 
 	push	1
-	mov	edx, DWORD PTR __Perase$159053[ebp]
+	mov	edx, DWORD PTR __Perase$159054[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 12					; 0000000cH
@@ -34021,7 +34021,7 @@ PUBLIC	??0?$allocator@VPathEdge@@@std@@QAE@XZ		; std::allocator<PathEdge>::alloc
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T167901 = -8						; size = 4
+$T167902 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ PROC ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >, COMDAT
 ; _this$ = ecx
@@ -34036,7 +34036,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T167901[ebp], esp
+	mov	DWORD PTR $T167902[ebp], esp
 	call	??0?$allocator@VPathEdge@@@std@@QAE@XZ	; std::allocator<PathEdge>::allocator<PathEdge>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@V?$allocator@VPathEdge@@@1@@Z ; std::_List_val<PathEdge,std::allocator<PathEdge> >::_List_val<PathEdge,std::allocator<PathEdge> >
@@ -34092,7 +34092,7 @@ PUBLIC	??0?$_List_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z ; std::
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ??0?$list@HV?$allocator@H@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T167907 = -8						; size = 4
+$T167908 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$list@HV?$allocator@H@std@@@std@@QAE@XZ PROC	; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >, COMDAT
 ; _this$ = ecx
@@ -34107,7 +34107,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T167907[ebp], esp
+	mov	DWORD PTR $T167908[ebp], esp
 	call	??0?$allocator@H@std@@QAE@XZ		; std::allocator<int>::allocator<int>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_List_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z ; std::_List_val<int,std::allocator<int> >::_List_val<int,std::allocator<int> >
@@ -34140,7 +34140,7 @@ __ehfuncinfo$??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z DD 019930522H
 xdata$x	ENDS
 ;	COMDAT ??0?$list@HV?$allocator@H@std@@@std@@QAE@$$QAV01@@Z
 _TEXT	SEGMENT
-$T167911 = -20						; size = 4
+$T167912 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -34168,7 +34168,7 @@ __Right$ = 8						; size = 4
 	add	eax, 13					; 0000000dH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T167911[ebp], esp
+	mov	DWORD PTR $T167912[ebp], esp
 	push	eax
 	call	??0?$allocator@H@std@@QAE@ABV01@@Z	; std::allocator<int>::allocator<int>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -34235,8 +34235,8 @@ _TEXT	SEGMENT
 tv93 = -44						; size = 4
 tv90 = -40						; size = 4
 tv94 = -36						; size = 4
-$T167922 = -32						; size = 12
-$T167921 = -20						; size = 4
+$T167923 = -32						; size = 12
+$T167922 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -34272,7 +34272,7 @@ __Val$ = 8						; size = 4
 
 	mov	eax, DWORD PTR __Val$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T167922[ebp]
+	lea	ecx, DWORD PTR $T167923[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::begin
@@ -34282,7 +34282,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167921[ebp], esp
+	mov	DWORD PTR $T167922[ebp], esp
 	mov	eax, DWORD PTR tv90[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -34290,7 +34290,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@ABH@Z ; std::list<int,std::allocator<int> >::_Insert
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T167922[ebp]
+	lea	ecx, DWORD PTR $T167923[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 
 ; 918  : 		}
@@ -34308,7 +34308,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_front@?$list@HV?$allocator@H@std@@@std@@QAEXABH@Z$0:
-	lea	ecx, DWORD PTR $T167922[ebp]
+	lea	ecx, DWORD PTR $T167923[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_front@?$list@HV?$allocator@H@std@@@std@@QAEXABH@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -34338,8 +34338,8 @@ _TEXT	SEGMENT
 tv93 = -44						; size = 4
 tv90 = -40						; size = 4
 tv94 = -36						; size = 4
-$T167934 = -32						; size = 12
-$T167933 = -20						; size = 4
+$T167935 = -32						; size = 12
+$T167934 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -34375,7 +34375,7 @@ __Val$ = 8						; size = 4
 
 	mov	eax, DWORD PTR __Val$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T167934[ebp]
+	lea	ecx, DWORD PTR $T167935[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::end
@@ -34385,7 +34385,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T167933[ebp], esp
+	mov	DWORD PTR $T167934[ebp], esp
 	mov	eax, DWORD PTR tv90[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -34393,7 +34393,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@ABH@Z ; std::list<int,std::allocator<int> >::_Insert
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T167934[ebp]
+	lea	ecx, DWORD PTR $T167935[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 
 ; 928  : 		}
@@ -34411,7 +34411,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_back@?$list@HV?$allocator@H@std@@@std@@QAEXABH@Z$0:
-	lea	ecx, DWORD PTR $T167934[ebp]
+	lea	ecx, DWORD PTR $T167935[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_back@?$list@HV?$allocator@H@std@@@std@@QAEXABH@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -34463,7 +34463,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigg
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ?begin@?$vector@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T167948 = -8						; size = 4
+$T167949 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@2@XZ PROC ; std::vector<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > >::begin, COMDAT
@@ -34477,7 +34477,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167948[ebp], 0
+	mov	DWORD PTR $T167949[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -34488,9 +34488,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@PAU?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >
-	mov	eax, DWORD PTR $T167948[ebp]
+	mov	eax, DWORD PTR $T167949[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167948[ebp], eax
+	mov	DWORD PTR $T167949[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -34506,7 +34506,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T167953 = -8						; size = 4
+$T167954 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@2@XZ PROC ; std::vector<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > >::end, COMDAT
@@ -34520,7 +34520,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167953[ebp], 0
+	mov	DWORD PTR $T167954[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -34531,9 +34531,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@V?$allocator@U?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@@std@@@std@@@std@@QAE@PAU?$Cell@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >::_Vector_iterator<std::_Vector_val<Cell<NavGraphNode<Trigger<Raven_Bot> *> *>,std::allocator<Cell<NavGraphNode<Trigger<Raven_Bot> *> *> > > >
-	mov	eax, DWORD PTR $T167953[ebp]
+	mov	eax, DWORD PTR $T167954[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T167953[ebp], eax
+	mov	DWORD PTR $T167954[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -34564,7 +34564,7 @@ __ehfuncinfo$??E?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger
 xdata$x	ENDS
 ;	COMDAT ??E?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T167959 = -40						; size = 4
+$T167960 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -34596,7 +34596,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T167959[ebp], 0
+	mov	DWORD PTR $T167960[ebp], 0
 
 ; 338  : 		_Myiter _Tmp = *this;
 
@@ -34617,9 +34617,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T167959[ebp]
+	mov	edx, DWORD PTR $T167960[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T167959[ebp], edx
+	mov	DWORD PTR $T167960[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
@@ -34663,10 +34663,10 @@ __unwindfunclet$??E?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trig
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T167959[ebp]
+	mov	eax, DWORD PTR $T167960[ebp]
 	and	eax, 1
 	je	$LN5@operator@27
-	and	DWORD PTR $T167959[ebp], -2		; fffffffeH
+	and	DWORD PTR $T167960[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@27:
@@ -35046,8 +35046,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T167989 = -24						; size = 4
-$T167988 = -20						; size = 4
+$T167990 = -24						; size = 4
+$T167989 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -35083,9 +35083,9 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T167989[ebp], eax
+	mov	DWORD PTR $T167990[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T167989[ebp], 0
+	cmp	DWORD PTR $T167990[ebp], 0
 	je	SHORT $LN3@construct
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -35093,17 +35093,17 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR [eax+4]
-	mov	ecx, DWORD PTR $T167989[ebp]
+	mov	ecx, DWORD PTR $T167990[ebp]
 	mov	DWORD PTR [ecx], edx
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR $T167989[ebp]
+	mov	edx, DWORD PTR $T167990[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct
 $LN3@construct:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T167988[ebp], eax
+	mov	DWORD PTR $T167989[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -35123,7 +35123,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T167989[ebp]
+	mov	ecx, DWORD PTR $T167990[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -35481,7 +35481,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ?begin@?$list@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168021 = -8						; size = 4
+$T168022 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ PROC ; std::list<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> >::begin, COMDAT
@@ -35495,7 +35495,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168021[ebp], 0
+	mov	DWORD PTR $T168022[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -35510,9 +35510,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@1@PBV?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >
-	mov	ecx, DWORD PTR $T168021[ebp]
+	mov	ecx, DWORD PTR $T168022[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168021[ebp], ecx
+	mov	DWORD PTR $T168022[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -35528,7 +35528,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168026 = -8						; size = 4
+$T168027 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@2@XZ PROC ; std::list<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> >::end, COMDAT
@@ -35542,7 +35542,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168026[ebp], 0
+	mov	DWORD PTR $T168027[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -35553,9 +35553,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@1@PBV?$_List_val@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@V?$allocator@PAV?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >::_List_iterator<std::_List_val<NavGraphNode<Trigger<Raven_Bot> *> *,std::allocator<NavGraphNode<Trigger<Raven_Bot> *> *> > >
-	mov	eax, DWORD PTR $T168026[ebp]
+	mov	eax, DWORD PTR $T168027[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T168026[ebp], eax
+	mov	DWORD PTR $T168027[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -35726,7 +35726,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv84 = -36						; size = 4
 tv65 = -32						; size = 4
-$T168038 = -28						; size = 12
+$T168039 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _graph$ = 8						; size = 4
@@ -35772,7 +35772,7 @@ _node$ = 12						; size = 4
 ; 239  : 
 ; 240  :           curEdge = G.m_Edges[NodeIndex].begin();
 
-	lea	ecx, DWORD PTR $T168038[ebp]
+	lea	ecx, DWORD PTR $T168039[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+16]
@@ -35792,7 +35792,7 @@ _node$ = 12						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T168038[ebp]
+	lea	ecx, DWORD PTR $T168039[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 241  :         }
@@ -35815,7 +35815,7 @@ __unwindfunclet$??0ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??0ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@ABV1@H@Z$1:
-	lea	ecx, DWORD PTR $T168038[ebp]
+	lea	ecx, DWORD PTR $T168039[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??0ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@ABV1@H@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -35845,7 +35845,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv84 = -36						; size = 4
 tv85 = -32						; size = 4
-$T168049 = -28						; size = 12
+$T168050 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ PROC ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::begin, COMDAT
@@ -35876,7 +35876,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 245  :           curEdge = G.m_Edges[NodeIndex].begin();
 
-	lea	eax, DWORD PTR $T168049[ebp]
+	lea	eax, DWORD PTR $T168050[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+16]
@@ -35896,7 +35896,7 @@ __$EHRec$ = -12						; size = 12
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T168049[ebp]
+	lea	ecx, DWORD PTR $T168050[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 
 ; 246  : 
@@ -35933,7 +35933,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ$0:
-	lea	ecx, DWORD PTR $T168049[ebp]
+	lea	ecx, DWORD PTR $T168050[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -36025,8 +36025,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv79 = -40						; size = 4
 tv80 = -36						; size = 4
-$T168062 = -32						; size = 12
-$T168061 = -17						; size = 1
+$T168063 = -32						; size = 12
+$T168062 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ PROC ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::end, COMDAT
@@ -36058,7 +36058,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 270  :           return (curEdge == G.m_Edges[NodeIndex].end());
 
-	lea	eax, DWORD PTR $T168062[ebp]
+	lea	eax, DWORD PTR $T168063[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+16]
@@ -36077,11 +36077,11 @@ __$EHRec$ = -12						; size = 12
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??8?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<NavGraphEdge,std::allocator<NavGraphEdge> > >::operator==
-	mov	BYTE PTR $T168061[ebp], al
+	mov	BYTE PTR $T168062[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T168062[ebp]
+	lea	ecx, DWORD PTR $T168063[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
-	mov	al, BYTE PTR $T168061[ebp]
+	mov	al, BYTE PTR $T168062[ebp]
 
 ; 271  :         }
 
@@ -36098,7 +36098,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ$0:
-	lea	ecx, DWORD PTR $T168062[ebp]
+	lea	ecx, DWORD PTR $T168063[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -36903,12 +36903,12 @@ tv181 = -80						; size = 4
 tv194 = -76						; size = 4
 tv178 = -72						; size = 4
 tv193 = -68						; size = 4
-$T168135 = -64						; size = 12
-$T168134 = -52						; size = 4
-$T168133 = -48						; size = 12
-$T168132 = -36						; size = 4
-$T168131 = -32						; size = 12
-$T168130 = -20						; size = 4
+$T168136 = -64						; size = 12
+$T168135 = -52						; size = 4
+$T168134 = -48						; size = 12
+$T168133 = -36						; size = 4
+$T168132 = -32						; size = 12
+$T168131 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -36964,7 +36964,7 @@ __Right$ = 8						; size = 4
 	mov	edx, DWORD PTR __Right$[ebp]
 	mov	eax, DWORD PTR [edx+8]
 	push	eax
-	lea	ecx, DWORD PTR $T168131[ebp]
+	lea	ecx, DWORD PTR $T168132[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::end
@@ -36974,7 +36974,7 @@ __Right$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168130[ebp], esp
+	mov	DWORD PTR $T168131[ebp], esp
 	mov	eax, DWORD PTR tv178[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -36982,7 +36982,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR tv194[ebp]
 	mov	DWORD PTR tv181[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	edx, DWORD PTR $T168133[ebp]
+	lea	edx, DWORD PTR $T168134[ebp]
 	push	edx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::begin
@@ -36992,7 +36992,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168132[ebp], esp
+	mov	DWORD PTR $T168133[ebp], esp
 	mov	edx, DWORD PTR tv183[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -37002,7 +37002,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR __Right$[ebp]
 	push	ecx
-	lea	edx, DWORD PTR $T168135[ebp]
+	lea	edx, DWORD PTR $T168136[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::begin
@@ -37012,7 +37012,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168134[ebp], esp
+	mov	DWORD PTR $T168135[ebp], esp
 	mov	edx, DWORD PTR tv188[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -37021,13 +37021,13 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z ; std::list<int,std::allocator<int> >::_Splice
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	lea	ecx, DWORD PTR $T168135[ebp]
+	lea	ecx, DWORD PTR $T168136[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T168133[ebp]
+	lea	ecx, DWORD PTR $T168134[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T168131[ebp]
+	lea	ecx, DWORD PTR $T168132[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN3@Assign_rv@2:
 
@@ -37048,19 +37048,19 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Assign_rv@?$list@HV?$allocator@H@std@@@std@@QAEX$$QAV12@@Z$0:
-	lea	ecx, DWORD PTR $T168131[ebp]
+	lea	ecx, DWORD PTR $T168132[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@HV?$allocator@H@std@@@std@@QAEX$$QAV12@@Z$1:
-	mov	ecx, DWORD PTR $T168130[ebp]
+	mov	ecx, DWORD PTR $T168131[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@HV?$allocator@H@std@@@std@@QAEX$$QAV12@@Z$2:
-	lea	ecx, DWORD PTR $T168133[ebp]
+	lea	ecx, DWORD PTR $T168134[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@HV?$allocator@H@std@@@std@@QAEX$$QAV12@@Z$3:
-	mov	ecx, DWORD PTR $T168132[ebp]
+	mov	ecx, DWORD PTR $T168133[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_rv@?$list@HV?$allocator@H@std@@@std@@QAEX$$QAV12@@Z$4:
-	lea	ecx, DWORD PTR $T168135[ebp]
+	lea	ecx, DWORD PTR $T168136[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Assign_rv@?$list@HV?$allocator@H@std@@@std@@QAEX$$QAV12@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -37075,7 +37075,7 @@ text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168151 = -8						; size = 4
+$T168152 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ PROC ; std::list<int,std::allocator<int> >::begin, COMDAT
@@ -37089,7 +37089,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168151[ebp], 0
+	mov	DWORD PTR $T168152[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -37104,9 +37104,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@HV?$allocator@H@std@@@1@PBV?$_List_val@HV?$allocator@H@std@@@1@@Z ; std::_List_iterator<std::_List_val<int,std::allocator<int> > >::_List_iterator<std::_List_val<int,std::allocator<int> > >
-	mov	ecx, DWORD PTR $T168151[ebp]
+	mov	ecx, DWORD PTR $T168152[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168151[ebp], ecx
+	mov	DWORD PTR $T168152[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -37283,7 +37283,7 @@ __ehfuncinfo$??0?$_List_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z D
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z
 _TEXT	SEGMENT
-$T168164 = -20						; size = 4
+$T168165 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -37309,7 +37309,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T168164[ebp], esp
+	mov	DWORD PTR $T168165[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@H@std@@QAE@ABV01@@Z	; std::allocator<int>::allocator<int>
@@ -37386,7 +37386,7 @@ text$x	ENDS
 ; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\misc\priorityqueue.h
 ;	COMDAT ?ReorderDownwards@?$IndexedPriorityQLow@N@@AAEXHH@Z
 _TEXT	SEGMENT
-_child$159553 = -8					; size = 4
+_child$159554 = -8					; size = 4
 _this$ = -4						; size = 4
 _nd$ = 8						; size = 4
 _HeapSize$ = 12						; size = 4
@@ -37418,16 +37418,16 @@ $LN5@ReorderDow:
 
 	mov	ecx, DWORD PTR _nd$[ebp]
 	shl	ecx, 1
-	mov	DWORD PTR _child$159553[ebp], ecx
+	mov	DWORD PTR _child$159554[ebp], ecx
 
 ; 325  : 
 ; 326  :       //set child to smaller of nd's two children
 ; 327  :       if ((child < HeapSize) && (m_vecKeys[m_Heap[child]] > m_vecKeys[m_Heap[child+1]]))
 
-	mov	edx, DWORD PTR _child$159553[ebp]
+	mov	edx, DWORD PTR _child$159554[ebp]
 	cmp	edx, DWORD PTR _HeapSize$[ebp]
 	jge	SHORT $LN3@ReorderDow
-	mov	eax, DWORD PTR _child$159553[ebp]
+	mov	eax, DWORD PTR _child$159554[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -37438,7 +37438,7 @@ $LN5@ReorderDow:
 	mov	ecx, DWORD PTR [edx]
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	mov	esi, eax
-	mov	eax, DWORD PTR _child$159553[ebp]
+	mov	eax, DWORD PTR _child$159554[ebp]
 	add	eax, 1
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -37458,9 +37458,9 @@ $LN5@ReorderDow:
 ; 328  :       {
 ; 329  :         ++child;
 
-	mov	eax, DWORD PTR _child$159553[ebp]
+	mov	eax, DWORD PTR _child$159554[ebp]
 	add	eax, 1
-	mov	DWORD PTR _child$159553[ebp], eax
+	mov	DWORD PTR _child$159554[ebp], eax
 $LN3@ReorderDow:
 
 ; 330  :       }
@@ -37479,7 +37479,7 @@ $LN3@ReorderDow:
 	mov	ecx, DWORD PTR [eax]
 	call	??A?$vector@NV?$allocator@N@std@@@std@@QAEAANI@Z ; std::vector<double,std::allocator<double> >::operator[]
 	mov	esi, eax
-	mov	ecx, DWORD PTR _child$159553[ebp]
+	mov	ecx, DWORD PTR _child$159554[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 4
@@ -37500,7 +37500,7 @@ $LN3@ReorderDow:
 
 	mov	ecx, DWORD PTR _nd$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR _child$159553[ebp]
+	mov	edx, DWORD PTR _child$159554[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?Swap@?$IndexedPriorityQLow@N@@AAEXHH@Z	; IndexedPriorityQLow<double>::Swap
@@ -37509,7 +37509,7 @@ $LN3@ReorderDow:
 ; 337  :         //move the current node down the tree
 ; 338  :         nd = child;
 
-	mov	eax, DWORD PTR _child$159553[ebp]
+	mov	eax, DWORD PTR _child$159554[ebp]
 	mov	DWORD PTR _nd$[ebp], eax
 
 ; 339  :       }
@@ -38334,7 +38334,7 @@ PUBLIC	?_Nextnode@?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168211 = -8						; size = 4
+$T168212 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@2@XZ PROC ; std::list<NavGraphEdge,std::allocator<NavGraphEdge> >::begin, COMDAT
@@ -38348,7 +38348,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168211[ebp], 0
+	mov	DWORD PTR $T168212[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -38363,9 +38363,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@1@PBV?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<NavGraphEdge,std::allocator<NavGraphEdge> > >::_List_const_iterator<std::_List_val<NavGraphEdge,std::allocator<NavGraphEdge> > >
-	mov	ecx, DWORD PTR $T168211[ebp]
+	mov	ecx, DWORD PTR $T168212[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168211[ebp], ecx
+	mov	DWORD PTR $T168212[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -38381,7 +38381,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168216 = -8						; size = 4
+$T168217 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@2@XZ PROC ; std::list<NavGraphEdge,std::allocator<NavGraphEdge> >::end, COMDAT
@@ -38395,7 +38395,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168216[ebp], 0
+	mov	DWORD PTR $T168217[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -38406,9 +38406,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@1@PBV?$_List_val@VNavGraphEdge@@V?$allocator@VNavGraphEdge@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<NavGraphEdge,std::allocator<NavGraphEdge> > >::_List_const_iterator<std::_List_val<NavGraphEdge,std::allocator<NavGraphEdge> > >
-	mov	eax, DWORD PTR $T168216[ebp]
+	mov	eax, DWORD PTR $T168217[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T168216[ebp], eax
+	mov	DWORD PTR $T168217[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -39220,17 +39220,17 @@ tv276 = -140						; size = 4
 tv130 = -136						; size = 4
 tv273 = -132						; size = 4
 tv139 = -128						; size = 4
-$T168268 = -124						; size = 12
-$T168267 = -112						; size = 4
-$T168266 = -108						; size = 4
-$T168265 = -104						; size = 12
-$T168264 = -92						; size = 4
-$T168263 = -88						; size = 4
-$T168262 = -84						; size = 4
-$T168261 = -80						; size = 4
-__Next$159760 = -72					; size = 12
-__Iter$159754 = -52					; size = 12
-__Next$159734 = -32					; size = 12
+$T168269 = -124						; size = 12
+$T168268 = -112						; size = 4
+$T168267 = -108						; size = 4
+$T168266 = -104						; size = 12
+$T168265 = -92						; size = 4
+$T168264 = -88						; size = 4
+$T168263 = -84						; size = 4
+$T168262 = -80						; size = 4
+__Next$159761 = -72					; size = 12
+__Iter$159755 = -52					; size = 12
+__Next$159735 = -32					; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -39307,13 +39307,13 @@ $LN9@Splice@2:
 
 	lea	ecx, DWORD PTR __First$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$159734[ebp]
+	lea	ecx, DWORD PTR __Next$159735[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 $LN6@Splice@2:
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR __Next$159734[ebp]
+	lea	ecx, DWORD PTR __Next$159735[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator!=
 	movzx	eax, al
 	test	eax, eax
@@ -39323,15 +39323,15 @@ $LN6@Splice@2:
 ; 1444 : 					const_iterator _Iter = _Next++;
 
 	push	0
-	lea	ecx, DWORD PTR __Iter$159754[ebp]
+	lea	ecx, DWORD PTR __Iter$159755[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$159734[ebp]
+	lea	ecx, DWORD PTR __Next$159735[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator++
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 
 ; 1445 : 					_Orphan_ptr(_Right, _Iter._Ptr);
 
-	mov	edx, DWORD PTR __Iter$159754[ebp+8]
+	mov	edx, DWORD PTR __Iter$159755[ebp+8]
 	push	edx
 	mov	eax, DWORD PTR __Right$[ebp]
 	push	eax
@@ -39342,18 +39342,18 @@ $LN6@Splice@2:
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Iter$159754[ebp]
+	lea	ecx, DWORD PTR __Iter$159755[ebp]
 	call	?_Adopt@_Iterator_base12@std@@QAEXPBU_Container_base12@2@@Z ; std::_Iterator_base12::_Adopt
 
 ; 1447 : 					}
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR __Iter$159754[ebp]
+	lea	ecx, DWORD PTR __Iter$159755[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN6@Splice@2
 $LN5@Splice@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR __Next$159734[ebp]
+	lea	ecx, DWORD PTR __Next$159735[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN7@Splice@2:
 
@@ -39363,7 +39363,7 @@ $LN7@Splice@2:
 	push	edx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168261[ebp], esp
+	mov	DWORD PTR $T168262[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -39373,7 +39373,7 @@ $LN7@Splice@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168262[ebp], esp
+	mov	DWORD PTR $T168263[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -39385,7 +39385,7 @@ $LN7@Splice@2:
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168263[ebp], esp
+	mov	DWORD PTR $T168264[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -39411,17 +39411,17 @@ $LN8@Splice@2:
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR __Next$159760[ebp]
+	lea	ecx, DWORD PTR __Next$159761[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
 	jmp	SHORT $LN3@Splice@2
 $LN2@Splice@2:
-	lea	ecx, DWORD PTR __Next$159760[ebp]
+	lea	ecx, DWORD PTR __Next$159761[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator++
 $LN3@Splice@2:
 	lea	ecx, DWORD PTR __Last$[ebp]
 	push	ecx
-	lea	ecx, DWORD PTR __Next$159760[ebp]
+	lea	ecx, DWORD PTR __Next$159761[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator!=
 	movzx	edx, al
 	test	edx, edx
@@ -39429,34 +39429,34 @@ $LN3@Splice@2:
 
 ; 1459 : 				insert(_Where, (_Ty &&)*_Next);
 
-	lea	ecx, DWORD PTR __Next$159760[ebp]
+	lea	ecx, DWORD PTR __Next$159761[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QBEABHXZ ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator*
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168264[ebp], esp
+	mov	DWORD PTR $T168265[ebp], esp
 	lea	eax, DWORD PTR __Where$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv284[ebp], eax
-	lea	ecx, DWORD PTR $T168265[ebp]
+	lea	ecx, DWORD PTR $T168266[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@H@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@$$QAH@Z ; std::list<int,std::allocator<int> >::insert<int>
 	mov	DWORD PTR tv215[ebp], eax
-	lea	ecx, DWORD PTR $T168265[ebp]
+	lea	ecx, DWORD PTR $T168266[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@Splice@2
 $LN1@Splice@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR __Next$159760[ebp]
+	lea	ecx, DWORD PTR __Next$159761[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 
 ; 1460 : 			_Right.erase(_First, _Last);
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168266[ebp], esp
+	mov	DWORD PTR $T168267[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -39466,18 +39466,18 @@ $LN1@Splice@2:
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168267[ebp], esp
+	mov	DWORD PTR $T168268[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv291[ebp], eax
-	lea	eax, DWORD PTR $T168268[ebp]
+	lea	eax, DWORD PTR $T168269[ebp]
 	push	eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@0@Z ; std::list<int,std::allocator<int> >::erase
 	mov	DWORD PTR tv288[ebp], eax
-	lea	ecx, DWORD PTR $T168268[ebp]
+	lea	ecx, DWORD PTR $T168269[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN4@Splice@2:
 
@@ -39558,22 +39558,22 @@ __unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_it
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$3:
-	lea	ecx, DWORD PTR __Next$159734[ebp]
+	lea	ecx, DWORD PTR __Next$159735[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$4:
-	lea	ecx, DWORD PTR __Iter$159754[ebp]
+	lea	ecx, DWORD PTR __Iter$159755[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$5:
-	mov	ecx, DWORD PTR $T168261[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$6:
 	mov	ecx, DWORD PTR $T168262[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$6:
+	mov	ecx, DWORD PTR $T168263[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$8:
-	lea	ecx, DWORD PTR __Next$159760[ebp]
+	lea	ecx, DWORD PTR __Next$159761[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z$11:
-	mov	ecx, DWORD PTR $T168266[ebp]
+	mov	ecx, DWORD PTR $T168267[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Splice@?$list@HV?$allocator@H@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@AAV12@00I@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -39840,7 +39840,7 @@ __ehfuncinfo$??0?$_List_nod@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z D
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z
 _TEXT	SEGMENT
-$T168313 = -36						; size = 8
+$T168314 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -39903,7 +39903,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T168313[ebp]
+	lea	ecx, DWORD PTR $T168314[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -40802,13 +40802,13 @@ tv194 = -84						; size = 4
 tv218 = -80						; size = 4
 tv189 = -76						; size = 4
 tv216 = -72						; size = 4
-$T168388 = -68						; size = 4
-$T168385 = -64						; size = 4
-$T168384 = -60						; size = 12
-$T168383 = -48						; size = 4
-$T168380 = -44						; size = 12
-$T168379 = -32						; size = 12
-$T168378 = -17						; size = 1
+$T168389 = -68						; size = 4
+$T168386 = -64						; size = 4
+$T168385 = -60						; size = 12
+$T168384 = -48						; size = 4
+$T168381 = -44						; size = 12
+$T168380 = -32						; size = 12
+$T168379 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -40839,12 +40839,12 @@ __Last$ = 24						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168388[ebp], 0
+	mov	DWORD PTR $T168389[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1082 : 		if (_First == begin() && _Last == end())
 
-	lea	eax, DWORD PTR $T168379[ebp]
+	lea	eax, DWORD PTR $T168380[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::begin
@@ -40852,9 +40852,9 @@ __Last$ = 24						; size = 12
 	mov	ecx, DWORD PTR tv216[ebp]
 	mov	DWORD PTR tv189[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T168388[ebp]
+	mov	edx, DWORD PTR $T168389[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T168388[ebp], edx
+	mov	DWORD PTR $T168389[ebp], edx
 	mov	eax, DWORD PTR tv189[ebp]
 	push	eax
 	lea	ecx, DWORD PTR __First$[ebp]
@@ -40862,7 +40862,7 @@ __Last$ = 24						; size = 12
 	movzx	ecx, al
 	test	ecx, ecx
 	je	SHORT $LN7@erase@4
-	lea	edx, DWORD PTR $T168380[ebp]
+	lea	edx, DWORD PTR $T168381[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::end
@@ -40870,9 +40870,9 @@ __Last$ = 24						; size = 12
 	mov	eax, DWORD PTR tv218[ebp]
 	mov	DWORD PTR tv194[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
-	mov	ecx, DWORD PTR $T168388[ebp]
+	mov	ecx, DWORD PTR $T168389[ebp]
 	or	ecx, 2
-	mov	DWORD PTR $T168388[ebp], ecx
+	mov	DWORD PTR $T168389[ebp], ecx
 	mov	edx, DWORD PTR tv194[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Last$[ebp]
@@ -40886,24 +40886,24 @@ $LN7@erase@4:
 	mov	DWORD PTR tv94[ebp], 0
 $LN8@erase@4:
 	mov	cl, BYTE PTR tv94[ebp]
-	mov	BYTE PTR $T168378[ebp], cl
+	mov	BYTE PTR $T168379[ebp], cl
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
-	mov	edx, DWORD PTR $T168388[ebp]
+	mov	edx, DWORD PTR $T168389[ebp]
 	and	edx, 2
 	je	SHORT $LN15@erase@4
-	and	DWORD PTR $T168388[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T168380[ebp]
+	and	DWORD PTR $T168389[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T168381[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN15@erase@4:
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
-	mov	eax, DWORD PTR $T168388[ebp]
+	mov	eax, DWORD PTR $T168389[ebp]
 	and	eax, 1
 	je	SHORT $LN16@erase@4
-	and	DWORD PTR $T168388[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T168379[ebp]
+	and	DWORD PTR $T168389[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T168380[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN16@erase@4:
-	movzx	ecx, BYTE PTR $T168378[ebp]
+	movzx	ecx, BYTE PTR $T168379[ebp]
 	test	ecx, ecx
 	je	SHORT $LN2@erase@4
 
@@ -40919,9 +40919,9 @@ $LN16@erase@4:
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::list<int,std::allocator<int> >::end
-	mov	eax, DWORD PTR $T168388[ebp]
+	mov	eax, DWORD PTR $T168389[ebp]
 	or	eax, 4
-	mov	DWORD PTR $T168388[ebp], eax
+	mov	DWORD PTR $T168389[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -40952,12 +40952,12 @@ $LN2@erase@4:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168383[ebp], esp
+	mov	DWORD PTR $T168384[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv206[ebp], eax
-	lea	ecx, DWORD PTR $T168384[ebp]
+	lea	ecx, DWORD PTR $T168385[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z ; std::list<int,std::allocator<int> >::erase
@@ -40970,7 +40970,7 @@ $LN2@erase@4:
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??4?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	lea	ecx, DWORD PTR $T168384[ebp]
+	lea	ecx, DWORD PTR $T168385[ebp]
 	call	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@erase@4
 $LN1@erase@4:
@@ -40979,7 +40979,7 @@ $LN1@erase@4:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168385[ebp], esp
+	mov	DWORD PTR $T168386[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -40989,9 +40989,9 @@ $LN1@erase@4:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z ; std::list<int,std::allocator<int> >::_Make_iter
 	mov	DWORD PTR tv212[ebp], eax
-	mov	ecx, DWORD PTR $T168388[ebp]
+	mov	ecx, DWORD PTR $T168389[ebp]
 	or	ecx, 4
-	mov	DWORD PTR $T168388[ebp], ecx
+	mov	DWORD PTR $T168389[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -41032,34 +41032,34 @@ __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@0@Z$2:
-	mov	eax, DWORD PTR $T168388[ebp]
+	mov	eax, DWORD PTR $T168389[ebp]
 	and	eax, 1
 	je	$LN12@erase@4
-	and	DWORD PTR $T168388[ebp], -2		; fffffffeH
-	lea	ecx, DWORD PTR $T168379[ebp]
+	and	DWORD PTR $T168389[ebp], -2		; fffffffeH
+	lea	ecx, DWORD PTR $T168380[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN12@erase@4:
 	ret	0
 __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@0@Z$3:
-	mov	eax, DWORD PTR $T168388[ebp]
+	mov	eax, DWORD PTR $T168389[ebp]
 	and	eax, 2
 	je	$LN14@erase@4
-	and	DWORD PTR $T168388[ebp], -3		; fffffffdH
-	lea	ecx, DWORD PTR $T168380[ebp]
+	and	DWORD PTR $T168389[ebp], -3		; fffffffdH
+	lea	ecx, DWORD PTR $T168381[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN14@erase@4:
 	ret	0
 __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@0@Z$4:
-	mov	eax, DWORD PTR $T168388[ebp]
+	mov	eax, DWORD PTR $T168389[ebp]
 	and	eax, 4
 	je	$LN18@erase@4
-	and	DWORD PTR $T168388[ebp], -5		; fffffffbH
+	and	DWORD PTR $T168389[ebp], -5		; fffffffbH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN18@erase@4:
 	ret	0
 __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@0@Z$6:
-	lea	ecx, DWORD PTR $T168384[ebp]
+	lea	ecx, DWORD PTR $T168385[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@0@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -41436,7 +41436,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T168425 = -40						; size = 4
+$T168426 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -41468,7 +41468,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168425[ebp], 0
+	mov	DWORD PTR $T168426[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -41489,9 +41489,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T168425[ebp]
+	mov	edx, DWORD PTR $T168426[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T168425[ebp], edx
+	mov	DWORD PTR $T168426[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -41535,10 +41535,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T168425[ebp]
+	mov	eax, DWORD PTR $T168426[ebp]
 	and	eax, 1
 	je	$LN5@operator@41
-	and	DWORD PTR $T168425[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168426[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN5@operator@41:
@@ -42063,7 +42063,7 @@ __ehfuncinfo$?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iterato
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T168489 = -20						; size = 4
+$T168490 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -42088,7 +42088,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168489[ebp], 0
+	mov	DWORD PTR $T168490[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -42099,9 +42099,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@HV?$allocator@H@std@@@1@PBV?$_List_val@HV?$allocator@H@std@@@1@@Z ; std::_List_iterator<std::_List_val<int,std::allocator<int> > >::_List_iterator<std::_List_val<int,std::allocator<int> > >
-	mov	edx, DWORD PTR $T168489[ebp]
+	mov	edx, DWORD PTR $T168490[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T168489[ebp], edx
+	mov	DWORD PTR $T168490[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -42125,10 +42125,10 @@ __unwindfunclet$?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iter
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T168489[ebp]
+	mov	eax, DWORD PTR $T168490[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter@3
-	and	DWORD PTR $T168489[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168490[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter@3:
@@ -42166,9 +42166,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T168505 = -40						; size = 4
-$T168500 = -36						; size = 4
-$T168499 = -32						; size = 12
+$T168506 = -40						; size = 4
+$T168501 = -36						; size = 4
+$T168500 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -42200,7 +42200,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168505[ebp], 0
+	mov	DWORD PTR $T168506[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -42228,7 +42228,7 @@ $LN3@erase@5:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T168499[ebp]
+	lea	edx, DWORD PTR $T168500[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator++
@@ -42240,7 +42240,7 @@ $LN3@erase@5:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@HV?$allocator@H@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<int,std::allocator<int> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T168499[ebp]
+	lea	ecx, DWORD PTR $T168500[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -42338,7 +42338,7 @@ $LN1@erase@5:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168500[ebp], esp
+	mov	DWORD PTR $T168501[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -42348,9 +42348,9 @@ $LN1@erase@5:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z ; std::list<int,std::allocator<int> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T168505[ebp]
+	mov	ecx, DWORD PTR $T168506[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168505[ebp], ecx
+	mov	DWORD PTR $T168506[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -42376,13 +42376,13 @@ __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T168499[ebp]
+	lea	ecx, DWORD PTR $T168500[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T168505[ebp]
+	mov	eax, DWORD PTR $T168506[ebp]
 	and	eax, 1
 	je	$LN10@erase@5
-	and	DWORD PTR $T168505[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168506[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN10@erase@5:
@@ -42567,14 +42567,14 @@ tv182 = -60						; size = 4
 tv179 = -56						; size = 4
 tv176 = -52						; size = 4
 tv194 = -48						; size = 4
-$T168533 = -44						; size = 4
-$T168525 = -40						; size = 4
-$T168524 = -36						; size = 4
-$T168523 = -32						; size = 4
-$T168522 = -28						; size = 4
-$T168521 = -24						; size = 4
-$T168520 = -20						; size = 4
-$T168519 = -16						; size = 4
+$T168534 = -44						; size = 4
+$T168526 = -40						; size = 4
+$T168525 = -36						; size = 4
+$T168524 = -32						; size = 4
+$T168523 = -28						; size = 4
+$T168522 = -24						; size = 4
+$T168521 = -20						; size = 4
+$T168520 = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
 __First$ = 12						; size = 12
@@ -42601,7 +42601,7 @@ __Val$ = 36						; size = 4
 	push	eax
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR $T168533[ebp], 0
+	mov	DWORD PTR $T168534[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 72   : 	_DEBUG_RANGE(_First, _Last);
@@ -42610,7 +42610,7 @@ __Val$ = 36						; size = 4
 	push	OFFSET ??_C@_1JC@HOHAHGIE@?$AAc?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe?$AAs?$AA?5?$AA?$CI?$AAx?$AA8?$AA6?$AA?$CJ?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt@
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168519[ebp], esp
+	mov	DWORD PTR $T168520[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -42620,7 +42620,7 @@ __Val$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168520[ebp], esp
+	mov	DWORD PTR $T168521[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -42636,12 +42636,12 @@ __Val$ = 36						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168521[ebp], esp
+	mov	DWORD PTR $T168522[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv182[ebp], eax
-	lea	eax, DWORD PTR $T168522[ebp]
+	lea	eax, DWORD PTR $T168523[ebp]
 	push	eax
 	call	??$_Unchecked@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@YA?AV?$_List_unchecked_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@@Z ; std::_Unchecked<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >
 	add	esp, 16					; 00000010H
@@ -42651,12 +42651,12 @@ __Val$ = 36						; size = 4
 	push	edx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168523[ebp], esp
+	mov	DWORD PTR $T168524[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv186[ebp], eax
-	lea	ecx, DWORD PTR $T168524[ebp]
+	lea	ecx, DWORD PTR $T168525[ebp]
 	push	ecx
 	call	??$_Unchecked@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@YA?AV?$_List_unchecked_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@@Z ; std::_Unchecked<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >
 	add	esp, 16					; 00000010H
@@ -42664,7 +42664,7 @@ __Val$ = 36						; size = 4
 	mov	edx, DWORD PTR tv187[ebp]
 	mov	eax, DWORD PTR [edx]
 	push	eax
-	lea	ecx, DWORD PTR $T168525[ebp]
+	lea	ecx, DWORD PTR $T168526[ebp]
 	push	ecx
 	call	??$_Find@V?$_List_unchecked_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@PAVRaven_PathPlanner@@@std@@YA?AV?$_List_unchecked_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@V10@0ABQAVRaven_PathPlanner@@@Z ; std::_Find<std::_List_unchecked_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > >,Raven_PathPlanner *>
 	add	esp, 16					; 00000010H
@@ -42679,9 +42679,9 @@ __Val$ = 36						; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T168533[ebp]
+	mov	edx, DWORD PTR $T168534[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T168533[ebp], edx
+	mov	DWORD PTR $T168534[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
@@ -42712,13 +42712,13 @@ __unwindfunclet$??$find@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$find@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@PAVRaven_PathPlanner@@@std@@YA?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@V10@0ABQAVRaven_PathPlanner@@@Z$2:
-	mov	ecx, DWORD PTR $T168519[ebp]
+	mov	ecx, DWORD PTR $T168520[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$find@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@PAVRaven_PathPlanner@@@std@@YA?AV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@V10@0ABQAVRaven_PathPlanner@@@Z$6:
-	mov	eax, DWORD PTR $T168533[ebp]
+	mov	eax, DWORD PTR $T168534[ebp]
 	and	eax, 1
 	je	$LN10@find
-	and	DWORD PTR $T168533[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168534[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 $LN10@find:
@@ -42749,9 +42749,9 @@ __ehfuncinfo$??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot
 xdata$x	ENDS
 ;	COMDAT ??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@@Heuristic_Euclid@@SANABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z
 _TEXT	SEGMENT
-$T168545 = -52						; size = 16
-$T168544 = -36						; size = 16
-$T168543 = -20						; size = 8
+$T168546 = -52						; size = 16
+$T168545 = -36						; size = 16
+$T168544 = -20						; size = 8
 __$EHRec$ = -12						; size = 12
 _G$ = 8							; size = 4
 _nd1$ = 12						; size = 4
@@ -42782,7 +42782,7 @@ _botPos$ = 20						; size = 16
 
 ; 27   :     return Vec2DDistance(G.GetNode(nd1).Pos(), G.GetNode(nd2).Pos());
 
-	lea	eax, DWORD PTR $T168544[ebp]
+	lea	eax, DWORD PTR $T168545[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _nd2$[ebp]
 	push	ecx
@@ -42791,7 +42791,7 @@ _botPos$ = 20						; size = 16
 	mov	ecx, eax
 	call	?Pos@?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@QBE?AUVector2D@@XZ ; NavGraphNode<Trigger<Raven_Bot> *>::Pos
 	push	eax
-	lea	edx, DWORD PTR $T168545[ebp]
+	lea	edx, DWORD PTR $T168546[ebp]
 	push	edx
 	mov	eax, DWORD PTR _nd1$[ebp]
 	push	eax
@@ -42802,11 +42802,11 @@ _botPos$ = 20						; size = 16
 	push	eax
 	call	?Vec2DDistance@@YANABUVector2D@@0@Z	; Vec2DDistance
 	add	esp, 8
-	fstp	QWORD PTR $T168543[ebp]
+	fstp	QWORD PTR $T168544[ebp]
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _botPos$[ebp]
 	call	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
-	fld	QWORD PTR $T168543[ebp]
+	fld	QWORD PTR $T168544[ebp]
 
 ; 28   :   }
 
@@ -42868,11 +42868,11 @@ tv73 = -120						; size = 4
 tv149 = -116						; size = 4
 tv155 = -112						; size = 4
 tv158 = -108						; size = 8
-$T168559 = -100						; size = 8
-$T168558 = -92						; size = 16
-$T168557 = -76						; size = 12
-$T168556 = -61						; size = 1
-$T168555 = -60						; size = 12
+$T168560 = -100						; size = 8
+$T168559 = -92						; size = 16
+$T168558 = -76						; size = 12
+$T168557 = -61						; size = 1
+$T168556 = -60						; size = 12
 _curBot$ = -44						; size = 12
 _botsValue$ = -28					; size = 8
 _dist$ = -20						; size = 8
@@ -42927,7 +42927,7 @@ _botPos$ = 20						; size = 16
 ; 66   : 
 ; 67   : 	  std::list<Vector2D>::const_iterator curBot = botPos.begin();
 
-	lea	eax, DWORD PTR $T168555[ebp]
+	lea	eax, DWORD PTR $T168556[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _botPos$[ebp]
 	call	?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::begin
@@ -42940,7 +42940,7 @@ _botPos$ = 20						; size = 16
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR $T168555[ebp]
+	lea	ecx, DWORD PTR $T168556[ebp]
 	call	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN3@Calculate
 $LN2@Calculate:
@@ -42950,7 +42950,7 @@ $LN2@Calculate:
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::operator++
 $LN3@Calculate:
-	lea	eax, DWORD PTR $T168557[ebp]
+	lea	eax, DWORD PTR $T168558[ebp]
 	push	eax
 	lea	ecx, DWORD PTR _botPos$[ebp]
 	call	?end@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::end
@@ -42962,11 +42962,11 @@ $LN3@Calculate:
 	push	edx
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::operator!=
-	mov	BYTE PTR $T168556[ebp], al
+	mov	BYTE PTR $T168557[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR $T168557[ebp]
+	lea	ecx, DWORD PTR $T168558[ebp]
 	call	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T168556[ebp]
+	movzx	eax, BYTE PTR $T168557[ebp]
 	test	eax, eax
 	je	SHORT $LN1@Calculate
 
@@ -42976,7 +42976,7 @@ $LN3@Calculate:
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QBEABUVector2D@@XZ ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::operator*
 	push	eax
-	lea	ecx, DWORD PTR $T168558[ebp]
+	lea	ecx, DWORD PTR $T168559[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _nd2$[ebp]
 	push	edx
@@ -43002,14 +43002,14 @@ $LN1@Calculate:
 	fld	QWORD PTR _botsValue$[ebp]
 	fmul	QWORD PTR _botsValue$[ebp]
 	fdivr	QWORD PTR _dist$[ebp]
-	fstp	QWORD PTR $T168559[ebp]
+	fstp	QWORD PTR $T168560[ebp]
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _botPos$[ebp]
 	call	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
-	fld	QWORD PTR $T168559[ebp]
+	fld	QWORD PTR $T168560[ebp]
 
 ; 75   : 
 ; 76   :   }
@@ -43055,13 +43055,13 @@ __unwindfunclet$??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_
 	lea	ecx, DWORD PTR _botPos$[ebp]
 	jmp	??1?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::~list<Vector2D,std::allocator<Vector2D> >
 __unwindfunclet$??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@@Heuristic_Bot@@SANABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z$1:
-	lea	ecx, DWORD PTR $T168555[ebp]
+	lea	ecx, DWORD PTR $T168556[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@@Heuristic_Bot@@SANABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z$2:
 	lea	ecx, DWORD PTR _curBot$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@@Heuristic_Bot@@SANABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z$3:
-	lea	ecx, DWORD PTR $T168557[ebp]
+	lea	ecx, DWORD PTR $T168558[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$Calculate@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@@Heuristic_Bot@@SANABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HHV?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -43260,12 +43260,12 @@ tv129 = -101						; size = 1
 tv197 = -100						; size = 4
 tv194 = -96						; size = 4
 tv211 = -92						; size = 4
-$T168586 = -88						; size = 12
-$T168585 = -76						; size = 4
-$T168584 = -72						; size = 4
-$T168583 = -68						; size = 4
-$T168582 = -64						; size = 4
-__Before$160360 = -56					; size = 12
+$T168587 = -88						; size = 12
+$T168586 = -76						; size = 4
+$T168585 = -72						; size = 4
+$T168584 = -68						; size = 4
+$T168583 = -64						; size = 4
+__Before$160361 = -56					; size = 12
 __Next$ = -36						; size = 12
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
@@ -43312,7 +43312,7 @@ ___formal$ = 44						; size = 1
 	push	OFFSET ??_C@_1II@KCMIDAEO@?$AAc?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe?$AAs?$AA?5?$AA?$CI?$AAx?$AA8?$AA6?$AA?$CJ?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt@
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168582[ebp], esp
+	mov	DWORD PTR $T168583[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -43322,7 +43322,7 @@ ___formal$ = 44						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+12], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168583[ebp], esp
+	mov	DWORD PTR $T168584[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -43369,7 +43369,7 @@ $LN6@Insert@3:
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168584[ebp], esp
+	mov	DWORD PTR $T168585[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -43402,32 +43402,32 @@ $LN3@Insert@3:
 
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR __Before$160360[ebp]
+	lea	ecx, DWORD PTR __Before$160361[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+12], 7
 
 ; 1047 : 			erase(--_Before);
 
-	lea	ecx, DWORD PTR __Before$160360[ebp]
+	lea	ecx, DWORD PTR __Before$160361[ebp]
 	call	??F?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::operator--
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168585[ebp], esp
+	mov	DWORD PTR $T168586[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv204[ebp], eax
-	lea	eax, DWORD PTR $T168586[ebp]
+	lea	eax, DWORD PTR $T168587[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::erase
 	mov	DWORD PTR tv205[ebp], eax
-	lea	ecx, DWORD PTR $T168586[ebp]
+	lea	ecx, DWORD PTR $T168587[ebp]
 	call	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 
 ; 1048 : 			}
 
 	mov	BYTE PTR __$EHRec$[ebp+12], 6
-	lea	ecx, DWORD PTR __Before$160360[ebp]
+	lea	ecx, DWORD PTR __Before$160361[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@Insert@3
 $LN1@Insert@3:
@@ -43520,13 +43520,13 @@ __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$al
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$5:
-	mov	ecx, DWORD PTR $T168582[ebp]
+	mov	ecx, DWORD PTR $T168583[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$7:
 	lea	ecx, DWORD PTR __Next$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$9:
-	lea	ecx, DWORD PTR __Before$160360[ebp]
+	lea	ecx, DWORD PTR __Before$160361[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -43808,8 +43808,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@UVector2D@@@std@@QAEXPAUVector2D@@$$QAU3@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T168636 = -24						; size = 4
-$T168635 = -20						; size = 4
+$T168637 = -24						; size = 4
+$T168636 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -43845,15 +43845,15 @@ __Val$ = 12						; size = 4
 	push	16					; 00000010H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T168636[ebp], eax
+	mov	DWORD PTR $T168637[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T168636[ebp], 0
+	cmp	DWORD PTR $T168637[ebp], 0
 	je	SHORT $LN3@construct@2
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@UVector2D@@@std@@YA$$QAUVector2D@@AAU1@@Z ; std::forward<Vector2D>
 	add	esp, 4
-	mov	edx, DWORD PTR $T168636[ebp]
+	mov	edx, DWORD PTR $T168637[ebp]
 	mov	ecx, DWORD PTR [eax]
 	mov	DWORD PTR [edx], ecx
 	mov	ecx, DWORD PTR [eax+4]
@@ -43862,14 +43862,14 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR [edx+8], ecx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [edx+12], eax
-	mov	ecx, DWORD PTR $T168636[ebp]
+	mov	ecx, DWORD PTR $T168637[ebp]
 	mov	DWORD PTR tv74[ebp], ecx
 	jmp	SHORT $LN4@construct@2
 $LN3@construct@2:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct@2:
 	mov	edx, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T168635[ebp], edx
+	mov	DWORD PTR $T168636[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -43889,7 +43889,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@UVector2D@@@std@@QAEXPAUVector2D@@$$QAU3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T168636[ebp]
+	mov	ecx, DWORD PTR $T168637[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -44010,12 +44010,12 @@ tv129 = -101						; size = 1
 tv197 = -100						; size = 4
 tv194 = -96						; size = 4
 tv211 = -92						; size = 4
-$T168657 = -88						; size = 12
-$T168656 = -76						; size = 4
-$T168655 = -72						; size = 4
-$T168654 = -68						; size = 4
-$T168653 = -64						; size = 4
-__Before$160434 = -56					; size = 12
+$T168658 = -88						; size = 12
+$T168657 = -76						; size = 4
+$T168656 = -72						; size = 4
+$T168655 = -68						; size = 4
+$T168654 = -64						; size = 4
+__Before$160435 = -56					; size = 12
 __Next$ = -36						; size = 12
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
@@ -44062,7 +44062,7 @@ ___formal$ = 44						; size = 1
 	push	OFFSET ??_C@_1II@KCMIDAEO@?$AAc?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe?$AAs?$AA?5?$AA?$CI?$AAx?$AA8?$AA6?$AA?$CJ?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt@
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168653[ebp], esp
+	mov	DWORD PTR $T168654[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44072,7 +44072,7 @@ ___formal$ = 44						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+12], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168654[ebp], esp
+	mov	DWORD PTR $T168655[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44119,7 +44119,7 @@ $LN6@Insert@4:
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168655[ebp], esp
+	mov	DWORD PTR $T168656[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44152,32 +44152,32 @@ $LN3@Insert@4:
 
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR __Before$160434[ebp]
+	lea	ecx, DWORD PTR __Before$160435[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+12], 7
 
 ; 1047 : 			erase(--_Before);
 
-	lea	ecx, DWORD PTR __Before$160434[ebp]
+	lea	ecx, DWORD PTR __Before$160435[ebp]
 	call	??F?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator--
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168656[ebp], esp
+	mov	DWORD PTR $T168657[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv204[ebp], eax
-	lea	eax, DWORD PTR $T168657[ebp]
+	lea	eax, DWORD PTR $T168658[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::erase
 	mov	DWORD PTR tv205[ebp], eax
-	lea	ecx, DWORD PTR $T168657[ebp]
+	lea	ecx, DWORD PTR $T168658[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 1048 : 			}
 
 	mov	BYTE PTR __$EHRec$[ebp+12], 6
-	lea	ecx, DWORD PTR __Before$160434[ebp]
+	lea	ecx, DWORD PTR __Before$160435[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@Insert@4
 $LN1@Insert@4:
@@ -44270,13 +44270,13 @@ __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$5:
-	mov	ecx, DWORD PTR $T168653[ebp]
+	mov	ecx, DWORD PTR $T168654[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$7:
 	lea	ecx, DWORD PTR __Next$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$9:
-	lea	ecx, DWORD PTR __Before$160434[ebp]
+	lea	ecx, DWORD PTR __Before$160435[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -44540,10 +44540,10 @@ tv155 = -56						; size = 4
 tv164 = -52						; size = 4
 tv152 = -48						; size = 4
 tv163 = -44						; size = 4
-$T168707 = -40						; size = 12
-$T168706 = -28						; size = 4
-$T168705 = -24						; size = 4
-$T168704 = -20						; size = 4
+$T168708 = -40						; size = 12
+$T168707 = -28						; size = 4
+$T168706 = -24						; size = 4
+$T168705 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
@@ -44586,7 +44586,7 @@ ___formal$ = 32						; size = 1
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168704[ebp], esp
+	mov	DWORD PTR $T168705[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44596,7 +44596,7 @@ ___formal$ = 32						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168705[ebp], esp
+	mov	DWORD PTR $T168706[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44604,7 +44604,7 @@ ___formal$ = 32						; size = 1
 	mov	eax, DWORD PTR tv164[ebp]
 	mov	DWORD PTR tv155[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	lea	ecx, DWORD PTR $T168707[ebp]
+	lea	ecx, DWORD PTR $T168708[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@XZ ; std::list<Vector2D,std::allocator<Vector2D> >::begin
@@ -44614,7 +44614,7 @@ ___formal$ = 32						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168706[ebp], esp
+	mov	DWORD PTR $T168707[ebp], esp
 	mov	eax, DWORD PTR tv157[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44623,7 +44623,7 @@ ___formal$ = 32						; size = 1
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@00@Z ; std::list<Vector2D,std::allocator<Vector2D> >::insert<std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > > >
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T168707[ebp]
+	lea	ecx, DWORD PTR $T168708[ebp]
 	call	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 
 ; 952  : 		}
@@ -44654,13 +44654,13 @@ __unwindfunclet$??$_Assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$al
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0Uinput_iterator_tag@1@@Z$2:
-	mov	ecx, DWORD PTR $T168704[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$??$_Assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0Uinput_iterator_tag@1@@Z$3:
 	mov	ecx, DWORD PTR $T168705[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$??$_Assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0Uinput_iterator_tag@1@@Z$3:
+	mov	ecx, DWORD PTR $T168706[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0Uinput_iterator_tag@1@@Z$4:
-	lea	ecx, DWORD PTR $T168707[ebp]
+	lea	ecx, DWORD PTR $T168708[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Assign@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@1@0Uinput_iterator_tag@1@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -44698,10 +44698,10 @@ tv66 = -44						; size = 4
 tv141 = -40						; size = 4
 tv138 = -36						; size = 4
 tv144 = -32						; size = 4
-$T168725 = -28						; size = 4
-$T168724 = -24						; size = 4
-$T168723 = -17						; size = 1
-$T168722 = -16						; size = 4
+$T168726 = -28						; size = 4
+$T168725 = -24						; size = 4
+$T168724 = -17						; size = 1
+$T168723 = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -44743,8 +44743,8 @@ __Al$ = 36						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@PAPBVNavGraphEdge@@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@AAV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@AAPAPBVNavGraphEdge@@@Z ; std::_Ptr_cat<std::_Vector_const_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > >,NavGraphEdge const * *>
 	add	esp, 8
-	mov	BYTE PTR $T168723[ebp], al
-	movzx	edx, BYTE PTR $T168723[ebp]
+	mov	BYTE PTR $T168724[ebp], al
+	movzx	edx, BYTE PTR $T168724[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -44752,7 +44752,7 @@ __Al$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168724[ebp], esp
+	mov	DWORD PTR $T168725[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44762,7 +44762,7 @@ __Al$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168725[ebp], esp
+	mov	DWORD PTR $T168726[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44772,14 +44772,14 @@ __Al$ = 36						; size = 4
 	add	esp, 36					; 00000024H
 	mov	DWORD PTR tv66[ebp], eax
 	mov	eax, DWORD PTR tv66[ebp]
-	mov	DWORD PTR $T168722[ebp], eax
+	mov	DWORD PTR $T168723[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T168722[ebp]
+	mov	eax, DWORD PTR $T168723[ebp]
 
 ; 415  : 	}
 
@@ -44802,7 +44802,7 @@ __unwindfunclet$??$_Uninitialized_copy@V?$_Vector_const_iterator@V?$_Vector_val@
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Uninitialized_copy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@PAPBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@2@@std@@YAPAPBVNavGraphEdge@@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@0PAPBV1@AAV?$allocator@PBVNavGraphEdge@@@0@@Z$2:
-	mov	ecx, DWORD PTR $T168724[ebp]
+	mov	ecx, DWORD PTR $T168725[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Uninitialized_copy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@PAPBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@2@@std@@YAPAPBVNavGraphEdge@@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@0PAPBV1@AAV?$allocator@PBVNavGraphEdge@@@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -44925,9 +44925,9 @@ _TEXT	SEGMENT
 tv141 = -40						; size = 4
 tv140 = -36						; size = 4
 tv138 = -32						; size = 4
-$T168751 = -28						; size = 4
-$T168746 = -24						; size = 4
-$T168745 = -20						; size = 4
+$T168752 = -28						; size = 4
+$T168747 = -24						; size = 4
+$T168746 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -44959,7 +44959,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168751[ebp], 0
+	mov	DWORD PTR $T168752[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 740  : 		{	// insert _Val at _Where
@@ -44972,7 +44972,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168745[ebp], esp
+	mov	DWORD PTR $T168746[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -44986,7 +44986,7 @@ __Val$ = 24						; size = 4
 	call	??F?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<PathEdge,std::allocator<PathEdge> > >::operator--
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168746[ebp], esp
+	mov	DWORD PTR $T168747[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv140[ebp], eax
@@ -44995,9 +44995,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@2@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::_Make_iter
 	mov	DWORD PTR tv141[ebp], eax
-	mov	ecx, DWORD PTR $T168751[ebp]
+	mov	ecx, DWORD PTR $T168752[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168751[ebp], ecx
+	mov	DWORD PTR $T168752[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
@@ -45021,10 +45021,10 @@ __unwindfunclet$??$emplace@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$emplace@VPathEdge@@@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@1@$$QAVPathEdge@@@Z$3:
-	mov	eax, DWORD PTR $T168751[ebp]
+	mov	eax, DWORD PTR $T168752[ebp]
 	and	eax, 1
 	je	$LN7@emplace
-	and	DWORD PTR $T168751[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168752[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@std@@QAE@XZ
 $LN7@emplace:
@@ -45116,7 +45116,7 @@ PUBLIC	??$_Fill_n@PAPBVNavGraphEdge@@IPBV1@@std@@YAXPAPBVNavGraphEdge@@IABQBV1@@
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninit_def_fill_n@PBVNavGraphEdge@@IPBV1@PBV1@@std@@YAXPAPBVNavGraphEdge@@IPBQBV1@AAV?$allocator@PBVNavGraphEdge@@@0@0U_Scalar_ptr_iterator_tag@0@@Z
 _TEXT	SEGMENT
-$T168768 = -4						; size = 4
+$T168769 = -4						; size = 4
 __First$ = 8						; size = 4
 __Count$ = 12						; size = 4
 ___formal$ = 16						; size = 4
@@ -45134,8 +45134,8 @@ ___formal$ = 28						; size = 1
 
 ; 661  : 	_Fill_n(_First, _Count, (_Valty)0);
 
-	mov	DWORD PTR $T168768[ebp], 0
-	lea	eax, DWORD PTR $T168768[ebp]
+	mov	DWORD PTR $T168769[ebp], 0
+	lea	eax, DWORD PTR $T168769[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Count$[ebp]
 	push	ecx
@@ -45438,7 +45438,7 @@ PUBLIC	??$_Uninit_move@PBVNavGraphEdge@@PBV1@PBV1@@std@@YAPAPBVNavGraphEdge@@PAP
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_move@PAPBVNavGraphEdge@@PAPBV1@V?$allocator@PBVNavGraphEdge@@@std@@@std@@YAPAPBVNavGraphEdge@@PAPBV1@00AAV?$allocator@PBVNavGraphEdge@@@0@@Z
 _TEXT	SEGMENT
-$T168793 = -1						; size = 1
+$T168794 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -45461,8 +45461,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@PBVNavGraphEdge@@PBV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAPBVNavGraphEdge@@0@Z ; std::_Ptr_cat<NavGraphEdge const *,NavGraphEdge const *>
 	add	esp, 8
-	mov	BYTE PTR $T168793[ebp], al
-	movzx	edx, BYTE PTR $T168793[ebp]
+	mov	BYTE PTR $T168794[ebp], al
+	movzx	edx, BYTE PTR $T168794[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -45732,8 +45732,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv66 = -32						; size = 4
 tv89 = -28						; size = 4
-$T168820 = -24						; size = 4
-$T168816 = -20						; size = 4
+$T168821 = -24						; size = 4
+$T168817 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -45763,7 +45763,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168820[ebp], 0
+	mov	DWORD PTR $T168821[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 734  : 		{	// insert _Val at _Where
@@ -45776,7 +45776,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168816[ebp], esp
+	mov	DWORD PTR $T168817[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -45786,9 +45786,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$emplace@H@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@$$QAH@Z ; std::list<int,std::allocator<int> >::emplace<int>
 	mov	DWORD PTR tv66[ebp], eax
-	mov	ecx, DWORD PTR $T168820[ebp]
+	mov	ecx, DWORD PTR $T168821[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168820[ebp], ecx
+	mov	DWORD PTR $T168821[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -45812,10 +45812,10 @@ __unwindfunclet$??$insert@H@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iter
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@H@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@$$QAH@Z$2:
-	mov	eax, DWORD PTR $T168820[ebp]
+	mov	eax, DWORD PTR $T168821[ebp]
 	and	eax, 1
 	je	$LN6@insert@3
-	and	DWORD PTR $T168820[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168821[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN6@insert@3:
@@ -45915,7 +45915,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@HV?$allocator@H@std@@@std@@@std@@YAPAU_Node@?$_List_nod@HV?$allocator@H@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T168836 = -16						; size = 12
+$T168837 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -45968,10 +45968,10 @@ $LN1@Allocate@7:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T168836[ebp]
+	lea	ecx, DWORD PTR $T168837[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T168836[ebp]
+	lea	ecx, DWORD PTR $T168837[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@7:
@@ -45995,7 +45995,7 @@ $LN6@Allocate@7:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T168839 = -16						; size = 12
+$T168840 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -46048,10 +46048,10 @@ $LN1@Allocate@8:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T168839[ebp]
+	lea	ecx, DWORD PTR $T168840[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T168839[ebp]
+	lea	ecx, DWORD PTR $T168840[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@8:
@@ -46139,13 +46139,13 @@ tv174 = -104						; size = 4
 tv189 = -100						; size = 4
 tv172 = -96						; size = 4
 tv188 = -92						; size = 4
-$T168851 = -88						; size = 12
-$T168850 = -76						; size = 4
-$T168849 = -72						; size = 12
-$T168848 = -60						; size = 12
-$T168847 = -48						; size = 4
-$T168846 = -44						; size = 12
-$T168845 = -32						; size = 4
+$T168852 = -88						; size = 12
+$T168851 = -76						; size = 4
+$T168850 = -72						; size = 12
+$T168849 = -60						; size = 12
+$T168848 = -48						; size = 4
+$T168847 = -44						; size = 12
+$T168846 = -32						; size = 4
 __Tmp$ = -24						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -46185,7 +46185,7 @@ __Val$ = 12						; size = 4
 
 ; 1245 : 		erase(begin(), end());
 
-	lea	edx, DWORD PTR $T168846[ebp]
+	lea	edx, DWORD PTR $T168847[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::vector<int,std::allocator<int> >::end
@@ -46195,7 +46195,7 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168845[ebp], esp
+	mov	DWORD PTR $T168846[ebp], esp
 	mov	edx, DWORD PTR tv172[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -46203,7 +46203,7 @@ __Val$ = 12						; size = 4
 	mov	eax, DWORD PTR tv189[ebp]
 	mov	DWORD PTR tv174[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T168848[ebp]
+	lea	ecx, DWORD PTR $T168849[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::vector<int,std::allocator<int> >::begin
@@ -46213,24 +46213,24 @@ __Val$ = 12						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168847[ebp], esp
+	mov	DWORD PTR $T168848[ebp], esp
 	mov	eax, DWORD PTR tv177[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv180[ebp], eax
-	lea	ecx, DWORD PTR $T168849[ebp]
+	lea	ecx, DWORD PTR $T168850[ebp]
 	push	ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@0@Z ; std::vector<int,std::allocator<int> >::erase
 	mov	DWORD PTR tv175[ebp], eax
-	lea	ecx, DWORD PTR $T168849[ebp]
+	lea	ecx, DWORD PTR $T168850[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T168848[ebp]
+	lea	ecx, DWORD PTR $T168849[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T168846[ebp]
+	lea	ecx, DWORD PTR $T168847[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 
 ; 1246 : 		insert(begin(), _Count, _Tmp);
@@ -46239,7 +46239,7 @@ __Val$ = 12						; size = 4
 	push	edx
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T168851[ebp]
+	lea	ecx, DWORD PTR $T168852[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ ; std::vector<int,std::allocator<int> >::begin
@@ -46249,7 +46249,7 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168850[ebp], esp
+	mov	DWORD PTR $T168851[ebp], esp
 	mov	eax, DWORD PTR tv183[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -46257,7 +46257,7 @@ __Val$ = 12						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?insert@?$vector@HV?$allocator@H@std@@@std@@QAEXV?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@IABH@Z ; std::vector<int,std::allocator<int> >::insert
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T168851[ebp]
+	lea	ecx, DWORD PTR $T168852[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 
 ; 1247 : 		}
@@ -46296,16 +46296,16 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?_Assign_n@?$vector@HV?$allocator@H@std@@@std@@IAEXIABH@Z$0:
-	lea	ecx, DWORD PTR $T168846[ebp]
+	lea	ecx, DWORD PTR $T168847[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_n@?$vector@HV?$allocator@H@std@@@std@@IAEXIABH@Z$1:
-	mov	ecx, DWORD PTR $T168845[ebp]
+	mov	ecx, DWORD PTR $T168846[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_n@?$vector@HV?$allocator@H@std@@@std@@IAEXIABH@Z$2:
-	lea	ecx, DWORD PTR $T168848[ebp]
+	lea	ecx, DWORD PTR $T168849[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Assign_n@?$vector@HV?$allocator@H@std@@@std@@IAEXIABH@Z$5:
-	lea	ecx, DWORD PTR $T168851[ebp]
+	lea	ecx, DWORD PTR $T168852[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __ehhandler$?_Assign_n@?$vector@HV?$allocator@H@std@@@std@@IAEXIABH@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -46553,9 +46553,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T168889 = -40						; size = 4
-$T168884 = -36						; size = 4
-$T168883 = -32						; size = 12
+$T168890 = -40						; size = 4
+$T168885 = -36						; size = 4
+$T168884 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -46587,7 +46587,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168889[ebp], 0
+	mov	DWORD PTR $T168890[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -46615,7 +46615,7 @@ $LN3@erase@6:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T168883[ebp]
+	lea	edx, DWORD PTR $T168884[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::operator++
@@ -46627,7 +46627,7 @@ $LN3@erase@6:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T168883[ebp]
+	lea	ecx, DWORD PTR $T168884[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -46725,7 +46725,7 @@ $LN1@erase@6:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168884[ebp], esp
+	mov	DWORD PTR $T168885[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -46735,9 +46735,9 @@ $LN1@erase@6:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z ; std::list<Vector2D,std::allocator<Vector2D> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T168889[ebp]
+	mov	ecx, DWORD PTR $T168890[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168889[ebp], ecx
+	mov	DWORD PTR $T168890[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
@@ -46763,13 +46763,13 @@ __unwindfunclet$?erase@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T168883[ebp]
+	lea	ecx, DWORD PTR $T168884[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T168889[ebp]
+	mov	eax, DWORD PTR $T168890[ebp]
 	and	eax, 1
 	je	$LN10@erase@6
-	and	DWORD PTR $T168889[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168890[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 $LN10@erase@6:
@@ -46978,9 +46978,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T168916 = -40						; size = 4
-$T168911 = -36						; size = 4
-$T168910 = -32						; size = 12
+$T168917 = -40						; size = 4
+$T168912 = -36						; size = 4
+$T168911 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -47012,7 +47012,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168916[ebp], 0
+	mov	DWORD PTR $T168917[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -47040,7 +47040,7 @@ $LN3@erase@7:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T168910[ebp]
+	lea	edx, DWORD PTR $T168911[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
@@ -47052,7 +47052,7 @@ $LN3@erase@7:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T168910[ebp]
+	lea	ecx, DWORD PTR $T168911[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -47150,7 +47150,7 @@ $LN1@erase@7:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168911[ebp], esp
+	mov	DWORD PTR $T168912[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -47160,9 +47160,9 @@ $LN1@erase@7:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T168916[ebp]
+	mov	ecx, DWORD PTR $T168917[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T168916[ebp], ecx
+	mov	DWORD PTR $T168917[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -47188,13 +47188,13 @@ __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T168910[ebp]
+	lea	ecx, DWORD PTR $T168911[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T168916[ebp]
+	mov	eax, DWORD PTR $T168917[ebp]
 	and	eax, 1
 	je	$LN10@erase@7
-	and	DWORD PTR $T168916[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168917[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN10@erase@7:
@@ -47956,7 +47956,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ?begin@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168964 = -8						; size = 4
+$T168965 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ PROC ; std::vector<int,std::allocator<int> >::begin, COMDAT
@@ -47970,7 +47970,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168964[ebp], 0
+	mov	DWORD PTR $T168965[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -47981,9 +47981,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAHPBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<int,std::allocator<int> > >::_Vector_iterator<std::_Vector_val<int,std::allocator<int> > >
-	mov	eax, DWORD PTR $T168964[ebp]
+	mov	eax, DWORD PTR $T168965[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T168964[ebp], eax
+	mov	DWORD PTR $T168965[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -47999,7 +47999,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T168969 = -8						; size = 4
+$T168970 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@XZ PROC ; std::vector<int,std::allocator<int> >::end, COMDAT
@@ -48013,7 +48013,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168969[ebp], 0
+	mov	DWORD PTR $T168970[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -48024,9 +48024,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAHPBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<int,std::allocator<int> > >::_Vector_iterator<std::_Vector_val<int,std::allocator<int> > >
-	mov	eax, DWORD PTR $T168969[ebp]
+	mov	eax, DWORD PTR $T168970[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T168969[ebp], eax
+	mov	DWORD PTR $T168970[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -48056,7 +48056,7 @@ xdata$x	ENDS
 ;	COMDAT ?insert@?$vector@HV?$allocator@H@std@@@std@@QAEXV?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@IABH@Z
 _TEXT	SEGMENT
 tv86 = -24						; size = 4
-$T168973 = -20						; size = 4
+$T168974 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -48093,7 +48093,7 @@ __Val$ = 24						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168973[ebp], esp
+	mov	DWORD PTR $T168974[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -48165,11 +48165,11 @@ tv271 = -92						; size = 4
 tv270 = -88						; size = 4
 tv267 = -84						; size = 4
 tv266 = -80						; size = 4
-$T168995 = -76						; size = 4
-$T168986 = -72						; size = 4
-$T168985 = -68						; size = 4
-$T168984 = -64						; size = 4
-__Ptr$161135 = -60					; size = 4
+$T168996 = -76						; size = 4
+$T168987 = -72						; size = 4
+$T168986 = -68						; size = 4
+$T168985 = -64						; size = 4
+__Ptr$161136 = -60					; size = 4
 __Last$ = -52						; size = 12
 __First$ = -32						; size = 12
 _this$ = -16						; size = 4
@@ -48202,14 +48202,14 @@ __Last_arg$ = 24					; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T168995[ebp], 0
+	mov	DWORD PTR $T168996[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 
 ; 1191 : 		iterator _First = _Make_iter(_First_arg);
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168984[ebp], esp
+	mov	DWORD PTR $T168985[ebp], esp
 	lea	eax, DWORD PTR __First_arg$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -48225,7 +48225,7 @@ __Last_arg$ = 24					; size = 12
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168985[ebp], esp
+	mov	DWORD PTR $T168986[ebp], esp
 	lea	edx, DWORD PTR __Last_arg$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -48296,7 +48296,7 @@ $LN2@erase@8:
 	push	eax
 	call	??$_Move@PAHPAH@std@@YAPAHPAH00@Z	; std::_Move<int *,int *>
 	add	esp, 12					; 0000000cH
-	mov	DWORD PTR __Ptr$161135[ebp], eax
+	mov	DWORD PTR __Ptr$161136[ebp], eax
 
 ; 1203 : 			_Orphan_range(_VIPTR(_First), this->_Mylast);
 
@@ -48319,7 +48319,7 @@ $LN2@erase@8:
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	eax, DWORD PTR __Ptr$161135[ebp]
+	mov	eax, DWORD PTR __Ptr$161136[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Destroy@?$vector@HV?$allocator@H@std@@@std@@IAEXPAH0@Z ; std::vector<int,std::allocator<int> >::_Destroy
@@ -48327,7 +48327,7 @@ $LN2@erase@8:
 ; 1211 : 			this->_Mylast = _Ptr;
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Ptr$161135[ebp]
+	mov	edx, DWORD PTR __Ptr$161136[ebp]
 	mov	DWORD PTR [ecx+8], edx
 $LN3@erase@8:
 
@@ -48336,7 +48336,7 @@ $LN3@erase@8:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T168986[ebp], esp
+	mov	DWORD PTR $T168987[ebp], esp
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -48346,9 +48346,9 @@ $LN3@erase@8:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$vector@HV?$allocator@H@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@@Z ; std::vector<int,std::allocator<int> >::_Make_iter
 	mov	DWORD PTR tv275[ebp], eax
-	mov	edx, DWORD PTR $T168995[ebp]
+	mov	edx, DWORD PTR $T168996[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T168995[ebp], edx
+	mov	DWORD PTR $T168996[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -48424,10 +48424,10 @@ __unwindfunclet$?erase@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_itera
 	lea	ecx, DWORD PTR __Last$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$vector@HV?$allocator@H@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@0@Z$7:
-	mov	eax, DWORD PTR $T168995[ebp]
+	mov	eax, DWORD PTR $T168996[ebp]
 	and	eax, 1
 	je	$LN14@erase@8
-	and	DWORD PTR $T168995[ebp], -2		; fffffffeH
+	and	DWORD PTR $T168996[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN14@erase@8:
@@ -48460,7 +48460,7 @@ __ehfuncinfo$?_Make_iter@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@Q
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T169011 = -20						; size = 4
+$T169012 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -48485,7 +48485,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T169011[ebp], 0
+	mov	DWORD PTR $T169012[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -48496,9 +48496,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@UVector2D@@V?$allocator@UVector2D@@@std@@@1@PBV?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >::_List_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > >
-	mov	edx, DWORD PTR $T169011[ebp]
+	mov	edx, DWORD PTR $T169012[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T169011[ebp], edx
+	mov	DWORD PTR $T169012[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
@@ -48522,10 +48522,10 @@ __unwindfunclet$?_Make_iter@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T169011[ebp]
+	mov	eax, DWORD PTR $T169012[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter@4
-	and	DWORD PTR $T169011[ebp], -2		; fffffffeH
+	and	DWORD PTR $T169012[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter@4:
@@ -48743,7 +48743,7 @@ __ehfuncinfo$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T169038 = -20						; size = 4
+$T169039 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -48768,7 +48768,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T169038[ebp], 0
+	mov	DWORD PTR $T169039[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -48779,9 +48779,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	edx, DWORD PTR $T169038[ebp]
+	mov	edx, DWORD PTR $T169039[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T169038[ebp], edx
+	mov	DWORD PTR $T169039[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -48805,10 +48805,10 @@ __unwindfunclet$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T169038[ebp]
+	mov	eax, DWORD PTR $T169039[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter@5
-	and	DWORD PTR $T169038[ebp], -2		; fffffffeH
+	and	DWORD PTR $T169039[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter@5:
@@ -49079,7 +49079,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@P
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T169067 = -40						; size = 4
+$T169068 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -49111,7 +49111,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T169067[ebp], 0
+	mov	DWORD PTR $T169068[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -49132,9 +49132,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T169067[ebp]
+	mov	edx, DWORD PTR $T169068[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T169067[ebp], edx
+	mov	DWORD PTR $T169068[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -49178,10 +49178,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocato
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T169067[ebp]
+	mov	eax, DWORD PTR $T169068[ebp]
 	and	eax, 1
 	je	$LN5@operator@47
-	and	DWORD PTR $T169067[ebp], -2		; fffffffeH
+	and	DWORD PTR $T169068[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@47:
@@ -49240,7 +49240,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVec
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T169084 = -40						; size = 4
+$T169085 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -49272,7 +49272,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T169084[ebp], 0
+	mov	DWORD PTR $T169085[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -49293,9 +49293,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T169084[ebp]
+	mov	edx, DWORD PTR $T169085[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T169084[ebp], edx
+	mov	DWORD PTR $T169085[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
@@ -49339,10 +49339,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@U
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T169084[ebp]
+	mov	eax, DWORD PTR $T169085[ebp]
 	and	eax, 1
 	je	$LN5@operator@48
-	and	DWORD PTR $T169084[ebp], -2		; fffffffeH
+	and	DWORD PTR $T169085[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@48:
@@ -49497,7 +49497,7 @@ __ehfuncinfo$?_Make_iter@?$vector@HV?$allocator@H@std@@@std@@QBE?AV?$_Vector_ite
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$vector@HV?$allocator@H@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T169103 = -20						; size = 4
+$T169104 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -49522,7 +49522,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T169103[ebp], 0
+	mov	DWORD PTR $T169104[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -49533,9 +49533,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@PAHPBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<int,std::allocator<int> > >::_Vector_iterator<std::_Vector_val<int,std::allocator<int> > >
-	mov	edx, DWORD PTR $T169103[ebp]
+	mov	edx, DWORD PTR $T169104[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T169103[ebp], edx
+	mov	DWORD PTR $T169104[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -49559,10 +49559,10 @@ __unwindfunclet$?_Make_iter@?$vector@HV?$allocator@H@std@@@std@@QBE?AV?$_Vector_
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$vector@HV?$allocator@H@std@@@std@@QBE?AV?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@V?$_Vector_const_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T169103[ebp]
+	mov	eax, DWORD PTR $T169104[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter@6
-	and	DWORD PTR $T169103[ebp], -2		; fffffffeH
+	and	DWORD PTR $T169104[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter@6:
@@ -49642,13 +49642,13 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv409 = -72						; size = 4
 tv408 = -68						; size = 4
-__Oldend$161245 = -64					; size = 4
-__Tmp$161244 = -56					; size = 4
-__Tmp$161234 = -44					; size = 4
-__Ncopied$161217 = -36					; size = 4
-__Whereoff$161216 = -32					; size = 4
-__Newvec$161215 = -28					; size = 4
-__Capacity$161214 = -24					; size = 4
+__Oldend$161246 = -64					; size = 4
+__Tmp$161245 = -56					; size = 4
+__Tmp$161235 = -44					; size = 4
+__Ncopied$161218 = -36					; size = 4
+__Whereoff$161217 = -32					; size = 4
+__Newvec$161216 = -28					; size = 4
+__Capacity$161215 = -24					; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Where$ = 8						; size = 12
@@ -49761,16 +49761,16 @@ $LN11@Insert_n:
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Grow_to@?$vector@HV?$allocator@H@std@@@std@@IBEII@Z ; std::vector<int,std::allocator<int> >::_Grow_to
-	mov	DWORD PTR __Capacity$161214[ebp], eax
+	mov	DWORD PTR __Capacity$161215[ebp], eax
 
 ; 1345 : 			pointer _Newvec = this->_Alval.allocate(_Capacity);
 
-	mov	ecx, DWORD PTR __Capacity$161214[ebp]
+	mov	ecx, DWORD PTR __Capacity$161215[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?allocate@?$allocator@H@std@@QAEPAHI@Z	; std::allocator<int>::allocate
-	mov	DWORD PTR __Newvec$161215[ebp], eax
+	mov	DWORD PTR __Newvec$161216[ebp], eax
 
 ; 1346 : 			size_type _Whereoff = _VIPTR(_Where) - this->_Myfirst;
 
@@ -49778,11 +49778,11 @@ $LN11@Insert_n:
 	mov	eax, DWORD PTR __Where$[ebp+8]
 	sub	eax, DWORD PTR [edx+4]
 	sar	eax, 2
-	mov	DWORD PTR __Whereoff$161216[ebp], eax
+	mov	DWORD PTR __Whereoff$161217[ebp], eax
 
 ; 1347 : 			int _Ncopied = 0;
 
-	mov	DWORD PTR __Ncopied$161217[ebp], 0
+	mov	DWORD PTR __Ncopied$161218[ebp], 0
 
 ; 1348 : 
 ; 1349 : 			_TRY_BEGIN
@@ -49801,8 +49801,8 @@ $LN11@Insert_n:
 	push	edx
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Whereoff$161216[ebp]
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	ecx, DWORD PTR __Whereoff$161217[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -49810,14 +49810,14 @@ $LN11@Insert_n:
 
 ; 1352 : 			++_Ncopied;
 
-	mov	ecx, DWORD PTR __Ncopied$161217[ebp]
+	mov	ecx, DWORD PTR __Ncopied$161218[ebp]
 	add	ecx, 1
-	mov	DWORD PTR __Ncopied$161217[ebp], ecx
+	mov	DWORD PTR __Ncopied$161218[ebp], ecx
 
 ; 1353 : 			_Umove(this->_Myfirst, _VIPTR(_Where),
 ; 1354 : 				_Newvec);	// copy prefix
 
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Where$[ebp+8]
 	push	eax
@@ -49829,16 +49829,16 @@ $LN11@Insert_n:
 
 ; 1355 : 			++_Ncopied;
 
-	mov	eax, DWORD PTR __Ncopied$161217[ebp]
+	mov	eax, DWORD PTR __Ncopied$161218[ebp]
 	add	eax, 1
-	mov	DWORD PTR __Ncopied$161217[ebp], eax
+	mov	DWORD PTR __Ncopied$161218[ebp], eax
 
 ; 1356 : 			_Umove(_VIPTR(_Where), this->_Mylast,
 ; 1357 : 				_Newvec + (_Whereoff + _Count));	// copy suffix
 
-	mov	ecx, DWORD PTR __Whereoff$161216[ebp]
+	mov	ecx, DWORD PTR __Whereoff$161217[ebp]
 	add	ecx, DWORD PTR __Count$[ebp]
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -49854,16 +49854,16 @@ __catch$?_Insert_n@?$vector@HV?$allocator@H@std@@@std@@IAEXV?$_Vector_const_iter
 ; 1358 : 			_CATCH_ALL
 ; 1359 : 			if (1 < _Ncopied)
 
-	cmp	DWORD PTR __Ncopied$161217[ebp], 1
+	cmp	DWORD PTR __Ncopied$161218[ebp], 1
 	jle	SHORT $LN7@Insert_n
 
 ; 1360 : 				_Destroy(_Newvec, _Newvec + _Whereoff);
 
-	mov	ecx, DWORD PTR __Whereoff$161216[ebp]
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	ecx, DWORD PTR __Whereoff$161217[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	push	eax
-	mov	ecx, DWORD PTR __Newvec$161215[ebp]
+	mov	ecx, DWORD PTR __Newvec$161216[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Destroy@?$vector@HV?$allocator@H@std@@@std@@IAEXPAH0@Z ; std::vector<int,std::allocator<int> >::_Destroy
@@ -49871,19 +49871,19 @@ $LN7@Insert_n:
 
 ; 1361 : 			if (0 < _Ncopied)
 
-	cmp	DWORD PTR __Ncopied$161217[ebp], 0
+	cmp	DWORD PTR __Ncopied$161218[ebp], 0
 	jle	SHORT $LN6@Insert_n
 
 ; 1362 : 				_Destroy(_Newvec + _Whereoff, _Newvec + _Whereoff + _Count);
 
-	mov	edx, DWORD PTR __Whereoff$161216[ebp]
-	mov	eax, DWORD PTR __Newvec$161215[ebp]
+	mov	edx, DWORD PTR __Whereoff$161217[ebp]
+	mov	eax, DWORD PTR __Newvec$161216[ebp]
 	lea	ecx, DWORD PTR [eax+edx*4]
 	mov	edx, DWORD PTR __Count$[ebp]
 	lea	eax, DWORD PTR [ecx+edx*4]
 	push	eax
-	mov	ecx, DWORD PTR __Whereoff$161216[ebp]
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	ecx, DWORD PTR __Whereoff$161217[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -49892,9 +49892,9 @@ $LN6@Insert_n:
 
 ; 1363 : 			this->_Alval.deallocate(_Newvec, _Capacity);
 
-	mov	ecx, DWORD PTR __Capacity$161214[ebp]
+	mov	ecx, DWORD PTR __Capacity$161215[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -49967,8 +49967,8 @@ $LN5@Insert_n:
 
 ; 1376 : 			this->_Myend = _Newvec + _Capacity;
 
-	mov	ecx, DWORD PTR __Capacity$161214[ebp]
-	mov	edx, DWORD PTR __Newvec$161215[ebp]
+	mov	ecx, DWORD PTR __Capacity$161215[ebp]
+	mov	edx, DWORD PTR __Newvec$161216[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], eax
@@ -49976,7 +49976,7 @@ $LN5@Insert_n:
 ; 1377 : 			this->_Mylast = _Newvec + _Count;
 
 	mov	edx, DWORD PTR __Count$[ebp]
-	mov	eax, DWORD PTR __Newvec$161215[ebp]
+	mov	eax, DWORD PTR __Newvec$161216[ebp]
 	lea	ecx, DWORD PTR [eax+edx*4]
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [edx+8], ecx
@@ -49984,7 +49984,7 @@ $LN5@Insert_n:
 ; 1378 : 			this->_Myfirst = _Newvec;
 
 	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR __Newvec$161215[ebp]
+	mov	ecx, DWORD PTR __Newvec$161216[ebp]
 	mov	DWORD PTR [eax+4], ecx
 
 ; 1379 : 			}
@@ -50007,7 +50007,7 @@ $LN9@Insert_n:
 
 	mov	ecx, DWORD PTR __Val$[ebp]
 	mov	edx, DWORD PTR [ecx]
-	mov	DWORD PTR __Tmp$161234[ebp], edx
+	mov	DWORD PTR __Tmp$161235[ebp], edx
 
 ; 1384 : 
 ; 1385 : 			_Umove(_VIPTR(_Where), this->_Mylast,
@@ -50034,7 +50034,7 @@ $LN9@Insert_n:
 ; 1390 : 				_Count - (this->_Mylast - _VIPTR(_Where)),
 ; 1391 : 				_STD addressof(_Tmp));	// insert new stuff off end
 
-	lea	eax, DWORD PTR __Tmp$161234[ebp]
+	lea	eax, DWORD PTR __Tmp$161235[ebp]
 	push	eax
 	call	??$addressof@H@std@@YAPAHAAH@Z		; std::addressof<int>
 	add	esp, 4
@@ -50110,7 +50110,7 @@ __tryend$?_Insert_n@?$vector@HV?$allocator@H@std@@@std@@IAEXV?$_Vector_const_ite
 ; 1400 : 			_STD fill(_VIPTR(_Where), this->_Mylast - _Count,
 ; 1401 : 				_Tmp);	// insert up to old end
 
-	lea	ecx, DWORD PTR __Tmp$161234[ebp]
+	lea	ecx, DWORD PTR __Tmp$161235[ebp]
 	push	ecx
 	mov	edx, DWORD PTR __Count$[ebp]
 	shl	edx, 2
@@ -50134,14 +50134,14 @@ $LN3@Insert_n:
 
 	mov	eax, DWORD PTR __Val$[ebp]
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR __Tmp$161244[ebp], ecx
+	mov	DWORD PTR __Tmp$161245[ebp], ecx
 
 ; 1406 : 
 ; 1407 : 			pointer _Oldend = this->_Mylast;
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
-	mov	DWORD PTR __Oldend$161245[ebp], eax
+	mov	DWORD PTR __Oldend$161246[ebp], eax
 
 ; 1408 : 			this->_Mylast = _Umove(_Oldend - _Count, _Oldend,
 ; 1409 : 				this->_Mylast);	// copy suffix
@@ -50149,11 +50149,11 @@ $LN3@Insert_n:
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	eax, DWORD PTR __Oldend$161245[ebp]
+	mov	eax, DWORD PTR __Oldend$161246[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Count$[ebp]
 	shl	ecx, 2
-	mov	edx, DWORD PTR __Oldend$161245[ebp]
+	mov	edx, DWORD PTR __Oldend$161246[ebp]
 	sub	edx, ecx
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -50175,11 +50175,11 @@ $LN3@Insert_n:
 ; 1412 : 			_STD _Copy_backward(_VIPTR(_Where), _Oldend - _Count,
 ; 1413 : 				_Oldend);	// copy hole
 
-	mov	edx, DWORD PTR __Oldend$161245[ebp]
+	mov	edx, DWORD PTR __Oldend$161246[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Count$[ebp]
 	shl	eax, 2
-	mov	ecx, DWORD PTR __Oldend$161245[ebp]
+	mov	ecx, DWORD PTR __Oldend$161246[ebp]
 	sub	ecx, eax
 	push	ecx
 	mov	edx, DWORD PTR __Where$[ebp+8]
@@ -50190,7 +50190,7 @@ $LN3@Insert_n:
 ; 1414 : 			_STD fill(_VIPTR(_Where),
 ; 1415 : 				_VIPTR(_Where) + _Count, _Tmp);	// insert into hole
 
-	lea	eax, DWORD PTR __Tmp$161244[ebp]
+	lea	eax, DWORD PTR __Tmp$161245[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Count$[ebp]
 	mov	edx, DWORD PTR __Where$[ebp+8]
@@ -51155,10 +51155,10 @@ _TEXT	SEGMENT
 tv143 = -36						; size = 4
 tv140 = -32						; size = 4
 tv146 = -28						; size = 4
-$T169199 = -24						; size = 4
-$T169198 = -20						; size = 4
-$T169197 = -14						; size = 1
-$T169196 = -13						; size = 1
+$T169200 = -24						; size = 4
+$T169199 = -20						; size = 4
+$T169198 = -14						; size = 1
+$T169197 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -51193,11 +51193,11 @@ __Line$ = 36						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T169196[ebp]
+	lea	ecx, DWORD PTR $T169197[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_iterator<std::_List_val<Raven_PathPlanner *,std::allocator<Raven_PathPlanner *> > > >
 	add	esp, 8
-	movzx	edx, BYTE PTR $T169197[ebp]
+	movzx	edx, BYTE PTR $T169198[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Line$[ebp]
 	push	eax
@@ -51205,7 +51205,7 @@ __Line$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169198[ebp], esp
+	mov	DWORD PTR $T169199[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51215,7 +51215,7 @@ __Line$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169199[ebp], esp
+	mov	DWORD PTR $T169200[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51251,7 +51251,7 @@ __unwindfunclet$??$_Debug_range@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlan
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Debug_range@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@@std@@YAXV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@0PB_WI@Z$2:
-	mov	ecx, DWORD PTR $T169198[ebp]
+	mov	ecx, DWORD PTR $T169199[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Debug_range@V?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@std@@@std@@YAXV?$_List_iterator@V?$_List_val@PAVRaven_PathPlanner@@V?$allocator@PAVRaven_PathPlanner@@@std@@@std@@@0@0PB_WI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -51455,10 +51455,10 @@ _TEXT	SEGMENT
 tv143 = -36						; size = 4
 tv140 = -32						; size = 4
 tv146 = -28						; size = 4
-$T169228 = -24						; size = 4
-$T169227 = -20						; size = 4
-$T169226 = -14						; size = 1
-$T169225 = -13						; size = 1
+$T169229 = -24						; size = 4
+$T169228 = -20						; size = 4
+$T169227 = -14						; size = 1
+$T169226 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -51493,11 +51493,11 @@ __Line$ = 36						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T169225[ebp]
+	lea	ecx, DWORD PTR $T169226[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Vector2D,std::allocator<Vector2D> > > >
 	add	esp, 8
-	movzx	edx, BYTE PTR $T169226[ebp]
+	movzx	edx, BYTE PTR $T169227[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Line$[ebp]
 	push	eax
@@ -51505,7 +51505,7 @@ __Line$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169227[ebp], esp
+	mov	DWORD PTR $T169228[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51515,7 +51515,7 @@ __Line$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169228[ebp], esp
+	mov	DWORD PTR $T169229[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51551,7 +51551,7 @@ __unwindfunclet$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@UVector2D@@
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YAXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PB_WI@Z$2:
-	mov	ecx, DWORD PTR $T169227[ebp]
+	mov	ecx, DWORD PTR $T169228[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@std@@@std@@YAXV?$_List_const_iterator@V?$_List_val@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@@0@0PB_WI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -51586,10 +51586,10 @@ _TEXT	SEGMENT
 tv143 = -36						; size = 4
 tv140 = -32						; size = 4
 tv146 = -28						; size = 4
-$T169244 = -24						; size = 4
-$T169243 = -20						; size = 4
-$T169242 = -14						; size = 1
-$T169241 = -13						; size = 1
+$T169245 = -24						; size = 4
+$T169244 = -20						; size = 4
+$T169243 = -14						; size = 1
+$T169242 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -51624,11 +51624,11 @@ __Line$ = 36						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T169241[ebp]
+	lea	ecx, DWORD PTR $T169242[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > > >
 	add	esp, 8
-	movzx	edx, BYTE PTR $T169242[ebp]
+	movzx	edx, BYTE PTR $T169243[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Line$[ebp]
 	push	eax
@@ -51636,7 +51636,7 @@ __Line$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169243[ebp], esp
+	mov	DWORD PTR $T169244[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51646,7 +51646,7 @@ __Line$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169244[ebp], esp
+	mov	DWORD PTR $T169245[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51682,7 +51682,7 @@ __unwindfunclet$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bo
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YAXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@0PB_WI@Z$2:
-	mov	ecx, DWORD PTR $T169243[ebp]
+	mov	ecx, DWORD PTR $T169244[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YAXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@0PB_WI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -51862,9 +51862,9 @@ tv162 = -45						; size = 1
 tv156 = -44						; size = 4
 tv153 = -40						; size = 4
 tv160 = -36						; size = 4
-$T169268 = -32						; size = 4
-$T169267 = -28						; size = 4
-$T169266 = -24						; size = 4
+$T169269 = -32						; size = 4
+$T169268 = -28						; size = 4
+$T169267 = -24						; size = 4
 __Next$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __First$ = 8						; size = 12
@@ -51911,7 +51911,7 @@ ___formal$ = 40						; size = 1
 	push	OFFSET ??_C@_1IM@LEDFCGBB@?$AAc?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe?$AAs?$AA?5?$AA?$CI?$AAx?$AA8?$AA6?$AA?$CJ?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt@
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169266[ebp], esp
+	mov	DWORD PTR $T169267[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -51921,7 +51921,7 @@ ___formal$ = 40						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169267[ebp], esp
+	mov	DWORD PTR $T169268[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -52028,14 +52028,14 @@ __tryend$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdg
 ; 382  : 	return (_Dest);
 
 	mov	eax, DWORD PTR __Dest$[ebp]
-	mov	DWORD PTR $T169268[ebp], eax
+	mov	DWORD PTR $T169269[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+12], 0
 	lea	ecx, DWORD PTR __First$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+12], -1
 	lea	ecx, DWORD PTR __Last$[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T169268[ebp]
+	mov	eax, DWORD PTR $T169269[ebp]
 $LN9@Uninit_cop:
 
 ; 383  : 	}
@@ -52062,7 +52062,7 @@ __unwindfunclet$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavG
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@PAPBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@2@@std@@YAPAPBVNavGraphEdge@@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@0PAPBV1@AAV?$allocator@PBVNavGraphEdge@@@0@U_Nonscalar_ptr_iterator_tag@0@@Z$4:
-	mov	ecx, DWORD PTR $T169266[ebp]
+	mov	ecx, DWORD PTR $T169267[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Uninit_copy@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@PAPBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@2@@std@@YAPAPBVNavGraphEdge@@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@0PAPBV1@AAV?$allocator@PBVNavGraphEdge@@@0@U_Nonscalar_ptr_iterator_tag@0@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -52297,9 +52297,9 @@ _TEXT	SEGMENT
 tv141 = -40						; size = 4
 tv140 = -36						; size = 4
 tv138 = -32						; size = 4
-$T169304 = -28						; size = 4
-$T169299 = -24						; size = 4
-$T169298 = -20						; size = 4
+$T169305 = -28						; size = 4
+$T169300 = -24						; size = 4
+$T169299 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -52331,7 +52331,7 @@ __Val$ = 24						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T169304[ebp], 0
+	mov	DWORD PTR $T169305[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 740  : 		{	// insert _Val at _Where
@@ -52344,7 +52344,7 @@ __Val$ = 24						; size = 4
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169298[ebp], esp
+	mov	DWORD PTR $T169299[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
@@ -52358,7 +52358,7 @@ __Val$ = 24						; size = 4
 	call	??F?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<int,std::allocator<int> > >::operator--
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169299[ebp], esp
+	mov	DWORD PTR $T169300[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv140[ebp], eax
@@ -52367,9 +52367,9 @@ __Val$ = 24						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@HV?$allocator@H@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@2@@Z ; std::list<int,std::allocator<int> >::_Make_iter
 	mov	DWORD PTR tv141[ebp], eax
-	mov	ecx, DWORD PTR $T169304[ebp]
+	mov	ecx, DWORD PTR $T169305[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T169304[ebp], ecx
+	mov	DWORD PTR $T169305[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
@@ -52393,10 +52393,10 @@ __unwindfunclet$??$emplace@H@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_ite
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$emplace@H@?$list@HV?$allocator@H@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@V?$_List_const_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@1@$$QAH@Z$3:
-	mov	eax, DWORD PTR $T169304[ebp]
+	mov	eax, DWORD PTR $T169305[ebp]
 	and	eax, 1
 	je	$LN7@emplace@2
-	and	DWORD PTR $T169304[ebp], -2		; fffffffeH
+	and	DWORD PTR $T169305[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@HV?$allocator@H@std@@@std@@@std@@QAE@XZ
 $LN7@emplace@2:
@@ -52450,8 +52450,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@HABH@std@@YAXPAHABH@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T169317 = -24						; size = 4
-$T169316 = -20						; size = 4
+$T169318 = -24						; size = 4
+$T169317 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -52490,25 +52490,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169317[ebp], eax
+	mov	DWORD PTR $T169318[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169317[ebp], 0
+	cmp	DWORD PTR $T169318[ebp], 0
 	je	SHORT $LN3@Construct
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABH@std@@YAABHABH@Z		; std::forward<int const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T169317[ebp]
+	mov	ecx, DWORD PTR $T169318[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T169317[ebp]
+	mov	eax, DWORD PTR $T169318[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct
 $LN3@Construct:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T169316[ebp], ecx
+	mov	DWORD PTR $T169317[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -52528,7 +52528,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@HABH@std@@YAXPAHABH@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169317[ebp]
+	mov	ecx, DWORD PTR $T169318[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -52559,8 +52559,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@PAVRaven_PathPlanner@@ABQAV1@@std@@YAXPAPAVRaven_PathPlanner@@ABQAV1@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T169330 = -24						; size = 4
-$T169329 = -20						; size = 4
+$T169331 = -24						; size = 4
+$T169330 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -52599,25 +52599,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169330[ebp], eax
+	mov	DWORD PTR $T169331[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169330[ebp], 0
+	cmp	DWORD PTR $T169331[ebp], 0
 	je	SHORT $LN3@Construct@2
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABQAVRaven_PathPlanner@@@std@@YAABQAVRaven_PathPlanner@@ABQAV1@@Z ; std::forward<Raven_PathPlanner * const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T169330[ebp]
+	mov	ecx, DWORD PTR $T169331[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T169330[ebp]
+	mov	eax, DWORD PTR $T169331[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct@2
 $LN3@Construct@2:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct@2:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T169329[ebp], ecx
+	mov	DWORD PTR $T169330[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -52637,7 +52637,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@PAVRaven_PathPlanner@@ABQAV1@@std@@YAXPAPAVRaven_PathPlanner@@ABQAV1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169330[ebp]
+	mov	ecx, DWORD PTR $T169331[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -52675,7 +52675,7 @@ PUBLIC	??$_Move@PAHPAH@std@@YAPAHPAH00U_Scalar_ptr_iterator_tag@0@@Z ; std::_Mov
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility
 ;	COMDAT ??$_Move@PAHPAH@std@@YAPAHPAH00@Z
 _TEXT	SEGMENT
-$T169344 = -1						; size = 1
+$T169345 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -52697,8 +52697,8 @@ __Dest$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T169344[ebp], al
-	movzx	edx, BYTE PTR $T169344[ebp]
+	mov	BYTE PTR $T169345[ebp], al
+	movzx	edx, BYTE PTR $T169345[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
@@ -52935,7 +52935,7 @@ PUBLIC	??$_Copy_backward@PAHPAH@std@@YAPAHPAH00U_Scalar_ptr_iterator_tag@0@@Z ; 
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Copy_backward@PAHPAH@std@@YAPAHPAH00@Z
 _TEXT	SEGMENT
-$T169359 = -1						; size = 1
+$T169360 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -52957,8 +52957,8 @@ __Dest$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T169359[ebp], al
-	movzx	edx, BYTE PTR $T169359[ebp]
+	mov	BYTE PTR $T169360[ebp], al
+	movzx	edx, BYTE PTR $T169360[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Dest$[ebp]
 	push	eax
@@ -52985,7 +52985,7 @@ PUBLIC	??$_Val_type@PAH@std@@YAPAHPAH@Z		; std::_Val_type<int *>
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_fill_n@PAHIHV?$allocator@H@std@@@std@@YAXPAHIPBHAAV?$allocator@H@0@@Z
 _TEXT	SEGMENT
-$T169362 = -1						; size = 1
+$T169363 = -1						; size = 1
 __First$ = 8						; size = 4
 __Count$ = 12						; size = 4
 __Pval$ = 16						; size = 4
@@ -53008,8 +53008,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T169362[ebp], al
-	movzx	edx, BYTE PTR $T169362[ebp]
+	mov	BYTE PTR $T169363[ebp], al
+	movzx	edx, BYTE PTR $T169363[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -53041,7 +53041,7 @@ __Al$ = 20						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@H@std@@YAPAHIPAH@Z
 _TEXT	SEGMENT
-$T169365 = -16						; size = 12
+$T169366 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -53094,10 +53094,10 @@ $LN1@Allocate@9:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T169365[ebp]
+	lea	ecx, DWORD PTR $T169366[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T169365[ebp]
+	lea	ecx, DWORD PTR $T169366[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@9:
@@ -53208,8 +53208,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@VPathEdge@@@std@@QAEXPAVPathEdge@@$$QAV3@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T169373 = -24						; size = 4
-$T169372 = -20						; size = 4
+$T169374 = -24						; size = 4
+$T169373 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -53247,9 +53247,9 @@ __Val$ = 12						; size = 4
 	push	40					; 00000028H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169373[ebp], eax
+	mov	DWORD PTR $T169374[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169373[ebp], 0
+	cmp	DWORD PTR $T169374[ebp], 0
 	je	SHORT $LN3@construct@3
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -53257,16 +53257,16 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	ecx, 10					; 0000000aH
 	mov	esi, eax
-	mov	edi, DWORD PTR $T169373[ebp]
+	mov	edi, DWORD PTR $T169374[ebp]
 	rep movsd
-	mov	edx, DWORD PTR $T169373[ebp]
+	mov	edx, DWORD PTR $T169374[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct@3
 $LN3@construct@3:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct@3:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T169372[ebp], eax
+	mov	DWORD PTR $T169373[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -53288,7 +53288,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@VPathEdge@@@std@@QAEXPAVPathEdge@@$$QAV3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169373[ebp]
+	mov	ecx, DWORD PTR $T169374[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -54301,9 +54301,9 @@ _TEXT	SEGMENT
 tv140 = -36						; size = 4
 tv137 = -32						; size = 4
 tv143 = -28						; size = 4
-$T169452 = -24						; size = 4
-$T169451 = -20						; size = 4
-$T169450 = -13						; size = 1
+$T169453 = -24						; size = 4
+$T169452 = -20						; size = 4
+$T169451 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -54338,7 +54338,7 @@ __Line$ = 36						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T169450[ebp]
+	lea	ecx, DWORD PTR $T169451[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@@std@@YA?AUrandom_access_iterator_tag@0@ABV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_Vector_const_iterator<std::_Vector_val<NavGraphEdge const *,std::allocator<NavGraphEdge const *> > > >
 	add	esp, 8
@@ -54350,7 +54350,7 @@ __Line$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169451[ebp], esp
+	mov	DWORD PTR $T169452[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -54360,7 +54360,7 @@ __Line$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T169452[ebp], esp
+	mov	DWORD PTR $T169453[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -54396,7 +54396,7 @@ __unwindfunclet$??$_Debug_range@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavG
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Debug_range@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@@std@@YAXV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@0PB_WI@Z$2:
-	mov	ecx, DWORD PTR $T169451[ebp]
+	mov	ecx, DWORD PTR $T169452[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Debug_range@V?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@std@@@std@@YAXV?$_Vector_const_iterator@V?$_Vector_val@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@@0@0PB_WI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -54524,7 +54524,7 @@ PUBLIC	??$_Iter_cat@PAPBVNavGraphEdge@@@std@@YA?AUrandom_access_iterator_tag@0@A
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility
 ;	COMDAT ??$_Debug_range@PAPBVNavGraphEdge@@@std@@YAXPAPBVNavGraphEdge@@0PB_WI@Z
 _TEXT	SEGMENT
-$T169471 = -1						; size = 1
+$T169472 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -54542,7 +54542,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T169471[ebp]
+	lea	ecx, DWORD PTR $T169472[ebp]
 	push	ecx
 	call	??$_Iter_cat@PAPBVNavGraphEdge@@@std@@YA?AUrandom_access_iterator_tag@0@ABQAPBVNavGraphEdge@@@Z ; std::_Iter_cat<NavGraphEdge const * *>
 	add	esp, 8
@@ -54823,7 +54823,7 @@ PUBLIC	??$_Uninit_move@HHH@std@@YAPAHPAH00AAV?$allocator@H@0@0U_Scalar_ptr_itera
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_move@PAHPAHV?$allocator@H@std@@@std@@YAPAHPAH00AAV?$allocator@H@0@@Z
 _TEXT	SEGMENT
-$T169489 = -1						; size = 1
+$T169490 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -54846,8 +54846,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T169489[ebp], al
-	movzx	edx, BYTE PTR $T169489[ebp]
+	mov	BYTE PTR $T169490[ebp], al
+	movzx	edx, BYTE PTR $T169490[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -54881,7 +54881,7 @@ PUBLIC	??$_Iter_cat@PAH@std@@YA?AUrandom_access_iterator_tag@0@ABQAH@Z ; std::_I
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility
 ;	COMDAT ??$_Debug_range@PAH@std@@YAXPAH0PB_WI@Z
 _TEXT	SEGMENT
-$T169492 = -1						; size = 1
+$T169493 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -54899,7 +54899,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T169492[ebp]
+	lea	ecx, DWORD PTR $T169493[ebp]
 	push	ecx
 	call	??$_Iter_cat@PAH@std@@YA?AUrandom_access_iterator_tag@0@ABQAH@Z ; std::_Iter_cat<int *>
 	add	esp, 8
@@ -55119,8 +55119,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@UVector2D@@ABU1@@std@@YAXPAUVector2D@@ABU1@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T169506 = -24						; size = 4
-$T169505 = -20						; size = 4
+$T169507 = -24						; size = 4
+$T169506 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -55159,15 +55159,15 @@ __Val$ = 12						; size = 4
 	push	16					; 00000010H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169506[ebp], eax
+	mov	DWORD PTR $T169507[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169506[ebp], 0
+	cmp	DWORD PTR $T169507[ebp], 0
 	je	SHORT $LN3@Construct@3
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABUVector2D@@@std@@YAABUVector2D@@ABU1@@Z ; std::forward<Vector2D const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T169506[ebp]
+	mov	ecx, DWORD PTR $T169507[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
 	mov	edx, DWORD PTR [eax+4]
@@ -55176,14 +55176,14 @@ __Val$ = 12						; size = 4
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	mov	ecx, DWORD PTR $T169506[ebp]
+	mov	ecx, DWORD PTR $T169507[ebp]
 	mov	DWORD PTR tv74[ebp], ecx
 	jmp	SHORT $LN4@Construct@3
 $LN3@Construct@3:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@Construct@3:
 	mov	edx, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T169505[ebp], edx
+	mov	DWORD PTR $T169506[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -55203,7 +55203,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@UVector2D@@ABU1@@std@@YAXPAUVector2D@@ABU1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169506[ebp]
+	mov	ecx, DWORD PTR $T169507[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -55234,8 +55234,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@PAVRaven_Bot@@ABQAV1@@std@@YAXPAPAVRaven_Bot@@ABQAV1@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T169519 = -24						; size = 4
-$T169518 = -20						; size = 4
+$T169520 = -24						; size = 4
+$T169519 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -55274,25 +55274,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169519[ebp], eax
+	mov	DWORD PTR $T169520[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169519[ebp], 0
+	cmp	DWORD PTR $T169520[ebp], 0
 	je	SHORT $LN3@Construct@4
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABQAVRaven_Bot@@@std@@YAABQAVRaven_Bot@@ABQAV1@@Z ; std::forward<Raven_Bot * const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T169519[ebp]
+	mov	ecx, DWORD PTR $T169520[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T169519[ebp]
+	mov	eax, DWORD PTR $T169520[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct@4
 $LN3@Construct@4:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct@4:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T169518[ebp], ecx
+	mov	DWORD PTR $T169519[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -55312,7 +55312,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@PAVRaven_Bot@@ABQAV1@@std@@YAXPAPAVRaven_Bot@@ABQAV1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169519[ebp]
+	mov	ecx, DWORD PTR $T169520[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -56192,8 +56192,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@PBVNavGraphEdge@@ABQBV1@@std@@YAXPAPBVNavGraphEdge@@ABQBV1@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T169586 = -24						; size = 4
-$T169585 = -20						; size = 4
+$T169587 = -24						; size = 4
+$T169586 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -56232,25 +56232,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169586[ebp], eax
+	mov	DWORD PTR $T169587[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169586[ebp], 0
+	cmp	DWORD PTR $T169587[ebp], 0
 	je	SHORT $LN3@Construct@5
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABQBVNavGraphEdge@@@std@@YAABQBVNavGraphEdge@@ABQBV1@@Z ; std::forward<NavGraphEdge const * const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T169586[ebp]
+	mov	ecx, DWORD PTR $T169587[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T169586[ebp]
+	mov	eax, DWORD PTR $T169587[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct@5
 $LN3@Construct@5:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct@5:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T169585[ebp], ecx
+	mov	DWORD PTR $T169586[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -56270,7 +56270,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@PBVNavGraphEdge@@ABQBV1@@std@@YAXPAPBVNavGraphEdge@@ABQBV1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169586[ebp]
+	mov	ecx, DWORD PTR $T169587[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -56413,8 +56413,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@H@std@@QAEXPAH$$QAH@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T169607 = -24						; size = 4
-$T169606 = -20						; size = 4
+$T169608 = -24						; size = 4
+$T169607 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -56450,25 +56450,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T169607[ebp], eax
+	mov	DWORD PTR $T169608[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T169607[ebp], 0
+	cmp	DWORD PTR $T169608[ebp], 0
 	je	SHORT $LN3@construct@4
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@H@std@@YA$$QAHAAH@Z		; std::forward<int>
 	add	esp, 4
-	mov	edx, DWORD PTR $T169607[ebp]
+	mov	edx, DWORD PTR $T169608[ebp]
 	mov	eax, DWORD PTR [eax]
 	mov	DWORD PTR [edx], eax
-	mov	ecx, DWORD PTR $T169607[ebp]
+	mov	ecx, DWORD PTR $T169608[ebp]
 	mov	DWORD PTR tv73[ebp], ecx
 	jmp	SHORT $LN4@construct@4
 $LN3@construct@4:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@construct@4:
 	mov	edx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T169606[ebp], edx
+	mov	DWORD PTR $T169607[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -56488,7 +56488,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@H@std@@QAEXPAH$$QAH@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T169607[ebp]
+	mov	ecx, DWORD PTR $T169608[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8

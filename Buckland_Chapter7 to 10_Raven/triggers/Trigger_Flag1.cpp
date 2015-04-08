@@ -63,6 +63,6 @@ void Trigger_Flag1::Read(std::ifstream& in)
   //create this trigger's region of fluence
   AddCircularTriggerRegion(Pos(), script->GetDouble("DefaultGiverTriggerRange"));
 
-  SetRespawnDelay((unsigned int)(script->GetDouble("Flag_RespawmDelay") * FrameRate));
+  SetRespawnDelay((unsigned int)(script->GetDouble("Flag_RespawnDelay") * FrameRate));
   SetEntityType(type_flag1);
 }
