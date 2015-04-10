@@ -5,6 +5,8 @@
 #include "misc/utils.h"
 #include "../lua/Raven_Scriptor.h"
 
+#include "../Raven_Game.h"
+
 #include "Messaging/Telegram.h"
 #include "../Raven_Messages.h"
 #include "Messaging/MessageDispatcher.h"
@@ -22,6 +24,8 @@
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
 #include "GetFlagGoal_Evaluator.h"
+#include "ExploreAreaGoal_Evaluator.h"
+#include "ProtectFlagGoal_Evaluator.h"
 
 //#include "Goal_Think_Plus.h"
 
@@ -57,21 +61,34 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
   double ShotgunBias = 0.8;
   double RocketLauncherBias = 0.8;
   double RailgunBias = 0.8;
-  double ExploreBias = 0.5;
-  double AttackBias = 4.0;
-  double FlagBias = 1.0;
+  double ExploreBias = 10.0;
+  double AttackBias = 6.0;
+  double FlagBias = 1.5;
+  double ProcFlagBias = 2.0;
 
   //create the evaluator objects
-  m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
-  m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
+  //m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
+  m_Evaluators.push_back(new ExploreAreaGoal_Evaluator(ExploreBias));
   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
-  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
-                                                     type_shotgun));
-  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
-                                                     type_rail_gun));
-  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
-                                                     type_rocket_launcher));
+ // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
+ //                                                    type_shotgun));
+ // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
+ //                                                    type_rail_gun));
+ // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
+ //                                                    type_rocket_launcher));
   m_Evaluators.push_back(new GetFlagGoal_Evaluator(FlagBias));
+  m_Evaluators.push_back(new ProtectFlagGoal_Evaluator(ProcFlagBias));
+
+	  //quatro quadrantes centrais
+  	  m_Areas.push_back(AreaMap(Vector2D(350,150),200,0));
+	  m_Areas.push_back(AreaMap(Vector2D(650,150),200,1));
+	  m_Areas.push_back(AreaMap(Vector2D(350,350),200,2));
+	  m_Areas.push_back(AreaMap(Vector2D(650,350),200,3));
+	  //quandrante da bandeira marrom
+	  m_Areas.push_back(AreaMap(Vector2D(50,250),100,4));
+	  //quadranta da bandeira verde
+	  m_Areas.push_back(AreaMap(Vector2D(900,250),100,5));
+
 }
 
 //----------------------------- dtor ------------------------------------------
@@ -150,6 +167,7 @@ void Goal_Think::Arbitrate()
   //assert(MostDesirable && "<Goal_Think::Arbitrate>: no evaluator selected");
 
   MostDesirable->SetGoal(m_pOwner);
+ // AddGoal_Explore_Area();
   //AddGoal_GetItem(14 - m_pOwner->my_type);
 }
 
@@ -174,15 +192,67 @@ void Goal_Think::AddGoal_MoveToPosition(Vector2D pos)
   AddSubgoal( new Goal_MoveToPosition(m_pOwner, pos));
 }
 
+void Goal_Think::AddGoal_Protect_Flag()
+{
+	int ar = 4 + m_pOwner->my_type;
+	if(notPresent(goal_explore_area))
+	{
+		RemoveAllSubgoals();
+		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
+	}else if( ( (Goal_Explore_Area*)m_SubGoals.front())->areaId != ar )
+	{
+		RemoveAllSubgoals();
+		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
+	}
+}
+
+void Goal_Think::AddGoal_Explore_Area()
+{
+  if (notPresent(goal_explore_area))
+  {
+	  bool teste = true;
+	  int id = 0;
+
+	  do{
+		  teste = true;
+
+		   id = RandInt(0,m_Areas.size()-1);
+	  
+		  for(int i =0;i<m_AreasExploring.size();i++)
+		  {
+			  if(m_AreasExploring[i] == id)
+			  {
+				  teste = false;
+				  break;
+			  }
+		  }
+	  }while(!teste);
+
+    RemoveAllSubgoals();
+
+	AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[id]));
+
+		  Raven_Game * world = m_pOwner->GetWorld();
+
+		  std::list<Raven_Bot*> bots = world->GetAllBots();
+		  std::list<Raven_Bot*>::const_iterator curBot = bots.begin();
+		  for (curBot; curBot != bots.end(); ++curBot)
+		  {
+			  if((*curBot)->my_type == m_pOwner->my_type)
+			  {
+				  Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+								  m_pOwner->ID(),
+								  (* curBot)->ID(),
+								  Msg_Exploring,
+								  &m_Areas[id].id);
+			  }
+		  }
+
+  }
+}
+
 void Goal_Think::AddGoal_Explore()
 {
-
-	/*if(m_pOwner->my_type == 1)
-	{
-		Goal_Think* cast = this;
-		((Goal_Think_Plus *)cast)->AddGoal_Explore();
-		return;
-	}*/
   if (notPresent(goal_explore))
   {
     RemoveAllSubgoals();
@@ -191,15 +261,7 @@ void Goal_Think::AddGoal_Explore()
 }
 
 void Goal_Think::AddGoal_GetItem(unsigned int ItemType)
-{
-	/*if(m_pOwner->my_type == 1)
-	{
-		Goal_Think* cast = this;
-		((Goal_Think_Plus *)cast)->AddGoal_GetItem(ItemType);
-		return;
-	}*/
-
-  if (notPresent(ItemTypeToGoalType(ItemType)))
+{  if (notPresent(ItemTypeToGoalType(ItemType)))
   {
     RemoveAllSubgoals();
     AddSubgoal( new Goal_GetItem(m_pOwner, ItemType));
@@ -208,13 +270,6 @@ void Goal_Think::AddGoal_GetItem(unsigned int ItemType)
 
 void Goal_Think::AddGoal_AttackTarget()
 {
-	/*if(m_pOwner->my_type == 1)
-	{
-		Goal_Think* cast = this;
-		((Goal_Think_Plus *)cast)->AddGoal_AttackTarget();
-		return;
-	}*/
-
   if (notPresent(goal_attack_target))
   {
     RemoveAllSubgoals();
@@ -259,9 +314,47 @@ bool Goal_Think::HandleMessage(const Telegram& msg)
 {
 	switch(msg.Msg)
 	{
+		case Msg_Exploring:
+		{
+			int ar = (*(int*)msg.ExtraInfo);
+			bool alreadyKnown = false;
+
+			for(int i =0;i<m_AreasExploring.size();i++)
+			{
+				if(m_AreasExploring[i] == ar)
+				{
+					alreadyKnown = true;
+					break;
+				}
+			}
+
+			if(!alreadyKnown)
+			{
+				m_AreasExploring.push_back(ar);
+			}
+
+			return true;
+		}
+
+		case Msg_quitExploring:
+		{
+			int ar = (*(int*)msg.ExtraInfo);
+			for(int i =0;i<m_AreasExploring.size();i++)
+			{
+				if(m_AreasExploring[i] == ar)
+				{
+					m_AreasExploring[i]= m_AreasExploring[m_AreasExploring.size()-1];
+					m_AreasExploring.pop_back();
+					break;
+				}
+			}
+
+			return true;
+		}
+
 		case Msg_TakeThatMF:
 		{
-			if(m_pOwner->Health() <=50 && m_iStatus != completed) m_iStatus = inactive;
+			if(m_pOwner->Health() <=100 && m_iStatus != completed) m_iStatus = inactive;
 			return ForwardMessageToFrontMostSubgoal(msg);
 		}
 

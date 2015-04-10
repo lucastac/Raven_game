@@ -16,6 +16,7 @@
 #include "Goals/Goal_Composite.h"
 #include "../Raven_Bot.h"
 #include "Goal_Evaluator.h"
+#include "Goal_Explore_Area.h"
 
 
 
@@ -28,7 +29,9 @@ public:
 
 public:
   
-  GoalEvaluators  m_Evaluators;
+  GoalEvaluators  m_Evaluators; 
+  std::vector<AreaMap> m_Areas;
+  std::vector<int> m_AreasExploring;
 
 public:
 
@@ -51,6 +54,8 @@ public:
   void AddGoal_MoveToPosition(Vector2D pos);
   void AddGoal_GetItem(unsigned int ItemType);
   void AddGoal_Explore();
+  void AddGoal_Protect_Flag();
+  void AddGoal_Explore_Area();
   void AddGoal_AttackTarget();
 
   //this adds the MoveToPosition goal to the *back* of the subgoal list.

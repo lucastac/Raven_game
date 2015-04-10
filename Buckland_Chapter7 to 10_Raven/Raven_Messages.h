@@ -22,7 +22,9 @@ enum message_type
   Msg_GunshotSound,
   Msg_UserHasRemovedBot,
   Msg_Took_Flag,
-  Msg_We_Won
+  Msg_We_Won,
+  Msg_Exploring,
+  Msg_quitExploring
 };
 
 //used for outputting debug info
@@ -30,6 +32,14 @@ inline std::string MessageToString(int msg)
 {
   switch(msg)
   {
+  case Msg_Exploring:
+
+	  return "Msg_Exploring";
+	  
+  case Msg_quitExploring:
+
+	  return "Msg_QuitExploring";
+
   case Msg_PathReady:
 
     return "Msg_PathReady";
