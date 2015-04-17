@@ -202,20 +202,26 @@ Creating a Wall
 Creating a flag1
 Creating a flag2
 maps/flag_map.map loaded okay
+BOT 5805 IS STUCK!!
+BOT 5803 IS STUCK!!
+BOT 5807 IS STUCK!!
 BOT 5799 IS STUCK!!
 BOT 5803 IS STUCK!!
-BOT 5801 IS STUCK!!
-Player is exorcised from bot 5800
-BOT 5802 IS STUCK!!
+BOT 5807 IS STUCK!!
+BOT 5799 IS STUCK!!
+BOT 5807 IS STUCK!!
+BOT 5803 IS STUCK!!
+BOT 5799 IS STUCK!!
+BOT 5807 IS STUCK!!
 BOT 5803 IS STUCK!!
 BOT 5805 IS STUCK!!
-Player is exorcised from bot 5806
-Player is exorcised from bot 5803
-BOT 5800 IS STUCK!!
-Player is exorcised from bot 5801
-BOT 5800 IS STUCK!!
-Player is exorcised from bot 5805
-Player is exorcised from bot 5800
+BOT 5807 IS STUCK!!
+BOT 5799 IS STUCK!!
+BOT 5801 IS STUCK!!
+BOT 5803 IS STUCK!!
+BOT 5805 IS STUCK!!
+BOT 5801 IS STUCK!!
+BOT 5803 IS STUCK!!
 deleting raven bot (id = 5799)
 deleting raven bot (id = 5800)
 deleting raven bot (id = 5801)

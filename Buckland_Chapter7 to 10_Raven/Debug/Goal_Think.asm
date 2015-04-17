@@ -945,10 +945,9 @@ PUBLIC	??1?$vector@HV?$allocator@H@std@@@std@@QAE@XZ	; std::vector<int,std::allo
 PUBLIC	??1?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAE@XZ ; std::vector<AreaMap,std::allocator<AreaMap> >::~vector<AreaMap,std::allocator<AreaMap> >
 PUBLIC	??1?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE@XZ ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::~vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >
 PUBLIC	??1?$Goal_Composite@VRaven_Bot@@@@UAE@XZ	; Goal_Composite<Raven_Bot>::~Goal_Composite<Raven_Bot>
-PUBLIC	__real@408c200000000000
-PUBLIC	__real@4049000000000000
+PUBLIC	__real@408d600000000000
 PUBLIC	__real@406f400000000000
-PUBLIC	__real@4059000000000000
+PUBLIC	__real@4054000000000000
 PUBLIC	__real@4084500000000000
 PUBLIC	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 PUBLIC	??0AreaMap@@QAE@UVector2D@@NH@Z			; AreaMap::AreaMap
@@ -1097,21 +1096,17 @@ rdata$r	SEGMENT
 	DD	FLAT:??_R0?AVGoal_Think@@@8
 	DD	FLAT:??_R3Goal_Think@@8
 rdata$r	ENDS
-;	COMDAT __real@408c200000000000
+;	COMDAT __real@408d600000000000
 CONST	SEGMENT
-__real@408c200000000000 DQ 0408c200000000000r	; 900
-CONST	ENDS
-;	COMDAT __real@4049000000000000
-CONST	SEGMENT
-__real@4049000000000000 DQ 04049000000000000r	; 50
+__real@408d600000000000 DQ 0408d600000000000r	; 940
 CONST	ENDS
 ;	COMDAT __real@406f400000000000
 CONST	SEGMENT
 __real@406f400000000000 DQ 0406f400000000000r	; 250
 CONST	ENDS
-;	COMDAT __real@4059000000000000
+;	COMDAT __real@4054000000000000
 CONST	SEGMENT
-__real@4059000000000000 DQ 04059000000000000r	; 100
+__real@4054000000000000 DQ 04054000000000000r	; 80
 CONST	ENDS
 ;	COMDAT __real@4084500000000000
 CONST	SEGMENT
@@ -1204,30 +1199,30 @@ tv187 = -432						; size = 4
 tv172 = -428						; size = 4
 tv157 = -424						; size = 4
 tv142 = -420						; size = 4
-$T150634 = -416						; size = 16
-$T150633 = -400						; size = 32
-$T150632 = -368						; size = 16
-$T150631 = -352						; size = 32
-$T150630 = -320						; size = 16
-$T150629 = -304						; size = 32
-$T150628 = -272						; size = 16
-$T150627 = -256						; size = 32
-$T150626 = -224						; size = 16
-$T150625 = -208						; size = 32
-$T150624 = -176						; size = 16
-$T150623 = -160						; size = 32
-$T150620 = -128						; size = 4
-$T150619 = -124						; size = 4
-$T150618 = -120						; size = 4
-$T150615 = -116						; size = 4
-$T150614 = -112						; size = 4
-$T150613 = -108						; size = 4
-$T150610 = -104						; size = 4
-$T150609 = -100						; size = 4
-$T150608 = -96						; size = 4
-$T150605 = -92						; size = 4
-$T150604 = -88						; size = 4
-$T150603 = -84						; size = 4
+$T150686 = -416						; size = 16
+$T150685 = -400						; size = 32
+$T150684 = -368						; size = 16
+$T150683 = -352						; size = 32
+$T150682 = -320						; size = 16
+$T150681 = -304						; size = 32
+$T150680 = -272						; size = 16
+$T150679 = -256						; size = 32
+$T150678 = -224						; size = 16
+$T150677 = -208						; size = 32
+$T150676 = -176						; size = 16
+$T150675 = -160						; size = 32
+$T150672 = -128						; size = 4
+$T150671 = -124						; size = 4
+$T150670 = -120						; size = 4
+$T150667 = -116						; size = 4
+$T150666 = -112						; size = 4
+$T150665 = -108						; size = 4
+$T150662 = -104						; size = 4
+$T150661 = -100						; size = 4
+$T150660 = -96						; size = 4
+$T150657 = -92						; size = 4
+$T150656 = -88						; size = 4
+$T150655 = -84						; size = 4
 _ProcFlagBias$ = -80					; size = 8
 _FlagBias$ = -72					; size = 8
 _AttackBias$ = -64					; size = 8
@@ -1242,7 +1237,7 @@ _pBot$ = 8						; size = 4
 ??0Goal_Think@@QAE@PAVRaven_Bot@@@Z PROC		; Goal_Think::Goal_Think
 ; _this$ = ecx
 
-; 34   : {
+; 35   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -1285,87 +1280,87 @@ _pBot$ = 8						; size = 4
 	call	??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ ; std::vector<int,std::allocator<int> >::vector<int,std::allocator<int> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 
-; 35   :   
-; 36   :   //these biases could be loaded in from a script on a per bot basis
-; 37   :   //but for now we'll just give them some random values
-; 38   :  /* const double LowRangeOfBias = 0.5;
-; 39   :   const double HighRangeOfBias = 1.5;
-; 40   : 
-; 41   :   double HealthBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-; 42   :   double ShotgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-; 43   :   double RocketLauncherBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-; 44   :   double RailgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-; 45   :   double ExploreBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-; 46   :   double AttackBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-; 47   : 
-; 48   :   //create the evaluator objects
-; 49   :   m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
-; 50   :   m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
-; 51   :   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
-; 52   :   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
-; 53   :                                                      type_shotgun));
-; 54   :   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
-; 55   :                                                      type_rail_gun));
-; 56   :   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
-; 57   :                                                      type_rocket_launcher));*/
-; 58   : 
+; 36   :   
+; 37   :   //these biases could be loaded in from a script on a per bot basis
+; 38   :   //but for now we'll just give them some random values
+; 39   :  /* const double LowRangeOfBias = 0.5;
+; 40   :   const double HighRangeOfBias = 1.5;
+; 41   : 
+; 42   :   double HealthBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+; 43   :   double ShotgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+; 44   :   double RocketLauncherBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+; 45   :   double RailgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+; 46   :   double ExploreBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+; 47   :   double AttackBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+; 48   : 
+; 49   :   //create the evaluator objects
+; 50   :   m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
+; 51   :   m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
+; 52   :   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+; 53   :   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
+; 54   :                                                      type_shotgun));
+; 55   :   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
+; 56   :                                                      type_rail_gun));
+; 57   :   m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
+; 58   :                                                      type_rocket_launcher));*/
 ; 59   : 
-; 60   :   double HealthBias = 1.0;
+; 60   : 
+; 61   :   double HealthBias = 1.0;
 
 	fld1
 	fstp	QWORD PTR _HealthBias$[ebp]
 
-; 61   :   double ShotgunBias = 0.8;
+; 62   :   double ShotgunBias = 0.8;
 
 	fld	QWORD PTR __real@3fe999999999999a
 	fstp	QWORD PTR _ShotgunBias$[ebp]
 
-; 62   :   double RocketLauncherBias = 0.8;
+; 63   :   double RocketLauncherBias = 0.8;
 
 	fld	QWORD PTR __real@3fe999999999999a
 	fstp	QWORD PTR _RocketLauncherBias$[ebp]
 
-; 63   :   double RailgunBias = 0.8;
+; 64   :   double RailgunBias = 0.8;
 
 	fld	QWORD PTR __real@3fe999999999999a
 	fstp	QWORD PTR _RailgunBias$[ebp]
 
-; 64   :   double ExploreBias = 10.0;
+; 65   :   double ExploreBias = 10.0;
 
 	fld	QWORD PTR __real@4024000000000000
 	fstp	QWORD PTR _ExploreBias$[ebp]
 
-; 65   :   double AttackBias = 6.0;
+; 66   :   double AttackBias = 6.0;
 
 	fld	QWORD PTR __real@4018000000000000
 	fstp	QWORD PTR _AttackBias$[ebp]
 
-; 66   :   double FlagBias = 1.5;
+; 67   :   double FlagBias = 1.5;
 
 	fld	QWORD PTR __real@3ff8000000000000
 	fstp	QWORD PTR _FlagBias$[ebp]
 
-; 67   :   double ProcFlagBias = 2.0;
+; 68   :   double ProcFlagBias = 2.0;
 
 	fld	QWORD PTR __real@4000000000000000
 	fstp	QWORD PTR _ProcFlagBias$[ebp]
 
-; 68   : 
-; 69   :   //create the evaluator objects
-; 70   :   //m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
-; 71   :   m_Evaluators.push_back(new ExploreAreaGoal_Evaluator(ExploreBias));
+; 69   : 
+; 70   :   //create the evaluator objects
+; 71   :   //m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
+; 72   :   m_Evaluators.push_back(new ExploreAreaGoal_Evaluator(ExploreBias));
 
 	push	16					; 00000010H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150605[ebp], eax
+	mov	DWORD PTR $T150657[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	cmp	DWORD PTR $T150605[ebp], 0
+	cmp	DWORD PTR $T150657[ebp], 0
 	je	SHORT $LN3@Goal_Think
 	sub	esp, 8
 	fld	QWORD PTR _ExploreBias$[ebp]
 	fstp	QWORD PTR [esp]
-	mov	ecx, DWORD PTR $T150605[ebp]
+	mov	ecx, DWORD PTR $T150657[ebp]
 	call	??0ExploreAreaGoal_Evaluator@@QAE@N@Z	; ExploreAreaGoal_Evaluator::ExploreAreaGoal_Evaluator
 	mov	DWORD PTR tv142[ebp], eax
 	jmp	SHORT $LN4@Goal_Think
@@ -1373,29 +1368,29 @@ $LN3@Goal_Think:
 	mov	DWORD PTR tv142[ebp], 0
 $LN4@Goal_Think:
 	mov	edx, DWORD PTR tv142[ebp]
-	mov	DWORD PTR $T150604[ebp], edx
+	mov	DWORD PTR $T150656[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	eax, DWORD PTR $T150604[ebp]
-	mov	DWORD PTR $T150603[ebp], eax
-	lea	ecx, DWORD PTR $T150603[ebp]
+	mov	eax, DWORD PTR $T150656[ebp]
+	mov	DWORD PTR $T150655[ebp], eax
+	lea	ecx, DWORD PTR $T150655[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
 	call	?push_back@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEX$$QAPAVGoal_Evaluator@@@Z ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::push_back
 
-; 72   :   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+; 73   :   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
 
 	push	16					; 00000010H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150610[ebp], eax
+	mov	DWORD PTR $T150662[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	cmp	DWORD PTR $T150610[ebp], 0
+	cmp	DWORD PTR $T150662[ebp], 0
 	je	SHORT $LN5@Goal_Think
 	sub	esp, 8
 	fld	QWORD PTR _AttackBias$[ebp]
 	fstp	QWORD PTR [esp]
-	mov	ecx, DWORD PTR $T150610[ebp]
+	mov	ecx, DWORD PTR $T150662[ebp]
 	call	??0AttackTargetGoal_Evaluator@@QAE@N@Z	; AttackTargetGoal_Evaluator::AttackTargetGoal_Evaluator
 	mov	DWORD PTR tv157[ebp], eax
 	jmp	SHORT $LN6@Goal_Think
@@ -1403,35 +1398,35 @@ $LN5@Goal_Think:
 	mov	DWORD PTR tv157[ebp], 0
 $LN6@Goal_Think:
 	mov	edx, DWORD PTR tv157[ebp]
-	mov	DWORD PTR $T150609[ebp], edx
+	mov	DWORD PTR $T150661[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	eax, DWORD PTR $T150609[ebp]
-	mov	DWORD PTR $T150608[ebp], eax
-	lea	ecx, DWORD PTR $T150608[ebp]
+	mov	eax, DWORD PTR $T150661[ebp]
+	mov	DWORD PTR $T150660[ebp], eax
+	lea	ecx, DWORD PTR $T150660[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
 	call	?push_back@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEX$$QAPAVGoal_Evaluator@@@Z ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::push_back
 
-; 73   :  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
-; 74   :  //                                                    type_shotgun));
-; 75   :  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
-; 76   :  //                                                    type_rail_gun));
-; 77   :  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
-; 78   :  //                                                    type_rocket_launcher));
-; 79   :   m_Evaluators.push_back(new GetFlagGoal_Evaluator(FlagBias));
+; 74   :  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
+; 75   :  //                                                    type_shotgun));
+; 76   :  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
+; 77   :  //                                                    type_rail_gun));
+; 78   :  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
+; 79   :  //                                                    type_rocket_launcher));
+; 80   :   m_Evaluators.push_back(new GetFlagGoal_Evaluator(FlagBias));
 
 	push	16					; 00000010H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150615[ebp], eax
+	mov	DWORD PTR $T150667[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
-	cmp	DWORD PTR $T150615[ebp], 0
+	cmp	DWORD PTR $T150667[ebp], 0
 	je	SHORT $LN7@Goal_Think
 	sub	esp, 8
 	fld	QWORD PTR _FlagBias$[ebp]
 	fstp	QWORD PTR [esp]
-	mov	ecx, DWORD PTR $T150615[ebp]
+	mov	ecx, DWORD PTR $T150667[ebp]
 	call	??0GetFlagGoal_Evaluator@@QAE@N@Z	; GetFlagGoal_Evaluator::GetFlagGoal_Evaluator
 	mov	DWORD PTR tv172[ebp], eax
 	jmp	SHORT $LN8@Goal_Think
@@ -1439,29 +1434,30 @@ $LN7@Goal_Think:
 	mov	DWORD PTR tv172[ebp], 0
 $LN8@Goal_Think:
 	mov	edx, DWORD PTR tv172[ebp]
-	mov	DWORD PTR $T150614[ebp], edx
+	mov	DWORD PTR $T150666[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	eax, DWORD PTR $T150614[ebp]
-	mov	DWORD PTR $T150613[ebp], eax
-	lea	ecx, DWORD PTR $T150613[ebp]
+	mov	eax, DWORD PTR $T150666[ebp]
+	mov	DWORD PTR $T150665[ebp], eax
+	lea	ecx, DWORD PTR $T150665[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
 	call	?push_back@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEX$$QAPAVGoal_Evaluator@@@Z ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::push_back
 
-; 80   :   m_Evaluators.push_back(new ProtectFlagGoal_Evaluator(ProcFlagBias));
+; 81   : 
+; 82   :   m_Evaluators.push_back(new ProtectFlagGoal_Evaluator(ProcFlagBias));
 
-	push	16					; 00000010H
+	push	56					; 00000038H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150620[ebp], eax
+	mov	DWORD PTR $T150672[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
-	cmp	DWORD PTR $T150620[ebp], 0
+	cmp	DWORD PTR $T150672[ebp], 0
 	je	SHORT $LN9@Goal_Think
 	sub	esp, 8
 	fld	QWORD PTR _ProcFlagBias$[ebp]
 	fstp	QWORD PTR [esp]
-	mov	ecx, DWORD PTR $T150620[ebp]
+	mov	ecx, DWORD PTR $T150672[ebp]
 	call	??0ProtectFlagGoal_Evaluator@@QAE@N@Z	; ProtectFlagGoal_Evaluator::ProtectFlagGoal_Evaluator
 	mov	DWORD PTR tv187[ebp], eax
 	jmp	SHORT $LN10@Goal_Think
@@ -1469,19 +1465,20 @@ $LN9@Goal_Think:
 	mov	DWORD PTR tv187[ebp], 0
 $LN10@Goal_Think:
 	mov	edx, DWORD PTR tv187[ebp]
-	mov	DWORD PTR $T150619[ebp], edx
+	mov	DWORD PTR $T150671[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
-	mov	eax, DWORD PTR $T150619[ebp]
-	mov	DWORD PTR $T150618[ebp], eax
-	lea	ecx, DWORD PTR $T150618[ebp]
+	mov	eax, DWORD PTR $T150671[ebp]
+	mov	DWORD PTR $T150670[ebp], eax
+	lea	ecx, DWORD PTR $T150670[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
 	call	?push_back@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEX$$QAPAVGoal_Evaluator@@@Z ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::push_back
 
-; 81   : 
-; 82   : 	  //quatro quadrantes centrais
-; 83   :   	  m_Areas.push_back(AreaMap(Vector2D(350,150),200,0));
+; 83   : 
+; 84   : 
+; 85   : 	  //quatro quadrantes centrais
+; 86   :   	  m_Areas.push_back(AreaMap(Vector2D(350,150),200,0));
 
 	push	0
 	sub	esp, 8
@@ -1493,7 +1490,7 @@ $LN10@Goal_Think:
 	sub	esp, 8
 	fld	QWORD PTR __real@4075e00000000000
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150624[ebp]
+	lea	ecx, DWORD PTR $T150676[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	edx, esp
@@ -1505,14 +1502,14 @@ $LN10@Goal_Think:
 	mov	DWORD PTR [edx+8], ecx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [edx+12], eax
-	lea	ecx, DWORD PTR $T150623[ebp]
+	lea	ecx, DWORD PTR $T150675[ebp]
 	call	??0AreaMap@@QAE@UVector2D@@NH@Z		; AreaMap::AreaMap
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 
-; 84   : 	  m_Areas.push_back(AreaMap(Vector2D(650,150),200,1));
+; 87   : 	  m_Areas.push_back(AreaMap(Vector2D(650,150),200,1));
 
 	push	1
 	sub	esp, 8
@@ -1524,7 +1521,7 @@ $LN10@Goal_Think:
 	sub	esp, 8
 	fld	QWORD PTR __real@4084500000000000
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150626[ebp]
+	lea	ecx, DWORD PTR $T150678[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -1536,14 +1533,14 @@ $LN10@Goal_Think:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T150625[ebp]
+	lea	ecx, DWORD PTR $T150677[ebp]
 	call	??0AreaMap@@QAE@UVector2D@@NH@Z		; AreaMap::AreaMap
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 
-; 85   : 	  m_Areas.push_back(AreaMap(Vector2D(350,350),200,2));
+; 88   : 	  m_Areas.push_back(AreaMap(Vector2D(350,350),200,2));
 
 	push	2
 	sub	esp, 8
@@ -1555,7 +1552,7 @@ $LN10@Goal_Think:
 	sub	esp, 8
 	fld	QWORD PTR __real@4075e00000000000
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150628[ebp]
+	lea	ecx, DWORD PTR $T150680[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -1567,14 +1564,14 @@ $LN10@Goal_Think:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T150627[ebp]
+	lea	ecx, DWORD PTR $T150679[ebp]
 	call	??0AreaMap@@QAE@UVector2D@@NH@Z		; AreaMap::AreaMap
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 
-; 86   : 	  m_Areas.push_back(AreaMap(Vector2D(650,350),200,3));
+; 89   : 	  m_Areas.push_back(AreaMap(Vector2D(650,350),200,3));
 
 	push	3
 	sub	esp, 8
@@ -1586,7 +1583,7 @@ $LN10@Goal_Think:
 	sub	esp, 8
 	fld	QWORD PTR __real@4084500000000000
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150630[ebp]
+	lea	ecx, DWORD PTR $T150682[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -1598,27 +1595,27 @@ $LN10@Goal_Think:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T150629[ebp]
+	lea	ecx, DWORD PTR $T150681[ebp]
 	call	??0AreaMap@@QAE@UVector2D@@NH@Z		; AreaMap::AreaMap
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 
-; 87   : 	  //quandrante da bandeira marrom
-; 88   : 	  m_Areas.push_back(AreaMap(Vector2D(50,250),100,4));
+; 90   : 	  //quandrante da bandeira marrom
+; 91   : 	  m_Areas.push_back(AreaMap(Vector2D(10,250),80,4));
 
 	push	4
 	sub	esp, 8
-	fld	QWORD PTR __real@4059000000000000
+	fld	QWORD PTR __real@4054000000000000
 	fstp	QWORD PTR [esp]
 	sub	esp, 8
 	fld	QWORD PTR __real@406f400000000000
 	fstp	QWORD PTR [esp]
 	sub	esp, 8
-	fld	QWORD PTR __real@4049000000000000
+	fld	QWORD PTR __real@4024000000000000
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150632[ebp]
+	lea	ecx, DWORD PTR $T150684[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -1630,27 +1627,27 @@ $LN10@Goal_Think:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T150631[ebp]
+	lea	ecx, DWORD PTR $T150683[ebp]
 	call	??0AreaMap@@QAE@UVector2D@@NH@Z		; AreaMap::AreaMap
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 
-; 89   : 	  //quadranta da bandeira verde
-; 90   : 	  m_Areas.push_back(AreaMap(Vector2D(900,250),100,5));
+; 92   : 	  //quadranta da bandeira verde
+; 93   : 	  m_Areas.push_back(AreaMap(Vector2D(940,250),80,5));
 
 	push	5
 	sub	esp, 8
-	fld	QWORD PTR __real@4059000000000000
+	fld	QWORD PTR __real@4054000000000000
 	fstp	QWORD PTR [esp]
 	sub	esp, 8
 	fld	QWORD PTR __real@406f400000000000
 	fstp	QWORD PTR [esp]
 	sub	esp, 8
-	fld	QWORD PTR __real@408c200000000000
+	fld	QWORD PTR __real@408d600000000000
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150634[ebp]
+	lea	ecx, DWORD PTR $T150686[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -1662,15 +1659,15 @@ $LN10@Goal_Think:
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	lea	ecx, DWORD PTR $T150633[ebp]
+	lea	ecx, DWORD PTR $T150685[ebp]
 	call	??0AreaMap@@QAE@UVector2D@@NH@Z		; AreaMap::AreaMap
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 52					; 00000034H
 	call	?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back
 
-; 91   : 
-; 92   : }
+; 94   : 
+; 95   : }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	eax, DWORD PTR _this$[ebp]
@@ -1702,25 +1699,25 @@ __unwindfunclet$??0Goal_Think@@QAE@PAVRaven_Bot@@@Z$3:
 	add	ecx, 72					; 00000048H
 	jmp	??1?$vector@HV?$allocator@H@std@@@std@@QAE@XZ ; std::vector<int,std::allocator<int> >::~vector<int,std::allocator<int> >
 __unwindfunclet$??0Goal_Think@@QAE@PAVRaven_Bot@@@Z$4:
-	mov	eax, DWORD PTR $T150605[ebp]
+	mov	eax, DWORD PTR $T150657[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$??0Goal_Think@@QAE@PAVRaven_Bot@@@Z$5:
-	mov	eax, DWORD PTR $T150610[ebp]
+	mov	eax, DWORD PTR $T150662[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$??0Goal_Think@@QAE@PAVRaven_Bot@@@Z$6:
-	mov	eax, DWORD PTR $T150615[ebp]
+	mov	eax, DWORD PTR $T150667[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$??0Goal_Think@@QAE@PAVRaven_Bot@@@Z$7:
-	mov	eax, DWORD PTR $T150620[ebp]
+	mov	eax, DWORD PTR $T150672[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -2372,6 +2369,7 @@ _this$ = -4						; size = 4
 	ret	0
 ??1ExploreAreaGoal_Evaluator@@UAE@XZ ENDP		; ExploreAreaGoal_Evaluator::~ExploreAreaGoal_Evaluator
 _TEXT	ENDS
+PUBLIC	??0Vector2D@@QAE@XZ				; Vector2D::Vector2D
 PUBLIC	??_7ProtectFlagGoal_Evaluator@@6B@		; ProtectFlagGoal_Evaluator::`vftable'
 PUBLIC	??_R4ProtectFlagGoal_Evaluator@@6B@		; ProtectFlagGoal_Evaluator::`RTTI Complete Object Locator'
 PUBLIC	??_R0?AVProtectFlagGoal_Evaluator@@@8		; ProtectFlagGoal_Evaluator `RTTI Type Descriptor'
@@ -2426,37 +2424,120 @@ CONST	SEGMENT
 	DD	FLAT:?CalculateDesirability@ProtectFlagGoal_Evaluator@@UAENPAVRaven_Bot@@@Z
 	DD	FLAT:?SetGoal@ProtectFlagGoal_Evaluator@@UAEXPAVRaven_Bot@@@Z
 	DD	FLAT:?RenderInfo@ProtectFlagGoal_Evaluator@@UAEXUVector2D@@PAVRaven_Bot@@@Z
-; Function compile flags: /Odtp /RTCsu
 CONST	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__unwindtable$??0ProtectFlagGoal_Evaluator@@QAE@N@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$??0ProtectFlagGoal_Evaluator@@QAE@N@Z$0
+__ehfuncinfo$??0ProtectFlagGoal_Evaluator@@QAE@N@Z DD 019930522H
+	DD	01H
+	DD	FLAT:__unwindtable$??0ProtectFlagGoal_Evaluator@@QAE@N@Z
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	DD	00H
+	DD	01H
+; Function compile flags: /Odtp /RTCsu
+xdata$x	ENDS
 ;	COMDAT ??0ProtectFlagGoal_Evaluator@@QAE@N@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
+_this$ = -16						; size = 4
+__$EHRec$ = -12						; size = 12
 _bias$ = 8						; size = 8
 ??0ProtectFlagGoal_Evaluator@@QAE@N@Z PROC		; ProtectFlagGoal_Evaluator::ProtectFlagGoal_Evaluator, COMDAT
 ; _this$ = ecx
 
-; 21   :   ProtectFlagGoal_Evaluator(double bias):Goal_Evaluator(bias){}
+; 28   : 	{
 
 	push	ebp
 	mov	ebp, esp
+	push	-1
+	push	__ehhandler$??0ProtectFlagGoal_Evaluator@@QAE@N@Z
+	mov	eax, DWORD PTR fs:0
+	push	eax
 	push	ecx
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR [ebp-16], -858993460		; ccccccccH
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	push	eax
+	lea	eax, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 	sub	esp, 8
 	fld	QWORD PTR _bias$[ebp]
 	fstp	QWORD PTR [esp]
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0Goal_Evaluator@@QAE@N@Z		; Goal_Evaluator::Goal_Evaluator
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax], OFFSET ??_7ProtectFlagGoal_Evaluator@@6B@
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 24					; 00000018H
+	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 40					; 00000028H
+	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
+
+; 29   : 
+; 30   : 	}
+
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	eax, DWORD PTR _this$[ebp]
-	add	esp, 4
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, ecx
+	pop	ecx
+	add	esp, 16					; 00000010H
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
 	pop	ebp
 	ret	8
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$??0ProtectFlagGoal_Evaluator@@QAE@N@Z$0:
+	mov	ecx, DWORD PTR _this$[ebp]
+	jmp	??1Goal_Evaluator@@UAE@XZ		; Goal_Evaluator::~Goal_Evaluator
+__ehhandler$??0ProtectFlagGoal_Evaluator@@QAE@N@Z:
+	mov	edx, DWORD PTR [esp+8]
+	lea	eax, DWORD PTR [edx+12]
+	mov	ecx, DWORD PTR [edx-8]
+	xor	ecx, eax
+	call	@__security_check_cookie@4
+	mov	eax, OFFSET __ehfuncinfo$??0ProtectFlagGoal_Evaluator@@QAE@N@Z
+	jmp	___CxxFrameHandler3
+text$x	ENDS
 ??0ProtectFlagGoal_Evaluator@@QAE@N@Z ENDP		; ProtectFlagGoal_Evaluator::ProtectFlagGoal_Evaluator
+PUBLIC	__real@0000000000000000
+;	COMDAT __real@0000000000000000
+; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\2d\vector2d.h
+CONST	SEGMENT
+__real@0000000000000000 DQ 00000000000000000r	; 0
+; Function compile flags: /Odtp /RTCsu
+CONST	ENDS
+;	COMDAT ??0Vector2D@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+??0Vector2D@@QAE@XZ PROC				; Vector2D::Vector2D, COMDAT
+; _this$ = ecx
+
+; 24   :   Vector2D():x(0.0),y(0.0){}
+
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	fldz
+	fstp	QWORD PTR [eax]
+	mov	ecx, DWORD PTR _this$[ebp]
+	fldz
+	fstp	QWORD PTR [ecx+8]
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+??0Vector2D@@QAE@XZ ENDP				; Vector2D::Vector2D
 _TEXT	ENDS
 PUBLIC	??1ProtectFlagGoal_Evaluator@@UAE@XZ		; ProtectFlagGoal_Evaluator::~ProtectFlagGoal_Evaluator
 ; Function compile flags: /Odtp /RTCsu
@@ -2577,17 +2658,17 @@ _TEXT	SEGMENT
 tv145 = -72						; size = 4
 tv155 = -68						; size = 4
 tv82 = -64						; size = 4
-$T150738 = -60						; size = 4
-$T150737 = -56						; size = 4
-$T150736 = -52						; size = 12
-$T150735 = -37						; size = 1
+$T150798 = -60						; size = 4
+$T150797 = -56						; size = 4
+$T150796 = -52						; size = 12
+$T150795 = -37						; size = 1
 _curDes$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1Goal_Think@@UAE@XZ PROC				; Goal_Think::~Goal_Think
 ; _this$ = ecx
 
-; 97   : {
+; 100  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -2614,7 +2695,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR [eax], OFFSET ??_7Goal_Think@@6B@
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
 
-; 98   :   GoalEvaluators::iterator curDes = m_Evaluators.begin();
+; 101  :   GoalEvaluators::iterator curDes = m_Evaluators.begin();
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	push	ecx
@@ -2625,12 +2706,12 @@ __$EHRec$ = -12						; size = 12
 	jmp	SHORT $LN3@Goal_Think@2
 $LN2@Goal_Think@2:
 
-; 99   :   for (curDes; curDes != m_Evaluators.end(); ++curDes)
+; 102  :   for (curDes; curDes != m_Evaluators.end(); ++curDes)
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator++
 $LN3@Goal_Think@2:
-	lea	edx, DWORD PTR $T150736[ebp]
+	lea	edx, DWORD PTR $T150796[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
@@ -2643,30 +2724,30 @@ $LN3@Goal_Think@2:
 	push	ecx
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator!=
-	mov	BYTE PTR $T150735[ebp], al
+	mov	BYTE PTR $T150795[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T150736[ebp]
+	lea	ecx, DWORD PTR $T150796[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T150735[ebp]
+	movzx	edx, BYTE PTR $T150795[ebp]
 	test	edx, edx
 	je	SHORT $LN1@Goal_Think@2
 
-; 100  :   {
-; 101  :     delete *curDes;
+; 103  :   {
+; 104  :     delete *curDes;
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??D?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBEAAPAVGoal_Evaluator@@XZ ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator*
 	mov	eax, DWORD PTR [eax]
-	mov	DWORD PTR $T150738[ebp], eax
-	mov	ecx, DWORD PTR $T150738[ebp]
-	mov	DWORD PTR $T150737[ebp], ecx
-	cmp	DWORD PTR $T150737[ebp], 0
+	mov	DWORD PTR $T150798[ebp], eax
+	mov	ecx, DWORD PTR $T150798[ebp]
+	mov	DWORD PTR $T150797[ebp], ecx
+	cmp	DWORD PTR $T150797[ebp], 0
 	je	SHORT $LN6@Goal_Think@2
 	mov	esi, esp
 	push	1
-	mov	edx, DWORD PTR $T150737[ebp]
+	mov	edx, DWORD PTR $T150797[ebp]
 	mov	eax, DWORD PTR [edx]
-	mov	ecx, DWORD PTR $T150737[ebp]
+	mov	ecx, DWORD PTR $T150797[ebp]
 	mov	edx, DWORD PTR [eax]
 	call	edx
 	cmp	esi, esp
@@ -2677,12 +2758,12 @@ $LN6@Goal_Think@2:
 	mov	DWORD PTR tv145[ebp], 0
 $LN7@Goal_Think@2:
 
-; 102  :   }
+; 105  :   }
 
 	jmp	$LN2@Goal_Think@2
 $LN1@Goal_Think@2:
 
-; 103  : }
+; 106  : }
 
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	lea	ecx, DWORD PTR _curDes$[ebp]
@@ -2756,7 +2837,7 @@ __unwindfunclet$??1Goal_Think@@UAE@XZ$4:
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??1Goal_Think@@UAE@XZ$5:
-	lea	ecx, DWORD PTR $T150736[ebp]
+	lea	ecx, DWORD PTR $T150796[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??1Goal_Think@@UAE@XZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -3074,7 +3155,7 @@ _this$ = -4						; size = 4
 ?Activate@Goal_Think@@UAEXXZ PROC			; Goal_Think::Activate
 ; _this$ = ecx
 
-; 108  : {
+; 111  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -3082,7 +3163,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 109  :   if (!m_pOwner->isPossessed())
+; 112  :   if (!m_pOwner->isPossessed())
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
@@ -3091,21 +3172,21 @@ _this$ = -4						; size = 4
 	test	ecx, ecx
 	jne	SHORT $LN1@Activate
 
-; 110  :   {
-; 111  :     Arbitrate();
+; 113  :   {
+; 114  :     Arbitrate();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?Arbitrate@Goal_Think@@QAEXXZ		; Goal_Think::Arbitrate
 $LN1@Activate:
 
-; 112  :   }
-; 113  : 
-; 114  :   m_iStatus = active;
+; 115  :   }
+; 116  : 
+; 117  :   m_iStatus = active;
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [edx+12], 0
 
-; 115  : }
+; 118  : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -3142,12 +3223,12 @@ PUBLIC	?ActivateIfInactive@?$Goal@VRaven_Bot@@@@IAEXXZ	; Goal<Raven_Bot>::Activa
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\goals\goal_think.cpp
 _TEXT	SEGMENT
-_SubgoalStatus$137297 = -8				; size = 4
+_SubgoalStatus$137340 = -8				; size = 4
 _this$ = -4						; size = 4
 ?Process@Goal_Think@@UAEHXZ PROC			; Goal_Think::Process
 ; _this$ = ecx
 
-; 122  : {
+; 125  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -3156,37 +3237,37 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 123  : 	if(m_iStatus != completed)
+; 126  : 	if(m_iStatus != completed)
 
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+12], 2
 	je	SHORT $LN4@Process
 
-; 124  : 	{
-; 125  : 	  //if(m_pOwner->my_type ==1) return active ;
-; 126  : 	  ActivateIfInactive();
+; 127  : 	{
+; 128  : 	  //if(m_pOwner->my_type ==1) return active ;
+; 129  : 	  ActivateIfInactive();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ActivateIfInactive@?$Goal@VRaven_Bot@@@@IAEXXZ ; Goal<Raven_Bot>::ActivateIfInactive
 
-; 127  :   
-; 128  : 	  int SubgoalStatus = ProcessSubgoals();
+; 130  :   
+; 131  : 	  int SubgoalStatus = ProcessSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ProcessSubgoals@?$Goal_Composite@VRaven_Bot@@@@IAEHXZ ; Goal_Composite<Raven_Bot>::ProcessSubgoals
-	mov	DWORD PTR _SubgoalStatus$137297[ebp], eax
+	mov	DWORD PTR _SubgoalStatus$137340[ebp], eax
 
-; 129  : 
-; 130  : 	  if (SubgoalStatus == completed || SubgoalStatus == failed)
+; 132  : 
+; 133  : 	  if (SubgoalStatus == completed || SubgoalStatus == failed)
 
-	cmp	DWORD PTR _SubgoalStatus$137297[ebp], 2
+	cmp	DWORD PTR _SubgoalStatus$137340[ebp], 2
 	je	SHORT $LN2@Process
-	cmp	DWORD PTR _SubgoalStatus$137297[ebp], 3
+	cmp	DWORD PTR _SubgoalStatus$137340[ebp], 3
 	jne	SHORT $LN4@Process
 $LN2@Process:
 
-; 131  : 	  {
-; 132  : 		if (!m_pOwner->isPossessed())
+; 134  : 	  {
+; 135  : 		if (!m_pOwner->isPossessed())
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -3195,23 +3276,23 @@ $LN2@Process:
 	test	edx, edx
 	jne	SHORT $LN4@Process
 
-; 133  : 		{
-; 134  : 		  m_iStatus = inactive;
+; 136  : 		{
+; 137  : 		  m_iStatus = inactive;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 1
 $LN4@Process:
 
-; 135  : 		}
-; 136  : 	  }
-; 137  : 	}
-; 138  : 
-; 139  :   return m_iStatus;
+; 138  : 		}
+; 139  : 	  }
+; 140  : 	}
+; 141  : 
+; 142  :   return m_iStatus;
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [ecx+12]
 
-; 140  : }
+; 143  : }
 
 	add	esp, 8
 	cmp	ebp, esp
@@ -3221,11 +3302,6 @@ $LN4@Process:
 	ret	0
 ?Process@Goal_Think@@UAEHXZ ENDP			; Goal_Think::Process
 _TEXT	ENDS
-PUBLIC	__real@0000000000000000
-;	COMDAT __real@0000000000000000
-CONST	SEGMENT
-__real@0000000000000000 DQ 00000000000000000r	; 0
-CONST	ENDS
 xdata$x	SEGMENT
 __unwindtable$?Arbitrate@Goal_Think@@QAEXXZ DD 0ffffffffH
 	DD	FLAT:__unwindfunclet$?Arbitrate@Goal_Think@@QAEXXZ$0
@@ -3244,9 +3320,9 @@ _TEXT	SEGMENT
 tv131 = -84						; size = 4
 tv155 = -80						; size = 4
 tv72 = -76						; size = 4
-$T150784 = -72						; size = 12
-$T150783 = -57						; size = 1
-_desirabilty$137314 = -56				; size = 8
+$T150844 = -72						; size = 12
+$T150843 = -57						; size = 1
+_desirabilty$137357 = -56				; size = 8
 _curDes$ = -44						; size = 12
 _MostDesirable$ = -28					; size = 4
 _best$ = -24						; size = 8
@@ -3255,7 +3331,7 @@ __$EHRec$ = -12						; size = 12
 ?Arbitrate@Goal_Think@@QAEXXZ PROC			; Goal_Think::Arbitrate
 ; _this$ = ecx
 
-; 148  : {
+; 151  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -3279,7 +3355,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 149  : 	if(m_iStatus == completed) return;
+; 152  : 	if(m_iStatus == completed) return;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+12], 2
@@ -3287,19 +3363,19 @@ __$EHRec$ = -12						; size = 12
 	jmp	$LN6@Arbitrate
 $LN5@Arbitrate:
 
-; 150  : 	//if(m_pOwner->my_type ==1) return ;
-; 151  :   double best = 0;
+; 153  : 	//if(m_pOwner->my_type ==1) return ;
+; 154  :   double best = 0;
 
 	fldz
 	fstp	QWORD PTR _best$[ebp]
 
-; 152  :   Goal_Evaluator* MostDesirable = 0;
+; 155  :   Goal_Evaluator* MostDesirable = 0;
 
 	mov	DWORD PTR _MostDesirable$[ebp], 0
 
-; 153  : 
-; 154  :   //iterate through all the evaluators to see which produces the highest score
-; 155  :   GoalEvaluators::iterator curDes = m_Evaluators.begin();
+; 156  : 
+; 157  :   //iterate through all the evaluators to see which produces the highest score
+; 158  :   GoalEvaluators::iterator curDes = m_Evaluators.begin();
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	push	ecx
@@ -3310,12 +3386,12 @@ $LN5@Arbitrate:
 	jmp	SHORT $LN4@Arbitrate
 $LN3@Arbitrate:
 
-; 156  :   for (curDes; curDes != m_Evaluators.end(); ++curDes)
+; 159  :   for (curDes; curDes != m_Evaluators.end(); ++curDes)
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??E?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator++
 $LN4@Arbitrate:
-	lea	edx, DWORD PTR $T150784[ebp]
+	lea	edx, DWORD PTR $T150844[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
@@ -3328,16 +3404,16 @@ $LN4@Arbitrate:
 	push	ecx
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator!=
-	mov	BYTE PTR $T150783[ebp], al
+	mov	BYTE PTR $T150843[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T150784[ebp]
+	lea	ecx, DWORD PTR $T150844[ebp]
 	call	??1?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T150783[ebp]
+	movzx	edx, BYTE PTR $T150843[ebp]
 	test	edx, edx
 	je	SHORT $LN2@Arbitrate
 
-; 157  :   {
-; 158  :     double desirabilty = (*curDes)->CalculateDesirability(m_pOwner);
+; 160  :   {
+; 161  :     double desirabilty = (*curDes)->CalculateDesirability(m_pOwner);
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??D?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBEAAPAVGoal_Evaluator@@XZ ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator*
@@ -3354,24 +3430,24 @@ $LN4@Arbitrate:
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	fstp	QWORD PTR _desirabilty$137314[ebp]
+	fstp	QWORD PTR _desirabilty$137357[ebp]
 
-; 159  : 
-; 160  :     if (desirabilty >= best)
+; 162  : 
+; 163  :     if (desirabilty >= best)
 
 	fld	QWORD PTR _best$[ebp]
-	fcomp	QWORD PTR _desirabilty$137314[ebp]
+	fcomp	QWORD PTR _desirabilty$137357[ebp]
 	fnstsw	ax
 	test	ah, 65					; 00000041H
 	jp	SHORT $LN1@Arbitrate
 
-; 161  :     {
-; 162  :       best = desirabilty;
+; 164  :     {
+; 165  :       best = desirabilty;
 
-	fld	QWORD PTR _desirabilty$137314[ebp]
+	fld	QWORD PTR _desirabilty$137357[ebp]
 	fstp	QWORD PTR _best$[ebp]
 
-; 163  :       MostDesirable = *curDes;
+; 166  :       MostDesirable = *curDes;
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??D?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBEAAPAVGoal_Evaluator@@XZ ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator*
@@ -3379,16 +3455,16 @@ $LN4@Arbitrate:
 	mov	DWORD PTR _MostDesirable$[ebp], ecx
 $LN1@Arbitrate:
 
-; 164  :     }
-; 165  :   }
+; 167  :     }
+; 168  :   }
 
 	jmp	$LN3@Arbitrate
 $LN2@Arbitrate:
 
-; 166  : 
-; 167  :   //assert(MostDesirable && "<Goal_Think::Arbitrate>: no evaluator selected");
-; 168  : 
-; 169  :   MostDesirable->SetGoal(m_pOwner);
+; 169  : 
+; 170  :   //assert(MostDesirable && "<Goal_Think::Arbitrate>: no evaluator selected");
+; 171  : 
+; 172  :   MostDesirable->SetGoal(m_pOwner);
 
 	mov	esi, esp
 	mov	edx, DWORD PTR _this$[ebp]
@@ -3402,9 +3478,9 @@ $LN2@Arbitrate:
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 
-; 170  :  // AddGoal_Explore_Area();
-; 171  :   //AddGoal_GetItem(14 - m_pOwner->my_type);
-; 172  : }
+; 173  :  // AddGoal_Explore_Area();
+; 174  :   //AddGoal_GetItem(14 - m_pOwner->my_type);
+; 175  : }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _curDes$[ebp]
@@ -3450,7 +3526,7 @@ __unwindfunclet$?Arbitrate@Goal_Think@@QAEXXZ$0:
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Arbitrate@Goal_Think@@QAEXXZ$1:
-	lea	ecx, DWORD PTR $T150784[ebp]
+	lea	ecx, DWORD PTR $T150844[ebp]
 	jmp	??1?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?Arbitrate@Goal_Think@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -3473,7 +3549,7 @@ _GoalType$ = 8						; size = 4
 ?notPresent@Goal_Think@@QBE_NI@Z PROC			; Goal_Think::notPresent
 ; _this$ = ecx
 
-; 181  : {
+; 184  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -3481,7 +3557,7 @@ _GoalType$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 182  :   if (!m_SubGoals.empty())
+; 185  :   if (!m_SubGoals.empty())
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -3490,8 +3566,8 @@ _GoalType$ = 8						; size = 4
 	test	eax, eax
 	jne	SHORT $LN1@notPresent
 
-; 183  :   {
-; 184  :     return m_SubGoals.front()->GetType() != GoalType;
+; 186  :   {
+; 187  :     return m_SubGoals.front()->GetType() != GoalType;
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -3505,14 +3581,14 @@ _GoalType$ = 8						; size = 4
 	jmp	SHORT $LN2@notPresent
 $LN1@notPresent:
 
-; 185  :   }
-; 186  : 
-; 187  :   return true;
+; 188  :   }
+; 189  : 
+; 190  :   return true;
 
 	mov	al, 1
 $LN2@notPresent:
 
-; 188  : }
+; 191  : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -3538,15 +3614,15 @@ __ehfuncinfo$?AddGoal_MoveToPosition@Goal_Think@@QAEXUVector2D@@@Z DD 019930522H
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv88 = -28						; size = 4
-$T150799 = -24						; size = 4
-$T150798 = -20						; size = 4
+$T150857 = -24						; size = 4
+$T150856 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _pos$ = 8						; size = 16
 ?AddGoal_MoveToPosition@Goal_Think@@QAEXUVector2D@@@Z PROC ; Goal_Think::AddGoal_MoveToPosition
 ; _this$ = ecx
 
-; 191  : {
+; 194  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -3568,14 +3644,14 @@ _pos$ = 8						; size = 16
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 192  :   AddSubgoal( new Goal_MoveToPosition(m_pOwner, pos));
+; 195  :   AddSubgoal( new Goal_MoveToPosition(m_pOwner, pos));
 
 	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150799[ebp], eax
+	mov	DWORD PTR $T150857[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150799[ebp], 0
+	cmp	DWORD PTR $T150857[ebp], 0
 	je	SHORT $LN3@AddGoal_Mo
 	sub	esp, 16					; 00000010H
 	mov	eax, esp
@@ -3590,7 +3666,7 @@ _pos$ = 8						; size = 16
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	push	ecx
-	mov	ecx, DWORD PTR $T150799[ebp]
+	mov	ecx, DWORD PTR $T150857[ebp]
 	call	??0Goal_MoveToPosition@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_MoveToPosition::Goal_MoveToPosition
 	mov	DWORD PTR tv88[ebp], eax
 	jmp	SHORT $LN4@AddGoal_Mo
@@ -3598,10 +3674,10 @@ $LN3@AddGoal_Mo:
 	mov	DWORD PTR tv88[ebp], 0
 $LN4@AddGoal_Mo:
 	mov	edx, DWORD PTR tv88[ebp]
-	mov	DWORD PTR $T150798[ebp], edx
+	mov	DWORD PTR $T150856[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
-	mov	eax, DWORD PTR $T150798[ebp]
+	mov	eax, DWORD PTR $T150856[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx]
@@ -3611,7 +3687,7 @@ $LN4@AddGoal_Mo:
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 
-; 193  : }
+; 196  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -3626,7 +3702,7 @@ $LN4@AddGoal_Mo:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?AddGoal_MoveToPosition@Goal_Think@@QAEXUVector2D@@@Z$0:
-	mov	eax, DWORD PTR $T150799[ebp]
+	mov	eax, DWORD PTR $T150857[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -3817,19 +3893,15 @@ _this$ = -4						; size = 4
 	ret	0
 ??1Goal_MoveToPosition@@UAE@XZ ENDP			; Goal_MoveToPosition::~Goal_MoveToPosition
 _TEXT	ENDS
-PUBLIC	?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front
-PUBLIC	??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ; Goal_Explore_Area::Goal_Explore_Area
-PUBLIC	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
+PUBLIC	??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_Protect_Flag::Goal_Protect_Flag
 PUBLIC	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
-PUBLIC	?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ	; Goal_Think::AddGoal_Protect_Flag
+PUBLIC	?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z ; Goal_Think::AddGoal_Protect_Flag
 xdata$x	SEGMENT
-__unwindtable$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ DD 0ffffffffH
-	DD	FLAT:__unwindfunclet$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ$0
-	DD	0ffffffffH
-	DD	FLAT:__unwindfunclet$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ$1
-__ehfuncinfo$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ DD 019930522H
-	DD	02H
-	DD	FLAT:__unwindtable$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ
+__unwindtable$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z$0
+__ehfuncinfo$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z DD 019930522H
+	DD	01H
+	DD	FLAT:__unwindtable$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z
 	DD	2 DUP(00H)
 	DD	2 DUP(00H)
 	DD	00H
@@ -3838,34 +3910,26 @@ __ehfuncinfo$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ DD 019930522H
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\goals\goal_think.cpp
 xdata$x	ENDS
 _TEXT	SEGMENT
-tv189 = -44						; size = 4
-tv141 = -40						; size = 4
-$T150823 = -36						; size = 4
-$T150822 = -32						; size = 4
-$T150819 = -28						; size = 4
-$T150818 = -24						; size = 4
-_ar$ = -20						; size = 4
+tv130 = -28						; size = 4
+$T150877 = -24						; size = 4
+$T150876 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
-?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ PROC		; Goal_Think::AddGoal_Protect_Flag
+_StandPos$ = 8						; size = 16
+?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z PROC ; Goal_Think::AddGoal_Protect_Flag
 ; _this$ = ecx
 
-; 196  : {
+; 199  : {
 
 	push	ebp
 	mov	ebp, esp
 	push	-1
-	push	__ehhandler$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ
+	push	__ehhandler$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z
 	mov	eax, DWORD PTR fs:0
 	push	eax
-	sub	esp, 32					; 00000020H
+	sub	esp, 16					; 00000010H
 	push	esi
-	push	edi
 	mov	eax, -858993460				; ccccccccH
-	mov	DWORD PTR [ebp-44], eax
-	mov	DWORD PTR [ebp-40], eax
-	mov	DWORD PTR [ebp-36], eax
-	mov	DWORD PTR [ebp-32], eax
 	mov	DWORD PTR [ebp-28], eax
 	mov	DWORD PTR [ebp-24], eax
 	mov	DWORD PTR [ebp-20], eax
@@ -3877,124 +3941,57 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 197  : 	int ar = 4 + m_pOwner->my_type;
+; 200  : 	//int ar = 4 + m_pOwner->my_type;
+; 201  : 	if(notPresent(goal_protect_flag))
 
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [eax+8]
-	mov	edx, DWORD PTR [ecx+204]
-	add	edx, 4
-	mov	DWORD PTR _ar$[ebp], edx
-
-; 198  : 	if(notPresent(goal_explore_area))
-
-	push	20					; 00000014H
+	push	21					; 00000015H
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?notPresent@Goal_Think@@QBE_NI@Z	; Goal_Think::notPresent
 	movzx	eax, al
 	test	eax, eax
-	je	$LN3@AddGoal_Pr
+	je	$LN2@AddGoal_Pr
 
-; 199  : 	{
-; 200  : 		RemoveAllSubgoals();
+; 202  : 	{
+; 203  : 		RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 201  : 		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
+; 204  : 		//AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
+; 205  : 		AddSubgoal(new Goal_Protect_Flag(m_pOwner,StandPos));
 
-	push	88					; 00000058H
+	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150819[ebp], eax
+	mov	DWORD PTR $T150877[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150819[ebp], 0
-	je	SHORT $LN6@AddGoal_Pr
-	mov	ecx, DWORD PTR _ar$[ebp]
-	push	ecx
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 52					; 00000034H
-	call	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
-	sub	esp, 32					; 00000020H
-	mov	ecx, 8
-	mov	esi, eax
-	mov	edi, esp
-	rep movsd
-	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [edx+8]
-	push	eax
-	mov	ecx, DWORD PTR $T150819[ebp]
-	call	??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ; Goal_Explore_Area::Goal_Explore_Area
-	mov	DWORD PTR tv141[ebp], eax
-	jmp	SHORT $LN7@AddGoal_Pr
-$LN6@AddGoal_Pr:
-	mov	DWORD PTR tv141[ebp], 0
-$LN7@AddGoal_Pr:
-	mov	ecx, DWORD PTR tv141[ebp]
-	mov	DWORD PTR $T150818[ebp], ecx
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	esi, esp
-	mov	edx, DWORD PTR $T150818[ebp]
-	push	edx
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [edx+20]
-	call	eax
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-	jmp	$LN4@AddGoal_Pr
-$LN3@AddGoal_Pr:
-
-; 202  : 	}else if( ( (Goal_Explore_Area*)m_SubGoals.front())->areaId != ar )
-
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 16					; 00000010H
-	call	?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front
-	mov	ecx, DWORD PTR [eax]
-	mov	edx, DWORD PTR [ecx+80]
-	cmp	edx, DWORD PTR _ar$[ebp]
-	je	$LN4@AddGoal_Pr
-
-; 203  : 	{
-; 204  : 		RemoveAllSubgoals();
-
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
-
-; 205  : 		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
-
-	push	88					; 00000058H
-	call	??2@YAPAXI@Z				; operator new
-	add	esp, 4
-	mov	DWORD PTR $T150823[ebp], eax
-	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	cmp	DWORD PTR $T150823[ebp], 0
-	je	SHORT $LN8@AddGoal_Pr
-	mov	eax, DWORD PTR _ar$[ebp]
-	push	eax
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 52					; 00000034H
-	call	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
-	sub	esp, 32					; 00000020H
-	mov	ecx, 8
-	mov	esi, eax
-	mov	edi, esp
-	rep movsd
+	cmp	DWORD PTR $T150877[ebp], 0
+	je	SHORT $LN4@AddGoal_Pr
+	sub	esp, 16					; 00000010H
+	mov	ecx, esp
+	mov	edx, DWORD PTR _StandPos$[ebp]
+	mov	DWORD PTR [ecx], edx
+	mov	eax, DWORD PTR _StandPos$[ebp+4]
+	mov	DWORD PTR [ecx+4], eax
+	mov	edx, DWORD PTR _StandPos$[ebp+8]
+	mov	DWORD PTR [ecx+8], edx
+	mov	eax, DWORD PTR _StandPos$[ebp+12]
+	mov	DWORD PTR [ecx+12], eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	ecx, DWORD PTR $T150823[ebp]
-	call	??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ; Goal_Explore_Area::Goal_Explore_Area
-	mov	DWORD PTR tv189[ebp], eax
-	jmp	SHORT $LN9@AddGoal_Pr
-$LN8@AddGoal_Pr:
-	mov	DWORD PTR tv189[ebp], 0
-$LN9@AddGoal_Pr:
-	mov	eax, DWORD PTR tv189[ebp]
-	mov	DWORD PTR $T150822[ebp], eax
+	mov	ecx, DWORD PTR $T150877[ebp]
+	call	??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_Protect_Flag::Goal_Protect_Flag
+	mov	DWORD PTR tv130[ebp], eax
+	jmp	SHORT $LN5@AddGoal_Pr
+$LN4@AddGoal_Pr:
+	mov	DWORD PTR tv130[ebp], 0
+$LN5@AddGoal_Pr:
+	mov	eax, DWORD PTR tv130[ebp]
+	mov	DWORD PTR $T150876[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
-	mov	ecx, DWORD PTR $T150822[ebp]
+	mov	ecx, DWORD PTR $T150876[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx]
@@ -4003,54 +4000,839 @@ $LN9@AddGoal_Pr:
 	call	edx
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-$LN4@AddGoal_Pr:
+$LN2@AddGoal_Pr:
 
-; 206  : 	}
-; 207  : }
+; 206  : 	}/*else if( ( (Goal_Explore_Area*)m_SubGoals.front())->areaId != ar )
+; 207  : 	{
+; 208  : 		RemoveAllSubgoals();
+; 209  : 		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
+; 210  : 	}*/
+; 211  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
 	pop	ecx
-	pop	edi
 	pop	esi
-	add	esp, 44					; 0000002cH
+	add	esp, 28					; 0000001cH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	16					; 00000010H
+_TEXT	ENDS
+text$x	SEGMENT
+__unwindfunclet$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z$0:
+	mov	eax, DWORD PTR $T150877[ebp]
+	push	eax
+	call	??3@YAXPAX@Z				; operator delete
+	pop	ecx
+	ret	0
+__ehhandler$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z:
+	mov	edx, DWORD PTR [esp+8]
+	lea	eax, DWORD PTR [edx+12]
+	mov	ecx, DWORD PTR [edx-24]
+	xor	ecx, eax
+	call	@__security_check_cookie@4
+	mov	eax, OFFSET __ehfuncinfo$?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z
+	jmp	___CxxFrameHandler3
+text$x	ENDS
+?AddGoal_Protect_Flag@Goal_Think@@QAEXUVector2D@@@Z ENDP ; Goal_Think::AddGoal_Protect_Flag
+PUBLIC	??_7Goal_Protect_Flag@@6B@			; Goal_Protect_Flag::`vftable'
+PUBLIC	??_R4Goal_Protect_Flag@@6B@			; Goal_Protect_Flag::`RTTI Complete Object Locator'
+PUBLIC	??_R0?AVGoal_Protect_Flag@@@8			; Goal_Protect_Flag `RTTI Type Descriptor'
+PUBLIC	??_R3Goal_Protect_Flag@@8			; Goal_Protect_Flag::`RTTI Class Hierarchy Descriptor'
+PUBLIC	??_R2Goal_Protect_Flag@@8			; Goal_Protect_Flag::`RTTI Base Class Array'
+PUBLIC	??_R1A@?0A@EA@Goal_Protect_Flag@@8		; Goal_Protect_Flag::`RTTI Base Class Descriptor at (0,-1,0,64)'
+PUBLIC	?Terminate@Goal_Protect_Flag@@UAEXXZ		; Goal_Protect_Flag::Terminate
+PUBLIC	?Render@?$Goal_Composite@VRaven_Bot@@@@UAEXXZ	; Goal_Composite<Raven_Bot>::Render
+EXTRN	??_EGoal_Protect_Flag@@UAEPAXI@Z:PROC		; Goal_Protect_Flag::`vector deleting destructor'
+EXTRN	?Activate@Goal_Protect_Flag@@UAEXXZ:PROC	; Goal_Protect_Flag::Activate
+EXTRN	?Process@Goal_Protect_Flag@@UAEHXZ:PROC		; Goal_Protect_Flag::Process
+EXTRN	?HandleMessage@Goal_Protect_Flag@@UAE_NABUTelegram@@@Z:PROC ; Goal_Protect_Flag::HandleMessage
+;	COMDAT ??_R1A@?0A@EA@Goal_Protect_Flag@@8
+; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\goals\goal_protect_flag.h
+rdata$r	SEGMENT
+??_R1A@?0A@EA@Goal_Protect_Flag@@8 DD FLAT:??_R0?AVGoal_Protect_Flag@@@8 ; Goal_Protect_Flag::`RTTI Base Class Descriptor at (0,-1,0,64)'
+	DD	02H
+	DD	00H
+	DD	0ffffffffH
+	DD	00H
+	DD	040H
+	DD	FLAT:??_R3Goal_Protect_Flag@@8
+rdata$r	ENDS
+;	COMDAT ??_R2Goal_Protect_Flag@@8
+rdata$r	SEGMENT
+??_R2Goal_Protect_Flag@@8 DD FLAT:??_R1A@?0A@EA@Goal_Protect_Flag@@8 ; Goal_Protect_Flag::`RTTI Base Class Array'
+	DD	FLAT:??_R1A@?0A@EA@?$Goal_Composite@VRaven_Bot@@@@8
+	DD	FLAT:??_R1A@?0A@EA@?$Goal@VRaven_Bot@@@@8
+rdata$r	ENDS
+;	COMDAT ??_R3Goal_Protect_Flag@@8
+rdata$r	SEGMENT
+??_R3Goal_Protect_Flag@@8 DD 00H			; Goal_Protect_Flag::`RTTI Class Hierarchy Descriptor'
+	DD	00H
+	DD	03H
+	DD	FLAT:??_R2Goal_Protect_Flag@@8
+rdata$r	ENDS
+;	COMDAT ??_R0?AVGoal_Protect_Flag@@@8
+_DATA	SEGMENT
+??_R0?AVGoal_Protect_Flag@@@8 DD FLAT:??_7type_info@@6B@ ; Goal_Protect_Flag `RTTI Type Descriptor'
+	DD	00H
+	DB	'.?AVGoal_Protect_Flag@@', 00H
+_DATA	ENDS
+;	COMDAT ??_R4Goal_Protect_Flag@@6B@
+rdata$r	SEGMENT
+??_R4Goal_Protect_Flag@@6B@ DD 00H			; Goal_Protect_Flag::`RTTI Complete Object Locator'
+	DD	00H
+	DD	00H
+	DD	FLAT:??_R0?AVGoal_Protect_Flag@@@8
+	DD	FLAT:??_R3Goal_Protect_Flag@@8
+rdata$r	ENDS
+;	COMDAT ??_7Goal_Protect_Flag@@6B@
+CONST	SEGMENT
+??_7Goal_Protect_Flag@@6B@ DD FLAT:??_R4Goal_Protect_Flag@@6B@ ; Goal_Protect_Flag::`vftable'
+	DD	FLAT:??_EGoal_Protect_Flag@@UAEPAXI@Z
+	DD	FLAT:?Activate@Goal_Protect_Flag@@UAEXXZ
+	DD	FLAT:?Process@Goal_Protect_Flag@@UAEHXZ
+	DD	FLAT:?Terminate@Goal_Protect_Flag@@UAEXXZ
+	DD	FLAT:?HandleMessage@Goal_Protect_Flag@@UAE_NABUTelegram@@@Z
+	DD	FLAT:?AddSubgoal@?$Goal_Composite@VRaven_Bot@@@@UAEXPAV?$Goal@VRaven_Bot@@@@@Z
+	DD	FLAT:?RenderAtPos@?$Goal_Composite@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z
+	DD	FLAT:?Render@?$Goal_Composite@VRaven_Bot@@@@UAEXXZ
+CONST	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__unwindtable$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z$0
+__ehfuncinfo$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z DD 019930522H
+	DD	01H
+	DD	FLAT:__unwindtable$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	DD	00H
+	DD	01H
+; Function compile flags: /Odtp /RTCsu
+xdata$x	ENDS
+;	COMDAT ??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z
+_TEXT	SEGMENT
+_this$ = -16						; size = 4
+__$EHRec$ = -12						; size = 12
+_pOwner$ = 8						; size = 4
+_pos$ = 12						; size = 16
+??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z PROC ; Goal_Protect_Flag::Goal_Protect_Flag, COMDAT
+; _this$ = ecx
+
+; 30   :   {
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z
+	mov	eax, DWORD PTR fs:0
+	push	eax
+	push	ecx
+	mov	DWORD PTR [ebp-16], -858993460		; ccccccccH
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	push	eax
+	lea	eax, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, eax
+	mov	DWORD PTR _this$[ebp], ecx
+	push	21					; 00000015H
+	mov	eax, DWORD PTR _pOwner$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	??0?$Goal_Composite@VRaven_Bot@@@@QAE@PAVRaven_Bot@@H@Z ; Goal_Composite<Raven_Bot>::Goal_Composite<Raven_Bot>
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [ecx], OFFSET ??_7Goal_Protect_Flag@@6B@
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 32					; 00000020H
+	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
+
+; 31   : 	  StandPos = pos;
+
+	mov	edx, DWORD PTR _this$[ebp]
+	add	edx, 32					; 00000020H
+	mov	eax, DWORD PTR _pos$[ebp]
+	mov	DWORD PTR [edx], eax
+	mov	ecx, DWORD PTR _pos$[ebp+4]
+	mov	DWORD PTR [edx+4], ecx
+	mov	eax, DWORD PTR _pos$[ebp+8]
+	mov	DWORD PTR [edx+8], eax
+	mov	ecx, DWORD PTR _pos$[ebp+12]
+	mov	DWORD PTR [edx+12], ecx
+
+; 32   : 
+; 33   :   }
+
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, ecx
+	pop	ecx
+	add	esp, 16					; 00000010H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	20					; 00000014H
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z$0:
+	mov	ecx, DWORD PTR _this$[ebp]
+	jmp	??1?$Goal_Composite@VRaven_Bot@@@@UAE@XZ ; Goal_Composite<Raven_Bot>::~Goal_Composite<Raven_Bot>
+__ehhandler$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z:
+	mov	edx, DWORD PTR [esp+8]
+	lea	eax, DWORD PTR [edx+12]
+	mov	ecx, DWORD PTR [edx-8]
+	xor	ecx, eax
+	call	@__security_check_cookie@4
+	mov	eax, OFFSET __ehfuncinfo$??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z
+	jmp	___CxxFrameHandler3
+text$x	ENDS
+??0Goal_Protect_Flag@@QAE@PAVRaven_Bot@@UVector2D@@@Z ENDP ; Goal_Protect_Flag::Goal_Protect_Flag
+; Function compile flags: /Odtp /RTCsu
+;	COMDAT ?Terminate@Goal_Protect_Flag@@UAEXXZ
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+?Terminate@Goal_Protect_Flag@@UAEXXZ PROC		; Goal_Protect_Flag::Terminate, COMDAT
+; _this$ = ecx
+
+; 39   :   void Terminate(){m_iStatus = completed;}
+
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax+12], 2
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?Terminate@Goal_Protect_Flag@@UAEXXZ ENDP		; Goal_Protect_Flag::Terminate
+_TEXT	ENDS
+PUBLIC	??1Goal_Protect_Flag@@UAE@XZ			; Goal_Protect_Flag::~Goal_Protect_Flag
+; Function compile flags: /Odtp /RTCsu
+;	COMDAT ??_GGoal_Protect_Flag@@UAEPAXI@Z
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+___flags$ = 8						; size = 4
+??_GGoal_Protect_Flag@@UAEPAXI@Z PROC			; Goal_Protect_Flag::`scalar deleting destructor', COMDAT
+; _this$ = ecx
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	??1Goal_Protect_Flag@@UAE@XZ
+	mov	eax, DWORD PTR ___flags$[ebp]
+	and	eax, 1
+	je	SHORT $LN1@scalar@8
+	mov	ecx, DWORD PTR _this$[ebp]
+	push	ecx
+	call	??3@YAXPAX@Z				; operator delete
+	add	esp, 4
+$LN1@scalar@8:
+	mov	eax, DWORD PTR _this$[ebp]
+	add	esp, 4
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+??_GGoal_Protect_Flag@@UAEPAXI@Z ENDP			; Goal_Protect_Flag::`scalar deleting destructor'
+; Function compile flags: /Odtp /RTCsu
+_TEXT	ENDS
+;	COMDAT ??1Goal_Protect_Flag@@UAE@XZ
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+??1Goal_Protect_Flag@@UAE@XZ PROC			; Goal_Protect_Flag::~Goal_Protect_Flag, COMDAT
+; _this$ = ecx
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	??1?$Goal_Composite@VRaven_Bot@@@@UAE@XZ ; Goal_Composite<Raven_Bot>::~Goal_Composite<Raven_Bot>
+	add	esp, 4
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
 	pop	ebp
 	ret	0
+??1Goal_Protect_Flag@@UAE@XZ ENDP			; Goal_Protect_Flag::~Goal_Protect_Flag
+_TEXT	ENDS
+PUBLIC	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
+PUBLIC	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::~_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
+PUBLIC	?ID@BaseGameEntity@@QBEHXZ			; BaseGameEntity::ID
+PUBLIC	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
+PUBLIC	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
+PUBLIC	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
+PUBLIC	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
+PUBLIC	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::~_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
+PUBLIC	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
+PUBLIC	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
+PUBLIC	??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >
+PUBLIC	?GetAllBots@Raven_Game@@QBEABV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ ; Raven_Game::GetAllBots
+PUBLIC	?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ	; Raven_Bot::GetWorld
+PUBLIC	??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ; Goal_Explore_Area::Goal_Explore_Area
+PUBLIC	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
+PUBLIC	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
+PUBLIC	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
+PUBLIC	?RandInt@@YAHHH@Z				; RandInt
+PUBLIC	?size@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QBEIXZ ; std::vector<AreaMap,std::allocator<AreaMap> >::size
+PUBLIC	?AddGoal_Explore_Area@Goal_Think@@QAEXXZ	; Goal_Think::AddGoal_Explore_Area
+EXTRN	?DispatchMsg@MessageDispatcher@@QAEXNHHHPAX@Z:PROC ; MessageDispatcher::DispatchMsg
+EXTRN	?Instance@MessageDispatcher@@SAPAV1@XZ:PROC	; MessageDispatcher::Instance
+xdata$x	SEGMENT
+__ehfuncinfo$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ DD 019930522H
+	DD	06H
+	DD	FLAT:__unwindtable$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	DD	00H
+	DD	01H
+__unwindtable$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$0
+	DD	0ffffffffH
+	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$1
+	DD	01H
+	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$2
+	DD	02H
+	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$3
+	DD	01H
+	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$3
+	DD	04H
+	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$4
+; Function compile flags: /Odtp /RTCsu
+; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\goals\goal_think.cpp
+xdata$x	ENDS
+_TEXT	SEGMENT
+tv243 = -132						; size = 4
+tv169 = -128						; size = 4
+tv240 = -124						; size = 4
+tv163 = -120						; size = 4
+tv153 = -116						; size = 4
+$T150908 = -112						; size = 12
+$T150907 = -97						; size = 1
+$T150906 = -96						; size = 12
+$T150903 = -84						; size = 4
+$T150902 = -80						; size = 4
+_curBot$137523 = -72					; size = 12
+_bots$137404 = -52					; size = 16
+_world$137399 = -32					; size = 4
+_i$137390 = -28						; size = 4
+_id$137386 = -24					; size = 4
+_teste$137385 = -17					; size = 1
+_this$ = -16						; size = 4
+__$EHRec$ = -12						; size = 12
+?AddGoal_Explore_Area@Goal_Think@@QAEXXZ PROC		; Goal_Think::AddGoal_Explore_Area
+; _this$ = ecx
+
+; 214  : {
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ
+	mov	eax, DWORD PTR fs:0
+	push	eax
+	sub	esp, 120				; 00000078H
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-132]
+	mov	ecx, 30					; 0000001eH
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	push	eax
+	lea	eax, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, eax
+	mov	DWORD PTR _this$[ebp], ecx
+
+; 215  :   if (notPresent(goal_explore_area))
+
+	push	20					; 00000014H
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	?notPresent@Goal_Think@@QBE_NI@Z	; Goal_Think::notPresent
+	movzx	eax, al
+	test	eax, eax
+	je	$LN12@AddGoal_Ex
+
+; 216  :   {
+; 217  : 	  bool teste = true;
+
+	mov	BYTE PTR _teste$137385[ebp], 1
+
+; 218  : 	  int id = 0;
+
+	mov	DWORD PTR _id$137386[ebp], 0
+$LN11@AddGoal_Ex:
+
+; 219  : 
+; 220  : 	  do{
+; 221  : 		  teste = true;
+
+	mov	BYTE PTR _teste$137385[ebp], 1
+
+; 222  : 
+; 223  : 		   id = RandInt(0,m_Areas.size()-1);
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 52					; 00000034H
+	call	?size@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QBEIXZ ; std::vector<AreaMap,std::allocator<AreaMap> >::size
+	sub	eax, 1
+	push	eax
+	push	0
+	call	?RandInt@@YAHHH@Z			; RandInt
+	add	esp, 8
+	mov	DWORD PTR _id$137386[ebp], eax
+
+; 224  : 	  
+; 225  : 		  for(int i =0;i<m_AreasExploring.size();i++)
+
+	mov	DWORD PTR _i$137390[ebp], 0
+	jmp	SHORT $LN8@AddGoal_Ex
+$LN7@AddGoal_Ex:
+	mov	ecx, DWORD PTR _i$137390[ebp]
+	add	ecx, 1
+	mov	DWORD PTR _i$137390[ebp], ecx
+$LN8@AddGoal_Ex:
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 72					; 00000048H
+	call	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
+	cmp	DWORD PTR _i$137390[ebp], eax
+	jae	SHORT $LN6@AddGoal_Ex
+
+; 226  : 		  {
+; 227  : 			  if(m_AreasExploring[i] == id)
+
+	mov	edx, DWORD PTR _i$137390[ebp]
+	push	edx
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 72					; 00000048H
+	call	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
+	mov	eax, DWORD PTR [eax]
+	cmp	eax, DWORD PTR _id$137386[ebp]
+	jne	SHORT $LN5@AddGoal_Ex
+
+; 228  : 			  {
+; 229  : 				  teste = false;
+
+	mov	BYTE PTR _teste$137385[ebp], 0
+
+; 230  : 				  break;
+
+	jmp	SHORT $LN6@AddGoal_Ex
+$LN5@AddGoal_Ex:
+
+; 231  : 			  }
+; 232  : 		  }
+
+	jmp	SHORT $LN7@AddGoal_Ex
+$LN6@AddGoal_Ex:
+
+; 233  : 	  }while(!teste);
+
+	movzx	ecx, BYTE PTR _teste$137385[ebp]
+	test	ecx, ecx
+	je	SHORT $LN11@AddGoal_Ex
+
+; 234  : 
+; 235  :     RemoveAllSubgoals();
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
+
+; 236  : 
+; 237  : 	AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[id]));
+
+	push	88					; 00000058H
+	call	??2@YAPAXI@Z				; operator new
+	add	esp, 4
+	mov	DWORD PTR $T150903[ebp], eax
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	cmp	DWORD PTR $T150903[ebp], 0
+	je	SHORT $LN15@AddGoal_Ex
+	mov	edx, DWORD PTR _id$137386[ebp]
+	push	edx
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 52					; 00000034H
+	call	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
+	sub	esp, 32					; 00000020H
+	mov	ecx, 8
+	mov	esi, eax
+	mov	edi, esp
+	rep movsd
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+8]
+	push	ecx
+	mov	ecx, DWORD PTR $T150903[ebp]
+	call	??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ; Goal_Explore_Area::Goal_Explore_Area
+	mov	DWORD PTR tv153[ebp], eax
+	jmp	SHORT $LN16@AddGoal_Ex
+$LN15@AddGoal_Ex:
+	mov	DWORD PTR tv153[ebp], 0
+$LN16@AddGoal_Ex:
+	mov	edx, DWORD PTR tv153[ebp]
+	mov	DWORD PTR $T150902[ebp], edx
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	mov	esi, esp
+	mov	eax, DWORD PTR $T150902[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [edx+20]
+	call	eax
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+
+; 238  : 
+; 239  : 		  Raven_Game * world = m_pOwner->GetWorld();
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+8]
+	call	?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ ; Raven_Bot::GetWorld
+	mov	DWORD PTR _world$137399[ebp], eax
+
+; 240  : 
+; 241  : 		  std::list<Raven_Bot*> bots = world->GetAllBots();
+
+	mov	ecx, DWORD PTR _world$137399[ebp]
+	call	?GetAllBots@Raven_Game@@QBEABV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ ; Raven_Game::GetAllBots
+	push	eax
+	lea	ecx, DWORD PTR _bots$137404[ebp]
+	call	??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >
+	mov	DWORD PTR __$EHRec$[ebp+8], 1
+
+; 242  : 		  std::list<Raven_Bot*>::const_iterator curBot = bots.begin();
+
+	lea	edx, DWORD PTR $T150906[ebp]
+	push	edx
+	lea	ecx, DWORD PTR _bots$137404[ebp]
+	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
+	mov	DWORD PTR tv163[ebp], eax
+	mov	eax, DWORD PTR tv163[ebp]
+	mov	DWORD PTR tv240[ebp], eax
+	mov	BYTE PTR __$EHRec$[ebp+8], 2
+	mov	ecx, DWORD PTR tv240[ebp]
+	push	ecx
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
+	mov	BYTE PTR __$EHRec$[ebp+8], 4
+	lea	ecx, DWORD PTR $T150906[ebp]
+	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+	jmp	SHORT $LN4@AddGoal_Ex
+$LN3@AddGoal_Ex:
+
+; 243  : 		  for (curBot; curBot != bots.end(); ++curBot)
+
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
+$LN4@AddGoal_Ex:
+	lea	edx, DWORD PTR $T150908[ebp]
+	push	edx
+	lea	ecx, DWORD PTR _bots$137404[ebp]
+	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
+	mov	DWORD PTR tv169[ebp], eax
+	mov	eax, DWORD PTR tv169[ebp]
+	mov	DWORD PTR tv243[ebp], eax
+	mov	BYTE PTR __$EHRec$[ebp+8], 5
+	mov	ecx, DWORD PTR tv243[ebp]
+	push	ecx
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
+	mov	BYTE PTR $T150907[ebp], al
+	mov	BYTE PTR __$EHRec$[ebp+8], 4
+	lea	ecx, DWORD PTR $T150908[ebp]
+	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+	movzx	edx, BYTE PTR $T150907[ebp]
+	test	edx, edx
+	je	SHORT $LN2@AddGoal_Ex
+
+; 244  : 		  {
+; 245  : 			  if((*curBot)->my_type == m_pOwner->my_type)
+
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
+	mov	eax, DWORD PTR [eax]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+8]
+	mov	eax, DWORD PTR [eax+204]
+	cmp	eax, DWORD PTR [edx+204]
+	jne	SHORT $LN1@AddGoal_Ex
+
+; 246  : 			  {
+; 247  : 				  Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+; 248  : 								  m_pOwner->ID(),
+; 249  : 								  (* curBot)->ID(),
+; 250  : 								  Msg_Exploring,
+; 251  : 								  &m_Areas[id].id);
+
+	mov	ecx, DWORD PTR _id$137386[ebp]
+	push	ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 52					; 00000034H
+	call	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
+	add	eax, 24					; 00000018H
+	push	eax
+	push	11					; 0000000bH
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
+	mov	ecx, DWORD PTR [eax]
+	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
+	push	eax
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [edx+8]
+	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
+	push	eax
+	sub	esp, 8
+	fld	QWORD PTR _SEND_MSG_IMMEDIATELY
+	fstp	QWORD PTR [esp]
+	call	?Instance@MessageDispatcher@@SAPAV1@XZ	; MessageDispatcher::Instance
+	mov	ecx, eax
+	call	?DispatchMsg@MessageDispatcher@@QAEXNHHHPAX@Z ; MessageDispatcher::DispatchMsg
+$LN1@AddGoal_Ex:
+
+; 252  : 			  }
+; 253  : 		  }
+
+	jmp	$LN3@AddGoal_Ex
+$LN2@AddGoal_Ex:
+
+; 254  : 
+; 255  :   }
+
+	mov	BYTE PTR __$EHRec$[ebp+8], 1
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR _bots$137404[ebp]
+	call	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
+$LN12@AddGoal_Ex:
+
+; 256  : }
+
+	push	edx
+	mov	ecx, ebp
+	push	eax
+	lea	edx, DWORD PTR $LN26@AddGoal_Ex
+	call	@_RTC_CheckStackVars@8
+	pop	eax
+	pop	edx
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, ecx
+	pop	ecx
+	pop	edi
+	pop	esi
+	add	esp, 132				; 00000084H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+$LN26@AddGoal_Ex:
+	DD	2
+	DD	$LN25@AddGoal_Ex
+$LN25@AddGoal_Ex:
+	DD	-52					; ffffffccH
+	DD	16					; 00000010H
+	DD	$LN22@AddGoal_Ex
+	DD	-72					; ffffffb8H
+	DD	12					; 0000000cH
+	DD	$LN23@AddGoal_Ex
+$LN23@AddGoal_Ex:
+	DB	99					; 00000063H
+	DB	117					; 00000075H
+	DB	114					; 00000072H
+	DB	66					; 00000042H
+	DB	111					; 0000006fH
+	DB	116					; 00000074H
+	DB	0
+$LN22@AddGoal_Ex:
+	DB	98					; 00000062H
+	DB	111					; 0000006fH
+	DB	116					; 00000074H
+	DB	115					; 00000073H
+	DB	0
 _TEXT	ENDS
 text$x	SEGMENT
-__unwindfunclet$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ$0:
-	mov	eax, DWORD PTR $T150819[ebp]
+__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$0:
+	mov	eax, DWORD PTR $T150903[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
-__unwindfunclet$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ$1:
-	mov	eax, DWORD PTR $T150823[ebp]
-	push	eax
-	call	??3@YAXPAX@Z				; operator delete
-	pop	ecx
-	ret	0
-__ehhandler$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ:
+__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$1:
+	lea	ecx, DWORD PTR _bots$137404[ebp]
+	jmp	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
+__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$2:
+	lea	ecx, DWORD PTR $T150906[ebp]
+	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$3:
+	lea	ecx, DWORD PTR _curBot$137523[ebp]
+	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$4:
+	lea	ecx, DWORD PTR $T150908[ebp]
+	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
+__ehhandler$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
 	lea	eax, DWORD PTR [edx+12]
-	mov	ecx, DWORD PTR [edx-44]
+	mov	ecx, DWORD PTR [edx-132]
 	xor	ecx, eax
 	call	@__security_check_cookie@4
-	mov	eax, OFFSET __ehfuncinfo$?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ
+	mov	eax, OFFSET __ehfuncinfo$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ
 	jmp	___CxxFrameHandler3
 text$x	ENDS
-?AddGoal_Protect_Flag@Goal_Think@@QAEXXZ ENDP		; Goal_Think::AddGoal_Protect_Flag
-PUBLIC	??0Vector2D@@QAE@XZ				; Vector2D::Vector2D
+?AddGoal_Explore_Area@Goal_Think@@QAEXXZ ENDP		; Goal_Think::AddGoal_Explore_Area
+PUBLIC	??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@ ; `string'
+PUBLIC	??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@ ; `string'
+PUBLIC	??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@ ; `string'
+EXTRN	_rand:PROC
+EXTRN	__wassert:PROC
+;	COMDAT ??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@
+; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\misc\utils.h
+CONST	SEGMENT
+??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@ DB 'y'
+	DB	00H, '>', 00H, '=', 00H, 'x', 00H, ' ', 00H, '&', 00H, '&', 00H
+	DB	' ', 00H, '"', 00H, '<', 00H, 'R', 00H, 'a', 00H, 'n', 00H, 'd'
+	DB	00H, 'I', 00H, 'n', 00H, 't', 00H, '>', 00H, ':', 00H, ' ', 00H
+	DB	'y', 00H, ' ', 00H, 'i', 00H, 's', 00H, ' ', 00H, 'l', 00H, 'e'
+	DB	00H, 's', 00H, 's', 00H, ' ', 00H, 't', 00H, 'h', 00H, 'a', 00H
+	DB	'n', 00H, ' ', 00H, 'x', 00H, '"', 00H, 00H, 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@
+CONST	SEGMENT
+??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@ DB 'C'
+	DB	00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H, 'r', 00H
+	DB	's', 00H, '\', 00H, 'L', 00H, 'u', 00H, 'c', 00H, 'a', 00H, 's'
+	DB	00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H, 'k', 00H, 't', 00H
+	DB	'o', 00H, 'p', 00H, '\', 00H, 'j', 00H, 'o', 00H, 'g', 00H, 'o'
+	DB	00H, 's', 00H, ' ', 00H, '-', 00H, ' ', 00H, 'g', 00H, 'a', 00H
+	DB	'm', 00H, 'e', 00H, ' ', 00H, 'a', 00H, 'i', 00H, ' ', 00H, 'b'
+	DB	00H, 'y', 00H, ' ', 00H, 'e', 00H, 'x', 00H, 'a', 00H, 'm', 00H
+	DB	'p', 00H, 'l', 00H, 'e', 00H, '\', 00H, 'B', 00H, 'l', 00H, 'u'
+	DB	00H, 'c', 00H, 'k', 00H, 'l', 00H, 'a', 00H, 'n', 00H, 'd', 00H
+	DB	'_', 00H, 'S', 00H, 'o', 00H, 'u', 00H, 'r', 00H, 'c', 00H, 'e'
+	DB	00H, 'C', 00H, 'o', 00H, 'd', 00H, 'e', 00H, ' ', 00H, '-', 00H
+	DB	' ', 00H, 'n', 00H, 'e', 00H, 'w', 00H, ' ', 00H, 'v', 00H, 'e'
+	DB	00H, 'r', 00H, 's', 00H, 'i', 00H, 'o', 00H, 'n', 00H, '\', 00H
+	DB	'V', 00H, 'S', 00H, '2', 00H, '0', 00H, '1', 00H, '0', 00H, '\'
+	DB	00H, 'C', 00H, 'o', 00H, 'm', 00H, 'm', 00H, 'o', 00H, 'n', 00H
+	DB	'\', 00H, 'm', 00H, 'i', 00H, 's', 00H, 'c', 00H, '/', 00H, 'u'
+	DB	00H, 't', 00H, 'i', 00H, 'l', 00H, 's', 00H, '.', 00H, 'h', 00H
+	DB	00H, 00H					; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@
+CONST	SEGMENT
+??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@ DB '<Rand'
+	DB	'Int>: y is less than x', 00H		; `string'
+; Function compile flags: /Odtp /RTCsu
+CONST	ENDS
+;	COMDAT ?RandInt@@YAHHH@Z
+_TEXT	SEGMENT
+_x$ = 8							; size = 4
+_y$ = 12						; size = 4
+?RandInt@@YAHHH@Z PROC					; RandInt, COMDAT
+
+; 85   : {
+
+	push	ebp
+	mov	ebp, esp
+
+; 86   :   assert(y>=x && "<RandInt>: y is less than x");
+
+	mov	eax, DWORD PTR _y$[ebp]
+	cmp	eax, DWORD PTR _x$[ebp]
+	jl	SHORT $LN3@RandInt
+	mov	ecx, OFFSET ??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@
+	test	ecx, ecx
+	jne	SHORT $LN4@RandInt
+$LN3@RandInt:
+	push	86					; 00000056H
+	push	OFFSET ??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@
+	push	OFFSET ??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@
+	call	__wassert
+	add	esp, 12					; 0000000cH
+$LN4@RandInt:
+
+; 87   :   return rand()%(y-x+1)+x;
+
+	call	_rand
+	mov	ecx, DWORD PTR _y$[ebp]
+	sub	ecx, DWORD PTR _x$[ebp]
+	add	ecx, 1
+	cdq
+	idiv	ecx
+	add	edx, DWORD PTR _x$[ebp]
+	mov	eax, edx
+
+; 88   : }
+
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	pop	ebp
+	ret	0
+?RandInt@@YAHHH@Z ENDP					; RandInt
+; Function compile flags: /Odtp /RTCsu
+; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\game\basegameentity.h
+_TEXT	ENDS
+;	COMDAT ?ID@BaseGameEntity@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+?ID@BaseGameEntity@@QBEHXZ PROC				; BaseGameEntity::ID, COMDAT
+; _this$ = ecx
+
+; 96   :   int          ID()const{return m_ID;}
+
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [eax+8]
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?ID@BaseGameEntity@@QBEHXZ ENDP				; BaseGameEntity::ID
+; Function compile flags: /Odtp /RTCsu
+; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_bot.h
+_TEXT	ENDS
+;	COMDAT ?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ PROC		; Raven_Bot::GetWorld, COMDAT
+; _this$ = ecx
+
+; 212  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
+
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [eax+156]
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ ENDP		; Raven_Bot::GetWorld
+_TEXT	ENDS
 PUBLIC	??_7Goal_Explore_Area@@6B@			; Goal_Explore_Area::`vftable'
 PUBLIC	??_R4Goal_Explore_Area@@6B@			; Goal_Explore_Area::`RTTI Complete Object Locator'
 PUBLIC	??_R0?AVGoal_Explore_Area@@@8			; Goal_Explore_Area `RTTI Type Descriptor'
 PUBLIC	??_R3Goal_Explore_Area@@8			; Goal_Explore_Area::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R2Goal_Explore_Area@@8			; Goal_Explore_Area::`RTTI Base Class Array'
 PUBLIC	??_R1A@?0A@EA@Goal_Explore_Area@@8		; Goal_Explore_Area::`RTTI Base Class Descriptor at (0,-1,0,64)'
-PUBLIC	?Render@?$Goal_Composite@VRaven_Bot@@@@UAEXXZ	; Goal_Composite<Raven_Bot>::Render
 EXTRN	??_EGoal_Explore_Area@@UAEPAXI@Z:PROC		; Goal_Explore_Area::`vector deleting destructor'
 EXTRN	?Activate@Goal_Explore_Area@@UAEXXZ:PROC	; Goal_Explore_Area::Activate
 EXTRN	?Process@Goal_Explore_Area@@UAEHXZ:PROC		; Goal_Explore_Area::Process
@@ -4216,33 +4998,6 @@ __ehhandler$??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z:
 	jmp	___CxxFrameHandler3
 text$x	ENDS
 ??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ENDP ; Goal_Explore_Area::Goal_Explore_Area
-; Function compile flags: /Odtp /RTCsu
-; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\2d\vector2d.h
-;	COMDAT ??0Vector2D@@QAE@XZ
-_TEXT	SEGMENT
-_this$ = -4						; size = 4
-??0Vector2D@@QAE@XZ PROC				; Vector2D::Vector2D, COMDAT
-; _this$ = ecx
-
-; 24   :   Vector2D():x(0.0),y(0.0){}
-
-	push	ebp
-	mov	ebp, esp
-	push	ecx
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR _this$[ebp], ecx
-	mov	eax, DWORD PTR _this$[ebp]
-	fldz
-	fstp	QWORD PTR [eax]
-	mov	ecx, DWORD PTR _this$[ebp]
-	fldz
-	fstp	QWORD PTR [ecx+8]
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-??0Vector2D@@QAE@XZ ENDP				; Vector2D::Vector2D
-_TEXT	ENDS
 PUBLIC	??1Goal_Explore_Area@@UAE@XZ			; Goal_Explore_Area::~Goal_Explore_Area
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??_GGoal_Explore_Area@@UAEPAXI@Z
@@ -4260,12 +5015,12 @@ ___flags$ = 8						; size = 4
 	call	??1Goal_Explore_Area@@UAE@XZ
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@8
+	je	SHORT $LN1@scalar@9
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@8:
+$LN1@scalar@9:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -4295,565 +5050,6 @@ _this$ = -4						; size = 4
 	pop	ebp
 	ret	0
 ??1Goal_Explore_Area@@UAE@XZ ENDP			; Goal_Explore_Area::~Goal_Explore_Area
-_TEXT	ENDS
-PUBLIC	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
-PUBLIC	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::~_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-PUBLIC	?ID@BaseGameEntity@@QBEHXZ			; BaseGameEntity::ID
-PUBLIC	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
-PUBLIC	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
-PUBLIC	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
-PUBLIC	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
-PUBLIC	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::~_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-PUBLIC	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-PUBLIC	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
-PUBLIC	??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >
-PUBLIC	?GetAllBots@Raven_Game@@QBEABV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ ; Raven_Game::GetAllBots
-PUBLIC	?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ	; Raven_Bot::GetWorld
-PUBLIC	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
-PUBLIC	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
-PUBLIC	?RandInt@@YAHHH@Z				; RandInt
-PUBLIC	?size@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QBEIXZ ; std::vector<AreaMap,std::allocator<AreaMap> >::size
-PUBLIC	?AddGoal_Explore_Area@Goal_Think@@QAEXXZ	; Goal_Think::AddGoal_Explore_Area
-EXTRN	?DispatchMsg@MessageDispatcher@@QAEXNHHHPAX@Z:PROC ; MessageDispatcher::DispatchMsg
-EXTRN	?Instance@MessageDispatcher@@SAPAV1@XZ:PROC	; MessageDispatcher::Instance
-xdata$x	SEGMENT
-__ehfuncinfo$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ DD 019930522H
-	DD	06H
-	DD	FLAT:__unwindtable$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ
-	DD	2 DUP(00H)
-	DD	2 DUP(00H)
-	DD	00H
-	DD	01H
-__unwindtable$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ DD 0ffffffffH
-	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$0
-	DD	0ffffffffH
-	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$1
-	DD	01H
-	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$2
-	DD	02H
-	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$3
-	DD	01H
-	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$3
-	DD	04H
-	DD	FLAT:__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$4
-; Function compile flags: /Odtp /RTCsu
-; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\goals\goal_think.cpp
-xdata$x	ENDS
-_TEXT	SEGMENT
-tv243 = -132						; size = 4
-tv169 = -128						; size = 4
-tv240 = -124						; size = 4
-tv163 = -120						; size = 4
-tv153 = -116						; size = 4
-$T150855 = -112						; size = 12
-$T150854 = -97						; size = 1
-$T150853 = -96						; size = 12
-$T150850 = -84						; size = 4
-$T150849 = -80						; size = 4
-_curBot$137487 = -72					; size = 12
-_bots$137368 = -52					; size = 16
-_world$137363 = -32					; size = 4
-_i$137354 = -28						; size = 4
-_id$137350 = -24					; size = 4
-_teste$137349 = -17					; size = 1
-_this$ = -16						; size = 4
-__$EHRec$ = -12						; size = 12
-?AddGoal_Explore_Area@Goal_Think@@QAEXXZ PROC		; Goal_Think::AddGoal_Explore_Area
-; _this$ = ecx
-
-; 210  : {
-
-	push	ebp
-	mov	ebp, esp
-	push	-1
-	push	__ehhandler$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ
-	mov	eax, DWORD PTR fs:0
-	push	eax
-	sub	esp, 120				; 00000078H
-	push	esi
-	push	edi
-	push	ecx
-	lea	edi, DWORD PTR [ebp-132]
-	mov	ecx, 30					; 0000001eH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	pop	ecx
-	mov	eax, DWORD PTR ___security_cookie
-	xor	eax, ebp
-	push	eax
-	lea	eax, DWORD PTR __$EHRec$[ebp]
-	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR _this$[ebp], ecx
-
-; 211  :   if (notPresent(goal_explore_area))
-
-	push	20					; 00000014H
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	?notPresent@Goal_Think@@QBE_NI@Z	; Goal_Think::notPresent
-	movzx	eax, al
-	test	eax, eax
-	je	$LN12@AddGoal_Ex
-
-; 212  :   {
-; 213  : 	  bool teste = true;
-
-	mov	BYTE PTR _teste$137349[ebp], 1
-
-; 214  : 	  int id = 0;
-
-	mov	DWORD PTR _id$137350[ebp], 0
-$LN11@AddGoal_Ex:
-
-; 215  : 
-; 216  : 	  do{
-; 217  : 		  teste = true;
-
-	mov	BYTE PTR _teste$137349[ebp], 1
-
-; 218  : 
-; 219  : 		   id = RandInt(0,m_Areas.size()-1);
-
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 52					; 00000034H
-	call	?size@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QBEIXZ ; std::vector<AreaMap,std::allocator<AreaMap> >::size
-	sub	eax, 1
-	push	eax
-	push	0
-	call	?RandInt@@YAHHH@Z			; RandInt
-	add	esp, 8
-	mov	DWORD PTR _id$137350[ebp], eax
-
-; 220  : 	  
-; 221  : 		  for(int i =0;i<m_AreasExploring.size();i++)
-
-	mov	DWORD PTR _i$137354[ebp], 0
-	jmp	SHORT $LN8@AddGoal_Ex
-$LN7@AddGoal_Ex:
-	mov	ecx, DWORD PTR _i$137354[ebp]
-	add	ecx, 1
-	mov	DWORD PTR _i$137354[ebp], ecx
-$LN8@AddGoal_Ex:
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 72					; 00000048H
-	call	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
-	cmp	DWORD PTR _i$137354[ebp], eax
-	jae	SHORT $LN6@AddGoal_Ex
-
-; 222  : 		  {
-; 223  : 			  if(m_AreasExploring[i] == id)
-
-	mov	edx, DWORD PTR _i$137354[ebp]
-	push	edx
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 72					; 00000048H
-	call	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
-	mov	eax, DWORD PTR [eax]
-	cmp	eax, DWORD PTR _id$137350[ebp]
-	jne	SHORT $LN5@AddGoal_Ex
-
-; 224  : 			  {
-; 225  : 				  teste = false;
-
-	mov	BYTE PTR _teste$137349[ebp], 0
-
-; 226  : 				  break;
-
-	jmp	SHORT $LN6@AddGoal_Ex
-$LN5@AddGoal_Ex:
-
-; 227  : 			  }
-; 228  : 		  }
-
-	jmp	SHORT $LN7@AddGoal_Ex
-$LN6@AddGoal_Ex:
-
-; 229  : 	  }while(!teste);
-
-	movzx	ecx, BYTE PTR _teste$137349[ebp]
-	test	ecx, ecx
-	je	SHORT $LN11@AddGoal_Ex
-
-; 230  : 
-; 231  :     RemoveAllSubgoals();
-
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
-
-; 232  : 
-; 233  : 	AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[id]));
-
-	push	88					; 00000058H
-	call	??2@YAPAXI@Z				; operator new
-	add	esp, 4
-	mov	DWORD PTR $T150850[ebp], eax
-	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150850[ebp], 0
-	je	SHORT $LN15@AddGoal_Ex
-	mov	edx, DWORD PTR _id$137350[ebp]
-	push	edx
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 52					; 00000034H
-	call	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
-	sub	esp, 32					; 00000020H
-	mov	ecx, 8
-	mov	esi, eax
-	mov	edi, esp
-	rep movsd
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [eax+8]
-	push	ecx
-	mov	ecx, DWORD PTR $T150850[ebp]
-	call	??0Goal_Explore_Area@@QAE@PAVRaven_Bot@@UAreaMap@@@Z ; Goal_Explore_Area::Goal_Explore_Area
-	mov	DWORD PTR tv153[ebp], eax
-	jmp	SHORT $LN16@AddGoal_Ex
-$LN15@AddGoal_Ex:
-	mov	DWORD PTR tv153[ebp], 0
-$LN16@AddGoal_Ex:
-	mov	edx, DWORD PTR tv153[ebp]
-	mov	DWORD PTR $T150849[ebp], edx
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	esi, esp
-	mov	eax, DWORD PTR $T150849[ebp]
-	push	eax
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR [ecx]
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [edx+20]
-	call	eax
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-
-; 234  : 
-; 235  : 		  Raven_Game * world = m_pOwner->GetWorld();
-
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [ecx+8]
-	call	?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ ; Raven_Bot::GetWorld
-	mov	DWORD PTR _world$137363[ebp], eax
-
-; 236  : 
-; 237  : 		  std::list<Raven_Bot*> bots = world->GetAllBots();
-
-	mov	ecx, DWORD PTR _world$137363[ebp]
-	call	?GetAllBots@Raven_Game@@QBEABV?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@XZ ; Raven_Game::GetAllBots
-	push	eax
-	lea	ecx, DWORD PTR _bots$137368[ebp]
-	call	??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::list<Raven_Bot *,std::allocator<Raven_Bot *> >
-	mov	DWORD PTR __$EHRec$[ebp+8], 1
-
-; 238  : 		  std::list<Raven_Bot*>::const_iterator curBot = bots.begin();
-
-	lea	edx, DWORD PTR $T150853[ebp]
-	push	edx
-	lea	ecx, DWORD PTR _bots$137368[ebp]
-	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
-	mov	DWORD PTR tv163[ebp], eax
-	mov	eax, DWORD PTR tv163[ebp]
-	mov	DWORD PTR tv240[ebp], eax
-	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	mov	ecx, DWORD PTR tv240[ebp]
-	push	ecx
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T150853[ebp]
-	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-	jmp	SHORT $LN4@AddGoal_Ex
-$LN3@AddGoal_Ex:
-
-; 239  : 		  for (curBot; curBot != bots.end(); ++curBot)
-
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
-$LN4@AddGoal_Ex:
-	lea	edx, DWORD PTR $T150855[ebp]
-	push	edx
-	lea	ecx, DWORD PTR _bots$137368[ebp]
-	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
-	mov	DWORD PTR tv169[ebp], eax
-	mov	eax, DWORD PTR tv169[ebp]
-	mov	DWORD PTR tv243[ebp], eax
-	mov	BYTE PTR __$EHRec$[ebp+8], 5
-	mov	ecx, DWORD PTR tv243[ebp]
-	push	ecx
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	call	??9?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator!=
-	mov	BYTE PTR $T150854[ebp], al
-	mov	BYTE PTR __$EHRec$[ebp+8], 4
-	lea	ecx, DWORD PTR $T150855[ebp]
-	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T150854[ebp]
-	test	edx, edx
-	je	SHORT $LN2@AddGoal_Ex
-
-; 240  : 		  {
-; 241  : 			  if((*curBot)->my_type == m_pOwner->my_type)
-
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
-	mov	eax, DWORD PTR [eax]
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR [ecx+8]
-	mov	eax, DWORD PTR [eax+204]
-	cmp	eax, DWORD PTR [edx+204]
-	jne	SHORT $LN1@AddGoal_Ex
-
-; 242  : 			  {
-; 243  : 				  Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
-; 244  : 								  m_pOwner->ID(),
-; 245  : 								  (* curBot)->ID(),
-; 246  : 								  Msg_Exploring,
-; 247  : 								  &m_Areas[id].id);
-
-	mov	ecx, DWORD PTR _id$137350[ebp]
-	push	ecx
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 52					; 00000034H
-	call	??A?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEAAUAreaMap@@I@Z ; std::vector<AreaMap,std::allocator<AreaMap> >::operator[]
-	add	eax, 24					; 00000018H
-	push	eax
-	push	11					; 0000000bH
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	call	??D?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QBEABQAVRaven_Bot@@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator*
-	mov	ecx, DWORD PTR [eax]
-	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
-	push	eax
-	mov	edx, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [edx+8]
-	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
-	push	eax
-	sub	esp, 8
-	fld	QWORD PTR _SEND_MSG_IMMEDIATELY
-	fstp	QWORD PTR [esp]
-	call	?Instance@MessageDispatcher@@SAPAV1@XZ	; MessageDispatcher::Instance
-	mov	ecx, eax
-	call	?DispatchMsg@MessageDispatcher@@QAEXNHHHPAX@Z ; MessageDispatcher::DispatchMsg
-$LN1@AddGoal_Ex:
-
-; 248  : 			  }
-; 249  : 		  }
-
-	jmp	$LN3@AddGoal_Ex
-$LN2@AddGoal_Ex:
-
-; 250  : 
-; 251  :   }
-
-	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR _bots$137368[ebp]
-	call	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
-$LN12@AddGoal_Ex:
-
-; 252  : }
-
-	push	edx
-	mov	ecx, ebp
-	push	eax
-	lea	edx, DWORD PTR $LN26@AddGoal_Ex
-	call	@_RTC_CheckStackVars@8
-	pop	eax
-	pop	edx
-	mov	ecx, DWORD PTR __$EHRec$[ebp]
-	mov	DWORD PTR fs:0, ecx
-	pop	ecx
-	pop	edi
-	pop	esi
-	add	esp, 132				; 00000084H
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-$LN26@AddGoal_Ex:
-	DD	2
-	DD	$LN25@AddGoal_Ex
-$LN25@AddGoal_Ex:
-	DD	-52					; ffffffccH
-	DD	16					; 00000010H
-	DD	$LN22@AddGoal_Ex
-	DD	-72					; ffffffb8H
-	DD	12					; 0000000cH
-	DD	$LN23@AddGoal_Ex
-$LN23@AddGoal_Ex:
-	DB	99					; 00000063H
-	DB	117					; 00000075H
-	DB	114					; 00000072H
-	DB	66					; 00000042H
-	DB	111					; 0000006fH
-	DB	116					; 00000074H
-	DB	0
-$LN22@AddGoal_Ex:
-	DB	98					; 00000062H
-	DB	111					; 0000006fH
-	DB	116					; 00000074H
-	DB	115					; 00000073H
-	DB	0
-_TEXT	ENDS
-text$x	SEGMENT
-__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$0:
-	mov	eax, DWORD PTR $T150850[ebp]
-	push	eax
-	call	??3@YAXPAX@Z				; operator delete
-	pop	ecx
-	ret	0
-__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$1:
-	lea	ecx, DWORD PTR _bots$137368[ebp]
-	jmp	??1?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::~list<Raven_Bot *,std::allocator<Raven_Bot *> >
-__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$2:
-	lea	ecx, DWORD PTR $T150853[ebp]
-	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$3:
-	lea	ecx, DWORD PTR _curBot$137487[ebp]
-	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-__unwindfunclet$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ$4:
-	lea	ecx, DWORD PTR $T150855[ebp]
-	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
-__ehhandler$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ:
-	mov	edx, DWORD PTR [esp+8]
-	lea	eax, DWORD PTR [edx+12]
-	mov	ecx, DWORD PTR [edx-132]
-	xor	ecx, eax
-	call	@__security_check_cookie@4
-	mov	eax, OFFSET __ehfuncinfo$?AddGoal_Explore_Area@Goal_Think@@QAEXXZ
-	jmp	___CxxFrameHandler3
-text$x	ENDS
-?AddGoal_Explore_Area@Goal_Think@@QAEXXZ ENDP		; Goal_Think::AddGoal_Explore_Area
-PUBLIC	??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@ ; `string'
-PUBLIC	??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@ ; `string'
-PUBLIC	??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@ ; `string'
-EXTRN	_rand:PROC
-EXTRN	__wassert:PROC
-;	COMDAT ??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@
-; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\misc\utils.h
-CONST	SEGMENT
-??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@ DB 'y'
-	DB	00H, '>', 00H, '=', 00H, 'x', 00H, ' ', 00H, '&', 00H, '&', 00H
-	DB	' ', 00H, '"', 00H, '<', 00H, 'R', 00H, 'a', 00H, 'n', 00H, 'd'
-	DB	00H, 'I', 00H, 'n', 00H, 't', 00H, '>', 00H, ':', 00H, ' ', 00H
-	DB	'y', 00H, ' ', 00H, 'i', 00H, 's', 00H, ' ', 00H, 'l', 00H, 'e'
-	DB	00H, 's', 00H, 's', 00H, ' ', 00H, 't', 00H, 'h', 00H, 'a', 00H
-	DB	'n', 00H, ' ', 00H, 'x', 00H, '"', 00H, 00H, 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@
-CONST	SEGMENT
-??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@ DB 'C'
-	DB	00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H, 'r', 00H
-	DB	's', 00H, '\', 00H, 'L', 00H, 'u', 00H, 'c', 00H, 'a', 00H, 's'
-	DB	00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H, 'k', 00H, 't', 00H
-	DB	'o', 00H, 'p', 00H, '\', 00H, 'j', 00H, 'o', 00H, 'g', 00H, 'o'
-	DB	00H, 's', 00H, ' ', 00H, '-', 00H, ' ', 00H, 'g', 00H, 'a', 00H
-	DB	'm', 00H, 'e', 00H, ' ', 00H, 'a', 00H, 'i', 00H, ' ', 00H, 'b'
-	DB	00H, 'y', 00H, ' ', 00H, 'e', 00H, 'x', 00H, 'a', 00H, 'm', 00H
-	DB	'p', 00H, 'l', 00H, 'e', 00H, '\', 00H, 'B', 00H, 'l', 00H, 'u'
-	DB	00H, 'c', 00H, 'k', 00H, 'l', 00H, 'a', 00H, 'n', 00H, 'd', 00H
-	DB	'_', 00H, 'S', 00H, 'o', 00H, 'u', 00H, 'r', 00H, 'c', 00H, 'e'
-	DB	00H, 'C', 00H, 'o', 00H, 'd', 00H, 'e', 00H, ' ', 00H, '-', 00H
-	DB	' ', 00H, 'n', 00H, 'e', 00H, 'w', 00H, ' ', 00H, 'v', 00H, 'e'
-	DB	00H, 'r', 00H, 's', 00H, 'i', 00H, 'o', 00H, 'n', 00H, '\', 00H
-	DB	'V', 00H, 'S', 00H, '2', 00H, '0', 00H, '1', 00H, '0', 00H, '\'
-	DB	00H, 'C', 00H, 'o', 00H, 'm', 00H, 'm', 00H, 'o', 00H, 'n', 00H
-	DB	'\', 00H, 'm', 00H, 'i', 00H, 's', 00H, 'c', 00H, '/', 00H, 'u'
-	DB	00H, 't', 00H, 'i', 00H, 'l', 00H, 's', 00H, '.', 00H, 'h', 00H
-	DB	00H, 00H					; `string'
-CONST	ENDS
-;	COMDAT ??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@
-CONST	SEGMENT
-??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@ DB '<Rand'
-	DB	'Int>: y is less than x', 00H		; `string'
-; Function compile flags: /Odtp /RTCsu
-CONST	ENDS
-;	COMDAT ?RandInt@@YAHHH@Z
-_TEXT	SEGMENT
-_x$ = 8							; size = 4
-_y$ = 12						; size = 4
-?RandInt@@YAHHH@Z PROC					; RandInt, COMDAT
-
-; 85   : {
-
-	push	ebp
-	mov	ebp, esp
-
-; 86   :   assert(y>=x && "<RandInt>: y is less than x");
-
-	mov	eax, DWORD PTR _y$[ebp]
-	cmp	eax, DWORD PTR _x$[ebp]
-	jl	SHORT $LN3@RandInt
-	mov	ecx, OFFSET ??_C@_0BM@IMGJFIHE@?$DMRandInt?$DO?3?5y?5is?5less?5than?5x?$AA@
-	test	ecx, ecx
-	jne	SHORT $LN4@RandInt
-$LN3@RandInt:
-	push	86					; 00000056H
-	push	OFFSET ??_C@_1OA@JHOJPOJG@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAL?$AAu?$AAc?$AAa?$AAs?$AA?2?$AAD?$AAe?$AAs?$AAk?$AAt?$AAo?$AAp?$AA?2?$AAj?$AAo?$AAg?$AAo?$AAs?$AA?5?$AA?9?$AA?5?$AAg@
-	push	OFFSET ??_C@_1EM@JBDGIPGD@?$AAy?$AA?$DO?$AA?$DN?$AAx?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AA?$CC?$AA?$DM?$AAR?$AAa?$AAn?$AAd?$AAI?$AAn?$AAt?$AA?$DO?$AA?3?$AA?5?$AAy?$AA?5?$AAi?$AAs?$AA?5?$AAl?$AAe?$AAs?$AAs?$AA?5?$AAt?$AAh@
-	call	__wassert
-	add	esp, 12					; 0000000cH
-$LN4@RandInt:
-
-; 87   :   return rand()%(y-x+1)+x;
-
-	call	_rand
-	mov	ecx, DWORD PTR _y$[ebp]
-	sub	ecx, DWORD PTR _x$[ebp]
-	add	ecx, 1
-	cdq
-	idiv	ecx
-	add	edx, DWORD PTR _x$[ebp]
-	mov	eax, edx
-
-; 88   : }
-
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	pop	ebp
-	ret	0
-?RandInt@@YAHHH@Z ENDP					; RandInt
-; Function compile flags: /Odtp /RTCsu
-; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\game\basegameentity.h
-_TEXT	ENDS
-;	COMDAT ?ID@BaseGameEntity@@QBEHXZ
-_TEXT	SEGMENT
-_this$ = -4						; size = 4
-?ID@BaseGameEntity@@QBEHXZ PROC				; BaseGameEntity::ID, COMDAT
-; _this$ = ecx
-
-; 96   :   int          ID()const{return m_ID;}
-
-	push	ebp
-	mov	ebp, esp
-	push	ecx
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR _this$[ebp], ecx
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [eax+8]
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-?ID@BaseGameEntity@@QBEHXZ ENDP				; BaseGameEntity::ID
-; Function compile flags: /Odtp /RTCsu
-; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_bot.h
-_TEXT	ENDS
-;	COMDAT ?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ
-_TEXT	SEGMENT
-_this$ = -4						; size = 4
-?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ PROC		; Raven_Bot::GetWorld, COMDAT
-; _this$ = ecx
-
-; 212  :   Raven_Game* const                  GetWorld(){return m_pWorld;} 
-
-	push	ebp
-	mov	ebp, esp
-	push	ecx
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR _this$[ebp], ecx
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [eax+156]
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-?GetWorld@Raven_Bot@@QAEQAVRaven_Game@@XZ ENDP		; Raven_Bot::GetWorld
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\raven_game\buckland_chapter7 to 10_raven\raven_game.h
 _TEXT	ENDS
@@ -5309,14 +5505,14 @@ __ehfuncinfo$?AddGoal_Explore@Goal_Think@@QAEXXZ DD 019930522H
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv129 = -28						; size = 4
-$T150918 = -24						; size = 4
-$T150917 = -20						; size = 4
+$T150985 = -24						; size = 4
+$T150984 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?AddGoal_Explore@Goal_Think@@QAEXXZ PROC		; Goal_Think::AddGoal_Explore
 ; _this$ = ecx
 
-; 255  : {
+; 259  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -5338,7 +5534,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 256  :   if (notPresent(goal_explore))
+; 260  :   if (notPresent(goal_explore))
 
 	push	1
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -5347,25 +5543,25 @@ __$EHRec$ = -12						; size = 12
 	test	eax, eax
 	je	SHORT $LN2@AddGoal_Ex@2
 
-; 257  :   {
-; 258  :     RemoveAllSubgoals();
+; 261  :   {
+; 262  :     RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 259  :     AddSubgoal( new Goal_Explore(m_pOwner));
+; 263  :     AddSubgoal( new Goal_Explore(m_pOwner));
 
 	push	56					; 00000038H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150918[ebp], eax
+	mov	DWORD PTR $T150985[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150918[ebp], 0
+	cmp	DWORD PTR $T150985[ebp], 0
 	je	SHORT $LN4@AddGoal_Ex@2
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	ecx, DWORD PTR $T150918[ebp]
+	mov	ecx, DWORD PTR $T150985[ebp]
 	call	??0Goal_Explore@@QAE@PAVRaven_Bot@@@Z	; Goal_Explore::Goal_Explore
 	mov	DWORD PTR tv129[ebp], eax
 	jmp	SHORT $LN5@AddGoal_Ex@2
@@ -5373,10 +5569,10 @@ $LN4@AddGoal_Ex@2:
 	mov	DWORD PTR tv129[ebp], 0
 $LN5@AddGoal_Ex@2:
 	mov	eax, DWORD PTR tv129[ebp]
-	mov	DWORD PTR $T150917[ebp], eax
+	mov	DWORD PTR $T150984[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
-	mov	ecx, DWORD PTR $T150917[ebp]
+	mov	ecx, DWORD PTR $T150984[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx]
@@ -5387,8 +5583,8 @@ $LN5@AddGoal_Ex@2:
 	call	__RTC_CheckEsp
 $LN2@AddGoal_Ex@2:
 
-; 260  :   }
-; 261  : }
+; 264  :   }
+; 265  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -5403,7 +5599,7 @@ $LN2@AddGoal_Ex@2:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?AddGoal_Explore@Goal_Think@@QAEXXZ$0:
-	mov	eax, DWORD PTR $T150918[ebp]
+	mov	eax, DWORD PTR $T150985[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -5592,12 +5788,12 @@ ___flags$ = 8						; size = 4
 	call	??1Goal_Explore@@UAE@XZ
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@9
+	je	SHORT $LN1@scalar@10
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@9:
+$LN1@scalar@10:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -5646,15 +5842,15 @@ __ehfuncinfo$?AddGoal_GetItem@Goal_Think@@QAEXI@Z DD 019930522H
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv132 = -28						; size = 4
-$T150944 = -24						; size = 4
-$T150943 = -20						; size = 4
+$T151011 = -24						; size = 4
+$T151010 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _ItemType$ = 8						; size = 4
 ?AddGoal_GetItem@Goal_Think@@QAEXI@Z PROC		; Goal_Think::AddGoal_GetItem
 ; _this$ = ecx
 
-; 264  : {  if (notPresent(ItemTypeToGoalType(ItemType)))
+; 268  : {  if (notPresent(ItemTypeToGoalType(ItemType)))
 
 	push	ebp
 	mov	ebp, esp
@@ -5686,27 +5882,27 @@ _ItemType$ = 8						; size = 4
 	test	ecx, ecx
 	je	SHORT $LN2@AddGoal_Ge
 
-; 265  :   {
-; 266  :     RemoveAllSubgoals();
+; 269  :   {
+; 270  :     RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 267  :     AddSubgoal( new Goal_GetItem(m_pOwner, ItemType));
+; 271  :     AddSubgoal( new Goal_GetItem(m_pOwner, ItemType));
 
 	push	44					; 0000002cH
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150944[ebp], eax
+	mov	DWORD PTR $T151011[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150944[ebp], 0
+	cmp	DWORD PTR $T151011[ebp], 0
 	je	SHORT $LN4@AddGoal_Ge
 	mov	edx, DWORD PTR _ItemType$[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	push	ecx
-	mov	ecx, DWORD PTR $T150944[ebp]
+	mov	ecx, DWORD PTR $T151011[ebp]
 	call	??0Goal_GetItem@@QAE@PAVRaven_Bot@@H@Z	; Goal_GetItem::Goal_GetItem
 	mov	DWORD PTR tv132[ebp], eax
 	jmp	SHORT $LN5@AddGoal_Ge
@@ -5714,10 +5910,10 @@ $LN4@AddGoal_Ge:
 	mov	DWORD PTR tv132[ebp], 0
 $LN5@AddGoal_Ge:
 	mov	edx, DWORD PTR tv132[ebp]
-	mov	DWORD PTR $T150943[ebp], edx
+	mov	DWORD PTR $T151010[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
-	mov	eax, DWORD PTR $T150943[ebp]
+	mov	eax, DWORD PTR $T151010[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx]
@@ -5728,8 +5924,8 @@ $LN5@AddGoal_Ge:
 	call	__RTC_CheckEsp
 $LN2@AddGoal_Ge:
 
-; 268  :   }
-; 269  : }
+; 272  :   }
+; 273  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -5744,7 +5940,7 @@ $LN2@AddGoal_Ge:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?AddGoal_GetItem@Goal_Think@@QAEXI@Z$0:
-	mov	eax, DWORD PTR $T150944[ebp]
+	mov	eax, DWORD PTR $T151011[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -5901,12 +6097,12 @@ ___flags$ = 8						; size = 4
 	call	??1Goal_GetItem@@UAE@XZ
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@10
+	je	SHORT $LN1@scalar@11
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@10:
+$LN1@scalar@11:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -5954,14 +6150,14 @@ __ehfuncinfo$?AddGoal_AttackTarget@Goal_Think@@QAEXXZ DD 019930522H
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv129 = -28						; size = 4
-$T150964 = -24						; size = 4
-$T150963 = -20						; size = 4
+$T151031 = -24						; size = 4
+$T151030 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?AddGoal_AttackTarget@Goal_Think@@QAEXXZ PROC		; Goal_Think::AddGoal_AttackTarget
 ; _this$ = ecx
 
-; 272  : {
+; 276  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -5983,7 +6179,7 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 273  :   if (notPresent(goal_attack_target))
+; 277  :   if (notPresent(goal_attack_target))
 
 	push	13					; 0000000dH
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -5992,25 +6188,25 @@ __$EHRec$ = -12						; size = 12
 	test	eax, eax
 	je	SHORT $LN2@AddGoal_At
 
-; 274  :   {
-; 275  :     RemoveAllSubgoals();
+; 278  :   {
+; 279  :     RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 276  :     AddSubgoal( new Goal_AttackTarget(m_pOwner));
+; 280  :     AddSubgoal( new Goal_AttackTarget(m_pOwner));
 
 	push	32					; 00000020H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150964[ebp], eax
+	mov	DWORD PTR $T151031[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150964[ebp], 0
+	cmp	DWORD PTR $T151031[ebp], 0
 	je	SHORT $LN4@AddGoal_At
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
-	mov	ecx, DWORD PTR $T150964[ebp]
+	mov	ecx, DWORD PTR $T151031[ebp]
 	call	??0Goal_AttackTarget@@QAE@PAVRaven_Bot@@@Z ; Goal_AttackTarget::Goal_AttackTarget
 	mov	DWORD PTR tv129[ebp], eax
 	jmp	SHORT $LN5@AddGoal_At
@@ -6018,10 +6214,10 @@ $LN4@AddGoal_At:
 	mov	DWORD PTR tv129[ebp], 0
 $LN5@AddGoal_At:
 	mov	eax, DWORD PTR tv129[ebp]
-	mov	DWORD PTR $T150963[ebp], eax
+	mov	DWORD PTR $T151030[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
-	mov	ecx, DWORD PTR $T150963[ebp]
+	mov	ecx, DWORD PTR $T151030[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx]
@@ -6032,8 +6228,8 @@ $LN5@AddGoal_At:
 	call	__RTC_CheckEsp
 $LN2@AddGoal_At:
 
-; 277  :   }
-; 278  : }
+; 281  :   }
+; 282  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -6048,7 +6244,7 @@ $LN2@AddGoal_At:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?AddGoal_AttackTarget@Goal_Think@@QAEXXZ$0:
-	mov	eax, DWORD PTR $T150964[ebp]
+	mov	eax, DWORD PTR $T151031[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -6193,12 +6389,12 @@ ___flags$ = 8						; size = 4
 	call	??1Goal_AttackTarget@@UAE@XZ
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@11
+	je	SHORT $LN1@scalar@12
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@11:
+$LN1@scalar@12:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -6246,16 +6442,16 @@ __ehfuncinfo$?QueueGoal_MoveToPosition@Goal_Think@@QAEXUVector2D@@@Z DD 01993052
 xdata$x	ENDS
 _TEXT	SEGMENT
 tv87 = -32						; size = 4
-$T150985 = -28						; size = 4
-$T150984 = -24						; size = 4
-$T150983 = -20						; size = 4
+$T151052 = -28						; size = 4
+$T151051 = -24						; size = 4
+$T151050 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 _pos$ = 8						; size = 16
 ?QueueGoal_MoveToPosition@Goal_Think@@QAEXUVector2D@@@Z PROC ; Goal_Think::QueueGoal_MoveToPosition
 ; _this$ = ecx
 
-; 283  : {
+; 287  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6277,14 +6473,14 @@ _pos$ = 8						; size = 16
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 284  :    m_SubGoals.push_back(new Goal_MoveToPosition(m_pOwner, pos));
+; 288  :    m_SubGoals.push_back(new Goal_MoveToPosition(m_pOwner, pos));
 
 	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T150985[ebp], eax
+	mov	DWORD PTR $T151052[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T150985[ebp], 0
+	cmp	DWORD PTR $T151052[ebp], 0
 	je	SHORT $LN3@QueueGoal_
 	sub	esp, 16					; 00000010H
 	mov	eax, esp
@@ -6299,7 +6495,7 @@ _pos$ = 8						; size = 16
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	push	ecx
-	mov	ecx, DWORD PTR $T150985[ebp]
+	mov	ecx, DWORD PTR $T151052[ebp]
 	call	??0Goal_MoveToPosition@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_MoveToPosition::Goal_MoveToPosition
 	mov	DWORD PTR tv87[ebp], eax
 	jmp	SHORT $LN4@QueueGoal_
@@ -6307,17 +6503,17 @@ $LN3@QueueGoal_:
 	mov	DWORD PTR tv87[ebp], 0
 $LN4@QueueGoal_:
 	mov	edx, DWORD PTR tv87[ebp]
-	mov	DWORD PTR $T150984[ebp], edx
+	mov	DWORD PTR $T151051[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	eax, DWORD PTR $T150984[ebp]
-	mov	DWORD PTR $T150983[ebp], eax
-	lea	ecx, DWORD PTR $T150983[ebp]
+	mov	eax, DWORD PTR $T151051[ebp]
+	mov	DWORD PTR $T151050[ebp], eax
+	lea	ecx, DWORD PTR $T151050[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?push_back@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEX$$QAPAV?$Goal@VRaven_Bot@@@@@Z ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::push_back
 
-; 285  : }
+; 289  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -6331,7 +6527,7 @@ $LN4@QueueGoal_:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?QueueGoal_MoveToPosition@Goal_Think@@QAEXUVector2D@@@Z$0:
-	mov	eax, DWORD PTR $T150985[ebp]
+	mov	eax, DWORD PTR $T151052[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -6371,9 +6567,9 @@ _TEXT	SEGMENT
 tv88 = -80						; size = 4
 tv139 = -76						; size = 4
 tv69 = -72						; size = 4
-$T150996 = -68						; size = 16
-$T150995 = -52						; size = 12
-$T150994 = -37						; size = 1
+$T151063 = -68						; size = 16
+$T151062 = -52						; size = 12
+$T151061 = -37						; size = 1
 _curDes$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -6382,7 +6578,7 @@ _top$ = 12						; size = 4
 ?RenderEvaluations@Goal_Think@@QBEXHH@Z PROC		; Goal_Think::RenderEvaluations
 ; _this$ = ecx
 
-; 292  : {
+; 296  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6406,15 +6602,15 @@ _top$ = 12						; size = 4
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 293  :   gdi->TextColor(Cgdi::black);
+; 297  :   gdi->TextColor(Cgdi::black);
 
 	push	3
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?TextColor@Cgdi@@QAEXH@Z		; Cgdi::TextColor
 
-; 294  :   
-; 295  :   std::vector<Goal_Evaluator*>::const_iterator curDes = m_Evaluators.begin();
+; 298  :   
+; 299  :   std::vector<Goal_Evaluator*>::const_iterator curDes = m_Evaluators.begin();
 
 	lea	eax, DWORD PTR _curDes$[ebp]
 	push	eax
@@ -6425,12 +6621,12 @@ _top$ = 12						; size = 4
 	jmp	SHORT $LN3@RenderEval
 $LN2@RenderEval:
 
-; 296  :   for (curDes; curDes != m_Evaluators.end(); ++curDes)
+; 300  :   for (curDes; curDes != m_Evaluators.end(); ++curDes)
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??E?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator++
 $LN3@RenderEval:
-	lea	ecx, DWORD PTR $T150995[ebp]
+	lea	ecx, DWORD PTR $T151062[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
@@ -6443,16 +6639,16 @@ $LN3@RenderEval:
 	push	eax
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??9?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator!=
-	mov	BYTE PTR $T150994[ebp], al
+	mov	BYTE PTR $T151061[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T150995[ebp]
+	lea	ecx, DWORD PTR $T151062[ebp]
 	call	??1?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T150994[ebp]
+	movzx	ecx, BYTE PTR $T151061[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@RenderEval
 
-; 297  :   {
-; 298  :     (*curDes)->RenderInfo(Vector2D(left, top), m_pOwner);
+; 301  :   {
+; 302  :     (*curDes)->RenderInfo(Vector2D(left, top), m_pOwner);
 
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	call	??D?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QBEABQAVGoal_Evaluator@@XZ ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::operator*
@@ -6468,7 +6664,7 @@ $LN3@RenderEval:
 	fild	DWORD PTR _left$[ebp]
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	lea	ecx, DWORD PTR $T150996[ebp]
+	lea	ecx, DWORD PTR $T151063[ebp]
 	call	??0Vector2D@@QAE@NN@Z			; Vector2D::Vector2D
 	sub	esp, 16					; 00000010H
 	mov	edx, esp
@@ -6488,19 +6684,19 @@ $LN3@RenderEval:
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 
-; 299  : 
-; 300  :     left += 75;
+; 303  : 
+; 304  :     left += 75;
 
 	mov	ecx, DWORD PTR _left$[ebp]
 	add	ecx, 75					; 0000004bH
 	mov	DWORD PTR _left$[ebp], ecx
 
-; 301  :   }
+; 305  :   }
 
 	jmp	$LN2@RenderEval
 $LN1@RenderEval:
 
-; 302  : }
+; 306  : }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _curDes$[ebp]
@@ -6545,7 +6741,7 @@ __unwindfunclet$?RenderEvaluations@Goal_Think@@QBEXHH@Z$0:
 	lea	ecx, DWORD PTR _curDes$[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderEvaluations@Goal_Think@@QBEXHH@Z$1:
-	lea	ecx, DWORD PTR $T150995[ebp]
+	lea	ecx, DWORD PTR $T151062[ebp]
 	jmp	??1?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?RenderEvaluations@Goal_Think@@QBEXHH@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -6663,16 +6859,16 @@ tv146 = -80						; size = 4
 tv147 = -76						; size = 4
 tv144 = -72						; size = 4
 tv65 = -68						; size = 4
-$T151012 = -64						; size = 12
-$T151011 = -49						; size = 1
-$T151010 = -48						; size = 12
+$T151079 = -64						; size = 12
+$T151078 = -49						; size = 1
+$T151077 = -48						; size = 12
 _curG$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?Render@Goal_Think@@UAEXXZ PROC				; Goal_Think::Render
 ; _this$ = ecx
 
-; 305  : {
+; 309  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6696,15 +6892,15 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 306  :   std::list<Goal<Raven_Bot>*>::iterator curG;
+; 310  :   std::list<Goal<Raven_Bot>*>::iterator curG;
 
 	lea	ecx, DWORD PTR _curG$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 307  :   for (curG=m_SubGoals.begin(); curG != m_SubGoals.end(); ++curG)
+; 311  :   for (curG=m_SubGoals.begin(); curG != m_SubGoals.end(); ++curG)
 
-	lea	eax, DWORD PTR $T151010[ebp]
+	lea	eax, DWORD PTR $T151077[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -6718,14 +6914,14 @@ __$EHRec$ = -12						; size = 12
 	lea	ecx, DWORD PTR _curG$[ebp]
 	call	??4?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151010[ebp]
+	lea	ecx, DWORD PTR $T151077[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN3@Render
 $LN2@Render:
 	lea	ecx, DWORD PTR _curG$[ebp]
 	call	??E?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator++
 $LN3@Render:
-	lea	eax, DWORD PTR $T151012[ebp]
+	lea	eax, DWORD PTR $T151079[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -6738,16 +6934,16 @@ $LN3@Render:
 	push	edx
 	lea	ecx, DWORD PTR _curG$[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator!=
-	mov	BYTE PTR $T151011[ebp], al
+	mov	BYTE PTR $T151078[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151012[ebp]
+	lea	ecx, DWORD PTR $T151079[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	movzx	eax, BYTE PTR $T151011[ebp]
+	movzx	eax, BYTE PTR $T151078[ebp]
 	test	eax, eax
 	je	SHORT $LN1@Render
 
-; 308  :   {
-; 309  :     (*curG)->Render();
+; 312  :   {
+; 313  :     (*curG)->Render();
 
 	lea	ecx, DWORD PTR _curG$[ebp]
 	call	??D?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
@@ -6762,12 +6958,12 @@ $LN3@Render:
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 
-; 310  :   }
+; 314  :   }
 
 	jmp	SHORT $LN2@Render
 $LN1@Render:
 
-; 311  : }
+; 315  : }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR _curG$[ebp]
@@ -6810,10 +7006,10 @@ __unwindfunclet$?Render@Goal_Think@@UAEXXZ$0:
 	lea	ecx, DWORD PTR _curG$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Render@Goal_Think@@UAEXXZ$1:
-	lea	ecx, DWORD PTR $T151010[ebp]
+	lea	ecx, DWORD PTR $T151077[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?Render@Goal_Think@@UAEXXZ$2:
-	lea	ecx, DWORD PTR $T151012[ebp]
+	lea	ecx, DWORD PTR $T151079[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?Render@Goal_Think@@UAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -7026,17 +7222,17 @@ PUBLIC	?push_back@?$vector@HV?$allocator@H@std@@@std@@QAEXABH@Z ; std::vector<in
 ; Function compile flags: /Odtp /RTCsu
 _TEXT	SEGMENT
 tv65 = -36						; size = 4
-_i$137859 = -32						; size = 4
-_ar$137857 = -28					; size = 4
-_i$137850 = -24						; size = 4
-_alreadyKnown$137849 = -17				; size = 1
-_ar$137847 = -12					; size = 4
+_i$137895 = -32						; size = 4
+_ar$137893 = -28					; size = 4
+_i$137886 = -24						; size = 4
+_alreadyKnown$137885 = -17				; size = 1
+_ar$137883 = -12					; size = 4
 _this$ = -4						; size = 4
 _msg$ = 8						; size = 4
 ?HandleMessage@Goal_Think@@UAE_NABUTelegram@@@Z PROC	; Goal_Think::HandleMessage
 ; _this$ = ecx
 
-; 314  : {
+; 318  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -7054,7 +7250,7 @@ _msg$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 315  : 	switch(msg.Msg)
+; 319  : 	switch(msg.Msg)
 
 	mov	eax, DWORD PTR _msg$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
@@ -7069,129 +7265,129 @@ _msg$ = 8						; size = 4
 	jmp	DWORD PTR $LN24@HandleMess[ecx*4]
 $LN15@HandleMess:
 
-; 316  : 	{
-; 317  : 		case Msg_Exploring:
-; 318  : 		{
-; 319  : 			int ar = (*(int*)msg.ExtraInfo);
+; 320  : 	{
+; 321  : 		case Msg_Exploring:
+; 322  : 		{
+; 323  : 			int ar = (*(int*)msg.ExtraInfo);
 
 	mov	edx, DWORD PTR _msg$[ebp]
 	mov	eax, DWORD PTR [edx+24]
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR _ar$137847[ebp], ecx
+	mov	DWORD PTR _ar$137883[ebp], ecx
 
-; 320  : 			bool alreadyKnown = false;
+; 324  : 			bool alreadyKnown = false;
 
-	mov	BYTE PTR _alreadyKnown$137849[ebp], 0
+	mov	BYTE PTR _alreadyKnown$137885[ebp], 0
 
-; 321  : 
-; 322  : 			for(int i =0;i<m_AreasExploring.size();i++)
+; 325  : 
+; 326  : 			for(int i =0;i<m_AreasExploring.size();i++)
 
-	mov	DWORD PTR _i$137850[ebp], 0
+	mov	DWORD PTR _i$137886[ebp], 0
 	jmp	SHORT $LN14@HandleMess
 $LN13@HandleMess:
-	mov	edx, DWORD PTR _i$137850[ebp]
+	mov	edx, DWORD PTR _i$137886[ebp]
 	add	edx, 1
-	mov	DWORD PTR _i$137850[ebp], edx
+	mov	DWORD PTR _i$137886[ebp], edx
 $LN14@HandleMess:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
-	cmp	DWORD PTR _i$137850[ebp], eax
+	cmp	DWORD PTR _i$137886[ebp], eax
 	jae	SHORT $LN12@HandleMess
 
-; 323  : 			{
-; 324  : 				if(m_AreasExploring[i] == ar)
+; 327  : 			{
+; 328  : 				if(m_AreasExploring[i] == ar)
 
-	mov	eax, DWORD PTR _i$137850[ebp]
+	mov	eax, DWORD PTR _i$137886[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
 	mov	ecx, DWORD PTR [eax]
-	cmp	ecx, DWORD PTR _ar$137847[ebp]
+	cmp	ecx, DWORD PTR _ar$137883[ebp]
 	jne	SHORT $LN11@HandleMess
 
-; 325  : 				{
-; 326  : 					alreadyKnown = true;
+; 329  : 				{
+; 330  : 					alreadyKnown = true;
 
-	mov	BYTE PTR _alreadyKnown$137849[ebp], 1
+	mov	BYTE PTR _alreadyKnown$137885[ebp], 1
 
-; 327  : 					break;
+; 331  : 					break;
 
 	jmp	SHORT $LN12@HandleMess
 $LN11@HandleMess:
 
-; 328  : 				}
-; 329  : 			}
+; 332  : 				}
+; 333  : 			}
 
 	jmp	SHORT $LN13@HandleMess
 $LN12@HandleMess:
 
-; 330  : 
-; 331  : 			if(!alreadyKnown)
+; 334  : 
+; 335  : 			if(!alreadyKnown)
 
-	movzx	edx, BYTE PTR _alreadyKnown$137849[ebp]
+	movzx	edx, BYTE PTR _alreadyKnown$137885[ebp]
 	test	edx, edx
 	jne	SHORT $LN10@HandleMess
 
-; 332  : 			{
-; 333  : 				m_AreasExploring.push_back(ar);
+; 336  : 			{
+; 337  : 				m_AreasExploring.push_back(ar);
 
-	lea	eax, DWORD PTR _ar$137847[ebp]
+	lea	eax, DWORD PTR _ar$137883[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	?push_back@?$vector@HV?$allocator@H@std@@@std@@QAEXABH@Z ; std::vector<int,std::allocator<int> >::push_back
 $LN10@HandleMess:
 
-; 334  : 			}
-; 335  : 
-; 336  : 			return true;
+; 338  : 			}
+; 339  : 
+; 340  : 			return true;
 
 	mov	al, 1
 	jmp	$LN18@HandleMess
 $LN9@HandleMess:
 
-; 337  : 		}
-; 338  : 
-; 339  : 		case Msg_quitExploring:
-; 340  : 		{
-; 341  : 			int ar = (*(int*)msg.ExtraInfo);
+; 341  : 		}
+; 342  : 
+; 343  : 		case Msg_quitExploring:
+; 344  : 		{
+; 345  : 			int ar = (*(int*)msg.ExtraInfo);
 
 	mov	ecx, DWORD PTR _msg$[ebp]
 	mov	edx, DWORD PTR [ecx+24]
 	mov	eax, DWORD PTR [edx]
-	mov	DWORD PTR _ar$137857[ebp], eax
+	mov	DWORD PTR _ar$137893[ebp], eax
 
-; 342  : 			for(int i =0;i<m_AreasExploring.size();i++)
+; 346  : 			for(int i =0;i<m_AreasExploring.size();i++)
 
-	mov	DWORD PTR _i$137859[ebp], 0
+	mov	DWORD PTR _i$137895[ebp], 0
 	jmp	SHORT $LN8@HandleMess
 $LN7@HandleMess:
-	mov	ecx, DWORD PTR _i$137859[ebp]
+	mov	ecx, DWORD PTR _i$137895[ebp]
 	add	ecx, 1
-	mov	DWORD PTR _i$137859[ebp], ecx
+	mov	DWORD PTR _i$137895[ebp], ecx
 $LN8@HandleMess:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
-	cmp	DWORD PTR _i$137859[ebp], eax
+	cmp	DWORD PTR _i$137895[ebp], eax
 	jae	SHORT $LN6@HandleMess
 
-; 343  : 			{
-; 344  : 				if(m_AreasExploring[i] == ar)
+; 347  : 			{
+; 348  : 				if(m_AreasExploring[i] == ar)
 
-	mov	edx, DWORD PTR _i$137859[ebp]
+	mov	edx, DWORD PTR _i$137895[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
 	mov	eax, DWORD PTR [eax]
-	cmp	eax, DWORD PTR _ar$137857[ebp]
+	cmp	eax, DWORD PTR _ar$137893[ebp]
 	jne	SHORT $LN5@HandleMess
 
-; 345  : 				{
-; 346  : 					m_AreasExploring[i]= m_AreasExploring[m_AreasExploring.size()-1];
+; 349  : 				{
+; 350  : 					m_AreasExploring[i]= m_AreasExploring[m_AreasExploring.size()-1];
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
@@ -7202,7 +7398,7 @@ $LN8@HandleMess:
 	add	ecx, 72					; 00000048H
 	call	??A?$vector@HV?$allocator@H@std@@@std@@QAEAAHI@Z ; std::vector<int,std::allocator<int> >::operator[]
 	mov	esi, eax
-	mov	ecx, DWORD PTR _i$137859[ebp]
+	mov	ecx, DWORD PTR _i$137895[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
@@ -7210,35 +7406,35 @@ $LN8@HandleMess:
 	mov	edx, DWORD PTR [esi]
 	mov	DWORD PTR [eax], edx
 
-; 347  : 					m_AreasExploring.pop_back();
+; 351  : 					m_AreasExploring.pop_back();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 72					; 00000048H
 	call	?pop_back@?$vector@HV?$allocator@H@std@@@std@@QAEXXZ ; std::vector<int,std::allocator<int> >::pop_back
 
-; 348  : 					break;
+; 352  : 					break;
 
 	jmp	SHORT $LN6@HandleMess
 $LN5@HandleMess:
 
-; 349  : 				}
-; 350  : 			}
+; 353  : 				}
+; 354  : 			}
 
 	jmp	SHORT $LN7@HandleMess
 $LN6@HandleMess:
 
-; 351  : 
-; 352  : 			return true;
+; 355  : 
+; 356  : 			return true;
 
 	mov	al, 1
 	jmp	SHORT $LN18@HandleMess
 $LN4@HandleMess:
 
-; 353  : 		}
-; 354  : 
-; 355  : 		case Msg_TakeThatMF:
-; 356  : 		{
-; 357  : 			if(m_pOwner->Health() <=100 && m_iStatus != completed) m_iStatus = inactive;
+; 357  : 		}
+; 358  : 
+; 359  : 		case Msg_TakeThatMF:
+; 360  : 		{
+; 361  : 			if(m_pOwner->Health() <=100 && m_iStatus != completed) m_iStatus = inactive;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
@@ -7252,7 +7448,7 @@ $LN4@HandleMess:
 	mov	DWORD PTR [edx+12], 1
 $LN3@HandleMess:
 
-; 358  : 			return ForwardMessageToFrontMostSubgoal(msg);
+; 362  : 			return ForwardMessageToFrontMostSubgoal(msg);
 
 	mov	eax, DWORD PTR _msg$[ebp]
 	push	eax
@@ -7261,26 +7457,26 @@ $LN3@HandleMess:
 	jmp	SHORT $LN18@HandleMess
 $LN2@HandleMess:
 
-; 359  : 		}
-; 360  : 
-; 361  : 		case Msg_We_Won:
-; 362  : 		{
-; 363  : 			RemoveAllSubgoals();
+; 363  : 		}
+; 364  : 
+; 365  : 		case Msg_We_Won:
+; 366  : 		{
+; 367  : 			RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 364  : 			m_iStatus = completed;
+; 368  : 			m_iStatus = completed;
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], 2
 $LN1@HandleMess:
 
-; 365  : 			//if(msg.Sender == m_pOwner->my_type) AddGoal_Explore();
-; 366  : 			//else AddGoal_AttackTarget();
-; 367  : 		}
-; 368  : 
-; 369  : 		default: return ForwardMessageToFrontMostSubgoal(msg);
+; 369  : 			//if(msg.Sender == m_pOwner->my_type) AddGoal_Explore();
+; 370  : 			//else AddGoal_AttackTarget();
+; 371  : 		}
+; 372  : 
+; 373  : 		default: return ForwardMessageToFrontMostSubgoal(msg);
 
 	mov	edx, DWORD PTR _msg$[ebp]
 	push	edx
@@ -7288,9 +7484,9 @@ $LN1@HandleMess:
 	call	?ForwardMessageToFrontMostSubgoal@?$Goal_Composite@VRaven_Bot@@@@IAE_NABUTelegram@@@Z ; Goal_Composite<Raven_Bot>::ForwardMessageToFrontMostSubgoal
 $LN18@HandleMess:
 
-; 370  : 	}
-; 371  : 	
-; 372  : }
+; 374  : 	}
+; 375  : 	
+; 376  : }
 
 	push	edx
 	mov	ecx, ebp
@@ -7738,7 +7934,7 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?AddSubgoal@?$Goal@VRaven_Bot@@@@UAEXPAV1@@Z
 _TEXT	SEGMENT
-$T151080 = -16						; size = 12
+$T151147 = -16						; size = 12
 _this$ = -4						; size = 4
 _g$ = 8							; size = 4
 ?AddSubgoal@?$Goal@VRaven_Bot@@@@UAEXPAV1@@Z PROC	; Goal<Raven_Bot>::AddSubgoal, COMDAT
@@ -7756,10 +7952,10 @@ _g$ = 8							; size = 4
 	mov	DWORD PTR [ebp-4], eax
 	mov	DWORD PTR _this$[ebp], ecx
 	push	OFFSET ??_C@_0CB@OHIHCHGJ@Cannot?5add?5goals?5to?5atomic?5goals@
-	lea	ecx, DWORD PTR $T151080[ebp]
+	lea	ecx, DWORD PTR $T151147[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@
-	lea	eax, DWORD PTR $T151080[ebp]
+	lea	eax, DWORD PTR $T151147[ebp]
 	push	eax
 	call	__CxxThrowException@8
 $LN2@AddSubgoal:
@@ -7889,12 +8085,12 @@ ___flags$ = 8						; size = 4
 	call	??1runtime_error@std@@UAE@XZ
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@12
+	je	SHORT $LN1@scalar@13
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@12:
+$LN1@scalar@13:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -8016,8 +8212,8 @@ _TEXT	SEGMENT
 tv95 = -44						; size = 4
 tv92 = -40						; size = 4
 tv128 = -36						; size = 4
-$T151100 = -32						; size = 12
-$T151099 = -20						; size = 4
+$T151167 = -32						; size = 12
+$T151166 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -8056,7 +8252,7 @@ __Val$ = 8						; size = 4
 	call	??$forward@PAV?$Goal@VRaven_Bot@@@@@std@@YA$$QAPAV?$Goal@VRaven_Bot@@@@AAPAV1@@Z ; std::forward<Goal<Raven_Bot> *>
 	add	esp, 4
 	push	eax
-	lea	ecx, DWORD PTR $T151100[ebp]
+	lea	ecx, DWORD PTR $T151167[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::end
@@ -8066,7 +8262,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T151099[ebp], esp
+	mov	DWORD PTR $T151166[ebp], esp
 	mov	eax, DWORD PTR tv92[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -8074,7 +8270,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$_Insert_rv@PAV?$Goal@VRaven_Bot@@@@@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@1@$$QAPAV?$Goal@VRaven_Bot@@@@@Z ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::_Insert_rv<Goal<Raven_Bot> *>
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T151100[ebp]
+	lea	ecx, DWORD PTR $T151167[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 
 ; 718  : 		}
@@ -8092,7 +8288,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_back@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEX$$QAPAV?$Goal@VRaven_Bot@@@@@Z$0:
-	lea	ecx, DWORD PTR $T151100[ebp]
+	lea	ecx, DWORD PTR $T151167[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_back@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEX$$QAPAV?$Goal@VRaven_Bot@@@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -8109,7 +8305,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRa
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151112 = -8						; size = 4
+$T151179 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin, COMDAT
@@ -8123,7 +8319,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151112[ebp], 0
+	mov	DWORD PTR $T151179[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -8138,9 +8334,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >
-	mov	ecx, DWORD PTR $T151112[ebp]
+	mov	ecx, DWORD PTR $T151179[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T151112[ebp], ecx
+	mov	DWORD PTR $T151179[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -8156,7 +8352,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151117 = -8						; size = 4
+$T151184 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::end, COMDAT
@@ -8170,7 +8366,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151117[ebp], 0
+	mov	DWORD PTR $T151184[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -8181,9 +8377,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >
-	mov	eax, DWORD PTR $T151117[ebp]
+	mov	eax, DWORD PTR $T151184[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151117[ebp], eax
+	mov	DWORD PTR $T151184[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -8226,99 +8422,6 @@ _this$ = -4						; size = 4
 	ret	0
 ?empty@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE_NXZ ENDP ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::empty
 _TEXT	ENDS
-;	COMDAT xdata$x
-xdata$x	SEGMENT
-__unwindtable$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ DD 0ffffffffH
-	DD	FLAT:__unwindfunclet$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ$0
-__ehfuncinfo$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ DD 019930522H
-	DD	01H
-	DD	FLAT:__unwindtable$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
-	DD	2 DUP(00H)
-	DD	2 DUP(00H)
-	DD	00H
-	DD	01H
-; Function compile flags: /Odtp /RTCsu
-xdata$x	ENDS
-;	COMDAT ?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
-_TEXT	SEGMENT
-tv72 = -40						; size = 4
-tv73 = -36						; size = 4
-$T151124 = -32						; size = 12
-$T151123 = -20						; size = 4
-_this$ = -16						; size = 4
-__$EHRec$ = -12						; size = 12
-?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front, COMDAT
-; _this$ = ecx
-
-; 896  : 		{	// return first element of mutable sequence
-
-	push	ebp
-	mov	ebp, esp
-	push	-1
-	push	__ehhandler$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
-	mov	eax, DWORD PTR fs:0
-	push	eax
-	sub	esp, 28					; 0000001cH
-	mov	eax, -858993460				; ccccccccH
-	mov	DWORD PTR [ebp-40], eax
-	mov	DWORD PTR [ebp-36], eax
-	mov	DWORD PTR [ebp-32], eax
-	mov	DWORD PTR [ebp-28], eax
-	mov	DWORD PTR [ebp-24], eax
-	mov	DWORD PTR [ebp-20], eax
-	mov	DWORD PTR [ebp-16], eax
-	mov	eax, DWORD PTR ___security_cookie
-	xor	eax, ebp
-	push	eax
-	lea	eax, DWORD PTR __$EHRec$[ebp]
-	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR _this$[ebp], ecx
-
-; 897  : 		return (*begin());
-
-	lea	eax, DWORD PTR $T151124[ebp]
-	push	eax
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
-	mov	DWORD PTR tv73[ebp], eax
-	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR tv72[ebp], ecx
-	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	mov	ecx, DWORD PTR tv72[ebp]
-	call	??D?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
-	mov	DWORD PTR $T151123[ebp], eax
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T151124[ebp]
-	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T151123[ebp]
-
-; 898  : 		}
-
-	mov	ecx, DWORD PTR __$EHRec$[ebp]
-	mov	DWORD PTR fs:0, ecx
-	pop	ecx
-	add	esp, 40					; 00000028H
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-_TEXT	ENDS
-;	COMDAT text$x
-text$x	SEGMENT
-__unwindfunclet$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ$0:
-	lea	ecx, DWORD PTR $T151124[ebp]
-	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-__ehhandler$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ:
-	mov	edx, DWORD PTR [esp+8]
-	lea	eax, DWORD PTR [edx+12]
-	mov	ecx, DWORD PTR [edx-32]
-	xor	ecx, eax
-	call	@__security_check_cookie@4
-	mov	eax, OFFSET __ehfuncinfo$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
-	jmp	___CxxFrameHandler3
-text$x	ENDS
-?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ ENDP ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front
 PUBLIC	??D?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
 PUBLIC	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
 ;	COMDAT xdata$x
@@ -8338,8 +8441,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv72 = -40						; size = 4
 tv73 = -36						; size = 4
-$T151135 = -32						; size = 12
-$T151134 = -20						; size = 4
+$T151191 = -32						; size = 12
+$T151190 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front, COMDAT
@@ -8371,7 +8474,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 902  : 		return (*begin());
 
-	lea	eax, DWORD PTR $T151135[ebp]
+	lea	eax, DWORD PTR $T151191[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
@@ -8381,11 +8484,11 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR tv72[ebp]
 	call	??D?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
-	mov	DWORD PTR $T151134[ebp], eax
+	mov	DWORD PTR $T151190[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T151135[ebp]
+	lea	ecx, DWORD PTR $T151191[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T151134[ebp]
+	mov	eax, DWORD PTR $T151190[ebp]
 
 ; 903  : 		}
 
@@ -8402,7 +8505,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ$0:
-	lea	ecx, DWORD PTR $T151135[ebp]
+	lea	ecx, DWORD PTR $T151191[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -8420,7 +8523,7 @@ PUBLIC	??0?$allocator@PAVGoal_Evaluator@@@std@@QAE@XZ	; std::allocator<Goal_Eval
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector
 ;	COMDAT ??0?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151145 = -8						; size = 4
+$T151201 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE@XZ PROC ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >, COMDAT
 ; _this$ = ecx
@@ -8435,7 +8538,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151145[ebp], esp
+	mov	DWORD PTR $T151201[ebp], esp
 	call	??0?$allocator@PAVGoal_Evaluator@@@std@@QAE@XZ ; std::allocator<Goal_Evaluator *>::allocator<Goal_Evaluator *>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE@V?$allocator@PAVGoal_Evaluator@@@1@@Z ; std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >
@@ -8460,7 +8563,7 @@ PUBLIC	??$addressof@PAVGoal_Evaluator@@@std@@YAPAPAVGoal_Evaluator@@AAPAV1@@Z ; 
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?push_back@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEX$$QAPAVGoal_Evaluator@@@Z
 _TEXT	SEGMENT
-__Idx$139396 = -8					; size = 4
+__Idx$139428 = -8					; size = 4
 _this$ = -4						; size = 4
 __Val$ = 8						; size = 4
 ?push_back@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEX$$QAPAVGoal_Evaluator@@@Z PROC ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::push_back, COMDAT
@@ -8498,7 +8601,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	sub	eax, DWORD PTR [ecx+4]
 	sar	eax, 2
-	mov	DWORD PTR __Idx$139396[ebp], eax
+	mov	DWORD PTR __Idx$139428[ebp], eax
 
 ; 635  : 			if (this->_Mylast == this->_Myend)
 
@@ -8532,7 +8635,7 @@ $LN3@push_back:
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+4]
-	mov	edx, DWORD PTR __Idx$139396[ebp]
+	mov	edx, DWORD PTR __Idx$139428[ebp]
 	lea	eax, DWORD PTR [ecx+edx*4]
 	push	eax
 	call	??$forward@PAVGoal_Evaluator@@@std@@YA$$QAPAVGoal_Evaluator@@AAPAV1@@Z ; std::forward<Goal_Evaluator *>
@@ -8705,7 +8808,7 @@ PUBLIC	??0?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVG
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151161 = -8						; size = 4
+$T151217 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ PROC ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::begin, COMDAT
@@ -8719,7 +8822,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151161[ebp], 0
+	mov	DWORD PTR $T151217[ebp], 0
 
 ; 782  : 		return (iterator(this->_Myfirst, this));
 
@@ -8730,9 +8833,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@PAPAVGoal_Evaluator@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >
-	mov	eax, DWORD PTR $T151161[ebp]
+	mov	eax, DWORD PTR $T151217[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151161[ebp], eax
+	mov	DWORD PTR $T151217[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -8749,7 +8852,7 @@ PUBLIC	??0?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocato
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151166 = -8						; size = 4
+$T151222 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ PROC ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::begin, COMDAT
@@ -8763,7 +8866,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151166[ebp], 0
+	mov	DWORD PTR $T151222[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Myfirst, this));
 
@@ -8774,9 +8877,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@PAPAVGoal_Evaluator@@PBU_Container_base12@1@@Z ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >
-	mov	eax, DWORD PTR $T151166[ebp]
+	mov	eax, DWORD PTR $T151222[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151166[ebp], eax
+	mov	DWORD PTR $T151222[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -8792,7 +8895,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151171 = -8						; size = 4
+$T151227 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE?AV?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ PROC ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::end, COMDAT
@@ -8806,7 +8909,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151171[ebp], 0
+	mov	DWORD PTR $T151227[ebp], 0
 
 ; 792  : 		return (iterator(this->_Mylast, this));
 
@@ -8817,9 +8920,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@PAPAVGoal_Evaluator@@PBU_Container_base12@1@@Z ; std::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::_Vector_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >
-	mov	eax, DWORD PTR $T151171[ebp]
+	mov	eax, DWORD PTR $T151227[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151171[ebp], eax
+	mov	DWORD PTR $T151227[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -8835,7 +8938,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151176 = -8						; size = 4
+$T151232 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@2@XZ PROC ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::end, COMDAT
@@ -8849,7 +8952,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151176[ebp], 0
+	mov	DWORD PTR $T151232[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Mylast, this));
 
@@ -8860,9 +8963,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_Vector_const_iterator@V?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@@std@@QAE@PAPAVGoal_Evaluator@@PBU_Container_base12@1@@Z ; std::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >::_Vector_const_iterator<std::_Vector_val<Goal_Evaluator *,std::allocator<Goal_Evaluator *> > >
-	mov	eax, DWORD PTR $T151176[ebp]
+	mov	eax, DWORD PTR $T151232[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151176[ebp], eax
+	mov	DWORD PTR $T151232[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -8880,7 +8983,7 @@ PUBLIC	??0?$allocator@UAreaMap@@@std@@QAE@XZ		; std::allocator<AreaMap>::allocat
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??0?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151180 = -8						; size = 4
+$T151236 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAE@XZ PROC ; std::vector<AreaMap,std::allocator<AreaMap> >::vector<AreaMap,std::allocator<AreaMap> >, COMDAT
 ; _this$ = ecx
@@ -8895,7 +8998,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151180[ebp], esp
+	mov	DWORD PTR $T151236[ebp], esp
 	call	??0?$allocator@UAreaMap@@@std@@QAE@XZ	; std::allocator<AreaMap>::allocator<AreaMap>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAE@V?$allocator@UAreaMap@@@1@@Z ; std::_Vector_val<AreaMap,std::allocator<AreaMap> >::_Vector_val<AreaMap,std::allocator<AreaMap> >
@@ -8920,7 +9023,7 @@ PUBLIC	??$addressof@UAreaMap@@@std@@YAPAUAreaMap@@AAU1@@Z ; std::addressof<AreaM
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z
 _TEXT	SEGMENT
-__Idx$139461 = -8					; size = 4
+__Idx$139493 = -8					; size = 4
 _this$ = -4						; size = 4
 __Val$ = 8						; size = 4
 ?push_back@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX$$QAUAreaMap@@@Z PROC ; std::vector<AreaMap,std::allocator<AreaMap> >::push_back, COMDAT
@@ -8958,7 +9061,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	sub	eax, DWORD PTR [ecx+4]
 	sar	eax, 5
-	mov	DWORD PTR __Idx$139461[ebp], eax
+	mov	DWORD PTR __Idx$139493[ebp], eax
 
 ; 635  : 			if (this->_Mylast == this->_Myend)
 
@@ -8990,7 +9093,7 @@ $LN3@push_back@2:
 ; 639  : 				this->_Mylast,
 ; 640  : 				_STD forward<_Ty>(this->_Myfirst[_Idx]));
 
-	mov	eax, DWORD PTR __Idx$139461[ebp]
+	mov	eax, DWORD PTR __Idx$139493[ebp]
 	shl	eax, 5
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	eax, DWORD PTR [ecx+4]
@@ -9352,7 +9455,7 @@ PUBLIC	??0?$allocator@H@std@@QAE@XZ			; std::allocator<int>::allocator<int>
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151201 = -8						; size = 4
+$T151257 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$vector@HV?$allocator@H@std@@@std@@QAE@XZ PROC	; std::vector<int,std::allocator<int> >::vector<int,std::allocator<int> >, COMDAT
 ; _this$ = ecx
@@ -9367,7 +9470,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151201[ebp], esp
+	mov	DWORD PTR $T151257[ebp], esp
 	call	??0?$allocator@H@std@@QAE@XZ		; std::allocator<int>::allocator<int>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_Vector_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z ; std::_Vector_val<int,std::allocator<int> >::_Vector_val<int,std::allocator<int> >
@@ -9595,7 +9698,7 @@ PUBLIC	??$addressof@$$CBH@std@@YAPBHABH@Z		; std::addressof<int const >
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?push_back@?$vector@HV?$allocator@H@std@@@std@@QAEXABH@Z
 _TEXT	SEGMENT
-__Idx$139526 = -8					; size = 4
+__Idx$139558 = -8					; size = 4
 _this$ = -4						; size = 4
 __Val$ = 8						; size = 4
 ?push_back@?$vector@HV?$allocator@H@std@@@std@@QAEXABH@Z PROC ; std::vector<int,std::allocator<int> >::push_back, COMDAT
@@ -9633,7 +9736,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	sub	eax, DWORD PTR [ecx+4]
 	sar	eax, 2
-	mov	DWORD PTR __Idx$139526[ebp], eax
+	mov	DWORD PTR __Idx$139558[ebp], eax
 
 ; 980  : 			if (this->_Mylast == this->_Myend)
 
@@ -9667,7 +9770,7 @@ $LN3@push_back@3:
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+4]
-	mov	edx, DWORD PTR __Idx$139526[ebp]
+	mov	edx, DWORD PTR __Idx$139558[ebp]
 	lea	eax, DWORD PTR [ecx+edx*4]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -9900,11 +10003,11 @@ tv181 = -64						; size = 4
 tv188 = -60						; size = 4
 tv178 = -56						; size = 4
 tv69 = -52						; size = 4
-$T151228 = -48						; size = 12
-$T151227 = -36						; size = 4
-$T151226 = -32						; size = 4
-$T151225 = -28						; size = 4
-$T151224 = -24						; size = 4
+$T151284 = -48						; size = 12
+$T151283 = -36						; size = 4
+$T151282 = -32						; size = 4
+$T151281 = -28						; size = 4
+$T151280 = -24						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Right$ = 8						; size = 4
@@ -9941,7 +10044,7 @@ __Right$ = 8						; size = 4
 	add	eax, 13					; 0000000dH
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151224[ebp], esp
+	mov	DWORD PTR $T151280[ebp], esp
 	push	eax
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@ABV01@@Z ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -9956,7 +10059,7 @@ __Right$ = 8						; size = 4
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T151225[ebp], esp
+	mov	DWORD PTR $T151281[ebp], esp
 	push	ecx
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end
@@ -9966,7 +10069,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 2
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T151226[ebp], esp
+	mov	DWORD PTR $T151282[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -9974,7 +10077,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR tv188[ebp]
 	mov	DWORD PTR tv181[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+12], 3
-	lea	edx, DWORD PTR $T151228[ebp]
+	lea	edx, DWORD PTR $T151284[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin
@@ -9984,7 +10087,7 @@ __Right$ = 8						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+12], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T151227[ebp], esp
+	mov	DWORD PTR $T151283[ebp], esp
 	mov	edx, DWORD PTR tv183[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -9993,7 +10096,7 @@ __Right$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::insert<std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > > >
 	mov	BYTE PTR __$EHRec$[ebp+12], 1
-	lea	ecx, DWORD PTR $T151228[ebp]
+	lea	ecx, DWORD PTR $T151284[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN4@list
 __catch$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$0:
@@ -10043,13 +10146,13 @@ __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@Q
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@XZ ; std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >::~_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >
 __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$3:
-	mov	ecx, DWORD PTR $T151225[ebp]
+	mov	ecx, DWORD PTR $T151281[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$4:
-	mov	ecx, DWORD PTR $T151226[ebp]
+	mov	ecx, DWORD PTR $T151282[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z$5:
-	lea	ecx, DWORD PTR $T151228[ebp]
+	lea	ecx, DWORD PTR $T151284[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??0?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@ABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -10139,7 +10242,7 @@ PUBLIC	?_Nextnode@?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151259 = -8						; size = 4
+$T151315 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin, COMDAT
@@ -10153,7 +10256,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151259[ebp], 0
+	mov	DWORD PTR $T151315[ebp], 0
 
 ; 782  : 		return (iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -10168,9 +10271,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	ecx, DWORD PTR $T151259[ebp]
+	mov	ecx, DWORD PTR $T151315[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T151259[ebp], ecx
+	mov	DWORD PTR $T151315[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 783  : 		}
@@ -10186,7 +10289,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151264 = -8						; size = 4
+$T151320 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end, COMDAT
@@ -10200,7 +10303,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151264[ebp], 0
+	mov	DWORD PTR $T151320[ebp], 0
 
 ; 792  : 		return (iterator(this->_Myhead, this));
 
@@ -10211,9 +10314,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	eax, DWORD PTR $T151264[ebp]
+	mov	eax, DWORD PTR $T151320[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151264[ebp], eax
+	mov	DWORD PTR $T151320[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 793  : 		}
@@ -11130,12 +11233,12 @@ ___flags$ = 8						; size = 4
 	call	??1?$Goal_Composite@VRaven_Bot@@@@UAE@XZ ; Goal_Composite<Raven_Bot>::~Goal_Composite<Raven_Bot>
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@13
+	je	SHORT $LN1@scalar@14
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@13:
+$LN1@scalar@14:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -11161,12 +11264,12 @@ ___flags$ = 8						; size = 4
 	call	??1?$Goal@VRaven_Bot@@@@UAE@XZ		; Goal<Raven_Bot>::~Goal<Raven_Bot>
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@14
+	je	SHORT $LN1@scalar@15
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@14:
+$LN1@scalar@15:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -11262,7 +11365,7 @@ PUBLIC	??0?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@QAE@XZ ; std::allocator<Goal
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??0?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-$T151318 = -8						; size = 4
+$T151374 = -8						; size = 4
 _this$ = -4						; size = 4
 ??0?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >, COMDAT
 ; _this$ = ecx
@@ -11277,7 +11380,7 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151318[ebp], esp
+	mov	DWORD PTR $T151374[ebp], esp
 	call	??0?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@QAE@XZ ; std::allocator<Goal<Raven_Bot> *>::allocator<Goal<Raven_Bot> *>
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@1@@Z ; std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >
@@ -11372,7 +11475,7 @@ PUBLIC	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocat
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151332 = -8						; size = 4
+$T151388 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin, COMDAT
@@ -11386,7 +11489,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151332[ebp], 0
+	mov	DWORD PTR $T151388[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -11401,9 +11504,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >
-	mov	ecx, DWORD PTR $T151332[ebp]
+	mov	ecx, DWORD PTR $T151388[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T151332[ebp], ecx
+	mov	DWORD PTR $T151388[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -12050,7 +12153,7 @@ __ehfuncinfo$??0?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAE@V?$allocator@PAVGoal_Evaluator@@@1@@Z
 _TEXT	SEGMENT
-$T151372 = -36						; size = 8
+$T151428 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -12108,7 +12211,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T151372[ebp]
+	lea	ecx, DWORD PTR $T151428[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -12837,7 +12940,7 @@ __ehfuncinfo$??0?$_Vector_val@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAE@V
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAE@V?$allocator@UAreaMap@@@1@@Z
 _TEXT	SEGMENT
-$T151425 = -36						; size = 8
+$T151481 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -12895,7 +12998,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T151425[ebp]
+	lea	ecx, DWORD PTR $T151481[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -13569,7 +13672,7 @@ __ehfuncinfo$??0?$_Vector_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z
 xdata$x	ENDS
 ;	COMDAT ??0?$_Vector_val@HV?$allocator@H@std@@@std@@QAE@V?$allocator@H@1@@Z
 _TEXT	SEGMENT
-$T151474 = -36						; size = 8
+$T151530 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -13627,7 +13730,7 @@ __Al$ = 8						; size = 1
 
 ; 443  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T151474[ebp]
+	lea	ecx, DWORD PTR $T151530[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	eax, DWORD PTR _this$[ebp]
@@ -13880,7 +13983,7 @@ PUBLIC	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRave
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\list
 ;	COMDAT ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151502 = -8						; size = 4
+$T151558 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::begin, COMDAT
@@ -13894,7 +13997,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151502[ebp], 0
+	mov	DWORD PTR $T151558[ebp], 0
 
 ; 787  : 		return (const_iterator(this->_Nextnode(this->_Myhead), this));
 
@@ -13909,9 +14012,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	ecx, DWORD PTR $T151502[ebp]
+	mov	ecx, DWORD PTR $T151558[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T151502[ebp], ecx
+	mov	DWORD PTR $T151558[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 788  : 		}
@@ -13927,7 +14030,7 @@ ___$ReturnUdt$ = 8					; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T151507 = -8						; size = 4
+$T151563 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@XZ PROC ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::end, COMDAT
@@ -13941,7 +14044,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T151507[ebp], 0
+	mov	DWORD PTR $T151563[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -13952,9 +14055,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	eax, DWORD PTR $T151507[ebp]
+	mov	eax, DWORD PTR $T151563[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T151507[ebp], eax
+	mov	DWORD PTR $T151563[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -14017,7 +14120,7 @@ __ehfuncinfo$??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z
 _TEXT	SEGMENT
-$T151513 = -20						; size = 4
+$T151569 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -14043,7 +14146,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151513[ebp], esp
+	mov	DWORD PTR $T151569[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@PAVRaven_Bot@@@std@@QAE@ABV01@@Z ; std::allocator<Raven_Bot *>::allocator<Raven_Bot *>
@@ -15171,7 +15274,7 @@ __ehfuncinfo$??0?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRave
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@1@@Z
 _TEXT	SEGMENT
-$T151584 = -20						; size = 4
+$T151640 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Al$ = 8						; size = 1
@@ -15197,7 +15300,7 @@ __Al$ = 8						; size = 1
 	mov	DWORD PTR _this$[ebp], ecx
 	push	ecx
 	mov	ecx, esp
-	mov	DWORD PTR $T151584[ebp], esp
+	mov	DWORD PTR $T151640[ebp], esp
 	lea	eax, DWORD PTR __Al$[ebp]
 	push	eax
 	call	??0?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@QAE@ABV01@@Z ; std::allocator<Goal<Raven_Bot> *>::allocator<Goal<Raven_Bot> *>
@@ -15426,8 +15529,8 @@ __ehfuncinfo$?reserve@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator
 xdata$x	ENDS
 ;	COMDAT ?reserve@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QAEXI@Z
 _TEXT	SEGMENT
-__Size$142029 = -28					; size = 4
-__Ptr$142022 = -24					; size = 4
+__Size$142061 = -28					; size = 4
+__Ptr$142054 = -24					; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Count$ = 8						; size = 4
@@ -15487,7 +15590,7 @@ $LN5@reserve:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?allocate@?$allocator@PAVGoal_Evaluator@@@std@@QAEPAPAVGoal_Evaluator@@I@Z ; std::allocator<Goal_Evaluator *>::allocate
-	mov	DWORD PTR __Ptr$142022[ebp], eax
+	mov	DWORD PTR __Ptr$142054[ebp], eax
 
 ; 752  : 
 ; 753  : 			_TRY_BEGIN
@@ -15496,7 +15599,7 @@ $LN5@reserve:
 
 ; 754  : 			_Umove(this->_Myfirst, this->_Mylast, _Ptr);
 
-	mov	ecx, DWORD PTR __Ptr$142022[ebp]
+	mov	ecx, DWORD PTR __Ptr$142054[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
@@ -15514,7 +15617,7 @@ __catch$?reserve@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@st
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Ptr$142022[ebp]
+	mov	ecx, DWORD PTR __Ptr$142054[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -15540,7 +15643,7 @@ __tryend$?reserve@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@s
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?size@?$vector@PAVGoal_Evaluator@@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@QBEIXZ ; std::vector<Goal_Evaluator *,std::allocator<Goal_Evaluator *> >::size
-	mov	DWORD PTR __Size$142029[ebp], eax
+	mov	DWORD PTR __Size$142061[ebp], eax
 
 ; 761  : 			if (this->_Myfirst != 0)
 
@@ -15587,15 +15690,15 @@ $LN1@reserve:
 ; 769  : 			this->_Myend = _Ptr + _Count;
 
 	mov	eax, DWORD PTR __Count$[ebp]
-	mov	ecx, DWORD PTR __Ptr$142022[ebp]
+	mov	ecx, DWORD PTR __Ptr$142054[ebp]
 	lea	edx, DWORD PTR [ecx+eax*4]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], edx
 
 ; 770  : 			this->_Mylast = _Ptr + _Size;
 
-	mov	ecx, DWORD PTR __Size$142029[ebp]
-	mov	edx, DWORD PTR __Ptr$142022[ebp]
+	mov	ecx, DWORD PTR __Size$142061[ebp]
+	mov	edx, DWORD PTR __Ptr$142054[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+8], eax
@@ -15603,7 +15706,7 @@ $LN1@reserve:
 ; 771  : 			this->_Myfirst = _Ptr;
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Ptr$142022[ebp]
+	mov	eax, DWORD PTR __Ptr$142054[ebp]
 	mov	DWORD PTR [edx+4], eax
 $LN7@reserve:
 
@@ -15969,8 +16072,8 @@ __ehfuncinfo$?reserve@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEX
 xdata$x	ENDS
 ;	COMDAT ?reserve@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEXI@Z
 _TEXT	SEGMENT
-__Size$142067 = -28					; size = 4
-__Ptr$142060 = -24					; size = 4
+__Size$142099 = -28					; size = 4
+__Ptr$142092 = -24					; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Count$ = 8						; size = 4
@@ -16030,7 +16133,7 @@ $LN5@reserve@2:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?allocate@?$allocator@UAreaMap@@@std@@QAEPAUAreaMap@@I@Z ; std::allocator<AreaMap>::allocate
-	mov	DWORD PTR __Ptr$142060[ebp], eax
+	mov	DWORD PTR __Ptr$142092[ebp], eax
 
 ; 752  : 
 ; 753  : 			_TRY_BEGIN
@@ -16039,7 +16142,7 @@ $LN5@reserve@2:
 
 ; 754  : 			_Umove(this->_Myfirst, this->_Mylast, _Ptr);
 
-	mov	ecx, DWORD PTR __Ptr$142060[ebp]
+	mov	ecx, DWORD PTR __Ptr$142092[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
@@ -16057,7 +16160,7 @@ __catch$?reserve@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEXI@Z$0
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Ptr$142060[ebp]
+	mov	ecx, DWORD PTR __Ptr$142092[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -16083,7 +16186,7 @@ __tryend$?reserve@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QAEXI@Z$
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?size@?$vector@UAreaMap@@V?$allocator@UAreaMap@@@std@@@std@@QBEIXZ ; std::vector<AreaMap,std::allocator<AreaMap> >::size
-	mov	DWORD PTR __Size$142067[ebp], eax
+	mov	DWORD PTR __Size$142099[ebp], eax
 
 ; 761  : 			if (this->_Myfirst != 0)
 
@@ -16131,22 +16234,22 @@ $LN1@reserve@2:
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	shl	eax, 5
-	add	eax, DWORD PTR __Ptr$142060[ebp]
+	add	eax, DWORD PTR __Ptr$142092[ebp]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], eax
 
 ; 770  : 			this->_Mylast = _Ptr + _Size;
 
-	mov	edx, DWORD PTR __Size$142067[ebp]
+	mov	edx, DWORD PTR __Size$142099[ebp]
 	shl	edx, 5
-	add	edx, DWORD PTR __Ptr$142060[ebp]
+	add	edx, DWORD PTR __Ptr$142092[ebp]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+8], edx
 
 ; 771  : 			this->_Myfirst = _Ptr;
 
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR __Ptr$142060[ebp]
+	mov	edx, DWORD PTR __Ptr$142092[ebp]
 	mov	DWORD PTR [ecx+4], edx
 $LN7@reserve@2:
 
@@ -16475,8 +16578,8 @@ __ehfuncinfo$?reserve@?$vector@HV?$allocator@H@std@@@std@@QAEXI@Z DD 019930522H
 xdata$x	ENDS
 ;	COMDAT ?reserve@?$vector@HV?$allocator@H@std@@@std@@QAEXI@Z
 _TEXT	SEGMENT
-__Size$142103 = -28					; size = 4
-__Ptr$142096 = -24					; size = 4
+__Size$142135 = -28					; size = 4
+__Ptr$142128 = -24					; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Count$ = 8						; size = 4
@@ -16536,7 +16639,7 @@ $LN5@reserve@3:
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
 	call	?allocate@?$allocator@H@std@@QAEPAHI@Z	; std::allocator<int>::allocate
-	mov	DWORD PTR __Ptr$142096[ebp], eax
+	mov	DWORD PTR __Ptr$142128[ebp], eax
 
 ; 752  : 
 ; 753  : 			_TRY_BEGIN
@@ -16545,7 +16648,7 @@ $LN5@reserve@3:
 
 ; 754  : 			_Umove(this->_Myfirst, this->_Mylast, _Ptr);
 
-	mov	ecx, DWORD PTR __Ptr$142096[ebp]
+	mov	ecx, DWORD PTR __Ptr$142128[ebp]
 	push	ecx
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+8]
@@ -16563,7 +16666,7 @@ __catch$?reserve@?$vector@HV?$allocator@H@std@@@std@@QAEXI@Z$0:
 
 	mov	eax, DWORD PTR __Count$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR __Ptr$142096[ebp]
+	mov	ecx, DWORD PTR __Ptr$142128[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -16589,7 +16692,7 @@ __tryend$?reserve@?$vector@HV?$allocator@H@std@@@std@@QAEXI@Z$1:
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ ; std::vector<int,std::allocator<int> >::size
-	mov	DWORD PTR __Size$142103[ebp], eax
+	mov	DWORD PTR __Size$142135[ebp], eax
 
 ; 761  : 			if (this->_Myfirst != 0)
 
@@ -16636,15 +16739,15 @@ $LN1@reserve@3:
 ; 769  : 			this->_Myend = _Ptr + _Count;
 
 	mov	eax, DWORD PTR __Count$[ebp]
-	mov	ecx, DWORD PTR __Ptr$142096[ebp]
+	mov	ecx, DWORD PTR __Ptr$142128[ebp]
 	lea	edx, DWORD PTR [ecx+eax*4]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], edx
 
 ; 770  : 			this->_Mylast = _Ptr + _Size;
 
-	mov	ecx, DWORD PTR __Size$142103[ebp]
-	mov	edx, DWORD PTR __Ptr$142096[ebp]
+	mov	ecx, DWORD PTR __Size$142135[ebp]
+	mov	edx, DWORD PTR __Ptr$142128[ebp]
 	lea	eax, DWORD PTR [edx+ecx*4]
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+8], eax
@@ -16652,7 +16755,7 @@ $LN1@reserve@3:
 ; 771  : 			this->_Myfirst = _Ptr;
 
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR __Ptr$142096[ebp]
+	mov	eax, DWORD PTR __Ptr$142128[ebp]
 	mov	DWORD PTR [edx+4], eax
 $LN7@reserve@3:
 
@@ -17119,7 +17222,7 @@ __ehfuncinfo$??0?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE@V?$allocator@PAVRaven_Bot@@@1@@Z
 _TEXT	SEGMENT
-$T151706 = -36						; size = 8
+$T151762 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -17182,7 +17285,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T151706[ebp]
+	lea	ecx, DWORD PTR $T151762[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -17941,7 +18044,7 @@ __ehfuncinfo$??0?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRave
 xdata$x	ENDS
 ;	COMDAT ??0?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@1@@Z
 _TEXT	SEGMENT
-$T151759 = -36						; size = 8
+$T151815 = -36						; size = 8
 __Alproxy$ = -21					; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -18004,7 +18107,7 @@ __Al$ = 8						; size = 1
 
 ; 448  : 		_Cons_val(_Alproxy, this->_Myproxy, _Container_proxy());
 
-	lea	ecx, DWORD PTR $T151759[ebp]
+	lea	ecx, DWORD PTR $T151815[ebp]
 	call	??0_Container_proxy@std@@QAE@XZ		; std::_Container_proxy::_Container_proxy
 	push	eax
 	mov	edx, DWORD PTR _this$[ebp]
@@ -19153,7 +19256,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv154 = -60						; size = 4
 tv155 = -56						; size = 4
-$T143946 = -52						; size = 32
+$T143978 = -52						; size = 32
 _this$ = -20						; size = 4
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -19268,7 +19371,7 @@ $LN1@RenderAtPo:
 	call	?GetType@?$Goal@VRaven_Bot@@@@QBEHXZ	; Goal<Raven_Bot>::GetType
 	mov	esi, esp
 	push	eax
-	lea	eax, DWORD PTR $T143946[ebp]
+	lea	eax, DWORD PTR $T143978[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _tts$[ebp]
 	mov	edx, DWORD PTR [ecx]
@@ -19295,7 +19398,7 @@ $LN1@RenderAtPo:
 	mov	ecx, eax
 	call	?TextAtPos@Cgdi@@QAEXNNABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; Cgdi::TextAtPos
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T143946[ebp]
+	lea	ecx, DWORD PTR $T143978[ebp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 132  : }
@@ -19318,7 +19421,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?RenderAtPos@?$Goal@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z$0:
-	lea	ecx, DWORD PTR $T143946[ebp]
+	lea	ecx, DWORD PTR $T143978[ebp]
 	jmp	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 __ehhandler$?RenderAtPos@?$Goal@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -19607,7 +19710,7 @@ PUBLIC	?copy@?$char_traits@D@std@@SAPADPADPBDI@Z	; std::char_traits<char>::copy
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEX_NI@Z
 _TEXT	SEGMENT
-__Ptr$140104 = -8					; size = 4
+__Ptr$140136 = -8					; size = 4
 _this$ = -4						; size = 4
 __Built$ = 8						; size = 1
 __Newsize$ = 12						; size = 4
@@ -19643,7 +19746,7 @@ $LN4@Tidy@4:
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+4]
-	mov	DWORD PTR __Ptr$140104[ebp], eax
+	mov	DWORD PTR __Ptr$140136[ebp], eax
 
 ; 1993 : 			if (0 < _Newsize)
 
@@ -19654,7 +19757,7 @@ $LN4@Tidy@4:
 
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	push	ecx
-	mov	edx, DWORD PTR __Ptr$140104[ebp]
+	mov	edx, DWORD PTR __Ptr$140136[ebp]
 	push	edx
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 4
@@ -19669,7 +19772,7 @@ $LN1@Tidy@4:
 	mov	edx, DWORD PTR [ecx+24]
 	add	edx, 1
 	push	edx
-	mov	eax, DWORD PTR __Ptr$140104[ebp]
+	mov	eax, DWORD PTR __Ptr$140136[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 28					; 0000001cH
@@ -19917,7 +20020,7 @@ PUBLIC	?_Myptr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEP
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z
 _TEXT	SEGMENT
-$T151907 = -5						; size = 1
+$T151963 = -5						; size = 1
 _this$ = -4						; size = 4
 __Newsize$ = 8						; size = 4
 ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z PROC ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Eos, COMDAT
@@ -19934,11 +20037,11 @@ __Newsize$ = 8						; size = 4
 
 ; 1953 : 		_Traits::assign(_Myptr()[this->_Mysize = _Newsize], _Elem());
 
-	mov	BYTE PTR $T151907[ebp], 0
+	mov	BYTE PTR $T151963[ebp], 0
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR __Newsize$[ebp]
 	mov	DWORD PTR [eax+20], ecx
-	lea	edx, DWORD PTR $T151907[ebp]
+	lea	edx, DWORD PTR $T151963[ebp]
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Myptr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEPADXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Myptr
@@ -20062,6 +20165,7 @@ ___formal$ = 12						; size = 4
 _TEXT	ENDS
 PUBLIC	?size@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBEIXZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::size
 PUBLIC	?pop_front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXXZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::pop_front
+PUBLIC	?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front
 ; Function compile flags: /Odtp /RTCsu
 ; File c:\users\lucas\desktop\jogos - game ai by example\bluckland_sourcecode - new version\vs2010\common\goals\goal_composite.h
 ;	COMDAT ?ProcessSubgoals@?$Goal_Composite@VRaven_Bot@@@@IAEHXZ
@@ -20069,9 +20173,9 @@ _TEXT	SEGMENT
 tv145 = -28						; size = 4
 tv132 = -24						; size = 4
 tv88 = -20						; size = 4
-$T151919 = -16						; size = 4
-$T151918 = -12						; size = 4
-_StatusOfSubGoals$143959 = -8				; size = 4
+$T151975 = -16						; size = 4
+$T151974 = -12						; size = 4
+_StatusOfSubGoals$143991 = -8				; size = 4
 _this$ = -4						; size = 4
 ?ProcessSubgoals@?$Goal_Composite@VRaven_Bot@@@@IAEHXZ PROC ; Goal_Composite<Raven_Bot>::ProcessSubgoals, COMDAT
 ; _this$ = ecx
@@ -20144,16 +20248,16 @@ $LN4@ProcessSub:
 	add	ecx, 16					; 00000010H
 	call	?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR $T151919[ebp], ecx
-	mov	edx, DWORD PTR $T151919[ebp]
-	mov	DWORD PTR $T151918[ebp], edx
-	cmp	DWORD PTR $T151918[ebp], 0
+	mov	DWORD PTR $T151975[ebp], ecx
+	mov	edx, DWORD PTR $T151975[ebp]
+	mov	DWORD PTR $T151974[ebp], edx
+	cmp	DWORD PTR $T151974[ebp], 0
 	je	SHORT $LN9@ProcessSub
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T151918[ebp]
+	mov	eax, DWORD PTR $T151974[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T151918[ebp]
+	mov	ecx, DWORD PTR $T151974[ebp]
 	mov	eax, DWORD PTR [edx]
 	call	eax
 	cmp	esi, esp
@@ -20203,7 +20307,7 @@ $LN5@ProcessSub:
 	call	eax
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-	mov	DWORD PTR _StatusOfSubGoals$143959[ebp], eax
+	mov	DWORD PTR _StatusOfSubGoals$143991[ebp], eax
 
 ; 115  : 
 ; 116  :     //we have to test for the special case where the front-most subgoal
@@ -20212,7 +20316,7 @@ $LN5@ProcessSub:
 ; 119  :     //we must return the 'active' status.
 ; 120  :     if (StatusOfSubGoals == completed && m_SubGoals.size() > 1)
 
-	cmp	DWORD PTR _StatusOfSubGoals$143959[ebp], 2
+	cmp	DWORD PTR _StatusOfSubGoals$143991[ebp], 2
 	jne	SHORT $LN2@ProcessSub
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -20231,7 +20335,7 @@ $LN2@ProcessSub:
 ; 124  : 
 ; 125  :     return StatusOfSubGoals;
 
-	mov	eax, DWORD PTR _StatusOfSubGoals$143959[ebp]
+	mov	eax, DWORD PTR _StatusOfSubGoals$143991[ebp]
 	jmp	SHORT $LN7@ProcessSub
 
 ; 126  :   }
@@ -20385,11 +20489,11 @@ tv136 = -76						; size = 4
 tv93 = -72						; size = 4
 tv141 = -68						; size = 4
 tv66 = -64						; size = 4
-$T151931 = -60						; size = 4
-$T151930 = -56						; size = 4
-$T151929 = -52						; size = 12
-$T151928 = -37						; size = 1
-_it$143981 = -32					; size = 12
+$T151987 = -60						; size = 4
+$T151986 = -56						; size = 4
+$T151985 = -52						; size = 12
+$T151984 = -37						; size = 1
+_it$144013 = -32					; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ PROC ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals, COMDAT
@@ -20421,7 +20525,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 80   :   for (SubgoalList::iterator it = m_SubGoals.begin();
 
-	lea	eax, DWORD PTR _it$143981[ebp]
+	lea	eax, DWORD PTR _it$144013[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -20433,10 +20537,10 @@ $LN2@RemoveAllS:
 ; 81   :        it != m_SubGoals.end();
 ; 82   :        ++it)
 
-	lea	ecx, DWORD PTR _it$143981[ebp]
+	lea	ecx, DWORD PTR _it$144013[ebp]
 	call	??E?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator++
 $LN3@RemoveAllS:
-	lea	ecx, DWORD PTR $T151929[ebp]
+	lea	ecx, DWORD PTR $T151985[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -20447,20 +20551,20 @@ $LN3@RemoveAllS:
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 	mov	eax, DWORD PTR tv141[ebp]
 	push	eax
-	lea	ecx, DWORD PTR _it$143981[ebp]
+	lea	ecx, DWORD PTR _it$144013[ebp]
 	call	??9?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator!=
-	mov	BYTE PTR $T151928[ebp], al
+	mov	BYTE PTR $T151984[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151929[ebp]
+	lea	ecx, DWORD PTR $T151985[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	movzx	ecx, BYTE PTR $T151928[ebp]
+	movzx	ecx, BYTE PTR $T151984[ebp]
 	test	ecx, ecx
 	je	SHORT $LN1@RemoveAllS
 
 ; 83   :   {  
 ; 84   :     (*it)->Terminate();
 
-	lea	ecx, DWORD PTR _it$143981[ebp]
+	lea	ecx, DWORD PTR _it$144013[ebp]
 	call	??D?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR tv93[ebp], edx
@@ -20476,19 +20580,19 @@ $LN3@RemoveAllS:
 ; 85   :     
 ; 86   :     delete *it;
 
-	lea	ecx, DWORD PTR _it$143981[ebp]
+	lea	ecx, DWORD PTR _it$144013[ebp]
 	call	??D?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
 	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR $T151931[ebp], ecx
-	mov	edx, DWORD PTR $T151931[ebp]
-	mov	DWORD PTR $T151930[ebp], edx
-	cmp	DWORD PTR $T151930[ebp], 0
+	mov	DWORD PTR $T151987[ebp], ecx
+	mov	edx, DWORD PTR $T151987[ebp]
+	mov	DWORD PTR $T151986[ebp], edx
+	cmp	DWORD PTR $T151986[ebp], 0
 	je	SHORT $LN6@RemoveAllS
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T151930[ebp]
+	mov	eax, DWORD PTR $T151986[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T151930[ebp]
+	mov	ecx, DWORD PTR $T151986[ebp]
 	mov	eax, DWORD PTR [edx]
 	call	eax
 	cmp	esi, esp
@@ -20504,7 +20608,7 @@ $LN7@RemoveAllS:
 	jmp	$LN2@RemoveAllS
 $LN1@RemoveAllS:
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR _it$143981[ebp]
+	lea	ecx, DWORD PTR _it$144013[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 
 ; 88   : 
@@ -20549,10 +20653,10 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ$0:
-	lea	ecx, DWORD PTR _it$143981[ebp]
+	lea	ecx, DWORD PTR _it$144013[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ$1:
-	lea	ecx, DWORD PTR $T151929[ebp]
+	lea	ecx, DWORD PTR $T151985[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -20596,9 +20700,9 @@ tv147 = -80						; size = 4
 tv148 = -76						; size = 4
 tv145 = -72						; size = 4
 tv75 = -68						; size = 4
-$T151949 = -64						; size = 12
-$T151948 = -49						; size = 1
-$T151947 = -48						; size = 12
+$T152005 = -64						; size = 12
+$T152004 = -49						; size = 1
+$T152003 = -48						; size = 12
 _it$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -20664,7 +20768,7 @@ _tts$ = 12						; size = 4
 
 ; 172  :   for (it=m_SubGoals.rbegin(); it != m_SubGoals.rend(); ++it)
 
-	lea	ecx, DWORD PTR $T151947[ebp]
+	lea	ecx, DWORD PTR $T152003[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -20678,14 +20782,14 @@ _tts$ = 12						; size = 4
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??4?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAEAAV01@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151947[ebp]
+	lea	ecx, DWORD PTR $T152003[ebp]
 	call	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN3@RenderAtPo@2
 $LN2@RenderAtPo@2:
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??E?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAEAAV01@XZ ; std::reverse_iterator<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > > >::operator++
 $LN3@RenderAtPo@2:
-	lea	ecx, DWORD PTR $T151949[ebp]
+	lea	ecx, DWORD PTR $T152005[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -20700,11 +20804,11 @@ $LN3@RenderAtPo@2:
 	push	ecx
 	call	??$?9V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@V01@@std@@YA_NABV?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@0@0@Z ; std::operator!=<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >,std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > > >
 	add	esp, 8
-	mov	BYTE PTR $T151948[ebp], al
+	mov	BYTE PTR $T152004[ebp], al
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T151949[ebp]
+	lea	ecx, DWORD PTR $T152005[ebp]
 	call	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
-	movzx	edx, BYTE PTR $T151948[ebp]
+	movzx	edx, BYTE PTR $T152004[ebp]
 	test	edx, edx
 	je	SHORT $LN1@RenderAtPo@2
 
@@ -20784,10 +20888,10 @@ __unwindfunclet$?RenderAtPos@?$Goal_Composite@VRaven_Bot@@@@UBEXAAUVector2D@@PAV
 	lea	ecx, DWORD PTR _it$[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderAtPos@?$Goal_Composite@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z$1:
-	lea	ecx, DWORD PTR $T151947[ebp]
+	lea	ecx, DWORD PTR $T152003[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?RenderAtPos@?$Goal_Composite@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z$2:
-	lea	ecx, DWORD PTR $T151949[ebp]
+	lea	ecx, DWORD PTR $T152005[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?RenderAtPos@?$Goal_Composite@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -21350,11 +21454,11 @@ tv157 = -48						; size = 4
 tv165 = -44						; size = 4
 tv154 = -40						; size = 4
 tv164 = -36						; size = 4
-$T152001 = -32						; size = 4
-$T152000 = -28						; size = 4
-$T151999 = -24						; size = 4
-$T151998 = -18						; size = 1
-$T151997 = -17						; size = 1
+$T152057 = -32						; size = 4
+$T152056 = -28						; size = 4
+$T152055 = -24						; size = 4
+$T152054 = -18						; size = 1
+$T152053 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Where$ = 8						; size = 12
@@ -21392,17 +21496,17 @@ __Last$ = 32						; size = 12
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T151998[ebp]
+	lea	ecx, DWORD PTR $T152054[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > > >
 	add	esp, 8
 	mov	dl, BYTE PTR [eax]
-	mov	BYTE PTR $T151997[ebp], dl
-	movzx	eax, BYTE PTR $T151997[ebp]
+	mov	BYTE PTR $T152053[ebp], dl
+	movzx	eax, BYTE PTR $T152053[ebp]
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T151999[ebp], esp
+	mov	DWORD PTR $T152055[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -21412,7 +21516,7 @@ __Last$ = 32						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152000[ebp], esp
+	mov	DWORD PTR $T152056[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -21422,7 +21526,7 @@ __Last$ = 32						; size = 12
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152001[ebp], esp
+	mov	DWORD PTR $T152057[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -21465,10 +21569,10 @@ __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z$3:
-	mov	ecx, DWORD PTR $T151999[ebp]
+	mov	ecx, DWORD PTR $T152055[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z$4:
-	mov	ecx, DWORD PTR $T152000[ebp]
+	mov	ecx, DWORD PTR $T152056[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -21696,7 +21800,7 @@ PUBLIC	??$_Ptr_cat@PAVGoal_Evaluator@@PAV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xmemory
 ;	COMDAT ??$_Destroy_range@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@YAXPAPAVGoal_Evaluator@@0AAV?$allocator@PAVGoal_Evaluator@@@0@@Z
 _TEXT	SEGMENT
-$T152030 = -1						; size = 1
+$T152086 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -21717,8 +21821,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@PAVGoal_Evaluator@@PAV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAPAVGoal_Evaluator@@0@Z ; std::_Ptr_cat<Goal_Evaluator *,Goal_Evaluator *>
 	add	esp, 8
-	mov	BYTE PTR $T152030[ebp], al
-	movzx	edx, BYTE PTR $T152030[ebp]
+	mov	BYTE PTR $T152086[ebp], al
+	movzx	edx, BYTE PTR $T152086[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -21791,7 +21895,7 @@ PUBLIC	??$_Ptr_cat@UAreaMap@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUArea
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xmemory
 ;	COMDAT ??$_Destroy_range@V?$allocator@UAreaMap@@@std@@@std@@YAXPAUAreaMap@@0AAV?$allocator@UAreaMap@@@0@@Z
 _TEXT	SEGMENT
-$T152035 = -1						; size = 1
+$T152091 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -21812,8 +21916,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@UAreaMap@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUAreaMap@@0@Z ; std::_Ptr_cat<AreaMap,AreaMap>
 	add	esp, 8
-	mov	BYTE PTR $T152035[ebp], al
-	movzx	edx, BYTE PTR $T152035[ebp]
+	mov	BYTE PTR $T152091[ebp], al
+	movzx	edx, BYTE PTR $T152091[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -21886,7 +21990,7 @@ PUBLIC	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_ca
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xmemory
 ;	COMDAT ??$_Destroy_range@V?$allocator@H@std@@@std@@YAXPAH0AAV?$allocator@H@0@@Z
 _TEXT	SEGMENT
-$T152040 = -1						; size = 1
+$T152096 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Al$ = 16						; size = 4
@@ -21907,8 +22011,8 @@ __Al$ = 16						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T152040[ebp], al
-	movzx	edx, BYTE PTR $T152040[ebp]
+	mov	BYTE PTR $T152096[ebp], al
+	movzx	edx, BYTE PTR $T152096[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Al$[ebp]
 	push	eax
@@ -22046,7 +22150,7 @@ __TI2?AVbad_alloc@std@@ DD 00H
 xdata$x	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T152049 = -16						; size = 12
+$T152105 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -22099,10 +22203,10 @@ $LN1@Allocate:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152049[ebp]
+	lea	ecx, DWORD PTR $T152105[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152049[ebp]
+	lea	ecx, DWORD PTR $T152105[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate:
@@ -22244,12 +22348,12 @@ ___flags$ = 8						; size = 4
 	call	??1bad_alloc@std@@UAE@XZ		; std::bad_alloc::~bad_alloc
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
-	je	SHORT $LN1@scalar@15
+	je	SHORT $LN1@scalar@16
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAX@Z				; operator delete
 	add	esp, 4
-$LN1@scalar@15:
+$LN1@scalar@16:
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -22263,7 +22367,7 @@ $LN1@scalar@15:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Container_proxy@std@@@std@@YAPAU_Container_proxy@0@IPAU10@@Z
 _TEXT	SEGMENT
-$T152058 = -16						; size = 12
+$T152114 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -22316,10 +22420,10 @@ $LN1@Allocate@2:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152058[ebp]
+	lea	ecx, DWORD PTR $T152114[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152058[ebp]
+	lea	ecx, DWORD PTR $T152114[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@2:
@@ -22421,7 +22525,7 @@ ___formal$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@U_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@YAPAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@0@IPAU120@@Z
 _TEXT	SEGMENT
-$T152067 = -16						; size = 12
+$T152123 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -22474,10 +22578,10 @@ $LN1@Allocate@3:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152067[ebp]
+	lea	ecx, DWORD PTR $T152123[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152067[ebp]
+	lea	ecx, DWORD PTR $T152123[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@3:
@@ -22501,7 +22605,7 @@ $LN6@Allocate@3:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@PAVGoal_Evaluator@@@std@@YAPAPAVGoal_Evaluator@@IPAPAV1@@Z
 _TEXT	SEGMENT
-$T152070 = -16						; size = 12
+$T152126 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -22554,10 +22658,10 @@ $LN1@Allocate@4:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152070[ebp]
+	lea	ecx, DWORD PTR $T152126[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152070[ebp]
+	lea	ecx, DWORD PTR $T152126[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@4:
@@ -22581,7 +22685,7 @@ $LN6@Allocate@4:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@UAreaMap@@@std@@YAPAUAreaMap@@IPAU1@@Z
 _TEXT	SEGMENT
-$T152073 = -16						; size = 12
+$T152129 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -22634,10 +22738,10 @@ $LN1@Allocate@5:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152073[ebp]
+	lea	ecx, DWORD PTR $T152129[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152073[ebp]
+	lea	ecx, DWORD PTR $T152129[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@5:
@@ -22661,7 +22765,7 @@ $LN6@Allocate@5:
 _TEXT	ENDS
 ;	COMDAT ??$_Allocate@H@std@@YAPAHIPAH@Z
 _TEXT	SEGMENT
-$T152076 = -16						; size = 12
+$T152132 = -16						; size = 12
 __Ptr$ = -4						; size = 4
 __Count$ = 8						; size = 4
 ___formal$ = 12						; size = 4
@@ -22714,10 +22818,10 @@ $LN1@Allocate@6:
 ; 37   : 		_THROW_NCEE(bad_alloc, 0);
 
 	push	0
-	lea	ecx, DWORD PTR $T152076[ebp]
+	lea	ecx, DWORD PTR $T152132[ebp]
 	call	??0bad_alloc@std@@QAE@PBD@Z		; std::bad_alloc::bad_alloc
 	push	OFFSET __TI2?AVbad_alloc@std@@
-	lea	ecx, DWORD PTR $T152076[ebp]
+	lea	ecx, DWORD PTR $T152132[ebp]
 	push	ecx
 	call	__CxxThrowException@8
 $LN3@Allocate@6:
@@ -22980,9 +23084,9 @@ _TEXT	SEGMENT
 tv90 = -48						; size = 4
 tv88 = -44						; size = 4
 tv87 = -40						; size = 4
-$T152105 = -36						; size = 4
-$T152101 = -32						; size = 4
-$T152100 = -28						; size = 12
+$T152161 = -36						; size = 4
+$T152157 = -32						; size = 4
+$T152156 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -23014,18 +23118,18 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152105[ebp], 0
+	mov	DWORD PTR $T152161[ebp], 0
 
 ; 812  : 		return (const_reverse_iterator(end()));
 
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T152101[ebp], esp
+	mov	DWORD PTR $T152157[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?end@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::end
 	mov	DWORD PTR tv87[ebp], eax
-	lea	ecx, DWORD PTR $T152100[ebp]
+	lea	ecx, DWORD PTR $T152156[ebp]
 	call	??0?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@1@@Z ; std::reverse_iterator<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > > >::reverse_iterator<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > > >
 	mov	DWORD PTR tv88[ebp], eax
 	mov	ecx, DWORD PTR tv88[ebp]
@@ -23035,11 +23139,11 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T152105[ebp]
+	mov	eax, DWORD PTR $T152161[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152105[ebp], eax
+	mov	DWORD PTR $T152161[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152100[ebp]
+	lea	ecx, DWORD PTR $T152156[ebp]
 	call	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
@@ -23058,13 +23162,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?rbegin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@2@XZ$1:
-	lea	ecx, DWORD PTR $T152100[ebp]
+	lea	ecx, DWORD PTR $T152156[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?rbegin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@2@XZ$2:
-	mov	eax, DWORD PTR $T152105[ebp]
+	mov	eax, DWORD PTR $T152161[ebp]
 	and	eax, 1
 	je	$LN6@rbegin
-	and	DWORD PTR $T152105[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152161[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 $LN6@rbegin:
@@ -23099,9 +23203,9 @@ _TEXT	SEGMENT
 tv90 = -48						; size = 4
 tv88 = -44						; size = 4
 tv87 = -40						; size = 4
-$T152120 = -36						; size = 4
-$T152116 = -32						; size = 4
-$T152115 = -28						; size = 12
+$T152176 = -36						; size = 4
+$T152172 = -32						; size = 4
+$T152171 = -28						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -23133,18 +23237,18 @@ ___$ReturnUdt$ = 8					; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152120[ebp], 0
+	mov	DWORD PTR $T152176[ebp], 0
 
 ; 822  : 		return (const_reverse_iterator(begin()));
 
 	sub	esp, 12					; 0000000cH
 	mov	eax, esp
-	mov	DWORD PTR $T152116[ebp], esp
+	mov	DWORD PTR $T152172[ebp], esp
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
 	mov	DWORD PTR tv87[ebp], eax
-	lea	ecx, DWORD PTR $T152115[ebp]
+	lea	ecx, DWORD PTR $T152171[ebp]
 	call	??0?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@1@@Z ; std::reverse_iterator<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > > >::reverse_iterator<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > > >
 	mov	DWORD PTR tv88[ebp], eax
 	mov	ecx, DWORD PTR tv88[ebp]
@@ -23154,11 +23258,11 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	eax, DWORD PTR $T152120[ebp]
+	mov	eax, DWORD PTR $T152176[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152120[ebp], eax
+	mov	DWORD PTR $T152176[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
-	lea	ecx, DWORD PTR $T152115[ebp]
+	lea	ecx, DWORD PTR $T152171[ebp]
 	call	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
@@ -23177,13 +23281,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?rend@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@2@XZ$1:
-	lea	ecx, DWORD PTR $T152115[ebp]
+	lea	ecx, DWORD PTR $T152171[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?rend@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@2@XZ$2:
-	mov	eax, DWORD PTR $T152120[ebp]
+	mov	eax, DWORD PTR $T152176[ebp]
 	and	eax, 1
 	je	$LN6@rend
-	and	DWORD PTR $T152120[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152176[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$reverse_iterator@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@@std@@QAE@XZ
 $LN6@rend:
@@ -23225,6 +23329,99 @@ _this$ = -4						; size = 4
 	ret	0
 ?size@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBEIXZ ENDP ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::size
 _TEXT	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__unwindtable$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ$0
+__ehfuncinfo$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ DD 019930522H
+	DD	01H
+	DD	FLAT:__unwindtable$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	DD	00H
+	DD	01H
+; Function compile flags: /Odtp /RTCsu
+xdata$x	ENDS
+;	COMDAT ?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
+_TEXT	SEGMENT
+tv72 = -40						; size = 4
+tv73 = -36						; size = 4
+$T152189 = -32						; size = 12
+$T152188 = -20						; size = 4
+_this$ = -16						; size = 4
+__$EHRec$ = -12						; size = 12
+?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front, COMDAT
+; _this$ = ecx
+
+; 896  : 		{	// return first element of mutable sequence
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
+	mov	eax, DWORD PTR fs:0
+	push	eax
+	sub	esp, 28					; 0000001cH
+	mov	eax, -858993460				; ccccccccH
+	mov	DWORD PTR [ebp-40], eax
+	mov	DWORD PTR [ebp-36], eax
+	mov	DWORD PTR [ebp-32], eax
+	mov	DWORD PTR [ebp-28], eax
+	mov	DWORD PTR [ebp-24], eax
+	mov	DWORD PTR [ebp-20], eax
+	mov	DWORD PTR [ebp-16], eax
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	push	eax
+	lea	eax, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, eax
+	mov	DWORD PTR _this$[ebp], ecx
+
+; 897  : 		return (*begin());
+
+	lea	eax, DWORD PTR $T152189[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
+	mov	DWORD PTR tv73[ebp], eax
+	mov	ecx, DWORD PTR tv73[ebp]
+	mov	DWORD PTR tv72[ebp], ecx
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	mov	ecx, DWORD PTR tv72[ebp]
+	call	??D?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEAAPAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
+	mov	DWORD PTR $T152188[ebp], eax
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR $T152189[ebp]
+	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
+	mov	eax, DWORD PTR $T152188[ebp]
+
+; 898  : 		}
+
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, ecx
+	pop	ecx
+	add	esp, 40					; 00000028H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ$0:
+	lea	ecx, DWORD PTR $T152189[ebp]
+	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
+__ehhandler$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ:
+	mov	edx, DWORD PTR [esp+8]
+	lea	eax, DWORD PTR [edx+12]
+	mov	ecx, DWORD PTR [edx-32]
+	xor	ecx, eax
+	call	@__security_check_cookie@4
+	mov	eax, OFFSET __ehfuncinfo$?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ
+	jmp	___CxxFrameHandler3
+text$x	ENDS
+?front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEAAPAV?$Goal@VRaven_Bot@@@@XZ ENDP ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::front
 PUBLIC	?_Insert@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@ABQAV?$Goal@VRaven_Bot@@@@@Z ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::_Insert
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
@@ -23244,8 +23441,8 @@ _TEXT	SEGMENT
 tv93 = -44						; size = 4
 tv90 = -40						; size = 4
 tv94 = -36						; size = 4
-$T152133 = -32						; size = 12
-$T152132 = -20						; size = 4
+$T152200 = -32						; size = 12
+$T152199 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Val$ = 8						; size = 4
@@ -23281,7 +23478,7 @@ __Val$ = 8						; size = 4
 
 	mov	eax, DWORD PTR __Val$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T152133[ebp]
+	lea	ecx, DWORD PTR $T152200[ebp]
 	push	ecx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
@@ -23291,7 +23488,7 @@ __Val$ = 8						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152132[ebp], esp
+	mov	DWORD PTR $T152199[ebp], esp
 	mov	eax, DWORD PTR tv90[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -23299,7 +23496,7 @@ __Val$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Insert@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@ABQAV?$Goal@VRaven_Bot@@@@@Z ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::_Insert
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T152133[ebp]
+	lea	ecx, DWORD PTR $T152200[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 
 ; 918  : 		}
@@ -23317,7 +23514,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?push_front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXABQAV?$Goal@VRaven_Bot@@@@@Z$0:
-	lea	ecx, DWORD PTR $T152133[ebp]
+	lea	ecx, DWORD PTR $T152200[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?push_front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXABQAV?$Goal@VRaven_Bot@@@@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -23349,9 +23546,9 @@ tv95 = -60						; size = 4
 tv94 = -56						; size = 4
 tv92 = -52						; size = 4
 tv129 = -48						; size = 4
-$T152146 = -44						; size = 12
-$T152145 = -32						; size = 12
-$T152144 = -20						; size = 4
+$T152213 = -44						; size = 12
+$T152212 = -32						; size = 12
+$T152211 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?pop_front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXXZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::pop_front, COMDAT
@@ -23382,7 +23579,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 922  : 		erase(begin());
 
-	lea	eax, DWORD PTR $T152145[ebp]
+	lea	eax, DWORD PTR $T152212[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?begin@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::begin
@@ -23392,20 +23589,20 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152144[ebp], esp
+	mov	DWORD PTR $T152211[ebp], esp
 	mov	edx, DWORD PTR tv92[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv94[ebp], eax
-	lea	eax, DWORD PTR $T152146[ebp]
+	lea	eax, DWORD PTR $T152213[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@@Z ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::erase
 	mov	DWORD PTR tv95[ebp], eax
-	lea	ecx, DWORD PTR $T152146[ebp]
+	lea	ecx, DWORD PTR $T152213[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T152145[ebp]
+	lea	ecx, DWORD PTR $T152212[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 
 ; 923  : 		}
@@ -23424,7 +23621,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?pop_front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXXZ$0:
-	lea	ecx, DWORD PTR $T152145[ebp]
+	lea	ecx, DWORD PTR $T152212[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$?pop_front@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAEXXZ:
 	mov	edx, DWORD PTR [esp+8]
@@ -23546,8 +23743,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@PAVGoal_Evaluator@@@std@@QAEXPAPAVGoal_Evaluator@@$$QAPAV3@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T152163 = -24						; size = 4
-$T152162 = -20						; size = 4
+$T152230 = -24						; size = 4
+$T152229 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -23583,25 +23780,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152163[ebp], eax
+	mov	DWORD PTR $T152230[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152163[ebp], 0
+	cmp	DWORD PTR $T152230[ebp], 0
 	je	SHORT $LN3@construct
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@PAVGoal_Evaluator@@@std@@YA$$QAPAVGoal_Evaluator@@AAPAV1@@Z ; std::forward<Goal_Evaluator *>
 	add	esp, 4
-	mov	edx, DWORD PTR $T152163[ebp]
+	mov	edx, DWORD PTR $T152230[ebp]
 	mov	eax, DWORD PTR [eax]
 	mov	DWORD PTR [edx], eax
-	mov	ecx, DWORD PTR $T152163[ebp]
+	mov	ecx, DWORD PTR $T152230[ebp]
 	mov	DWORD PTR tv73[ebp], ecx
 	jmp	SHORT $LN4@construct
 $LN3@construct:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@construct:
 	mov	edx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T152162[ebp], edx
+	mov	DWORD PTR $T152229[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -23621,7 +23818,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@PAVGoal_Evaluator@@@std@@QAEXPAPAVGoal_Evaluator@@$$QAPAV3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152163[ebp]
+	mov	ecx, DWORD PTR $T152230[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -23694,8 +23891,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@UAreaMap@@@std@@QAEXPAUAreaMap@@$$QAU3@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T152180 = -24						; size = 4
-$T152179 = -20						; size = 4
+$T152247 = -24						; size = 4
+$T152246 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -23733,9 +23930,9 @@ __Val$ = 12						; size = 4
 	push	32					; 00000020H
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152180[ebp], eax
+	mov	DWORD PTR $T152247[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152180[ebp], 0
+	cmp	DWORD PTR $T152247[ebp], 0
 	je	SHORT $LN3@construct@2
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -23743,16 +23940,16 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	ecx, 8
 	mov	esi, eax
-	mov	edi, DWORD PTR $T152180[ebp]
+	mov	edi, DWORD PTR $T152247[ebp]
 	rep movsd
-	mov	edx, DWORD PTR $T152180[ebp]
+	mov	edx, DWORD PTR $T152247[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct@2
 $LN3@construct@2:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct@2:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T152179[ebp], eax
+	mov	DWORD PTR $T152246[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -23774,7 +23971,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@UAreaMap@@@std@@QAEXPAUAreaMap@@$$QAU3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152180[ebp]
+	mov	ecx, DWORD PTR $T152247[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -23939,8 +24136,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z
 _TEXT	SEGMENT
 tv74 = -28						; size = 4
-$T152201 = -24						; size = 4
-$T152200 = -20						; size = 4
+$T152268 = -24						; size = 4
+$T152267 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -23976,9 +24173,9 @@ __Val$ = 12						; size = 4
 	push	8
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152201[ebp], eax
+	mov	DWORD PTR $T152268[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152201[ebp], 0
+	cmp	DWORD PTR $T152268[ebp], 0
 	je	SHORT $LN3@construct@3
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
@@ -23986,17 +24183,17 @@ __Val$ = 12						; size = 4
 	add	esp, 4
 	mov	edx, DWORD PTR [eax]
 	mov	eax, DWORD PTR [eax+4]
-	mov	ecx, DWORD PTR $T152201[ebp]
+	mov	ecx, DWORD PTR $T152268[ebp]
 	mov	DWORD PTR [ecx], edx
 	mov	DWORD PTR [ecx+4], eax
-	mov	edx, DWORD PTR $T152201[ebp]
+	mov	edx, DWORD PTR $T152268[ebp]
 	mov	DWORD PTR tv74[ebp], edx
 	jmp	SHORT $LN4@construct@3
 $LN3@construct@3:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@construct@3:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T152200[ebp], eax
+	mov	DWORD PTR $T152267[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -24016,7 +24213,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@2@$$QAU32@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152201[ebp]
+	mov	ecx, DWORD PTR $T152268[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -24147,7 +24344,7 @@ __ehfuncinfo$??D?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRave
 xdata$x	ENDS
 ;	COMDAT ??D?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ
 _TEXT	SEGMENT
-$T152220 = -40						; size = 4
+$T152287 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -24192,11 +24389,11 @@ __$EHRec$ = -12						; size = 12
 	call	??F?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator--
 	mov	ecx, eax
 	call	??D?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBEABQAV?$Goal@VRaven_Bot@@@@XZ ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator*
-	mov	DWORD PTR $T152220[ebp], eax
+	mov	DWORD PTR $T152287[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	mov	eax, DWORD PTR $T152220[ebp]
+	mov	eax, DWORD PTR $T152287[ebp]
 
 ; 1046 : 		}
 
@@ -24301,7 +24498,7 @@ ___that$ = 8						; size = 4
 _TEXT	ENDS
 ;	COMDAT ?end@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T152240 = -8						; size = 4
+$T152307 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?end@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::end, COMDAT
@@ -24315,7 +24512,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152240[ebp], 0
+	mov	DWORD PTR $T152307[ebp], 0
 
 ; 797  : 		return (const_iterator(this->_Myhead, this));
 
@@ -24326,9 +24523,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	edx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >
-	mov	eax, DWORD PTR $T152240[ebp]
+	mov	eax, DWORD PTR $T152307[ebp]
 	or	eax, 1
-	mov	DWORD PTR $T152240[ebp], eax
+	mov	DWORD PTR $T152307[ebp], eax
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 798  : 		}
@@ -24554,9 +24751,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T152261 = -40						; size = 4
-$T152256 = -36						; size = 4
-$T152255 = -32						; size = 12
+$T152328 = -40						; size = 4
+$T152323 = -36						; size = 4
+$T152322 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -24588,7 +24785,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152261[ebp], 0
+	mov	DWORD PTR $T152328[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -24616,7 +24813,7 @@ $LN3@erase:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T152255[ebp]
+	lea	edx, DWORD PTR $T152322[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator++
@@ -24628,7 +24825,7 @@ $LN3@erase:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T152255[ebp]
+	lea	ecx, DWORD PTR $T152322[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -24726,7 +24923,7 @@ $LN1@erase:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152256[ebp], esp
+	mov	DWORD PTR $T152323[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -24736,9 +24933,9 @@ $LN1@erase:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@@Z ; std::list<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T152261[ebp]
+	mov	ecx, DWORD PTR $T152328[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152261[ebp], ecx
+	mov	DWORD PTR $T152328[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
@@ -24764,13 +24961,13 @@ __unwindfunclet$?erase@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRa
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T152255[ebp]
+	lea	ecx, DWORD PTR $T152322[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T152261[ebp]
+	mov	eax, DWORD PTR $T152328[ebp]
 	and	eax, 1
 	je	$LN10@erase
-	and	DWORD PTR $T152261[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152328[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 $LN10@erase:
@@ -24949,7 +25146,7 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv93 = -28						; size = 4
 tv92 = -24						; size = 4
-$T152275 = -20						; size = 4
+$T152342 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 12
@@ -24979,7 +25176,7 @@ __Right$ = 8						; size = 12
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152275[ebp], esp
+	mov	DWORD PTR $T152342[ebp], esp
 	lea	eax, DWORD PTR __Right$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -25100,7 +25297,7 @@ __ehfuncinfo$?_Make_iter@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@V
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T152294 = -20						; size = 4
+$T152361 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -25125,7 +25322,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152294[ebp], 0
+	mov	DWORD PTR $T152361[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -25136,9 +25333,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@PBV?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::_List_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >
-	mov	edx, DWORD PTR $T152294[ebp]
+	mov	edx, DWORD PTR $T152361[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152294[ebp], edx
+	mov	DWORD PTR $T152361[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
@@ -25162,10 +25359,10 @@ __unwindfunclet$?_Make_iter@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goa
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T152294[ebp]
+	mov	eax, DWORD PTR $T152361[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter
-	and	DWORD PTR $T152294[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152361[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter:
@@ -25428,7 +25625,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$a
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T152325 = -40						; size = 4
+$T152392 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -25460,7 +25657,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152325[ebp], 0
+	mov	DWORD PTR $T152392[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -25481,9 +25678,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T152325[ebp]
+	mov	edx, DWORD PTR $T152392[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152325[ebp], edx
+	mov	DWORD PTR $T152392[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
@@ -25527,10 +25724,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T152325[ebp]
+	mov	eax, DWORD PTR $T152392[ebp]
 	and	eax, 1
 	je	$LN5@operator@14
-	and	DWORD PTR $T152325[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152392[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@14:
@@ -25890,8 +26087,8 @@ xdata$x	ENDS
 ;	COMDAT ??$construct@AAH@?$allocator@H@std@@QAEXPAHAAH@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T152368 = -24						; size = 4
-$T152367 = -20						; size = 4
+$T152435 = -24						; size = 4
+$T152434 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -25928,25 +26125,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152368[ebp], eax
+	mov	DWORD PTR $T152435[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152368[ebp], 0
+	cmp	DWORD PTR $T152435[ebp], 0
 	je	SHORT $LN3@construct@4
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@AAH@std@@YAAAHAAH@Z		; std::forward<int &>
 	add	esp, 4
-	mov	edx, DWORD PTR $T152368[ebp]
+	mov	edx, DWORD PTR $T152435[ebp]
 	mov	eax, DWORD PTR [eax]
 	mov	DWORD PTR [edx], eax
-	mov	ecx, DWORD PTR $T152368[ebp]
+	mov	ecx, DWORD PTR $T152435[ebp]
 	mov	DWORD PTR tv73[ebp], ecx
 	jmp	SHORT $LN4@construct@4
 $LN3@construct@4:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@construct@4:
 	mov	edx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T152367[ebp], edx
+	mov	DWORD PTR $T152434[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 209  : 		}
@@ -25966,7 +26163,7 @@ text$x	SEGMENT
 __unwindfunclet$??$construct@AAH@?$allocator@H@std@@QAEXPAHAAH@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152368[ebp]
+	mov	ecx, DWORD PTR $T152435[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -26109,12 +26306,12 @@ tv129 = -101						; size = 1
 tv197 = -100						; size = 4
 tv194 = -96						; size = 4
 tv211 = -92						; size = 4
-$T152391 = -88						; size = 12
-$T152390 = -76						; size = 4
-$T152389 = -72						; size = 4
-$T152388 = -68						; size = 4
-$T152387 = -64						; size = 4
-__Before$146837 = -56					; size = 12
+$T152458 = -88						; size = 12
+$T152457 = -76						; size = 4
+$T152456 = -72						; size = 4
+$T152455 = -68						; size = 4
+$T152454 = -64						; size = 4
+__Before$146873 = -56					; size = 12
 __Next$ = -36						; size = 12
 _this$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
@@ -26161,7 +26358,7 @@ ___formal$ = 44						; size = 1
 	push	OFFSET ??_C@_1II@KCMIDAEO@?$AAc?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe?$AAs?$AA?5?$AA?$CI?$AAx?$AA8?$AA6?$AA?$CJ?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt@
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152387[ebp], esp
+	mov	DWORD PTR $T152454[ebp], esp
 	lea	eax, DWORD PTR __Last$[ebp]
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -26171,7 +26368,7 @@ ___formal$ = 44						; size = 1
 	mov	BYTE PTR __$EHRec$[ebp+12], 3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152388[ebp], esp
+	mov	DWORD PTR $T152455[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -26218,7 +26415,7 @@ $LN6@Insert@2:
 	push	eax
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152389[ebp], esp
+	mov	DWORD PTR $T152456[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -26251,32 +26448,32 @@ $LN3@Insert@2:
 
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
-	lea	ecx, DWORD PTR __Before$146837[ebp]
+	lea	ecx, DWORD PTR __Before$146873[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	BYTE PTR __$EHRec$[ebp+12], 7
 
 ; 1047 : 			erase(--_Before);
 
-	lea	ecx, DWORD PTR __Before$146837[ebp]
+	lea	ecx, DWORD PTR __Before$146873[ebp]
 	call	??F?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAEAAV01@XZ ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator--
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152390[ebp], esp
+	mov	DWORD PTR $T152457[ebp], esp
 	push	eax
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
 	mov	DWORD PTR tv204[ebp], eax
-	lea	eax, DWORD PTR $T152391[ebp]
+	lea	eax, DWORD PTR $T152458[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::erase
 	mov	DWORD PTR tv205[ebp], eax
-	lea	ecx, DWORD PTR $T152391[ebp]
+	lea	ecx, DWORD PTR $T152458[ebp]
 	call	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 1048 : 			}
 
 	mov	BYTE PTR __$EHRec$[ebp+12], 6
-	lea	ecx, DWORD PTR __Before$146837[ebp]
+	lea	ecx, DWORD PTR __Before$146873[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 	jmp	SHORT $LN2@Insert@2
 $LN1@Insert@2:
@@ -26369,13 +26566,13 @@ __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$5:
-	mov	ecx, DWORD PTR $T152387[ebp]
+	mov	ecx, DWORD PTR $T152454[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$7:
 	lea	ecx, DWORD PTR __Next$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z$9:
-	lea	ecx, DWORD PTR __Before$146837[ebp]
+	lea	ecx, DWORD PTR __Before$146873[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Insert@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAEXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@1@00Uforward_iterator_tag@1@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -26415,7 +26612,7 @@ PUBLIC	??$_Val_type@PAPAVGoal_Evaluator@@@std@@YAPAPAVGoal_Evaluator@@PAPAV1@@Z 
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_move@PAPAVGoal_Evaluator@@PAPAV1@V?$allocator@PAVGoal_Evaluator@@@std@@@std@@YAPAPAVGoal_Evaluator@@PAPAV1@00AAV?$allocator@PAVGoal_Evaluator@@@0@@Z
 _TEXT	SEGMENT
-$T152423 = -1						; size = 1
+$T152490 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -26438,8 +26635,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@PAVGoal_Evaluator@@PAV1@@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAPAVGoal_Evaluator@@0@Z ; std::_Ptr_cat<Goal_Evaluator *,Goal_Evaluator *>
 	add	esp, 8
-	mov	BYTE PTR $T152423[ebp], al
-	movzx	edx, BYTE PTR $T152423[ebp]
+	mov	BYTE PTR $T152490[ebp], al
+	movzx	edx, BYTE PTR $T152490[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -26545,7 +26742,7 @@ PUBLIC	??$_Val_type@PAUAreaMap@@@std@@YAPAUAreaMap@@PAU1@@Z ; std::_Val_type<Are
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_move@PAUAreaMap@@PAU1@V?$allocator@UAreaMap@@@std@@@std@@YAPAUAreaMap@@PAU1@00AAV?$allocator@UAreaMap@@@0@@Z
 _TEXT	SEGMENT
-$T152433 = -1						; size = 1
+$T152500 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -26568,8 +26765,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@UAreaMap@@U1@@std@@YA?AU_Nonscalar_ptr_iterator_tag@0@PAUAreaMap@@0@Z ; std::_Ptr_cat<AreaMap,AreaMap>
 	add	esp, 8
-	mov	BYTE PTR $T152433[ebp], al
-	movzx	edx, BYTE PTR $T152433[ebp]
+	mov	BYTE PTR $T152500[ebp], al
+	movzx	edx, BYTE PTR $T152500[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -26701,7 +26898,7 @@ PUBLIC	??$_Val_type@PAH@std@@YAPAHPAH@Z		; std::_Val_type<int *>
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\memory
 ;	COMDAT ??$_Uninitialized_move@PAHPAHV?$allocator@H@std@@@std@@YAPAHPAH00AAV?$allocator@H@0@@Z
 _TEXT	SEGMENT
-$T152443 = -1						; size = 1
+$T152510 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __Dest$ = 16						; size = 4
@@ -26724,8 +26921,8 @@ __Al$ = 20						; size = 4
 	push	ecx
 	call	??$_Ptr_cat@HH@std@@YA?AU_Scalar_ptr_iterator_tag@0@PAH0@Z ; std::_Ptr_cat<int,int>
 	add	esp, 8
-	mov	BYTE PTR $T152443[ebp], al
-	movzx	edx, BYTE PTR $T152443[ebp]
+	mov	BYTE PTR $T152510[ebp], al
+	movzx	edx, BYTE PTR $T152510[ebp]
 	push	edx
 	mov	eax, DWORD PTR __First$[ebp]
 	push	eax
@@ -26859,8 +27056,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@HABH@std@@YAXPAHABH@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T152456 = -24						; size = 4
-$T152455 = -20						; size = 4
+$T152523 = -24						; size = 4
+$T152522 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -26899,25 +27096,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152456[ebp], eax
+	mov	DWORD PTR $T152523[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152456[ebp], 0
+	cmp	DWORD PTR $T152523[ebp], 0
 	je	SHORT $LN3@Construct
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABH@std@@YAABHABH@Z		; std::forward<int const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T152456[ebp]
+	mov	ecx, DWORD PTR $T152523[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T152456[ebp]
+	mov	eax, DWORD PTR $T152523[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct
 $LN3@Construct:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T152455[ebp], ecx
+	mov	DWORD PTR $T152522[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -26937,7 +27134,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@HABH@std@@YAXPAHABH@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152456[ebp]
+	mov	ecx, DWORD PTR $T152523[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -27272,9 +27469,9 @@ tv200 = -56						; size = 4
 tv199 = -52						; size = 4
 tv197 = -48						; size = 4
 tv206 = -44						; size = 4
-$T152495 = -40						; size = 4
-$T152490 = -36						; size = 4
-$T152489 = -32						; size = 12
+$T152562 = -40						; size = 4
+$T152557 = -36						; size = 4
+$T152556 = -32						; size = 12
 __Pnode$ = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -27306,7 +27503,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152495[ebp], 0
+	mov	DWORD PTR $T152562[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 1055 :  #if _ITERATOR_DEBUG_LEVEL == 2
@@ -27334,7 +27531,7 @@ $LN3@erase@2:
 ; 1058 : 		_Nodeptr _Pnode = (_Where++)._Mynode();
 
 	push	0
-	lea	edx, DWORD PTR $T152489[ebp]
+	lea	edx, DWORD PTR $T152556[ebp]
 	push	edx
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z ; std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::operator++
@@ -27346,7 +27543,7 @@ $LN3@erase@2:
 	call	?_Mynode@?$_List_unchecked_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@U_Iterator_base12@2@@std@@QBEPAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@2@XZ ; std::_List_unchecked_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> >,std::_Iterator_base12>::_Mynode
 	mov	DWORD PTR __Pnode$[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	lea	ecx, DWORD PTR $T152489[ebp]
+	lea	ecx, DWORD PTR $T152556[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 
 ; 1059 : 		_Orphan_ptr(*this, _Pnode);
@@ -27444,7 +27641,7 @@ $LN1@erase@2:
 
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152490[ebp], esp
+	mov	DWORD PTR $T152557[ebp], esp
 	lea	edx, DWORD PTR __Where$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -27454,9 +27651,9 @@ $LN1@erase@2:
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z ; std::list<Raven_Bot *,std::allocator<Raven_Bot *> >::_Make_iter
 	mov	DWORD PTR tv200[ebp], eax
-	mov	ecx, DWORD PTR $T152495[ebp]
+	mov	ecx, DWORD PTR $T152562[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152495[ebp], ecx
+	mov	DWORD PTR $T152562[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -27482,13 +27679,13 @@ __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@st
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$1:
-	lea	ecx, DWORD PTR $T152489[ebp]
+	lea	ecx, DWORD PTR $T152556[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?erase@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QAE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$3:
-	mov	eax, DWORD PTR $T152495[ebp]
+	mov	eax, DWORD PTR $T152562[ebp]
 	and	eax, 1
 	je	$LN10@erase@2
-	and	DWORD PTR $T152495[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152562[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN10@erase@2:
@@ -27651,7 +27848,7 @@ __ehfuncinfo$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@
 xdata$x	ENDS
 ;	COMDAT ?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z
 _TEXT	SEGMENT
-$T152511 = -20						; size = 4
+$T152578 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ___$ReturnUdt$ = 8					; size = 4
@@ -27676,7 +27873,7 @@ __Where$ = 12						; size = 12
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152511[ebp], 0
+	mov	DWORD PTR $T152578[ebp], 0
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 
 ; 802  : 		return (iterator(_Where._Ptr, this));
@@ -27687,9 +27884,9 @@ __Where$ = 12						; size = 12
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@PAU_Node@?$_List_nod@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@PBV?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@1@@Z ; std::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >::_List_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > >
-	mov	edx, DWORD PTR $T152511[ebp]
+	mov	edx, DWORD PTR $T152578[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152511[ebp], edx
+	mov	DWORD PTR $T152578[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Where$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -27713,10 +27910,10 @@ __unwindfunclet$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std
 	lea	ecx, DWORD PTR __Where$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$?_Make_iter@?$list@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@QBE?AV?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@2@@Z$1:
-	mov	eax, DWORD PTR $T152511[ebp]
+	mov	eax, DWORD PTR $T152578[ebp]
 	and	eax, 1
 	je	$LN5@Make_iter@2
-	and	DWORD PTR $T152511[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152578[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN5@Make_iter@2:
@@ -27987,7 +28184,7 @@ __ehfuncinfo$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@P
 xdata$x	ENDS
 ;	COMDAT ??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z
 _TEXT	SEGMENT
-$T152540 = -40						; size = 4
+$T152607 = -40						; size = 4
 __Tmp$ = -32						; size = 12
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
@@ -28019,7 +28216,7 @@ ___formal$ = 12						; size = 4
 	lea	eax, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152540[ebp], 0
+	mov	DWORD PTR $T152607[ebp], 0
 
 ; 243  : 		_Myiter _Tmp = *this;
 
@@ -28040,9 +28237,9 @@ ___formal$ = 12						; size = 4
 	push	ecx
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	edx, DWORD PTR $T152540[ebp]
+	mov	edx, DWORD PTR $T152607[ebp]
 	or	edx, 1
-	mov	DWORD PTR $T152540[ebp], edx
+	mov	DWORD PTR $T152607[ebp], edx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
@@ -28086,10 +28283,10 @@ __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocato
 	lea	ecx, DWORD PTR __Tmp$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??E?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE?AV01@H@Z$1:
-	mov	eax, DWORD PTR $T152540[ebp]
+	mov	eax, DWORD PTR $T152607[ebp]
 	and	eax, 1
 	je	$LN5@operator@16
-	and	DWORD PTR $T152540[ebp], -2		; fffffffeH
+	and	DWORD PTR $T152607[ebp], -2		; fffffffeH
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 $LN5@operator@16:
@@ -28294,10 +28491,10 @@ _TEXT	SEGMENT
 tv143 = -36						; size = 4
 tv140 = -32						; size = 4
 tv146 = -28						; size = 4
-$T152568 = -24						; size = 4
-$T152567 = -20						; size = 4
-$T152566 = -14						; size = 1
-$T152565 = -13						; size = 1
+$T152635 = -24						; size = 4
+$T152634 = -20						; size = 4
+$T152633 = -14						; size = 1
+$T152632 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 __First$ = 8						; size = 12
 __Last$ = 20						; size = 12
@@ -28332,11 +28529,11 @@ __Line$ = 36						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T152565[ebp]
+	lea	ecx, DWORD PTR $T152632[ebp]
 	push	ecx
 	call	??$_Iter_cat@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YA?AUbidirectional_iterator_tag@0@ABV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@@Z ; std::_Iter_cat<std::_List_const_iterator<std::_List_val<Raven_Bot *,std::allocator<Raven_Bot *> > > >
 	add	esp, 8
-	movzx	edx, BYTE PTR $T152566[ebp]
+	movzx	edx, BYTE PTR $T152633[ebp]
 	push	edx
 	mov	eax, DWORD PTR __Line$[ebp]
 	push	eax
@@ -28344,7 +28541,7 @@ __Line$ = 36						; size = 4
 	push	ecx
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152567[ebp], esp
+	mov	DWORD PTR $T152634[ebp], esp
 	lea	edx, DWORD PTR __Last$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -28354,7 +28551,7 @@ __Line$ = 36						; size = 4
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
-	mov	DWORD PTR $T152568[ebp], esp
+	mov	DWORD PTR $T152635[ebp], esp
 	lea	edx, DWORD PTR __First$[ebp]
 	push	edx
 	call	??0?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@ABV01@@Z
@@ -28390,7 +28587,7 @@ __unwindfunclet$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bo
 	lea	ecx, DWORD PTR __First$[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __unwindfunclet$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YAXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@0PB_WI@Z$2:
-	mov	ecx, DWORD PTR $T152567[ebp]
+	mov	ecx, DWORD PTR $T152634[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Debug_range@V?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@std@@@std@@YAXV?$_List_const_iterator@V?$_List_val@PAVRaven_Bot@@V?$allocator@PAVRaven_Bot@@@std@@@std@@@0@0PB_WI@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -28892,8 +29089,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@PAV?$Goal@VRaven_Bot@@@@ABQAV1@@std@@YAXPAPAV?$Goal@VRaven_Bot@@@@ABQAV1@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T152611 = -24						; size = 4
-$T152610 = -20						; size = 4
+$T152678 = -24						; size = 4
+$T152677 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -28932,25 +29129,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152611[ebp], eax
+	mov	DWORD PTR $T152678[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152611[ebp], 0
+	cmp	DWORD PTR $T152678[ebp], 0
 	je	SHORT $LN3@Construct@2
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABQAV?$Goal@VRaven_Bot@@@@@std@@YAABQAV?$Goal@VRaven_Bot@@@@ABQAV1@@Z ; std::forward<Goal<Raven_Bot> * const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T152611[ebp]
+	mov	ecx, DWORD PTR $T152678[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T152611[ebp]
+	mov	eax, DWORD PTR $T152678[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct@2
 $LN3@Construct@2:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct@2:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T152610[ebp], ecx
+	mov	DWORD PTR $T152677[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -28970,7 +29167,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@PAV?$Goal@VRaven_Bot@@@@ABQAV1@@std@@YAXPAPAV?$Goal@VRaven_Bot@@@@ABQAV1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152611[ebp]
+	mov	ecx, DWORD PTR $T152678[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -29057,8 +29254,8 @@ xdata$x	ENDS
 ;	COMDAT ?construct@?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@QAEXPAPAV?$Goal@VRaven_Bot@@@@$$QAPAV3@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T152628 = -24						; size = 4
-$T152627 = -20						; size = 4
+$T152695 = -24						; size = 4
+$T152694 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -29094,25 +29291,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152628[ebp], eax
+	mov	DWORD PTR $T152695[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152628[ebp], 0
+	cmp	DWORD PTR $T152695[ebp], 0
 	je	SHORT $LN3@construct@5
 	mov	ecx, DWORD PTR __Val$[ebp]
 	push	ecx
 	call	??$forward@PAV?$Goal@VRaven_Bot@@@@@std@@YA$$QAPAV?$Goal@VRaven_Bot@@@@AAPAV1@@Z ; std::forward<Goal<Raven_Bot> *>
 	add	esp, 4
-	mov	edx, DWORD PTR $T152628[ebp]
+	mov	edx, DWORD PTR $T152695[ebp]
 	mov	eax, DWORD PTR [eax]
 	mov	DWORD PTR [edx], eax
-	mov	ecx, DWORD PTR $T152628[ebp]
+	mov	ecx, DWORD PTR $T152695[ebp]
 	mov	DWORD PTR tv73[ebp], ecx
 	jmp	SHORT $LN4@construct@5
 $LN3@construct@5:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@construct@5:
 	mov	edx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T152627[ebp], edx
+	mov	DWORD PTR $T152694[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 203  : 		}
@@ -29132,7 +29329,7 @@ text$x	SEGMENT
 __unwindfunclet$?construct@?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@QAEXPAPAV?$Goal@VRaven_Bot@@@@$$QAPAV3@@Z$0:
 	mov	eax, DWORD PTR __Ptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152628[ebp]
+	mov	ecx, DWORD PTR $T152695[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -29237,8 +29434,8 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv73 = -40						; size = 4
 tv74 = -36						; size = 4
-$T152645 = -32						; size = 12
-$T152644 = -17						; size = 1
+$T152712 = -32						; size = 12
+$T152711 = -17						; size = 1
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Right$ = 8						; size = 4
@@ -29272,7 +29469,7 @@ __Right$ = 8						; size = 4
 ; 1082 : 		{	// test for iterator equality
 ; 1083 : 		return (current == _Right.base());
 
-	lea	eax, DWORD PTR $T152645[ebp]
+	lea	eax, DWORD PTR $T152712[ebp]
 	push	eax
 	mov	ecx, DWORD PTR __Right$[ebp]
 	call	?base@?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ ; std::_Revranit<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >,std::iterator<std::bidirectional_iterator_tag,Goal<Raven_Bot> *,int,Goal<Raven_Bot> * const *,Goal<Raven_Bot> * const &> >::base
@@ -29284,11 +29481,11 @@ __Right$ = 8						; size = 4
 	push	edx
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??8?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QBE_NABV01@@Z ; std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >::operator==
-	mov	BYTE PTR $T152644[ebp], al
+	mov	BYTE PTR $T152711[ebp], al
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	lea	ecx, DWORD PTR $T152645[ebp]
+	lea	ecx, DWORD PTR $T152712[ebp]
 	call	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
-	mov	al, BYTE PTR $T152644[ebp]
+	mov	al, BYTE PTR $T152711[ebp]
 
 ; 1084 : 		}
 
@@ -29305,7 +29502,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$_Equal@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@std@@QBE_NABV01@@Z$0:
-	lea	ecx, DWORD PTR $T152645[ebp]
+	lea	ecx, DWORD PTR $T152712[ebp]
 	jmp	??1?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@XZ
 __ehhandler$??$_Equal@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@std@@QBE_NABV01@@Z:
 	mov	edx, DWORD PTR [esp+8]
@@ -29414,7 +29611,7 @@ PUBLIC	??$_Iter_cat@PAPAVGoal_Evaluator@@@std@@YA?AUrandom_access_iterator_tag@0
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Debug_range@PAPAVGoal_Evaluator@@@std@@YAXPAPAVGoal_Evaluator@@0PB_WI@Z
 _TEXT	SEGMENT
-$T152665 = -1						; size = 1
+$T152732 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -29432,7 +29629,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T152665[ebp]
+	lea	ecx, DWORD PTR $T152732[ebp]
 	push	ecx
 	call	??$_Iter_cat@PAPAVGoal_Evaluator@@@std@@YA?AUrandom_access_iterator_tag@0@ABQAPAVGoal_Evaluator@@@Z ; std::_Iter_cat<Goal_Evaluator * *>
 	add	esp, 8
@@ -29510,7 +29707,7 @@ PUBLIC	??$_Iter_cat@PAUAreaMap@@@std@@YA?AUrandom_access_iterator_tag@0@ABQAUAre
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Debug_range@PAUAreaMap@@@std@@YAXPAUAreaMap@@0PB_WI@Z
 _TEXT	SEGMENT
-$T152670 = -1						; size = 1
+$T152737 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -29528,7 +29725,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T152670[ebp]
+	lea	ecx, DWORD PTR $T152737[ebp]
 	push	ecx
 	call	??$_Iter_cat@PAUAreaMap@@@std@@YA?AUrandom_access_iterator_tag@0@ABQAUAreaMap@@@Z ; std::_Iter_cat<AreaMap *>
 	add	esp, 8
@@ -29597,7 +29794,7 @@ PUBLIC	??$_Iter_cat@PAH@std@@YA?AUrandom_access_iterator_tag@0@ABQAH@Z ; std::_I
 ; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??$_Debug_range@PAH@std@@YAXPAH0PB_WI@Z
 _TEXT	SEGMENT
-$T152675 = -1						; size = 1
+$T152742 = -1						; size = 1
 __First$ = 8						; size = 4
 __Last$ = 12						; size = 4
 __File$ = 16						; size = 4
@@ -29615,7 +29812,7 @@ __Line$ = 20						; size = 4
 
 	lea	eax, DWORD PTR __First$[ebp]
 	push	eax
-	lea	ecx, DWORD PTR $T152675[ebp]
+	lea	ecx, DWORD PTR $T152742[ebp]
 	push	ecx
 	call	??$_Iter_cat@PAH@std@@YA?AUrandom_access_iterator_tag@0@ABQAH@Z ; std::_Iter_cat<int *>
 	add	esp, 8
@@ -29736,8 +29933,8 @@ xdata$x	ENDS
 ;	COMDAT ??$_Construct@PAVRaven_Bot@@ABQAV1@@std@@YAXPAPAVRaven_Bot@@ABQAV1@@Z
 _TEXT	SEGMENT
 tv73 = -28						; size = 4
-$T152685 = -24						; size = 4
-$T152684 = -20						; size = 4
+$T152752 = -24						; size = 4
+$T152751 = -20						; size = 4
 __Vptr$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ptr$ = 8						; size = 4
@@ -29776,25 +29973,25 @@ __Val$ = 12						; size = 4
 	push	4
 	call	??2@YAPAXIPAX@Z				; operator new
 	add	esp, 8
-	mov	DWORD PTR $T152685[ebp], eax
+	mov	DWORD PTR $T152752[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T152685[ebp], 0
+	cmp	DWORD PTR $T152752[ebp], 0
 	je	SHORT $LN3@Construct@3
 	mov	edx, DWORD PTR __Val$[ebp]
 	push	edx
 	call	??$forward@ABQAVRaven_Bot@@@std@@YAABQAVRaven_Bot@@ABQAV1@@Z ; std::forward<Raven_Bot * const &>
 	add	esp, 4
-	mov	ecx, DWORD PTR $T152685[ebp]
+	mov	ecx, DWORD PTR $T152752[ebp]
 	mov	edx, DWORD PTR [eax]
 	mov	DWORD PTR [ecx], edx
-	mov	eax, DWORD PTR $T152685[ebp]
+	mov	eax, DWORD PTR $T152752[ebp]
 	mov	DWORD PTR tv73[ebp], eax
 	jmp	SHORT $LN4@Construct@3
 $LN3@Construct@3:
 	mov	DWORD PTR tv73[ebp], 0
 $LN4@Construct@3:
 	mov	ecx, DWORD PTR tv73[ebp]
-	mov	DWORD PTR $T152684[ebp], ecx
+	mov	DWORD PTR $T152751[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 
 ; 49   : 	}
@@ -29814,7 +30011,7 @@ text$x	SEGMENT
 __unwindfunclet$??$_Construct@PAVRaven_Bot@@ABQAV1@@std@@YAXPAPAVRaven_Bot@@ABQAV1@@Z$0:
 	mov	eax, DWORD PTR __Vptr$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T152685[ebp]
+	mov	ecx, DWORD PTR $T152752[ebp]
 	push	ecx
 	call	??3@YAXPAX0@Z				; operator delete
 	add	esp, 8
@@ -29833,7 +30030,7 @@ text$x	ENDS
 ; File c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility
 ;	COMDAT ?base@?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ
 _TEXT	SEGMENT
-$T152698 = -8						; size = 4
+$T152765 = -8						; size = 4
 _this$ = -4						; size = 4
 ___$ReturnUdt$ = 8					; size = 4
 ?base@?$_Revranit@V?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@U?$iterator@Ubidirectional_iterator_tag@std@@PAV?$Goal@VRaven_Bot@@@@HPBQAV3@ABQAV3@@2@@std@@QBE?AV?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@2@XZ PROC ; std::_Revranit<std::_List_const_iterator<std::_List_val<Goal<Raven_Bot> *,std::allocator<Goal<Raven_Bot> *> > >,std::iterator<std::bidirectional_iterator_tag,Goal<Raven_Bot> *,int,Goal<Raven_Bot> * const *,Goal<Raven_Bot> * const &> >::base, COMDAT
@@ -29847,7 +30044,7 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
-	mov	DWORD PTR $T152698[ebp], 0
+	mov	DWORD PTR $T152765[ebp], 0
 
 ; 1039 : 		return (current);
 
@@ -29855,9 +30052,9 @@ ___$ReturnUdt$ = 8					; size = 4
 	push	eax
 	mov	ecx, DWORD PTR ___$ReturnUdt$[ebp]
 	call	??0?$_List_const_iterator@V?$_List_val@PAV?$Goal@VRaven_Bot@@@@V?$allocator@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@@std@@QAE@ABV01@@Z
-	mov	ecx, DWORD PTR $T152698[ebp]
+	mov	ecx, DWORD PTR $T152765[ebp]
 	or	ecx, 1
-	mov	DWORD PTR $T152698[ebp], ecx
+	mov	DWORD PTR $T152765[ebp], ecx
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 
 ; 1040 : 		}

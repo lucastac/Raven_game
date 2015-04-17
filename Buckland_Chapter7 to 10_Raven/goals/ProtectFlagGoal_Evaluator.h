@@ -16,9 +16,18 @@
 
 class ProtectFlagGoal_Evaluator : public Goal_Evaluator
 {
+
+private :
+	int UpDown;
+	Vector2D upPos;
+	Vector2D downPos;
+
 public:
 
-  ProtectFlagGoal_Evaluator(double bias):Goal_Evaluator(bias){}
+	ProtectFlagGoal_Evaluator(double bias):Goal_Evaluator(bias)
+	{
+
+	}
   
   double CalculateDesirability(Raven_Bot* pBot);
 

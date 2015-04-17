@@ -54,7 +54,7 @@ public:
   void AddGoal_MoveToPosition(Vector2D pos);
   void AddGoal_GetItem(unsigned int ItemType);
   void AddGoal_Explore();
-  void AddGoal_Protect_Flag();
+  void AddGoal_Protect_Flag(Vector2D StandPos);
   void AddGoal_Explore_Area();
   void AddGoal_AttackTarget();
 

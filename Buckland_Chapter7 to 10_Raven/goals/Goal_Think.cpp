@@ -17,6 +17,7 @@
 #include "Goal_Wander.h"
 #include "Raven_Goal_Types.h"
 #include "Goal_AttackTarget.h"
+#include "Goal_Protect_Flag.h"
 
 
 #include "GetWeaponGoal_Evaluator.h"
@@ -77,7 +78,9 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
  // m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
  //                                                    type_rocket_launcher));
   m_Evaluators.push_back(new GetFlagGoal_Evaluator(FlagBias));
+
   m_Evaluators.push_back(new ProtectFlagGoal_Evaluator(ProcFlagBias));
+
 
 	  //quatro quadrantes centrais
   	  m_Areas.push_back(AreaMap(Vector2D(350,150),200,0));
@@ -85,9 +88,9 @@ Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_thi
 	  m_Areas.push_back(AreaMap(Vector2D(350,350),200,2));
 	  m_Areas.push_back(AreaMap(Vector2D(650,350),200,3));
 	  //quandrante da bandeira marrom
-	  m_Areas.push_back(AreaMap(Vector2D(50,250),100,4));
+	  m_Areas.push_back(AreaMap(Vector2D(10,250),80,4));
 	  //quadranta da bandeira verde
-	  m_Areas.push_back(AreaMap(Vector2D(900,250),100,5));
+	  m_Areas.push_back(AreaMap(Vector2D(940,250),80,5));
 
 }
 
@@ -192,18 +195,19 @@ void Goal_Think::AddGoal_MoveToPosition(Vector2D pos)
   AddSubgoal( new Goal_MoveToPosition(m_pOwner, pos));
 }
 
-void Goal_Think::AddGoal_Protect_Flag()
+void Goal_Think::AddGoal_Protect_Flag(Vector2D StandPos)
 {
-	int ar = 4 + m_pOwner->my_type;
-	if(notPresent(goal_explore_area))
+	//int ar = 4 + m_pOwner->my_type;
+	if(notPresent(goal_protect_flag))
+	{
+		RemoveAllSubgoals();
+		//AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
+		AddSubgoal(new Goal_Protect_Flag(m_pOwner,StandPos));
+	}/*else if( ( (Goal_Explore_Area*)m_SubGoals.front())->areaId != ar )
 	{
 		RemoveAllSubgoals();
 		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
-	}else if( ( (Goal_Explore_Area*)m_SubGoals.front())->areaId != ar )
-	{
-		RemoveAllSubgoals();
-		AddSubgoal( new Goal_Explore_Area(m_pOwner,m_Areas[ar]) );
-	}
+	}*/
 }
 
 void Goal_Think::AddGoal_Explore_Area()

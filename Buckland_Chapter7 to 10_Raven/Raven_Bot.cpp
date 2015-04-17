@@ -69,6 +69,8 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
   m_pTriggerTestRegulator = new Regulator(script->GetDouble("Bot_TriggerUpdateFreq"));
   m_pVisionUpdateRegulator = new Regulator(script->GetDouble("Bot_VisionUpdateFreq"));
 
+  my_type = 0;
+
   //create the goal queue
   m_pBrain = new Goal_Think(this);
 
@@ -81,7 +83,6 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
                                         script->GetDouble("Bot_AimPersistance"));
 
   m_pSensoryMem = new Raven_SensoryMemory(this, script->GetDouble("Bot_MemorySpan"));
-  my_type = 0;
   Has_flag = false;
   spawn_Time = 0;
 }

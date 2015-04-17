@@ -26,7 +26,8 @@ enum
   goal_say_phrase,
   goal_think_plus,
   goal_get_flag,
-  goal_explore_area
+  goal_explore_area,
+  goal_protect_flag
   
 };
 

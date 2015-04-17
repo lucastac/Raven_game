@@ -24,7 +24,8 @@ enum message_type
   Msg_Took_Flag,
   Msg_We_Won,
   Msg_Exploring,
-  Msg_quitExploring
+  Msg_quitExploring,
+  Msg_ProtectCompleted
 };
 
 //used for outputting debug info
@@ -32,6 +33,11 @@ inline std::string MessageToString(int msg)
 {
   switch(msg)
   {
+
+  case Msg_ProtectCompleted:
+
+	  return "Msg_ProtectCompleted";
+
   case Msg_Exploring:
 
 	  return "Msg_Exploring";

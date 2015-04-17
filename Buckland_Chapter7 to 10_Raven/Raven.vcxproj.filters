@@ -289,6 +289,9 @@
     <ClCompile Include="goals\ProtectFlagGoal_Evaluator.cpp">
       <Filter>AI\goals\goal evaluation</Filter>
     </ClCompile>
+    <ClCompile Include="goals\Goal_Protect_Flag.cpp">
+      <Filter>AI\goals\composite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Raven_Bot.h">
@@ -647,6 +650,9 @@
     </ClInclude>
     <ClInclude Include="goals\ProtectFlagGoal_Evaluator.h">
       <Filter>AI\goals\goal evaluation</Filter>
+    </ClInclude>
+    <ClInclude Include="goals\Goal_Protect_Flag.h">
+      <Filter>AI\goals\composite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

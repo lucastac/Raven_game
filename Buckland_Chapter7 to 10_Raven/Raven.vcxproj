@@ -214,6 +214,7 @@
     <ClCompile Include="goals\ExploreAreaGoal_Evaluator.cpp" />
     <ClCompile Include="goals\GetFlagGoal_Evaluator.cpp" />
     <ClCompile Include="goals\Goal_Explore_Area.cpp" />
+    <ClCompile Include="goals\Goal_Protect_Flag.cpp" />
     <ClCompile Include="goals\ProtectFlagGoal_Evaluator.cpp" />
     <ClCompile Include="main.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -538,6 +539,7 @@
     <ClInclude Include="goals\ExploreAreaGoal_Evaluator.h" />
     <ClInclude Include="goals\GetFlagGoal_Evaluator.h" />
     <ClInclude Include="goals\Goal_Explore_Area.h" />
+    <ClInclude Include="goals\Goal_Protect_Flag.h" />
     <ClInclude Include="goals\ProtectFlagGoal_Evaluator.h" />
     <ClInclude Include="Raven_Bot.h" />
     <ClInclude Include="Raven_Bot_Plus.h" />
